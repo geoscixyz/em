@@ -3,8 +3,7 @@
 Electromagnetic Geophysics
 ==========================
 
-Contents:
-^^^^^^^^^
+**Contents:**
 
 .. toctree::
    :maxdepth: 1
