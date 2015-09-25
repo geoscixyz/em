@@ -8,4 +8,4 @@ Contents:
 .. toctree::
     :maxdepth: 1
 
-    Amperes_Law
+    fund_ohmslaw
