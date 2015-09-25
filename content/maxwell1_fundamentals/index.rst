@@ -7,3 +7,5 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    Amperes_Law
