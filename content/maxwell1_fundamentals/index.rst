@@ -7,3 +7,5 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    fund_ohmslaw
