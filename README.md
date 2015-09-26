@@ -38,5 +38,5 @@ We choose the notation set forth  in Ward and Hohmann. Their chapter has been th
         \boldsymbol{\underline{\sigma}}
     ```
   
-- time domain are lower case
-- frequency domain are upper case
+- time domain variable are lower case
+- frequency domain variables are upper case
