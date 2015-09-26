@@ -12,6 +12,8 @@ Here are a couple resources on sphinx and reStructured Text:
 
 **Notation:**
 
+We choose the notation set forth  in Ward and Hohmann. Their chapter has been the foundation of many research papers, is used by geophysicists world-wide, and it is clean and unambiguous. 
+ 
 - vectors are bold : 
 
     ```
@@ -20,7 +22,7 @@ Here are a couple resources on sphinx and reStructured Text:
     ```
   or for a symbol
     ```
-    ... math::
+    .. math::
         \boldsymbol{\nabla\cdot}
     ```
   
@@ -38,4 +40,3 @@ Here are a couple resources on sphinx and reStructured Text:
   
 - time domain are lower case
 - frequency domain are upper case
-
