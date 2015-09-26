@@ -24,9 +24,8 @@ an impact upon the problem at hand.
 
 .. _Case Histories: http://case-histories.geosci.xyz
 
-
 This resource is Open Source and while currently being developed by
-brilliant and enthusiastic graduate students at UBC, the vision is to have
+brilliant and enthusiastic graduate students and faculty at UBC, the vision is to have
 experts, worldwide, contribute. Join the development on github_. 
 
 .. _github: https://github.com/ubcgif/em.
