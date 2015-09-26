@@ -33,7 +33,7 @@ experts, worldwide, contribute. Join the development on github_.
 **Contents:**
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    content/introduction/index
    content/physical_properties/index
