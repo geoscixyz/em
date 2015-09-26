@@ -1,5 +1,7 @@
 # GeoSci.xyz EM
 
+http://em.geosci.xyz
+
 A resource for electromagnetic geophysics
 
 **Resources for Contributors:**
