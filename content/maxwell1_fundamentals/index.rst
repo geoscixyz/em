@@ -9,12 +9,10 @@ their “law” we also want to list or examples of applications.  (eg Faraday�
 law is fundamental to electric generators or transformers).
 
 .. toctree::
-<<<<<<< HEAD
-    :maxdepth: 1
     
     Amperes_Law
     fund_ohmslaw
-=======
+
     :maxdeepth:2
 
     formative_laws_and_people/index.rst
