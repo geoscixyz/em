@@ -1,5 +1,7 @@
 # GeoSci.xyz EM
 
+http://em.geosci.xyz
+
 A resource for electromagnetic geophysics
 
 **Resources for Contributors:**
@@ -9,9 +11,15 @@ Here are a couple resources on sphinx and reStructured Text:
 - http://sphinx-doc.org/markup/
 - http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
+**Best practices for attribution:**
+
+- https://wiki.creativecommons.org/wiki/Best_practices_for_attribution
+
 
 **Notation:**
 
+We choose the notation set forth  in Ward and Hohmann. Their chapter has been the foundation of many research papers, is used by geophysicists world-wide, and it is clean and unambiguous. 
+ 
 - vectors are bold : 
 
     ```
@@ -20,7 +28,7 @@ Here are a couple resources on sphinx and reStructured Text:
     ```
   or for a symbol
     ```
-    ... math::
+    .. math::
         \boldsymbol{\nabla\cdot}
     ```
   
@@ -36,6 +44,5 @@ Here are a couple resources on sphinx and reStructured Text:
         \boldsymbol{\underline{\sigma}}
     ```
   
-- time domain are lower case
-- frequency domain are upper case
-
+- time domain variable are lower case
+- frequency domain variables are upper case
