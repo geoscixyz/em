@@ -3,20 +3,21 @@
 Notation and Conventions
 ========================
 
-We choose the notation set forth in [Ward_and_Hohmann]_. Their chapter has
-been the foundation of many research papers, is used by geophysicists world-
-wide, and it is clean and unambiguous.
+We choose the notation set forth in [Ward_and_Hohmann]_; it is clean and unambiguous. Their chapter has
+been the foundation of many research papers and is used by geophysicists world-
+wide. 
 
 
-- vectors are bold:                          
-    * ie. \\(\\mathbf{v}\\), \\(\\boldsymbol{\\nabla\\cdot}\\)                       
-- tensors are bold and underlined:           
-    * ie. \\(\\mathbf{\\underline{v}}\\), \\(\\boldsymbol{\\underline{\\sigma}}\\)   
-- time domain variable are lower case:       
-    * ie. \\(\\mathbf{e}\\), \\(\\mathbf{j}\\), \\(\\mathbf{h}\\), \\(\\mathbf{b}\\) 
-- frequency domain variables are upper case: 
-    * ie. \\(\\mathbf{E}\\), \\(\\mathbf{J}\\), \\(\\mathbf{H}\\), \\(\\mathbf{B}\\)
-
+- vectors and operators are bold:                          
+    * e.g. \\(\\mathbf{v}\\), \\(\\mathbf{r}\\), \\(\\boldsymbol{\\nabla\\cdot}\\), \\(\\boldsymbol{\\nabla\\times}\\)                       
+- time domain vector functions are lower case:       
+	* i.e. \\(\\mathbf{b}\\), \\(\\mathbf{d}\\), \\(\\mathbf{e}\\), \\(\\mathbf{h}\\), \\(\\mathbf{j}\\) 
+- frequency domain vector functions are upper case: 
+	* i.e. \\(\\mathbf{B}\\), \\(\\mathbf{D}\\), \\(\\mathbf{E}\\), \\(\\mathbf{H}\\), \\(\\mathbf{J}\\) 
+- tensors are lower case, bold and underlined:           
+    * e.g. \\(\\mathbf{\\underline{\\mu}}\\), \\(\\boldsymbol{\\underline{\\sigma}}\\), \\(\\mathbf{\\underline{\\epsilon}}\\)
+- scalar variables are lowercase:
+	* e.g. \\(\\mu\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\omega\\), \\(t\\)  
 
 We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\) time dependence. 
 
