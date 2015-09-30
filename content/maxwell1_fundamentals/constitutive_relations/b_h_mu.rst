@@ -26,5 +26,3 @@ In the SI_ the units of the magnetic permeability are henries_ per meter [:math:
 .. _amperes: https://en.wikipedia.org/wiki/Ampere
 
         
-**References** 
-.. [Ward_and_Hohmann] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.

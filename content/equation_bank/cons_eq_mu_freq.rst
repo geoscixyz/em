@@ -2,4 +2,4 @@
 
  .. math::
     \mathbf{B} = \mu \mathbf{H}
-    :label:conseq_mu_freq 
+    :label: conseq_mu_freq 

@@ -2,4 +2,4 @@
 
  .. math::
     \mathbf{b} = \mu \mathbf{h}
-    :label:conseq_mu_time 
+    :label: conseq_mu_time 
