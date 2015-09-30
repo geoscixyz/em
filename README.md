@@ -6,10 +6,16 @@ A resource for electromagnetic geophysics
 
 **Resources for Contributors:**
 
+Link for anaconda (python package manager):
+- https://www.continuum.io/downloads
+
 Here are a couple resources on sphinx and reStructured Text:
 
 - http://sphinx-doc.org/markup/
 - http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+
+and an overview of using GitHub:
+- https://guides.github.com/activities/hello-world/
 
 **Best practices for attribution:**
 
@@ -35,12 +41,12 @@ We choose the notation set forth  in Ward and Hohmann. Their chapter has been th
 - tensors are bold and underlined :
 
     ```
-    .. math ::
+    .. math::
         \mathbf{\underline{v}}
     ```
   or for a symbol
     ```
-    .. math ::
+    .. math::
         \boldsymbol{\underline{\sigma}}
     ```
   
