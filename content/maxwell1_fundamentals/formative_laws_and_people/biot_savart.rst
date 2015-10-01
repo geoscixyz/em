@@ -15,7 +15,7 @@ Definition
 	\mathbf{b}= \frac{\mu_{0}}{4 \pi} \int_{C} \frac{i \mathbf{dl} \times \mathbf{r}}{\mathbf{r}^3}
 
 
-This equation is fundamental to forward model magnetic flux created by an active source such as a loop.
+In stead state, this equation is fundamental to forward model magnetic flux created by an active source such as a loop. It is closely related to the Ampere's law.
 
 Some examples
 *************
