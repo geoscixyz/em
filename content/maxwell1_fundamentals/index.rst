@@ -1,6 +1,6 @@
 .. _maxwell1_fundamentals_index:
 
-Maxwell's Equations I: Fundamentals
+ME I: Fundamentals
 ===================================
 
 For each of the following we want a short synopsis of who they were, when they
