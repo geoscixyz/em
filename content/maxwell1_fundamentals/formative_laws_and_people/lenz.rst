@@ -29,9 +29,10 @@ out the change [Giffiths]_. This is the reason for the negative sign in Faraday'
 	:align: center
 	:scale: 110% 
 	:name: Lenzs_Law_Diagram
-In panel (a) we see a situation in which the magnetic flux through the loop is increasing as a function of time. The induced current direction 
-and the secondary magnetic field which opposes the increase in flux is shown in panel (b). Similarly, panels (d) shows the direction of the 
-induced current and secondary magnetic field when the magnetic flux through the loop is decreasing as a function of time as indicated by panel (c). 
+
+	In panel (a) we see a situation in which the magnetic flux through the loop is increasing as a function of time. The induced current direction 
+	and the secondary magnetic field which opposes the increase in flux is shown in panel (b). Similarly, panels (d) shows the direction of the 
+	induced current and secondary magnetic field when the magnetic flux through the loop is decreasing as a function of time as indicated by panel (c). 
 
 
 Illustrative Demo:
