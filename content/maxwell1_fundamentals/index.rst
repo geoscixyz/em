@@ -9,10 +9,6 @@ their “law” we also want to list or examples of applications.  (eg Faraday�
 law is fundamental to electric generators or transformers).
 
 .. toctree::
-    
-    Amperes_Law
-    fund_ohmslaw
-
     :maxdeepth:2
 
     formative_laws_and_people/index.rst
@@ -25,4 +21,3 @@ For each of the constitutive relationships provide background regarding a basic 
 
     constitutive_relations/index.rst
 
->>>>>>> 44b6b10e7626feaff8e803fd6addaaab991622f7

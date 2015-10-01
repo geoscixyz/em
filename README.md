@@ -41,12 +41,12 @@ We choose the notation set forth  in Ward and Hohmann. Their chapter has been th
 - tensors are bold and underlined :
 
     ```
-    .. math::
+    .. math ::
         \mathbf{\underline{v}}
     ```
   or for a symbol
     ```
-    .. math::
+    .. math ::
         \boldsymbol{\underline{\sigma}}
     ```
   
