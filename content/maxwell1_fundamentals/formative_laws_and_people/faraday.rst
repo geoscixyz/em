@@ -18,3 +18,6 @@ Faraday's law is best understood using 3 experiments, which Faraday conducted an
 
 
 .. include:: ../../equation_bank/magnetic_flux.rst
+
+
+All about the bass
