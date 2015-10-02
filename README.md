@@ -1,5 +1,7 @@
 # GeoSci.xyz EM
 
+[![Build Status](https://travis-ci.org/ubcgif/em.svg?branch=master)](https://travis-ci.org/ubcgif/em)
+
 http://em.geosci.xyz
 
 A resource for electromagnetic geophysics
@@ -41,12 +43,12 @@ We choose the notation set forth  in Ward and Hohmann. Their chapter has been th
 - tensors are bold and underlined :
 
     ```
-    .. math ::
+    .. math::
         \mathbf{\underline{v}}
     ```
   or for a symbol
     ```
-    .. math ::
+    .. math::
         \boldsymbol{\underline{\sigma}}
     ```
   
