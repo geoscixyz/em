@@ -11,7 +11,7 @@ Overview of Maxwell's Equations
     :label: faraday_time
 
 .. math:: 
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j} + \frac{\partial d}{\partial t} 
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} 
     :label: ampere_time
 
 .. math::
