@@ -34,6 +34,7 @@ experts, worldwide, contribute. Join the development on github_.
 
 .. toctree::
    :maxdepth: 2
+   :name: `EM GeoSci`
 
    content/introduction/index
    content/physical_properties/index
@@ -44,16 +45,17 @@ experts, worldwide, contribute. Join the development on github_.
    content/transmitters_receivers/index
    content/survey_design/index
 
+
 Contributors:
 -------------
 
 .. include:: AUTHORS.rst
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
