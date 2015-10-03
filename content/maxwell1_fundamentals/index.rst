@@ -30,21 +30,13 @@ scientists involved in discovering the law.
 Differential equations in time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. math::
-    \boldsymbol{\nabla} \times \mathbf{e} = -\frac{\partial \mathbf{b}}{\partial t}
-    :label: faraday_time
+.. include:: ../equation_bank/faraday_time.rst
 
-.. math:: 
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} 
-    :label: ampere_time
+.. include:: ../equation_bank/ampere_maxwell_time.rst
 
-.. math::
-    \boldsymbol{\nabla \cdot} \mathbf{d} = \rho_f
-    :label: gauss_electric_time
+.. include:: ../equation_bank/gauss_electric_time.rst
 
-.. math:: 
-    \boldsymbol{\nabla \cdot} \mathbf{b} = 0
-    :label: gauss_magnetic_time
+.. include:: ../equation_bank/gauss_magnetic_time.rst
 
 
 .. _integral_equations_time:
