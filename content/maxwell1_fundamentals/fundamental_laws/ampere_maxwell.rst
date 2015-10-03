@@ -53,7 +53,8 @@ where the current densities are:
 Differential equation in the time domain
 ----------------------------------------
 
-There are a number of ways of writing the equation in differential form. Each provides its own insight.
+There are a number of ways of writing the equation in differential form. Each
+provides its own insight.
 
 Variables:   \\(\\mathbf{e, b, p, m} \\)
 
