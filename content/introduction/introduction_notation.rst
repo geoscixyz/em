@@ -17,6 +17,10 @@ wide, and it is clean and unambiguous.
 - frequency domain variables are upper case: 
     * ie. \\(\\mathbf{E}\\), \\(\\mathbf{J}\\), \\(\\mathbf{H}\\), \\(\\mathbf{B}\\)
 
+.. _fourier_transform_convention: 
+
+Fourier Transfrom Convention
+----------------------------
 
 We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\) time dependence. 
 
@@ -24,7 +28,7 @@ We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\
     F(\omega) = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} dt
 
     f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i\omega t} d\omega
-
+    :label: fourier_transform_convention
 
 
 

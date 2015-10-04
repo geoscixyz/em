@@ -1,16 +1,18 @@
 # GeoSci.xyz EM
 
+[![Build Status](https://travis-ci.org/ubcgif/em.svg?branch=master)](https://travis-ci.org/ubcgif/em)
+
 http://em.geosci.xyz
 
 A resource for electromagnetic geophysics
 
 **Resources for Contributors:**
 
-Link for anaconda (python package manager):
-- https://www.continuum.io/downloads
+Check out the wiki: https://github.com/ubcgif/em/wiki
+
+Link for anaconda (python package manager): https://www.continuum.io/downloads
 
 Here are a couple resources on sphinx and reStructured Text:
-
 - http://sphinx-doc.org/markup/
 - http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
