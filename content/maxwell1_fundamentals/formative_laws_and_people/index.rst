@@ -18,5 +18,5 @@ law is fundamental to electric generators or transformers).
     ampere
     faraday
     lenz
-    biot-Savart
+    biot_savart
     maxwell
