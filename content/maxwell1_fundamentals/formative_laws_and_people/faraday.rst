@@ -3,7 +3,7 @@
 Faraday's Law
 =============
 
-Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce electric fields in matter.
+Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce electric fields. 
 
 Integral Form in the Time-Domain
 --------------------------------
@@ -12,39 +12,56 @@ Faraday's law in integral form can be expressed using the following equation:
 
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
-where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, and :math:`{\boldsymbol \Phi_B}` is the total magnetic flux moving through surface :math:`A`. 
-The first two terms in Eq.() are related using Stokes' theorem.
-Eq.() states that the time-dependent rate of change in total magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
-The unit vector :math:`\hat n` is used to define the direction perpendicular to incrementally small portions of surface area :math:`da` within surface :math:`A`. And :math:`d{\bf l}` is an incrementally small unit of length along closed path :math:`C`.
+where :math:`{\bf e}` is the electric field (:math:`V/m`) defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density (:math:`Wb/m^2`) defined over a surface :math:`A` contoured by :math:`C`.and :math:`{\boldsymbol \Phi_B}` is the total magnetic flux (:math:`Wb`) moving through surface :math:`A`. 
+
+.. Seogi: How about breaking apart above equations..
+
+The first two terms in Eq. :eq:`faradays_law_int_time` are related using Stokes' theorem.
+Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in total magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
+
+.. Seogi: We can possibly link what is outward normal
+.. The unit vector :math:`\hat n` is used to define the direction perpendicular to incrementally small portions of surface area :math:`da` within surface :math:`A`. 
+Here :math:`\hat n` is outward normal, and :math:`d{\bf l}` is an incrementally small unit of length along closed path :math:`C`.
+
+.. note:: Negative sign in RHS of Eq. :eq:`faradays_law_int_time` denotes conservation of electromagnetic energy.
+
 
 Differential Form in the Time-Domain
 ------------------------------------
-
-The integrands of terms 2 and 3 in Eq. () are identical.
-This was obtained by applying Stokes' theorem to the first term
-As a result, Faraday's law in differential form can be expressed as:
+.. This was obtained by applying Stokes' theorem to the first term
+.. As a result, Faraday's law in differential form can be expressed as:
+The integrands of second and third terms in Eq. :eq:`faradays_law_int_time` are identical, and hence Faraday's law in differential form can be expressed as:
 
 .. include:: ../../equation_bank/faradays_law_diff_time.rst
 
-Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
-For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
+.. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
+.. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
+Above equation physically means that time varying magnetic fields will induce rotational electric fields. 
+
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------
 
-Frequency-domain representation of Faraday's law obtained by applying a Fourier transform to Eqs.() and ().
+Frequency-domain representation of Faraday's law can be obtained by applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and :eq:`faradays_law_diff_time`.
 The integral form of Faraday's law in the frequency domain is:
 
 .. include:: ../../equation_bank/faradays_law_int_freq.rst
 
-Similarly to Eq.(), the first two terms in Eq.() are related using Stokes' theorem.
-The differential form of Faraday's law is:
+.. Similarly to Eq. :eq:`faradays_law_int_freq`, the first two terms in Eq.() are related using Stokes' theorem.
+Similarly, the differential form of Faraday's law is:
 
 .. include:: ../../equation_bank/faradays_law_diff_freq.rst
 
-where :math:`\omega` is the angular frequency in [rad/s], :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density.
-We can see from Eq.() that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
+where :math:`\omega` is the angular frequency in (rad/s). 
 
+.. Seogi: I possibly need better wording about this. 
+.. We can see from Eq. :eq:`faradays_law_diff_freq` that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
+
+.. , :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density.
+
+
+Units
+-----
 
 Discovery of Faraday's Law
 --------------------------
