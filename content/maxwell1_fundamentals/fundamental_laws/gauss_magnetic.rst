@@ -7,7 +7,8 @@ Gauss's Law for Magnetic Fields
 Integral Equation
 -----------------
 
-The Gauss's law for magnetic fields equation in integral form is given below:
+The Gauss's law for magnetic fields in integral form is given below:
+
 .. math::
     \oint_S \mathbf{B} \cdot d\mathbf{S} =  0
     :label: gauss_magnetic_integral
