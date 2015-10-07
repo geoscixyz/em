@@ -1,5 +1,7 @@
 # GeoSci.xyz EM
 
+[![Build Status](https://travis-ci.org/ubcgif/em.svg?branch=master)](https://travis-ci.org/ubcgif/em)
+
 http://em.geosci.xyz
 
 A resource for electromagnetic geophysics
