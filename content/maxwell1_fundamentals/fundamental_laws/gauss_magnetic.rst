@@ -10,10 +10,10 @@ Integral equation
 The Gauss's law for magnetic fields in integral form is given below:
 
 .. math::
-    \oint_S \mathbf{B} \cdot d\mathbf{S} =  0
+    \oint_S \mathbf{b} \cdot d\mathbf{s} =  0
     :label: gauss_magnetic_integral
     
-The equation states that there is no net magnetic flux \\(\\mathbf{B}\\) that passes through a closed surface \\(\\mathbf{S}\\). This means the number of magnetic field lines that enter and exit a closed surface is the same. This is explained by the concept of a magnet that has a north and a south pole, where the strength of the north pole is equal to the strength of the south pole. This is equivalent to saying that a magnetic monopole, meaning a solitary north or south pole, does not exist.
+The equation states that there is no net magnetic flux \\(\\mathbf{b}\\) that passes through an arbitrary closed surface \\(\\mathbf{s}\\). This means the number of magnetic field lines that enter and exit through this closed surface \\(\\mathbf{s}\\) is the same. This is explained by the concept of a magnet that has a north and a south pole, where the strength of the north pole is equal to the strength of the south pole. This is equivalent to saying that a magnetic monopole, meaning a solitary north or south pole, does not exist.
 
 Differential equation in the frequency-domain
 ----------------------------------------
