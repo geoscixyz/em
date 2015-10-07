@@ -43,6 +43,7 @@ The first part becomes zero because \\(\\mathbf{J}\\) depends on \\(r'\\) and \\
 
 Differential equation in the time-domain
 ---------------------------------------------
+The equation can also be written in the time-domain as:
 
 .. math::
         \nabla \cdot \mathbf{b} = 0
