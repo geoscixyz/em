@@ -3,7 +3,6 @@
 Ampere-Maxwell
 ==============
 
-
 Integral Equation
 -----------------
 
@@ -13,15 +12,14 @@ The Ampere-Maxwell equation in integral form is given below:
     \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right)
     :label: ampere_maxwell_integral
 
-
-The first portion of the equation is due to Ampere. It shows the relationship
-between a current \\(I_{enc}\\) and the circulation of the magnetic field
+The first portion of the equation was discovered by Ampere. It shows the relationship
+between a current \\(I_{enc}\\) and the circulation of the magnetic field, \\(\\mathbf{b}\\),
 around any closed contour line. \\(I_{enc}\\) refers to all currents
 irrespective of their physical origin.
 
-The second portion of the equation is due to Maxwell and shows that a
+The second portion of the equation is Maxwell's contribution and shows that a
 circulation of magnetic field is also caused by a time rate of change of
-electric flux. This explained how current in a simple circuit involving a
+electric flux. This explains how current in a simple circuit involving a
 battery and capacitor can flow. (ref). The term is pivotal in showing that
 electromagnetic energy propagates as waves.
 
@@ -126,6 +124,9 @@ demonstrated the equivalence of electromagnetic wave and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
 
+.. TODO: clean up notation
+.. LJH comment: I think we can combine what is below into the explination under the integral equation
+
 A note on the total current
 ---------------------------
 
@@ -145,27 +146,27 @@ the dielectric can separate and induce a polarization current density internally
 Then the total current density can be described as
 
 .. math::
-    \mathbf{J} = \mathbf{J}_f + \mathbf{J}_M + \mathbf{J}_P
+    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
 
 where
-\\(\\mathbf{J}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
+\\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
 moving charges,
-\\(\\mathbf{J}_M = \\nabla \\times \\mathbf{M}\\) is the bound current due to
+\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{M}\\) is the bound current due to
 magnetization,
-\\(\\mathbf{J}_P = \\frac{\\partial \\mathbf{P}}{\\partial t} \\) is the polarization
+\\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
 current density due to the time-dependent bound charges.
 
 Treating free current and bound current separately and combining the
-constitutive equations , the Ampere-Maxwell equation can be reformulated as
+constitutive equations, the Ampere-Maxwell equation can be reformulated as
 in integral form:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{J}_f + \frac{\partial \mathbf{D}}{\partial t} \right) \cdot \hat{\mathbf{n}} \mathbf{ds}
+    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}
 
 and in differential form,
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{J}_f + \frac{\partial \mathbf{D}}{\partial t}
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
 
 Note that the bound charge due to magnetization is integrated into the magnetic
 field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
