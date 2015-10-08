@@ -73,10 +73,9 @@ Variables:   \\(\\mathbf{e, b, p, m} \\)
         + \boldsymbol{\nabla} \times \mathbf{m}\right) 
     :label: ampere_maxwell_differential_ebpm
 
-
 Variables: \\(\\mathbf{e, b, d, h }\\)
 
-where \\(\\mathbf{d}= \\epsilon_0 \\mathbf{e} + \\mathbf{p}\\)and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\)
+where \\(\\mathbf{d}= \\epsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\)
 
 .. include:: ../../equation_bank/ampere_maxwell_time.rst
 
@@ -153,7 +152,6 @@ demonstrated the equivalence of electromagnetic wave and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
 
-.. TODO: clean up notation
 .. LJH comment: I think we can combine what is below into the explination under the integral equation
 
 A note on the total current
@@ -180,7 +178,7 @@ Then the total current density can be described as
 where
 \\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
 moving charges,
-\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{M}\\) is the bound current due to
+\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
 magnetization,
 \\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
 current density due to the time-dependent bound charges.
@@ -199,7 +197,7 @@ and in differential form,
 
 Note that the bound charge due to magnetization is integrated into the magnetic
 field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
-integrated into the displacement field \\(\\mathbf{D}\\).
+integrated into the displacement field \\(\\mathbf{d}\\).
 
 
 **References**
