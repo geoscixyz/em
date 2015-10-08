@@ -9,7 +9,7 @@ Integral Equation
 The Ampere-Maxwell equation in integral form is given below:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right)
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{ds} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{ds} \right)
     :label: ampere_maxwell_integral
 
 where:
@@ -43,12 +43,12 @@ integral equation above is thus written as
 
 
 .. math:: 
-    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{ds} =  
     \oint_C \mathbf{b} \cdot \mathbf{dl} = 
     \mu_0 \left(\int_S \left(\mathbf{j_f}  
         + \frac{\partial \mathbf{p}}{\partial t} 
-        + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{da} 
-        +  \epsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{da}\right)
+        + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{ds} 
+        +  \epsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{ds}\right)
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
@@ -188,7 +188,7 @@ constitutive equations, the Ampere-Maxwell equation can be reformulated as
 in integral form:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}
+    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{ds}
 
 and in differential form,
 
