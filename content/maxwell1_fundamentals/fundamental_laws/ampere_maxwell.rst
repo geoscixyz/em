@@ -12,6 +12,15 @@ The Ampere-Maxwell equation in integral form is given below:
     \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right)
     :label: ampere_maxwell_integral
 
+where:
+
+ - \\( \\mathbf{b} \\) is the magnetic flux
+ - \\( \\mathbf{e} \\) is the electric field
+ - \\( I_{enc} \\) is the enclosed current
+ - \\( \\mu_0 \\) is the magnetic permeability of free space
+ - \\( \\epsilon_0 \\) is the electric permittivity of free space
+ - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
+
 The first portion of the equation was discovered by Ampere. It shows the relationship
 between a current \\(I_{enc}\\) and the circulation of the magnetic field, \\(\\mathbf{b}\\),
 around any closed contour line. \\(I_{enc}\\) refers to all currents
