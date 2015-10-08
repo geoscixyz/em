@@ -12,7 +12,7 @@ Faraday's law in integral form can be expressed using the following equation:
 
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
-where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, :math:`\hat n` is outward normal, and :math:`d{\bf l}` is a vector element of length along the contour :math:`C`.
+where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector, and :math:`d{\bf l}` is a vector element of length along the contour :math:`C`.
 Eq. :eq:`faradays_law_int_time` states that the time varying magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
 
 .. note:: Negative sign in RHS of Eq. :eq:`faradays_law_int_time` denotes conservation of electromagnetic energy.
@@ -20,29 +20,29 @@ Eq. :eq:`faradays_law_int_time` states that the time varying magnetic flux, thro
 Differential Form in the Time-Domain
 ------------------------------------
 
-By applying Stokes's theorem to LHS of Eq. :eq:`faradays_law_int_time`, we obtain differential form of Faraday's law as
+By applying Stokes's theorem to LHS of Eq. :eq:`faradays_law_int_time`, we obtain the differential form of Faraday's law as
 
 .. include:: ../../equation_bank/faradays_law_diff_time.rst
 
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
 .. TODO: Put some links: rotational field 
-Above equation physically means that time varying magnetic fields will induce rotational electric fields. In addition this is the fundamental equation, which explains excitation of the earth medium using inductive sources: electromagnetic (EM) induction. 
+The above equation physically means that time varying magnetic fields will induce rotational electric fields. In addition this is the fundamental equation, which explains the excitation of earth mediums using inductive sources: electromagnetic (EM) induction. 
 
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------
 
-Frequency-domain representation of Faraday's law can be obtained by applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and :eq:`faradays_law_diff_time`.
+The frequency-domain representation of Faraday's law can be obtained by applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and :eq:`faradays_law_diff_time`.
 The integral form of Faraday's law in the frequency domain is:
 
 .. include:: ../../equation_bank/faradays_law_int_freq.rst
 
-Similarly using Stokes' theorem, differential form of Faraday's law is:
+Similarly using Stokes' theorem, the differential form of Faraday's law is:
 
 .. include:: ../../equation_bank/faradays_law_diff_freq.rst
 
-where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density. Eq. :eq:`faradays_law_diff_freq` states that induced electric field proportional to angular frequency. Namely, we get stronger EM induction effects at higher frequency. 
+where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density. Eq. :eq:`faradays_law_diff_freq` states that the induced electric field is proportional to the angular frequency. Namely, we get stronger EM induction effects at higher frequencies. 
 
 .. that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
 .. Seogi: I possibly need better wording about this. 
@@ -57,13 +57,13 @@ Consider units on LHS and RHS of Eq. :eq:`faradays_law_int_time`, we obtain
 
 		V = Wb / s
 .. TODO: parapharase this (I copy and paste wiki)
-This states that a change in flux of one webber per second will induce electromotive force of one volt. In additoin, Webber (:math:`Wb`) can be expressed as
+This states that a change in flux of one webber per second will induce electromotive force of one volt. In addition, a Webber (:math:`Wb`) can be expressed as
 
 	.. math::
 
 		Wb = V \cdot s = J/A, 
 
-where :math:`J` is joule (unit for work or energy). This shows that magentic flux indicates work done by unit current. 
+where :math:`J` is joule (unit for work or energy). This shows that magentic flux indicates work done by a unit current. 
 
 Discovery of Faraday's Law
 --------------------------
@@ -74,7 +74,7 @@ A loop of wire with area :math:`A`, contoured by a closed path :math:`C`, was th
 This resulted in a magnetic flux :math:`{\boldsymbol \Phi_b}` defined by:
 
 .. include:: ../../equation_bank/magnetic_flux_time.rst
-Faraday's three experiments are following:
+Faraday's three experiments were conducted as follows:
 
 1. Faraday moved the loop of wire while the electromagnet remained stationary.
 2. the electromagnet was moved while the loop of wire remained stationary.
