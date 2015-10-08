@@ -57,6 +57,52 @@ where the current densities are:
 \\(\\mathbf{j_p} = \\nabla \\times \\mathbf{m}\\) is the magnetic polarization current. That is currents needed to generate the magnetization \\( \\mathbf{m}\\). 
 
 
+A note on the total current
+***************************
+
+The total current involved in the Ampere-Maxwell equation consists of free
+current and bound current, although all currents are essentially the same from
+a microscopic perspective. Treating free current and bound current differently
+offers physical insights to the Ampere-Maxwell equation in different contexts.
+
+The free current is caused by moving charges which are not tied to atoms, often
+referred to as conduction current. In contrast, the bound current is induced by
+a magnetization or a polarization in bulk materials. When a magnetic material is
+placed in an external magnetic field, a magnetization current will be induced
+due to the motion of electrons in atoms. Likewise, when an external electric
+field is applied to a dielectric, the positive and negative bound charges within
+the dielectric can separate and induce a polarization current density internally.
+
+Then the total current density can be described as
+
+.. math::
+    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
+
+where
+\\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
+moving charges,
+\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
+magnetization,
+\\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
+current density due to the time-dependent bound charges.
+
+Treating free current and bound current separately and combining the
+constitutive equations, the Ampere-Maxwell equation can be reformulated as
+in integral form:
+
+.. math::
+    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{ds}
+
+and in differential form,
+
+.. math::
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
+
+Note that the bound charge due to magnetization is integrated into the magnetic
+field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
+integrated into the displacement field \\(\\mathbf{d}\\).
+
+
 Differential equation in the time domain
 ----------------------------------------
 
@@ -137,9 +183,9 @@ Units
 
 
 
-Magnetization \\( \\mathbf{m} \\):
+Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{A}{m}]\\)
 
-Electric polarization \\(\\mathbf{p}\\):
+Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square metre \\([\\frac{A\\cdot s}{m}]\\)
 
 Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
 
@@ -174,50 +220,6 @@ These efforts have lain solid foundations for the development of modern electrom
 
 .. LJH comment: I think we can combine what is below into the explination under the integral equation
 
-A note on the total current
----------------------------
-
-The total current involved in the Ampere-Maxwell equation consists of free
-current and bound current, although all currents are essentially the same from
-a microscopic perspective. Treating free current and bound current differently
-offers physical insights to the Ampere-Maxwell equation in different contexts.
-
-The free current is caused by moving charges which are not tied to atoms, often
-referred to as conduction current. In contrast, the bound current is induced by
-a magnetization or a polarization in bulk materials. When a magnetic material is
-placed in an external magnetic field, a magnetization current will be induced
-due to the motion of electrons in atoms. Likewise, when an external electric
-field is applied to a dielectric, the positive and negative bound charges within
-the dielectric can separate and induce a polarization current density internally.
-
-Then the total current density can be described as
-
-.. math::
-    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
-
-where
-\\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
-moving charges,
-\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
-magnetization,
-\\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
-current density due to the time-dependent bound charges.
-
-Treating free current and bound current separately and combining the
-constitutive equations, the Ampere-Maxwell equation can be reformulated as
-in integral form:
-
-.. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{ds}
-
-and in differential form,
-
-.. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
-
-Note that the bound charge due to magnetization is integrated into the magnetic
-field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
-integrated into the displacement field \\(\\mathbf{d}\\).
 
 
 **References**
