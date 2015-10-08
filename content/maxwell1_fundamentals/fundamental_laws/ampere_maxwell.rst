@@ -161,39 +161,58 @@ Units
 
 ..  |
 
-+--------------------------+-------------------+-------------------------+-------------------------+
-| Magnetic B-field         | \\(\\mathbf{b}\\) | \\([T]\\)               | tesla                   |
-+--------------------------+-------------------+-------------------------+-------------------------+
-| Electric field intensity | \\(\\mathbf{e}\\) | \\([\\frac{V}{m}]\\)    | volt per meter          |
-+--------------------------+-------------------+-------------------------+-------------------------+
-| Electric current         | \\(I\\)           | \\([A]\\).              | ampere                  |
-+--------------------------+-------------------+-------------------------+-------------------------+
-| Electric current density | \\(\\mathbf{j}\\) |\\([\\frac{A}{m^{2}}]\\) | ampere per square meter | 
-+--------------------------+-------------------+-------------------------+-------------------------+
-| Magnetization            |                   |                         |                         |
+
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Magnetic B-field         | \\(\\mathbf{b}\\) | \\([T]\\)                   | tesla                                 |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Electric field intensity | \\(\\mathbf{e}\\) | \\([\\frac{V}{m}]\\)        | volt per meter                        |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Electric current         | \\(I\\)           | \\([A]\\)                   | ampere                                |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Electric current density | \\(\\mathbf{j}\\) |\\([\\frac{A}{m^{2}}]\\)     | ampere per square meter               | 
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Magnetization            | \\(\\mathbf{m}\\) | \\([\\frac{A}{m}]\\)        | ampere per meter                      |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Electric polarization    | \\(\\mathbf{p}\\) | \\([\\frac{A\\cdots}{m}]\\) | ampere times seconds per square metre | 
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Magnetic H-field         | \\(\\mathbf{h}\\) | \\([\\frac{A}{m}]\\)        | ampere per metre                      |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+| Electric displacement    | \\(\\mathbf{d}\\) | \\([\\frac{C}{m^{2}}]\\)    | coulomb per square metre              |
++--------------------------+-------------------+-----------------------------+---------------------------------------+
+
+
+**Constants** 
+
++--------------------------+----------------------------------------------------------------------------------------------------+
+| Magnetic constant        | \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx 1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\)|
++--------------------------+----------------------------------------------------------------------------------------------------+
+| Vacuum permittivity      | \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre)           |
++--------------------------+----------------------------------------------------------------------------------------------------+
 
 **Conversions**
 
  - One tesla equals one weber (the SI unit of magnetix flux) per square metre:
 
-    .. math:: 1 T = 1 \frac{Wb}{m^{2}} = 1 \frac{V\cdot s}{m^{2}}
+    .. math:: 
+        1 T = 1 \frac{Wb}{m^{2}} = 1 \frac{V\cdot s}{m^{2}}
 
  - One ampere equals one coulomb (the SI unit of electric charge) per second: 
-    .. math:: 1 A = 1 \\frac{C}{s}\\).
+    .. math:: 
+        1 A = 1 \frac{C}{s}.
 
 
 
-Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{A}{m}]\\)
+.. Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{A}{m}]\\)
 
-Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square metre \\([\\frac{A\\cdot s}{m}]\\)
+.. Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square metre \\([\\frac{A\\cdot s}{m}]\\)
 
-Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
+.. Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
 
-Electric displacement \\(\\mathbf{d}\\): coulomb per square metre \\([\\frac{C}{m^{2}}]\\)
+.. Electric displacement \\(\\mathbf{d}\\): coulomb per square metre \\([\\frac{C}{m^{2}}]\\)
 
-Magnetic constant \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx  1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\). 
+.. Magnetic constant \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx  1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\). 
 
-Vacuum permittivity \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
+.. Vacuum permittivity \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
 
 Discovers of the law
 --------------------
