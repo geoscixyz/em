@@ -163,9 +163,9 @@ Electric current \\(I\\): ampere \\([A]\\). One ampere equals one coulomb (the S
 
 Electric current density \\(\\mathbf{j}\\): ampere per square metre \\([\\frac{A}{m^{2}}]\\)
 
-Magnetization \\( \\mathbf{m} \\):
+Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{A}{m}]\\)
 
-Electric polarization \\(\\mathbf{p}\\):
+Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square metre \\([\\frac{A\\cdot s}{m}]\\)
 
 Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
 
