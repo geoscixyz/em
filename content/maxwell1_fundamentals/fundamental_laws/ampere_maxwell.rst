@@ -110,6 +110,26 @@ and the Ampere-Maxwell equations can be written as
 Units
 -----
 
+Magnetic B-field \\(\\mathbf{b}\\): tesla \\([T]\\). One tesla equals one weber (the SI unit of magnetix flux) per square metre: \\(1 T = 1 \\frac{Wb}{m^{2}} = 1 \\frac{V\\cdot s}{m^{2}}\\).
+
+Electric field intensity \\(\\mathbf{e}\\): volt per metre \\([\\frac{V}{m}]\\)
+
+Electric current \\(I\\): ampere \\([A]\\). One ampere equals one coulomb (the SI unit of electric charge) per second: \\(1 A = 1 \\frac{C}{s}\\).
+
+Electric current density \\(\\mathbf{j}\\): ampere per square metre \\([\\frac{A}{m^{2}}]\\)
+
+Magnetization \\( \\mathbf{m} \\):
+
+Electric polarization \\(\\mathbf{p}\\):
+
+Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
+
+Electric displacement \\(\\mathbf{d}\\): coulomb per square metre \\([\\frac{C}{m^{2}}]\\)
+
+Magnetic constant \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx  1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\). 
+
+Vacuum permittivity \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
+
 Discovers of the law
 --------------------
 
