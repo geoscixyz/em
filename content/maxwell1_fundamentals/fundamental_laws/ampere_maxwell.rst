@@ -109,13 +109,33 @@ and the Ampere-Maxwell equations can be written as
 Units
 -----
 
-Magnetic B-field \\(\\mathbf{b}\\): tesla \\([T]\\). One tesla equals one weber (the SI unit of magnetix flux) per square metre: \\(1 T = 1 \\frac{Wb}{m^{2}} = 1 \\frac{V\\cdot s}{m^{2}}\\).
+.. +-------------------+-------------------+-----------------+--------------------------------------------------------------+----------------------------------------------------------------------------------+
+..   |
+.. +-------------------+-------------------+-----------------+--------------------------------------------------------------+----------------------------------------------------------------------------------+
 
-Electric field intensity \\(\\mathbf{e}\\): volt per metre \\([\\frac{V}{m}]\\)
+..  |
 
-Electric current \\(I\\): ampere \\([A]\\). One ampere equals one coulomb (the SI unit of electric charge) per second: \\(1 A = 1 \\frac{C}{s}\\).
++--------------------------+-------------------+-------------------------+-------------------------+
+| Magnetic B-field         | \\(\\mathbf{b}\\) | \\([T]\\)               | tesla                   |
++--------------------------+-------------------+-------------------------+-------------------------+
+| Electric field intensity | \\(\\mathbf{e}\\) | \\([\\frac{V}{m}]\\)    | volt per meter          |
++--------------------------+-------------------+-------------------------+-------------------------+
+| Electric current         | \\(I\\)           | \\([A]\\).              | ampere                  |
++--------------------------+-------------------+-------------------------+-------------------------+
+| Electric current density | \\(\\mathbf{j}\\) |\\([\\frac{A}{m^{2}}]\\) | ampere per square meter | 
++--------------------------+-------------------+-------------------------+-------------------------+
+| Magnetization            |                   |                         |                         |
 
-Electric current density \\(\\mathbf{j}\\): ampere per square metre \\([\\frac{A}{m^{2}}]\\)
+**Conversions**
+
+ - One tesla equals one weber (the SI unit of magnetix flux) per square metre:
+
+    .. math:: 1 T = 1 \frac{Wb}{m^{2}} = 1 \frac{V\cdot s}{m^{2}}
+
+ - One ampere equals one coulomb (the SI unit of electric charge) per second: 
+    .. math:: 1 A = 1 \\frac{C}{s}\\).
+
+
 
 Magnetization \\( \\mathbf{m} \\):
 
