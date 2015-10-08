@@ -10,7 +10,7 @@ Integral Equation
 The Ampere-Maxwell equation in integral form is given below:
 
 .. math::
-    \int_A \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \int_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int \mathbf{e} \cdot \hat{\mathbf{n}} da \right)
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right)
     :label: ampere_maxwell_integral
 
 
@@ -36,12 +36,12 @@ integral equation above is thus written as
 
 
 .. math:: 
-    \int \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  
-    \int \mathbf{b} \cdot \mathbf{dl} = 
-    \mu_0 \left(\int \left(\mathbf{j_f}  
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  
+    \oint_C \mathbf{b} \cdot \mathbf{dl} = 
+    \mu_0 \left(\int_S \left(\mathbf{j_f}  
         + \frac{\partial \mathbf{p}}{\partial t} 
         + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{da} 
-        +  \epsilon_0 \frac{d}{dt}  \int \mathbf{e} \cdot \mathbf{\hat{n}} da\right)
+        +  \epsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{da}\right)
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
@@ -171,6 +171,8 @@ Note that the bound charge due to magnetization is integrated into the magnetic
 field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
 integrated into the displacement field \\(\\mathbf{D}\\).
 
+
+**References**
 
 .. [1] David J. Griffiths, Introduction to electrodynamics, 3rd Edition, Prentice Hall. 1999.
 .. [2] James C. Maxwell. On physical lines of force, part III, the Philosophical Magazine and Journal of Science, 1861
