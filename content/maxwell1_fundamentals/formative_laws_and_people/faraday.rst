@@ -19,12 +19,12 @@ The unit vector :math:`\hat n` is used to define the direction perpendicular to 
 
 .. Seogi: How about breaking apart above equations..
 
-The first two terms in Eq. :eq:`faradays_law_int_time` are related using Stokes' theorem.
-Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in total magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
+.. The first two terms in Eq. :eq:`faradays_law_int_time` are related using Stokes' theorem.
+.. Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in total magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
 
 .. Seogi: We can possibly link what is outward normal
 .. The unit vector :math:`\hat n` is used to define the direction perpendicular to incrementally small portions of surface area :math:`da` within surface :math:`A`. 
-Here :math:`\hat n` is outward normal, and :math:`d{\bf l}` is an incrementally small unit of length along closed path :math:`C`.
+.. Here :math:`\hat n` is outward normal, and :math:`d{\bf l}` is an incrementally small unit of length along closed path :math:`C`.
 
 .. note:: Negative sign in RHS of Eq. :eq:`faradays_law_int_time` denotes conservation of electromagnetic energy.
 
@@ -33,7 +33,8 @@ Differential Form in the Time-Domain
 ------------------------------------
 .. This was obtained by applying Stokes' theorem to the first term
 .. As a result, Faraday's law in differential form can be expressed as:
-The integrands of second and third terms in Eq. :eq:`faradays_law_int_time` are identical, and hence Faraday's law in differential form can be expressed as:
+
+.. The integrands of second and third terms in Eq. :eq:`faradays_law_int_time` are identical, and hence Faraday's law in differential form can be expressed as:
 
 According to Eq. :eq:`faradays_law_int_time` , the integrands in terms 2 and 3 are identical.
 As a result, Faraday's law in differential form can be expressed as:
@@ -42,7 +43,7 @@ As a result, Faraday's law in differential form can be expressed as:
 
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
-Above equation physically means that time varying magnetic fields will induce rotational electric fields. 
+The above equation physically means that time varying magnetic fields will induce rotational electric fields. 
 
 
 Faraday's Law in the Frequency-Domain
