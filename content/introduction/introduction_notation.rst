@@ -24,19 +24,19 @@ Integrals
 
 - Integrating a scalar function over a volume:
     .. math::
-        \int_V f ~dV
+        \int_V f ~dv
 
    or over a closed volume
     .. math::
-        \oint_V f ~dV
+        \oint_V f ~dv
 
 - Integrating a vector function over a surface:
     .. math::
-        \int_S \mathbf{f} \cdot \mathbf{ds} = \int_S \mathbf{f} \cdot \mathbf{\hat{n}} ~ds
+        \int_S \mathbf{f} \cdot \mathbf{da} = \int_S \mathbf{f} \cdot \mathbf{\hat{n}} ~da
 
    or over a closed surface:
     .. math::
-        \oint_S \mathbf{f} \cdot \mathbf{ds} = \oint_S \mathbf{f} \cdot \mathbf{\hat{n}} ~ds
+        \oint_S \mathbf{f} \cdot \mathbf{da} = \oint_S \mathbf{f} \cdot \mathbf{\hat{n}} ~da
 
 - Integrating a vector function over a line: 
     .. math::
