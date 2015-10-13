@@ -12,7 +12,7 @@ Faraday's law in integral form can be expressed using the following equation:
 
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
-where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector, and :math:`d{\bf l}` is a vector element of length along the contour :math:`C`.
+where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector parallel to :math:`da` , and :math:`d{\bf l}` is a vector element of length along the contour :math:`C`.
 Eq. :eq:`faradays_law_int_time` states that the time varying magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
 
 .. note:: Negative sign in RHS of Eq. :eq:`faradays_law_int_time` denotes conservation of electromagnetic energy.
@@ -20,14 +20,15 @@ Eq. :eq:`faradays_law_int_time` states that the time varying magnetic flux, thro
 Differential Form in the Time-Domain
 ------------------------------------
 
-By applying Stokes's theorem to LHS of Eq. :eq:`faradays_law_int_time`, we obtain the differential form of Faraday's law as
+By applying Stokes's theorem to left-hand side of Eq. :eq:`faradays_law_int_time`, we can obtain the differential form of Faraday's law:
 
 .. include:: ../../equation_bank/faradays_law_diff_time.rst
 
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
 .. TODO: Put some links: rotational field 
-The above equation physically means that time varying magnetic fields will induce rotational electric fields. In addition this is the fundamental equation, which explains the excitation of earth mediums using inductive sources: electromagnetic (EM) induction. 
+Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will induce rotational electric fields.
+The curl of these induced electric fields also oppose time-dependent changes in the inducing magnetic field.
 
 
 Faraday's Law in the Frequency-Domain
@@ -42,28 +43,17 @@ Similarly using Stokes' theorem, the differential form of Faraday's law is:
 
 .. include:: ../../equation_bank/faradays_law_diff_freq.rst
 
-where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density. Eq. :eq:`faradays_law_diff_freq` states that the induced electric field is proportional to the angular frequency. Namely, we get stronger EM induction effects at higher frequencies. 
+where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density.
+From a theoretical perspective, it is common practice to consider :math:`{\bf E}` and :math:`{\bf B}` as sinusoidal functions.
+From Eq. :eq:`faradays_law_diff_freq` , we can infer two things:
+
+1. Induced rotational electric fields are proportional to the angular frequency; this implies that electromagnetic induction is larger for higher frequencies.
+2. Induced rotational electric fields, and the frequency-dependent magnetic fields responsible for them, are 90 degrees out of phase.
 
 .. that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
 .. Seogi: I possibly need better wording about this. 
 .. We can see from Eq. :eq:`faradays_law_diff_freq` that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
 .. , :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density.
-
-Units
------
-Consider units on LHS and RHS of Eq. :eq:`faradays_law_int_time`, we obtain
-
-	.. math::
-
-		V = Wb / s
-.. TODO: parapharase this (I copy and paste wiki)
-This states that a change in flux of one webber per second will induce electromotive force of one volt. In addition, a Webber (:math:`Wb`) can be expressed as
-
-	.. math::
-
-		Wb = V \cdot s = J/A, 
-
-where :math:`J` is joule (unit for work or energy). This shows that magentic flux indicates work done by a unit current. 
 
 Discovery of Faraday's Law
 --------------------------
@@ -95,6 +85,49 @@ The contributions made by Faraday and Lenz are represented by the following equa
 
 Lenz's contribution to Faraday's discovery not only provides the equality in Eq. :eq:`faraday_lenz_time` , but determines the direction of force on free charges in response to changes in an applied magnetic field. For a more complete description see the :doc:`lenz` page. By substituting the definition of magnetic flux from Eq. :eq:`magnetic_flux_time` and the definition of electromotive force from Eq. :eq:`electromotive_force_time` into Eq. :eq:`faraday_lenz_time`, we can obtain Faraday's law in integral form according to Eq. :eq:`faradays_law_int_time` .
 
+Units
+-----
+Consider the units of quantities on the left and right-hand sides of Eq. :eq:`faradays_law_int_time`.
+Using dimensional analysis, we obtain:
+
+	.. math::
+
+		V = Wb / s
+.. TODO: parapharase this (I copy and paste wiki)
+Therefore the above expression states that a change in magnetic flux, equal to 1 Webber per second, will induce an electromotive force of 1 Volt along a closed path.
+Useing the aforementionned expression, the Webber (:math:`Wb`) can be expressed as:
+
+	.. math::
+
+		Wb = V \cdot s = J/A, 
+
+where :math:`J` is the Joule, and :math:`A` is Amps.
+Joules are used to represent a unit of energy, or work.
+Thus we can interpret the magnetic flux as a unit of work per unit current. 
+
+Geophysical Applications Faraday's Law
+--------------------------------------
+
+When performing electromagnetic surveys, various apparatuses are used to generate time-dependent magnetic fields.
+These fields are commonly refered to as primary fields.
+According to Eqs. :eq:`faradays_law_diff_time` , this will induce rotational electric fields within the surrounding region.
+For a rock unit defined by conductivity :math:`\sigma` , Ohm's law (put a link here) :math:`{\bf j} = \sigma {\bf e}` implies that a current density :math:`{\bf j}` is also induced by the primary field.
+These induced currents are parallel to :math:`{\bf e}` , and have a magnitude which depends on the physical properties of the rock.
+Therefore, we can use Faraday's law in differential form to understand the manner in which rotational currents are induced in conductive objects, by an artificially generated primary field.
+
+According to the Biot-Savart law (add link), current densities are responsible for generating magnetic fields.
+This implies that currents induced by the primary field will result in the creation of an anomalous magnetic field, commonly refered to as the secondary field.
+The secondary field is observed above the Earth's surface, and provides important information regarding subsurface geological structures.
+But how is the secondary field measured?
+
+This question can be aswered by considering Faraday's law in integral form.
+A coil of wire, placed in a region where secondary fields are observed, will experience an electromotive force, or induced voltage, according to Eq. :eq:`faraday_lenz_time` .
+Using our definitions for the electromotive force and magnetic flux, this is an equivalent expression as Eq. :eq:`faradays_law_int_time` .
+Therefore in practice, receiver coils designed to collect data during electromagnetic surveys do not measure the secondary field directly.
+Instead, data are represented by the voltage induced within a receiver coil.
+
+The explanation provided in this section may also be understood in the frequency-domain.
+However, the voltage induced within the receiver coils has both real and imaginary components.
 
 
 History of Michael Faraday
