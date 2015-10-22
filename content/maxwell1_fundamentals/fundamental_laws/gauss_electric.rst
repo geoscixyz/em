@@ -10,6 +10,9 @@ Gauss’s law for the electric field states that the electric flux through any c
 	:label: Gauss_e_int
 where the integral is over a closed surface :math:`S`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to :math:`S` and :math:`Q` is the total charge enclosed by :math:`S`. 
 
+.. figure::	Efield.gif
+
+
 Differential Form
 -----------------
 
@@ -75,6 +78,7 @@ So we can also think of electric field as flux density. Gauss’s law tells us t
 
 Units
 -----
+
 
 
 References
