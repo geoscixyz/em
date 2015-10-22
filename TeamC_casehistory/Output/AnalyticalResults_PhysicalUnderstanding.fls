@@ -171,14 +171,14 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/ae/aer6.tfm
 INPUT figures/SphereInducedDipoleMoment.png
 INPUT ./figures/SphereInducedDipoleMoment.png
 INPUT ./figures/SphereInducedDipoleMoment.png
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/public/ae/aer8.vf
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT figures/SphereAnomlousField.png
 INPUT ./figures/SphereAnomlousField.png
 INPUT ./figures/SphereAnomlousField.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/public/ae/aer8.vf
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT figures/Jcontinuous.png
 INPUT ./figures/Jcontinuous.png
 INPUT ./figures/Jcontinuous.png
