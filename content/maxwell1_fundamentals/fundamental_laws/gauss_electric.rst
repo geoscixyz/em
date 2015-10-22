@@ -16,7 +16,7 @@ Differential Form
 When considering a spatially extended charged body, we can think of its charge as being continously distributed throughout the body with density :math:`\rho`. The total charge is then given by the integral of the charge density over the volume of the body.
 
 .. math::
-	Q = \int_V \rho \; \mathrm{d}V\;.
+	Q = \int_V \rho \; \mathrm{d}v\;.
 	:label: charge_density
 Using this definition and applying the divergence theorem to the left hand side of Gauss's law (:eq:`Gauss_e_int`), we can rewrite the law as:
 
@@ -83,7 +83,7 @@ Notes on Electric flux
 Flux is a measure of the strength of a field passing through a surface. Electric flux is defined in general as 
 
 .. math::
-	\boldsymbol{\Phi} = \int_s \mathbf{e} \cdot d\mathbf{s}.
+	\boldsymbol{\Phi} = \int_A \mathbf{e} \cdot \hat{\mathbf{n}} \, \mathrm{d}a.
 	:label: e_flux
 We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{r^2}` spatial dependence but the volume of the surface increases with :math:`r^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
 
