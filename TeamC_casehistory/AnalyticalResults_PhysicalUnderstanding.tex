@@ -69,47 +69,35 @@ Let consider a  resistive uniform half-space, of conductivity $\sigma_1$enclosin
 \includegraphics[scale=0.7]{electrostaticsphere.png}
 \end{figure}
 
-\vspace{0.4cm}
-\textbf{Maxwell equations}
-\vspace{0.4cm}
+\section{Maxwell equations}
+
 
 
 In this case, we need:
 
- \vspace{0.4cm}
-
-
-$\nabla \times E =0$ \quad,so \quad $E=-\nabla V$	\quad	(1)
-
-\vspace{0.4cm}
-
-$J=\sigma E$ \quad (2)
-
-
-\vspace{0.4cm}
-
+\begin{equation}
+\begin{aligned}
+\nabla \times E =0\\
+J=\sigma E.
+\end{aligned}
+\end{equation}
+The first equation gives $E=-\nabla V$.
 
 
 The primary field $E_0$ can then be expressed by:
 
-\vspace{0.4cm}
-
-${E^p}_0=-\frac{dV^p}{dx}$ \quad (3)
-\vspace{0.4cm}
+\begin{equation}
+{E^p}_0=-\frac{dV^p}{dx}
+\end{equation}
 Assuming a primary potential null at the origin:
 
- \vspace{0.4cm}
-
-
-$V^p=E_0x=E_0 r cos\theta$ \quad (4)
-
- \vspace{0.4cm}
+ \begin{equation}
+V^p=E_0x=E_0 r cos\theta
+\end{equation}
 
 
 
 As the primary potential respects $\nabla^2 V=0 $, as only a dependence in $x$ direction, the anomalous or secondary field can be expressed as (using spherical coordinates):
-
- \vspace{0.4cm}
 
 \begin{equation}
 \begin{aligned}
@@ -134,14 +122,9 @@ If we assume finite  values of the potential everywhere, we can divide the anoma
 
 The total external potential is then:
 
- \vspace{0.4cm}
-
-
-$V_e= {V^s}_e + {V^p} = (-E_0 r + B r^{-2}) cos \theta$ \quad (8)
-
-
- \vspace{0.4cm}
-
+\begin{equation} 
+V_e= {V^s}_e + {V^p} = (-E_0 r + B r^{-2}) cos \theta
+\end{equation}
 
 On the surface of the sphere, both the normal current density and potential have to be continuous across the interface.
 
@@ -149,65 +132,46 @@ On the surface of the sphere, both the normal current density and potential have
 
 
 Using the continuity of current density, we got:
-$\sigma_1 E_e = \sigma_2 E_i$ \quad $\sigma_1 \frac{dV_e}{dr} = \sigma_2 \frac{dV_e}{dr} $ \quad (9)
+\begin{equation}
+\begin{aligned}
+\sigma_1 E_e & = \sigma_2 E_i \\
+\sigma_1 \frac{dV_e}{dr} & = \sigma_2 \frac{dV_e}{dr} \\
+\end{aligned}
+\end{equation}
 
- \vspace{0.4cm}
 
-
-
-$2 \sigma_1 B R^{-3} + \sigma_1 E_0$ \quad (10)
-
-
- \vspace{0.4cm}
+%what's with this? Is something missing?
+\begin{equation}\label{equ1}
+2 \sigma_1 B R^{-3} + \sigma_1 E_0
+\end{equation}
 
 
 Using the continuity of potential, we got:
+\begin{equation}\label{equ2}
+\begin{aligned}
+{V_e}={V^s}_i\\
+-E_0 R + B R^{-2} = A R\\
+\end{aligned}
+\end{equation}
 
- \vspace{0.4cm}
+From equations \ref{equ1} and \ref{equ2}, we get:
 
-
-${V_e}={V^s}_i$	\quad (11)
-
- \vspace{0.4cm}
-
-
-$-E_0 R + B R^{-2} = A R$ \quad (12)
-
- \vspace{0.4cm}
-
-
-From equations (10) and (12), we get:
-
- \vspace{0.4cm}
-
-
-$A=-\frac{3 \sigma_1}{\sigma_2 + 2\sigma_1} E_0 $ \quad (13)
-
- \vspace{0.4cm}
-
-
-$B=E_0 R^3 \frac{\sigma_2-\sigma1}{\sigma_2+2\sigma_1} $ \quad (14)
-
- \vspace{0.4cm}
-
+\begin{equation}
+\begin{aligned}
+A & =-\frac{3 \sigma_1}{\sigma_2 + 2\sigma_1} E_0 \\
+B & =E_0 R^3 \frac{\sigma_2-\sigma1}{\sigma_2+2\sigma_1} 
+\end{aligned}
+ \end{equation}
 
 And the anomalous electric field is:
-
- \vspace{0.4cm}
 
 
 \begin{equation}
 \mathbf{E_s=-\nabla{V^s}_e=E_0 R^3 \frac{\sigma_2-\sigma_1}{\sigma_2 - 2\sigma_1} \frac{(2x^2-y^2-z^2)\mathbf{u}_x + 3xy \mathbf{u}_y + 3xz \mathbf{u}_z}{r^5}} 
 \end{equation}
 
-\vspace{0.4cm}
 
-
-
-\textbf{Continuity of current and charge accumulation}
-
-\vspace{0.4cm}
-
+\section{Continuity of current and charge accumulation}
 We assume to be here in a steady state with direct current.
 The current entering a cylinder through an interface as in figure \ref{Normal J continuous} consists both in tangential and normal components. 
 
@@ -219,48 +183,47 @@ The current entering a cylinder through an interface as in figure \ref{Normal J 
 
 As the cylinder height is collapsed to zero, we can write the normal component as:
 
-$I=J_1 \cdot \mathbf{n} \Delta a$ \quad (16)
-or as
-$I=J_2 \cdot \mathbf{n} \Delta a$ \quad (17)
-\vspace{0.4cm}
+\begin{equation}
+I=J_1 \cdot \mathbf{n} \Delta a
+\text{or as}
+I=J_2 \cdot \mathbf{n} \Delta a
+\end{equation}
 
-Note: Otherwise in steady state we would have an infinite built up of charges at the interface 
-\vspace{0.4cm}
-Then $J_2 \cdot \mathbf{n} = J_1 \cdot \mathbf{n}$ \quad (18)
-\vspace{0.4cm}
+Note: Otherwise in steady state we would have an infinite built up of charges at the interface. 
+Then 
+\begin{equation} 
+J_2 \cdot \mathbf{n} = J_1 \cdot \mathbf{n}
+ \end{equation}
+so we have 
+\begin{equation}
+\mathbf{{J_1}^n={J_2}^n}
+\end{equation}
 
-so $\mathbf{{J_1}^n={J_2}^n}$ \quad (19)
 
-\vspace{0.4cm}
 Note: This is only true in a direct current case in a steady state. It appears to be satisfactory up to $10^5$ Hz, as long as displacement currents can be considered negligeable.
 
-\vspace{0.4cm}
 
-\textbf{Charges, Coulomb's law and potentials.}
+\section{Charges, Coulomb's law and potentials.}
 
-<<<<<<< Updated upstream
+
 Electric charge produces an electric potential; the Coulomb's electrostatic potential is
 
-%\begin{equation}
-$V(r) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}.$ \quad (20)
-%\end{equation}
-=======
+\begin{equation}
+V(r) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}.
+\end{equation}
 Electric charge produces an electric potential: the Coulomb's electrostatic potential is
 \begin{equation}
 V(r) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}.
 \end{equation}
->>>>>>> Stashed changes
-
- \vspace{0.4cm}
 
 
 
-\textbf{Anomalous currents and electric fields}
+\section{Anomalous currents and electric fields}
 
 Anomalous current density is defined as 
-%\begin{equation*}
-$\mathbf{J}_a = \sigma_a\mathbf{E}.$ \quad (21)
-%\end{equation*}
+\begin{equation}
+\mathbf{J}_a = \sigma_a\mathbf{E}
+\end{equation}
 
 
 Here $\mathbf{E}$ is total electric field and $\sigma_a$ is the difference between wholespace conductivity $\sigma_1$ and conductivity of the target $\sigma_2$: $\sigma_a = \sigma_2-\sigma_1$.
