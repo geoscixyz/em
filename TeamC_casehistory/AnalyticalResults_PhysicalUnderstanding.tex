@@ -60,7 +60,6 @@
 \Large
 \textbf{Uniform electric field illuminating a sphere in a uniform earth (analytic solution, reference)}
 
-\normalsize
 \vspace{0.4cm}
 
 Let consider a  resistive uniform half-space, of conductivity $\sigma_1$enclosing a conductive sphere $\sigma_2$. Let assume a uniform, unidirectional static electric field $E_0$ going through this half-space.
@@ -183,12 +182,12 @@ From equations (10) and (12), we get:
  \vspace{0.4cm}
 
 
-$A=-\frac{3 \sigma_1}{\sigma_2 + 2\sigma_1} E_0 $
+$A=-\frac{3 \sigma_1}{\sigma_2 + 2\sigma_1} E_0 $ \quad (13)
 
  \vspace{0.4cm}
 
 
-$B=E_0 R^3 \frac{\sigma_2-\sigma1}{\sigma_2+2\sigma_1} $
+$B=E_0 R^3 \frac{\sigma_2-\sigma1}{\sigma_2+2\sigma_1} $ \quad (14)
 
  \vspace{0.4cm}
 
@@ -198,35 +197,64 @@ And the anomalous electric field is:
  \vspace{0.4cm}
 
 
-$\mathbf{E_s=-\nabla{V^s}_e=E_0 R^3 \frac{\sigma_2-\sigma_1}{\sigma_2 - 2\sigma_1} \frac{(2x^2-y^2-z^2)\mathbf{u}_x + 3xy \mathbf{u}_y + 3xz \mathbf{u}_z}{r^5}} $
+$\mathbf{E_s=-\nabla{V^s}_e=E_0 R^3 \frac{\sigma_2-\sigma_1}{\sigma_2 - 2\sigma_1} \frac{(2x^2-y^2-z^2)\mathbf{u}_x + 3xy \mathbf{u}_y + 3xz \mathbf{u}_z}{r^5}} $ \quad (15)
 
 \vspace{0.4cm}
 
 
-Continuity of current and charge accumulation. 
+\Large
+\textbf{Continuity of current and charge accumulation}
 
+\vspace{0.4cm}
 
- \vspace{0.4cm}
+We assume to be here in a steady state with direct current.
+The current entering a cylinder through an interface as in figure \ref{Normal J continuous} consists both in tangential and normal components. 
 
+\begin{figure}[h]
+\caption{Uniform electric field illuminating a sphere in a uniform earth}
+\includegraphics[scale=0.2]{Jcontinuous.png}
+\label{Normal J continuous}
+\end{figure}
 
+As the cylinder height is collapsed to zero, we can write the normal component as:
 
+$I=J_1 \cdot \mathbf{n} \Delta a$ \quad (16)
+or as
+$I=J_2 \cdot \mathbf{n} \Delta a$ \quad (17)
+\vspace{0.4cm}
+
+Note: Otherwise in steady state we would have an infinite built up of charges at the interface 
+\vspace{0.4cm}
+Then $J_2 \cdot \mathbf{n} = J_1 \cdot \mathbf{n}$ \quad (18)
+\vspace{0.4cm}
+
+so $\mathbf{{J_1}^n={J_2}^n}$ \quad (19)
+
+\vspace{0.4cm}
+Note: This is only true in a direct current case in a steady state. It appears to be satisfactory up to $10^5$ Hz, as long as displacement currents can be considered negligeable.
+
+\vspace{0.4cm}
+
+\Large
 \textbf{Charges, Coulomb's law and potentials.}
 
 Electric charge produces an electric potential; the Coulomb's electrostatic potential is
-\begin{equation}
-V(r) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}.
-\end{equation}
+
+%\begin{equation}
+$V(r) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r}.$ \quad (20)
+%\end{equation}
 
  \vspace{0.4cm}
 
 
 
+\Large
 \textbf{Anomalous currents and electric fields}
 
 Anomalous current density is defined as 
-\begin{equation*}
-\mathbf{J}_a = \sigma_a\mathbf{E}.
-\end{equation*}
+%\begin{equation*}
+$\mathbf{J}_a = \sigma_a\mathbf{E}.$ \quad (21)
+%\end{equation*}
 
 
 Here $\mathbf{E}$ is total electric field and $\sigma_a$ is the difference between wholespace conductivity $\sigma_1$ and conductivity of the target $\sigma_2$: $\sigma_a = \sigma_2-\sigma_1$.
@@ -244,7 +272,8 @@ DC app for looking at currents, charges etc with a current source at the surface
 
 
 
-Analytic solution for a buried sphere in a uniform space 
+\Large
+\textbf{Analytic solution for a buried sphere in a uniform space}
 
 
 \end{document}
