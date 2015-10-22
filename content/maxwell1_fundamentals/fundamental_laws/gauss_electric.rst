@@ -3,30 +3,27 @@
 Gauss's Law for Electric Fields
 ===============================
 
-Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface, with constant of proportionality :math:`\epsilon_0`. In integral equation form it reads:
+Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface, with constant of proportionality :math:`\epsilon_0`. In integral equation form it reads
 
 .. math::
-	\oint_{S} \mathbf{e} \cdot \hat{\mathbf{n}} \; \mathrm{d}a = \frac{Q}{ \epsilon_{0} }\;,
+	\oint_{A} \mathbf{e} \cdot \hat{\mathbf{n}} \; \mathrm{d}a = \frac{Q}{ \epsilon_{0} }\;,
 	:label: Gauss_e_int
-where the integral is over a closed surface :math:`S`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to :math:`S` and :math:`Q` is the total charge enclosed by :math:`S`. 
-
-.. figure::	Efield.gif
-
+where the integral is over a closed surface :math:`A`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to :math:`A` and :math:`Q` is the total charge enclosed by :math:`S`.  
 
 Differential Form
 -----------------
 
-When considering charge in a continously distributed body, we can consider the concept of charge density rather than total charge. The total charge in a body is then the volume integral of charge density :math:`\rho` over the body such that:
+When considering a spatially extended charged body, we can think of its charge as being continously distributed throughout the body with density :math:`\rho`. The total charge is then given by the integral of the charge density over the volume of the body.
 
 .. math::
 	Q = \int_V \rho \; \mathrm{d}V\;.
 	:label: charge_density
-Using this definition and applying the divergence theorem to the left hand side of equation :eq:`charge_density`, we can rewrite it as:
+Using this definition and applying the divergence theorem to the left hand side of Gauss's law (:eq:`Gauss_e_int`), we can rewrite the law as:
 
 .. math::
-	\int_V \nabla \cdot \mathbf{e} \; \mathrm{d}V = \int_V \rho \; \mathrm{d}V \;.
+	\int_V \nabla \cdot \mathbf{e} \; \mathrm{d}V = \int_V \frac{\rho}{\epsilon_0} \; \mathrm{d}V \;.
 	:label: 
-Since this must be true for any volume , we can equate the integrands, giving the differential form of Gauss's law:
+Since this equation must hold for any volume :math:`V` , we can equate the integrands, giving the differential form of Gauss's law:
 
 .. math::
 	\nabla \cdot \mathbf{e} = \frac{\rho}{\epsilon_0}.
@@ -35,36 +32,50 @@ Since this must be true for any volume , we can equate the integrands, giving th
 Equivalence to Coulomb's law
 ----------------------------
 
-Coulomb's law is often one of the first quantitative laws encountered by students of electromagnetism. It describes the force between two electric charges idealized as point sources. Coulomb's law states that the force between two electric charges is proportional to the inverse square of the distance between them acting in the direction of a line connecting them. If the charges are of opposite sign, the force is attractive and if the charges are of the same sign, the force is repulsive. Mathematically, Coulomb's law is written as:
+Coulomb's law is often one of the first quantitative laws encountered by students of electromagnetism. It describes the force between two point electric charges. It turns out that it is equivalent to Gauss's law. Coulomb's law states that the force between two point electric charges is proportional to the inverse square of the distance between them, acting in the direction of a line connecting them. If the charges are of opposite sign, the force is attractive and if the charges are of the same sign, the force is repulsive. Mathematically, Coulomb's law is written as
 
 .. math::
-  \mathbf{F} = \frac{q_1q_2}{4\pi r^2}\hat{\mathcal{r}} \;,
+  \mathbf{F} = \frac{q_0q}{4\pi \epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}} \;,
   :label: Coulomb_q
-where :math:`F` is the force between the two charges :math:`q_1` and :math:`q_2`, :math:`r` is the distance between the charges and :math:`\hat{\mathcal{r}}` is a unit vector in the direction of the line separating the two charges.
+where :math:`F` is the force between the two charges :math:`q_0` and :math:`q`, :math:`|\mathbf{r}|` is the distance between the charges and :math:`\hat{\mathbf{r}}` is a unit vector in the direction of the line separating the two charges.
 
-Having defined Coulomb's law, one might next naturally ask the question how would a standard reference charge behave in the presence of any distribution of electric charge we might dream up? Answering this question brings us to the concept of the electric field. We follow the presentation of [2]_. Let us define the electric field as:
+Having defined Coulomb's law, one might next naturally ask the question how would a standard reference charge behave in the presence of any distribution of electric charge we might dream up? Answering this question brings us to the concept of the electric field. We follow the presentation of [2]_. We can define the electric field of an arbitrary charge :math:`q` as the force experienced by a unit charge :math:`q_0` due to :math:`q`
 
 .. math::
-       e = \frac{\mathbf{F}}{q_0},
+       \mathbf{e} = \frac{\mathbf{F}}{q_0}.
        :label: Force_per_q
-where :math:`q_0` is a positive charge of unit magnitude. We can now write Coulomb's law as:
+Dividing both sides of Coulomb's law by :math:`q_0` and substituting the definition of :math:`\mathbf{e}`, we get that the electric field of a point charge :math:`q` is
 
 .. math::
-      \mathbf{e} = \frac{q}{4\pi\epsilon_0 r^2}\hat{\mathcal{r}}\;.
+      \mathbf{e}(\mathbf{r}) = \frac{q}{4\pi\epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}}\;.
       :label: e_charge_q
-If we replace :math:`q` with a continuous charge distribution it becomes
+It is important to note here that the electric field obeys the principle of superposition, meaning that the electric field of an arbitrary collection of point charges is equal to the sum of the electric fields due to each individual charge. 
 
 .. math::
-  \mathbf{e} = \frac{1}{4\pi\epsilon_0}\int_V \frac{\rho}{r^2}\mathrm{d}\hat{\mathcal{r}}
+   \mathbf{e}(\sum_{k=1,n} q_i) = \sum_{k=1,n} \mathbf{e}(q_i)
+
+If we consider the The electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
+
+.. math::
+  \mathbf{e} = \frac{1}{4\pi\epsilon_0}\int_V \frac{\rho}{|\mathbf{r}|^2}\mathrm{d}V,
   :label: e_charge_den
-where :math:`r` is now the distance from a point in the charge distribution to the point at which the electric field is to be evaluated. 
+where :math:`|\mathbf{r}|` is now the distance from a point in the charged body to the point at which the electric field is to be evaluated. The integral is over the charged body. 
 
-We can show that this is equivalent to the differential form of Gauss's law by taking the divergence of both sides. Doing this we get 
+To show that :eq:`e_charge_den` is equivalent to Gauss's law, start by taking the divergence of both sides
 
 .. math::
-   \nabla \cdot \mathbf{e} = \frac{1}{4\pi\epsilon_0}\int_V \nabla \cdot\left(\frac{1}{r^2}\right)\rho\mathrm{d}\hat{\mathcal{r}} = \frac{\rho}{\epsilon_0}
+   \nabla \cdot \mathbf{e} = \frac{1}{4\pi\epsilon_0}\int_V \nabla \cdot\left(\frac{1}{r^2}\right)\rho\mathrm{d}V.
    :label: Gauss_diff
-For a full derivation see pages 65-70 of [2]_.
+Note that the divergence is taken with respect to the spatial variation of :math:`\mathbf{e}`, with :math:`\rho` held constant. Regardless of the volume of integration, the integral on the right hand side of equation :eq:`Gauss_diff` has the value
+
+.. math::
+   \int_V \nabla \cdot\left(\frac{1}{r^2}\right)\rho\mathrm{d}V = 4\pi\rho.
+   
+This establishes the desired result
+
+.. math::
+   \nabla \cdot \mathbf{e} = \frac{\rho}{\epsilon_0}.
+For a more detailed derivation and discussion, see pages 65-70 of [2]_.
 
 Notes on Electric flux
 ----------------------
@@ -72,9 +83,13 @@ Notes on Electric flux
 Flux is a measure of the strength of a field passing through a surface. Electric flux is defined in general as 
 
 .. math::
-	\boldsymbol{\Phi} = \int_s \mathbf{e} \cdot d\mathbf{s})
+	\boldsymbol{\Phi} = \int_s \mathbf{e} \cdot d\mathbf{s}.
 	:label: e_flux
-So we can also think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. 
+We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{r^2}` spatial dependence but the volume of the surface increases with :math:`r^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
+
+.. figure:: Efield.gif
+  
+  Illustration of The electric flux through a Gaussian surface due to a point charge at the origin. The color of the surface shows the magnitude of the electric field (or flux density).
 
 Units
 -----
