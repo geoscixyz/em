@@ -96,21 +96,22 @@ We can think of electric field as flux density. Gauss’s law tells us that the 
 
 Units
 -----
+.. tabularcolumns:: |c|c|c|c|
 
 +-----------------------+------------------+---------------------------+-------------------------------+
 |        Quantity       |  Symbol          |  Units (abbreviation)     |  Equivalent                   |
 +=======================+==================+===========================+===============================+
-|     surface area      |  :math:`S`       |square meter :math:`(m^2)` |                               |
+|     Surface area      |  :math:`S`       |Square meter :math:`(m^2)` |                               |
 +-----------------------+------------------+---------------------------+-------------------------------+
-|     volume            |  :math:`V`       |cubic meter :math:`(m^3)`  |                               |
+|     Volume            |  :math:`V`       |Cubic meter :math:`(m^3)`  |                               |
 +-----------------------+------------------+---------------------------+-------------------------------+
-|     electric charge   |  :math:`q, Q`    | Coulomb :math:`(C)`       |                               |
+|     Electric charge   |  :math:`q, Q`    | Coulomb :math:`(C)`       |                               |
 +-----------------------+------------------+---------------------------+-------------------------------+
-|electric charge density| :math:`\rho`     | :math:`(C/m^3)`           |                               |
+|Electric charge density| :math:`\rho`     | :math:`(C/m^3)`           |                               |
 +-----------------------+------------------+---------------------------+-------------------------------+
-|     electric field    | :math:`e`        | Volt/meter :math:`(V/m)`  |Newton/Coulomb :math:`(N/C)`   |
+|     Electric field    | :math:`e`        | Volt/meter :math:`(V/m)`  |Newton/Coulomb :math:`(N/C)`   |
 +-----------------------+------------------+---------------------------+-------------------------------+
-|electrical permittivity|:math:`\epsilon_0`| Farads/meter :math:`(F/m)`|:math:`C/(V \cdot m )`         |
+|Electrical permittivity|:math:`\epsilon_0`| Farads/meter :math:`(F/m)`|:math:`C/(V \cdot m )`         |
 +-----------------------+------------------+---------------------------+-------------------------------+
 
 
