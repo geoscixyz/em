@@ -3,12 +3,15 @@
 Gauss's Law for Electric Fields
 ===============================
 
-Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface, with constant of proportionality :math:`\epsilon_0`. In integral equation form it reads
+Integral Equation
+-----------------
+
+Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface, with constant of proportionality :math:`\epsilon_0`. In integral equation form it reads:
 
 .. math::
-	\oint_{A} \mathbf{e} \cdot \hat{\mathbf{n}} \; \mathrm{d}a = \frac{Q}{ \epsilon_{0} }\;,
+	\oint_{S} \mathbf{e} \cdot \hat{\mathbf{n}} \; \mathrm{d}a = \frac{Q}{ \epsilon_{0} }\;,
 	:label: Gauss_e_int
-where the integral is over a closed surface :math:`A`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to :math:`A` and :math:`Q` is the total charge enclosed by :math:`S`.  
+where the integral is over a closed surface :math:`S`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to the surface and :math:`Q` is the total charge enclosed by :math:`S`.  
 
 Differential Form
 -----------------
@@ -35,26 +38,26 @@ Equivalence to Coulomb's law
 Coulomb's law is often one of the first quantitative laws encountered by students of electromagnetism. It describes the force between two point electric charges. It turns out that it is equivalent to Gauss's law. Coulomb's law states that the force between two point electric charges is proportional to the inverse square of the distance between them, acting in the direction of a line connecting them. If the charges are of opposite sign, the force is attractive and if the charges are of the same sign, the force is repulsive. Mathematically, Coulomb's law is written as
 
 .. math::
-  \mathbf{F} = \frac{q_0q}{4\pi \epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}} \;,
+  \mathbf{F} = \frac{qQ}{4\pi \epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}} \;,
   :label: Coulomb_q
-where :math:`F` is the force between the two charges :math:`q_0` and :math:`q`, :math:`|\mathbf{r}|` is the distance between the charges and :math:`\hat{\mathbf{r}}` is a unit vector in the direction of the line separating the two charges.
+where :math:`F` is the force between the two charges :math:`q` and :math:`Q`, :math:`|\mathbf{r}|` is the distance between the charges and :math:`\hat{\mathbf{r}}` is a unit vector in the direction of the line separating the two charges.
 
-Having defined Coulomb's law, one might next naturally ask the question how would a standard reference charge behave in the presence of any distribution of electric charge we might dream up? Answering this question brings us to the concept of the electric field. We follow the presentation of [2]_. We can define the electric field of an arbitrary charge :math:`q` as the force experienced by a unit charge :math:`q_0` due to :math:`q`
+Having defined Coulomb's law, one might next naturally ask the question how would a standard reference charge behave in the presence of any distribution of electric charge we might dream up? Answering this question brings us to the concept of the electric field. We follow the presentation of [2]_. We can define the electric field of an arbitrary charge :math:`Q` as the force experienced by a unit charge :math:`q` due to :math:`Q`
 
 .. math::
-       \mathbf{e} = \frac{\mathbf{F}}{q_0}.
+       \mathbf{e} = \frac{\mathbf{F}}{q}.
        :label: Force_per_q
-Dividing both sides of Coulomb's law by :math:`q_0` and substituting the definition of :math:`\mathbf{e}`, we get that the electric field of a point charge :math:`q` is
+Dividing both sides of Coulomb's law by :math:`q` and substituting the definition of :math:`\mathbf{e}`, we get that the electric field of a point charge :math:`Q` is
 
 .. math::
-      \mathbf{e}(\mathbf{r}) = \frac{q}{4\pi\epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}}\;.
+      \mathbf{e}(\mathbf{r}) = \frac{Q}{4\pi\epsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}}\;.
       :label: e_charge_q
 It is important to note here that the electric field obeys the principle of superposition, meaning that the electric field of an arbitrary collection of point charges is equal to the sum of the electric fields due to each individual charge. 
 
 .. math::
-   \mathbf{e}(\sum_{k=1,n} q_i) = \sum_{k=1,n} \mathbf{e}(q_i)
+   \mathbf{e}(\sum_{k=1,n} Q_i) = \sum_{k=1,n} \mathbf{e}(Q_i)
 
-If we consider the The electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
+If we consider the the electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
 
 .. math::
   \mathbf{e} = \frac{1}{4\pi\epsilon_0}\int_V \frac{\rho}{|\mathbf{r}|^2}\mathrm{d}V,
@@ -83,17 +86,32 @@ Notes on Electric flux
 Flux is a measure of the strength of a field passing through a surface. Electric flux is defined in general as 
 
 .. math::
-	\boldsymbol{\Phi} = \int_A \mathbf{e} \cdot \hat{\mathbf{n}} \, \mathrm{d}a.
+	\boldsymbol{\Phi} = \int_S \mathbf{e} \cdot \hat{\mathbf{n}} \, \mathrm{d}a.
 	:label: e_flux
 We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{r^2}` spatial dependence but the volume of the surface increases with :math:`r^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
 
 .. figure:: Efield.gif
   
-  Illustration of The electric flux through a Gaussian surface due to a point charge at the origin. The color of the surface shows the magnitude of the electric field (or flux density).
+  Illustration of the electric flux through different Gaussian surfaces :math:`S` due to a point charge :math:`Q` at the origin. The color of the surface shows the magnitude of the electric field (or flux density). 
 
 Units
 -----
 
++-----------------------+------------------+---------------------------+-------------------------------+
+|        Quantity       |  Symbol          |  Units (abbreviation)     |  Equivalent                   |
++=======================+==================+===========================+===============================+
+|     surface area      |  :math:`S`       |square meter :math:`(m^2)` |                               |
++-----------------------+------------------+---------------------------+-------------------------------+
+|     volume            |  :math:`V`       |cubic meter :math:`(m^3)`  |                               |
++-----------------------+------------------+---------------------------+-------------------------------+
+|     electric charge   |  :math:`q, Q`    | Coulomb :math:`(C)`       |                               |
++-----------------------+------------------+---------------------------+-------------------------------+
+|electric charge density| :math:`\rho`     | :math:`(C/m^3)`           |                               |
++-----------------------+------------------+---------------------------+-------------------------------+
+|     electric field    | :math:`e`        | Volt/meter :math:`(V/m)`  |Newton/Coulomb :math:`(N/C)`   |
++-----------------------+------------------+---------------------------+-------------------------------+
+|electrical permittivity|:math:`\epsilon_0`| Farads/meter :math:`(F/m)`|:math:`C/(V \cdot m )`         |
++-----------------------+------------------+---------------------------+-------------------------------+
 
 
 References
