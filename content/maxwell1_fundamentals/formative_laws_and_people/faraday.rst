@@ -3,7 +3,7 @@
 Faraday's Law
 =============
 
-Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce electric fields. 
+Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce rotational electric fields. 
 
 Integral Form in the Time-Domain
 --------------------------------
@@ -12,10 +12,8 @@ Faraday's law in integral form can be expressed using the following equation:
 
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
-where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector parallel to :math:`da` , and :math:`d{\bf l}` is a vector element of length along the contour :math:`C`.
-Eq. :eq:`faradays_law_int_time` states that the time varying magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field over that path.
-
-.. note:: Negative sign in RHS of Eq. :eq:`faradays_law_int_time` denotes conservation of electromagnetic energy.
+where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
+Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
 
 Differential Form in the Time-Domain
 ------------------------------------
@@ -28,13 +26,13 @@ By applying Stokes's theorem to left-hand side of Eq. :eq:`faradays_law_int_time
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
 .. TODO: Put some links: rotational field 
 Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will induce rotational electric fields.
-The curl of these induced electric fields also oppose time-dependent changes in the inducing magnetic field.
+Furthermore, the curl of the induced electric fields opposes time-dependent changes in the inducing magnetic field.
 
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------
 
-The frequency-domain representation of Faraday's law can be obtained by applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and :eq:`faradays_law_diff_time`.
+Frequency-domain representation of Faraday's law can be obtained by applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and :eq:`faradays_law_diff_time`.
 The integral form of Faraday's law in the frequency domain is:
 
 .. include:: ../../equation_bank/faradays_law_int_freq.rst
@@ -47,7 +45,7 @@ where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the frequency-
 From a theoretical perspective, it is common practice to consider :math:`{\bf E}` and :math:`{\bf B}` as sinusoidal functions.
 From Eq. :eq:`faradays_law_diff_freq` , we can infer two things:
 
-1. Induced rotational electric fields are proportional to the angular frequency; this implies that electromagnetic induction is larger for higher frequencies.
+1. Induced rotational electric fields are proportional to the angular frequency; this implies that electromagnetic induction is larger at higher frequencies.
 2. Induced rotational electric fields, and the frequency-dependent magnetic fields responsible for them, are 90 degrees out of phase.
 
 .. that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
@@ -64,20 +62,20 @@ A loop of wire with area :math:`A`, contoured by a closed path :math:`C`, was th
 This resulted in a magnetic flux :math:`{\boldsymbol \Phi_b}` defined by:
 
 .. include:: ../../equation_bank/magnetic_flux_time.rst
-Faraday's three experiments were conducted as follows:
+Faraday's then conducted the following three experiments:
 
-1. Faraday moved the loop of wire while the electromagnet remained stationary.
+1. The loop of wire was mobed while the electromagnet remained stationary.
 2. the electromagnet was moved while the loop of wire remained stationary.
-3. both the loop of wire and electromagnet remained at a fixed position, however, the strength of the magnetic field was varied as a function of time.
+3. both the loop of wire and electromagnet remained stationary, however, the strength of the magnetic field was varied as a function of time.
 
 Faraday noticed that in all three experiments, an electromotive force :math:`\mathcal{E}` was induced in the wire, resulting in a measurable electric current.
-The electromotive force :math:`\mathcal{E}` is related to the electric field :math:`{\bf e}` by integrating over the path of the wire:
+The electromotive force :math:`\mathcal{E}` can be defined in terms of the electric field :math:`{\bf e}` by integrating over the path of the wire as follows:
 
 .. include:: ../../equation_bank/electromotive_force_time.rst
 
-In an ideal circuit, this is equivalent to the Voltage :math:`V` experienced by the wire.
-For a circuit with resistance :math:`R`, Ohm's law :math:`V=IR` can be used to show that an electromotive force results in current :math:`I`.
-Faraday's breakthrough came by proposing that a time-dependent change in magnetic flux through the wire loop was responsible for the electromotive force experienced by the wire.
+In an ideal circuit, the electromotive force is equivalent to the Voltage :math:`V` experienced by the wire.
+For a circuit with resistance :math:`R`, Ohm's law :math:`V=IR` can be used to show that electromotive forces are associated with currents :math:`I`.
+Faraday's breakthrough came by proposing that a time-dependent change in magnetic flux through the wire loop was responsible for the resulting electromotive force.
 In 1833, Heinrich Lenz determined that the time dependent change in magnetic flux was negatively proportional to the electromotive force it generated.
 The contributions made by Faraday and Lenz are represented by the following equation:
 
@@ -108,7 +106,7 @@ Thus we can interpret the magnetic flux as a unit of work per unit current.
 Geophysical Applications Faraday's Law
 --------------------------------------
 
-When performing electromagnetic surveys, various apparatuses are used to generate time-dependent magnetic fields.
+When performing electromagnetic surveys, various instruments are used to generate time-dependent magnetic fields.
 These fields are commonly refered to as primary fields.
 According to Eqs. :eq:`faradays_law_diff_time` , this will induce rotational electric fields within the surrounding region.
 For a rock unit defined by conductivity :math:`\sigma` , Ohm's law (put a link here) :math:`{\bf j} = \sigma {\bf e}` implies that a current density :math:`{\bf j}` is also induced by the primary field.
@@ -117,21 +115,13 @@ Therefore, we can use Faraday's law in differential form to understand the manne
 
 According to the Biot-Savart law (add link), current densities are responsible for generating magnetic fields.
 This implies that currents induced by the primary field will result in the creation of an anomalous magnetic field, commonly refered to as the secondary field.
-The secondary field is observed above the Earth's surface, and provides important information regarding subsurface geological structures.
+The secondary field can be measured at locations above the Earth's surface, and provides important information regarding subsurface geological structures.
 But how is the secondary field measured?
 
-This question can be aswered by considering Faraday's law in integral form.
-A coil of wire, placed in a region where secondary fields are observed, will experience an electromotive force, or induced voltage, according to Eq. :eq:`faraday_lenz_time` .
-Using our definitions for the electromotive force and magnetic flux, this is an equivalent expression as Eq. :eq:`faradays_law_int_time` .
-Therefore in practice, receiver coils designed to collect data during electromagnetic surveys do not measure the secondary field directly.
-Instead, data are represented by the voltage induced within a receiver coil.
+If placed in a region where secondary fields are observable, a receiver loop of wire will experience an electromotive force according to Eq. :eq:`faraday_lenz_time` .
+From Eq. :eq:`electromotive_force_time` , we know that the electromotive force is equivalent to the voltage being induced in the wire.
+Therefore we can use voltage measurements to represent information regarding the secondary field, as opposed to measuring the field directly.
 
 The explanation provided in this section may also be understood in the frequency-domain.
-However, the voltage induced within the receiver coils has both real and imaginary components.
+However, the voltage induced within the receiver coils will have both real and imaginary components.
 
-
-History of Michael Faraday
---------------------------
-
-Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce electric fields in matter.
-Although Faraday is most recognized for his pioneering research in the field of electromagnetics, he is also accredited with significant contributions to the field of electrochemistry; including the discovery of benzene, and creating the laws of electrolysis. 
