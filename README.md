@@ -10,8 +10,9 @@ A resource for electromagnetic geophysics
 
 Check out the wiki: https://github.com/ubcgif/em/wiki
 
-Link for anaconda (python package manager): https://www.continuum.io/downloads
+In it, we have included tips on reStructured text and Sphinx, GitHub as well as our development practices. 
 
+<<<<<<< HEAD
 Here are a couple resources on sphinx and reStructured Text:
 - http://sphinx-doc.org/markup/
 - http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
@@ -54,3 +55,6 @@ We choose the notation set forth  in Ward and Hohmann. Their chapter has been th
   
 - time domain variable are lower case
 - frequency domain variables are upper case
+=======
+Add an [issue](https://github.com/ubcgif/em/issues) for questions and problems. 
+>>>>>>> master
