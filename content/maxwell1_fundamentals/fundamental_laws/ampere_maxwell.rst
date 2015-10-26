@@ -61,12 +61,13 @@ integral equation above is thus written as
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
-\\(\\mathbf{j_f}\\)= free current caused by moving charges
-\\(\\mathbf{j_b} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\)  where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics
-\\(\\mathbf{j_p} = \\nabla \\times \\mathbf{m}\\) is the magnetic polarization current. That is currents needed to generate the magnetization \\( \\mathbf{m}\\). 
+
+- \\(\\mathbf{j_f}\\)= free current caused by moving charges
+- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\)  where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics
+- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetic polarization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\). 
 
 
-A note on the total current
+A note on the total current 
 ***************************
 
 The total current involved in the Ampere-Maxwell equation consists of free
@@ -88,11 +89,12 @@ Then the total current density can be described as
     \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
 
 where
-\\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
+
+- \\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
 moving charges,
-\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
+- \\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
 magnetization,
-\\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
+- \\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
 current density due to the time-dependent bound charges.
 
 Treating free current and bound current separately and combining the
