@@ -61,39 +61,48 @@ integral equation above is thus written as
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
-\\(\\mathbf{j_f}\\)= free current caused by moving charges
-\\(\\mathbf{j_b} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\)  where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics
-\\(\\mathbf{j_p} = \\nabla \\times \\mathbf{m}\\) is the magnetic polarization current. That is currents needed to generate the magnetization \\( \\mathbf{m}\\). 
 
+- \\(\\mathbf{j_f}\\) is the free current caused by moving charges
+- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\) is the polarization or bound current, where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics. 
+- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\). 
 
-A note on the total current
-***************************
-
-The total current involved in the Ampere-Maxwell equation consists of free
-current and bound current, although all currents are essentially the same from
-a microscopic perspective. Treating free current and bound current differently
-offers physical insights to the Ampere-Maxwell equation in different contexts.
-
-The free current is caused by moving charges which are not tied to atoms, often
-referred to as conduction current. In contrast, the bound current is induced by
-a magnetization or a polarization in bulk materials. When a magnetic material is
-placed in an external magnetic field, a magnetization current will be induced
-due to the motion of electrons in atoms. Likewise, when an external electric
-field is applied to a dielectric, the positive and negative bound charges within
-the dielectric can separate and induce a polarization current density internally.
-
-Then the total current density can be described as
+The total current density is the sum of these three contributions and is described by
 
 .. math::
-    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
+    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m
 
-where
-\\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
-moving charges,
-\\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
-magnetization,
-\\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization
-current density due to the time-dependent bound charges.
+
+.. A note on the total current 
+.. ***************************
+
+
+.. note:: 
+    The total current involved in the Ampere-Maxwell equation consists of free
+    current and bound current, although all currents are essentially the same from
+    a microscopic perspective. Treating free current and bound current differently
+    offers physical insights to the Ampere-Maxwell equation in different contexts.
+
+    The free current is caused by moving charges which are not tied to atoms, often
+    referred to as conduction current. In contrast, the bound current is induced by
+    a magnetization or a polarization in bulk materials. When a magnetic material is
+    placed in an external magnetic field, a magnetization current will be induced
+    due to the motion of electrons in atoms. Likewise, when an external electric
+    field is applied to a dielectric, the positive and negative bound charges within
+    the dielectric can separate and induce a polarization current density internally.
+
+.. Then the total current density can be described as
+
+.. 
+..     \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
+
+.. where
+
+.. - \\(\\mathbf{j}_f = \\sigma \\mathbf{e} \\) is the free current density caused by
+.. moving charges,
+.. - \\(\\mathbf{j}_m = \\nabla \\times \\mathbf{m}\\) is the bound current due to
+.. magnetization,
+.. - \\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization current density due to the time-dependent bound charges.
+
 
 Treating free current and bound current separately and combining the
 constitutive equations, the Ampere-Maxwell equation can be reformulated as
