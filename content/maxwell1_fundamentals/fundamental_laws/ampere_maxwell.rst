@@ -63,13 +63,13 @@ integral equation above is thus written as
 where the current densities are:
 
 - \\(\\mathbf{j_f}\\) is the free current caused by moving charges
-- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\)  where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics
-- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetic polarization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\). 
+- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\) is the polarization or bound current, where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics. 
+- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\). 
 
 The total current density is the sum of these three contributions and is described by
 
 .. math::
-    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_m + \mathbf{j}_p
+    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m
 
 
 .. A note on the total current 
