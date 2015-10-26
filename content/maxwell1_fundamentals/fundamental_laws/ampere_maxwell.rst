@@ -9,7 +9,7 @@ Integral Equation
 The Ampere-Maxwell equation in integral form is given below:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{ds} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \epsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{ds} \right)
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{ds} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \varepsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{ds} \right)
     :label: ampere_maxwell_integral
 
 where:
@@ -18,12 +18,21 @@ where:
  - \\( \\mathbf{e} \\) is the electric field
  - \\( I_{enc} \\) is the enclosed current
  - \\( \\mu_0 \\) is the magnetic permeability of free space
- - \\( \\epsilon_0 \\) is the electric permittivity of free space
+ - \\( \\varepsilon_0 \\) is the electric permittivity of free space
  - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
+
+
+ .. figure:: images/Ienc.png
+    :align: right
+    :scale: 20% 
+    :name: Ienc
+
+    Enclosed current. 
+
 
 The first portion of the equation was discovered by Ampere. It shows the relationship
 between a current \\(I_{enc}\\) and the circulation of the magnetic field, \\(\\mathbf{b}\\),
-around any closed contour line. \\(I_{enc}\\) refers to all currents
+around any closed contour line (See :numref:`Ienc`). \\(I_{enc}\\) refers to all currents
 irrespective of their physical origin.
 
 The second portion of the equation is Maxwell's contribution and shows that a
@@ -48,7 +57,7 @@ integral equation above is thus written as
     \mu_0 \left(\int_S \left(\mathbf{j_f}  
         + \frac{\partial \mathbf{p}}{\partial t} 
         + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{ds} 
-        +  \epsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{ds}\right)
+        +  \varepsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{ds}\right)
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
@@ -113,7 +122,7 @@ Variables:   \\(\\mathbf{e, b, p, m} \\)
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{b} 
-        - \epsilon_0 \mu_0 \frac{\partial \mathbf{e}}{\partial t} 
+        - \varepsilon_0 \mu_0 \frac{\partial \mathbf{e}}{\partial t} 
     = \mu_0\left( \mathbf{j_f} 
         + \frac {\partial \mathbf{p}}{\partial t} 
         + \boldsymbol{\nabla} \times \mathbf{m}\right) 
@@ -121,7 +130,7 @@ Variables:   \\(\\mathbf{e, b, p, m} \\)
 
 Variables: \\(\\mathbf{e, b, d, h }\\)
 
-where \\(\\mathbf{d}= \\epsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\)
+where \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\)
 
 .. include:: ../../equation_bank/ampere_maxwell_time.rst
 
@@ -186,7 +195,7 @@ Units
 +--------------------------+----------------------------------------------------------------------------------------------------+
 | Magnetic constant        | \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx 1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\)|
 +--------------------------+----------------------------------------------------------------------------------------------------+
-| Vacuum permittivity      | \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre)           |
+| Vacuum permittivity      | \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre)        |
 +--------------------------+----------------------------------------------------------------------------------------------------+
 
 **Conversions**
@@ -212,7 +221,7 @@ Units
 
 .. Magnetic constant \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx  1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\). 
 
-.. Vacuum permittivity \\(\\epsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
+.. Vacuum permittivity \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
 
 Discovers of the law
 --------------------
