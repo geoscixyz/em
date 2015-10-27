@@ -147,7 +147,8 @@ and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive re
 Differential equations in the frequency domain
 ---------------------------------------------- 
 
-We use the \\(e^{i\\omega t}\\) :ref:`fourier_transform_convention` 
+We use the \\(e^{i\\omega t}\\) :ref:`fourier_transform_convention` to transfer 
+our equations from the time domain to the frequency domain.
 
 The equation becomes 
 
@@ -210,12 +211,11 @@ Units
  - One tesla equals one weber (the SI unit of magnetix flux) per square metre:
 
     .. math:: 
-        1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}
+        1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}.
 
  - One ampere equals one coulomb (the SI unit of electric charge) per second: 
     .. math:: 
         1 \text{A} = 1 \frac{\text{C}}{\text{s}}.
-
 
 
 .. Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{\\text{A}}{\\text{m}}]\\)
