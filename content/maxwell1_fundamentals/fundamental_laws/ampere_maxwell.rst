@@ -104,17 +104,17 @@ The total current density is the sum of these three contributions and is describ
 .. - \\(\\mathbf{j}_p = \\frac{\\partial \\mathbf{p}}{\\partial t} \\) is the polarization current density due to the time-dependent bound charges.
 
 
-Treating free current and bound current separately and combining the
-constitutive equations, the Ampere-Maxwell equation can be reformulated as
-in integral form:
+Continuing to treat the free current and bound current separately and using the 
+constitutive equations: \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\), \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\), the integral form Ampere-Maxwell equation can be reformulated as:
 
 .. math::
     \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{ds} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{ds}
+    :label: ampere_maxwell_integral_h&d
 
-and in differential form,
+.. and in differential form,
 
-.. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
+.. .. math::
+..     \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
 
 Note that the bound charge due to magnetization is integrated into the magnetic
 field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
@@ -125,9 +125,7 @@ Differential equation in the time domain
 ----------------------------------------
 
 There are a number of ways of writing the equation in differential form. Each
-provides its own insight.
-
-Variables:   \\(\\mathbf{e, b, p, m} \\)
+provides its own insight. We begin by considering the differential form of equation :eq:`ampere_maxwell_integral` in terms of the variables \\(\\mathbf{e, b, p, m} \\)
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{b} 
@@ -137,11 +135,11 @@ Variables:   \\(\\mathbf{e, b, p, m} \\)
         + \boldsymbol{\nabla} \times \mathbf{m}\right) 
     :label: ampere_maxwell_differential_ebpm
 
-Variables: \\(\\mathbf{e, b, d, h }\\)
+and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive relations \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\) to write the differential time-domain equation in terms of the variables \\(\\mathbf{h, j_f, d} \\)
 
-where \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\)
-
-.. include:: ../../equation_bank/ampere_maxwell_time.rst
+.. math::
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
+    :label: ampere_maxwell_differential_hjd
 
 
 
