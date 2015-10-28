@@ -67,7 +67,7 @@ It is important to note here that the electric field obeys the principle of supe
 If we consider the the electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
 
 .. math::
-  \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r}|^2}\mathrm{d}V,
+  \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r}|^2}\;\mathrm{d}v,
   :label: e_charge_den
 
 where :math:`|\mathbf{r}|` is now the distance from a point in the charged body to the point at which the electric field is to be evaluated. The integral is over the charged body. 
@@ -75,13 +75,13 @@ where :math:`|\mathbf{r}|` is now the distance from a point in the charged body 
 To show that :eq:`e_charge_den` is equivalent to Gauss's law, start by taking the divergence of both sides
 
 .. math::
-   \boldsymbol{\nabla} \cdot \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \boldsymbol{\nabla} \cdot\left(\frac{1}{r^2}\right)\rho\mathrm{d}V.
+   \boldsymbol{\nabla} \cdot \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \boldsymbol{\nabla} \cdot\left(\frac{1}{|\mathbf{r}|^2}\right)\rho\;\mathrm{d}v.
    :label: Gauss_diff
 
 Note that the divergence is taken with respect to the spatial variation of :math:`\mathbf{e}`, with :math:`\rho` held constant. Regardless of the volume of integration, the integral on the right hand side of equation :eq:`Gauss_diff` has the value
 
 .. math::
-   \int_V \boldsymbol{\nabla} \cdot\left(\frac{1}{r^2}\right)\rho\mathrm{d}V = 4\pi\rho.
+   \int_V \boldsymbol{\nabla} \cdot\left(\frac{1}{|\mathbf{r}|^2}\right)\rho\;\mathrm{d}v = 4\pi\rho.
    
 This establishes the desired result
 
@@ -98,7 +98,7 @@ Flux is a measure of the strength of a field passing through a surface. Electric
 	\boldsymbol{\Phi} = \int_S \mathbf{e} \cdot \hat{\mathbf{n}} \, \mathrm{d}a.
 	:label: e_flux
 
-We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{r^2}` spatial dependence but the volume of the surface increases with :math:`r^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
+We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{|\mathbf{r}|^2}` spatial dependence but the volume of the surface increases with :math:`|\mathbf{r}|^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
 
 .. figure:: Efield.gif
   
@@ -107,21 +107,21 @@ We can think of electric field as flux density. Gauss’s law tells us that the 
 Units
 -----
 .. tabularcolumns:: |c|c|c|c|
-+-----------------------+------------------+---------------------------+-------------------------------+
-|        Quantity       |  Symbol          |  Units (abbreviation)     |  Equivalent                   |
-+=======================+==================+===========================+===============================+
-|     Surface area      |  :math:`S`       |Square meter :math:`(m^2)` |                               |
-+-----------------------+------------------+---------------------------+-------------------------------+
-|     Volume            |  :math:`V`       |Cubic meter :math:`(m^3)`  |                               |
-+-----------------------+------------------+---------------------------+-------------------------------+
-|     Electric charge   |  :math:`q, Q`    | Coulomb :math:`(C)`       |                               |
-+-----------------------+------------------+---------------------------+-------------------------------+
-|Electric charge density| :math:`\rho`     | :math:`(C/m^3)`           |                               |
-+-----------------------+------------------+---------------------------+-------------------------------+
-|     Electric field    | :math:`e`        | Volt/meter :math:`(V/m)`  |Newton/Coulomb :math:`(N/C)`   |
-+-----------------------+------------------+---------------------------+-------------------------------+
++-----------------------+---------------------+---------------------------+-------------------------------+
+|        Quantity       |  Symbol             |  Units (abbreviation)     |  Equivalent                   |
++=======================+=====================+===========================+===============================+
+|     Surface area      |  :math:`S`          |Square meter :math:`(m^2)` |                               |
++-----------------------+---------------------+---------------------------+-------------------------------+
+|     Volume            |  :math:`V`          |Cubic meter :math:`(m^3)`  |                               |
++-----------------------+---------------------+---------------------------+-------------------------------+
+|     Electric charge   |  :math:`q, Q`       | Coulomb :math:`(C)`       |                               |
++-----------------------+---------------------+---------------------------+-------------------------------+
+|Electric charge density| :math:`\rho`        | :math:`(C/m^3)`           |                               |
++-----------------------+---------------------+---------------------------+-------------------------------+
+|     Electric field    | :math:`e`           | Volt/meter :math:`(V/m)`  |Newton/Coulomb :math:`(N/C)`   |
++-----------------------+---------------------+---------------------------+-------------------------------+
 |Electrical permittivity|:math:`\varepsilon_0`| Farads/meter :math:`(F/m)`|:math:`C/(V \cdot m )`         |
-+-----------------------+------------------+---------------------------+-------------------------------+
++-----------------------+---------------------+---------------------------+-------------------------------+
 
 
 References
