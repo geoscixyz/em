@@ -108,6 +108,7 @@ We can think of electric field as flux density. Gauss’s law tells us that the 
 Units
 -----
 .. tabularcolumns:: |c|c|c|c|
+
 +-----------------------+---------------------+---------------------------+---------------------------------------+
 |        Quantity       |  Symbol             |  Units (abbreviation)     |  Equivalent                           |
 +=======================+=====================+===========================+=======================================+
