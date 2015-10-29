@@ -1,6 +1,7 @@
 .. _j_e_sigma:
 
-Ohm's Law
+
+(J,E): sigma
 ========================
 
 Ohm's law is one of the three constitutive equations used in conjunction with Maxwell's equations. It is not a formal law as it describes the relationship between the current density :math:`\mathbf{J}`, which is defined as the electrical current through a cross-sectional area, and the electric field :math:`\mathbf{E}` for some materials, but not all. The law was originally published in 1827 by Georg Ohm in his book entitled "The galvanic circuit investigated mathematically" and was accepted widely by the 1850's. It is written in the frequency-domain as:
@@ -35,6 +36,4 @@ Reynolds, J. M., 1998, An Introduction to Applied and Environmental Geophysis: W
 Ward, S. H., and G. W. Hohmann, 1988, Ch. 4, in Electromagnetic Methods in Applied Geophysics: Society of Exploration Geophysicists, Vol. 1, 131-311.
 
 West, G. F., and J. C. McNae, 1991, Ch. 1, in Physics of the Electromagnetic Induction Exploration Method: Society of Exploration Geophysicists, Vol. 2, 5-46.
-
-
 
