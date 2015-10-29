@@ -7,3 +7,6 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    Maxwell_Discretization
+    Forward_Modelling
