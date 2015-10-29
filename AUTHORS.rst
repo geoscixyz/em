@@ -1,1 +1,2 @@
 - Doug Oldenburg, (`@dougoldenburg <https://github.com/dougoldenburg/>`_)
+- Michael Mitchell, (`@micmitch <https://github.com/micmitch/>`_) 
