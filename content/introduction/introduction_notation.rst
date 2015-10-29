@@ -49,7 +49,7 @@ Integrals
 
 .. _fourier_transform_convention: 
 
-Fourier Transfrom Convention
+Fourier Transform Convention
 ----------------------------
 
 We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\) time dependence. 

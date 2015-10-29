@@ -3,3 +3,62 @@
 Gauss's Law for Magnetic Fields
 ===============================
 
+
+Integral equation
+-----------------
+
+The Gauss's law for magnetic fields in integral form is given below:
+
+.. math::
+    \oint_S \mathbf{b} \cdot d\mathbf{s} =  0
+    :label: gauss_magnetic_integral
+    
+The equation states that there is no net magnetic flux \\(\\mathbf{b}\\) (which can be thought of as the number of magnetic field lines through an area) that passes through an arbitrary closed surface \\(\\mathbf{s}\\). This means the number of magnetic field lines that enter and exit through this closed surface \\(\\mathbf{s}\\) is the same. This is explained by the concept of a magnet that has a north and a south pole, where the strength of the north pole is equal to the strength of the south pole. This is equivalent to saying that a magnetic monopole, meaning a solitary north or south pole, does not exist because for every positive magnetic pole, there must be an equal amount of negative magnetic poles.
+
+Differential equation in the frequency-domain
+---------------------------------------------
+Gauss's law for magnetic fields in differential form is written as:
+
+.. math::
+        \nabla \cdot \mathbf{B} = 0
+        :label: gauss_magnetic_diff_freq
+
+This formulation can be derived from the integral form using the divergence theorem:
+
+.. math::
+        0 = \oint_S \mathbf{B} \cdot d\mathbf{S} = \int_V ( \nabla \cdot \mathbf{B} ) d\mathbf{V}
+        :label: gauss_magnetic_div_theorem
+
+Alternatively, Gauss's law can be derived from the Biot-Savart law:
+
+.. math::
+        \nabla \cdot \mathbf{B}(r) = \frac{\mu_0}{4\pi} \int \nabla \cdot \frac{\mathbf{J}(r') \times \hat{w}}{w^2} dV
+
+The variable \\(w\\) relates \\(r\\) and \\(r'\\): \\(w = (x-x') \\hat{x} + (y-y') \\hat{y} + (z-z') \\hat{z} \\). To carry through the divergence, the integrand can be expanded into:
+
+.. math::
+        \frac{\hat{w}}{w^2} \cdot (\nabla \cdot \mathbf{J}) - \mathbf{J} \cdot \left ( \nabla \times \frac{\hat{w}}{w^2} \right )
+
+The first part becomes zero because \\(\\mathbf{J}\\) depends on \\(r'\\) and \\(\\nabla\\) depends only on \\(r\\). The second part is also zero as the curl of \\(\\frac{\\hat{w}}{w^2}\\) is zero.
+
+Differential equation in the time-domain
+----------------------------------------
+The equation can also be written in the time-domain as:
+
+.. math::
+        \nabla \cdot \mathbf{b} = 0
+        :label: gauss_magnetic_diff_time
+
+Units
+-----
+
+The units of magnetic flux \\(\\mathbf{B}\\) is the Tesla [T], which is equal to a Newton per Ampere-meter or \\(\\left [ \\frac{N}{Am} \\right ]\\).
+
+Discoverers of the law
+----------------------
+
+Gauss's law for magnetism is a physical application of Gauss's theorem (also known as the divergence theorem) in calculus, which was independently discovered by Lagrange in 1762, Gauss in 1813, Ostrogradsky in1826, and Green in 1828. Gauss's law for magnetism simply describes one physical phenomena that a magnetic monopole does not exist in reality. So this law is also called "absence of free magnetic poles".
+
+People had long been noticing that when a bar magnet is divided into two pieces, two small magnets are created with their own south and north poles. This can be explained by Ampere's circuital law: the bar magnet is made of many circular currents rings, each of which is essentially a magnetic dipole; the macroscopic magnetism is from the alignment of the microscopic magnetic dipoles. Because a small current ring always generates an equivalent magnetic dipole, there is no way of generating a free magnetic charge. So far, no magnetic monopole has been found in experiments, despite that many theorists believe a magnetic monopole exists and are still searching for it.
+
+However, as pointed out by Pierre Curie in 1894, magnetic monopoles can exist conceivably. Introducing fictitious magnetic charges to the Maxwell's equations can give Gauss's law for magnetism the same appearance as Gauss's law for electricity, and the mathematics can become symmetric.
