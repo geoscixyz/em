@@ -32,7 +32,9 @@ We can visualize where current flows and where charge buildup occurs for a singl
   
 We can simulate the data from a pole-dipole survey and plot it in a pseudosections. Not that pseudosections do not represent the true geology. Note how the two pseudosections below differ significantly depending on whether the data is collected from west to east or east to west.
 .. figure:: Pseudo_PDP_East.gif
-  Data for pole moving east to west.
+
+ 	Data for pole moving east to west.
   
 .. figure:: Pseudo_PDP_West.gif
-  Data for pole moving west to east.
+
+ 	Data for pole moving west to east.
