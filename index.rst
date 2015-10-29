@@ -28,12 +28,13 @@ This resource is Open Source and while currently being developed by brilliant
 and enthusiastic graduate students and faculty at UBC, the vision is to have
 experts, worldwide, contribute. Join the development on github_.
 
-.. _github: https://github.com/ubcgif/em.
+.. _github: https://github.com/ubcgif/em
 
 **Contents:**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :name: `EM GeoSci`
 
    content/introduction/index
    content/physical_properties/index
@@ -44,16 +45,17 @@ experts, worldwide, contribute. Join the development on github_.
    content/transmitters_receivers/index
    content/survey_design/index
 
+
 Contributors:
 -------------
 
 .. include:: AUTHORS.rst
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
