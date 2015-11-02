@@ -25,6 +25,7 @@ By applying Stokes's theorem to left-hand side of Eq. :eq:`faradays_law_int_time
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
 .. TODO: Put some links: rotational field 
+
 Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will induce rotational electric fields.
 Furthermore, the curl of the induced electric fields opposes time-dependent changes in the inducing magnetic field.
 
@@ -91,7 +92,9 @@ Using dimensional analysis, we obtain:
 	.. math::
 
 		V = Wb / s
+
 .. TODO: parapharase this (I copy and paste wiki)
+
 Therefore the above expression states that a change in magnetic flux, equal to 1 Webber per second, will induce an electromotive force of 1 Volt along a closed path.
 Useing the aforementionned expression, the Webber (:math:`Wb`) can be expressed as:
 
