@@ -101,7 +101,7 @@ Flux is a measure of the strength of a field passing through a surface. Electric
 
 We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{|\mathbf{r}|^2}` spatial dependence but the volume of the surface increases with :math:`|\mathbf{r}|^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
 
-.. figure:: Efield.gif
+.. figure:: images/Efield.gif
   
   Illustration of the electric flux through different Gaussian surfaces :math:`S` due to a point charge :math:`Q` at the origin. The color of the surface shows the magnitude of the electric field (or flux density). 
 
