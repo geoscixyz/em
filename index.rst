@@ -44,6 +44,7 @@ experts, worldwide, contribute. Join the development on github_.
    content/maxwell4_tdem/index
    content/transmitters_receivers/index
    content/survey_design/index
+   content/case_histories/index
 
 
 Contributors:
