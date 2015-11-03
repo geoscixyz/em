@@ -1,0 +1,48 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Large(1971)]{Large1971G}
+David~B Large.
+\newblock Electric potential near a spherical body in a conducting half-space.
+\newblock \emph{Geophysics}, 36\penalty0 (4):\penalty0 763--767, 1971.
+\newblock ISSN 0016-8033.
+
+\bibitem[Merkel and Alexander(1971)]{Merkel1971GP}
+R~H Merkel and S~S Alexander.
+\newblock Resistivity analysis for models of a sphere in a half-space with
+  buried current sources.
+\newblock \emph{Geophysical Prospecting}, 19\penalty0 (4):\penalty0 640--651,
+  1971.
+\newblock ISSN 1365-2478.
+
+\bibitem[Singh and Espindola(1976)]{Singh1976G}
+S~K Singh and J~M Espindola.
+\newblock Apparent resistivity of a perfectly conducting sphere buried in a
+  half-space.
+\newblock \emph{Geophysics}, 41\penalty0 (4):\penalty0 742--751, 1976.
+\newblock ISSN 0016-8033.
+
+\bibitem[Snyder and Merkel(1973)]{Snyder1973G}
+D~D Snyder and R~M Merkel.
+\newblock Analytic models for the interpretation of electrical surveys using
+  buried current electrodes.
+\newblock \emph{Geophysics}, 38\penalty0 (3):\penalty0 513--529, 1973.
+\newblock ISSN 0016-8033.
+
+\bibitem[Tang and Yuan(2012)]{Tang2012}
+J~J Tang and Y~Yuan.
+\newblock Comparison of approximate solution and exact solution of buried
+  sphere model at point source with different arrays.
+\newblock \emph{Journal of Central South University (Science and Technology)},
+  43\penalty0 (3):\penalty0 1057--1064, 2012.
+
+\bibitem[Van~Nostrand and Cook(1966)]{Nostrand1966}
+G~R. Van~Nostrand and L~K. Cook.
+\newblock Intepretation of resistivity data.
+\newblock \emph{Professional Paper 499, U.S. Geological Survey}, 1966.
+
+\end{thebibliography}
