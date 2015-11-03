@@ -77,6 +77,11 @@ The total current density is the sum of these three contributions and is describ
 
 
 .. note:: 
+
+    .. figure:: images/Currents.png
+        :align: center
+        :scale: 50%
+
     The total current involved in the Ampere-Maxwell equation consists of free
     current and bound current, although all currents are essentially the same from
     a microscopic perspective. Treating free current and bound current differently
