@@ -17,9 +17,11 @@ A generator or battery provides a source of power for the tranmitter in geophysi
  	
 .. figure:: images/generator_dcip_7500W.jpg
    :scale: 40%
-.. _transmitters:
+   :align: center
 
-source: http://williamsonneelectric.com/sgx50005000wattsubaruportablegenerator.aspx
+   A typical generator (`source <http://williamsonneelectric.com/sgx50005000wattsubaruportablegenerator.aspx>`_)
+
+.. _transmitters:
 
 Transmitters/sources
 ____________________
