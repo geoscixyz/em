@@ -95,6 +95,8 @@ electrode and the receiver electrode at a depth of one-half the horizontal trans
 Common survey acquisition systems
 _________________________________
 
+*include a bit more about electrode layouts, a waveform/pulse for transmitter, when the measurement is made, placeholders for IP, *
+
 Below are common acquisition systems that are used in industry to collect DC resistivity, electromagnetic, and/or MT and ZTEM data.
 
 **MIMDAS**:
