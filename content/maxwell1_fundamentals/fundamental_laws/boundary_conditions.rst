@@ -1,6 +1,6 @@
 .. _boundary_conditions:
 
-Boundary conditions for the DC problem:
+Boundary conditions:
 =======================================
 
 There are a variety of ways to formulate the solution for the DC resistivity problem.  Relevant boundary conditions are needed for 
