@@ -29,15 +29,17 @@ A transmitter sends out a desired current waveform through the current wire. The
 
 .. figure:: images/transmitter_dcip_vip5000.jpg
    :scale: 60%
-   
-source: http://www.hazzazi-sa.com/agents/iris-instruments?page=1
+   :align: center
+
+   A transmitter (`source <http://www.hazzazi-sa.com/agents/iris-instruments?page=1>`_)
 
 **DC resistivity**: Current electrodes transmit electricity into the ground, and as such they need good contact with the ground. Pouring salty water on the electrodes can help to improve the contact with the ground, or wrapping the electrode with a soaked cloth. Often the electrodes are steel or iron rods. A typical 12 gauge current wire used for a DC/IP survey is shown below.
 
 .. figure:: images/current_wire.jpg
    :scale: 50%
-   
-source: http://www.aliexpress.com/item/In-stock-8-Gauge-1-ft-Red-Car-Auto-Audio-Power-Ground-Wire-Cable-line-AWG/619638915.html
+   :align: center
+
+   Current wire (`source <http://www.aliexpress.com/item/In-stock-8-Gauge-1-ft-Red-Car-Auto-Audio-Power-Ground-Wire-Cable-line-AWG/619638915.html>`_)
 
 **Frequency-domain EM**:
 
@@ -54,8 +56,9 @@ _________
 
 .. figure:: images/receiver_electrode_porous_pots.jpg
    :scale: 70%
+   :align: center
 
-source: http://www.agiusa.com/agicatalog.shtml
+   A type of electrode (`source <http://www.agiusa.com/agicatalog.shtml>`_)
 
 **Electromagnetics**:
 
@@ -70,16 +73,18 @@ Below are common survey layouts that can be used. *Maybe better suited for the s
 
 .. figure:: images/poledipole.png
    :scale: 80%
-
-source: http://en.openei.org/wiki/DC_Resistivity_Survey_(Pole-Dipole_Array)
+   :align: center
+   
+   A pole-dipole survey (`source <http://en.openei.org/wiki/DC_Resistivity_Survey_(Pole-Dipole_Array)>`_)
 
 **Dipole-dipole**: Similar to a pole-dipole survey except that both current electrodes are located close to the receiver area. An example of a typical 2D dipole-dipole survey layout with the plotting convention for a pseudo-section is shown below.  A pseudo-section is a method for plotting the data using the geometry of the survey to place the data points. The plotting point is located half-way between the nearest current 
 electrode and the receiver electrode at a depth of one-half the horizontal transmitter-receiver separation.
 
 .. figure:: images/pole-dipole_pseudo.jpg
    :scale: 100%
+   :align: center
 
-source: http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm
+   A dipole-dipole survey and psuedo-section (`source <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm>`_)
 
 .. _survey_acquisition:
 
