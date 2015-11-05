@@ -27,11 +27,15 @@ Transmitters/sources
 ____________________
 A transmitter sends out a desired current waveform through the current wire. The electric current and voltage are measured and regulated by the transmitter controller, and either quantity can be set to a particular amount within the power limit. A typical example of a transmitter used for a DC/IP survey is shown below with a power limit of 5000W.
 
+
+
 .. figure:: images/transmitter_dcip_vip5000.jpg
    :scale: 60%
    :align: center
 
-   A transmitter (`source <http://www.hazzazi-sa.com/agents/iris-instruments?page=1>`_)
+   A transmitter (source_)
+
+.. _source: http://www.hazzazi-sa.com/agents/iris-instruments?page=1/
 
 **DC resistivity**: Current electrodes transmit electricity into the ground, and as such they need good contact with the ground. Pouring salty water on the electrodes can help to improve the contact with the ground, or wrapping the electrode with a soaked cloth. Often the electrodes are steel or iron rods. A typical 12 gauge current wire used for a DC/IP survey is shown below.
 
