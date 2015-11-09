@@ -33,7 +33,7 @@ and the constitutive relations for a linear isotropic medium given by
 
 Now, let us consider a two layer media as illustrated in the figure below
 
-.. figure:: ../figures/BC_1.png
+.. figure:: images/BC_1.png
 
 A two layer media
 
