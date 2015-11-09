@@ -33,7 +33,9 @@ and the constitutive relations for a linear isotropic medium given by
 
 Now, let us consider a two layer media as illustrated in the figure below
 
-% Figure 1  - describe a two layered media, a pill box and a volume
+.. figure:: ../figures/BC_1.png
+
+A two layer media
 
 Boundary conditions for the electric field
 ------------------------------------------
