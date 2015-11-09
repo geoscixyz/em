@@ -130,7 +130,9 @@ Boundary Conditions for potentials
 Charge Buildup at a boundary
 ----------------------------------
 
-% figure boundry with different sigmas showing dirrection of E and J
+.. image:: images/boundryChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
 
 we have
 
@@ -138,6 +140,7 @@ we have
 		\mathbf{J}_{2n} &= \mathbf{J}_{1n}\\
 		\implies \sigma_2\mathbf{E}_{2n} &= \sigma_1\mathbf{E}_{1n}\quad\text{(1) from Ohm's law}\\
 		\text{and }  \mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\varepsilon_0}\quad\text{(2)}
+		:label: chargeBuildupSetup
 
 Solving:
 
@@ -145,3 +148,30 @@ Solving:
 		\mathbf{E}_{2n} &= \frac{\sigma_1}{\sigma_2}\mathbf{E}_{1n}\quad\text{from (1)}\\
 		\text{into (2)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\varepsilon_0}\\
 		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}\quad \text{quantifies the charge buildup on a boundary}
+		:label: chargeBuildup
+
+So in case 1 were the resistive layer is on top i.e. :math:`\sigma_1 < \sigma_2` 
+
+.. image:: images/resOnTop.PNG
+   :scale: 75 %
+   :align: center
+
+.. math:: 
+		\sigma_1 < \sigma_2 \implies \tau_f <0
+
+.. image:: images/negChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
+
+and in case 2 were the resistive layer is on top i.e. :math:`\sigma_1 > \sigma_2` 
+
+.. image:: images/condOnTop.PNG
+   :scale: 75 %
+   :align: center
+
+.. math:: 
+		\sigma_1 > \sigma_2 \implies \tau_f >0
+
+.. image:: images/posChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
