@@ -1,4 +1,4 @@
-.. fundamental_laws_index:
+.. _fundamental_laws_index:
 
 Contents:
 
@@ -10,3 +10,4 @@ Contents:
     faraday
     ampere_maxwell
     conservation_of_charge
+    biot_savart

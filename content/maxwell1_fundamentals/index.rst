@@ -66,7 +66,12 @@ Fundamental Laws
     :maxdepth: 1
 
     fundamental_laws/index
-    formative_laws_and_people/biot_savart
+
+
+.. toctree::
+    :maxdepth: 1
+    
+    formative_laws_and_people/index
 
 
 For each law:
