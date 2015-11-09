@@ -3,16 +3,32 @@
 Gauss's Law for Electric Fields
 ===============================
 
+ .. figure:: images/GaussE.png
+    :align: right
+    :scale: 50% 
+    :name: GaussE
+
+    Charge enclosed. 
+
+Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface.
+
+
+
 Integral Equation
 -----------------
 
-Gauss’s law for the electric field states that the electric flux through any closed surface is proportional to the total electric charge enclosed by the surface, with constant of proportionality :math:`\varepsilon_0`. In integral equation form it reads:
+Gauss’s law in integral form is given below:
 
 .. math::
 	\oint_{S} \mathbf{e} \cdot \hat{\mathbf{n}} \; \mathrm{d}a = \frac{Q}{ \varepsilon_{0} }\;,
 	:label: Gauss_e_int
 
-where the integral is over a closed surface :math:`S`, :math:`\mathbf{e}` is the electric field, :math:`\hat{\mathbf{n}}` is a unit vector normal to the surface and :math:`Q` is the total charge enclosed by :math:`S`.  
+where:
+
+ - \\( \\mathbf{e} \\) is the electric field
+ - \\( Q_{enc} \\) is the enclosed electric charge
+ - \\( \\varepsilon_0 \\) is the electric permittivity of free space
+ - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
 
 Differential Form
 -----------------
@@ -21,12 +37,12 @@ When considering a spatially extended charged body, we can think of its charge a
 
 .. math::
 	Q = \int_V \rho \; \mathrm{d}v\;.
-	:label: charge_density
+	:label: charge_dens
 
-Using this definition and applying the divergence theorem to the left hand side of Gauss's law (:eq:`Gauss_e_int`), we can rewrite the law as:
+Using this definition and applying the divergence theorem to the left hand side of Gauss's law :eq:`Gauss_e_int`, we can rewrite the law as:
 
 .. math::
-	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}V = \int_V \frac{\rho}{\varepsilon_0} \; \mathrm{d}V \;.
+	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}v = \int_V \frac{\rho}{\varepsilon_0} \; \mathrm{d}v \;.
 	:label: 
 
 Since this equation must hold for any volume :math:`V` , we can equate the integrands, giving the differential form of Gauss's law:
@@ -39,6 +55,8 @@ Equivalence to Coulomb's law
 ----------------------------
 
 Coulomb's law is often one of the first quantitative laws encountered by students of electromagnetism. It describes the force between two point electric charges. It turns out that it is equivalent to Gauss's law. Coulomb's law states that the force between two point electric charges is proportional to the inverse square of the distance between them, acting in the direction of a line connecting them. If the charges are of opposite sign, the force is attractive and if the charges are of the same sign, the force is repulsive. Mathematically, Coulomb's law is written as
+
+# Add diagram for two charges :math:'F_{Qq} = 1/4pie Qq/r^2 \hat{r}'
 
 .. math::
   \mathbf{F} = \frac{qQ}{4\pi \varepsilon_0 |\mathbf{r}|^2}\hat{\mathbf{r}} \;,
@@ -59,6 +77,8 @@ Dividing both sides of Coulomb's law by :math:`q` and substituting the definitio
       :label: e_charge_q
 
 It is important to note here that the electric field obeys the principle of superposition, meaning that the electric field of an arbitrary collection of point charges is equal to the sum of the electric fields due to each individual charge. 
+
+# Note a vector: Alternative to this using divergence theorem page 36.
 
 .. math::
    \mathbf{e}\left(\sum_{k=1,n} Q_i\right) = \sum_{k=1,n} \mathbf{e}(Q_i)
@@ -107,6 +127,9 @@ We can think of electric field as flux density. Gauss’s law tells us that the 
 
 Units
 -----
+
+# Copy style of Ampere_Maxwell.
+
 .. tabularcolumns:: |c|c|c|c|
 
 +-----------------------+---------------------+---------------------------+---------------------------------------+
