@@ -50,7 +50,7 @@ where :math:`A` denotes the area enclosed by the rectangule in Figure 1 and :mat
 Expression (5) implies that
 
 .. math::
-		(\mathbf{E}_2 - \mathbf{E}_1) \cdot \mathbf{\hat{t}} = 0
+		(\mathbf{E}_2 - \mathbf{E}_1) \cdot \mathbf{\hat{t}} = 0.
 
 
 That is, the tangential component of the electric field is continuous.  We denote this fact as
@@ -68,24 +68,37 @@ To derive boundary conditions for the electric current displacement (:math:`\mat
 
 .. math::
 		\int_V \boldsymbol{\nabla\cdot}\mathbf{D} \, dv &= \int_{\partial V} \rho_f(\mathbf{r}) \, dv,\\
-		\int\mathbf{D}\cdot\hat{\mathbf{n}}\, da &= S (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} = A\tau_f, \quad\quad \tau_f \text{ is a surface charge density}\\
-		\implies (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} &= \tau_f.
+		\int\mathbf{D}\cdot\hat{\mathbf{n}}\, da &= S (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} = S\tau_f, \quad\quad \tau_f \text{ is a surface charge density},
 		:label: DonPillBox
 
 where :math:`\mathbf{r}` denotes (DO YOU GUYS KWNO WHO IS r ???), :math:`V` is the volume enclosed by the cylinder in Figure 1, and :math:`S` denotes the surface corresponding to the boundary of V (i.e. :math:`S=\partial V`).
 
-The normal component of the electric displacement can be discontinuous if there is a free charge on the surface. Note: if the materials are not polarizable or if :math:`\epsilon` is constant
+The above expression implies that  
+
+.. math::	
+		 (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} = \tau_f.
+		 :label: Dndiscontinuous
+		
+
+That is, the normal component of the electric displacement can be discontinuous if there is a free charge on the surface. 
+
+Observe that when the materials are not polarizable or if :math:`\varepsilon` is constant, from equation (4) we have that
 
 .. math::
-		\mathbf{D}_2 &= \epsilon_0\mathbf{E}_2\\
-		\mathbf{D}_1 &= \epsilon_0\mathbf{E}_1 \implies (\mathbf{E}_2-\mathbf{E}_1)\cdot\hat{\mathbf{n}} = \frac{\tau_f}{\epsilon_0} \text{ simplified}\\		
+		\mathbf{D}_2 &= \varepsilon_0\mathbf{E}_2,\\
+		\mathbf{D}_1 &= \varepsilon_0\mathbf{E}_1, 
+
+Hence,	
+
+.. math::
+		(\mathbf{E}_2-\mathbf{E}_1)\cdot\hat{\mathbf{n}} = \frac{\tau_f}{\varepsilon_0}. 	
 		:label: EnotCont
 
-Note: really
+The above expression implies that the tangential component of the electric field is discontinuous.  In fact, 
 
 .. math::
-		\nabla\cdot\mathbf{E} &= \frac{\rho_t}{\epsilon_0}\quad\quad \text{total charge}\\
-		\text{so } (\mathbf{E}_2-\mathbf{E}_1)\cdot\hat{\mathbf{n}} &= \frac{\rho_t}{\epsilon_0}
+		\boldsymbol{\nabla\cdot}\mathbf{E} &= \frac{\rho_t}{\varepsilon_0}, \quad\quad \text{ (total charge)}\\
+		\text{so } (\mathbf{E}_2-\mathbf{E}_1)\cdot\hat{\mathbf{n}} &= \frac{\rho_t}{\varepsilon_0}.
 		:label: EnotCont2
 
 Current Density
@@ -94,7 +107,7 @@ Current Density
 From the above, if 
 
 .. math::
-		\nabla\cdot\mathbf{J} &= 0\\
+		\boldsymbol{\nabla\cdot}\mathbf{J} &= 0\\
 		\text{then } (\mathbf{J}_2-\mathbf{J}_1)\cdot\hat{\mathbf{n}} &= 0\\
 		\text{or } \mathbf{J}_{2n} &= \mathbf{J}_{1n} \quad\quad\text{normal component of current density is continuous}\\
 		:label: JnCont
@@ -109,7 +122,7 @@ Boundary Conditions for potentials
 		\mathbf{J}_{2n} &= \mathbf{J}_{1n}\\
 		\mathbf{J} &= \sigma\mathbf{E}\\
 		\sigma_2\mathbf{E}_2 &= \sigma_1\mathbf{E}_1\\
-		\mathbf{E} &= -\nabla V\\
+		\mathbf{E} &= - \boldsymbol{\nabla} V\\
 		\sigma_2\frac{\partial V_2}{\partial n} &= \sigma_1\frac{\partial V_1}{\partial n}\\
 		:label: potentialBC
 
@@ -124,11 +137,11 @@ we have
 .. math::
 		\mathbf{J}_{2n} &= \mathbf{J}_{1n}\\
 		\implies \sigma_2\mathbf{E}_{2n} &= \sigma_1\mathbf{E}_{1n}\quad\text{(1) from Ohm's law}\\
-		\text{and }  \mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\epsilon_0}\quad\text{(2)}
+		\text{and }  \mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\varepsilon_0}\quad\text{(2)}
 
 Solving:
 
 .. math::
 		\mathbf{E}_{2n} &= \frac{\sigma_1}{\sigma_2}\mathbf{E}_{1n}\quad\text{from (1)}\\
-		\text{into (2)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\epsilon_0}\\
-		\frac{\tau_f}{\epsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}\quad \text{quantifies the charge buildup on a boundary}
+		\text{into (2)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\varepsilon_0}\\
+		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}\quad \text{quantifies the charge buildup on a boundary}
