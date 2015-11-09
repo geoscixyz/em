@@ -31,13 +31,13 @@ and the constitutive relations for a linear isotropic medium given by
 	\mathbf{J} = \sigma \mathbf{E},
 	:label: JsigE
 
+Now, let us consider a two layer media as illustrated in the figure below
+
+% Figure 1  - describe a two layered media, a pill box and a volume
+
 Boundary conditions for the electric field
 ------------------------------------------
-Let us consider a two layer media as illustrated in the figure below
-
-% Figure 1  - describe a two layered media and a box including the pill box
-
-To derive the boundary conditions for the electric field, we apply `Stokes theorem`_ to equation (1) which leads to
+To derive the boundary conditions for the electric field (:math:`\mathbf{E}`), we apply `Stokes theorem`_ to equation (1) which leads to
 
 .. _Stokes theorem: https://en.wikipedia.org/wiki/Stokes%27_theorem
 
@@ -45,7 +45,7 @@ To derive the boundary conditions for the electric field, we apply `Stokes theor
 		\int_{A} \boldsymbol{\nabla \times} \mathbf{E} \boldsymbol{\cdot} \mathbf{\hat{n}} \, da = \oint_{C} \mathbf{E} \boldsymbol{\cdot} \mathbf{\hat{n}} dl,
 		:label: intpillbox	
 
-where :math:`A` denotes the area enclosed by the pill box in Figure 1 and :math:`C` denotes the curve enclosing such area (i.e. :math:`C=\partial A`).
+where :math:`A` denotes the area enclosed by the rectangule in Figure 1 and :math:`C` denotes the curve enclosing such area (i.e. :math:`C=\partial A`).
 
 Expression (5) implies that
 
@@ -62,22 +62,17 @@ That is, the tangential component of the electric field is continuous.  We denot
 Boundary conditions for the electric current displacement
 ---------------------------------------------------------
 
-To derive the boundary conditions for the electric current displacement
+To derive boundary conditions for the electric current displacement (:math:`\mathbf{D}`), we apply the `Divergence theorem`_ to equation (2) which leads to
 
+.. _Divergence theorem: https://en.wikipedia.org/wiki/Divergence_theorem
 
-
-% DBE D7-D8
-
-For Divergence Equation
-------------------------
 .. math::
-		\nabla\cdot\mathbf{D} &= \rho_f\\
-		\int\nabla\cdot\mathbf{D}dv &= \int\rho_f(\mathbf{r})dv\\
-		\int\mathbf{D}\cdot\hat{\mathbf{n}}da &= A(\mathbf{D}_2-\mathbf{D}_1)cdot\hat{\mathbf{n}} = A\tau_f \quad\quad \tau_f \text{ is a surface charge density}\\
-		\implies (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} &= \tau_f
+		\int_V \boldsymbol{\nabla\cdot}\mathbf{D} \, dv &= \int_{\partial V} \rho_f(\mathbf{r}) \, dv,\\
+		\int\mathbf{D}\cdot\hat{\mathbf{n}}\, da &= S (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} = A\tau_f, \quad\quad \tau_f \text{ is a surface charge density}\\
+		\implies (\mathbf{D}_2-\mathbf{D}_1)\cdot\hat{\mathbf{n}} &= \tau_f.
 		:label: DonPillBox
 
-% figure of pillbox with area A
+where :math:`\mathbf{r}` denotes (DO YOU GUYS KWNO WHO IS r ???), :math:`V` is the volume enclosed by the cylinder in Figure 1, and :math:`S` denotes the surface corresponding to the boundary of V (i.e. :math:`S=\partial V`).
 
 The normal component of the electric displacement can be discontinuous if there is a free charge on the surface. Note: if the materials are not polarizable or if :math:`\epsilon` is constant
 
