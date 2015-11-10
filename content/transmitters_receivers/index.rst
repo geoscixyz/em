@@ -1,6 +1,6 @@
 .. _transmitters_receivers_index:
 
-Survey instruments 
+Survey Instruments 
 ==================
 
 - :ref:`power_supply`
@@ -27,8 +27,6 @@ Transmitters/sources
 ____________________
 A transmitter sends out a desired current waveform through the current wire. The electric current and voltage are measured and regulated by the transmitter controller, and either quantity can be set to a particular amount within the power limit. A typical example of a transmitter used for a DC/IP survey is shown below with a power limit of 5000W.
 
-
-
 .. figure:: images/transmitter_dcip_vip5000.jpg
    :scale: 60%
    :align: center
@@ -42,9 +40,27 @@ A transmitter sends out a desired current waveform through the current wire. The
 .. figure:: images/current_wire.jpg
    :scale: 50%
    :align: center
-
+   
    Current wire (`source <http://www.aliexpress.com/item/In-stock-8-Gauge-1-ft-Red-Car-Auto-Audio-Power-Ground-Wire-Cable-line-AWG/619638915.html>`_)
 
+A typical time-domain waveform for DC/IP is a two second on, two second off, half-duty waveform as shown below. The figure shows that the current waveform has a two second positive on-time followed by a two-second off-time, followed by a two-second negative on-time before a final two second off-time. When no chargeable material is present in the ground, the corresponding voltage curve will mirror that of the current curve.
+The positive and negative on-times are done so that any self-potential in the ground due to natural telluric currents will be cancelled out.  Generally many cycles of the current waveform are transmitted into the ground in order to stack many receiver voltage curves to reduce noise in the data.
+When chargeable material is present the voltage curve will slowly ramp up during the positive on-time and will discharge during the corresponding off-time. The mirror image will happen during the negative on-time and off-time. Once again these curves are stacked to reduce the noise. 
+   
+.. figure:: images/IP_waveform.jpg
+   :scale: 100%
+   :align: center  
+   
+   A typical transmitter waveform (`source <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm>`_) 
+   
+The primary voltage, or DC component of the measured voltage is taken before any IP effect has taken place, as noted by \\( \\mathrm{V}_{\\sigma} \\) in the figure below. Whereas the IP measurement is taken as an integral beneath the voltage curve between two user defined time points (t1 and t2).  The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
+   
+.. figure:: images/IP_waveform2.jpg
+   :scale: 80%
+   :align: center 
+   
+   Location of DC and IP measurements along the receiver voltage curve (`source <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm>`_) 
+   
 **Frequency-domain EM**:
 
 **Time-domain EM**:
