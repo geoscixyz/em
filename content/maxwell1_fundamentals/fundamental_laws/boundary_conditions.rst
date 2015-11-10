@@ -1,6 +1,6 @@
 .. _boundary_conditions:
 
-Boundary conditions
+Boundary Conditions
 ===================
 
 There are a variety of ways to formulate the solution for the EM problem.  Relevant boundary conditions are needed for 
@@ -36,7 +36,7 @@ Now, let us consider a two layer media as illustrated in the figure below
 .. figure:: images/BC_1.png
 
 
-Boundary conditions for the electric field
+Boundary Conditions for the Electric Field
 ------------------------------------------
 To derive the boundary conditions for the electric field (:math:`\mathbf{E}`), we apply `Stokes theorem`_ to equation (1) which leads to
 
@@ -60,7 +60,7 @@ That is, the tangential component of the electric field is continuous.  We denot
 		\mathbf{E}_{2t} = \mathbf{E}_{1t}.		 
 		:label: Etcontinuous
 
-Boundary conditions for the electric current displacement
+Boundary Conditions for the Electric Current Displacement
 ---------------------------------------------------------
 
 To derive boundary conditions for the electric current displacement (:math:`\mathbf{D}`), we apply the `Divergence theorem`_ to equation (2) which leads to
@@ -102,8 +102,8 @@ The above expression implies that the normal component of the electric field can
 		\text{so } (\mathbf{E}_2-\mathbf{E}_1)\cdot\hat{\mathbf{n}} &= \frac{\rho_t}{\varepsilon_0}.
 		:label: EnotCont2
 
-Current Density
-----------------
+Boundary Conditions for the Current Density
+-------------------------------------------
 
 Once again using the divergence teorem we can say that if
 
@@ -119,7 +119,7 @@ then
 
 In other words normal component of current density is continuous.
 
-Boundary Conditions for potentials
+Boundary Conditions for Potentials
 ----------------------------------
 
 We know that electric potential is continuous at a boundary  :math:`V_1 = V_2`. To determin the relation for the normal derivative of the potential across a boundry we start from the continuity of the normal component of the current density
@@ -145,7 +145,7 @@ so finaly we get the relation of the normal derivative of the potential across a
 
 
 
-Charge Buildup at a boundary
+Charge Buildup at a Boundary
 ----------------------------------
 
 If we have a boundry between two media with different conductivities as in the figure below  
@@ -196,4 +196,4 @@ We get a buildup of negative charges on the boundry, and in case 2 were the resi
    :scale: 75 %
    :align: center
 
-We get a buildup of positive charges on the boundry,
+We get a buildup of positive charges on the boundry.
