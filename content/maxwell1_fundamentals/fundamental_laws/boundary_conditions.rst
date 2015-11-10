@@ -35,7 +35,6 @@ Now, let us consider a two layer media as illustrated in the figure below
 
 .. figure:: images/BC_1.png
 
-A two layer media
 
 Boundary conditions for the electric field
 ------------------------------------------
