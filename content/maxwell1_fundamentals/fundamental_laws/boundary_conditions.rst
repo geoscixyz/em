@@ -127,34 +127,33 @@ In other words, the normal component of current density is continuous.
 Boundary Conditions for Potentials
 ----------------------------------
 
-We know that electric potential is continuous at a boundary  :math:`V_1 = V_2` (Daniel:  From where do we know this?? Can you include a reference, please? What do you mean with V? In Figure 1 we used V to denote a volume, perhaps you would like to change this letter?). To determine the relation for the normal derivative of the potential across a boundary, we start from the continuity of the normal component of the current density
+Electric potential (:math:`\psi`) is defined
+
+.. math::
+		\mathbf{E} = \boldsymbol{\nabla\cdot}\psi
+		:label: potentialDef
+
+We know that electric potential is continuous at a boundary  :math:`\psi_1 = \psi_2` (Daniel:  From where do we know this?? Can you include a reference, please?). To determine the relation for the normal derivative of the potential across a boundary, we start from the continuity of the normal component of the current density (see equation (12))
 
 .. math::
 		\mathbf{J}_{2n} = \mathbf{J}_{1n},
+		:label: curCont
 
-Applying Ohm's law, see equation (5), to the previous expression we obtain
+Applying Ohm's law, (see equation (5)), to the previous expression we obtain
 
 .. math::
-		\sigma_2\mathbf{E}_2 = \sigma_1\mathbf{E}_1.
+		\sigma_2\mathbf{E}_{2n} = \sigma_1\mathbf{E}_{1n}.
 		:label: aux1
 
-Now, from the definition of electric potential we have that
+Now, from the definition of electric potential (see equation (13)) and using this definition in equation (14), gives us the relation of the normal derivative of the potential across a boundary between two regions with different properties.
 
 .. math::
-		\mathbf{E} = - \boldsymbol{\nabla} V,
-
-(Daniel:  please define V). Using this definition in equation (13), yields to the relation of the normal derivative of the potential across a boundary (Daniel:  what boundary are we talking about here?)
-
-.. math::
-		\sigma_2\frac{\partial V_2}{\partial n} &= \sigma_1\frac{\partial V_1}{\partial n}.
-
+		\sigma_2\frac{\partial \psi_2}{\partial n} &= \sigma_1\frac{\partial \psi_1}{\partial n}.
+		:label: potDerivRelation
 
 
 Charge Buildup at a Boundary
 ----------------------------
-
-Daniel:  Please, can you add to this section the corresponding punctuation at the end of the equations (commas, dots).  In additon, could you please make sure the equations are numbered withouth ambiguity.  For instance, in equation (14) we have labels (1) and (2) following the equations.  
-It is not clear if you are numbering this equations as (1) and (2) or of you are making a reference to equations (1) and (2).  
 
 If we have a boundary between two media with different conductivities, as in the figure below  
 
@@ -162,23 +161,34 @@ If we have a boundary between two media with different conductivities, as in the
    :scale: 75 %
    :align: center
 
-then from the arguments presented in the previous section, we have the following system
+then from the arguments presented in the previous section, we can determin the buildup of charges on boundaries between regions with differing conductivities. Starting from the continuity of the normal component of the current density (see equation (12))
 
 .. math::
-		\mathbf{J}_{2n} &= \mathbf{J}_{1n}\\
-		\implies \sigma_2\mathbf{E}_{2n} &= \sigma_1\mathbf{E}_{1n}\quad\text{(1) from Ohm's law}\\
-		\text{and }  \mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\varepsilon_0}\quad\quad\text{(2)}
-		:label: chargeBuildupSetup
+		\mathbf{J}_{2n} &= \mathbf{J}_{1n},\\
+		:label: curCont
 
-Solving the system we get  (which system you mean?)
+and using Ohm's law, (see equation (5)) we get
 
 .. math::
-		\mathbf{E}_{2n} &= \frac{\sigma_1}{\sigma_2}\mathbf{E}_{1n}\quad\text{from (1)}\\
-		\text{into (2)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\varepsilon_0}\\
-		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}
+		\sigma_2\mathbf{E}_{2n} &= \sigma_1\mathbf{E}_{1n}.
+		:label: ohmsLawCurCont
+
+
+Then, using to boundry conditions for the electric field (see equation (10)) we get
+
+.. math::
+		\mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\varepsilon_0}.
+		:label: Ebound
+
+Solving the system made by (18) and (19), we get
+
+.. math::
+		\mathbf{E}_{2n} &= \frac{\sigma_1}{\sigma_2}\mathbf{E}_{1n}\quad\text{from (18)}\\
+		\text{into (19)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\varepsilon_0}\\
+		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}.
 		:label: chargeBuildup
 
-Which quantifies the charge buildup on a boundary. So in case 1, were the resistive layer is on top i.e. :math:`\sigma_1 < \sigma_2` 
+Which quantifies the charge buildup on a boundary. So in case 1, were the resistive layer is on top i.e. :math:`\sigma_1 < \sigma_2`
 
 .. image:: images/resOnTop.PNG
    :scale: 75 %
