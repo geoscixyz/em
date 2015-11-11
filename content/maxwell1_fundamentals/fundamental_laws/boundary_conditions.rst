@@ -140,3 +140,6 @@ where V is the volume enclosed by the green cylinder in Figure 1 and S is its bo
 
 In other words, the normal component of current density is continuous.
 
+Boundary Conditions for the Magnetic Field
+-----------------------------------------
+
