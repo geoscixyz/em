@@ -18,17 +18,18 @@ TODO:
 
 Consider the following equations 
 
-.. math::
-	\boldsymbol{\nabla \times} \mathbf{e} = \mathbf{0},
-	:label: cEe0
+.. include:: ../../equation_bank/faradays_law_diff_time.rst
 
 .. math::
     \boldsymbol{\nabla \cdot} \mathbf{d} = \rho_f,
     :label: gauss_electric_frequency
 
 .. math::
-	\boldsymbol{\nabla \cdot} \mathbf{j} = \mathbf{0},
+	\boldsymbol{\nabla \cdot} \mathbf{j} = 0,
 	:label: dJe0
+
+.. include:: ../../equation_bank/gauss_magnetic_time.rst
+
 	
 and the constitutive relations for a linear isotropic medium given by
 
@@ -47,12 +48,10 @@ Now, let us consider a two layer media where each layer has its corresponding ph
 
 Fig 1.  Two layer media. Orange rectangle represent a Gaussian pill-box. 
 
-Boundary Conditions for the Tangential Electric Field
------------------------------------------------------
+Boundary Conditions for the Tangential Component of the Electric Field
+----------------------------------------------------------------------
 TO DO:
--) Change notation to time domain (lower case)  (Luz)
--) Change equation (1) to Faraday's law.   (Luz)
--) Update notation in figure
+-) Update notation in figure (Luz)
 -) Apply Faraday's law to (1) to get continuity of E in tangential component. (Patrick)
 
 To derive the boundary conditions for the electric field (:math:`\mathbf{e}`), we apply `Stokes theorem`_ to equation (1) which leads to
@@ -122,7 +121,7 @@ Expression (10) implies that the normal component of the electric field can be d
 
 .. math::
 		\boldsymbol{\nabla\cdot}\mathbf{e} &= \frac{Q}{\varepsilon_0}, \quad\quad \text{ (Q is a total charge)}\\
-		\text{so } (\mathbf{e}_2-\mathbf{e}_1)\cdot\hat{\mathbf{n}} &= \frac{\rho_t}{\varepsilon_0}.
+		\text{so } (\mathbf{e}_2-\mathbf{e}_1)\cdot\hat{\mathbf{n}} &= \frac{Q}{\varepsilon_0}.
 		:label: EnotCont2
 
 Boundary Conditions for the Electric Current Density
