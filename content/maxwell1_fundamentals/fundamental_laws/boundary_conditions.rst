@@ -3,43 +3,33 @@
 Boundary Conditions
 ===================
 
-There are a variety of ways to formulate the solution for the EM problem.  Relevant boundary conditions are needed for 
-
-(a) Electric fields
-(b) Magnetic fluxes 
-(c) Electrical current displacement
-(d) Eletrical current density
-(e) Magnetic fields
-
-TODO:
--) Complete (b)
--) Complete (e)
-
-Consider the following equations 
-
-.. include:: ../../equation_bank/faradays_law_diff_time.rst
+It's important to understand how the electromagnetic fields change at boundaries between media of differing material properties. We will derive these boundary, or interface, conditions from Maxwell's equations in time domain integral form. To recap, the equations are
 
 .. math::
-    \boldsymbol{\nabla \cdot} \mathbf{d} = \rho_f,
-    :label: gauss_electric_frequency
+  \oint_A \mathbf{d}\cdot \hat{\mathbf{n}}\,da = Q_{\text{enc}}
+  :label: GaussEint
+  
+.. math::
+  \oint_A \mathbf{b}\cdot \hat{\mathbf{n}}\,da = 0
+  :label: GaussMint
+  
+.. include:: ../../equation_bank/faradays_law_int_time.rst
 
 .. math::
-	\boldsymbol{\nabla \cdot} \mathbf{j} = 0,
-	:label: dJe0
-
-.. include:: ../../equation_bank/gauss_magnetic_time.rst
-
+   \oint_C \mathbf{h} \cdot \mathbf{dl} = I_{enc} + \int_S \frac{\partial\mathbf{d}}{\partial t} \cdot \hat{\mathbf{n}} ~\text{ds}.
+  :label: AmpMaxInt
 	
-and the constitutive relations for a linear isotropic medium given by
+Recall also that :math:`\mathbf{D}` and :math:`\mathbf{H}` are related to :math:`\mathbf{E}` and :math:`\mathbf{B}`, respectively, through constitutive relations. Assuming linear isotropic media, the constitutive relations are
 
 .. math::
 	\mathbf{d} = \varepsilon \mathbf{e},
 	:label: DepsE
 
 .. math::
-	\mathbf{j} = \sigma \mathbf{e}.
-	:label: JsigE
+	\mathbf{b} = \mu \mathbf{h},
+	:label: BmuH
 
+where :math:`\varepsilon` and :math:`\mu` are called, respectively, the dielectric permittivity and the magnetic permeability.
 Now, let us consider a two layer media where each layer has its corresponding physical properties (electrical conductivity (:math:`\sigma`) and electrical permittivity (:math:`\varepsilon`)), electric field (:math:`\mathbf{e}`), electric current displacement (:math:`\mathbf{d}`), and electrical current density (:math:`\mathbf{j}`).  The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively.  The orange rectangle represents a Gaussian pill-box of cross-sectional area A with boundary given by the curve C. 
 
 .. figure:: images/BC_1.png
@@ -141,5 +131,5 @@ where V is the volume enclosed by the green cylinder in Figure 1 and S is its bo
 In other words, the normal component of current density is continuous.
 
 Boundary Conditions for the Magnetic Field
------------------------------------------
+------------------------------------------
 
