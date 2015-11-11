@@ -12,7 +12,6 @@ There are a variety of ways to formulate the solution for the EM problem.  Relev
 (e) Magnetic fields
 
 TODO:
--) Add base equations (from upper sections)
 -) Complete (b)
 -) Complete (e)
 
