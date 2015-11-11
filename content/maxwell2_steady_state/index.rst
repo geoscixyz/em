@@ -10,3 +10,4 @@ Contents:
     
     Forward_Modelling
     Maxwell_Discretization
+    bc_for_dc

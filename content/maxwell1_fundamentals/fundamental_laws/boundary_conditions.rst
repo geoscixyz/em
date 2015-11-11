@@ -5,9 +5,16 @@ Boundary Conditions
 
 There are a variety of ways to formulate the solution for the EM problem.  Relevant boundary conditions are needed for 
 
-(a) Potentials
-(b) Electric fields
-(c) Current density
+(a) Electric fields
+(b) Magnetic fluxes 
+(c) Electrical current displacement
+(d) Eletrical current density
+(e) Magnetic fields
+
+TODO:
+-) Add base equations (from upper sections)
+-) Complete (b)
+-) Complete (e)
 
 Consider the following basic homogeneous equations in the stady state form 
 
@@ -40,8 +47,14 @@ Now, let us consider a two layer media where each layer has its corresponding ph
 
 Fig 1.  Two layer media. Orange rectangle represent a Gaussian pill-box. 
 
-Boundary Conditions for the Electric Field
-------------------------------------------
+Boundary Conditions for the Tangential Electric Field
+-----------------------------------------------------
+TO DO:
+-) Change notation to time domain (lower case)  (Luz)
+-) Change equation (1) to Faraday's law.   (Luz)
+-) Update notation in figure
+-) Apply Faraday's law to (1) to get continuity of E in tangential component. (Patrick)
+
 To derive the boundary conditions for the electric field (:math:`\mathbf{E}`), we apply `Stokes theorem`_ to equation (1) which leads to
 
 .. _Stokes theorem: https://en.wikipedia.org/wiki/Stokes%27_theorem
@@ -63,6 +76,11 @@ That is, the tangential component of the electric field is continuous.  We denot
 .. math::
 		\mathbf{E}_{2t} = \mathbf{E}_{1t}.		 
 		:label: Etcontinuous
+
+Boundary Conditions for the Magnetic Flux
+-----------------------------------------
+
+
 
 Boundary Conditions for the Electric Current Displacement
 ---------------------------------------------------------
@@ -124,94 +142,3 @@ where V is the volume enclosed by the green cylinder in Figure 1 and S is its bo
 
 In other words, the normal component of current density is continuous.
 
-Boundary Conditions for Potentials
-----------------------------------
-
-Electric potential (:math:`\psi`) is defined
-
-.. math::
-		\mathbf{E} = \boldsymbol{\nabla\cdot}\psi
-		:label: potentialDef
-
-We know that electric potential is continuous at a boundary  :math:`\psi_1 = \psi_2` (Daniel:  From where do we know this?? Can you include a reference, please?). To determine the relation for the normal derivative of the potential across a boundary, we start from the continuity of the normal component of the current density (see equation (12))
-
-.. math::
-		\mathbf{J}_{2n} = \mathbf{J}_{1n},
-		:label: curCont
-
-Applying Ohm's law, (see equation (5)), to the previous expression we obtain
-
-.. math::
-		\sigma_2\mathbf{E}_{2n} = \sigma_1\mathbf{E}_{1n}.
-		:label: aux1
-
-Now, from the definition of electric potential (see equation (13)) and using this definition in equation (14), gives us the relation of the normal derivative of the potential across a boundary between two regions with different properties.
-
-.. math::
-		\sigma_2\frac{\partial \psi_2}{\partial n} &= \sigma_1\frac{\partial \psi_1}{\partial n}.
-		:label: potDerivRelation
-
-
-Charge Buildup at a Boundary
-----------------------------
-
-If we have a boundary between two media with different conductivities, as in the figure below  
-
-.. image:: images/boundryChargeBuildup.PNG
-   :scale: 75 %
-   :align: center
-
-then from the arguments presented in the previous section, we can determin the buildup of charges on boundaries between regions with differing conductivities. Starting from the continuity of the normal component of the current density (see equation (12))
-
-.. math::
-		\mathbf{J}_{2n} &= \mathbf{J}_{1n},\\
-		:label: curCont
-
-and using Ohm's law, (see equation (5)) we get
-
-.. math::
-		\sigma_2\mathbf{E}_{2n} &= \sigma_1\mathbf{E}_{1n}.
-		:label: ohmsLawCurCont
-
-
-Then, using to boundry conditions for the electric field (see equation (10)) we get
-
-.. math::
-		\mathbf{E}_{2n}-\mathbf{E}_{1n}\ &= \frac{\tau_f}{\varepsilon_0}.
-		:label: Ebound
-
-Solving the system made by (18) and (19), we get
-
-.. math::
-		\mathbf{E}_{2n} &= \frac{\sigma_1}{\sigma_2}\mathbf{E}_{1n}\quad\text{from (18)}\\
-		\text{into (19)}\quad \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n} &= \frac{\tau_f}{\varepsilon_0}\\
-		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{E}_{1n}.
-		:label: chargeBuildup
-
-Which quantifies the charge buildup on a boundary. So in case 1, were the resistive layer is on top i.e. :math:`\sigma_1 < \sigma_2`
-
-.. image:: images/resOnTop.PNG
-   :scale: 75 %
-   :align: center
-
-.. math:: 
-		\sigma_1 < \sigma_2 \implies \tau_f <0
-
-.. image:: images/negChargeBuildup.PNG
-   :scale: 75 %
-   :align: center
-
-We get a buildup of negative charges on the boundary, and in case 2, were the resistive layer is on top i.e. :math:`\sigma_1 > \sigma_2` 
-
-.. image:: images/condOnTop.PNG
-   :scale: 75 %
-   :align: center
-
-.. math:: 
-		\sigma_1 > \sigma_2 \implies \tau_f >0
-
-.. image:: images/posChargeBuildup.PNG
-   :scale: 75 %
-   :align: center
-
-We get a buildup of positive charges on the boundary.
