@@ -1,7 +1,13 @@
 .. _bc_for_dc:
 
+Boundary Conditions for the DC problem
+======================================
+
+
+
 Boundary Conditions for Potentials
 ----------------------------------
+
 
 Electric potential (:math:`\psi`) is defined
 
