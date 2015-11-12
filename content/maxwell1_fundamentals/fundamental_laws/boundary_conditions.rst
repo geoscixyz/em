@@ -48,7 +48,7 @@ To derive the boundary condition on the normal component of electric displacemen
 .. math::
   \mathbf{d}_{1n} A - \mathbf{d}_{2n} A + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} \mathbf{d}_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
 
-where :math:`\mathbf{d}_{1n}` and :math:`\mathbf{d}_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`\mathbf{d}_r` is the radial component. In the limit, when :math:`h` approaches 0 while :math:`A` remains constant, the integral remaining on the left hand side vanish and the charge enclosed can be represented by the free surface charge density :math:`I_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
+where :math:`\mathbf{d}_{1n}` and :math:`\mathbf{d}_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`\mathbf{d}_r` is the radial component. In the limit, when :math:`h` approaches zero while :math:`A` remains constant, the integral remaining on the left hand side vanish and the charge enclosed can be represented by the free surface charge density :math:`I_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
 
 .. math::
   \mathbf{d}_{1n} A - \mathbf{d}_{2n} A = I_f A,
@@ -87,17 +87,17 @@ where :math:`\mathbf{e}_{1t}` and :math:`\mathbf{e}_{2t}` are the tangential com
 Tangential Component of the Magnetic Field
 ------------------------------------------
 
-The interface condition on the tangential component of the magnetic field is derived from the integral form of the Ampere-Maxwell equation applied to the same Gaussian rectangle as for the tangential electric field. Using the same reasoning as for the electric field, we have
+The interface condition on the tangential component of the magnetic field, denoted as :math:`\mathbf{h}_t`, is derived from the integral form of the :ref:`Ampere-Maxwell equation<ampere_maxwell>` applied to the same Gaussian rectangle as for the tangential electric field. Using the same reasoning as for the electric field (see previous section), we have
 
 .. math::
-  \oint_C \mathbf{h}\cdot d\mathbf{l} = h_{1t}l - h_{2t}l.
+  \oint_C \mathbf{h}\cdot \mathbf{d}\mathbf{l} = \mathbf{h}_{1t}l - \mathbf{h}_{2t}l.
 
-In the limit that the height of the Gaussian rectangle approaches zero, the electric displacement integral term vanishes and the current enclosed by the rectangle can be represented as a surface current density on the interface :math:`\kappa` times the width of the rectangle :math:`l`. This gives
-
-.. math::
-  h_{1t}l - h_{2t}l = \kappa l
-
-Cancelling the :math:`l` terms yields the interface condition on the tangential magnetic field
+In the limit, when the height of the Gaussian rectangle approaches zero, the electric displacement integral term vanishes and the current enclosed by the rectangle can be represented as a surface current density on the interface :math:`\kappa` times the width of the rectangle :math:`l`. This gives
 
 .. math::
-  h_{1t}- h_{2t} = \kappa.
+  \mathbf{h}_{1t}l - \mathbf{h}_{2t}l = \kappa l
+
+Cancelling the :math:`l` terms in the above expression, yields the interface condition on the tangential magnetic field
+
+.. math::
+  \mathbf{h}_{1t}- \mathbf{h}_{2t} = \kappa.
