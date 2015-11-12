@@ -66,10 +66,10 @@ If the medium is linear and isotropic, the condition can be written in terms of 
 Normal Component of Magnetic Flux
 -----------------------------------------
 
-The interface condition on the normal component of the magnetic flux is derived from the integral form of Gauss's law for the magnetic flux. We follow the exact argument as for the electric displacement. However, since the right hand side of Gauss's law for magnetic flux is always zero, we have the interface condition on the normal magnetic flux
+The interface condition on the normal component of the magnetic flux, denoted as :math:`\mathbf{b}_{n}`, is derived from the integral form of Gauss's law for the magnetic flux. We follow the exact argument as for the electric displacement, see previous section. However, since the right hand side of :ref:`Gauss's law<gauss_magnetic>` is always zero, we have the interface condition on the normal magnetic flux
 
 .. math::
-  b_{1n} - b_{2n} = 0.
+  \mathbf{b}_{1n} - \mathbf{b}_{2n} = \mathbf{0}.
   
 Tangential Component of the Electric Field
 ------------------------------------------
