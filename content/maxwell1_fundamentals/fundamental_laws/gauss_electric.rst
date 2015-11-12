@@ -64,10 +64,10 @@ Coulomb's law is often one of the first quantitative laws encountered by student
 
 
 .. math::
-  \mathbf{F} = \frac{qQ}{4\pi \varepsilon_0 |\mathbf{r} - \mathbf{r'}|^2}\hat{\boldsymbol{\mathcal{r}}} \;,
+  \mathbf{F} = \frac{qQ}{4\pi \varepsilon_0 |\mathbf{r} - \mathbf{r'}|^2}\widehat{(\mathbf{r} - \mathbf{r'})} \;,
   :label: Coulomb_q
 
-where :math:`\mathbf{F}` is the force between the two charges :math:`q` and :math:`Q`, :math:`|\mathbf{r} - \mathbf{r'}|` is the distance between the charges and :math:`\hat{\boldsymbol{\mathcal{r}}}` is a unit vector in the direction of the line separating the two charges.
+where :math:`\mathbf{F}` is the force between the two charges :math:`q` and :math:`Q`, :math:`|\mathbf{r} - \mathbf{r'}|` is the distance between the charges and :math:`\widehat{(\mathbf{r} - \mathbf{r'})}` is a unit vector in the direction of the line separating the two charges.
 
 Having defined Coulomb's law, one might next naturally ask the question how would a standard reference charge behave in the presence of any distribution of electric charge we might dream up? Answering this question brings us to the concept of the electric field. We follow the presentation of [2]_. We can define the electric field of an arbitrary charge :math:`Q` as the force experienced by a unit charge :math:`q` due to :math:`Q`
 
@@ -78,7 +78,7 @@ Having defined Coulomb's law, one might next naturally ask the question how woul
 Dividing both sides of Coulomb's law by :math:`q` and substituting the definition of :math:`\mathbf{e}`, we get that the electric field of a point charge :math:`Q` is
 
 .. math::
-      \mathbf{e}(\mathbf{r}) = \frac{Q}{4\pi\varepsilon_0 |\mathbf{r} - \mathbf{r'}|^2}\hat{\boldsymbol{\mathcal{r}}}\;.
+      \mathbf{e}(\mathbf{r}) = \frac{Q}{4\pi\varepsilon_0 |\mathbf{r} - \mathbf{r'}|^2}\widehat{(\mathbf{r} - \mathbf{r'})}\;.
       :label: e_charge_q
 
 It is important to note here that the electric field obeys the principle of superposition, meaning that the electric field of an arbitrary collection of point charges is equal to the sum of the electric fields due to each individual charge. 
@@ -90,7 +90,7 @@ It is important to note here that the electric field obeys the principle of supe
 If we consider the the electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
 
 .. math::
-  \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r} - \mathbf{r'}|^2}\;\hat{\boldsymbol{\mathcal{r}}}\;\mathrm{d}v,
+  \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r} - \mathbf{r'}|^2}\;\widehat{(\mathbf{r} - \mathbf{r'})}\;\mathrm{d}v,
   :label: e_charge_den
 
 where :math:`|\mathbf{r} - \mathbf{r'}|` is now the distance from a point in the charged body to the point at which the electric field is to be evaluated. The integral is over the charged body. 
