@@ -3,6 +3,11 @@
 Ampere-Maxwell
 ==============
 
+The Ampere-Maxwell equation relates electric currents and magnetic flux. It
+describes the magnetic fields that result from a transmitter wire or loop in
+electromagnetic surveys. For steady currents, it is key for describing the
+magnetometric resistivity experiment.
+
 Integral Equation
 -----------------
 
