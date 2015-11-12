@@ -33,7 +33,7 @@ Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:
 
 where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
-In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. We also make use of a rectangular surface and a Gaussian pill-box that straddle the boundary.  This is illustrated in Figure 1. 
+In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. We also make use of a rectangular surface and a Gaussian pillbox that straddle the boundary.  This is illustrated in Figure 1. 
 
 .. figure:: images/BC_1.png
 	:align: center
@@ -43,25 +43,25 @@ Fig 1.  Two layer medium. Orange rectangle is an open surface with area A, bound
 Normal Component of Electric Displacement
 -----------------------------------------
 
-We derive the boundary condition on the normal component of electric displacement :math:`\mathbf{d}` using Gauss's law formulated in terms of :math:`\mathbf{d}`, applied to the Gaussian pillbox in figure 1. Consider a pillbox of height h and cross-sectional area :math:`A`, small enough that :math:`\mathbf{d}` is constant across the top and bottom. The integral is then 
+To derive the boundary condition on the normal component of electric displacement, denoted as :math:`\mathbf{d}_{n}`, we apply Gauss's law formulated in terms of :math:`\mathbf{d}` to the Gaussian pillbox in Figure 1. Consider a pillbox of height h and cross-sectional area :math:`A`, small enough that :math:`\mathbf{d}` is constant across the top and bottom. The integral is then 
 
 .. math::
-  d_{1n} A - d_{2n} A + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}}
+  \mathbf{d}_{1n} A - \mathbf{d}_{2n} A + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} \mathbf{d}_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
 
-where :math:`d_{1n}` and :math:`d_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox and :math:`d_r` is the radial component. In the limit that :math:`h` approaches 0 while :math:`A` remains constant, the integral remaining on the left hand side becomes zero and the charge enclosed can be represented by the free surface charge density :math:`\tau_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
-
-.. math::
-  d_{1n} A - d_{2n} A = \tau_f A.
-
-Cancelling the :math:`A` terms gives the interface condition on the normal component of :math:`\mathbf{d}`
+where :math:`\mathbf{d}_{1n}` and :math:`\mathbf{d}_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`\mathbf{d}_r` is the radial component. In the limit, when :math:`h` approaches 0 while :math:`A` remains constant, the integral remaining on the left hand side vanish and the charge enclosed can be represented by the free surface charge density :math:`I_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
 
 .. math::
-  d_{1n} - d_{2n} = \tau_f.
+  \mathbf{d}_{1n} A - \mathbf{d}_{2n} A = I_f A,
+
+which yields the interface condition on the normal component of :math:`\mathbf{d}`
+
+.. math::
+  \mathbf{d}_{1n} - \mathbf{d}_{2n} = I_f.
   
 If the medium is linear and isotropic, the condition can be written in terms of the electric field as
 
 .. math::
-  \varepsilon_1 e_{1n} -\varepsilon_2 e_{2n} = \tau_f.
+  \varepsilon_1 \mathbf{e}_{1n} -\varepsilon_2 \mathbf{e}_{2n} = I_f.
 
 Normal Component of Magnetic Flux
 -----------------------------------------
