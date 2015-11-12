@@ -12,10 +12,93 @@ Deriving the DC Equations
  Include analytic formula for the potential due to arbitrary source
  receiver geometry over a homogeneous half-space]
 
-Boundary Conditions
---------------------------
+Boundary Conditions for the DC problem
+--------------------------------------
 
-[Content to come]
+Electrical potential is defined up to a constant. DC surveys measure potential differences. By convention we say that the potential decays asymptotically toward zero away from electric charges and currents. In solving for the discrete approximation to the potential, we make the boundaries at the sides and bottom of the domain far enough from any sources that the potential is approximately zero there. We then consider homogeneous Dirichlet conditions on those boundaries in solving the discrete problem.
+
+We also assume that currents cannot flow into the air. Mathematically this can be stated
+
+.. math::
+  \mathbf{j}\cdot \hat{\mathbf{n}} = 0 \qquad \text{on} \quad \partial_s \Omega,
+
+where :math:`\partial_s \Omega` indicates the surface of the earth. Writing the electric field as the negative gradient of potential, we have
+
+.. math::
+  (\boldsymbol{\nabla}\phi) \cdot \hat{\mathbf{n}} = 0 \qquad \text{on} \quad \partial_s \Omega.
+
+In other words, we use a homogeneous Neumann boundary condition on the surface boundary. 
+
+Charge Buildup at Boundaries
+----------------------------
+
+Consider the situation in the figure below, at a boundary between two media with different conductivities but both with dielectric permittivity :math:`\varepsilon = \varepsilon_0`.  
+
+.. image:: images/boundryChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
+   
+We will show how charge buildup occurs at such an interface using conservation of charge, Ohm's law and the interface condition on the normal component of electric displacement. Recall the integral equation expressing conservation of charge
+
+.. math::
+    \int_A \mathbf{j} \cdot da =  - \frac{d}{dt} \int_V \rho dv = - \frac{dQ}{dt}. 
+    :label: charge_conservation_integral
+
+In steady state, :math:`dQ/dt = 0`. Taking the surface of integration as our standard Gaussian pillbox (see boundary conditions page), the integral can be evaluated as
+
+.. math::
+		(\mathbf{j}_2-\mathbf{j}_1)\cdot\hat{\mathbf{n}} &= 0\\
+		j_{2n} &= j_{1n}. 
+		:label: JnCont
+
+where :math:`j_{1n}` and :math:`j_{2n}` are the normal components of current density on either side of the interface. So we see that direct current is continuous across material interfaces. If we assume, linear, isotropic earth materials, we can apply Ohm's law (:math:`\mathbf{j}_f = \sigma\mathbf{e}`) to this equation, yielding
+
+.. math::
+		\sigma_2\mathbf{e}_{2n} &= \sigma_1\mathbf{e}_{1n}.
+		:label: ohmsLawCurCont
+
+Since we assume that both materials have dielectric permittivity :math:`\varepsilon = \varepsilon_0`, we can write the interface condition on the normal component of electric displacement in terms of the electric field
+
+.. math::
+		\mathbf{e}_{2n}-\mathbf{e}_{1n}\ &= \frac{\tau_f}{\varepsilon_0},
+		:label: Ebound
+
+where :math:`\tau_f` is the free surface charge density on the boundary. 
+
+combining the two previous equations we can express the charge buildup in terms of the ratio of the two conductivities
+
+.. math::
+		\frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{e}_{1n}.
+		:label: chargeBuildup
+
+In the case where current is flowing from a resistive layer to a more conductive layer (i.e. :math:`\sigma_2 > \sigma_1`),
+
+.. image:: images/resOnTop.PNG
+   :scale: 75 %
+   :align: center
+
+.. math:: 
+		\sigma_1 < \sigma_2 \implies \tau_f <0
+
+.. image:: images/negChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
+
+We get a buildup of negative charges on the boundary, and in the case where flow is from a resistive layer to a conductive layer (i.e. :math:`\sigma_1 > \sigma_2`) 
+
+.. image:: images/condOnTop.PNG
+   :scale: 75 %
+   :align: center
+
+.. math:: 
+		\sigma_1 > \sigma_2 \implies \tau_f >0
+
+.. image:: images/posChargeBuildup.PNG
+   :scale: 75 %
+   :align: center
+
+We get a buildup of positive charges on the boundary.
+
 
 Discretization
 --------------------------
