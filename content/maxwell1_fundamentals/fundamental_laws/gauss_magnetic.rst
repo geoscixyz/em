@@ -3,7 +3,17 @@
 Gauss's Law for Magnetic Fields
 ===============================
 
-Gauss's law for magnetism states that no magnetic monopoles exists. This page describes the different mathematical formulations of Gauss's law and how it is derived. 
+.. figure:: images\BarMagnet.png
+    :figwidth: 50%
+    :scale: 25%
+    :align: right
+
+    When a bar magnet is cut in two, you get two bar magnets.
+
+ 
+Gauss's law for magnetism states that no magnetic monopoles exists and that the total flux through a closed surface must be zero. This page describes the time-domain integral and differential forms of Gauss's law for magnetism and how the law can be derived. The frequency-domain equation is also given. At the end of the page, a brief history of the Gauss's law for magnetism is provided.
+
+
 
 Integral equation
 -----------------
