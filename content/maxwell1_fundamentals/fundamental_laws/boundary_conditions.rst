@@ -74,15 +74,15 @@ The interface condition on the normal component of the magnetic flux, denoted as
 Tangential Component of the Electric Field
 ------------------------------------------
 
-The interface condition on the tangential component of the electric field is derived from Faraday's law in integral form. Consider Faraday's law applied to the rectangle of height :math:`h` and width :math:`l` shown in figure 1, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. Then, we take the limit as :math:`h` approaches 0 while holding :math:`l` constant, which means the contour integral in Faraday's law becomes
+The boundary condition on the tangential component of the electric field, denoted as :math:`\mathbf{e}_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form. Consider Faraday's law applied to the rectangle of height :math:`h` and width :math:`l` shown in Figure 1, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. Then, we take the limit as :math:`h` approaches 0 while holding :math:`l` constant, which means the contour integral in :ref:`Faraday's law<faraday>` becomes
 
 .. math::
-  \oint_C \mathbf{e}\cdot d\mathbf{l} = e_{1t}l - e_{2t}l,
+  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = \mathbf{e}_{1t}l - \mathbf{e}_{2t}l,
 
-where :math:`e_{1t}` and :math:`e_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively. Taking :math:`h` to 0 also causes the surface integral on the right hand side of Faraday's law to vanish, implying the interface condition
+where :math:`\mathbf{e}_{1t}` and :math:`\mathbf{e}_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively. Taking :math:`h` to 0 also causes the surface integral on the right hand side of :ref:`Faraday's law<faraday>` to vanish, implying the interface condition
 
 .. math::
-  e_{1t} - e_{2t} = 0.
+  \mathbf{e}_{1t} - \mathbf{e}_{2t} = \mathbf{0}.
 
 Tangential Component of the Magnetic Field
 ------------------------------------------
