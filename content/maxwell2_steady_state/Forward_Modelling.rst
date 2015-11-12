@@ -15,14 +15,24 @@ Deriving the DC Equations
 Boundary Conditions for the DC problem
 --------------------------------------
 
-Electrical potential is defined up to a constant. DC surveys measure potential differences. By convention we say that the potential decays asymptotically toward zero away from electric charges and currents. In solving for the discrete approximation to the potential, we make the boundaries at the sides and bottom of the domain far enough from any sources that the potential is approximately zero there. We then consider homogeneous Dirichlet conditions on those boundaries in solving the discrete problem.
+Electrical potential is unique up to a constant, which is determined by convention. DC surveys measure potential differences so this is not important for field measurements but it is important in solving the DC equations for :math:`\phi`. We use the standard convention that the potential is zero infinitely far from all charges and currents. In solving for the discrete approximation to the potential, we make the boundaries at the sides and bottom of the domain far enough from any sources that the potential is approximately zero there. We then consider homogeneous Dirichlet conditions on those boundaries in solving the discrete problem.
 
-We also assume that currents cannot flow into the air. Mathematically this can be stated
+We derive the boundary condition at the surface from conservation of charge and the fact that currents cannot flow into the air. Mathematically this can be stated as
 
 .. math::
   \mathbf{j}\cdot \hat{\mathbf{n}} = 0 \qquad \text{on} \quad \partial_s \Omega,
 
-where :math:`\partial_s \Omega` indicates the surface of the earth. Writing the electric field as the negative gradient of potential, we have
+where :math:`\partial_s \Omega` indicates the surface of the earth. Applying Ohm's law in the earth this becomes
+
+.. math::
+  \sigma \mathbf{e}\cdot\hat{\mathbf{n}} = 0 
+
+Since :math:`\sigma` must be non-zero in the earth, we divide by it to give
+
+.. math::
+  \mathbf{e}\cdot\hat{\mathbf{n}} = 0 
+
+at the surface. Finally, writing the electric field as the negative gradient of potential, we have
 
 .. math::
   (\boldsymbol{\nabla}\phi) \cdot \hat{\mathbf{n}} = 0 \qquad \text{on} \quad \partial_s \Omega.
