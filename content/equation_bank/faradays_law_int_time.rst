@@ -1,7 +1,7 @@
 .. _eq_faradays_law_int_time:
 
 .. math::
-	\oint_C {\bf e} \cdot d{\bf l}  = - \int_A \frac{\partial {\bf b}}{\partial t} \cdot \hat n \, da
+	\oint_C {\bf e} \cdot {\bf d}{\bf l}  = - \int_A \frac{\partial {\bf b}}{\partial t} \cdot \hat {\bf n} \, da,
 	:label: faradays_law_int_time
 
 
