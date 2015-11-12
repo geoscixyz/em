@@ -5,7 +5,6 @@ Gauss's Law for Magnetic Fields
 
 .. figure:: images\BarMagnet.png
     :figwidth: 50%
-    :scale: 25%
     :align: right
 
     When a bar magnet is cut in two, you get two bar magnets.
