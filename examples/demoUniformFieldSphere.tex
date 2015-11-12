@@ -94,12 +94,53 @@ The primary potential is related to the uniform electric field and the secondary
 
 \section{Electric Fields}
 Since the first Maxwell's equation the electric field equals to the negative gradient of the potential:
-\begin{equation}
+\begin{equation}\label{eq:Epotential}
 E = -\nabla V
 \end{equation}
 
 \TODO{Why electric field only is in only x direction inside the sphere? Why there is discontinuity?}
- 
+
+The general solution of Laplace's equation in spherical coordinate is
+\begin{equation}\label{eq:gsln}
+V = \sum\limits_{n=0}^\infty\sum\limits_{m=0}^n (A_{nm}r^n + \frac{B_{nm}}{r^{n+1}})P_n^m(\cos\theta)e^{im\phi}
+\end{equation}  
+Assuming the primary uniform electric field $E_0$ is restricted to x direction, the primary potential by integral of eq.\eqref{eq:Epotential} is
+\begin{equation}\label{eq:primary}
+V_p = -E_0 x = -E_0 r\cos\theta = -E_0 r P_1(\cos\theta)
+\end{equation}
+Comparing eq.\eqref{eq:gsln}\eqref{eq:primary} and considering boundary conditions, we observe that there must be $m=0$ and $n=1$ in the secondary potential expression. So the secondary potentials reduces to
+\begin{equation}
+V_s = [A_1r+Br^{-2}]P_1(\cos\theta)
+\end{equation}
+Considering the boundary conditions $V|_{r=\infty}=0$ and $V|_{r=0}=0$, the secondary potential outside the sphere ($r>R$) is
+\begin{equation}
+V_1^s = B_1r^{-2}P_1(\cos\theta)
+\end{equation}
+and inside the sphere ($r<R$) is
+\begin{equation}
+V_2^s = A_1rP_1(\cos\theta)
+\end{equation}
+So the total potential according to superposition theorem is then
+\begin{align}
+V_1 &= [-E_0r + B_1r^{-2}]P_1(\cos\theta) \\
+V_2 &= A_1rP_1(\cos\theta)
+\end{align}
+On the surface of the sphere, consider that both the normal current density and the potential must be continuous across the surface of the sphere, we have
+\begin{align}
+-\sigma_1A_1 &= 2\sigma_0B_1R^{-3} + \sigma_0E_0 \\
+A_1R &= -E_0R + B_1R^{-2}
+\end{align}
+Solving above equations gives us the total potential
+\begin{align}
+V_1 &= -E_0r\cos\theta(1 - \frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^3}), \quad r > R \\
+V_2 &= -\frac{3\sigma_0}{\sigma_1+2\sigma_0}E_0r\cos\theta \quad r\leq R
+\end{align}
+Note that $x = r\cos\theta$. According to eq.\eqref{eq:Epotential}, the electric field has only x component inside the sphere.
+
+
+
+
+
 
 \section{Current Densities}
 For  current densities and electric field there is the following relation:  
