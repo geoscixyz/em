@@ -52,7 +52,51 @@ The problem setup is shown in the figure below, where we have
     ax.text(-0.05,-np.sqrt(R)/2.,'$\sigma_1$',fontsize=14)
     ax.text(-0.05,-R-0.2,'$\sigma_0$',fontsize=14)
 
-    plt.show()     
+    plt.show()  
 
+
+Governing Equations
+-------------------
+
+Here we state the equations needed to derive everything, Gauss' law, boundary conditions, (appropriate links)
+
+
+A couple things we want to highlight:
+
+- behavior for a resistive v. conductive sphere
+- total v. secondary
+
+Potentials 
+----------
+
+Solution, discussion, explain some intuition, questions. 
+
+
+Electric Field
+--------------
+
+How do we get from potentials to electric field
+
+Current Density
+---------------
+
+Charge Accumulation
+-------------------
+
+Where are the negative charges, where are the positive charges? for a resistive and conductive sphere
+
+Questions
+^^^^^^^^^
+
+- now that you have all of the pieces, do they make sense when you put them together. 
+
+
+Data
+----
+
+Potential differences 
+
+Building some Intuition for DC problem
+--------------------------------------
 
 .. [1] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.
