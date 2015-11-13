@@ -7,3 +7,5 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    electrostatic_sphere
