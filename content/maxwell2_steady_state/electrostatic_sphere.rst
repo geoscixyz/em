@@ -50,9 +50,7 @@ The problem setup is shown in the figure below, where we have
     ax.patch.set_facecolor([0.4,0.7,0.4])
     ax.patch.set_alpha(0.2)
     ax.text(-0.05,-np.sqrt(R)/2.,'$\sigma_1$',fontsize=14)
-    ax.text(-0.05,-R-0.2,'$\sigma_0$',fontsize=14)
-
-    plt.show()  
+    ax.text(-0.05,-R-0.2,'$\sigma_0$',fontsize=14)  
 
 
 Governing Equations
@@ -70,6 +68,26 @@ Potentials
 ----------
 
 Solution, discussion, explain some intuition, questions. 
+
+.. plot::
+    
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.          # conductivity of the wholespace
+    sig1 = 100.         # conductivity of the sphere
+    R    = 50.          # radius of the sphere
+    E0   = 1.           # inducing field strength
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+    PlotOpt = 'Total'
+
+    plot_Potentials(XYZ, R, sig1, sig0, E0)
 
 
 Electric Field
