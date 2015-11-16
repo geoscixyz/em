@@ -59,31 +59,28 @@ of spherical harmonic modes using the binomial theorem:
 
 .. math::
 
-   \begin{aligned}
    \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \\
    &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
-   .. \label{eq:RSol1}
-   &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big )\end{aligned}
-   :label:eq:RSol1
+   &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big )
+   :label: RSol1
 
 where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
 order :math:`n`. Because Legendre polynomials have magnitudes less than
 unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
-([eq:RSol1]) is bounded and converges as :math:`n \rightarrow \infty`. A
+:eq:`RSol1` is bounded and converges as :math:`n \rightarrow \infty`. A
 similar approach for :math:`r < x_0` can be expressed as follows:
 
 .. math::
 
-   \begin{aligned}
    \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
    &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
-   \label{eq:RSol2}
-   &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )\end{aligned}
+   &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
+   :label: RSol2
 
-Similar to Eq. :eq:`eq:RSol1`, since :math:`x_0<r`, the infinite series in
-Eq. ([eq:RSol2]) is also boundary and conveges as
-:math:`n\rightarrow\infty`. Therefore using Eqs. ([eq:RSol1]) and
-([eq:RSol2]), the electric scalar potential :math:`\psi` can be
+Similar to Eq. :eq:`RSol1`, since :math:`x_0<r`, the infinite series in
+Eq. :eq:`RSol2` is also boundary and conveges as
+:math:`n\rightarrow\infty`. Therefore using Eqs. :eq:`RSol1` and
+:eq:`RSol2`, the electric scalar potential :math:`\psi` can be
 expressed as an infinite sum of spherical harmonic modes, where:
 
 .. math::
