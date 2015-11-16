@@ -6,20 +6,19 @@ Boundary Conditions
 It's important to understand how the electromagnetic fields and fluxes change at boundaries between media of differing material properties. In this section, we derive these boundary, or interface, conditions from Maxwell's equations in time domain integral form. To recap, the equations are
 
 .. math::
-  \oint_A \mathbf{d}\cdot \hat{\mathbf{n}}\,da = Q_{\text{enc}},
+  \oint_S \mathbf{d}\cdot \hat{\mathbf{n}}\,da = Q_{\text{enc}},
   :label: GaussEint
   
 .. math::
-  \oint_A \mathbf{b}\cdot \hat{\mathbf{n}}\,da = 0,
+  \oint_S \mathbf{b}\cdot \hat{\mathbf{n}}\,da = 0,
   :label: GaussMint
   
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
 .. math::
-   \oint_C \mathbf{h} \cdot \mathbf{dl} = I_{\text{enc}} + \int_S \frac{\partial\mathbf{d}}{\partial t} \cdot \hat{\mathbf{n}} ~\text{ds},
+   \oint_C \mathbf{h} \cdot \mathbf{dl} = I_{\text{enc}} + \int_S \frac{\partial\mathbf{d}}{\partial t} \cdot \hat{\mathbf{n}} ~\text{da}.
   :label: AmpMaxInt
 
-where :math:`{\bf b,d,e,h}` are the electromagnetic fields and fluxes, :math:`Q_{\text{enc}}` denotes {ADD THIS}, and :math:`I_{\text{enc}}` denotes {ADD THIS}. 	
 
 Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:`\mathbf{e}` and :math:`\mathbf{b}`, respectively, through constitutive relations. Assuming linear isotropic media, the constitutive relations are
 
@@ -33,35 +32,40 @@ Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:
 
 where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
-In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. We also make use of a rectangular surface and a Gaussian pillbox that straddle the boundary.  This is illustrated in Figure 1. 
+In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in Figure 1. Our derivations follow those presented by Griffiths on pages xx-yy of [1]_.
 
 .. figure:: images/BC_1.png
 	:align: center
 
-Fig 1.  Two layer medium. Orange rectangle is an open surface with area A, bounded by the curve C. Green pillbox has volume V, bounded by the surface S. 
+Fig 1.  Two layer medium. 
 
 Normal Component of Electric Displacement
 -----------------------------------------
 
-To derive the boundary condition on the normal component of electric displacement, denoted as :math:`\mathbf{d}_{n}`, we apply Gauss's law formulated in terms of :math:`\mathbf{d}` to the Gaussian pillbox in Figure 1. Consider a pillbox of height h and cross-sectional area :math:`A`, small enough that :math:`\mathbf{d}` is constant across the top and bottom. The integral is then 
+ Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 2. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
 
 .. math::
-  \mathbf{d}_{1n} A - \mathbf{d}_{2n} A + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} \mathbf{d}_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
+  \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{1n} \mathrm{d}r\mathrm{d}\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{2n} \mathrm{d}r\mathrm{d}\theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
 
-where :math:`\mathbf{d}_{1n}` and :math:`\mathbf{d}_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`\mathbf{d}_r` is the radial component. In the limit, when :math:`h` approaches 0 while :math:`A` remains constant, the integral remaining on the left hand side vanish and the charge enclosed can be represented by the free surface charge density :math:`I_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
+where :math:`d_{1n}` and :math:`d_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`d_r` is the radial component. Since the pillbox is extremely small, we can assume :math:`d_{1n}` to be constant over the top of the pillbox and :math:`d_{2n}` to be constant over the bottom of the pillbox. Thus, evaluating the first two integrals in the last equation yields
 
 .. math::
-  \mathbf{d}_{1n} A - \mathbf{d}_{2n} A = I_f A,
+  d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}}.
+
+In the limit, when :math:`h` approaches 0 while :math:`S_{\text{top}}` remains constant, the integral remaining on the left hand side vanishes and the charge enclosed can be represented by the free surface charge density :math:`\tau_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
+
+.. math::
+  d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} = \tau_f S_{\text{top}},
 
 which yields the interface condition on the normal component of :math:`\mathbf{d}`
 
 .. math::
-  \mathbf{d}_{1n} - \mathbf{d}_{2n} = I_f.
+  d_{1n} - d_{2n} = \tau_f.
   
 If the medium is linear and isotropic, the condition can be written in terms of the electric field as
 
 .. math::
-  \varepsilon_1 \mathbf{e}_{1n} -\varepsilon_2 \mathbf{e}_{2n} = I_f.
+  \varepsilon_1 e_{1n} -\varepsilon_2 e_{2n} = \tau_f.
 
 Normal Component of Magnetic Flux
 -----------------------------------------
@@ -92,12 +96,17 @@ The interface condition on the tangential component of the magnetic field is der
 .. math::
   \oint_C \mathbf{h}\cdot d\mathbf{l} = h_{1t}l - h_{2t}l.
 
-In the limit that the height of the Gaussian rectangle approaches zero, the electric displacement integral term vanishes and the current enclosed by the rectangle can be represented as a surface current density on the interface :math:`\kappa` times the width of the rectangle :math:`l`. This gives
+In the limit that the height of the Gaussian rectangle approaches zero, the electric displacement integral term vanishes and the current enclosed by the rectangle can be represented as a surface current density on the interface :math:`j_{\text{surf}}` times the width of the rectangle :math:`l`. This gives
 
 .. math::
-  h_{1t}l - h_{2t}l = \kappa l
+  h_{1t}l - h_{2t}l = j_{\text{surf}} l
 
 Cancelling the :math:`l` terms yields the interface condition on the tangential magnetic field
 
 .. math::
-  h_{1t}- h_{2t} = \kappa.
+  h_{1t}- h_{2t} = j_{\text{surf}}.
+  
+References
+----------
+
+.. [1] Griffiths, David J. Introduction to Electrodynamics, 3rd edition. Prentice Hall, Upper Saddle River, New Jersey. 1999.
