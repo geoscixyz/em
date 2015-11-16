@@ -5,18 +5,22 @@ Effects of Topography: A Hemispherical Depression
 Introduction
 ============
 
-| For this derivation, we will examine the effects of negative
+For this derivation, we will examine the effects of negative
 topography by considering a hemispherical depression in the Earth’s
 surface. This will be done in 4 steps:
-| 1) We will begin by presenting a solution for the electric scalar
+
+1. We will begin by presenting a solution for the electric scalar
 potential, within a wholespace defined of resistivity :math:`\rho`, due
 to a point current source. This solution will then be re-expressed in
 the coordinate system which characterizes our final problem.
-| 2) The solution for a conducting sphere within a wholespace is then
+
+2. The solution for a conducting sphere within a wholespace is then
 presented.
-| 3) By exploiting the symmetry of the previous solution, we will obtain
-the solution for a hemispherical conductive body within a halfspace. Our
-final solution is obtained by setting the resistivity of the
+
+3. By exploiting the symmetry of the previous solution, we will obtain
+the solution for a hemispherical conductive body within a halfspace. 
+
+4. Our final solution is then obtained by setting the resistivity of the
 hemispherical depression to infinity.
 
 Electric Potential from a Current Source within a Wholespace
@@ -24,7 +28,7 @@ Electric Potential from a Current Source within a Wholespace
 
 Let us consider the case where an electrical current :math:`I` is being
 injected into a wholespace with resistivity :math:`\rho`, at location
-\\( (x,y,z) = (x_0,0,0) \\). Assuming the medium is lossless,
+(:math:`x,y,z`) = (:math:`x_0,0,0`). Assuming the medium is lossless,
 this results in a current density :math:`J` which flows radially
 outwards from the source, with magnitude:
 
@@ -33,7 +37,7 @@ outwards from the source, with magnitude:
 |SphericalDepression_Wholespace|
 
 where :math:`R` is the distance from the source to a point of measure
-:math:`P`, and :math:`4 \pi R^2` is the area of a ball centered at the
+:math:`P`, and :math:`4\pi R^2` is the area of a ball centered at the
 source. Because our problem is electrostatic,
 :math:`\vec E = - \nabla \psi` according to Faraday’s law. The scalar
 electric potential :math:`\psi` can be obtained by integrating the
@@ -44,8 +48,9 @@ law (:math:`\vec E = \rho \vec J`) into the path integral:
 
 For reasons which will becomes apparent in the next section, we would
 like to re-express :math:`\psi` in terms of a radial coordinate system
-(:math:`r,\theta,\phi`), centered at (:math:`x,y,z`) = (0,0,0). By using
-the cosine law:
+(:math:`r,\theta,\phi`), centered at (:math:`x,y,z`) = (0,0,0). Because
+the points which represent the problem geometry do not necessarily form
+a right-triangle, :math:`R` must be expressed using the cosine law:
 
 .. math:: R = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta \;}
 
@@ -57,8 +62,9 @@ of spherical harmonic modes using the binomial theorem:
    \begin{aligned}
    \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \\
    &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+   .. \label{eq:RSol1}
    &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big )\end{aligned}
-   \label{eq:RSol1}
+   :label:eq:RSol1
 
 where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
 order :math:`n`. Because Legendre polynomials have magnitudes less than
@@ -71,8 +77,8 @@ similar approach for :math:`r < x_0` can be expressed as follows:
    \begin{aligned}
    \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
    &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
-   &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )\end{aligned}
    \label{eq:RSol2}
+   &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )\end{aligned}
 
 Similar to Eq. :eq:`eq:RSol1`, since :math:`x_0<r`, the infinite series in
 Eq. ([eq:RSol2]) is also boundary and conveges as
@@ -157,7 +163,7 @@ and
 Therefore, the electric scalar potential observed outside the sphere is
 equal to:
 
-.. math:: \psi = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+.. math:: \psi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
 
 Eq. [] can be split into two terms: the potential for a wholespace from
 Eq. [], and an anomalous potential which results from the exstence of a
@@ -170,7 +176,7 @@ Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 
 Here, we consider the electric scalar potential at :math:`P`, which
 results from the injection of current near a hemispherical depression of
-radius :math:`a`, centered at (:math:`0,0,0`). According to Telfor, so
+radius :math:`a`, centered at (:math:`0,0,0`). According to Telford, so
 long as current is being injected along the axis of symmetry shown in
 Fig. [], and :math:`|x_0|>a`, we can obtain our solution from Eq. [] by
 replacing :math:`4\pi` with :math:`2\pi`; replacement of the constant is
@@ -178,23 +184,31 @@ done because all current flows entirely through the ground. By setting
 :math:`\rho_1 = \infty`, the potential created by the injection of
 current :math:`I` at (:math:`x_0,0,0`) is:
 
-.. math:: \psi = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+.. math:: \psi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
 
 |SphericalDepression_PoleDipole|
 
-Using Eq. [], we can solve the problem in Fig. [], where a current of
-:math:`I` is being injected at :math:`(-x_0,0,0`) and a current of
-:math:`-I` is being injected at (:math:`x_0,0,0`).
+Recall that at this point, :math:`x_0` is the radial distance from the
+origin, within a spherical coordinate system relative to the axis of
+symmetry. Using Eq. [] however, we can solve the problem in Fig. [],
+where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
+and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
-.. math:: \psi = \psi_{+} + \psi_{\, -} = \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) \Big [ P_n \big ( cos \theta_1 \big ) - P_n \big ( cos \theta_2 \big ) \Big ] \Bigg ]
+.. math:: \psi (r , \theta, \phi)= \psi_{+} + \psi_{\, -} = \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
 
 where, by the cosine law:
 
-.. math:: R_1 = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta_1 \;}
+.. math:: R_1 = \sqrt{x_1^2 + r^2 - 2r x_1 cos \theta_1 \;}
 
 and
 
-.. math:: R_2 = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta_2 \;}
+.. math:: R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}
+
+It is important to note that Eq. [] is only possible if current is being
+injected along the axis of symmetry. In addition, :math:`\theta` refers
+an azimuthal angle relative the axis of symmetry, whereas
+:math:`\theta_1` and :math:`\theta_2` are strictly angles related to the
+trigonometry of the problem.
 
 |SphericalDepression_DipoleDipole|
 
