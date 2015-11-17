@@ -172,7 +172,7 @@ Questions
 Data
 ----
 
-Potential differences along a profile.
+Potential differences along a profile:
 
 .. plot::
     
