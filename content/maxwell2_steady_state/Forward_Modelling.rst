@@ -156,7 +156,8 @@ pseudosections do not represent the true geology. Note how the two pseudosection
 
 We can also visualize where current flows and where charge buildup occurs for a single pole source:
 
-.. figure:: Efield.gif
+.. raw:: html
+  :file: ./images/Isa_Current.html
 
-  Current density (top figure) and charge density (bottom figure).
+Current density (arrows) and charge density (color) for a range of source location (Powered by: SimPEG).
   
