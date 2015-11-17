@@ -95,13 +95,73 @@ Electric Field
 
 How do we get from potentials to electric field
 
+.. plot::
+    
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.          # conductivity of the wholespace
+    sig1 = 100.         # conductivity of the sphere
+    R    = 50.          # radius of the sphere
+    E0   = 1.           # inducing field strength
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+    PlotOpt = 'Total'
+
+    plot_ElectricField(XYZ,R,sig1,sig0,E0,PlotOpt)
+
 Current Density
 ---------------
+
+.. plot::
+    
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.          # conductivity of the wholespace
+    sig1 = 100.         # conductivity of the sphere
+    R    = 50.          # radius of the sphere
+    E0   = 1.           # inducing field strength
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+    PlotOpt = 'Total'
+
+    plot_Currents(XYZ,R,sig1,sig0,E0,PlotOpt)
 
 Charge Accumulation
 -------------------
 
 Where are the negative charges, where are the positive charges? for a resistive and conductive sphere
+
+.. plot::
+    
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.          # conductivity of the wholespace
+    sig1 = 100.         # conductivity of the sphere
+    R    = 50.          # radius of the sphere
+    E0   = 1.           # inducing field strength
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+    PlotOpt = 'Total'
+
+    plot_Charges(XYZ,R,sig0,sig1,E0)
 
 Questions
 ^^^^^^^^^
@@ -112,7 +172,34 @@ Questions
 Data
 ----
 
-Potential differences 
+Potential differences along a profile.
+
+.. plot::
+    
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.          # conductivity of the wholespace
+    sig1 = 100.         # conductivity of the sphere
+    R    = 50.          # radius of the sphere
+    E0   = 1.           # inducing field strength
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+    PlotOpt = 'Total'
+
+    xstart=-100.
+    ystart=-100.
+    xend=100.
+    yend=100.
+    nb_dipole=11
+    electrode_spacing=20
+
+    plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
 
 Building some Intuition for DC problem
 --------------------------------------

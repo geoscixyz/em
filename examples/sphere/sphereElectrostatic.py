@@ -138,6 +138,8 @@ def get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep):
     
     x,y,z= XYZ[:,0], XYZ[:,1], XYZ[:,2]
     
+    dx = x[1]-x[0]
+    
     r_cur=r(x,y,z)
     
     ind0 = (r_cur > R)
@@ -212,6 +214,7 @@ def MN_Potential_total(sig0,sig1,R,E0,start,end,nbmp,mn):
     return MP,EL,dVtMP,dVtMPn,dVsMP,dVsMPn
 
 def plot_Potentials(XYZ,R,sig1,sig0,E0):
+    
     Sigma    = get_Conductivity(XYZ,sig0,sig1,R)
     Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
     
@@ -519,7 +522,6 @@ def plot_Charges(XYZ,R,sig0,sig1,E0):
     rho = get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep)
     
     xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
-
     xcirc = xr[np.abs(xr) <= R]
     
     fig,ax = plt.subplots(1,2,figsize=(10,4))
@@ -559,6 +561,96 @@ def plot_Charges(XYZ,R,sig0,sig1,E0):
 
     return fig, ax
 
+def plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt):
+    
+    start = np.array([xstart,ystart])
+    end = np.array([xend,yend])
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+    Sigma    = get_Conductivity(XYZ,sig0,sig1,R)
+    Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
+    MP,EL,VtdMP,VtdMPn,VsdMP,VsdMPn = MN_Potential_total(sig0,sig1,R,E0,start,end,nb_dipole,electrode_spacing)
+    
+    Ep = np.zeros(shape=(len(Sigma),3))
+    Ep[:,0] = E0
+
+    xcirc = xr[np.abs(xr) <= R]
+
+    #fig,ax = plt.subplots(1,3,figsize=(20,5))
+    #ax=mkvc(ax)
+    
+    fig = plt.figure(figsize=(20,10))
+    ax0 = plt.subplot2grid((10,12), (0, 0),colspan=6,rowspan=6)
+    ax1 = plt.subplot2grid((10,12), (0, 6),colspan=6,rowspan=6)
+    ax2 = plt.subplot2grid((10,12), (6, 2), colspan=9,rowspan=4)
+
+
+    ax0.pcolor(xr,yr,Sigma.reshape(xr.size, yr.size))
+    cb0 = plt.colorbar(ax0.pcolor(xr,yr,Sigma.reshape(xr.size, yr.size)),ax=ax0)
+    cb0.set_label(label= 'Conductivity (S/m)',size=ftsize_label) #weight='bold')
+    cb0.ax.tick_params(labelsize=ftsize_axis)
+    ax0.streamplot(xr,yr,Ep[:,0].reshape(xr.size,yr.size),Ep[:,1].reshape(xr.size,yr.size),color='gray'
+                    ,density=0.5,linewidth=2.)
+    #ax[0].quiver(np.zeros_like(xrr)-90,yrr,E0,0,angles='xy',scale_units='xy',scale=0.05,color='gray')
+    #ax[0].plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax0.set_title('Configuration',fontsize=ftsize_title)
+    ax0.annotate('E0',(-80,80),xytext=(-80,80),fontsize=ftsize_title,color='gray',weight='bold')
+    ax0.set_xlim([xr.min(),xr.max()])
+    ax0.set_ylim([yr.min(),yr.max()])
+    ax0.set_ylabel('Y coordinate (m)',fontsize=ftsize_label)
+    ax0.set_xlabel('X coordinate (m)',fontsize=ftsize_label)
+    ax0.tick_params(labelsize=ftsize_axis)
+    ax0.set_aspect('equal')
+    
+    ax1.set_xlim([xr.min(),xr.max()])
+    ax1.set_ylim([yr.min(),yr.max()])
+    ax1.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax1.set_ylabel('Y coordinate (m)',fontsize=ftsize_label)
+    ax1.set_xlabel('X coordinate (m)',fontsize=ftsize_label)
+    ax1.tick_params(labelsize=ftsize_axis)
+    ax1.set_aspect('equal')
+    
+    ax2.set_title('Potential Differences',fontsize=ftsize_title)
+    ax2.set_ylabel('Potential difference (V)',fontsize=ftsize_label)
+    ax2.set_xlabel('Distance from start point (m)',fontsize=ftsize_label)
+    ax2.tick_params(labelsize=ftsize_axis)
+    ax2.grid()
+
+    if PlotOpt == 'Total':
+
+        ax1.pcolor(xr,yr,Vt.reshape(xr.size,yr.size))
+        cb1 = plt.colorbar(ax1.pcolor(xr,yr,Vt.reshape(xr.size, yr.size)),ax=ax1)
+        cb1.set_label(label= 'Potential (V)',size=ftsize_label) #weight='bold')
+        cb1.ax.tick_params(labelsize=ftsize_axis)
+        ax1.set_title('Total Potential',fontsize=ftsize_title)
+               
+        ax2.plot(np.sqrt((MP[0,0]-MP[:,0])**2+(MP[:,1]-MP[0,1])**2),VtdMP)
+        ax2.scatter(np.sqrt((MP[0,0]-MP[:,0])**2+(MP[:,1]-MP[0,1])**2),VtdMP)
+
+    elif PlotOpt == 'Secondary':
+               
+        ax1.pcolor(xr,yr,Vs.reshape(xr.size,yr.size))
+        ax1.set_title('Secondary Potential',fontsize=ftsize_title)
+        cb1 = plt.colorbar(ax1.pcolor(xr,yr,Vs.reshape(xr.size, yr.size)),ax=ax1)
+        cb1.set_label(label= 'Potential (V)',size=ftsize_label) #weight='bold')
+        cb1.ax.tick_params(labelsize=ftsize_axis)
+
+        ax2.plot(np.sqrt((MP[0,0]-MP[:,0])**2+(MP[:,1]-MP[0,1])**2),VsdMP)
+        ax2.scatter(np.sqrt((MP[0,0]-MP[:,0])**2+(MP[:,1]-MP[0,1])**2),VsdMP)
+
+    else:
+        print('What dont you get? Total or Secondary?')
+    
+    ax1.plot(MP[:,0],MP[:,1],color='gray')           
+    Dip_Midpoint = ax1.scatter(MP[:,0],MP[:,1],color='black')
+    Electrodes = ax1.scatter(EL[:,0],EL[:,1],color='red')
+    ax1.legend([Dip_Midpoint,Electrodes], ["Dipoles Midpoints", "Electrodes"],scatterpoints=1)
+    
+    plt.tight_layout(True)
+    
+    return fig
+
 if __name__ == '__main__':
     sig0 = 10.          # conductivity of the wholespace
     sig1 = 100.         # conductivity of the sphere
@@ -582,6 +674,6 @@ if __name__ == '__main__':
     elif example is 'Currents':
         fig, ax = plot_Currents(XYZ, R, sig1, sig0, E0, PlotOpt)
     elif example is 'Charges':
-        fig, ax = plot_Charges(XYZ, R, sig1, sig0, E0)
-
+        fig, ax = plot_Charges(XYZ,R,sig0,sig1,E0)
+   
     plt.show()
