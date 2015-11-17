@@ -34,7 +34,11 @@ outwards from the source, with magnitude:
 
 .. math:: J = \frac{I}{4 \pi R^2}
 
-|SphericalDepression_Wholespace|
+.. figure:: ./figures/SphericalDepression_Wholespace.png
+   :align: center
+   :name: SphericalDepression_Wholespace
+
+   Diagram showing the setup for computing the potential due to a wholespace.
 
 where :math:`R` is the distance from the source to a point of measure
 :math:`P`, and :math:`4\pi R^2` is the area of a ball centered at the
@@ -70,7 +74,6 @@ unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
 similar approach for :math:`r < x_0` can be expressed as follows:
 
 .. math::
-
    \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
    &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
    &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
@@ -83,16 +86,14 @@ Eq. :eq:`RSol2` is also boundary and conveges as
 expressed as an infinite sum of spherical harmonic modes, where:
 
 .. math::
-
    \psi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{r^n \, P_n \big (cos \theta \big )}{x_0^{n+1}} \; \; \; \textrm{for} \; \; \; r<x_0
-   \label{eq:PsiWholespace1}
+   :label: PsiWholespace1
 
 and
 
 .. math::
-
    \psi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{x_0^n \, P_n \big (cos \theta \big )}{r^{n+1}} \; \; \; \textrm{for} \; \; \; x_0<r
-   \label{eq:PsiWholespace2}
+   :label: PsiWholespace2
 
 Unfortunately, this method cannot be used to find a bounded and
 convergent series for :math:`r=x_0`.
@@ -110,44 +111,40 @@ field is divergence free. As a result, :math:`\psi` can be expressed in
 terms of the following 2d Poisson’s equation:
 
 .. math::
-
    \nabla^2 \psi = \frac{1}{r} \frac{\partial }{\partial r} \big ( r^2 \big ) \frac{\partial \psi}{\partial r} + \frac{1}{r^2 sin \theta} \frac{\partial}{\partial \theta}
    \Bigg ( sin \theta \frac{\partial \psi}{\partial \theta} \Bigg ) = 0
-   \label{eq:PoissonEq2d}
+   :label: PoissonEq2d
 
 The boundary conditions for our problem state that :math:`\psi`, and
 current flow normal to the sphere’s surface, are continuous at
 :math:`r=a`. Therefore:
 
 .. math::
-
    \psi = \psi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \psi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \psi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a
-   \label{eq:BoundaryConditions}
+   :label: BoundaryConditions
 
 For a source which is outside the sphere (:math:`a < x_0`), the desired
 solution for the potential is:
 
 .. math::
-
    \psi = \frac{I \rho}{4\pi R} + \sum_{n=0}^\infty A_n \frac{1}{r^{n+1}} P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r>a
-   \label{eq:PsiSolAn}
+   :label: PsiSolAn
 
 and
 
 .. math::
-
    \psi_1 = \sum_{n=0}^\infty B_n r^n P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r<a
-   \label{eq:Psi1SolBn}
+   :label: Psi1SolBn
 
 This makes sense considering :math:`1/r` terms within the sphere would
 be infinite as :math:`r \rightarrow 0`, and :math:`r` terms outside the
 sphere would be infinite as :math:`r \rightarrow \infty`. Because
 Legendre polynomials can be used to form an orthogonal set of basis
 functions, coefficients :math:`A_n` and :math:`B_n` may be determined
-independently for each :math:`n`. Using locations :math:`r<x_0`, Eq.
-([eq:PsiWholespace1]) can be substituted into Eq. ([eq:PsiSolAn]). This
-can be use to solve Eq. ([eq:PoissonEq2d]), using boundary conditions
-from ([eq:BoundaryConditions]) for each harmonic mode :math:`n`. The
+independently for each :math:`n`. Using locations :math:`r<x_0`, Eq. :eq:`PsiWholespace1` 
+can be substituted into Eq. :eq:`PsiSolAn`. This
+can be use to solve Eq. :eq:`PoissonEq2d`, using boundary conditions
+from :eq:`BoundaryConditions` for each harmonic mode :math:`n`. The
 resulting coefficients are given by:
 
 .. math:: A_n = \frac{I \rho}{4\pi} \Bigg ( \frac{a^{2n+1}}{x_0^{n+1}} \Bigg ) \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg )
@@ -159,13 +156,19 @@ and
 Therefore, the electric scalar potential observed outside the sphere is
 equal to:
 
-.. math:: \psi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+.. math:: 
+   \psi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+   :label: Potential_Sphere_WholeSpace
 
-Eq. [] can be split into two terms: the potential for a wholespace from
-Eq. [], and an anomalous potential which results from the exstence of a
+Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential for a wholespace from
+Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exstence of a
 conducting sphere.
 
-|SphericalDepression_Sphere|
+.. figure:: ./figures/SphericalDepression_Sphere.png
+   :align: center
+   :name: SphericalDepression_Sphere
+
+   Diagram showing the setup for computing the potential due to a conductive sphere in a wholespace.
 
 Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 ===============================================================================
@@ -173,24 +176,33 @@ Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 Here, we consider the electric scalar potential at :math:`P`, which
 results from the injection of current near a hemispherical depression of
 radius :math:`a`, centered at (:math:`0,0,0`). According to Telford, so
-long as current is being injected along the axis of symmetry shown in
-Fig. [], and :math:`|x_0|>a`, we can obtain our solution from Eq. [] by
+long as current is being injected along the axis of symmetry shown in :numref:`SphericalDepression_PoleDipole`, 
+and :math:`|x_0|>a`, we can obtain our solution from Eq. :eq:`Potential_Sphere_Pole_HemisphereDepression_Halfspace` by
 replacing :math:`4\pi` with :math:`2\pi`; replacement of the constant is
 done because all current flows entirely through the ground. By setting
 :math:`\rho_1 = \infty`, the potential created by the injection of
 current :math:`I` at (:math:`x_0,0,0`) is:
 
-.. math:: \psi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+.. math:: 
+   \psi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+   :label: Potential_Sphere_Pole_HemisphereDepression_Halfspace
 
-|SphericalDepression_PoleDipole|
+.. figure:: ./figures/SphericalDepression_PoleDipole.png
+   :align: center
+   :name: SphericalDepression_PoleDipole
+
+   Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a pole source.
 
 Recall that at this point, :math:`x_0` is the radial distance from the
 origin, within a spherical coordinate system relative to the axis of
-symmetry. Using Eq. [] however, we can solve the problem in Fig. [],
+symmetry. Using Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+however, we can solve the problem in :numref:`SphericalDepression_DipoleDipole`,
 where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
 and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
-.. math:: \psi (r , \theta, \phi)= \psi_{+} + \psi_{\, -} = \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+.. math:: 
+   \psi (r , \theta, \phi)= \psi_{+} + \psi_{\, -} = \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+   :label: Potential_Sphere_Dipole_HemisphereDepression_Halfspace
 
 where, by the cosine law:
 
@@ -200,13 +212,18 @@ and
 
 .. math:: R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}
 
-It is important to note that Eq. [] is only possible if current is being
+It is important to note that Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+is only possible if current is being
 injected along the axis of symmetry. In addition, :math:`\theta` refers
 an azimuthal angle relative the axis of symmetry, whereas
 :math:`\theta_1` and :math:`\theta_2` are strictly angles related to the
 trigonometry of the problem.
 
-|SphericalDepression_DipoleDipole|
+.. figure:: ./figures/SphericalDepression_DipoleDipole.png
+   :align: center
+   :name: SphericalDepression_DipoleDipole
+
+   Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.
 
 .. |SphericalDepression_Wholespace| image:: ./figures/SphericalDepression_Wholespace.png
 .. |SphericalDepression_Sphere| image:: ./figures/SphericalDepression_Sphere.png
