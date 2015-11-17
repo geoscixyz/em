@@ -1,0 +1,170 @@
+\documentclass[11pt,letterpaper,leqno]{amsart}
+\usepackage[latin1]{inputenc}  % Unixin merkist?
+\usepackage[T1]{fontenc}       % kirjaimet, joissa aksentteja (skandit)
+
+
+\usepackage{amsfonts}         
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{ae,aecompl,amsbsy}
+\usepackage{epsf}
+\usepackage{graphics}
+\usepackage{ucs}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsaddr}
+%\usepackage[foot]{amsaddr}
+
+
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\usepackage{subcaption}
+
+%bibligraphy
+\usepackage[comma,sort]{natbib}
+\usepackage{hyperref} 
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\divergence}{\operatorname{div}}
+\DeclareMathOperator*\argmin{argmin}
+
+\newcommand{\TODO}[1]{\textcolor{red}{{\sc Todo:} #1}}
+
+
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{assumption}[equation]{Assumption}
+\usepackage{lineno}
+
+
+\numberwithin{equation}{section}
+\graphicspath{ {figures/} }
+
+\title{Analytical results and physical understanding of demo: Uniform Electric field illuminating a sphere in a uniform earth}
+%\author{Team C}
+
+                               
+\begin{document}
+
+%\linenumbers
+\maketitle
+\thispagestyle{empty}
+
+\bibliographystyle{plainnat}
+
+
+\normalsize
+
+\vspace{0.4cm}
+
+
+Let consider a resistive uniform wholespace enclosing a sphere with conductivity $\sigma_1$ and radius $R$.  The background has conductivity $\sigma_0$. We have uniform, unidirectional, static electric field $E_0$ going through this space.
+
+Related Maxwell's equations: 
+\begin{equation}
+\begin{aligned}
+  \nabla \times E & = 0 \\
+  \nabla\times H & = J \\
+  J  =&  \sigma E.
+\end{aligned}
+\end{equation}
+
+$E_0$ induces charge in the sphere which induces  new $E_s$  ?
+\TODO{What's really happening? }
+
+\section{Potentials}
+
+Total potential outside the sphere can be expressed as   
+\begin{equation}
+V_t  = -E_0x (1-\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0} \frac{R^3}{r^3})
+\end{equation}
+and inside the sphere
+\begin{equation}
+ V_t= -E_0 x\frac{3 \sigma_0}{\sigma_1+2\sigma_0}.
+ \end{equation}
+The primary potential is related to the uniform electric field and the secondary is 
+
+\section{Electric Fields}
+Since the first Maxwell's equation the electric field equals to the negative gradient of the potential:
+\begin{equation}\label{eq:Epotential}
+E = -\nabla V
+\end{equation}
+
+\TODO{Why electric field only is in only x direction inside the sphere? Why there is discontinuity?}
+
+The general solution of Laplace's equation in spherical coordinate is
+\begin{equation}\label{eq:gsln}
+V = \sum\limits_{n=0}^\infty\sum\limits_{m=0}^n (A_{nm}r^n + \frac{B_{nm}}{r^{n+1}})P_n^m(\cos\theta)e^{im\phi}
+\end{equation}  
+Assuming the primary uniform electric field $E_0$ is restricted to x direction, the primary potential by integral of eq.\eqref{eq:Epotential} is
+\begin{equation}\label{eq:primary}
+V_p = -E_0 x = -E_0 r\cos\theta = -E_0 r P_1(\cos\theta)
+\end{equation}
+Comparing eq.\eqref{eq:gsln}\eqref{eq:primary} and considering boundary conditions, we observe that there must be $m=0$ and $n=1$ in the secondary potential expression. So the secondary potentials reduces to
+\begin{equation}
+V_s = [A_1r+Br^{-2}]P_1(\cos\theta)
+\end{equation}
+Considering the boundary conditions $V|_{r=\infty}=0$ and $V|_{r=0}=0$, the secondary potential outside the sphere ($r>R$) is
+\begin{equation}
+V_1^s = B_1r^{-2}P_1(\cos\theta)
+\end{equation}
+and inside the sphere ($r<R$) is
+\begin{equation}
+V_2^s = A_1rP_1(\cos\theta)
+\end{equation}
+So the total potential according to superposition theorem is then
+\begin{align}
+V_1 &= [-E_0r + B_1r^{-2}]P_1(\cos\theta) \\
+V_2 &= A_1rP_1(\cos\theta)
+\end{align}
+On the surface of the sphere, consider that both the normal current density and the potential must be continuous across the surface of the sphere, we have
+\begin{align}
+-\sigma_1A_1 &= 2\sigma_0B_1R^{-3} + \sigma_0E_0 \\
+A_1R &= -E_0R + B_1R^{-2}
+\end{align}
+Solving above equations gives us the total potential
+\begin{align}
+V_1 &= -E_0r\cos\theta(1 - \frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^3}), \quad r > R \\
+V_2 &= -\frac{3\sigma_0}{\sigma_1+2\sigma_0}E_0r\cos\theta \quad r\leq R
+\end{align}
+Note that $x = r\cos\theta$. According to eq.\eqref{eq:Epotential}, the electric field has only x component inside the sphere.
+
+
+
+
+
+
+\section{Current Densities}
+For  current densities and electric field there is the following relation:  
+\begin{equation}
+J = \sigma E.
+\end{equation}
+The total current density is (always?)  continuous, but as can be seen from the pictures of our demo, the primary and the secondary current densities can be highly discontinuous.
+
+\section{Charge Accumulation}
+
+Gauss's law of Maxwell's equation says that 
+\begin{equation}
+\nabla\cdot E = \frac{\rho}{\epsilon_0},
+\end{equation}
+where $\rho$ is the total electric charge density. Charge is build on the surface of the sphere.
+
+% and where we have 
+%\begin{equation}
+%\rho = E_0 \frac{\epsilon_0 3 x}{R^3} \frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}.
+%\end{equation}
+
+
+%See S. Ward and G. Hohmann for more details.
+
+See EMGroupArchiveJuly2012.pdf and Ward and Hohmann for more details.
+\bibliography{refs}
+\end{document}

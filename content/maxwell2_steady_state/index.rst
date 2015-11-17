@@ -8,4 +8,4 @@ Contents:
 .. toctree::
     :maxdepth: 1
 
-    SphericalDepression.rst 
+    electrostatic_sphere
