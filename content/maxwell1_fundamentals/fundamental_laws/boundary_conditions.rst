@@ -34,15 +34,26 @@ where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` de
 
 In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in Figure 1. Our derivations follow those presented by Griffiths on pages xx-yy of [1]_.
 
-.. figure:: images/BC_1.png
-	:align: center
+.. figure:: images/twoLayerMedium.png
+    :align: center
+    :name: twoLayerMedium
 
-Fig 1.  Two layer medium. 
+    Two layered medium.
+
 
 Normal Component of Electric Displacement
 -----------------------------------------
 
- Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 2. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
+.. figure:: images/pillbox.png
+    :align: right
+    :scale: 70% 
+    :name: pillbox
+
+    Gaussian pillbox. 
+
+
+Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 2. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
+
 
 .. math::
   \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{1n} \mathrm{d}r\mathrm{d}\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{2n} \mathrm{d}r\mathrm{d}\theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
@@ -77,6 +88,13 @@ The interface condition on the normal component of the magnetic flux, denoted as
   
 Tangential Component of the Electric Field
 ------------------------------------------
+
+.. figure:: images/rectangle.png
+    :align: right
+    :scale: 70% 
+    :name: rectangle
+
+    Gaussian rectangle. 
 
 The boundary condition on the tangential component of the electric field, denoted as :math:`\mathbf{e}_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form. Consider Faraday's law applied to the rectangle of height :math:`h` and width :math:`l` shown in Figure 1, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. Then, we take the limit as :math:`h` approaches 0 while holding :math:`l` constant, which means the contour integral in :ref:`Faraday's law<faraday>` becomes
 
