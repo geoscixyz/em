@@ -56,9 +56,24 @@ The problem setup is shown in the figure below, where we have
 Governing Equations
 -------------------
 
-Here we state the equations needed to derive everything, Gauss' law, boundary conditions, (appropriate links)
+The governing equation for DC resistivity problem can be obtained from Maxwell's equations (appropriate links) if 
+we consider a zero-frequency case
 
+.. math::
+	\nabla \times \mathbf{e} = 0
+	:label: Faraday_DC
+	
+.. math::
+	\nabla \times \mathbf{h} = \sigma \cdot \mathbf{e}
+	:label: Ampere_DC
 
+According to :eq:`Faraday_DC`, We can define a scalar potential so that the primary electric field can be described as
+the negative gradient of the primary potential
+
+.. math::
+	\mathbf{E}_p = -\nabla V_p
+	:label: DC_Potential
+	
 A couple things we want to highlight:
 
 - behavior for a resistive v. conductive sphere
@@ -66,6 +81,23 @@ A couple things we want to highlight:
 
 Potentials 
 ----------
+Assuming a x-directed uniform electric field and zero potential at infinity, by integration to :eq:`DC_Potential`, we obtain
+
+.. math::
+	V_p = - E_0 x = -E_0 r \cos\theta
+	:label: Primary_Potential
+
+The total potential outside the sphere \\(r > R\\) is
+
+.. math::
+	V_1 = -E_0 (1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0}) r \cos\theta
+	:label: totalP_outside
+
+and inside the sphere \\(r < R\\)
+
+.. math::
+	V_2 = -E_0 \frac{3\sigma_0}{\sigma_1+2\sigma_0}r \cos\theta
+	:label: totalP_inside
 
 Solution, discussion, explain some intuition, questions. 
 
@@ -92,7 +124,18 @@ Solution, discussion, explain some intuition, questions.
 
 Electric Field
 --------------
+By taking the gradient of potentials, we can obtain electric fields outside the sphere \\(r>R\\)
 
+.. math::
+	E_1 = E_0\hat{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}[(2x^2 - y^2 - z^2)\hat{x} + (3xy)\hat{y} + (3xz)\hat{z}]
+	:label: eField_outside
+	
+and inside the sphere \\(r<R\\) is
+
+.. math::
+	E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\hat{x}
+	:label: eField_inside
+	
 How do we get from potentials to electric field
 
 .. plot::
