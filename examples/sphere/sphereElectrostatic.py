@@ -651,6 +651,156 @@ def plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipo
     
     return fig
 
+def inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt):
+    
+    start = np.array([xstart,ystart])
+    end = np.array([xend,yend])
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+    Sigma0    = get_Conductivity(XYZ,sig0,sig1,R0)
+    Sigma1    =get_Conductivity(XYZ,sig0,sig2,R1)
+    Vt0,Vp0,Vs0 = get_Potential(XYZ,sig0,sig1,R0,E0)
+    Vt1,Vp1,Vs1 = get_Potential(XYZ,sig0,sig2,R1,E0)
+    MP0,EL0,VtdMP0,VtdMPn0,VsdMP0,VsdMPn0 = MN_Potential_total(sig0,sig1,R0,E0,start,end,nb_dipole,electrode_spacing)
+    MP1,EL1,VtdMP1,VtdMPn1,VsdMP1,VsdMPn1 = MN_Potential_total(sig0,sig2,R1,E0,start,end,nb_dipole,electrode_spacing)
+    
+    Ep = np.zeros(shape=(len(Sigma0),3))
+    Ep[:,0] = E0
+
+    xcirc0 = xr[np.abs(xr) <= R0]
+    xcirc1 = xr[np.abs(xr) <= R1]
+
+    #fig,ax = plt.subplots(1,3,figsize=(20,5))
+    #ax=mkvc(ax)
+    
+    fig = plt.figure(figsize=(20,20))
+    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6)
+    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6)
+    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4)
+    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6)
+    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6)
+
+
+    ax0.pcolor(xr,yr,Sigma0.reshape(xr.size, yr.size))
+    cb0=plt.colorbar(ax0.pcolor(xr,yr,Sigma0.reshape(xr.size, yr.size)),ax=ax0)
+    cb0.set_clim(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2))
+    cb0.set_label(label= 'Conductivity ($S/m$)',size=ftsize_label) #weight='bold')
+    cb0.ax.tick_params(labelsize=ftsize_axis)
+    ax0.streamplot(xr,yr,Ep[:,0].reshape(xr.size,yr.size),Ep[:,1].reshape(xr.size,yr.size),color='gray'
+                    ,density=0.5,linewidth=2.)
+    ax0.plot(xcirc0,np.sqrt(R0**2-xcirc0**2),'--k',xcirc0,-np.sqrt(R0**2-xcirc0**2),'--k')
+    ax0.set_title('Configuration 0',fontsize=ftsize_title)
+    ax0.annotate('E0',(-80,80),xytext=(-80,80),fontsize=ftsize_title,color='gray',weight='bold')
+    ax0.set_xlim([xr.min(),xr.max()])
+    ax0.set_ylim([yr.min(),yr.max()])
+    ax0.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax0.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax0.tick_params(labelsize=ftsize_axis)
+    ax0.set_aspect('equal')
+    
+    ax1.pcolor(xr,yr,Sigma1.reshape(xr.size, yr.size))
+    cb1 = plt.colorbar(ax1.pcolor(xr,yr,Sigma1.reshape(xr.size, yr.size)),ax=ax1)
+    cb1.set_clim(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2))
+    cb1.set_label(label= 'Conductivity ($S/m$)',size=ftsize_label) #weight='bold')
+    cb1.ax.tick_params(labelsize=ftsize_axis)
+    ax1.streamplot(xr,yr,Ep[:,0].reshape(xr.size,yr.size),Ep[:,1].reshape(xr.size,yr.size),color='gray'
+                    ,density=0.5,linewidth=2.)
+    ax1.plot(xcirc1,np.sqrt(R1**2-xcirc1**2),'--k',xcirc1,-np.sqrt(R1**2-xcirc1**2),'--k')
+    ax1.set_title('Configuration 1',fontsize=ftsize_title)
+    ax1.annotate('E0',(-80,80),xytext=(-80,80),fontsize=ftsize_title,color='gray',weight='bold')
+    ax1.set_xlim([xr.min(),xr.max()])
+    ax1.set_ylim([yr.min(),yr.max()])
+    ax1.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax1.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax1.tick_params(labelsize=ftsize_axis)
+    ax1.set_aspect('equal')
+    
+    ax3.set_xlim([xr.min(),xr.max()])
+    ax3.set_ylim([yr.min(),yr.max()])
+    ax3.plot(xcirc0,np.sqrt(R0**2-xcirc0**2),'--k',xcirc0,-np.sqrt(R0**2-xcirc0**2),'--k')
+    ax3.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax3.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax3.tick_params(labelsize=ftsize_axis)
+    ax3.set_aspect('equal')
+    
+    ax4.set_xlim([xr.min(),xr.max()])
+    ax4.set_ylim([yr.min(),yr.max()])
+    ax4.plot(xcirc1,np.sqrt(R1**2-xcirc1**2),'--k',xcirc1,-np.sqrt(R1**2-xcirc1**2),'--k')
+    ax4.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax4.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax4.tick_params(labelsize=ftsize_axis)
+    ax4.set_aspect('equal')
+    
+    ax2.set_title('Potential Differences',fontsize=ftsize_title)
+    ax2.set_ylabel('Potential difference ($V$)',fontsize=ftsize_label)
+    ax2.set_xlabel('Distance from start point ($m$)',fontsize=ftsize_label)
+    ax2.tick_params(labelsize=ftsize_axis)
+    ax2.grid()
+
+    if PlotOpt == 'Total':
+
+        ax3.pcolor(xr,yr,Vt0.reshape(xr.size,yr.size))
+        cb3 = plt.colorbar(ax3.pcolor(xr,yr,Vt0.reshape(xr.size, yr.size)),ax=ax3)
+        cb3.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb3.ax.tick_params(labelsize=ftsize_axis)
+        ax3.set_title('Total Potential',fontsize=ftsize_title)
+               
+        gphy0 = ax2.plot(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VtdMP0
+                         ,marker='o',color='blue',linewidth=3.,label ='Left Model Response' )
+        #ax2.scatter(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VtdMP0,color='blue')
+
+        ax4.pcolor(xr,yr,Vt1.reshape(xr.size,yr.size))
+        cb4 = plt.colorbar(ax4.pcolor(xr,yr,Vt1.reshape(xr.size, yr.size)),ax=ax4)
+        cb4.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb4.ax.tick_params(labelsize=ftsize_axis)
+        ax4.set_title('Total Potential',fontsize=ftsize_title)
+               
+        gphy1 = ax2.plot(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VtdMP1
+                ,marker='o',color='red',linewidth=2.,label ='Right Model Response' )
+        #ax2.scatter(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VtdMP1,color='red',)
+        ax2.legend(('Left Model Response','Right Model Response'),loc=4)
+
+    elif PlotOpt == 'Secondary':
+               
+        ax3.pcolor(xr,yr,Vs0.reshape(xr.size,yr.size))
+        ax3.set_title('Secondary Potential',fontsize=ftsize_title)
+        cb3 = plt.colorbar(ax3.pcolor(xr,yr,Vs0.reshape(xr.size, yr.size)),ax=ax3)
+        cb3.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb3.ax.tick_params(labelsize=ftsize_axis)
+
+        gphy0 = ax2.plot(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VsdMP0,color='blue'
+                ,marker='o',linewidth=3.,label ='Left Model Response' )
+        #ax2.scatter(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VsdMP0,color='blue')
+        
+        ax4.pcolor(xr,yr,Vs1.reshape(xr.size,yr.size))
+        cb4 = plt.colorbar(ax4.pcolor(xr,yr,Vs1.reshape(xr.size, yr.size)),ax=ax4)
+        cb4.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb4.ax.tick_params(labelsize=ftsize_axis)
+        ax4.set_title('Total Potential',fontsize=ftsize_title)
+        
+        gphy1 = ax2.plot(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VsdMP1
+                 ,marker='o',color='red',linewidth=2.,label ='Right Model Response' )
+        #ax2.scatter(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VsdMP1,color='red')
+        ax2.legend(('Left Model Response','Right Model Response'),loc=4 )#,["Left Model Response","Right Model Response"])#,scatterpoints=2)
+
+    else:
+        print('What dont you get? Total or Secondary?')
+    
+    ax3.plot(MP0[:,0],MP0[:,1],color='gray')           
+    Dip_Midpoint0 = ax3.scatter(MP0[:,0],MP0[:,1],color='black')
+    Electrodes0 = ax3.scatter(EL0[:,0],EL0[:,1],color='red')
+    ax3.legend([Dip_Midpoint0,Electrodes0], ["Dipole Midpoint", "Electrodes"],scatterpoints=1)
+    
+    ax4.plot(MP1[:,0],MP1[:,1],color='gray')           
+    Dip_Midpoint1 = ax4.scatter(MP1[:,0],MP1[:,1],color='black')
+    Electrodes1 = ax4.scatter(EL1[:,0],EL1[:,1],color='red')
+    ax4.legend([Dip_Midpoint1,Electrodes1], ["Dipole Midpoint", "Electrodes"],scatterpoints=1)
+    
+    plt.tight_layout(True)
+    
+    return fig
+
 if __name__ == '__main__':
     sig0 = 10.          # conductivity of the wholespace
     sig1 = 100.         # conductivity of the sphere

@@ -215,7 +215,13 @@ Questions
 Data
 ----
 
-Potential differences along a profile:
+During a DC survey, we measure the difference of potentials between two electrodes,generally along a profile.
+
+Therefore, as it is displayed on the figure below, we do not see the background potential as a linear function but as a constant, whose value will depend of the orientation of the survey line (as long as the spacing between the electrodes is constant).
+
+We also notice that, as for the background, the differences measured inside the sphere are equal to a constant.
+
+For a conductive sphere, the potential differences measured in the area of influence of the sphere are smaller. This can be anticipated using Ohm's law. This is the reverse for a resistive sphere.
 
 .. plot::
     
@@ -246,5 +252,37 @@ Potential differences along a profile:
 
 Building some Intuition for DC problem
 --------------------------------------
+
+In real life, we do not know the underground configuration. We only see the data and we are trying to model the underground based from them. There are several set of parameters that can fit perfectly the data. Even in the simple case presented here, where we know it is a sphere, and whose response can be calculated analytically, we can find several configuration that can produce the same data along the same profile.
+
+Here is an example: 
+
+.. plot::
+
+    import matplotlib.pyplot as plt
+    from examples.sphere import *
+
+    sig0 = 10.         
+    sig1 = 100.         
+    sig2 = 13.10344828
+    R0    = 10.          
+    R1 = 20.
+    E0   = 1.           
+    n = 100             
+    xr = np.linspace(-100, 100, n) 
+    yr = xr.copy()      
+    zr = np.r_[0]          
+    XYZ = ndgrid(xr,yr,zr)
+    xstart = -100.
+    ystart = 50.
+    xend = 100.
+    yend = 50.
+    nb_dipole = 11
+    electrode_spacing = 20.
+    PlotOpt = 'Total'
+    
+    inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+
+
 
 .. [1] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.
