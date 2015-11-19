@@ -167,7 +167,7 @@ Current Density
 
 According to Ohm’s law there is a linear correlation between the current density and the electric field at that location:  \\(\\mathbf{J} = \\sigma \\mathbf{E}\\). 
 This can be applied when computing both the total and the primary current densities, but not to the secondary. 
-The secondary current density needs to be thought as a difference between two other densities.   
+The secondary current density is defined as a difference between two other current densities.   
 
 
 .. plot::
