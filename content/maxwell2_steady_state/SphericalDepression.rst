@@ -19,7 +19,7 @@ determined by solving a boundary value problem for each spherical harmonic.
 
 3. By setting the resistivity of the sphere to infinity, and by exploiting the
 symmetry of the previous problem, the solution for a 
-hemispherical conductive body within a halfspace is presented. 
+hemispherical depression within a halfspace is presented. 
 
 
 Electric Potential from a Current Source within a Wholespace
@@ -200,7 +200,10 @@ where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
 and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
 .. math:: 
-   \psi (r , \theta, \phi)= \psi_{+} + \psi_{\, -} = \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+   \begin{split}
+   \psi (r , \theta, \phi) &= \psi_{+} + \psi_{\, -}\\
+   &= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+   \end{split}
    :label: Potential_Sphere_Dipole_HemisphereDepression_Halfspace
 
 where, by the cosine law:
