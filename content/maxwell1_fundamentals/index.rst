@@ -68,12 +68,6 @@ Fundamental Laws
     fundamental_laws/index
 
 
-.. toctree::
-    :maxdepth: 1
-    
-    formative_laws_and_people/index
-
-
 For each law:
 (Use the notation in Ward and Hohmann, except use lower case for integral equations. They were inconsistent in their Appendix. Also, check their use of partial and total derivatives with time. Rely on Fleisch's book (or other EM book) to delineate the subtle but important aspect of this.) 
 
