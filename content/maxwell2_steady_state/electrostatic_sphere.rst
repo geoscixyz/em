@@ -124,6 +124,10 @@ Solution, discussion, explain some intuition, questions.
 
 Electric Field
 --------------
+
+The secondary electric field builds up to oppose the primary field. 
+It’s strongly discontinuous making the total electric field discontinuous.
+
 By taking the gradient of potentials, we can obtain electric fields outside the sphere \\(r>R\\)
 
 .. math::
@@ -160,6 +164,11 @@ How do we get from potentials to electric field
 
 Current Density
 ---------------
+
+According to Ohm’s law there is a linear correlation between the current density and the electric field at that location:  \\(\\mathbf{J} = \\sigma \\mathbf{E}\\). 
+This can be applied when computing both the total and the primary current densities, but not to the secondary. 
+The secondary current density needs to be thought as a difference between two other densities.   
+
 
 .. plot::
     
