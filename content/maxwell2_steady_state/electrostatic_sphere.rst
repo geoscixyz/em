@@ -167,7 +167,9 @@ Current Density
 
 According to Ohm’s law there is a linear correlation between the current density and the electric field at that location:  \\(\\mathbf{J} = \\sigma \\mathbf{E}\\). 
 This can be applied when computing both the total and the primary current densities, but not to the secondary. 
-The secondary current density is defined as a difference between two other current densities.   
+The secondary current density is defined as a difference between two other current densities. 
+When current flows through conductivity discontinuities, only the normal component of current density is continuous
+ across the interface according to (boundary condition, links).  
 
 
 .. plot::
@@ -193,7 +195,38 @@ The secondary current density is defined as a difference between two other curre
 Charge Accumulation
 -------------------
 
-Where are the negative charges, where are the positive charges? for a resistive and conductive sphere
+Conductivity discontinuities will lead to charge buildup at the boundaries of these discontinuities. 
+According to :ref:`gauss_electric`, the electric charge accumulated on the surface of the sphere
+can be quantified by
+
+.. math::
+	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}V = \int_V \frac{\rho}{\varepsilon_0} \mathrm{d}V = Q
+	:label:
+
+Based on Gauss's theorem, surface charge density at the interface is given by 
+
+.. math::
+	\mathbf{e}_1 \cdot \mathbf{n} - \mathbf{e}_2 \cdot \mathbf{n} = \frac{\rho_s}{\varepsilon_0}
+	:label:
+
+According to :eq:`eField_outside` :eq:`eField_inside`, the normal component of electric fields at the spherical 
+surface are
+
+.. math::
+	\mathbf{e}_{1n} = \mathbf{E_0}\cos\theta + 2\mathbf{E_0}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0}\cos\theta \; (r > R)
+	:label:
+
+.. math::
+	\mathbf{e}_{2n} = \mathbf{E_0} \frac{3\sigma_0}{\sigma_1 + 2\sigma_0} \cos\theta \; (r < R)
+	:label:
+
+So the charge quantities accumulated at the surface is
+
+.. math::
+	\oint_S \rho_s \mathrm{d}a = \varepsilon_0 \oint_S (\mathbf{e}_{1n} - \mathbf{e}_{2n}) = \varepsilon_0 \oint_S 3\mathbf{E_0} R^2 \frac{\sigma_1-\sigma_0}{\sigma_1 + 2\sigma_0}\cos\theta \sin\theta \mathrm{d}\phi\mathrm{d}\theta
+	:label:
+
+The figure below shows surface charge density at the surface of sphere.
 
 .. plot::
     
