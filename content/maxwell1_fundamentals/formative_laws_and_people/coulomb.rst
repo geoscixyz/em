@@ -1,4 +1,0 @@
-.. _coulomb:
-
-Coulomb
-=======
