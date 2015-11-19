@@ -78,7 +78,7 @@ primary electric field is the gradient of a potential. For convenience, we defin
 To define the potential at a point \\(p\\) from an electric field requires an integration
 
 .. math::
-    V = -\int_{ref}^p \mathbf{e} \mathbf{dl}
+    V = -\int_{ref}^p \mathbf{e} \cdot \mathbf{dl}
     :label: V_from_e
 
 The choice of reference point \\(ref\\) is arbitrary, but it is often
