@@ -1,4 +1,4 @@
-.. _conservation_charge:
+.. _ppl_conservation_charge:
 
 Conservation of charge
 ======================
