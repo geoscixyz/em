@@ -7,21 +7,20 @@ Introduction
 
 For this derivation, we will examine the effects of negative
 topography by considering a hemispherical depression in the Earth’s
-surface. This will be done in 4 steps:
+surface. This will be done in 3 steps:
 
-1. We will begin by presenting a solution for the electric scalar
-potential, within a wholespace defined of resistivity :math:`\rho`, due
-to a point current source. This solution will then be re-expressed in
-the coordinate system which characterizes our final problem.
+1. First, a solution for the electric scalar potential, due to a point current source
+within a wholespace of resistivity :math:`\rho`, is solved. This solution is then
+re-expressed within a polar coordinate system and decomposed into a sum of spherical 
+harmonic modes.
 
 2. The solution for a conducting sphere within a wholespace is then
-presented.
+determined by solving a boundary value problem for each spherical harmonic.
 
-3. By exploiting the symmetry of the previous solution, we will obtain
-the solution for a hemispherical conductive body within a halfspace. 
+3. By setting the resistivity of the sphere to infinity, and by exploiting the
+symmetry of the previous problem, the solution for a 
+hemispherical conductive body within a halfspace is presented. 
 
-4. Our final solution is then obtained by setting the resistivity of the
-hemispherical depression to infinity.
 
 Electric Potential from a Current Source within a Wholespace
 ============================================================
