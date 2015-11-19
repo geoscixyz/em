@@ -7,10 +7,10 @@ A sphere in a whole-space provides a simple geometry to examine a variety of
 questions and can provide powerful physical insights into a variety of
 problems. Here we examine the case of a conducting sphere in a uniform
 electrostatic field. This scenario gives us a setting to examine aspects of
-the DC resistivity experiment, including the behavior of electric fields,
-current density and the build up of charges at interfaces. This work follows
-the derivation in [1]_ and is supported by apps developed in a `Jupyter
-Notebook`_.
+the DC resistivity experiment, including the behavior of electric potentials,
+electric fields, current density and the build up of charges at interfaces.
+This work follows the derivation in [1]_ and is supported by apps developed in
+a `Jupyter Notebook`_.
 
 .. _Jupyter Notebook: https://github.com/ubcgif/em/blob/AmpereMaxwell/examples/sphere/ElectrostaticSphere.ipynb
 
@@ -56,32 +56,43 @@ The problem setup is shown in the figure below, where we have
 Governing Equations
 -------------------
 
-The governing equation for DC resistivity problem can be obtained from Maxwell's equations (appropriate links) if 
-we consider a zero-frequency case
+The governing equation for DC resistivity problem can be obtained from
+:ref:`Maxwell's equations <maxwell1_fundamentals_index>`. We start by
+considering the zero-frequency case, in which case, Maxwell's equations are
 
 .. math::
 	\nabla \times \mathbf{e} = 0
 	:label: Faraday_DC
 	
 .. math::
-	\nabla \times \mathbf{h} = \sigma \cdot \mathbf{e}
+	\nabla \times \mathbf{h} = \mathbf{j}
 	:label: Ampere_DC
 
-According to :eq:`Faraday_DC`, We can define a scalar potential so that the primary electric field can be described as
-the negative gradient of the primary potential
+Knowing that the curl of the gradient of any scalar potential is always zero, according to :eq:`Faraday_DC`, we can define a scalar potential so that the
+primary electric field is the gradient of a potential. For convenience, we define it to be the negative gradient of a potential, \\(V\\) 
 
 .. math::
-	\mathbf{E}_p = -\nabla V_p
+	\mathbf{e} = -\nabla V
 	:label: DC_Potential
-	
-A couple things we want to highlight:
 
-- behavior for a resistive v. conductive sphere
-- total v. secondary
+To define the potential at a point \\(p\\) from an electric field requires an integration
+
+.. math::
+    V = -\int_{ref}^p \mathbf{e} \mathbf{dl}
+    :label: V_from_e
+
+The choice of reference point \\(ref\\) is arbitrary, but it is often
+convenient to consider the reference point to be infinitely far away, so
+\\(ref = \\infty\\). In this case, the electric potential at \\(p\\) is
+equivalent to the amount of work done by to bring a positive charge from
+infinity to the point \\(p\\).
+
 
 Potentials 
 ----------
-Assuming a x-directed uniform electric field and zero potential at infinity, by integration to :eq:`DC_Potential`, we obtain
+
+Assuming a x-directed uniform electric field and zero potential at infinity,
+by integration to :eq:`DC_Potential`, we obtain
 
 .. math::
 	V_p = - E_0 x = -E_0 r \cos\theta
@@ -169,7 +180,7 @@ According to Ohm’s law there is a linear correlation between the current densi
 This can be applied when computing both the total and the primary current densities, but not to the secondary. 
 The secondary current density is defined as a difference between two other current densities. 
 When current flows through conductivity discontinuities, only the normal component of current density is continuous
- across the interface according to (boundary condition, links).  
+across the interface according to (boundary condition, links).  
 
 
 .. plot::
@@ -191,6 +202,7 @@ When current flows through conductivity discontinuities, only the normal compone
     PlotOpt = 'Total'
 
     plot_Currents(XYZ,R,sig1,sig0,E0,PlotOpt)
+
 
 Charge Accumulation
 -------------------
@@ -257,13 +269,20 @@ Questions
 Data
 ----
 
-During a DC survey, we measure the difference of potentials between two electrodes,generally along a profile.
+During a DC survey, we measure the difference of potentials between two
+electrodes,generally along a profile.
 
-Therefore, as it is displayed on the figure below, we do not see the background potential as a linear function but as a constant, whose value will depend of the orientation of the survey line (as long as the spacing between the electrodes is constant).
+Therefore, as it is displayed on the figure below, we do not see the
+background potential as a linear function but as a constant, whose value will
+depend of the orientation of the survey line (as long as the spacing between
+the electrodes is constant).
 
-We also notice that, as for the background, the differences measured inside the sphere are equal to a constant.
+We also notice that, as for the background, the differences measured inside
+the sphere are equal to a constant.
 
-For a conductive sphere, the potential differences measured in the area of influence of the sphere are smaller. This can be anticipated using Ohm's law. This is the reverse for a resistive sphere.
+For a conductive sphere, the potential differences measured in the area of
+influence of the sphere are smaller. This can be anticipated using Ohm's law.
+This is the reverse for a resistive sphere.
 
 .. plot::
     
@@ -295,7 +314,12 @@ For a conductive sphere, the potential differences measured in the area of influ
 Building some Intuition for DC problem
 --------------------------------------
 
-In real life, we do not know the underground configuration. We only see the data and we are trying to model the underground based from them. There are several set of parameters that can fit perfectly the data. Even in the simple case presented here, where we know it is a sphere, and whose response can be calculated analytically, we can find several configuration that can produce the same data along the same profile.
+In real life, we do not know the underground configuration. We only see the
+data and we are trying to model the underground based from them. There are
+several set of parameters that can fit perfectly the data. Even in the simple
+case presented here, where we know it is a sphere, and whose response can be
+calculated analytically, we can find several configuration that can produce
+the same data along the same profile.
 
 Here is an example: 
 
