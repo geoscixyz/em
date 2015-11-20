@@ -8,9 +8,9 @@ A DC resistivity survey is ultimately an electromagnetic phenomenon and is there
 Deriving the DC Equations
 -------------------------
 
-[Insert Derivation of Div(sigma grad(phi)) equation
- Include analytic formula for the potential due to arbitrary source
- receiver geometry over a homogeneous half-space]
+The following derivation follows Haber 2014 closely. If we start from time domain differential form of the Ampere-Maxwell equation equation (equation (5) on .. include:: ../equation_bank/faraday_time.rst)
+
+
 
 Boundary Conditions for the DC problem
 --------------------------------------
