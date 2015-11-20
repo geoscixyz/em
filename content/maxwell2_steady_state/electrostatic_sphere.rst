@@ -321,7 +321,7 @@ case presented here, where we know it is a sphere, and whose response can be
 calculated analytically, we can find several configuration that can produce
 the same data along the same profile.
 
-Here is an example: 
+Here is an example of two spheres generating the response along the chosen profile. The only parameters that have changed are the radius and the conductivity of the sphere: 
 
 .. plot::
 

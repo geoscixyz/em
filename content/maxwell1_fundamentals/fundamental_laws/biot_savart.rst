@@ -29,7 +29,7 @@ Given an infinite vertical wire along the axis \\(\\vec{z}\\), infinitely thin, 
  	\mathbf{b(x)}= \frac{\mu_{0} i}{2 \pi x } (\vec{z \times r})
 
  .. figure::
- 	./figures/infinitewire_biotsavart.jpg
+ 	images/infinitewire_biotsavart.jpg
  	:scale: 15%
 
 Magnetic flux along the central axis of a loop
@@ -41,7 +41,7 @@ Given a loop of radius R, infinitely thin, carrying a electric current of intens
 	\mathbf{b}= \frac{\mu_{0} i}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \vec{z}
  
  .. figure::
- 	./figures/loop_biotsavart.jpg
+ 	images/loop_biotsavart.jpg
  	:scale: 15%
 
 
