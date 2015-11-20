@@ -139,18 +139,18 @@ Two-Dimensional Modelling Examples
 
 We applied 2D forward modelling to a synthetic model based on a geological section from the Mt. Isa prospect. A 2D geological section from a paper was pasted onto a mesh of rectangular cells
 
-.. figure:: section_w_mesh.png
+.. figure:: ./images/section_w_mesh.png
   
   Geological section pasted onto 2D modelling mesh.
 
 We solved a 2D version of equation :eq:`DCresDiscrete` to compute the potential on the nodes of our mesh. We can compute synthetic data by differencing the potential at surface nodes and visualize it in pseudosection form. Note that
 pseudosections do not represent the true geology. Note how the two pseudosections below differ significantly depending on whether the data is collected from west to east or east to west. Here is an example for a single pole source
 
-.. figure:: Pseudo_PDP_East.gif
+.. figure:: ./images/Pseudo_PDP_East.gif
 
   Data for pole moving east to west.
   
-.. figure:: Pseudo_PDP_West.gif
+.. figure:: ./images/Pseudo_PDP_West.gif
 
   Data for pole moving west to east.
 
