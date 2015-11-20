@@ -46,7 +46,7 @@ electric flux. This explains how current in a simple circuit involving a
 battery and capacitor can flow. The term is pivotal in showing that
 electromagnetic energy propagates as waves. 
 
-For example, imagine integrating over a surface associated with a closed path such as the one showed in figure :numref:`Capacitor`. When the current is flowing, the magnetic field has to be related to the electric field flowing between the two plates during the charge (more precisely, its variation), as the result of this integration is the same as if we were integrating over a flat surface, with the current wire crossing it (see the first portion of the equation).
+For example, imagine integrating over a surface associated with a closed path such as the one showed in :numref:`Capacitor`. When the current is flowing, the magnetic field has to be related to the electric field flowing between the two plates during the charge (more precisely, its variation), as the result of this integration is the same as if we were integrating over a flat surface, with the current wire crossing it (see the first portion of the equation).
 
  .. figure:: images/Capacitor.png
     :align: right
