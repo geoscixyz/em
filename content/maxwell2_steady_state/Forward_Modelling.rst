@@ -11,7 +11,7 @@ Deriving the DC Equations
 We can start from time domain differential form of the Ampere-Maxwell equation equation (equation (5) on :ref:`ampere_maxwell`)
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_{total} + \frac{\partial \mathbf{d}}{\partial t}
     :label: ampere_maxwell_differential_hjd
 
 where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is the total current in the system, and :math:`\mathbf{d}` is the electric displacement. We can divide up :math:`\mathbf{j}_{total}` in the following way,
@@ -23,7 +23,7 @@ where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is th
 which states that the total current densisty can be divided into the current in the ground (:math:`\sigma\mathbf{e}` due to ohm's law) and the current in the source wires (:math:`\mathbf{j}_{source}`). Using :eq:`jsep` and the quasi static assumption we can put :eq:`ampere_maxwell_differential_hjd` in the following form 
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_s
+    \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_{source}
     :label: ampere_maxwell_differential_jsep
 
 Now, since we are in the steady state case we know that the time derivatives all have to be zero, so we can invoke Faraday's law
@@ -39,13 +39,13 @@ to say that :math:`\mathbf{e}` has no curl, in other words it is a potential fie
 where :math:`\phi` is the electric potential. This allows us to put :eq:`ampere_maxwell_differential_jsep` into the form
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} + \sigma\boldsymbol{\nabla}\phi = \mathbf{j}_s.
+    \boldsymbol{\nabla} \times \mathbf{h} + \sigma\boldsymbol{\nabla}\phi = \mathbf{j}_{source}.
     :label: ampere_maxwell_differential_phi
 
 :eq:`ampere_maxwell_differential_phi` simplifies greatly is we take the divergence of both side, leaving us with
 
 .. math::
-    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_s.
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
     :label: DCfwd
 
     
