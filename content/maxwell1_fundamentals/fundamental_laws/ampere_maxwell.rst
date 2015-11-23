@@ -14,7 +14,7 @@ Integral Equation
 The Ampere-Maxwell equation in integral form is given below:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \varepsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right)
+    \int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \varepsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right),
     :label: ampere_maxwell_integral
 
 where:
@@ -71,19 +71,19 @@ integral equation above is thus written as
     \mu_0 \left(\int_S \left(\mathbf{j_f}  
         + \frac{\partial \mathbf{p}}{\partial t} 
         + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{da} 
-        +  \varepsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{da}\right)
+        +  \varepsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{da}\right),
     :label: ampere_maxwell_integral_p&m
 
 where the current densities are:
 
 - \\(\\mathbf{j_f}\\) is the free current caused by moving charges
-- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\) is the polarization or bound current, where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics. 
-- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\). 
+- \\(\\mathbf{j_p} = \\frac{\\partial \\mathbf{p}}{\\partial t}\\) is the polarization or bound current, where \\(\\mathbf{p}\\) is the electric polarization resulting from bound charges in dielectrics 
+- \\(\\mathbf{j_m} = \\nabla \\times \\mathbf{m}\\) is the magnetization current, that is, the currents needed to generate the magnetization \\( \\mathbf{m}\\)
 
 The total current density is the sum of these three contributions and is described by
 
 .. math::
-    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m
+    \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m.
 
 
 .. A note on the total current 
@@ -127,7 +127,7 @@ Continuing to treat the free current and bound current separately and using the
 constitutive equations: \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\), \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\), the integral form Ampere-Maxwell equation can be reformulated as:
 
 .. math::
-    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{da} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}
+    \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{da} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}.
     :label: ampere_maxwell_integral_h&d
 
 .. and in differential form,
@@ -157,7 +157,7 @@ provides its own insight. We begin by considering the differential form of equat
 and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive relations \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\) to write the differential time-domain equation in terms of the variables \\(\\mathbf{h, j_f, d} \\)
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}.
     :label: ampere_maxwell_differential_hjd
 
 
@@ -172,7 +172,7 @@ our equations from the time domain to the frequency domain.
 The equation becomes 
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{H}  - i \omega \mathbf{D} = \mathbf{J}_f
+    \boldsymbol{\nabla} \times \mathbf{H}  - i \omega \mathbf{D} = \mathbf{J}_f.
     :label: ampere_maxwell_frequency
 
 
@@ -186,7 +186,7 @@ If we deal with linear isotropic media then we have
 and the Ampere-Maxwell equations can be written as 
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{H}  - (\sigma + i \omega \epsilon) \mathbf{E} = 0
+    \boldsymbol{\nabla} \times \mathbf{H}  - (\sigma + i \omega \epsilon) \mathbf{E} = 0.
 
 Units
 -----
@@ -284,7 +284,7 @@ These efforts have lain solid foundations for the development of modern electrom
 
 **References**
 
-.. [1] David J. Griffiths, Introduction to electrodynamics, 3rd Edition, Prentice Hall. 1999.
-.. [2] James C. Maxwell. On physical lines of force, part III, the Philosophical Magazine and Journal of Science, 1861
-.. [3] James C. Maxwell. A dynamical theory of the electromagnetic field. 1864
-.. [4] Heinrich Hertz. Electric waves: being researches on the propagation of electric action with finite velocity through space, Dover publications. 1893.
+.. [1] David J. Griffiths. Introduction to electrodynamics, 3rd Edition, Prentice Hall, 1999.
+.. [2] James C. Maxwell. On physical lines of force, part III, the Philosophical Magazine and Journal of Science, 1861.
+.. [3] James C. Maxwell. A dynamical theory of the electromagnetic field, 1864.
+.. [4] Heinrich Hertz. Electric waves: being researches on the propagation of electric action with finite velocity through space, Dover publications, 1893.
