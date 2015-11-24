@@ -122,21 +122,23 @@ That is, the tangential component of the electric field is continuous at the bou
 Tangential Component of the Magnetic Field
 ------------------------------------------
 
-The interface condition on the tangential component of the magnetic field, denoted as :math:`h_t`, is derived from the integral form of the :ref:`Ampere-Maxwell equation<ampere_maxwell>` applied to the same Gaussian rectangle as for the tangential electric field. Using the same reasoning as for the tangential electric field (see previous section), we have
+The interface condition on the tangential component of the magnetic field, denoted as :math:`h_t`, is derived from the integral form of the :ref:`Ampere-Maxwell equation<ampere_maxwell>` :eq:`AmpMaxInt` applied to the same Gaussian rectangle as for the tangential electric field (:numref:`rectangle`). Using the same reasoning as for the tangential electric field (see previous section), we have
 
 .. math::
   \oint_C \mathbf{h}\cdot \mathbf{d}\mathbf{l} = h_{1t}l - h_{2t}l = I_{\text{enclosed}}.
 
-In the limit that the height of the Gaussian rectangle approaches zero, the current enclosed by the rectangle :math:`I_{\text{enclosed}}` can be represented as a surface current density on the interface :math:`j_{\text{surf}}` times the width of the rectangle :math:`l`. This gives
+In the limit, when the height of the Gaussian rectangle approaches zero, the current enclosed by the rectangle, :math:`I_{\text{enclosed}}`, can be represented as a surface current density on the interface :math:`j_{\text{surf}}` times the width of the rectangle :math:`l`. This gives
 
 .. math::
   h_{1t}l - h_{2t}l = j_{\text{surf}} l.
 
-Cancelling the :math:`l` terms in the above expression, yields the interface condition on the tangential magnetic field
+The above expression yields the interface condition on the tangential component of the magnetic field
 
 .. math::
   h_{1t}- h_{2t} = j_{\text{surf}}.
   
+That is, the tangential component of the magnetic field is discontinuous at the boundary.
+
 References
 ----------
 
