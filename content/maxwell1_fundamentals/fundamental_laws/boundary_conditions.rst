@@ -32,13 +32,13 @@ Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:
 
 where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
-In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in Figure 5. Our derivations follow those presented by Griffiths on pages xx-yy of [1]_.
+In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. In this page, the subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in :numref:`twoLayerMedium`. Our derivations follow those presented by Griffiths, see [1]_, on pages xx-yy.
 
 .. figure:: images/twoLayerMedium.png
     :align: center
     :name: twoLayerMedium
 
-    Two layered medium.
+    Two layered medium
 
 
 Normal Component of Electric Displacement
@@ -52,18 +52,18 @@ Normal Component of Electric Displacement
     Gaussian pillbox. 
 
 
-Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 6. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
+Consider an extremely small Gaussian pillbox of height :math:`h` and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in :numref:`pillbox`. To derive the boundary condition on the normal component of the electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement :eq:`GaussEint` to the pillbox, yielding to
 
 
 .. math::
   \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{1n} \mathrm{d}r\mathrm{d}\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{2n} \mathrm{d}r\mathrm{d}\theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
 
-where :math:`d_{1n}` and :math:`d_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, and :math:`d_r` is the radial component. Since the pillbox is extremely small, we can assume :math:`d_{1n}` to be constant over the top of the pillbox and :math:`d_{2n}` to be constant over the bottom of the pillbox. Thus, evaluating the first two integrals in the last equation yields
+where :math:`d_{1n}` and :math:`d_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, respectively, and :math:`d_r` is the radial component. Since the pillbox is extremely small, we can assume :math:`d_{1n}` and :math:`d_{2n}` to be constant over the top and bottom of the pillbox, respectively. Thus, evaluating the first two integrals in the last equation yields
 
 .. math::
   d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}}.
 
-In the limit, when :math:`h` approaches 0 while :math:`S_{\text{top}}` remains constant, the integral remaining on the left hand side vanishes and the charge enclosed can be represented by the free surface charge density :math:`\tau_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
+In the limit, when :math:`h` approaches 0 while :math:`S_{\text{top}}` remains constant, the integral remaining on the left hand side vanishes and the charge enclosed (i.e. :math:`Q_{\text{enc}}`) can be represented by the free surface charge density :math:`\tau_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
 
 .. math::
   d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} = \tau_f S_{\text{top}},
@@ -73,7 +73,7 @@ which yields the interface condition on the normal component of :math:`\mathbf{d
 .. math::
   d_{1n} - d_{2n} = \tau_f.
   
-If the medium is linear and isotropic, the condition can be written in terms of the electric field as
+That is, the normal component the electric displacement is discontinuous. If the medium is linear and isotropic, the condition can be written in terms of the electric field as
 
 .. math::
   \varepsilon_1 e_{1n} -\varepsilon_2 e_{2n} = \tau_f.
