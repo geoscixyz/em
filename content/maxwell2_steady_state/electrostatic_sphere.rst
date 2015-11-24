@@ -270,7 +270,7 @@ Data
 ----
 
 During a DC survey, we measure the difference of potentials between two
-electrodes,generally along a profile.
+electrodes, generally along a profile.
 
 Therefore, as it is displayed on the figure below, we do not see the
 background potential as a linear function but as a constant, whose value will
@@ -315,13 +315,14 @@ Building some Intuition for DC problem
 --------------------------------------
 
 In real life, we do not know the underground configuration. We only see the
-data and we are trying to model the underground based from them. There are
-several set of parameters that can fit perfectly the data. Even in the simple
-case presented here, where we know it is a sphere, and whose response can be
-calculated analytically, we can find several configuration that can produce
+data and we are trying to model the underground based on it. There are
+several sets of parameters that can fit perfectly the data. Even in the simple
+case presented here, where we know that the object is a sphere, whose response can be
+calculated analytically, we find several configurations that can produce
 the same data along the same profile.
 
-Here is an example of two spheres generating the response along the chosen profile. The only parameters that have changed are the radius and the conductivity of the sphere: 
+Here is an example of two spheres generating the response along the chosen profile. 
+The only parameters that have changed are the radius and the conductivity of the sphere. 
 
 .. plot::
 
@@ -351,4 +352,4 @@ Here is an example of two spheres generating the response along the chosen profi
 
 
 
-.. [1] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.
+.. [1] Ward, S. H., & Hohmann, W. *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists. 1988.
