@@ -22,6 +22,7 @@ The problem setup is shown in the figure below, where we have
 - a uniform electric fields oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
 - a whole-space background with conductivity \\(\\sigma_0\\)
 - a sphere with radius \\(R\\) and conductivity \\(\\sigma_1\\)
+- the origin of coordinate coincides with the centre of the sphere
 
 .. plot::
 
@@ -91,8 +92,8 @@ infinity to the point \\(p\\).
 Potentials 
 ----------
 
-Assuming a x-directed uniform electric field and zero potential at infinity,
-by integration to :eq:`DC_Potential`, we obtain
+Assuming an x-directed uniform electric field and zero potential at infinity,
+the integration from :eq:`V_from_e` gives
 
 .. math::
 	V_p = - E_0 x = -E_0 r \cos\theta
@@ -101,7 +102,7 @@ by integration to :eq:`DC_Potential`, we obtain
 The total potential outside the sphere \\(r > R\\) is
 
 .. math::
-	V_1 = -E_0 (1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0}) r \cos\theta
+	V_1 = -E_0 \big(1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0} \big) r \cos\theta
 	:label: totalP_outside
 
 and inside the sphere \\(r < R\\)
@@ -136,23 +137,20 @@ Solution, discussion, explain some intuition, questions.
 Electric Field
 --------------
 
-The secondary electric field builds up to oppose the primary field. 
-It’s strongly discontinuous making the total electric field discontinuous.
-
-By taking the gradient of potentials, we can obtain electric fields outside the sphere \\(r>R\\)
+When an external electric field comes across conductivity discontinuities within heterogeneous media, 
+it Leads to charge buildup at boundaries of these discontinuities, which immediately gives 
+rise to a secondary electric field governed by Gauss’s Law to oppose the primary field. 
+Considering the electric field is defined as the negative gradient of the potential, 
+according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
-	E_1 = E_0\hat{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}[(2x^2 - y^2 - z^2)\hat{x} + (3xy)\hat{y} + (3xz)\hat{z}]
+	E_1 = E_0\hat{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\hat{x} + (3xy)\hat{y} + (3xz)\hat{z}\big] \; (r > R)
 	:label: eField_outside
 	
-and inside the sphere \\(r<R\\) is
-
 .. math::
-	E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\hat{x}
+	E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\hat{x} \; (r < R)
 	:label: eField_inside
 	
-How do we get from potentials to electric field
-
 .. plot::
     
     import matplotlib.pyplot as plt
@@ -176,11 +174,12 @@ How do we get from potentials to electric field
 Current Density
 ---------------
 
-According to Ohm’s law there is a linear correlation between the current density and the electric field at that location:  \\(\\mathbf{J} = \\sigma \\mathbf{E}\\). 
-This can be applied when computing both the total and the primary current densities, but not to the secondary. 
-The secondary current density is defined as a difference between two other current densities. 
-When current flows through conductivity discontinuities, only the normal component of current density is continuous
-across the interface according to (boundary condition, links).  
+The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space. 
+According to Ohm’s law there is a linear relationship between the current density and the electric field at any location within the field: 
+\\(\\mathbf{J} = \\sigma \\mathbf{E}\\). This can be directly used to compute both the total and the primary current densities. 
+Note that the secondary current density is defined as a difference between two other current densities. This leads to an important 
+implication that when current flows through conductivity discontinuities, only the normal component of current density is continuous 
+across the interface. 
 
 
 .. plot::
@@ -221,18 +220,7 @@ Based on Gauss's theorem, surface charge density at the interface is given by
 	\mathbf{e}_1 \cdot \mathbf{n} - \mathbf{e}_2 \cdot \mathbf{n} = \frac{\rho_s}{\varepsilon_0}
 	:label:
 
-According to :eq:`eField_outside` :eq:`eField_inside`, the normal component of electric fields at the spherical 
-surface are
-
-.. math::
-	\mathbf{e}_{1n} = \mathbf{E_0}\cos\theta + 2\mathbf{E_0}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0}\cos\theta \; (r > R)
-	:label:
-
-.. math::
-	\mathbf{e}_{2n} = \mathbf{E_0} \frac{3\sigma_0}{\sigma_1 + 2\sigma_0} \cos\theta \; (r < R)
-	:label:
-
-So the charge quantities accumulated at the surface is
+According to :eq:`eField_outside` :eq:`eField_inside`, the charge quantities accumulated at the surface is
 
 .. math::
 	\oint_S \rho_s \mathrm{d}a = \varepsilon_0 \oint_S (\mathbf{e}_{1n} - \mathbf{e}_{2n}) = \varepsilon_0 \oint_S 3\mathbf{E_0} R^2 \frac{\sigma_1-\sigma_0}{\sigma_1 + 2\sigma_0}\cos\theta \sin\theta \mathrm{d}\phi\mathrm{d}\theta
