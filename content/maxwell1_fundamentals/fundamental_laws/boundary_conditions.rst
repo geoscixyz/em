@@ -99,22 +99,25 @@ Tangential Component of the Electric Field
 
     Gaussian rectangle. 
 
-The boundary condition on the tangential component of the electric field, denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form. Consider Faraday's law applied to the extremely small rectangle of height :math:`h` and width :math:`l` shown in Figure 7, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. This allows us to evaluate the components of the contour integral on the top and bottom edges of the rectangle, giving
+The boundary condition on the tangential component of the electric field, denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form :eq:`faradays_law_int_time`. Consider Faraday's law applied to the extremely small rectangle of height :math:`h`, width :math:`l` and area :math:`A` shown in :numref:`rectangle`, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. This allows us to evaluate the components of the contour integral on the top and bottom edges of the rectangle, giving
 
 .. math::
-  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = e_{1t}l - e_{2t}l + \int_{-h}^h e_n(x=-l/2) \mathrm{d}z - \int_{-h}^h e_n(x=+l/2) \mathrm{d}z = -\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot \hat{\mathbf{n}}\,\mathrm{d}a,
+  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = e_{1t}l - e_{2t}l + \int_{-h/2}^{h/2} e_n(x=-l/2) \mathrm{d}z - \int_{-h/2}^{h/2} e_n(x=+l/2) \mathrm{d}z = -\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot \hat{\mathbf{n}}\,\mathrm{d}a,
 
-where :math:`e_{1t}` and :math:`e_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively, and :math:`e_n` is the normal component of :math:`\mathbf{e}`. I
+where :math:`e_{1t}` and :math:`e_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively, and :math:`e_n` is the normal component of :math:`\mathbf{e}`. 
 
 In the limit as :math:`h` approaches 0 while holding :math:`l` constant, the remaining integral terms vanish, leaving
 
 .. math::
    e_{1t}l - e_{2t}l = 0.
 
-Dividing by :math:`l` yields the interface condition
+Dividing by :math:`l` the previous expression yields the interface condition
 
 .. math::
   e_{1t} - e_{2t} = 0.
+
+
+That is, the tangential component of the electric field is continuous at the boundary.  
 
 Tangential Component of the Magnetic Field
 ------------------------------------------
