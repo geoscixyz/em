@@ -32,7 +32,7 @@ Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:
 
 where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
-In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in Figure 1. Our derivations follow those presented by Griffiths on pages xx-yy of [1]_.
+In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. The subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in Figure 5. Our derivations follow those presented by Griffiths on pages xx-yy of [1]_.
 
 .. figure:: images/twoLayerMedium.png
     :align: center
@@ -52,7 +52,7 @@ Normal Component of Electric Displacement
     Gaussian pillbox. 
 
 
-Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 2. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
+Consider an extremely small Gaussian pillbox of height h and cross-sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is shown in figure 6. To derive the boundary condition on the normal component of electric displacement, denoted as :math:`d_{n}`, we apply Gauss's law formulated in terms of electric displacement (equation :eq:`GaussEint`) to the pillbox, giving
 
 
 .. math::
@@ -84,7 +84,7 @@ Normal Component of Magnetic Flux
 The interface condition on the normal component of the magnetic flux, denoted as :math:`\mathbf{b}_{n}`, is derived from the integral form of Gauss's law for the magnetic flux. We follow the exact argument as for the electric displacement, see previous section. However, since the right hand side of :ref:`Gauss's law<gauss_magnetic>` is always zero, we have the interface condition on the normal magnetic flux
 
 .. math::
-  \mathbf{b}_{1n} - \mathbf{b}_{2n} = \mathbf{0}.
+  b_{1n} - b_{2n} = 0.
   
 Tangential Component of the Electric Field
 ------------------------------------------
@@ -96,28 +96,35 @@ Tangential Component of the Electric Field
 
     Gaussian rectangle. 
 
-The boundary condition on the tangential component of the electric field, denoted as :math:`\mathbf{e}_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form. Consider Faraday's law applied to the rectangle of height :math:`h` and width :math:`l` shown in Figure 1, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. Then, we take the limit as :math:`h` approaches 0 while holding :math:`l` constant, which means the contour integral in :ref:`Faraday's law<faraday>` becomes
+The boundary condition on the tangential component of the electric field, denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form. Consider Faraday's law applied to the extremely small rectangle of height :math:`h` and width :math:`l` shown in Figure 7, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. This allows us to evaluate the components of the contour integral on the top and bottom edges of the rectangle, giving
 
 .. math::
-  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = \mathbf{e}_{1t}l - \mathbf{e}_{2t}l,
+  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = e_{1t}l - e_{2t}l + \int_{-h}^h e_n(x=-l/2) \mathrm{d}z - \int_{-h}^h e_n(x=+l/2) \mathrm{d}z = -\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot \hat{\mathbf{n}}\,\mathrm{d}a,
 
-where :math:`\mathbf{e}_{1t}` and :math:`\mathbf{e}_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively. Taking :math:`h` to 0 also causes the surface integral on the right hand side of :ref:`Faraday's law<faraday>` to vanish, implying the interface condition
+where :math:`e_{1t}` and :math:`e_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively, and :math:`e_n` is the normal component of :math:`\mathbf{e}`. I
+
+In the limit as :math:`h` approaches 0 while holding :math:`l` constant, the remaining integral terms vanish, leaving
 
 .. math::
-  \mathbf{e}_{1t} - \mathbf{e}_{2t} = \mathbf{0}.
+   e_{1t}l - e_{2t}l = 0.
+
+Dividing by :math:`l` yields the interface condition
+
+.. math::
+  e_{1t} - e_{2t} = 0.
 
 Tangential Component of the Magnetic Field
 ------------------------------------------
 
-The interface condition on the tangential component of the magnetic field, denoted as :math:`\mathbf{h}_t`, is derived from the integral form of the :ref:`Ampere-Maxwell equation<ampere_maxwell>` applied to the same Gaussian rectangle as for the tangential electric field. Using the same reasoning as for the electric field (see previous section), we have
+The interface condition on the tangential component of the magnetic field, denoted as :math:`h_t`, is derived from the integral form of the :ref:`Ampere-Maxwell equation<ampere_maxwell>` applied to the same Gaussian rectangle as for the tangential electric field. Using the same reasoning as for the tangential electric field (see previous section), we have
 
 .. math::
-  \oint_C \mathbf{h}\cdot \mathbf{d}\mathbf{l} = \mathbf{h}_{1t}l - \mathbf{h}_{2t}l.
+  \oint_C \mathbf{h}\cdot \mathbf{d}\mathbf{l} = h_{1t}l - h_{2t}l = I_{\text{enclosed}}.
 
-In the limit that the height of the Gaussian rectangle approaches zero, the electric displacement integral term vanishes and the current enclosed by the rectangle can be represented as a surface current density on the interface :math:`j_{\text{surf}}` times the width of the rectangle :math:`l`. This gives
+In the limit that the height of the Gaussian rectangle approaches zero, the current enclosed by the rectangle :math:`I_{\text{enclosed}}` can be represented as a surface current density on the interface :math:`j_{\text{surf}}` times the width of the rectangle :math:`l`. This gives
 
 .. math::
-  h_{1t}l - h_{2t}l = j_{\text{surf}} l
+  h_{1t}l - h_{2t}l = j_{\text{surf}} l.
 
 Cancelling the :math:`l` terms in the above expression, yields the interface condition on the tangential magnetic field
 
