@@ -73,7 +73,7 @@ which yields the interface condition on the normal component of :math:`\mathbf{d
 .. math::
   d_{1n} - d_{2n} = \tau_f.
   
-That is, the normal component the electric displacement is discontinuous. If the medium is linear and isotropic, the condition can be written in terms of the electric field as
+That is, the normal component the electric displacement is discontinuous at the boundary.  If the medium is linear and isotropic, the condition can be written in terms of the electric field as
 
 .. math::
   \varepsilon_1 e_{1n} -\varepsilon_2 e_{2n} = \tau_f.
@@ -81,11 +81,14 @@ That is, the normal component the electric displacement is discontinuous. If the
 Normal Component of Magnetic Flux
 -----------------------------------------
 
-The interface condition on the normal component of the magnetic flux, denoted as :math:`\mathbf{b}_{n}`, is derived from the integral form of Gauss's law for the magnetic flux. We follow the exact argument as for the electric displacement, see previous section. However, since the right hand side of :ref:`Gauss's law<gauss_magnetic>` is always zero, we have the interface condition on the normal magnetic flux
+The interface condition on the normal component of the magnetic flux, denoted as :math:`b_{n}`, is derived from the integral form of Gauss's law for the magnetic flux :eq:`GaussMint`. We follow the exact argument as for the electric displacement, see previous section. However, since the right hand side of :ref:`Gauss's law<gauss_magnetic>` is always zero, the interface condition on the normal magnetic flux is given by
 
 .. math::
   b_{1n} - b_{2n} = 0.
   
+
+That is, the normal component of the magnetic flux is continuous at the boundary.
+
 Tangential Component of the Electric Field
 ------------------------------------------
 
