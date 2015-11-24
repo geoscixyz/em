@@ -32,7 +32,7 @@ Recall also that :math:`\mathbf{d}` and :math:`\mathbf{h}` are related to :math:
 
 where :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
-In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. In this page, the subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in :numref:`twoLayerMedium`. Our derivations follow those presented by Griffiths, see [1]_, on pages xx-yy.
+In the following derivations, we consider a two layer medium where each layer has its corresponding physical properties. In this page, the subindices 1 and 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated in :numref:`twoLayerMedium`. Our derivations follow those presented by Griffiths (c.f.  [1]_).
 
 .. figure:: images/twoLayerMedium.png
     :align: center
