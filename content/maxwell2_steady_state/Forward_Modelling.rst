@@ -109,7 +109,7 @@ Since we assume that both materials have dielectric permittivity :math:`\varepsi
 .. math::
 		\mathbf{e}_{2n}-\mathbf{e}_{1n}\ &= \frac{\tau_f}{\varepsilon_0},
 		:label: Ebound
-
+   
 where :math:`\tau_f` is the free surface charge density on the boundary. 
 
 combining the two previous equations we can express the charge buildup in terms of the ratio of the two conductivities
