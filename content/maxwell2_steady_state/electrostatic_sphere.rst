@@ -94,19 +94,18 @@ the integration from :eq:`V_from_e` gives
 	V_p = - E_0 x = -E_0 r \cos\theta
 	:label: Primary_Potential
 
-The total potential outside the sphere \\(r > R\\) is
+The total potential outside the sphere \\( ( r > R) \\) is
 
 .. math::
 	V_1 = -E_0 \big(1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0} \big) r \cos\theta
 	:label: totalP_outside
 
-and inside the sphere \\(r < R\\)
+and inside the sphere \\( ( r < R) \\)
 
 .. math::
 	V_2 = -E_0 \frac{3\sigma_0}{\sigma_1+2\sigma_0}r \cos\theta
 	:label: totalP_inside
 
-Solution, discussion, explain some intuition, questions. 
 
 .. plot::
     
@@ -148,11 +147,11 @@ Considering the electric field is defined as the negative gradient of the potent
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
-    E_1 = E_0\mathbf{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{x} + (3xy)\mathbf{y} + (3xz)\mathbf{z}\big] \; (r > R)
+    E_1 = E_0\mathbf{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{x} + (3xy)\mathbf{y} + (3xz)\mathbf{z}\big]\, \; (r > R)
     :label: eField_outside
     
 .. math::
-    E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{x} \; (r < R)
+    E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{x}\,  \; (r < R)
     :label: eField_inside
 	
 .. plot::
