@@ -46,6 +46,14 @@ electric flux. This explains how current in a simple circuit involving a
 battery and capacitor can flow. The term is pivotal in showing that
 electromagnetic energy propagates as waves. 
 
+.. figure:: images/Capacitor.png
+    :align: right
+    :scale: 60% 
+    :name: Capacitor
+
+    Integration over a capacitor
+
+
 For example, imagine integrating over a surface associated with a closed path
 such as the one showed in :numref:`Capacitor`. We can define the surface to be
 the area of the circle, as in Figure :numref:`Ienc`, or alternatively, as a
@@ -64,12 +72,8 @@ surface with the current wire crossing it.
 .. we were integrating over a flat surface, with the current wire crossing it
 .. (see the first portion of the equation).
 
- .. figure:: images/Capacitor.png
-    :align: right
-    :scale: 60% 
-    :name: Capacitor
 
-    Integration over a capacitor
+
 
 The integral formulations are physically insightful and closely relate to the
 experiments that gave rise to them. They are also play a formative role in
