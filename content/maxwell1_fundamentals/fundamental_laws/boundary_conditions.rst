@@ -16,7 +16,7 @@ It's important to understand how the electromagnetic fields and fluxes change at
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
 .. math::
-   \oint_C \mathbf{h} \cdot \mathbf{dl} = I_{\text{enc}} + \int_S \frac{\partial\mathbf{d}}{\partial t} \cdot \hat{\mathbf{n}} ~\text{da}.
+   \oint_C \mathbf{h} \cdot \mathbf{dl} = I_{\text{enc}} + \int_S \frac{\partial\mathbf{d}}{\partial t} \cdot \hat{\mathbf{n}} \, da.
   :label: AmpMaxInt
 
 
@@ -56,12 +56,12 @@ Consider an extremely small Gaussian pillbox of height :math:`h` and cross-secti
 
 
 .. math::
-  \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{1n} \mathrm{d}r\mathrm{d}\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{2n} \mathrm{d}r\mathrm{d}\theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}},
+  \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{1n} ~drd\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_{2n} ~ dr d \theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ d \theta dz = Q_{\text{enc}},
 
 where :math:`d_{1n}` and :math:`d_{2n}` are the components of the electric displacement normal to the top and bottom of the pillbox, respectively, and :math:`d_r` is the radial component. Since the pillbox is extremely small, we can assume :math:`d_{1n}` and :math:`d_{2n}` to be constant over the top and bottom of the pillbox, respectively. Thus, evaluating the first two integrals in the last equation yields
 
 .. math::
-  d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ \mathrm{d}\theta\mathrm{d}z = Q_{\text{enc}}.
+  d_{1n} S_{\text{top}} - d_{2n} S_{\text{top}} + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d_r~ d \theta dz = Q_{\text{enc}}.
 
 In the limit, when :math:`h` approaches 0 while :math:`S_{\text{top}}` remains constant, the integral remaining on the left hand side vanishes and the charge enclosed (i.e. :math:`Q_{\text{enc}}`) can be represented by the free surface charge density :math:`\tau_f` (assumed constant over the pillbox) times the area of the top of the pillbox. This gives the expression
 
@@ -102,7 +102,7 @@ Tangential Component of the Electric Field
 The boundary condition on the tangential component of the electric field, denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in integral form :eq:`faradays_law_int_time`. Consider Faraday's law applied to the extremely small rectangle of height :math:`h`, width :math:`l` and area :math:`A` shown in :numref:`rectangle`, with surface normal parallel to the interface. As with the Gaussian pillbox in the electric displacement derivation, we assume the rectangle to be small enough that the tangential electric field is constant on both horizontal edges. This allows us to evaluate the components of the contour integral on the top and bottom edges of the rectangle, giving
 
 .. math::
-  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = e_{1t}l - e_{2t}l + \int_{-h/2}^{h/2} e_n(x=-l/2) \mathrm{d}z - \int_{-h/2}^{h/2} e_n(x=+l/2) \mathrm{d}z = -\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot \hat{\mathbf{n}}\,\mathrm{d}a,
+  \oint_C \mathbf{e}\cdot \mathbf {d}\mathbf{l} = e_{1t}l - e_{2t}l + \int_{-h/2}^{h/2} e_n(x=-l/2) ~dz - \int_{-h/2}^{h/2} e_n(x=+l/2) ~dz = -\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot \hat{\mathbf{n}}\,da,
 
 where :math:`e_{1t}` and :math:`e_{2t}` are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively, and :math:`e_n` is the normal component of :math:`\mathbf{e}`. 
 
