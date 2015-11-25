@@ -62,8 +62,10 @@ considering the zero-frequency case, in which case, Maxwell's equations are
 	\nabla \times \mathbf{h} = \mathbf{j}
 	:label: Ampere_DC
 
-Knowing that the curl of the gradient of any scalar potential is always zero, according to :eq:`Faraday_DC`, we can define a scalar potential so that the
-primary electric field is the gradient of a potential. For convenience, we define it to be the negative gradient of a potential, \\(V\\) 
+Knowing that the curl of the gradient of any scalar potential is always zero,
+according to :eq:`Faraday_DC`, we can define a scalar potential so that the
+primary electric field is the gradient of a potential. For convenience, we
+define it to be the negative gradient of a potential, \\(V\\)
 
 .. math::
 	\mathbf{e} = -\nabla V
@@ -192,7 +194,8 @@ According to Ohm’s law there is a linear relationship between the current dens
 Secondary Current
 ^^^^^^^^^^^^^^^^^
 
-The secondary current density is defined as a difference between the total current density and the primary current :eq:`Secondary_Current_Definition`. 
+The secondary current density is defined as a difference between the total
+current density and the primary current :eq:`Secondary_Current_Definition`.
 
 .. math::
     \mathbf{J_s} = \mathbf{J_T} - \mathbf{J_P}
@@ -208,11 +211,18 @@ This leads to an important corollary:
     \mathbf{J_s} \neq \sigma_1 \mathbf{E_s}
     :label: Secondary_Current_Corollary
 
-As \\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\) inside the sphere, the seconday current density inside the sphere is in the reverse direction compared to the secondary electric field.The boundary condition, stating that the normal component of current density is continuous, is then respected by the secondary current.
+As \\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\) inside the
+sphere, the seconday current density inside the sphere is in the reverse
+direction compared to the secondary electric field.The boundary condition,
+stating that the normal component of current density is continuous, is then
+respected by the secondary current.
 
 .. need to reference the boundary condition page. Where is it?
 
-This can seem counter-intuitive as, inside the sphere, the secondary current go from the negative to the positive charges (see Charge Accumulation below). However we have to keep in mind that the current inside the sphere is building the charges and not the reverse.
+This can seem counter-intuitive as, inside the sphere, the secondary current
+go from the negative to the positive charges (see Charge Accumulation below).
+However we have to keep in mind that the current inside the sphere is building
+the charges and not the reverse.
 
 
 .. plot::
@@ -249,15 +259,15 @@ Charge Accumulation
 -------------------
 
 
-Conductivity discontinuities will lead to charge buildup at the boundaries of these discontinuities. 
-According to :ref:`gauss_electric`, the electric charge accumulated on the surface of the sphere
-can be quantified by
+Conductivity discontinuities will lead to charge buildup at the boundaries of
+these discontinuities.  According to :ref:`gauss_electric`, the electric
+charge accumulated on the surface of the sphere can be quantified by
 
 .. math::
 	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}V = \int_V \frac{\rho}{\varepsilon_0} \mathrm{d}V = Q
 	:label:
 
-Based on Gauss's theorem, surface charge density at the interface is given by 
+Based on Gauss's theorem, surface charge density at the interface is given by
 
 .. math::
 	\mathbf{e}_1 \cdot \mathbf{n} - \mathbf{e}_2 \cdot \mathbf{n} = \frac{\rho_s}{\varepsilon_0}
@@ -300,19 +310,20 @@ Data
 ----
 
 During a DC survey, we measure the difference of potentials between two
-electrodes, generally along a profile.
+electrodes, often along a profile. 
 
-Therefore, as it is displayed on the figure below, we do not see the
-background potential as a linear function but as a constant, whose value will
-depend of the orientation of the survey line (as long as the spacing between
-the electrodes is constant).
+Therefore, when we look at data (as in the bottom plot), we see that they will
+depend upon the orientation depend of the orientation of the survey line, as well as the spacing between electrodes.
 
-We also notice that, as for the background, the differences measured inside
-the sphere are equal to a constant.
+We also notice that the differences measured inside the sphere is constant,
+whereas outside the sphere, we observe variations in the potential differences
+in the vicinity of the sphere that then approach a constant value as we move
+away from the sphere.
 
 For a conductive sphere, the potential differences measured in the area of
-influence of the sphere are smaller. This can be anticipated using Ohm's law.
-This is the reverse for a resistive sphere.
+influence of the sphere are smaller than the background. This can be anticipated using Ohm's law.
+.. LJH: this statement needs a bit more explination
+The reverse is observed for a resistive sphere.
 
 .. plot::
     

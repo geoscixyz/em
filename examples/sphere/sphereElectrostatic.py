@@ -14,13 +14,12 @@ r  = lambda x,y,z: np.sqrt(x**2.+y**2.+z**2.)
 sigf = lambda sig0,sig1: (sig1-sig0)/(sig1+2.*sig0)
 
 def get_Setup(XYZ,sig0,sig1,R,E0,ax):
-
   
     xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
-    top = np.sqrt(R**2-xr**2)
-    bot = -np.sqrt(R**2-xr**2)
+    top = np.sqrt(R**2-xr[xr <R]**2)
+    bot = -np.sqrt(R**2-xr[xr < R]**2)
     
-    ax.plot(xr, top, xr, bot, color=[0.1,0.1,0.6],linewidth=1.5)
+    ax.plot(xr[xr <= R], top, xr[xr <= R], bot, color=[0.1,0.1,0.6],linewidth=1.5)
     ax.fill_between(xr,bot,top,color=[0.1,0.1,0.6],alpha=0.5 )
     ax.set_xlim([xr.min(),xr.max()])
     ax.set_ylim([yr.min(),yr.max()])
