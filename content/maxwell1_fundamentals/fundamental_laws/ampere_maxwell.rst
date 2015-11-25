@@ -56,8 +56,8 @@ electromagnetic energy propagates as waves.
 
 For example, imagine integrating over a surface associated with a closed path
 such as the one showed in :numref:`Capacitor`. We can define the surface to be
-the area of the circle, as in Figure :numref:`Ienc`, or alternatively, as a
-stretched surface, as shown in figure :numref:`Capacitor`. In the first case,
+the area of the circle, as in :numref:`Ienc`, or alternatively, as a
+stretched surface, as shown in :numref:`Capacitor`. In the first case,
 the enclosed current is the flow of charges in the wire. In the second case,
 however, there are no charges flowing through the surface, yet the magnetic
 field defined on the enclosing curve, \\(C\\), must be the same. This apparent
@@ -119,7 +119,7 @@ The total current density is the sum of these three contributions and is describ
     The total current involved in the Ampere-Maxwell equation consists of free
     current and bound current, although all currents are essentially the same from
     a microscopic perspective. Treating free current and bound current differently
-    offers physical insights to the Ampere-Maxwell equation in different contexts.
+    offers physical insights to the Ampere-Maxwell equation in different contexts. gh
 
     The free current is caused by moving charges which are not tied to atoms, often
     referred to as conduction current. In contrast, the bound current is induced by
