@@ -120,7 +120,7 @@ The total current density is the sum of these three contributions and is describ
     The total current involved in the Ampere-Maxwell equation consists of free
     current and bound current, although all currents are essentially the same from
     a microscopic perspective. Treating free current and bound current differently
-    offers physical insights to the Ampere-Maxwell equation in different contexts. gh
+    offers physical insights to the Ampere-Maxwell equation in different contexts.
 
     The free current is caused by moving charges which are not tied to atoms, often
     referred to as conduction current. In contrast, the bound current is induced by
