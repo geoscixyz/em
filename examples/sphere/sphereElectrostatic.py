@@ -286,7 +286,7 @@ def get_Current(XYZ,sig0,sig1,R,Et,Ep,Es):
     
     return Jt,Jp,Js
 
-def Plot_Total_Currents(XYZ,sig0,sig1,R,E0):
+def Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax):
     
     Et,Ep,Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
     Jt,Jp,Js = get_Current(XYZ,sig0,sig1,R,Et,Ep,Es)
@@ -298,8 +298,8 @@ def Plot_Total_Currents(XYZ,sig0,sig1,R,E0):
     JtYr = Jt[:,1].reshape(xr.size, yr.size)
     JtAmp = np.sqrt(Jt[:,0]**2+Jt[:,1]**2+Jt[:,2]**2).reshape(xr.size, yr.size)
     
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
     
     ax.set_xlim([xr.min(),xr.max()])
     ax.set_ylim([yr.min(),yr.max()])
@@ -316,11 +316,11 @@ def Plot_Total_Currents(XYZ,sig0,sig1,R,E0):
     ax.streamplot(xr,yr,JtXr,JtYr,color='gray',linewidth=2.,density=0.75)#,angles='xy',scale_units='xy',scale=1)
     ax.set_title('Total Current Density',fontsize=ftsize_title)
     
-    plt.tight_layout(True)
+    # plt.tight_layout(True)
     
-    return fig,ax
+    return ax
     
-def Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0):
+def Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax):
     
     Et,Ep,Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
     Jt,Jp,Js = get_Current(XYZ,sig0,sig1,R,Et,Ep,Es)
@@ -332,8 +332,8 @@ def Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0):
     JsYr = Js[:,1].reshape(xr.size, yr.size)
     JsAmp = np.sqrt(Js[:,1]**2+Js[:,0]**2+Jt[:,2]**2).reshape(xr.size,yr.size)
     
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
     
     ax.set_xlim([xr.min(),xr.max()])
     ax.set_ylim([yr.min(),yr.max()])
@@ -350,9 +350,9 @@ def Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0):
     ax.streamplot(xr,yr,JsXr,JsYr,color='gray',linewidth=2.,density=0.75)#,angles='xy',scale_units='xy',scale=1)
     ax.set_title('Secondary Current Density',fontsize=ftsize_title)
     
-    plt.tight_layout(True)
+    # plt.tight_layout(True)
     
-    return fig,ax
+    return ax
 
 def get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep):
     
@@ -1048,15 +1048,22 @@ if __name__ == '__main__':
     XYZ = ndgrid(xr,yr,zr) # Space Definition
     PlotOpt = 'Total'
 
-    example = 'Charges' # ElectricFields, Currents, Charges
+    fig, ax = plt.subplots(1,2)
+    ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
 
-    if example is 'Potentials':
-        fig, ax = plot_Potentials(XYZ, R, sig1, sig0, E0)
-    elif example is 'ElectricFields':
-        fig, ax = plot_ElectricField(XYZ, R, sig1, sig0 , E0, PlotOpt)
-    elif example is 'Currents':
-        fig, ax = plot_Currents(XYZ, R, sig1, sig0, E0, PlotOpt)
-    elif example is 'Charges':
-        fig, ax = plot_Charges(XYZ,R,sig0,sig1,E0)
-   
+    
+    plt.tight_layout()
     plt.show()
+
+    # example = 'Charges' # ElectricFields, Currents, Charges
+
+    # if example is 'Potentials':
+    #     fig, ax = plot_Potentials(XYZ, R, sig1, sig0, E0)
+    # elif example is 'ElectricFields':
+    #     fig, ax = plot_ElectricField(XYZ, R, sig1, sig0 , E0, PlotOpt)
+    # elif example is 'Currents':
+    #     fig, ax = plot_Currents(XYZ, R, sig1, sig0, E0, PlotOpt)
+    # elif example is 'Charges':
+    #     fig, ax = plot_Charges(XYZ,R,sig0,sig1,E0)
+
