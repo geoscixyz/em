@@ -26,32 +26,25 @@ The problem setup is shown in the figure below, where we have
 
 .. plot::
 
-    import matplotlib.pyplot as plt
-    import numpy as np
+    from examples.sphere import *
 
-    R = 0.5 
-    x = np.linspace(-R,R,500)
-    top = np.sqrt(R**2-x**2)
-    bot = -np.sqrt(R**2-x**2)
-    axlim = 3*R
+    sig0 = 10.**-3.         # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1,figsize=(6,6))
-    ax.plot(x, top, x, bot, color=[0.1,0.1,0.6],linewidth=1.5)
-    ax.fill_between(x,bot,top,color=[0.1,0.1,0.6],alpha=0.5 )
-    ax.set_xlim([-axlim,axlim])
-    ax.set_ylim([-axlim,axlim])
-    ax.set_xticklabels([])
-    ax.set_yticklabels([])
-    ax.set_xlabel('x',fontsize=12)
-    ax.set_ylabel('y',fontsize=12)
-    ax.arrow(0.,0.,np.sqrt(R)/2.,np.sqrt(R)/2.,head_width=0.05,head_length=0.0)
-    ax.text(np.sqrt(R)/4.-0.15,np.sqrt(R)/4.,'$R$',fontsize=13)
-    [ax.arrow(-axlim,_,R,0.,head_width=0.05,head_length=0.05,color='k') for _ in np.linspace(-2*R,2*R,num=5)]
-    ax.text(-axlim+0.05, 0.1, '$\mathbf{E_0} = E_0 \mathbf{\hat{x}}$', fontsize=14)
-    ax.patch.set_facecolor([0.4,0.7,0.4])
-    ax.patch.set_alpha(0.2)
-    ax.text(-0.05,-np.sqrt(R)/2.,'$\sigma_1$',fontsize=14)
-    ax.text(-0.05,-R-0.2,'$\sigma_0$',fontsize=14)  
+    fig, ax = plt.subplots(1,2, figsize = (18,6))
+    ax = mkvc(ax)
+    ax[0] = get_Setup(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[1] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
+
 
 
 Governing Equations
@@ -115,13 +108,13 @@ Solution, discussion, explain some intuition, questions.
 
 .. plot::
     
-    import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.          # conductivity of the wholespace
-    sig1 = 100.         # conductivity of the sphere
-    R    = 50.          # radius of the sphere
-    E0   = 1.           # inducing field strength
+    sig0 = 10.**-3          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1         # conductivity of the sphere in S/m
+    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
     n = 100             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
@@ -129,9 +122,18 @@ Solution, discussion, explain some intuition, questions.
     dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
-    PlotOpt = 'Total'
 
-    plot_Potentials(XYZ, R, sig1, sig0, E0)
+    fig, ax = plt.subplots(2,2,figsize=(18,12))
+    ax = mkvc(ax)
+    ax[0] = Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[0].set_title('Conductive Sphere: Total Potential',fontsize=ftsize_title)
+    ax[1] = Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
+    ax[1].set_title('Conductive Sphere: Secondary Potential',fontsize=ftsize_title)
+    ax[2] = Plot_Total_Potential(XYZ,sig0,sig2,R,E0,ax[2])
+    ax[2].set_title('Resistive Sphere: Total Potential',fontsize=ftsize_title)
+    ax[3] = Plot_Secondary_Potential(XYZ,sig0,sig2,R,E0,ax[3])
+    ax[3].set_title('Resistive Sphere: Secondary Potential',fontsize=ftsize_title)
+    
 
 
 Electric Field
@@ -144,22 +146,22 @@ Considering the electric field is defined as the negative gradient of the potent
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
-	E_1 = E_0\hat{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\hat{x} + (3xy)\hat{y} + (3xz)\hat{z}\big] \; (r > R)
-	:label: eField_outside
-	
+    E_1 = E_0\mathbf{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{x} + (3xy)\mathbf{y} + (3xz)\mathbf{z}\big] \; (r > R)
+    :label: eField_outside
+    
 .. math::
-	E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\hat{x} \; (r < R)
-	:label: eField_inside
+    E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{x} \; (r < R)
+    :label: eField_inside
 	
 .. plot::
     
-    import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.          # conductivity of the wholespace
-    sig1 = 100.         # conductivity of the sphere
-    R    = 50.          # radius of the sphere
-    E0   = 1.           # inducing field strength
+    sig0 = 10.**-3          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1         # conductivity of the sphere in S/m
+    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
     n = 100             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
@@ -167,9 +169,18 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
-    PlotOpt = 'Total'
+    ftsize_title = 18      #font size for titles
 
-    plot_ElectricField(XYZ,R,sig1,sig0,E0,PlotOpt)
+    fig, ax = plt.subplots(2,2,figsize=(18,12))
+    ax = mkvc(ax)
+    ax[0] = Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[0].set_title('Conductive Sphere: Total Electric Field',fontsize=ftsize_title)
+    ax[1] = Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1])
+    ax[1].set_title('Conductive Sphere: Secondary Electric Field',fontsize=ftsize_title)
+    ax[2] = Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
+    ax[2].set_title('Resistive Sphere: Total Electric Field',fontsize=ftsize_title)
+    ax[3] = Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
+    ax[3].set_title('Conductive Sphere: Secondary Electric Field',fontsize=ftsize_title)
 
 Current Density
 ---------------
@@ -177,20 +188,42 @@ Current Density
 The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space. 
 According to Ohm’s law there is a linear relationship between the current density and the electric field at any location within the field: 
 \\(\\mathbf{J} = \\sigma \\mathbf{E}\\). This can be directly used to compute both the total and the primary current densities. 
-Note that the secondary current density is defined as a difference between two other current densities. This leads to an important 
-implication that when current flows through conductivity discontinuities, only the normal component of current density is continuous 
-across the interface. 
+
+Secondary Current
+^^^^^^^^^^^^^^^^^
+
+The secondary current density is defined as a difference between the total current density and the primary current :eq:`Secondary_Current_Definition`. 
+
+.. math::
+    \mathbf{J_s} = \mathbf{J_T} - \mathbf{J_P}
+    :label: Secondary_Current_Definition
+
+.. math::
+    \mathbf{J_s} = \sigma_1 \mathbf{E_{Total}} - \sigma_0 \mathbf{E_0}
+    :label: Secondary_Current
+
+This leads to an important corollary:
+
+.. math::
+    \mathbf{J_s} \neq \sigma_1 \mathbf{E_s}
+    :label: Secondary_Current_Corollary
+
+As \\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\) inside the sphere, the seconday current density inside the sphere is in the reverse direction compared to the secondary electric field.The boundary condition, stating that the normal component of current density is continuous, is then respected by the secondary current.
+
+.. need to reference the boundary condition page. Where is it?
+
+This can seem counter-intuitive as, inside the sphere, the secondary current go from the negative to the positive charges (see Charge Accumulation below). However we have to keep in mind that the current inside the sphere is building the charges and not the reverse.
 
 
 .. plot::
     
-    import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.          # conductivity of the wholespace
-    sig1 = 100.         # conductivity of the sphere
-    R    = 50.          # radius of the sphere
-    E0   = 1.           # inducing field strength
+    sig0 = 10.**-3          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1         # conductivity of the sphere in S/m
+    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
     n = 100             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
@@ -198,13 +231,23 @@ across the interface.
     dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
-    PlotOpt = 'Total'
 
-    plot_Currents(XYZ,R,sig1,sig0,E0,PlotOpt)
+    fig, ax = plt.subplots(2,2,figsize=(18,12))
+    ax = mkvc(ax)
+    ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[0].set_title('Conductive Sphere: Total Current Density',fontsize=ftsize_title)
+    ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
+    ax[1].set_title('Conductive Sphere: Secondary Current Density',fontsize=ftsize_title)
+    ax[2] = Plot_Total_Currents(XYZ,sig0,sig2,R,E0,ax[2])
+    ax[2].set_title('Resistive Sphere: Total Current Density',fontsize=ftsize_title)
+    ax[3] = Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
+    ax[3].set_title('Resistive Sphere: Secondary Current Density',fontsize=ftsize_title)
+    
 
 
 Charge Accumulation
 -------------------
+
 
 Conductivity discontinuities will lead to charge buildup at the boundaries of these discontinuities. 
 According to :ref:`gauss_electric`, the electric charge accumulated on the surface of the sphere
@@ -229,14 +272,14 @@ According to :eq:`eField_outside` :eq:`eField_inside`, the charge quantities acc
 The figure below shows surface charge density at the surface of sphere.
 
 .. plot::
-    
-    import matplotlib.pyplot as plt
+
     from examples.sphere import *
 
-    sig0 = 10.          # conductivity of the wholespace
-    sig1 = 100.         # conductivity of the sphere
-    R    = 50.          # radius of the sphere
-    E0   = 1.           # inducing field strength
+    sig0 = 10.**-3          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1         # conductivity of the sphere in S/m
+    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
     n = 100             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
@@ -244,14 +287,13 @@ The figure below shows surface charge density at the surface of sphere.
     dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
-    PlotOpt = 'Total'
 
-    plot_Charges(XYZ,R,sig0,sig1,E0)
-
-Questions
-^^^^^^^^^
-
-- now that you have all of the pieces, do they make sense when you put them together. 
+    fig, ax = plt.subplots(1,2,figsize=(18,6))
+    ax = mkvc(ax)
+    ax[0] = Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[0])
+    ax[0].set_title('Conductive Sphere: Charge Accumulation',fontsize=ftsize_title)
+    ax[1] = Plot_ChargesDensity(XYZ,sig0,sig2,R,E0,ax[1])
+    ax[1].set_title('Resistive Sphere: Charge Accumulation',fontsize=ftsize_title)
 
 
 Data
