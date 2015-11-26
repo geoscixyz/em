@@ -20,17 +20,18 @@ where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is th
     \mathbf{j}_{total} = \sigma\mathbf{e} + \mathbf{j}_{source},
     :label: jsep
 
-which states that the total current densisty can be divided into the current in the ground (:math:`\sigma\mathbf{e}` due to Ohm's law) and the current in the source wires (:math:`\mathbf{j}_{source}`). Using :eq:`jsep` and the quasi static assumption we can write :eq:`ampere_maxwell_differential_hjd` as
+which states that the total current densisty can be divided into the current in the ground (:math:`\sigma\mathbf{e}` due to Ohm's law) and the current in the source wires (:math:`\mathbf{j}_{source}`). Since we are in the steady state case, :math:`\frac{\partial \mathbf{d}}{\partial t}=0`. Using that assumption and substituting :eq:`jsep` into :eq:`ampere_maxwell_differential_hjd` we obtain
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_{source}.
     :label: ampere_maxwell_differential_jsep
 
-Now, since we are in the steady state case we know that the time derivatives all have to be zero, so we can invoke Faraday's law, that is
+Faraday's law is also simplified in steady state. It becomes
 
-.. include:: ../equation_bank/faraday_time.rst
+.. math::
+    \boldsymbol{\nabla \times} \mathbf{e} = \mathbf{0}.
 
-to say that :math:`\mathbf{e}` has no curl, in other words it is a potential field. In particular, this means that
+In other words it is a potential field. In particular, this means that
 
 .. math::
     \mathbf{e} = -\boldsymbol{\nabla}\phi,
