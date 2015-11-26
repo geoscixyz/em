@@ -8,4 +8,5 @@ Contents:
 .. toctree::
     :maxdepth: 1
 
-    SphericalDepression.rst 
+    SphericalDepression_theory.rst 
+    SphericalDepression_numerics.rst 

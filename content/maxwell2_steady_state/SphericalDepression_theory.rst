@@ -1,6 +1,6 @@
-=================================================
-Effects of Topography: A Hemispherical Depression
-=================================================
+=============================
+Effects of Topography: Theory
+=============================
 
 Introduction
 ============
@@ -103,7 +103,7 @@ Electric Potential for a Conducting Sphere in a Wholespace
 Let us now consider the electrical scalar potential at :math:`P` in the
 presence of a conducting sphere of radius :math:`a` and resistivity
 :math:`\rho_1`, centered at the origin. Once again, a current of
-:math:`I` is injected at (:math:`r,\theta ,\phi`) = (:math:`x_0,0,0`).
+:math:`I` is injected at (:math:`x_0,0,0`).
 Due to the radial symmetry of the problem,
 :math:`\partial /\partial \phi = 0`. Away from the source, the electric
 field is divergence free. As a result, :math:`\psi` can be expressed in
@@ -169,6 +169,36 @@ conducting sphere.
 
    Diagram showing the setup for computing the potential due to a conductive sphere in a wholespace.
 
+Variables
+---------
+                                                                              
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`\rho`         | Resistivity of the whole-space                                                          |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`\rho_1`       | Resistivity of the sphere                                                               | 
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`(0,0,0)`      | Origin of the coordinate and center location of the sphere                              |                            
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`(\pm x_0,0,0)`| Location of the point current source, which has to be alined with :math:`x`-axis        |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`x_0`          | Distance from current source from the origin (a postive scalar value)                   |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`r`            | Distance from the origin to the measurement point :math:`P(x,y,z)`                      |                                    
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`R`            | Distance between the measurement point (:math:`P`) and the point current source         |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`\theta`       | Angle between the measurement point (:math:`P`) and the point current source            |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`a`            | Radius of the sphere (m)                                                                |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`I`            | Intenisty of the current                                                                |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`\psi`         | Total potential outside of the sphere (:math:`r > a`)                                   |
++---------------------+-----------------------------------------------------------------------------------------+
+|:math:`\psi_1`       | Total potential inside of the sphere (:math:`r < a`)                                    |
++---------------------+-----------------------------------------------------------------------------------------+
+
+
 Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 ===============================================================================
 
@@ -176,7 +206,7 @@ Here, we consider the electric scalar potential at :math:`P`, which
 results from the injection of current near a hemispherical depression of
 radius :math:`a`, centered at (:math:`0,0,0`). According to Telford, so
 long as current is being injected along the axis of symmetry shown in :numref:`SphericalDepression_PoleDipole`, 
-and :math:`|x_0|>a`, we can obtain our solution from Eq. :eq:`Potential_Sphere_Pole_HemisphereDepression_Halfspace` by
+and :math:`x_0>a`, we can obtain our solution from Eq. :eq:`Potential_Sphere_Pole_HemisphereDepression_Halfspace` by
 replacing :math:`4\pi` with :math:`2\pi`; replacement of the constant is
 done because all current flows entirely through the ground. By setting
 :math:`\rho_1 = \infty`, the potential created by the injection of
@@ -192,40 +222,47 @@ current :math:`I` at (:math:`x_0,0,0`) is:
 
    Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a pole source.
 
-Recall that at this point, :math:`x_0` is the radial distance from the
-origin, within a spherical coordinate system relative to the axis of
-symmetry. Using Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
-however, we can solve the problem in :numref:`SphericalDepression_DipoleDipole`,
-where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
-and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
-.. math:: 
-   \begin{split}
-   \psi (r , \theta, \phi) &= \psi_{+} + \psi_{\, -}\\
-   &= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
-   \end{split}
-   :label: Potential_Sphere_Dipole_HemisphereDepression_Halfspace
+Codes
+=====
 
-where, by the cosine law:
+.. literalinclude:: ./codes/DepressedSphere.py
 
-.. math:: R_1 = \sqrt{x_1^2 + r^2 - 2r x_1 cos \theta_1 \;}
 
-and
+.. Recall that at this point, :math:`x_0` is the radial distance from the
+.. origin, within a spherical coordinate system relative to the axis of
+.. symmetry. Using Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+.. however, we can solve the problem in :numref:`SphericalDepression_DipoleDipole`,
+.. where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
+.. and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
-.. math:: R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}
+.. .. math:: 
+..    \begin{split}
+..    \psi (r , \theta, \phi) &= \psi_{+} + \psi_{\, -}\\
+..    &= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+..    \end{split}
+..    :label: Potential_Sphere_Dipole_HemisphereDepression_Halfspace
 
-It is important to note that Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
-is only possible if current is being
-injected along the axis of symmetry. In addition, :math:`\theta` refers
-an azimuthal angle relative the axis of symmetry, whereas
-:math:`\theta_1` and :math:`\theta_2` are strictly angles related to the
-trigonometry of the problem.
+.. where, by the cosine law:
 
-.. figure:: ./figures/SphericalDepression_DipoleDipole.png
-   :align: center
-   :name: SphericalDepression_DipoleDipole
+.. .. math:: R_1 = \sqrt{x_1^2 + r^2 - 2r x_1 cos \theta_1 \;}
 
-   Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.
+.. and
+
+.. .. math:: R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}
+
+.. It is important to note that Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+.. is only possible if current is being
+.. injected along the axis of symmetry. In addition, :math:`\theta` refers
+.. an azimuthal angle relative the axis of symmetry, whereas
+.. :math:`\theta_1` and :math:`\theta_2` are strictly angles related to the
+.. trigonometry of the problem.
+
+.. .. figure:: ./figures/SphericalDepression_DipoleDipole.png
+..    :align: center
+..    :name: SphericalDepression_DipoleDipole
+
+..    Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.
 
 .. |SphericalDepression_Wholespace| image:: ./figures/SphericalDepression_Wholespace.png
 .. |SphericalDepression_Sphere| image:: ./figures/SphericalDepression_Sphere.png
