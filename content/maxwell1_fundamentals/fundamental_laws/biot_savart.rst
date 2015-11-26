@@ -26,7 +26,7 @@ Infinite vertical wire
 Given an infinite vertical wire along the axis \\(\\vec{z}\\), infinitely thin, carrying a electric current of intensity i, the value of generated magnetic flux in every point of the space at a distance r (normal unit vector \\(\\vec{r}\\)) from the wire is:
 
  .. math::
- 	\mathbf{b(x)}= \frac{\mu_{0} I_{enc}}{2 \pi r } ({\mathbf{\hat{z}} \times \mathbf{\hat{r}}})
+ 	\mathbf{b(r)}= \frac{\mu_{0} I_{enc}}{2 \pi r } ({\mathbf{\hat{z}} \times \mathbf{\hat{r}}})
 
  .. figure::
  	images/infinitewire_biotsavart.jpg
