@@ -383,5 +383,5 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
-from checkDependencies import *
+from checkDependencies import checkDependencies
 checkDependencies()
