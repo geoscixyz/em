@@ -104,7 +104,7 @@ The total current density is the sum of these three contributions and is describ
 
 .. math::
     \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m.
-    :label: ampere_maxwell_integral_p&m
+    :label: current_contributions
 
 
 .. A note on the total current 
@@ -201,7 +201,7 @@ If we deal with linear isotropic media then we have
 
 .. math::
     \mathbf{D}(\omega)=\epsilon \mathbf{E}(\omega)
-     :label: d_electric field
+     :label: d_electric_field
 .. math::
     \mathbf{J}_f(\omega)=\sigma \mathbf{E}(\omega)
     :label: current_density_electric_field
