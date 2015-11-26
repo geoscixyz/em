@@ -6,7 +6,6 @@ sudo: false
 
 # command to install dependencies
 install: 
-  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython
   - pip install sphinx
   - pip install -r requirements.txt
   - pip install git+https://github.com/simpeg/simpeg.git@v0.1.3
