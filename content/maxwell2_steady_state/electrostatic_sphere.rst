@@ -41,7 +41,7 @@ The problem setup is shown in the figure below, where we have
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    fig, ax = plt.subplots(1,1, figsize = (4,4))
     ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
 
     plt.show()
@@ -111,22 +111,23 @@ the integration from :eq:`V_from_e` gives
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    fig, ax = plt.subplots(1,1, figsize = (4,4))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
-The total potential outside the sphere \\(r > R\\) is
+    plt.show()
+
+The total potential outside the sphere \\( (r > R) \\) is
 
 .. math::
 	V_1 = -E_0 \big(1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0} \big) r \cos\theta
 	:label: totalP_outside
 
-and inside the sphere \\(r < R\\)
+and inside the sphere \\( (r < R) \\)
 
 .. math::
 	V_2 = -E_0 \frac{3\sigma_0}{\sigma_1+2\sigma_0}r \cos\theta
 	:label: totalP_inside
 
-Solution, discussion, explain some intuition, questions. 
 
 .. plot::
     

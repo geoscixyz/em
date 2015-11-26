@@ -56,8 +56,8 @@ electromagnetic energy propagates as waves.
 
 For example, imagine integrating over a surface associated with a closed path
 such as the one showed in :numref:`Capacitor`. We can define the surface to be
-the area of the circle, as in Figure :numref:`Ienc`, or alternatively, as a
-stretched surface, as shown in figure :numref:`Capacitor`. In the first case,
+the area of the circle, as in :numref:`Ienc`, or alternatively, as a
+stretched surface, as shown in :numref:`Capacitor`. In the first case,
 the enclosed current is the flow of charges in the wire. In the second case,
 however, there are no charges flowing through the surface, yet the magnetic
 field defined on the enclosing curve, \\(C\\), must be the same. This apparent
@@ -104,6 +104,7 @@ The total current density is the sum of these three contributions and is describ
 
 .. math::
     \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m.
+    :label: ampere_maxwell_integral_p&m
 
 
 .. A note on the total current 
@@ -200,13 +201,20 @@ If we deal with linear isotropic media then we have
 
 .. math::
     \mathbf{D}(\omega)=\epsilon \mathbf{E}(\omega)
-
+     :label: d_electric field
+.. math::
     \mathbf{J}_f(\omega)=\sigma \mathbf{E}(\omega)
+    :label: current_density_electric_field
+
+	
 
 and the Ampere-Maxwell equations can be written as 
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{H}  - (\sigma + i \omega \epsilon) \mathbf{E} = 0.
+    \boldsymbol{\nabla} \times \mathbf{H}  - \left(\sigma + i \omega \epsilon\right) \mathbf{E} = 0.
+    :label: ampere_maxwell_frequency2 
+	
+
 
 Units
 -----
