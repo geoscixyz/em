@@ -12,7 +12,8 @@ Survey Instruments
 .. _power_supply:
 
 Power supply
-____________
+------------
+
 A generator or battery provides a source of power for the tranmitter in geophysical surveys. A typical example of a generator used for a Direct Current Induced Polarization (DC/IP) survey is shown below, with a power limit of 7500W.
 
 .. figure:: images/generator_dcip_7500W.jpg
@@ -24,7 +25,8 @@ A generator or battery provides a source of power for the tranmitter in geophysi
 .. _transmitters:
 
 Transmitters/sources
-____________________
+--------------------
+
 A transmitter sends out a desired current waveform through the current wire. The electric current and voltage are measured and regulated by the transmitter controller, and either quantity can be set to a particular amount within the power limit. A typical example of a transmitter used for a DC/IP survey is shown below with a power limit of 5000W.
 
 .. figure:: images/transmitter_dcip_vip5000.jpg
@@ -68,7 +70,8 @@ The primary voltage, or DC component of the measured voltage is taken before any
 .. _receivers:
 
 Receivers
-_________
+---------
+
 
 **DC resistivity**: Two receiver electrodes are used to measure the voltage difference in a DC/IP survey. Non-polarizing electrodes are commonly porous pots composed of a solid metal wire in a salt solution. It is also common to use lead wire in a lead-chloride mix or copper wire in a copper-sulphate solution. This eliminates self potential between the wire and the ground, and it improves the quality of the data. The voltage potential is measured between any combination of receiver electrodes due to super-position theory, as long as the data was collected simultaneously. An example of a porous pot receiver electrode for a DC/IP survey with a copper sulphate solution is shown below.
 
@@ -83,7 +86,7 @@ _________
 .. _survey_layouts:
 
 Common survey layouts
-_____________________
+---------------------
 
 Below are common survey layouts that can be used. *Maybe better suited for the survey design page?*
 
@@ -104,20 +107,20 @@ electrode and the receiver electrode at a depth of one-half the horizontal trans
 
    `A dipole-dipole survey and psuedo-section <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm>`_
 
-** Distributed arrays **: An array of receiver electrodes are deployed, in connected lines or grid. For any current electrode
+**Distributed arrays** : An array of receiver electrodes are deployed, in connected lines or grid. For any current electrode
 position, data is adquered simultaneusly at all the receiver locations (commonly as a time-series) and collected at a C  With post-processing and use of super-positions, voltage potential can be calculated between any of the connected receiver electrodes.
 
 
 .. _survey_acquisition:
 
 Common survey acquisition systems
-_________________________________
+---------------------------------
 
-*include a bit more about electrode layouts, a waveform/pulse for transmitter, when the measurement is made, placeholders for IP, *
+*include a bit more about electrode layouts, a waveform/pulse for transmitter, when the measurement is made, placeholders for IP,*
 
 Below are common acquisition systems that are used in industry to collect DC resistivity, electromagnetic, and/or MT and ZTEM data.
 
-**MIMDAS**:
+**MIMDAS** :
 
 .. figure:: images/MIMDASlayout.jpeg
    :scale: 90%

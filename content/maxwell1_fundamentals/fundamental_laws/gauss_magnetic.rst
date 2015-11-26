@@ -3,7 +3,7 @@
 Gauss's Law for Magnetic Fields
 ===============================
 
-.. figure:: images\BarMagnet.png
+.. figure:: images/BarMagnet.png
     :figwidth: 50%
     :align: right
 
@@ -94,6 +94,7 @@ The equation can also be written in the freqyency-domain as:
         \nabla \cdot \mathbf{B} = 0
         :label: gauss_magnetic_diff_freq
 
+
 Units
 -----
 
@@ -101,7 +102,7 @@ Units
 |Magnetic flux               | \\(\\mathbf{b}\\) | T                   | tesla                   |
 +----------------------------+-------------------+---------------------+-------------------------+
 |Electric current density    | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}} | ampere per square meter |
-|                            |                   |{\\text{m}^2}\\)     |                         |
+|                            |                   | {\\text{m}^2}\\)    |                         |
 +----------------------------+-------------------+---------------------+-------------------------+
 
 
@@ -110,6 +111,7 @@ Units
 +--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | Magnetic constant        | \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{\\text{N}}{\\text{A}^2} \\approx 1.2566370614...×10^{-6} \\frac{\\text{T}\\cdot \\text{m}}{\\text{A}}\\)|
 +--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
 
 Discoverers of the law
 ----------------------
