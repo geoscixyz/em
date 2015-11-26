@@ -46,16 +46,36 @@ electric flux. This explains how current in a simple circuit involving a
 battery and capacitor can flow. The term is pivotal in showing that
 electromagnetic energy propagates as waves. 
 
-For example, imagine integrating over a surface associated with a closed path such as the one showed in :numref:`Capacitor`. When the current is flowing, the magnetic field has to be related to the electric field flowing between the two plates during the charge (more precisely, its variation), as the result of this integration is the same as if we were integrating over a flat surface, with the current wire crossing it (see the first portion of the equation).
-
- .. figure:: images/Capacitor.png
+.. figure:: images/Capacitor.png
     :align: right
     :scale: 60% 
     :name: Capacitor
 
     Integration over a capacitor
 
-The integral forumulations are physically insightful and closely relate to the
+
+For example, imagine integrating over a surface associated with a closed path
+such as the one showed in :numref:`Capacitor`. We can define the surface to be
+the area of the circle, as in :numref:`Ienc`, or alternatively, as a
+stretched surface, as shown in :numref:`Capacitor`. In the first case,
+the enclosed current is the flow of charges in the wire. In the second case,
+however, there are no charges flowing through the surface, yet the magnetic
+field defined on the enclosing curve, \\(C\\), must be the same. This apparent
+discrepancy is reconciled if we take in to account the displacement current,
+which is the time rate of change of the electric field, between the two
+plates. This integration is the same as if we were integrating over a flat
+surface with the current wire crossing it.
+
+.. When the current is flowing, the magnetic field has to be related
+.. to the electric field flowing between the two plates during the charge (more
+.. precisely, its variation), as the result of this integration is the same as if
+.. we were integrating over a flat surface, with the current wire crossing it
+.. (see the first portion of the equation).
+
+
+
+
+The integral formulations are physically insightful and closely relate to the
 experiments that gave rise to them. They are also play a formative role in
 generating boundary conditions for waves that propagate through different
 materials.
@@ -84,6 +104,7 @@ The total current density is the sum of these three contributions and is describ
 
 .. math::
     \mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m.
+    :label: ampere_maxwell_integral_p&m
 
 
 .. A note on the total current 
@@ -180,13 +201,20 @@ If we deal with linear isotropic media then we have
 
 .. math::
     \mathbf{D}(\omega)=\epsilon \mathbf{E}(\omega)
-
+     :label: d_electric field
+.. math::
     \mathbf{J}_f(\omega)=\sigma \mathbf{E}(\omega)
+    :label: current_density_electric_field
+
+	
 
 and the Ampere-Maxwell equations can be written as 
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{H}  - (\sigma + i \omega \epsilon) \mathbf{E} = 0.
+    \boldsymbol{\nabla} \times \mathbf{H}  - \left(\sigma + i \omega \epsilon\right) \mathbf{E} = 0.
+    :label: ampere_maxwell_frequency2 
+	
+
 
 Units
 -----
@@ -213,13 +241,13 @@ Units
 |                          |                   |{\\text{m}}\\)             | ampere per meter                      |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric polarization    | \\(\\mathbf{p}\\) |\\(\\frac{\\text{A}\\cdot  |                                       |
-|                          |                   |\\text{s}}{\\text{m}}\\)   | ampere times seconds per square metre | 
+|                          |                   |\\text{s}}{\\text{m}}\\)   | ampere times seconds per square meter | 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Magnetic H-field         | \\(\\mathbf{h}\\) |\\(\\frac{\\text{A}}       |                                       |
-|                          |                   |{\\text{m}}\\)             | ampere per metre                      |
+|                          |                   |{\\text{m}}\\)             | ampere per meter                      |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric displacement    | \\(\\mathbf{d}\\) |\\(\\frac{\\text{C}}       |                                       |
-|                          |                   |{\\text{m}^{2}}\\)         | coulomb per square metre              |
+|                          |                   |{\\text{m}^{2}}\\)         | coulomb per square meter              |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 
 
@@ -228,12 +256,12 @@ Units
 +--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | Magnetic constant        | \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{\\text{N}}{\\text{A}^2} \\approx 1.2566370614...×10^{-6} \\frac{\\text{T}\\cdot \\text{m}}{\\text{A}}\\)|
 +--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-| Vacuum permittivity      | \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{\\text{F}}{\\text{m}} \\) (farads per metre)                               |
+| Vacuum permittivity      | \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{\\text{F}}{\\text{m}} \\) (farads per meter)                               |
 +--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 **Conversions**
 
- - One tesla equals one weber (the SI unit of magnetix flux) per square metre:
+ - One Tesla equals one weber (the SI unit of magnetic flux) per square meter:
 
     .. math:: 
         1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}.
@@ -245,20 +273,20 @@ Units
 
 .. Magnetization \\( \\mathbf{m} \\):  ampere per meter \\([\\frac{\\text{A}}{\\text{m}}]\\)
 
-.. Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square metre \\([\\frac{A\\cdot s}{m}]\\)
+.. Electric polarization \\(\\mathbf{p}\\): ampere times seconds per square meter \\([\\frac{A\\cdot s}{m}]\\)
 
-.. Magnetic H-field \\(\\mathbf{h}\\): ampere per metre \\([\\frac{A}{m}]\\)
+.. Magnetic H-field \\(\\mathbf{h}\\): ampere per meter \\([\\frac{A}{m}]\\)
 
-.. Electric displacement \\(\\mathbf{d}\\): coulomb per square metre \\([\\frac{C}{m^{2}}]\\)
+.. Electric displacement \\(\\mathbf{d}\\): coulomb per square meter \\([\\frac{C}{m^{2}}]\\)
 
 .. Magnetic constant \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{N}{A^2} \\approx  1.2566370614...×10^{-6} \\frac{T\\cdot m}{A} \\). 
 
-.. Vacuum permittivity \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per metre).
+.. Vacuum permittivity \\(\\varepsilon_0  \\approx 8.854 187 817... × 10^{−12} \\frac{F}{m} \\) (farads per meter).
 
 Discovers of the law
 --------------------
 
-The first observation that bring researchers to look for the relationship linking magnetic field and current is due to Hans Christian Ørsted in 1820, who notices electric currents were deflected magnetic needles. This leads several physicists in Europe to study this phenomenon in parallels. While Jean-Baptiste Biot and Félix Savart were experimentating with a setup closed to Ørsted's experiment (that lead them to define in 1820 a relationship known now as the Biot-Savart's law), André-Marie Ampère's experiment focus on measuring the forces that two electric wires were exercing on each other.He expressed the Ampere’s circuital law in 1826 [1]_,
+The first observation that bring researchers to look for the relationship linking magnetic field and current is due to Hans Christian Ørsted in 1820, who notices electric currents were deflected magnetic needles. This leads several physicists in Europe to study this phenomenon in parallels. While Jean-Baptiste Biot and Félix Savart were experimenting with a setup closed to Ørsted's experiment (that lead them to define in 1820 a relationship known now as the Biot-Savart's law), André-Marie Ampère's experiment focus on measuring the forces that two electric wires were exerting on each other.He expressed the Ampere’s circuital law in 1826 [1]_,
 which relates the magnetic field associated with a closed loop to the electric
 current passing through it. In its original form, the current enclosed by the
 loop only refers to free current caused by moving charges, causing several issues
@@ -277,8 +305,6 @@ of electromagnetic waves predicated by Maxwell’s electromagnetic theory, and
 demonstrated the equivalence of electromagnetic wave and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
-
-.. LJH comment: I think we can combine what is below into the explination under the integral equation
 
 
 

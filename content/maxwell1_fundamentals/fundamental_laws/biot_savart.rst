@@ -12,7 +12,7 @@ Definition
 **********
 
  .. math::
-	\mathbf{b}= \frac{\mu_{0}}{4 \pi} \int_{C} \frac{i \mathbf{dl} \times \mathbf{r}}{\mathbf{r}^3}
+	\mathbf{b}= \frac{\mu_{0}}{4 \pi} \int_{C} \frac{I_{enc} \mathbf{dl} \times \mathbf{\hat{r}}} {r^2}
 
 
 In steady state, this equation is fundamental to forward model magnetic flux created by an active source such as a loop. It is closely related to the Ampere's law.
@@ -26,7 +26,7 @@ Infinite vertical wire
 Given an infinite vertical wire along the axis \\(\\vec{z}\\), infinitely thin, carrying a electric current of intensity i, the value of generated magnetic flux in every point of the space at a distance r (normal unit vector \\(\\vec{r}\\)) from the wire is:
 
  .. math::
- 	\mathbf{b(x)}= \frac{\mu_{0} i}{2 \pi x } (\vec{z \times r})
+ 	\mathbf{b(x)}= \frac{\mu_{0} I_{enc}}{2 \pi r } ({\mathbf{\hat{z}} \times \mathbf{\hat{r}}})
 
  .. figure::
  	images/infinitewire_biotsavart.jpg
@@ -38,11 +38,11 @@ Magnetic flux along the central axis of a loop
 Given a loop of radius R, infinitely thin, carrying a electric current of intensity i, the generated magnetic flux along the central axis of the loop \\(\\vec{z}\\), at a distance r, is:
 
  .. math::
-	\mathbf{b}= \frac{\mu_{0} i}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \vec{z}
+	\mathbf{b}= \frac{\mu_{0} I_{enc}}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \mathbf{\hat{z}}
  
  .. figure::
  	images/loop_biotsavart.jpg
  	:scale: 15%
 
 
-(Note: Considering \\(\\vec{dl}\\) and \\(\\vec{z}\\) form a direct orthonormed system, the direction of the flux is given by the sign of "i" )
+(Note: Considering \\(\\mathbf{dl}\\) and \\(\\mathbf{\hat{z}}\\) form a direct orthonormed system, the direction of the flux is given by the sign of "i" )
