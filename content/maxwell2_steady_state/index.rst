@@ -10,3 +10,4 @@ Contents:
     
     Forward_Modelling
     Maxwell_Discretization
+    Mt_Isa_case_study

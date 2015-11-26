@@ -1,7 +1,7 @@
 .. _Maxwell_Discretization:
 
-An introduction to solving the quasi-static Maxwell equations on a computer
----------------------------------------------------------------------------
+A (very) brief introduction to solving Maxwell's equations on a computer
+------------------------------------------------------------------------
 
 Maxwell's equations can only be solved exactly for a few special cases where the conductivity model (and possibly the source-receiver geometry) has some special structure and symmetry. To model an arbitrary geophysical survey over an earth with topography and arbitrary conductivity, approximate methods that can be implemented in a computer are required. These methods are known as discretizations of Maxwell's equations because they break the earth into a set of discrete volumes, or cells, with the physical properties held constant in each cell. 
 

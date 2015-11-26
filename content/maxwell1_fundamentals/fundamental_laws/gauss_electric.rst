@@ -128,19 +128,16 @@ Flux is a measure of the strength of a field passing through a surface. Electric
 	\boldsymbol{\Phi} = \int_S \mathbf{e} \cdot \hat{\mathbf{n}} \, \mathrm{d}a.
 	:label: e_flux
 
-We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. This is illustrated in the figure below, which illustrates the flux due to a point charge. Note that as the surface moves further away from the charge at the origin, the magnitude of the field decreases with :math:`\frac{1}{|\mathbf{r}|^2}` spatial dependence but the volume of the surface increases with :math:`|\mathbf{r}|^2` dependence. Thus, regardless of the surface chosen, the flux through that surface remains the same.
+We can think of electric field as flux density. Gauss’s law tells us that the net electric flux through any closed surface is zero unless the volume bounded by that surface contains a net charge. Additionally, the flux depends only on the amount of charge contained and not on the specific surface chosen. For example, consider the flux through a sphere centered at the origin due to a positive point charge at the origin. The magnitude of the electric field due to the point charge decreases with :math:`\frac{1}{|\mathbf{r} - \mathbf{r'}|^2}` spatial dependence but the area of the sphere increases with :math:`|\mathbf{r} - \mathbf{r'}|^2` dependence, matching the dropoff in flux density. Thus, the total flux remains the same for any sphere centered at the origin.
 
-.. figure:: images/Efield.gif
-  
-  Illustration of the electric flux through different Gaussian surfaces :math:`S` due to a point charge :math:`Q` at the origin. The color of the surface shows the magnitude of the electric field (or flux density). 
 
 Units
 -----
 
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Surface area      |  \\(\\text{S}\\)    | \\(\\text{m}^{2}\\)                |      square meter                     |
+|     Surface area      |  \\(\\text{S}\\)    | \\(\\text{m}^{2}\\)                |      Square meter                     |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Volume            |  :math:`V`          | \\(\\text{m}^{3}\\)                |                  cubic meter          |
+|     Volume            |  :math:`V`          | \\(\\text{m}^{3}\\)                |                  Cubic meter          |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
 |     Electric charge   | \\(\\text{q, Q}\\)  | \\(\\text{C}\\)                    |            Coulomb                    |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
