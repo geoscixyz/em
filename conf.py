@@ -56,7 +56,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'em'
 copyright = """
-<a rel="license" 
+  <a rel="license" 
    href="http://creativecommons.org/licenses/by/4.0/"
    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
