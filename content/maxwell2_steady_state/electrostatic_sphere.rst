@@ -24,6 +24,7 @@ The problem setup is shown in the figure below, where we have
 - a sphere with radius \\(R\\) and conductivity \\(\\sigma_1\\)
 - the origin of coordinate coincides with the centre of the sphere
 
+
 .. plot::
 
     from examples.sphere import *
@@ -40,10 +41,10 @@ The problem setup is shown in the figure below, where we have
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,2, figsize = (18,6))
-    ax = mkvc(ax)
-    ax[0] = get_Setup(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[1] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
+
+    plt.show()
 
 
 
@@ -93,6 +94,25 @@ the integration from :eq:`V_from_e` gives
 .. math::
 	V_p = - E_0 x = -E_0 r \cos\theta
 	:label: Primary_Potential
+
+.. plot::
+
+    from examples.sphere import *
+
+    sig0 = 10.**-3.         # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
+    n = 100             #level of discretisation
+    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
+    yr = xr.copy()      # Y-axis discretization
+    dx = xr[1]-xr[0]       # mesh spacing
+    dy = yr[1]-yr[0]       # mesh spacing
+    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
+    XYZ = ndgrid(xr,yr,zr) # Space Definition
+
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
 The total potential outside the sphere \\(r > R\\) is
 
@@ -148,11 +168,11 @@ Considering the electric field is defined as the negative gradient of the potent
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
-    E_1 = E_0\mathbf{x} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{x} + (3xy)\mathbf{y} + (3xz)\mathbf{z}\big] \; (r > R)
+    E_1 = E_0\mathbf{\hat{x}} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{\hat{x}} + (3xy)\mathbf{\hat{y}} + (3xz)\mathbf{\hat{z}}\big] \; (r > R)
     :label: eField_outside
     
 .. math::
-    E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{x} \; (r < R)
+    E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{\hat{x}} \; (r < R)
     :label: eField_inside
 	
 .. plot::
@@ -322,8 +342,9 @@ away from the sphere.
 
 For a conductive sphere, the potential differences measured in the area of
 influence of the sphere are smaller than the background. This can be anticipated using Ohm's law.
-.. LJH: this statement needs a bit more explination
 The reverse is observed for a resistive sphere.
+
+.. LJH: this statement needs a bit more explination
 
 .. plot::
     
