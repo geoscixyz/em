@@ -1,2 +1,3 @@
 - Doug Oldenburg, (`@dougoldenburg <https://github.com/dougoldenburg/>`_)
+- Lindsey Heagy, (`@lheagy <https://github.com/lheagy>`_)
 - Michael Mitchell, (`@micmitch <https://github.com/micmitch/>`_) 

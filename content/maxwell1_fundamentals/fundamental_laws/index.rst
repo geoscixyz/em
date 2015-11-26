@@ -1,4 +1,4 @@
-.. fundamental_laws_index:
+.. _fundamental_laws_index:
 
 Contents:
 
@@ -11,3 +11,5 @@ Contents:
     ampere_maxwell
     conservation_of_charge
     boundary_conditions
+    biot_savart
+

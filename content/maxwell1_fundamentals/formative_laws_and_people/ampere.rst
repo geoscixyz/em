@@ -1,4 +1,4 @@
-.. _ampere:
+.. _ppl_ampere:
 
 Ampere
 ========================

@@ -32,7 +32,7 @@ This formulation can be derived from the integral form using the divergence theo
 Alternatively, Gauss's law can be derived from the Biot-Savart law:
 
 .. math::
-        \nabla \cdot \mathbf{B}(r) = \frac{\mu_0}{4\pi} \int \nabla \cdot \frac{\mathbf{J}(r') \times \hat{w}}{w^2} dV
+        \nabla \cdot \mathbf{B}(r) = \frac{\mu_0}{4\pi} \int \nabla \cdot \frac{\mathbf{J}(r') \times \widehat{\left(\mathbf{r} - \mathbf{r'} \right)}}{w^2} dV 
 
 The variable \\(w\\) relates \\(r\\) and \\(r'\\): \\(w = (x-x') \\hat{x} + (y-y') \\hat{y} + (z-z') \\hat{z} \\). To carry through the divergence, the integrand can be expanded into:
 
