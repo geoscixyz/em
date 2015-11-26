@@ -14,23 +14,23 @@ r  = lambda x,y,z: np.sqrt(x**2.+y**2.+z**2.)
 sigf = lambda sig0,sig1: (sig1-sig0)/(sig1+2.*sig0)
 
 def get_Setup(XYZ,sig0,sig1,R,E0,ax):
-  
+    xplt = np.linspace(-R, R, num=100)
     xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
-    top = np.sqrt(R**2-xr[xr <R]**2)
-    bot = -np.sqrt(R**2-xr[xr < R]**2)
+    top = np.sqrt(R**2-xplt**2)
+    bot = -np.sqrt(R**2-xplt**2)
     
-    ax.plot(xr[xr <= R], top, xr[xr <= R], bot, color=[0.1,0.1,0.6],linewidth=1.5)
-    ax.fill_between(xr,bot,top,color=[0.1,0.1,0.6],alpha=0.5 )
+    ax.plot(xplt, top, xplt, bot, color=[0.1,0.1,0.6],linewidth=1.5)
+    ax.fill_between(xplt,bot,top,color=[0.1,0.1,0.6],alpha=0.5 )
     ax.set_xlim([xr.min(),xr.max()])
     ax.set_ylim([yr.min(),yr.max()])
     ax.set_xticklabels([])
     ax.set_yticklabels([])
     ax.set_xlabel('x',fontsize=12)
     ax.set_ylabel('y',fontsize=12)
-    ax.arrow(0.,0.,np.sqrt(2.)*R/2.,np.sqrt(2.)*R/2.,head_width=10.,head_length=2.)
+    ax.arrow(0.,0.,np.sqrt(2.)*R/2.,np.sqrt(2.)*R/2.,head_width=0.,head_length=0.)
     ax.text(np.sqrt(R)/4.-1.,np.sqrt(R)/4.+10.,'$R$',fontsize=13)
-    [ax.arrow(xr.min(),_,R,0.,head_width=10.,head_length=2.,color='k') for _ in np.linspace(-2*R,2*R,num=5)]
-    ax.text(xr.min()+0.05, 0.1, '$\mathbf{E_0} = E_0 \mathbf{\hat{x}}$', fontsize=14)
+    [ax.arrow(xr.min(),_,R*3./4.,0.,head_width=R/10.,head_length=R/20.,color='k') for _ in np.linspace(-2*R,2*R,num=5)]
+    ax.text(xr.min()+0.05, R/10., '$\mathbf{E_0} = E_0 \mathbf{\hat{x}}$', fontsize=14)
     ax.patch.set_facecolor([0.4,0.7,0.4])
     ax.patch.set_alpha(0.2)
     ax.text(-1.,-np.sqrt(R)/2.-10.,'$\sigma_1$',fontsize=14)
@@ -1097,12 +1097,16 @@ if __name__ == '__main__':
     XYZ = ndgrid(xr,yr,zr) # Space Definition
     PlotOpt = 'Total'
 
-    fig, ax = plt.subplots(1,2)
-    ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
+    # fig, ax = plt.subplots(1,2)
+    # ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
+    # ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
 
     
-    plt.tight_layout()
+    # plt.tight_layout()
+    # plt.show()
+
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
     plt.show()
 
     # example = 'Charges' # ElectricFields, Currents, Charges
