@@ -19,10 +19,10 @@ Setup
 
 The problem setup is shown in the figure below, where we have
 
-- a uniform electric fields oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
+- a uniform electric field oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
 - a whole-space background with conductivity \\(\\sigma_0\\)
 - a sphere with radius \\(R\\) and conductivity \\(\\sigma_1\\)
-- the origin of coordinate coincides with the centre of the sphere
+- the origin of coordinate system coincides with the centre of the sphere
 
 
 .. plot::
@@ -41,10 +41,8 @@ The problem setup is shown in the figure below, where we have
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,4))
+    fig, ax = plt.subplots(1,1, figsize = (4,5))
     ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
-
-    plt.show()
 
 
 
@@ -95,6 +93,7 @@ the integration from :eq:`V_from_e` gives
 	V_p = - E_0 x = -E_0 r \cos\theta
 	:label: Primary_Potential
 
+
 .. plot::
 
     from examples.sphere import *
@@ -111,10 +110,9 @@ the integration from :eq:`V_from_e` gives
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,4))
+    fig, ax = plt.subplots(1,1, figsize = (4,5))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
-    plt.show()
 
 The total potential outside the sphere \\( (r > R) \\) is
 
@@ -164,8 +162,8 @@ Electric Field
 
 When an external electric field comes across conductivity discontinuities within heterogeneous media, 
 it Leads to charge buildup at boundaries of these discontinuities, which immediately gives 
-rise to a secondary electric field governed by Gauss’s Law to oppose the primary field. 
-Considering the electric field is defined as the negative gradient of the potential, 
+rise to a secondary electric field governed by Gauss’s Law to oppose the change of the primary field. 
+Considering that the electric field is defined as the negative gradient of the potential, 
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
@@ -203,7 +201,7 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     ax[2] = Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
     ax[2].set_title('Resistive Sphere: Total Electric Field',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Conductive Sphere: Secondary Electric Field',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: Secondary Electric Field',fontsize=ftsize_title)
 
 Current Density
 ---------------
