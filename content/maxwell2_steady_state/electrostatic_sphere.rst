@@ -19,10 +19,10 @@ Setup
 
 The problem setup is shown in the figure below, where we have
 
-- a uniform electric fields oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
+- a uniform electric field oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
 - a whole-space background with conductivity \\(\\sigma_0\\)
 - a sphere with radius \\(R\\) and conductivity \\(\\sigma_1\\)
-- the origin of coordinate coincides with the centre of the sphere
+- the origin of coordinate system coincides with the centre of the sphere
 
 
 .. plot::
@@ -164,8 +164,8 @@ Electric Field
 
 When an external electric field comes across conductivity discontinuities within heterogeneous media, 
 it Leads to charge buildup at boundaries of these discontinuities, which immediately gives 
-rise to a secondary electric field governed by Gauss’s Law to oppose the primary field. 
-Considering the electric field is defined as the negative gradient of the potential, 
+rise to a secondary electric field governed by Gauss’s Law to oppose the change of the primary field. 
+Considering that the electric field is defined as the negative gradient of the potential, 
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
