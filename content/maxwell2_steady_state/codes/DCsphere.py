@@ -12,10 +12,10 @@ def AnBnfun(n, radius, x0, rho, rho1, I=1.):
     Bn = const * 1. / x0 ** (n+1.) * (2*n+1) * (rho1) / bunmo
     return An, Bn
 
-def fieldsSingle(txloc, rxloc, xc, radius, rho, rho1, \
+def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
                  flag = "sec", order=12):
-# def fieldsSingle(txloc, rxloc, xc, radius, rho, rho1, \
-#                  flag = "sec", order=12):
+# def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
+#                  flag = "sec", order=12):    
     """
 
         Parameters:
