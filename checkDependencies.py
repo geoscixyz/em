@@ -1,8 +1,11 @@
 def checkDependencies():
     try:
         import SimPEG
+        pass
     except Exception, e:
-        import pip
-        pip.main(['install',SimPEG])
+        raise Exception('Requirements not installed, run: "pip install -r requirements.txt"')
     else:
         pass
+
+if __name__ == '__main__':
+    checkDependencies()

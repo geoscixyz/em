@@ -41,10 +41,8 @@ The problem setup is shown in the figure below, where we have
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,4))
+    fig, ax = plt.subplots(1,1, figsize = (4,5))
     ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
-
-    plt.show()
 
 
 
@@ -95,6 +93,7 @@ the integration from :eq:`V_from_e` gives
 	V_p = - E_0 x = -E_0 r \cos\theta
 	:label: Primary_Potential
 
+
 .. plot::
 
     from examples.sphere import *
@@ -111,10 +110,9 @@ the integration from :eq:`V_from_e` gives
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,4))
+    fig, ax = plt.subplots(1,1, figsize = (4,5))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
-    plt.show()
 
 The total potential outside the sphere \\( (r > R) \\) is
 
