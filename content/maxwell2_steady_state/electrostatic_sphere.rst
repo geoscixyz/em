@@ -201,7 +201,7 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     ax[2] = Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
     ax[2].set_title('Resistive Sphere: Total Electric Field',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Conductive Sphere: Secondary Electric Field',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: Secondary Electric Field',fontsize=ftsize_title)
 
 Current Density
 ---------------
