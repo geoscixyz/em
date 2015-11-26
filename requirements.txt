@@ -1,0 +1,5 @@
+numpy
+scipy
+matplotlib
+cython
+git+https://github.com/simpeg/simpeg.git@v0.1.3
