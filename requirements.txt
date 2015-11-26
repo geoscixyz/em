@@ -2,4 +2,4 @@ numpy
 scipy
 matplotlib
 cython
-SimPEG
+git+https://github.com/simpeg/simpeg.git@v0.1.3
