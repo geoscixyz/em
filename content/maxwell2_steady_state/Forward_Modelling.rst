@@ -11,43 +11,44 @@ Deriving the DC Equations
 We can start from time domain differential form of the Ampere-Maxwell equation equation (equation (5) on :ref:`ampere_maxwell`)
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_{total} + \frac{\partial \mathbf{d}}{\partial t}
+    \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_{total} + \frac{\partial \mathbf{d}}{\partial t},
     :label: ampere_maxwell_differential_hjd
 
-where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is the total current in the system, and :math:`\mathbf{d}` is the electric displacement. We can divide up :math:`\mathbf{j}_{total}` in the following way,
+where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is the total current in the system, and :math:`\mathbf{d}` is the electric displacement. We can divide up :math:`\mathbf{j}_{total}` as follows
 
 .. math::
-    \mathbf{j}_{total} = \sigma\mathbf{e} + \mathbf{j}_{source}
+    \mathbf{j}_{total} = \sigma\mathbf{e} + \mathbf{j}_{source},
     :label: jsep
 
-which states that the total current densisty can be divided into the current in the ground (:math:`\sigma\mathbf{e}` due to ohm's law) and the current in the source wires (:math:`\mathbf{j}_{source}`). Using :eq:`jsep` and the quasi static assumption we can put :eq:`ampere_maxwell_differential_hjd` in the following form 
+which states that the total current densisty can be divided into the current in the ground (:math:`\sigma\mathbf{e}` due to Ohm's law) and the current in the source wires (:math:`\mathbf{j}_{source}`). Using :eq:`jsep` and the quasi static assumption we can write :eq:`ampere_maxwell_differential_hjd` as
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_{source}
+    \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_{source}.
     :label: ampere_maxwell_differential_jsep
 
-Now, since we are in the steady state case we know that the time derivatives all have to be zero, so we can invoke Faraday's law
+Now, since we are in the steady state case we know that the time derivatives all have to be zero, so we can invoke Faraday's law, that is
 
 .. include:: ../equation_bank/faraday_time.rst
 
-to say that :math:`\mathbf{e}` has no curl, in other words it is a potential field. This means that we can say
+to say that :math:`\mathbf{e}` has no curl, in other words it is a potential field. In particular, this means that
 
 .. math::
-    \mathbf{e} = -\boldsymbol{\nabla}\phi
+    \mathbf{e} = -\boldsymbol{\nabla}\phi,
     :label: epot
 
-where :math:`\phi` is the electric potential. This allows us to put :eq:`ampere_maxwell_differential_jsep` into the form
+where :math:`\phi` is the electric potential. This allows us to write :eq:`ampere_maxwell_differential_jsep` as
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h} + \sigma\boldsymbol{\nabla}\phi = \mathbf{j}_{source}.
     :label: ampere_maxwell_differential_phi
 
-:eq:`ampere_maxwell_differential_phi` simplifies greatly is we take the divergence of both side, leaving us with
+Taking divergence in both sides of :eq:`ampere_maxwell_differential_phi` leads to
 
 .. math::
-    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source},
     :label: DCfwd
 
+which is the equation for DC. 
     
 Boundary Conditions for the DC problem
 --------------------------------------
