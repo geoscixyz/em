@@ -13,7 +13,7 @@ before_install:
 
 # command to install dependencies
 install: 
-  # - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
+  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
   - pip install -r requirements.txt
   # - pip install git+https://github.com/simpeg/simpeg.git@v0.1.3
 
