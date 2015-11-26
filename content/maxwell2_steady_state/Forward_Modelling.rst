@@ -43,18 +43,18 @@ where :math:`\phi` is the electric potential. This allows us to write :eq:`amper
     \boldsymbol{\nabla} \times \mathbf{h} + \sigma\boldsymbol{\nabla}\phi = \mathbf{j}_{source}.
     :label: ampere_maxwell_differential_phi
 
-Taking divergence in both sides of :eq:`ampere_maxwell_differential_phi` leads to
+Taking divergence of both sides of :eq:`ampere_maxwell_differential_phi` gives the governing equation for DC resistivity
 
 .. math::
-    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source},
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
     :label: DCfwd
-
-which is the equation for DC. 
     
 Boundary Conditions for the DC problem
 --------------------------------------
 
-Electrical potential is unique up to a constant, which is determined by convention. DC surveys measure potential differences so this is not important for field measurements but it is important in solving the DC equations for :math:`\phi`. We use the standard convention that the potential is zero infinitely far from all charges and currents. In solving for the discrete approximation to the potential, we make the boundaries at the sides and bottom of the domain far enough from any sources that the potential is approximately zero there. We then consider homogeneous Dirichlet conditions on those boundaries in solving the discrete problem.
+In order to construct a boundary value to determine the potential for a given source and conductivity model, :eq:`DCfwd` must be supplemented by appropriate boundary conditions. While different boundary conditions are possible, we will only discuss the common case of applying a homogeneous Neumann condition at the earth's surface and homogeneous Dirichlet conditions elsewhere. 
+
+First, it is important to note that electrical potential is only unique up to an arbitrary constant, which is determined by convention. DC surveys measure potential differences so this is not important for field measurements but it is important in solving :eq:`DCfwd`. We use the standard convention that the potential is zero infinitely far from all charges and currents. In solving for the discrete approximation to the potential, we make the boundaries at the sides and bottom of the domain far enough from any sources that the potential is approximately zero there. We then consider homogeneous Dirichlet conditions on those boundaries in solving the discrete problem.
 
 We derive the boundary condition at the surface from conservation of charge and the fact that currents cannot flow into the air. Mathematically this can be stated as
 
