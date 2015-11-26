@@ -58,6 +58,7 @@ We can now combine equations :eq:`FarDiscrete` and :eq:`AmpDiscrete` and use the
  
 References
 ----------
+
 .. [1] Haber, Eldad. Computational Methods in Geophysical Electromagnetics. Society for Industrial and Applied Mathematics, Philadelphia, 2015.
 
 .. [2] Ward, Stanley H. and Gerald W. Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, Volume 1. Ed. Misac N. Nabighian. Society of Exploration Geophysicists, Tulsa, 1988.
