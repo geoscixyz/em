@@ -1,5 +1,7 @@
+.. _effecttopo_theory:
+
 =============================
-Effects of Topography: Theory
+Effects of topography: Theory
 =============================
 
 Introduction
@@ -161,7 +163,8 @@ equal to:
 
 Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential for a wholespace from
 Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exstence of a
-conducting sphere.
+conducting sphere. Python code functions which evaluate above solution is given at :ref:`effecttopo_code`.
+
 
 .. figure:: ./figures/SphericalDepression_Sphere.png
    :align: center
@@ -198,7 +201,6 @@ Variables
 |:math:`\psi_1`       | Total potential inside of the sphere (:math:`r < a`)                                    |
 +---------------------+-----------------------------------------------------------------------------------------+
 
-
 Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 ===============================================================================
 
@@ -221,12 +223,6 @@ current :math:`I` at (:math:`x_0,0,0`) is:
    :name: SphericalDepression_PoleDipole
 
    Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a pole source.
-
-
-Codes
-=====
-
-.. literalinclude:: ./codes/DepressedSphere.py
 
 
 .. Recall that at this point, :math:`x_0` is the radial distance from the

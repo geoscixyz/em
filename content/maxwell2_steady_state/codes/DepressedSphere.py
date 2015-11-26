@@ -17,6 +17,7 @@ def fieldsSingle(txloc, rxloc, xc, radius, rho, rho1, \
 # def fieldsSingle(txloc, rxloc, xc, radius, rho, rho1, \
 #                  flag = "sec", order=12):
     """
+
         Parameters:
 
             - txloc (array) : current electrode location (x,y,z)                              
@@ -30,6 +31,10 @@ def fieldsSingle(txloc, rxloc, xc, radius, rho, rho1, \
                               (default="sec")
             - order (float) : maximum order of Legendre polynomial 
                               (default=12)
+
+        Written by Seogi Kang (skang@eos.ubc.ca)
+        Ph.D. studnet of University of British Columbia, Canada
+
     """
 
     Pleg = []
