@@ -201,7 +201,6 @@ If we deal with linear isotropic media then we have
 
 .. math::
     \mathbf{D}(\omega)=\epsilon \mathbf{E}(\omega)
-     :label: d_electric_field
 .. math::
     \mathbf{J}_f(\omega)=\sigma \mathbf{E}(\omega)
     :label: current_density_electric_field
