@@ -41,7 +41,7 @@ The problem setup is shown in the figure below, where we have
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,5))
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
     ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
 
 
@@ -89,6 +89,7 @@ Potentials
 Assuming an x-directed uniform electric field and zero potential at infinity,
 the integration from :eq:`V_from_e` gives
 
+
 .. math::
 	V_p = - E_0 x = -E_0 r \cos\theta
 	:label: Primary_Potential
@@ -110,7 +111,7 @@ the integration from :eq:`V_from_e` gives
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (4,5))
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
 
@@ -147,13 +148,13 @@ and inside the sphere \\( (r < R) \\)
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = mkvc(ax)
     ax[0] = Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: Total Potential',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Potential',fontsize=ftsize_title)
     ax[1] = Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: Secondary Potential',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Potential',fontsize=ftsize_title)
     ax[2] = Plot_Total_Potential(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: Total Potential',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Potential',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_Potential(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: Secondary Potential',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=ftsize_title)
     
 
 
@@ -195,13 +196,13 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = mkvc(ax)
     ax[0] = Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: Total Electric Field',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Electric Field',fontsize=ftsize_title)
     ax[1] = Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: Secondary Electric Field',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
     ax[2] = Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: Total Electric Field',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Electric Field',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: Secondary Electric Field',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
 
 Current Density
 ---------------
@@ -214,21 +215,15 @@ Secondary Current
 ^^^^^^^^^^^^^^^^^
 
 The secondary current density is defined as a difference between the total
-current density and the primary current :eq:`Secondary_Current_Definition`.
+current density, \\( \\mathbf{J_T} = \\sigma \\mathbf{E_T} \\) and the primary 
+current \\(\\mathbf{J_0} = \\sigma_0 \\mathbf{E_0}\\)
 
 .. math::
-    \mathbf{J_s} = \mathbf{J_T} - \mathbf{J_P}
+    \mathbf{J_s} &= \mathbf{J_T} - \mathbf{J_0} \\
+                 &= \sigma\mathbf{E_T} - \sigma_0 \mathbf{E_0} \\
+                 &= (\sigma_0 + \Delta\sigma)(\mathbf{E_0} + \mathbf{E_s}) - \sigma_0 \mathbf{E_0} \\
+                 &= \Delta\sigma\mathbf{E_0}  + \sigma \mathbf{E_s}
     :label: Secondary_Current_Definition
-
-.. math::
-    \mathbf{J_s} = \sigma_1 \mathbf{E_{Total}} - \sigma_0 \mathbf{E_0}
-    :label: Secondary_Current
-
-This leads to an important corollary:
-
-.. math::
-    \mathbf{J_s} \neq \sigma_1 \mathbf{E_s}
-    :label: Secondary_Current_Corollary
 
 As \\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\) inside the
 sphere, the seconday current density inside the sphere is in the reverse
@@ -264,13 +259,13 @@ the charges and not the reverse.
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = mkvc(ax)
     ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: Total Current Density',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Current Density',fontsize=ftsize_title)
     ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: Secondary Current Density',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
     ax[2] = Plot_Total_Currents(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: Total Current Density',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Current Density',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: Secondary Current Density',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
     
 
 

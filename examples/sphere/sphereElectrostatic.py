@@ -99,9 +99,6 @@ def Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax):
     
     xcirc = xr[np.abs(xr) <= R]
     
-    #fig = plt.figure()
-    #ax = fig.add_subplot(111)
-    
     Pplot = ax.pcolor(xr,yr,Vp.reshape(xr.size,yr.size))
     ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
     ax.set_title('Primary Potential',fontsize=ftsize_title)
@@ -126,9 +123,7 @@ def Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax):
     xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
     
     xcirc = xr[np.abs(xr) <= R]
-    
-    #fig = plt.figure()
-    #ax = fig.add_subplot(111)
+
     
     Pplot = ax.pcolor(xr,yr,Vt.reshape(xr.size,yr.size))
     ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
@@ -143,8 +138,6 @@ def Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax):
     ax.set_aspect('equal')
     ax.tick_params(labelsize=ftsize_axis)
     
-    #fig.set_tight_layout(True)
-    
     return ax
 
 def Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax):
@@ -154,9 +147,6 @@ def Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax):
     xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
     
     xcirc = xr[np.abs(xr) <= R]
-    
-    #fig = plt.figure()
-    #ax = fig.add_subplot(111)
 
     Pplot = ax.pcolor(xr,yr,Vs.reshape(xr.size,yr.size))
     ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
@@ -170,8 +160,6 @@ def Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax):
     ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
     ax.set_aspect('equal')
     ax.tick_params(labelsize=ftsize_axis)
-
-    #fig.set_tight_layout(True)
     
     return ax
 
@@ -220,9 +208,6 @@ def Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax):
     EtYr = Et[:,1].reshape(xr.size, yr.size)
     EtAmp = np.sqrt(Et[:,0]**2+Et[:,1]**2 + Et[:,2]**2).reshape(xr.size, yr.size)
     
-    #fig = plt.figure()
-    #ax = fig.add_subplot(111)
-    
     ax.set_xlim([xr.min(),xr.max()])
     ax.set_ylim([yr.min(),yr.max()])
     ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
@@ -238,7 +223,6 @@ def Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax):
     ax.streamplot(xr,yr,EtXr,EtYr,color='gray',linewidth=2.,density=0.75)#angles='xy',scale_units='xy',scale=0.05)
     ax.set_title('Total Field',fontsize=ftsize_title)
     
-    #plt.tight_layout(True)
     
     return ax
     
