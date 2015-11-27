@@ -111,7 +111,7 @@ the integration from :eq:`V_from_e` gives
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    fig, ax = plt.subplots(1,1, figsize = (8,6))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
 
@@ -225,18 +225,31 @@ current \\(\\mathbf{J_0} = \\sigma_0 \\mathbf{E_0}\\)
                  &= \Delta\sigma\mathbf{E_0}  + \sigma \mathbf{E_s}
     :label: Secondary_Current_Definition
 
-As \\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\) inside the
-sphere, the seconday current density inside the sphere is in the reverse
-direction compared to the secondary electric field.The boundary condition,
-stating that the normal component of current density is continuous, is then
-respected by the secondary current.
+
+Outside the sphere, the secondary current \\(\\mathbf{J_s}\\) acts as a electric dipole, due to and in 
+accordance with the charge build-up at the interface (see Charge Accumulation below).
+
+Inside a conductive sphere, \\(\\mathbf{J_T}\\) is bigger than \\(\\mathbf{J_{0}}\\), but in the same time 
+\\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\). 
+The secondary current \\(\\mathbf{J_s}\\) is in the reverse direction compared to the  secondary electric 
+field \\(\\mathbf{E_s}\\). The boundary condition, stating that the normal component of current density is 
+continuous, is then respected by the secondary current.
+
+Inside a resistive sphere, \\(\\mathbf{J_T}\\) is smaller than \\(\\mathbf{J_{0}}\\) but in the same time 
+\\(\\mathbf{E_0}\\) is smaller than \\(\\mathbf{E_{Total}}\\). 
+The secondary current \\(\\mathbf{J_s}\\) is again in the reverse direction compared to the  secondary 
+electric field \\(\\mathbf{E_s}\\) and the boundary condition for the normal component of current density 
+is respected.
+
 
 .. need to reference the boundary condition page. Where is it?
 
-This can seem counter-intuitive as, inside the sphere, the secondary current
+
+This can seem counter-intuitive at first as, inside the sphere, the secondary current
 go from the negative to the positive charges (see Charge Accumulation below).
-However we have to keep in mind that the current inside the sphere is building
+However we can explain it by saying that the current inside the sphere is building
 the charges and not the reverse.
+
 
 
 .. plot::
