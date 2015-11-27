@@ -71,3 +71,7 @@ def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
         return out-prim                
     elif flag == "total":              
         return out    
+
+if __name__ == '__main__':
+    
+    
