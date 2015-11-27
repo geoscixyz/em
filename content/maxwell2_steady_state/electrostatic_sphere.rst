@@ -155,6 +155,8 @@ and inside the sphere \\( (r < R) \\)
     ax[2].set_title('Resistive Sphere: \n Total Potential',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_Potential(XYZ,sig0,sig2,R,E0,ax[3])
     ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=ftsize_title)
+
+    plt.tight_layout()
     
 
 
@@ -203,6 +205,8 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     ax[2].set_title('Resistive Sphere: \n Total Electric Field',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
     ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
+
+    plt.tight_layout()
 
 Current Density
 ---------------
@@ -280,6 +284,7 @@ the charges and not the reverse.
     ax[3] = Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
     ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
     
+    plt.tight_layout()
 
 
 Charge Accumulation
@@ -328,9 +333,11 @@ The figure below shows surface charge density at the surface of sphere.
     fig, ax = plt.subplots(1,2,figsize=(18,6))
     ax = mkvc(ax)
     ax[0] = Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: Charge Accumulation',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Charge Accumulation',fontsize=ftsize_title)
     ax[1] = Plot_ChargesDensity(XYZ,sig0,sig2,R,E0,ax[1])
-    ax[1].set_title('Resistive Sphere: Charge Accumulation',fontsize=ftsize_title)
+    ax[1].set_title('Resistive Sphere: \n Charge Accumulation',fontsize=ftsize_title)
+
+    plt.tight_layout()
 
 
 Data
