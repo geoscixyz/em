@@ -44,6 +44,8 @@ The problem setup is shown in the figure below, where we have
     fig, ax = plt.subplots(1,1, figsize = (6,6))
     ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
 
+    plt.show()
+
 
 
 Governing Equations
@@ -114,6 +116,7 @@ the integration from :eq:`V_from_e` gives
     fig, ax = plt.subplots(1,1, figsize = (8,6))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
+     plt.show()
 
 The total potential outside the sphere \\( (r > R) \\) is
 
@@ -157,6 +160,7 @@ and inside the sphere \\( (r < R) \\)
     ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=ftsize_title)
 
     plt.tight_layout()
+    plt.show()
     
 
 
@@ -207,6 +211,8 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
 
     plt.tight_layout()
+    plt.show()
+
 
 Current Density
 ---------------
@@ -285,6 +291,7 @@ the charges and not the reverse.
     ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
     
     plt.tight_layout()
+    plt.show()
 
 
 Charge Accumulation
@@ -338,6 +345,7 @@ The figure below shows surface charge density at the surface of sphere.
     ax[1].set_title('Resistive Sphere: \n Charge Accumulation',fontsize=ftsize_title)
 
     plt.tight_layout()
+    plt.show()
 
 
 Data
@@ -386,6 +394,8 @@ The reverse is observed for a resistive sphere.
     electrode_spacing=20
 
     plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    plt.show()
+
 
 Building some Intuition for DC problem
 --------------------------------------
@@ -425,6 +435,7 @@ The only parameters that have changed are the radius and the conductivity of the
     PlotOpt = 'Total'
     
     inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    plt.show()
 
 
 
