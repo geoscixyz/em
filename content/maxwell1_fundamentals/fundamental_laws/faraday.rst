@@ -23,7 +23,12 @@ where:
  - \\( \ d\\mathbf{l} \\) is a vector element of length along contour :math:`C`
  
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
-Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
+
+Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change
+in magnetic flux, through a surface bounded by a closed path, is negatively
+proportional to the line integral of the electric field it induces over that
+path.
+
 
 Differential Form in the Time-Domain
 ------------------------------------
