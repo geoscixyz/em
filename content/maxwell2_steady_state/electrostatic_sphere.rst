@@ -116,7 +116,7 @@ the integration from :eq:`V_from_e` gives
     fig, ax = plt.subplots(1,1, figsize = (8,6))
     ax = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
 
-     plt.show()
+    plt.show()
 
 The total potential outside the sphere \\( (r > R) \\) is
 
