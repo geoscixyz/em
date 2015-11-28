@@ -10,4 +10,6 @@ Contents:
     faraday
     ampere_maxwell
     conservation_of_charge
+    boundary_conditions
     biot_savart
+
