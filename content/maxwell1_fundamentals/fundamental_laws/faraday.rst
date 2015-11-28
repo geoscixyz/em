@@ -5,7 +5,7 @@ Faraday's Law
 
 Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce rotational electric fields. This explains electromagnetic induction phenomenon, which is a fundamental exictation mechanism of the inductive source.
 
-    .. figure:: ../figures/IntFaradayDiagram.png
+    .. figure:: ../images/IntFaradayDiagram.png
         :align: center
         :scale: 50%
 
