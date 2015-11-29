@@ -26,6 +26,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.ipynb_checkpoints/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -62,3 +63,4 @@ target/
 
 # Picasa stuff
 *.ini
+content/maxwell1_fundamentals/fundamental_laws/images/~$BC.pptx

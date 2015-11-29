@@ -3,7 +3,11 @@
 Faraday's Law
 =============
 
-Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce rotational electric fields. 
+Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce rotational electric fields. This explains electromagnetic induction phenomenon, which is a fundamental exictation mechanism of the inductive source.
+
+    .. figure:: ../images/IntFaradayDiagram.png
+        :align: center
+        :scale: 50%
 
 Integral Form in the Time-Domain
 --------------------------------
@@ -12,8 +16,19 @@ Faraday's law in integral form can be expressed using the following equation:
 
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
-where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
-Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
+where:
+ - \\( \\mathbf{e} \\) is the electric field defined around a closed path :math:`C`
+ - \\( \\mathbf{b} \\) is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
+ - \\( \\hat n \\) is an outward normal unit vector perpendicular to :math:`da`
+ - \\( \ d\\mathbf{l} \\) is a vector element of length along contour :math:`C`
+ 
+.. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
+
+Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change
+in magnetic flux, through a surface bounded by a closed path, is negatively
+proportional to the line integral of the electric field it induces over that
+path.
+
 
 Differential Form in the Time-Domain
 ------------------------------------
@@ -86,12 +101,30 @@ Lenz's contribution to Faraday's discovery not only provides the equality in Eq.
 
 Units
 -----
+
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Magnetic flux density    | \\(\\mathbf{b}\\) |\\(\\frac{\\text{Wb}}      | webber per square meter               |
+|                          |                   |{\\text{m}^{2}}\\)         |                                       | 
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Electric current density | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}}       |                                       |
+|                          |                   |{\\text{m}^{2}}\\)         | ampere per square meter               | 
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Electric field intensity | \\(\\mathbf{e}\\) |\\(\\frac{\\text{V}}       |                                       |
+|                          |                   |{\\text{m}}\\)             | volt per meter                        |
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Electric potential       | \\(\\text{V}\\)   | V                         | volt                                  |
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Electromotive force      | \\(\\mathcal{E}\\)| V                         | volt                                  |
++--------------------------+-------------------+---------------------------+---------------------------------------+
+| Electric current         | \\(\\text{I}\\)   | A                         | ampere                                |
++--------------------------+-------------------+---------------------------+---------------------------------------+
+
 Consider the units of quantities on the left and right-hand sides of Eq. :eq:`faradays_law_int_time`.
 Using dimensional analysis, we obtain:
 
 	.. math::
 
-		V = Wb / s
+		V = \frac{Wb}{s}
 
 .. TODO: parapharase this (I copy and paste wiki)
 
@@ -100,9 +133,9 @@ Useing the aforementionned expression, the Webber (:math:`Wb`) can be expressed 
 
 	.. math::
 
-		Wb = V \cdot s = J/A, 
+		Wb = V \cdot s = \frac{J}{A}, 
 
-where :math:`J` is the Joule, and :math:`A` is Amps.
+where :math:`J` is the Joule, and :math:`A` is Ampere.
 Joules are used to represent a unit of energy, or work.
 Thus we can interpret the magnetic flux as a unit of work per unit current. 
 

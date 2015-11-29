@@ -16,6 +16,8 @@ import sys
 import os
 import shlex
 
+sys.path.append('./examples')
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -36,6 +38,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'matplotlib.sphinxext.plot_directive',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,7 +58,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'em'
 copyright = """
-<a rel="license" 
+  <a rel="license" 
    href="http://creativecommons.org/licenses/by/4.0/"
    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -379,3 +382,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# -- User Defined Methods ------------------------------------------------
+sys.path.append(os.getcwd())
+from checkDependencies import checkDependencies
+checkDependencies()
