@@ -66,21 +66,8 @@ Fundamental Laws
     :maxdepth: 1
 
     fundamental_laws/index
-    formative_laws_and_people/biot_savart
-
-
-For each law:
-(Use the notation in Ward and Hohmann, except use lower case for integral equations. They were inconsistent in their Appendix. Also, check their use of partial and total derivatives with time. Rely on Fleisch's book (or other EM book) to delineate the subtle but important aspect of this.) 
-
-(a) Integral equation 
-(b) Differential equation
-(c) Units
-(d) Primary scientist contributing to the discovery of the law. If one of these is
-    mentioned then have a short "Discovers of the law" a short synopsis of who
-    they were, when they lived, what their “law” is, and how it contributed to
-    Maxwell’s equations and list or examples of applications.  (eg Faraday’s law
-    is fundamental to electric generators or transformers).
-
+    formative_laws_and_people/index
+    
 
 
 
