@@ -66,11 +66,8 @@ Fundamental Laws
     :maxdepth: 1
 
     fundamental_laws/index
-<<<<<<< HEAD
-    formative_laws_and_people/index
-    
-=======
 
+    
 
 For each law:
 (Use the notation in Ward and Hohmann, except use lower case for integral equations. They were inconsistent in their Appendix. Also, check their use of partial and total derivatives with time. Rely on Fleisch's book (or other EM book) to delineate the subtle but important aspect of this.) 
@@ -83,12 +80,6 @@ For each law:
     they were, when they lived, what their “law” is, and how it contributed to
     Maxwell’s equations and list or examples of applications.  (eg Faraday’s law
     is fundamental to electric generators or transformers).
-
->>>>>>> 061a4b9210ac2ab5c29f52925ec3d9d8d1ed4008
-
-
-
-
 
 
 

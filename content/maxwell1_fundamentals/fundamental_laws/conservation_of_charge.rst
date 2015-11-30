@@ -28,10 +28,11 @@ where:
 
 DWO: Check applicability for total or free charges.
 
+
 Differential form:
 ------------------
 
-With the use of the divergence theorem equation :eq:`charge_conservation_integral`can be written in  differential form:
+With the use of the divergence theorem equation :eq:`charge_conservation_integral` can be written in  differential form:
 
 .. math::
     \nabla \cdot \mathbf{j} = -\dfrac{\partial \rho}{\partial t}
@@ -62,7 +63,7 @@ Uses of Conservation of Charge
 Starting equations for DC resistivity
 *************************************
 
-If there is a source term, say a current \\(I\\) that is injected at a location \\(\mathbf{r_s}\\) then the law for conservation of charge  becomes
+If there is a source term, say a current \\(I\\) that is injected at a location \\(\\mathbf{r_s}\\) then the law for conservation of charge  becomes
 
 .. math::
 	\nabla \cdot \mathbf{j} + \dfrac{\partial \rho_f}{\partial t} = I \delta (\mathbf{r} - \mathbf{r_s})

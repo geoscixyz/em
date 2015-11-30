@@ -4,7 +4,7 @@ Properties
 ==========
 
 Conductivity
------------
+------------
 
 Generally the mineralisation has a much higher conductivity than the host stratigraphy. The exception is the graphitic and weakly
 pyrrhotitic Breakaway Shale unit which is quite conductive. 
