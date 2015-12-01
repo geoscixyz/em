@@ -1,4 +1,4 @@
-.. _transmitters_receivers_index:
+.. _transmitters_receivers:
 
 Survey Instruments
 ==================

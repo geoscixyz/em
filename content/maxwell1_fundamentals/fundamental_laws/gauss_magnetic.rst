@@ -17,7 +17,7 @@ how the law can be derived. The frequency-domain equation is also given. At
 the end of the page, a brief history of the Gauss's law for magnetism is
 provided.
 
-
+.. _gauss_magnetic_integral:
 
 Integral equation
 -----------------
@@ -42,6 +42,8 @@ pole is equal to the strength of the south pole. This is equivalent to saying
 that a magnetic monopole, meaning a solitary north or south pole, does not
 exist because for every positive magnetic pole, there must be an equal amount
 of negative magnetic poles.
+
+.. _gauss_magnetic_differential:
 
 Differential equation
 ---------------------
