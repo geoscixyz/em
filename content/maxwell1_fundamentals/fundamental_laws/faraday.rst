@@ -13,6 +13,8 @@ source.
         :align: center
         :scale: 50%
 
+.. _faraday_integral_time:
+
 Integral Form in the Time-Domain
 --------------------------------
 
@@ -32,6 +34,8 @@ Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change
 in magnetic flux, through a surface bounded by a closed path, is negatively
 proportional to the line integral of the electric field it induces over that
 path.
+
+.. _faraday_differential_time: 
 
 Differential Form in the Time-Domain
 ------------------------------------
