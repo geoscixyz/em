@@ -5,7 +5,7 @@ Faraday's Law
 
 Faraday's law is named after English scientist Michael Faraday (1791-1867), and describes the manner in which time-varying magnetic fields induce rotational electric fields. This explains electromagnetic induction phenomenon, which is a fundamental exictation mechanism of the inductive source.
 
-    .. figure:: ../images/IntFaradayDiagram.png
+    .. figure:: ./images/IntFaradayDiagram.png
         :align: center
         :scale: 50%
 
@@ -24,11 +24,7 @@ where:
  
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
 
-Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change
-in magnetic flux, through a surface bounded by a closed path, is negatively
-proportional to the line integral of the electric field it induces over that
-path.
-
+Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
 
 Differential Form in the Time-Domain
 ------------------------------------
@@ -97,7 +93,7 @@ The contributions made by Faraday and Lenz are represented by the following equa
 
 .. include:: ../../equation_bank/faraday_lenz_time.rst
 
-Lenz's contribution to Faraday's discovery not only provides the equality in Eq. :eq:`faraday_lenz_time` , but determines the direction of force on free charges in response to changes in an applied magnetic field. For a more complete description see the :doc:`lenz` page. By substituting the definition of magnetic flux from Eq. :eq:`magnetic_flux_time` and the definition of electromotive force from Eq. :eq:`electromotive_force_time` into Eq. :eq:`faraday_lenz_time`, we can obtain Faraday's law in integral form according to Eq. :eq:`faradays_law_int_time` .
+Lenz's contribution to Faraday's discovery not only provides the equality in Eq. :eq:`faraday_lenz_time` , but determines the direction of force on free charges in response to changes in an applied magnetic field. For a more complete description see the :doc: ./lenz.rst page. By substituting the definition of magnetic flux from Eq. :eq:`magnetic_flux_time` and the definition of electromotive force from Eq. :eq:`electromotive_force_time` into Eq. :eq:`faraday_lenz_time`, we can obtain Faraday's law in integral form according to Eq. :eq:`faradays_law_int_time` .
 
 Units
 -----
