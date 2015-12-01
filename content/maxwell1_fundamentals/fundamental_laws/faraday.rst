@@ -54,6 +54,7 @@ Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will
 induce rotational electric fields. Furthermore, the curl of the induced
 electric fields opposes time-dependent changes in the inducing magnetic field.
 
+.. _faraday_frequency:
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------

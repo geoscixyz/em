@@ -5,12 +5,6 @@ Maxwell I: Fundamentals
 
 - :ref:`overview_maxwell_equations`
 - :ref:`fundamental_laws`
-
-
-.. _overview_maxwell_equations:
-
-Overview of Maxwell's Equations
--------------------------------
 In this chapter we first present a synopsis of Maxwell's equations in three forms:
 
 (a) :ref:`differential_equations_time`
@@ -24,11 +18,21 @@ more detail to promote a physical understanding and provide insight as to
 where the law is useful. In addition we provide a short synopsis of the
 scientists involved in discovering the law.
 
+.. _overview_maxwell_equations:
+
+Overview of Maxwell's Equations
+-------------------------------
+
+Maxwell's equations connect electric and mangetic fields, fluxes and physical properties. 
+
+.. include:: maxwell_variables.rst
 
 .. _differential_equations_time:
 
+
 Differential equations in time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 - :ref:`Faraday's Law <faraday_differential_time>`
 
@@ -66,14 +70,24 @@ Differential equations in frequency
 
 .. Previous content (this is commented out)
 
+.. _boundary_conditions:
+
+Boundary Conditions
+^^^^^^^^^^^^^^^^^^^
+
+
 .. _fundamental_laws:
 
 Fundamental Laws
------------------
-
-**Contents:** 
+----------------
 
 .. toctree:: 
     :maxdepth: 1
 
     fundamental_laws/index
+
+.. toctree::
+    :hidden:
+
+    maxwell_variables
+
