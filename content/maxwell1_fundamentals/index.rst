@@ -1,6 +1,6 @@
 .. _maxwell1_fundamentals_index:
 
-EM I: Fundamentals
+ME I: Fundamentals
 ==================
 
 - :ref:`overview_maxwell_equations`
