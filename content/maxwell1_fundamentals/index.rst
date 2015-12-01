@@ -18,6 +18,8 @@ more detail to promote a physical understanding and provide insight as to
 where the law is useful. In addition we provide a short synopsis of the
 scientists involved in discovering the law.
 
+.. LJH: Move the following to its own page?
+
 .. _overview_maxwell_equations:
 
 Overview of Maxwell's Equations
