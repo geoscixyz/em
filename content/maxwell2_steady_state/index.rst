@@ -9,6 +9,6 @@ Contents:
     :maxdepth: 1
     
     electrostatic_sphere
-    SphericalDepression_theory.rst 
-    SphericalDepression_numerics.rst 
-    electrostatic_sphere
+    Forward_Modelling
+    Maxwell_Discretization
+    Mt_Isa_case_study
