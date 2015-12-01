@@ -9,7 +9,7 @@ these time varying magnetic fields.
 
 A convenient way to quantify the strength of the magnetic field in a particular region is the magnetic flux (:math:`\Phi_{\mathbf{B}}`),
 
-.. include:: ../../equation_bank/magnetic_flux.rst
+.. include:: ../../equation_bank/magnetic_flux_time.rst
 
 which provides a measure of the magnetic flux density over a given area.
 
@@ -25,7 +25,7 @@ Lenz's Law states that the induced current will flow in such a direction that it
 observed change in magnetic flux. Simply put, "nature abhors a change in flux" so the induced current flows in such a manner to cancel 
 out the change [Giffiths]_. This is the reason for the negative sign in Faraday's Law, equation :eq:`faraday_lenz_time`. :numref:`Lenzs_Law_Diagram` and the demonstration linked below provide visual illustrations of Lenz's Law.
 
- .. figure:: ../figures/LenzsLawDiagram.png
+ .. figure:: ./images/LenzsLawDiagram.png
 	:align: center
 	:scale: 110% 
 	:name: Lenzs_Law_Diagram
