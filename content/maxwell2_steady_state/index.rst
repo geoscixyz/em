@@ -14,7 +14,6 @@ Contents:
     Mt_Isa_case_study
     SphericalDepression_theory
     SphericalDepression_numerics
-    electrostatic_sphere
 
 .. toctree::
    :hidden:
