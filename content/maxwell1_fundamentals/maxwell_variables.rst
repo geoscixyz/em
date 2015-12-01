@@ -14,9 +14,11 @@
  - \\(\\mathbf{d}\\): electric displacement [C/m\\(^2\\)]
  
 
+
 **Physical Properties**
 
  - \\( \\sigma \\):    electric conductivity    [S/m]          
  - \\( \\rho \\):      electric resistivity     [\\(\\Omega\\)m]
  - \\( \\mu \\):       magnetic permeability    [H/m]           
- - \\(\\varepsilon\\): dielectric permittivity  [F/m]          
+ - \\(\\varepsilon\\): dielectric permittivity  [F/m] 
+
