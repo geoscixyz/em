@@ -1,4 +1,4 @@
-.. _survey_design_index:
+.. _geophysical_surveys_index:
 
 Geophysical Surveys   
 ===================
