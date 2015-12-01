@@ -1,7 +1,7 @@
 .. _maxwell1_fundamentals_index:
 
-ME I: Fundamentals
-==================
+Maxwell I: Fundamentals
+=======================
 
 - :ref:`overview_maxwell_equations`
 - :ref:`fundamental_laws`
