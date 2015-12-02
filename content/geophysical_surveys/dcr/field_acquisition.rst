@@ -1,4 +1,4 @@
-.. _transmitters_receivers:
+.. _dcr_transmitters_receivers:
 
 Survey Instruments
 ==================
