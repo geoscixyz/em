@@ -3,8 +3,37 @@
 Direct Current Resistivity
 ==========================
 
-A brief intro to DCR, a couple examples of applications and links to relevant
-case histories
+- Intro:
+	- brief overview of the experiment
+	- applications
+	- links to case-histories
+
+In a DC resistivity  (DCR) experiment a generator is used to inject current
+into the earth. The path of the currents depends upon the variation of
+resistivity{link}  or equivalently, its reciprocal, the electrical
+conductivity {link}. Currents are channeled into good conductors and flow
+around poor conductors. Electrical charges are built up on interfaces that
+separate units of  different conductivity and these charges generate an
+electric potential.  Data are acquired at the surface by measuring the
+potential difference between two electrodes.  A generic  survey involving two
+current and two potential electrodes is shown in the {diagram below with
+A,B,M,N}.
+
+The measured voltage depends upon the positions of the current and potential
+electrodes with respect to the target as well as on the earth’s conductivity.
+Obtaining information at the conductivity in lateral and vertical directions
+requires many different locations for the electrodes and different geometries
+are given different names. {link}. For visualization purposes, the observed
+voltages are usually converted to apparent resistivities.{link} and data are
+plotted in a  pseudosection format. {link}.  A typical pseudosection is
+provided below.
+
+Pseudosections are a valuable way to present data, especially if data have
+been acquired along a single line, but extracting information about the
+conductivity requires that the observations be inverted. {link}. The cross-
+section below shows the 2D conductivity obtained by inverting the data shown
+in Fig XXX (above).
+
 
 .. toctree::
     :maxdepth: 1
@@ -12,31 +41,7 @@ case histories
     governing_equations
     field_acquisition
     data
-    practical_considerations
     survey_design
-
-
-**LJH comments** I parsed the following list to indicate where I think these
-points make sense in this layout.
-
-
-**DWO Comments:**
-DC Resistivity (DCR)
-General overview of the survey (material from 350 plus some new stuff;) 
-
- - put a current into the ground and measure the electric potentials (figures)
- - Constant current so steady state equations apply  (links to formative equations;)
- - Equations are solved numerically (links)
- - Potentials for a uniform halfspace (link) or buried sphere.
- - Data as apparent resistivity
- - Pseudo-section
- - Field acquisition (generators, receivers, cables)
- - Inverting data (Links)
-
-Other items that come into play in practise
- - Effects of topograhy
- - Assignment of uncertainties
-
-Survey Design
- - Factors that are important
- - Depth of investigation
+    interpretation
+    practical_considerations
+    

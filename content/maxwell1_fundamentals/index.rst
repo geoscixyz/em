@@ -5,6 +5,7 @@ Maxwell I: Fundamentals
 
 - :ref:`overview_maxwell_equations`
 - :ref:`fundamental_laws`
+
 In this chapter we first present a synopsis of Maxwell's equations in three forms:
 
 (a) :ref:`differential_equations_time`
@@ -29,6 +30,7 @@ Maxwell's equations connect electric and mangetic fields, fluxes and physical pr
 
 .. include:: maxwell_variables.rst
 
+
 .. _differential_equations_time:
 
 
@@ -37,23 +39,19 @@ Differential equations in time
 
 
 - :ref:`Faraday's Law <faraday_differential_time>`
-
-.. include:: ../equation_bank/faraday_time.rst
+	.. include:: ../equation_bank/faraday_time.rst
 
 
 - :ref:`Ampere Maxwell Law <ampere_maxwell_differential_time>`
-
-.. include:: ../equation_bank/ampere_maxwell_time.rst
+	.. include:: ../equation_bank/ampere_maxwell_time.rst
 
 
 - :ref:`Gauss's Law for Electric Fields <gauss_electric_differential>`
-
-.. include:: ../equation_bank/gauss_electric_time.rst
-
+	.. include:: ../equation_bank/gauss_electric_time.rst
 
 - :ref:`Gauss's Law for Magnetic Fields <gauss_magnetic_differential>`
+	.. include:: ../equation_bank/gauss_magnetic_time.rst
 
-.. include:: ../equation_bank/gauss_magnetic_time.rst
 
 
 .. _integral_equations_time:

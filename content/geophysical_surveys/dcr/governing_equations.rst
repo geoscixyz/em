@@ -1,10 +1,7 @@
-.. _governing_equations_dcr:
+.. _dcr_governing_equations:
 
 Governing Equations
 ===================
 
- - put a current into the ground and measure the electric potentials (figures)
- - Constant current so steady state equations apply  (links to formative equations;)
- - Equations are solved numerically (links)
- - Potentials for a uniform halfspace (link) or buried sphere.
-
+ - DC equations, links to steady state
+ - canonical example : currents in a half-space (or layer over-halfspace)

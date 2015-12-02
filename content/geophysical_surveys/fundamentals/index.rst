@@ -3,7 +3,7 @@
 Fundamentals
 ============
 
-Some overview here. 
+this covers the fundamentals common to the geophysical methods we will discuss
 
 .. toctree::
     :maxdepth: 1
@@ -11,3 +11,5 @@ Some overview here.
     seven_steps
     survey_design
     forward_modelling
+    inversion
+
