@@ -13,6 +13,8 @@ source.
         :align: center
         :scale: 50%
 
+.. _faraday_integral_time:
+
 Integral Form in the Time-Domain
 --------------------------------
 
@@ -33,6 +35,8 @@ in magnetic flux, through a surface bounded by a closed path, is negatively
 proportional to the line integral of the electric field it induces over that
 path.
 
+.. _faraday_differential_time: 
+
 Differential Form in the Time-Domain
 ------------------------------------
 
@@ -50,6 +54,7 @@ Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will
 induce rotational electric fields. Furthermore, the curl of the induced
 electric fields opposes time-dependent changes in the inducing magnetic field.
 
+.. _faraday_frequency:
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------
