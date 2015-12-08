@@ -66,13 +66,13 @@ considering the zero-frequency case, in which case, Maxwell's equations are
 Knowing that the curl of the gradient of any scalar potential is always zero,
 according to :eq:`Faraday_DC`, we can define a scalar potential so that the
 primary electric field is the gradient of a potential. For convenience, we
-define it to be the negative gradient of a potential, \\(V\\)
+define it to be the negative gradient of the potential, \\(V\\)
 
 .. math::
 	\mathbf{e} = -\nabla V
 	:label: DC_Potential
 
-To define the potential at a point \\(p\\) from an electric field requires an integration
+To define the potential at a point \\(p\\) from an electric field requires integration
 
 .. math::
     V = -\int_{ref}^p \mathbf{e} \cdot \mathbf{dl}
@@ -81,7 +81,7 @@ To define the potential at a point \\(p\\) from an electric field requires an in
 The choice of reference point \\(ref\\) is arbitrary, but it is often
 convenient to consider the reference point to be infinitely far away, so
 \\(ref = \\infty\\). In this case, the electric potential at \\(p\\) is
-equivalent to the amount of work done by to bring a positive charge from
+equivalent to the amount of work done to bring a positive charge from
 infinity to the point \\(p\\).
 
 
@@ -167,9 +167,9 @@ and inside the sphere \\( (r < R) \\)
 Electric Field
 --------------
 
-When an external electric field comes across conductivity discontinuities within heterogeneous media, 
-it leads to charge buildup at boundaries of these discontinuities, which immediately gives 
-rise to a secondary electric field governed by Gauss’s Law to oppose the change of the primary field. 
+When an external electric field crosses conductivity discontinuities within heterogeneous media, 
+it leads to charge buildup on the interface, which immediately gives 
+rise to a secondary electric field governed by Gauss’s Law, to oppose the change of the primary field. 
 Considering that the electric field is defined as the negative gradient of the potential, 
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
@@ -355,9 +355,9 @@ During a DC survey, we measure the difference of potentials between two
 electrodes, often along a profile. 
 
 Therefore, when we look at data (as in the bottom plot), we see that they will
-depend upon the orientation depend of the orientation of the survey line, as well as the spacing between electrodes.
+depend upon the orientation of the survey line, as well as the spacing between electrodes.
 
-We also notice that the differences measured inside the sphere is constant,
+We also notice that the differences measured inside the sphere are constant,
 whereas outside the sphere, we observe variations in the potential differences
 in the vicinity of the sphere that then approach a constant value as we move
 away from the sphere.
@@ -401,8 +401,8 @@ Building some Intuition for DC problem
 --------------------------------------
 
 In real life, we do not know the underground configuration. We only see the
-data and we are trying to model the underground based on it. There are
-several sets of parameters that can fit perfectly the data. Even in the simple
+data and we are trying to model the subsurface based on it. There are
+several sets of parameters that can fit the data perfectly. Even in the simple
 case presented here, where we know that the object is a sphere, whose response can be
 calculated analytically, we find several configurations that can produce
 the same data along the same profile.
