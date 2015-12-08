@@ -7,3 +7,5 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    theory_3loops
