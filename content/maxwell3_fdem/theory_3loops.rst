@@ -89,6 +89,8 @@ There are a few significant things about Equation :eq:`m12`:
 
 So,  by solving Equation :eq:`m12` for the three mutual inductances for a three-loop system, we can analytically solve Equation :eq:`l2` and determine the data \\( \\mathbf{H}^s / \\mathbf{H}^p \\) over different targets, using differing frequencies, loop orientations, and loop separations. This can provide meaningful understanding about three-loop systems (such as the EM-31 and Resolve systems) and their data.
 
+TODO: link to Python app for three-loop system
+
 List of variables:
 
 - `I` = inclination (degrees)
