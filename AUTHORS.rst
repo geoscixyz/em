@@ -3,4 +3,4 @@
 - Michael Mitchell, (`@micmitch <https://github.com/micmitch/>`_) 
 - Thibaut Astic, (`@thast <https://github.com/thast>`_)
 - Sarah Devriese, (`@sdevriese <https://github.com/sdevriese>`_)
-- Mike McMillan, ('@mikemcm <https://github.com/mikemcm>'_)
+- Mike McMillan, (`@mikemcm <https://github.com/mikemcm>`_)
