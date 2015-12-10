@@ -35,7 +35,7 @@ where:
     Enclosed current. 
 
 
-The first portion of the equation was discovered by Ampere. It shows the relationship
+The first term of the right hand side of the equation was discovered by Ampere. It shows the relationship
 between a current \\(I_{enc}\\) and the circulation of the magnetic field, \\(\\mathbf{b}\\),
 around any closed contour line (See :numref:`Ienc`). \\(I_{enc}\\) refers to all currents
 irrespective of their physical origin.
@@ -61,7 +61,7 @@ stretched surface, as shown in :numref:`Capacitor`. In the first case,
 the enclosed current is the flow of charges in the wire. In the second case,
 however, there are no charges flowing through the surface, yet the magnetic
 field defined on the enclosing curve, \\(C\\), must be the same. This apparent
-discrepancy is reconciled if we take in to account the displacement current,
+discrepancy is reconciled if we take into account the displacement current,
 which is the time rate of change of the electric field, between the two
 plates. This integration is the same as if we were integrating over a flat
 surface with the current wire crossing it.
@@ -76,7 +76,7 @@ surface with the current wire crossing it.
 
 
 The integral formulations are physically insightful and closely relate to the
-experiments that gave rise to them. They are also play a formative role in
+experiments that gave rise to them. They also play a formative role in
 generating boundary conditions for waves that propagate through different
 materials.
 
@@ -145,7 +145,7 @@ The total current density is the sum of these three contributions and is describ
 
 
 Continuing to treat the free current and bound current separately and using the 
-constitutive equations: \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\), \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\), the integral form Ampere-Maxwell equation can be reformulated as:
+constitutive equations: \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\) and \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\), the integral form Ampere-Maxwell equation can be reformulated as:
 
 .. math::
     \int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{da} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}.
@@ -165,7 +165,7 @@ Differential equation in the time domain
 ----------------------------------------
 
 There are a number of ways of writing the equation in differential form. Each
-provides its own insight. We begin by considering the differential form of equation :eq:`ampere_maxwell_integral` in terms of the variables \\(\\mathbf{e, b, p, m} \\)
+provides its own insight. We begin by considering the differential form of equation :eq:`ampere_maxwell_integral` in terms of the variables \\(\\mathbf{e, b, p} \\) and \\(\\mathbf{m} \\):
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{b} 
@@ -175,7 +175,7 @@ provides its own insight. We begin by considering the differential form of equat
         + \boldsymbol{\nabla} \times \mathbf{m}\right) 
     :label: ampere_maxwell_differential_ebpm
 
-and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive relations \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\) to write the differential time-domain equation in terms of the variables \\(\\mathbf{h, j_f, d} \\)
+and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive relations \\(\\mathbf{d}= \\varepsilon_0 \\mathbf{e} + \\mathbf{p}\\) and \\( \\mathbf{b} = \\mu_0(\\mathbf{h} + \\mathbf{m})\\) to write the differential time-domain equation in terms of the variables \\(\\mathbf{h, j_f} \\) and \\(\\mathbf{d} \\):
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}.
@@ -285,23 +285,23 @@ Units
 Discovers of the law
 --------------------
 
-The first observation that bring researchers to look for the relationship linking magnetic field and current is due to Hans Christian Ørsted in 1820, who notices electric currents were deflected magnetic needles. This leads several physicists in Europe to study this phenomenon in parallels. While Jean-Baptiste Biot and Félix Savart were experimenting with a setup closed to Ørsted's experiment (that lead them to define in 1820 a relationship known now as the Biot-Savart's law), André-Marie Ampère's experiment focus on measuring the forces that two electric wires were exerting on each other.He expressed the Ampere’s circuital law in 1826 [1]_,
+The first observation that spurred researchers to look for the relationship linking magnetic field and current was made by Hans Christian Ørsted in 1820, who noticed that magnetic needles were deflected by electric currents. This led several physicists in Europe to study this phenomenon in parallel. While Jean-Baptiste Biot and Félix Savart were experimenting with a setup similar to Ørsted's experiment (that lead them to define in 1820 a relationship known now as the Biot-Savart's law), André-Marie Ampère's experiment focused on measuring the forces that two electric wires exert on each other. He formulated the Ampere’s circuital law in 1826 [1]_,
 which relates the magnetic field associated with a closed loop to the electric
 current passing through it. In its original form, the current enclosed by the
 loop only refers to free current caused by moving charges, causing several issues
 regarding the conservation of electric charge and the propagation of
 electromagnetic energy.
 
-In 1861 [2]_, James Clerk Maxwell extended the Ampere’s law by introducing the
-displacement current into the electric current term in the equation to satisfy
+In 1861 [2]_, James Clerk Maxwell extended Ampere’s law by introducing the
+displacement current into the electric current term to satisfy
 the continuity equation of electric charge. Based on the idea of displacement
-current, in 1864 [3]_, Maxwell had established the theory of electromagnetic
-field, predicating the wave propagation of electromagnetic field and the
-equivalence of light propagation and electromagnetic wave.
+current, in 1864 [3]_, Maxwell established the theory of electromagnetic
+field, predicating the wave propagation of electromagnetic fields and the
+equivalence of light propagation and electromagnetic wave propagation.
 
-Until the late 1880s [4]_, Heinrich Hertz had experimentally proved the existence
-of electromagnetic waves predicated by Maxwell’s electromagnetic theory, and
-demonstrated the equivalence of electromagnetic wave and light.
+It was not until the late 1880s [4]_, Heinrich Hertz experimentally proved the existence
+of electromagnetic waves as predicated by Maxwell’s electromagnetic theory, and
+demonstrated the equivalence of electromagnetic waves and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
 
