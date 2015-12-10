@@ -3,13 +3,11 @@
 Survey Instruments
 ==================
 
-- :ref:`power_supply`
-- :ref:`transmitters`
+- :ref:`power_supply_transmitter`
 - :ref:`receivers`
 - :ref:`survey_layouts`
-- :ref:`survey_acquisition`
 
-.. _power_supply:
+.. _power_supply_transmitter:
 
 Power supply and transmitter
 ----------------------------
