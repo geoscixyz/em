@@ -50,6 +50,7 @@ Since this equation must hold for any volume :math:`V` , we can equate the integ
 	\boldsymbol{\nabla} \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0}.
 	:label: Gauss_e_diff
 
+.. _coulomb:
 
 Equivalence to Coulomb's law
 ----------------------------

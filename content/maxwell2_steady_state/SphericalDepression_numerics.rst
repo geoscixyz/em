@@ -65,7 +65,7 @@ Interpretations
 ===============
 
 Using Eqs. :eq:`elec` and :eq:`charg`, we can compute both electric fields and charge density in 3D. First, we consider charge density. The below figure shows total, primary, and secondary charge densities. From the total and primary charge densities (top and middle panels), we clearly see secondary charge build-up due to the topographic effects is difficult to be recognized because of positive charges due to the input current. The secondary charge density clearly shows the topographic effects. Positive and negative charges are built up on 
-the left side of the depressed hemi-sphere, closest to the input current. Since the air region are act as an insulator, all postive charge cannot pass through this hemi-sphere region and accumulated on the left side closer to the input current. The magnitude of negative charge build-up on the right side is much smaller than the postive charge on the other side. These postive and negative charges will generate electric fields based on Coulomb's law (See Section :ref:`gauss_electric`).  
+the left side of the depressed hemi-sphere, closest to the input current. Since the air region are act as an insulator, all postive charge cannot pass through this hemi-sphere region and accumulated on the left side closer to the input current. The magnitude of negative charge build-up on the right side is much smaller than the postive charge on the other side. These postive and negative charges will generate electric fields based on Coulomb's law (See Section :ref:`coulomb`).  
 
 .. figure:: ./figures/ComparisonSecFineChargs.png
    :align: center
