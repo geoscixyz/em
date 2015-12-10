@@ -49,7 +49,7 @@ the wire is:
 Magnetic flux along the central axis of a loop
 ----------------------------------------------
 
-Given a loop of radius R, which is infinitesimally thin, carrying a electric current of
+Given a loop of radius \\(R\\), which is infinitesimally thin, carrying a electric current of
 intensity \\(i\\), the generated magnetic flux along the central axis of the loop
 \\(\\mathbf{z}\\), at a distance \\(r\\), is:
 
