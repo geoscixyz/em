@@ -26,7 +26,7 @@ Integral equation
 The Gauss's law for magnetic fields in integral form is given by:
 
 .. math::
-    \oint_S \mathbf{b} \cdot d\mathbf{a} =  0,
+    \oint_S \mathbf{b} \cdot \mathbf{da} =  0,
     :label: gauss_magnetic_integral
 
 where:
@@ -114,6 +114,7 @@ The equation can also be written in the frequency-domain as:
         \nabla \cdot \mathbf{B} = 0.
         :label: gauss_magnetic_diff_freq
 
+.. _gauss_magnetic_frequency:
 
 Units
 -----
