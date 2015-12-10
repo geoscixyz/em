@@ -1,12 +1,12 @@
-.. _boundary_conditions:
+.. _interface_conditions:
 
-Boundary Conditions
-===================
+Interface Conditions
+====================
 
 It's important to understand how the electromagnetic fields and fluxes change
 at boundaries between media of differing material properties. In this section,
-we derive these boundary, or interface, conditions from Maxwell's equations in
-time domain integral form. To recap, the equations are
+we derive these interface conditions from Maxwell's equations in time domain
+integral form. To recap, the equations are
 
 .. math::
   \oint_S \mathbf{d}\cdot \hat{\mathbf{n}}\,da = Q_{\text{enc}},
@@ -47,7 +47,7 @@ Griffiths (c.f.  [1]_).
     :align: center
     :name: twoLayerMedium
 
-    Two layered medium
+    Two layered medium. [#f1]_
 
 
 Normal Component of Electric Displacement
@@ -58,12 +58,11 @@ Normal Component of Electric Displacement
     :scale: 70% 
     :name: pillbox
 
-    Gaussian pillbox. 
-
+    Gaussian pillbox. [#f1]_
 
 Consider an extremely small Gaussian pillbox of height :math:`h` and cross-
 sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is
-shown in :numref:`pillbox`. To derive the boundary condition on the normal
+shown in :numref:`pillbox`. To derive the interface condition on the normal
 component of the electric displacement, denoted as :math:`d_{n}`, we apply
 Gauss's law formulated in terms of electric displacement :eq:`GaussEint` to
 the pillbox, yielding to
@@ -98,7 +97,7 @@ which yields the interface condition on the normal component of
   d_{1n} - d_{2n} = \tau_f.
   
 That is, the normal component the electric displacement is discontinuous at
-the boundary.  If the medium is linear and isotropic, the condition can be
+the interface.  If the medium is linear and isotropic, the condition can be
 written in terms of the electric field as
 
 .. math::
@@ -119,7 +118,7 @@ condition on the normal magnetic flux is given by
   
 
 That is, the normal component of the magnetic flux is continuous at the
-boundary.
+interface.
 
 Tangential Component of the Electric Field
 ------------------------------------------
@@ -129,9 +128,9 @@ Tangential Component of the Electric Field
     :scale: 70% 
     :name: rectangle
 
-    Gaussian rectangle. 
+    Gaussian rectangle. [#f1]_
 
-The boundary condition on the tangential component of the electric field,
+The interface condition on the tangential component of the electric field,
 denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in
 integral form :eq:`faradays_law_int_time`. Consider Faraday's law applied to
 the extremely small rectangle of height :math:`h`, width :math:`l` and area
@@ -162,7 +161,7 @@ Dividing by :math:`l` the previous expression yields the interface condition
 
 
 That is, the tangential component of the electric field is continuous at the
-boundary.
+interface.
 
 Tangential Component of the Magnetic Field
 ------------------------------------------
@@ -192,9 +191,16 @@ component of the magnetic field
   h_{1t}- h_{2t} = j_{\text{surf}}.
   
 That is, the tangential component of the magnetic field is discontinuous at
-the boundary.
+the interface.
 
 References
 ----------
 
 .. [1] Griffiths, David J. Introduction to Electrodynamics, 3rd edition. Prentice Hall, Upper Saddle River, New Jersey. 1999.
+
+
+.. rubric:: Footnotes
+.. [#f1] Figures were created by `Luz`_ and are licenced under `CC BY 2.0`_
+
+.. _Luz: https://luzcaudillo.wordpress.com/
+.. _CC BY 2.0: http://creativecommons.org/licenses/by/2.0/

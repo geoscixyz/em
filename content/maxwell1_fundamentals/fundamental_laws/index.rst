@@ -10,6 +10,7 @@ Contents:
     faraday
     ampere_maxwell
     conservation_of_charge
-    boundary_conditions
+    interface_conditions
     biot_savart
     lenz
+    

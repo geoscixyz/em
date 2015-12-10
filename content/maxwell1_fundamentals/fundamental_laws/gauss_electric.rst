@@ -17,7 +17,7 @@ a positive electric field. The law was published posthumously in 1867 as part
 of a collection of work by the famous German mathematician Carl Friedrich
 Gauss.
 
-
+.. _gauss_electric_integral:
 
 Integral Equation
 -----------------
@@ -34,6 +34,8 @@ where:
  - \\( Q \\) is the enclosed electric charge
  - \\( \\varepsilon_0 \\) is the electric permittivity of free space
  - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
+
+.. _gauss_electric_differential:
 
 Differential Form
 -----------------

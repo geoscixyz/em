@@ -8,6 +8,8 @@ describes the magnetic fields that result from a transmitter wire or loop in
 electromagnetic surveys. For steady currents, it is key for describing the
 magnetometric resistivity experiment.
 
+.. _ampere_maxwell_integral_time:
+
 Integral Equation
 -----------------
 
@@ -160,6 +162,7 @@ Note that the bound charge due to magnetization is integrated into the magnetic
 field \\(\\mathbf{h}\\), whereas the bound charge due to electric polarization is
 integrated into the displacement field \\(\\mathbf{d}\\).
 
+.. _ampere_maxwell_differential_time:
 
 Differential equation in the time domain
 ----------------------------------------
@@ -182,7 +185,7 @@ and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive re
     :label: ampere_maxwell_differential_hjd
 
 
-
+.. _ampere_maxwell_differential_frequency:
 
 Differential equations in the frequency domain
 ---------------------------------------------- 

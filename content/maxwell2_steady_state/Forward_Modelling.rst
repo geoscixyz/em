@@ -1,4 +1,4 @@
-.. _Forward_Modelling:
+.. _DC_Forward_Modelling:
 
 DC Forward Modelling
 ====================
