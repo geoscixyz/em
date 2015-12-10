@@ -14,11 +14,11 @@ First item is important since we use this forward modelleing algorithm for the i
    There can be errors on derived analytic solutions!
 
 Without a physical understanding of electromagnetic fields in the earth, the proper use of EM geophysics is difficult, thus it is important to develop a thorough understanding of electromagnetic theory.
-To investigate effects only due to topography, we subtract the primary potential (:math:`\psi^p = \frac{I\rho}{2\pi R}`) from the total potential, :math:`\psi`  which yields the secondary potential (:math:`\psi^s`):
+To investigate effects only due to topography, we subtract the primary potential (:math:`\phi^p = \frac{I\rho}{2\pi R}`) from the total potential, :math:`\phi`  which yields the secondary potential (:math:`\phi^s`):
 
 .. math::
 
-   \psi^s = \psi - \psi^p
+   \phi^s = \phi - \phi^p
 
 By taking the gradient, then the electric field :math:`\bf{e}` and total charge density (:math:`\rho_T`) can be computed using equations below:
 
@@ -42,7 +42,7 @@ Numerical validations
    Section view of 3D resistivity model for depressed hemi-sphere. 
 
 The above resistivity model shows a depressed hemisphere model. The resistivity of the depressed hemi-sphere is set to :math:`10^8` ohm-m (close to infinity) to simulate air, and the half-space is set to and :math:`10^3` ohm-m. 
-To compute potentials from the above depressed hemi-sphere model, we first use numerical solutions using DCIP3D code (CITEXXX). Then to check the accuracy of our numerical algorithm we use analytic solution of a sphere problem that we derived in Section :ref:`effecttopo_theory`. For the numerical evaluation of that an analytic solution we use :ref:`effecttopo_code`. To proceed with this validation, we consider a pole transmitter injected in the ground. In the above figure, injected current source location is shown. 
+To compute potentials from the above depressed hemi-sphere model, we first use numerical solutions using DCIP3D code [1]_. Then to check the accuracy of our numerical algorithm we use analytic solution of a sphere problem that we derived in Section :ref:`effecttopo_theory`. For the numerical evaluation of that an analytic solution we use :ref:`effecttopo_code`. To proceed with this validation, we consider a pole transmitter injected in the ground. In the above figure, injected current source location is shown. 
 
 For numerical computations, a 3D mesh with 5 m core cells is used. We compute potentials in every cells in the 3D domain. Top and middle panels of the below figure shows computed numerical and analytic potentials, respectively. White lines delineate the boundary of the depressed hemi-sphere. The bottom panel of below figure shows relative error, and blank region close to the source has errors greater than 10 percent. Even at the boundary of the hemi-sphere, we have less than 4 percent error. This is a reasonable accuracy considering that our noise level is roughly 10 percent for the DC problem.
 This shows our numerical solution has a capability to accurately compute those topographic effects, although our choice of discretization is clearly important.
@@ -93,3 +93,6 @@ Based on the above principle, first imagine how electric fields are going to be 
 .. |ComparisonSecFineChargs| image:: ./figures/ComparisonSecFineChargs.png
 .. |ComparisonSecFineEfield| image:: ./figures/ComparisonSecFineEfield.png
 
+References
+==========
+.. [1] Oldenburg, D. W. and Li, Y., 1994, Inversion of induced polarization data, Geophysics. 
