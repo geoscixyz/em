@@ -5,3 +5,4 @@
 - Sarah Devriese, (`@sdevriese <https://github.com/sdevriese>`_)
 - Mike McMillan, (`@mikemcm <https://github.com/mikemcm>`_)
 - Seogi Kang, (`@sgkang <https://github.com/sgkang>`_)
+- Dom Fournier, (`@fourndo <https://github.com/fourndo>`_)
