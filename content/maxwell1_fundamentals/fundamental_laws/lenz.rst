@@ -17,7 +17,7 @@ Faraday's Law of induction,
 
 .. include:: ../../equation_bank/faraday_lenz_time.rst
 
-shows that any variation in the magnetic flux produces and electromotive force (emf, :math:`\mathcal{E}`). This emf creates electrical 
+shows that any variation in the magnetic flux produces an electromotive force (emf, :math:`\mathcal{E}`). This emf creates electrical 
 currents within those bodies which are subjected to the time varying flux. The amplitude of the induced current is dependent on the 
 strength of the emf and the conductivity of the material, while the direction of the induced current is characterized by Lenz's Law. 
 
@@ -31,9 +31,7 @@ out the change [Giffiths]_. This is the reason for the negative sign in Faraday'
 	:name: Lenzs_Law_Diagram
 
 	In panel (a) we see a situation in which the magnetic flux through the loop is increasing as a function of time. The induced current direction 
-	and the secondary magnetic field which opposes the increase in flux is shown in panel (b). Similarly, panels (d) shows the direction of the 
-	induced current and secondary magnetic field when the magnetic flux through the loop is decreasing as a function of time as indicated by panel (c). 
-
+	and the secondary magnetic field which opposes the increase in flux is shown in panel (b). Similarly, panel (c) shows when the magnetic flux through the loop is decreasing as a function of time and panel (d) demonstrates the direction of the induced current and secondary magnetic field.
 
 Illustrative Demo:
 `MIT Physics Demo - Lenz's Law with Copper Pipe 
@@ -41,5 +39,5 @@ Illustrative Demo:
 
 **References** 
 
-.. [Giffiths] Griffiths, David. J (1999). Introduction to Electrodynamics (3st ed.). Prentice Hall.  
+.. [Giffiths] Griffiths, David. J (1999). Introduction to Electrodynamics (3rd ed.). Prentice Hall.  
 
