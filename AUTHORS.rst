@@ -7,3 +7,4 @@
 - Seogi Kang, (`@sgkang <https://github.com/sgkang>`_)
 - Dom Fournier, (`@fourndo <https://github.com/fourndo>`_)
 - Devin Cowan, (`@dccowan <https://github.com/dccowan>`_)
+- Luz Angelica Caudillo Mata, (`@lacmajedrez <https://github.com/lacmajedrez>`_)
