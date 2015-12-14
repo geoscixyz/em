@@ -8,6 +8,14 @@ Direct Current Resistivity
 	- applications
 	- links to case-histories
 
+ .. figure:: images/DCR_Intro.png
+    :align: right
+    :scale: 60% 
+    :name: DCR_intro
+
+    Direct-Current Resisitivity (DCR) experiment.
+
+
 In a DC resistivity  (DCR) experiment a generator is used to inject current
 into the earth. The path of the currents depends upon the variation of
 resistivity{link}  or equivalently, its reciprocal, the electrical
@@ -16,8 +24,8 @@ around poor conductors. Electrical charges are built up on interfaces that
 separate units of  different conductivity and these charges generate an
 electric potential.  Data are acquired at the surface by measuring the
 potential difference between two electrodes.  A generic  survey involving two
-current and two potential electrodes is shown in the {diagram below with
-A,B,M,N}.
+current and two potential electrodes is shown in :numref:`DCR_intro` for the case
+of (a) a conductive and (b) a resistive unit in a uniform half-space.
 
 The measured voltage depends upon the positions of the current and potential
 electrodes with respect to the target as well as on the earth’s conductivity.
