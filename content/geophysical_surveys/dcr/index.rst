@@ -39,19 +39,22 @@ Obtaining information at the conductivity in lateral and vertical directions
 requires many different locations for the electrodes and different geometries
 are given different names. :numref:`DCR_TwoSpheres`. For visualization purposes, the observed
 voltages are usually converted to apparent resistivities.{link} and data are
-plotted in a  pseudosection format :numref:`DCR_AppRes`.  A typical pseudosection is
+plotted in a  pseudosection format.  A typical pseudosection is
 provided below.
 
  .. figure:: images/TwoSphere_model.png
     :align: center
-    :scale: 80% 
+    :scale: 90% 
     :name: DCR_TwoSpheres
 
     Two-spheres model with dipole-dipole configuration.
 
+ .. raw:: html
+    :file: images/JSAnim_Sphere.html
+
  .. figure:: images/TwoSphere_AppRes.png
     :align: center
-    :scale: 80% 
+    :scale: 90% 
     :name: DCR_AppRes
 
     Pseudo-section of apparent resistivity (log10).
@@ -60,17 +63,18 @@ Pseudosections are a valuable way to present data, especially if data have
 been acquired along a single line, but extracting information about the
 conductivity requires that the observations be inverted. {link}. The cross-
 section below shows the 2D conductivity obtained by inverting the data shown
-in :numref:`DCR_Inv2D`.
+in :numref:`DCR_AppRes`. Regions of the recovered model with low confidence 
+are set to transparent using a :ref:`Depth of Investigation<depth_of_investigation>` analysis.
 
- .. figure:: images/TwoSphere_Inv2D.png
+ .. figure:: images/TwoSphere_Inv2D_DOI.png
     :align: center
-    :scale: 80% 
+    :scale: 90% 
     :name: DCR_Inv2D
 
     Inverted 2D model.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     governing_equations
     field_acquisition
