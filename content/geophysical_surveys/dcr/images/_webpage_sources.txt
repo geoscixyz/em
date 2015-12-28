@@ -6,5 +6,6 @@ pole-dipole_pseudo:             http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/
 polediple.PNG:                  http://en.openei.org/wiki/DC_Resistivity_Survey_(Pole-Dipole_Array)
 receiver_electrode_porous_pots: http://www.agiusa.com/agicatalog.shtml
 transmitter_dcip_vip5000:       http://www.hazzazi-sa.com/agents/iris-instruments?page=1
+DCR_Intro:			https://docs.google.com/drawings/d/1dkAvLiNThg3AK5nsSRT3sktd4ITjZaQg4RQbAs9h7jY/edit
 
 
