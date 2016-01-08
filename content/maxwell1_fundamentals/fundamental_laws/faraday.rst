@@ -27,6 +27,7 @@ where:
 Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
 
 .. _faraday_differential_time:
+
 Differential Form in the Time-Domain
 ------------------------------------
 
