@@ -10,9 +10,14 @@ Gauss's Law for Magnetic Fields
     When a bar magnet is cut in two, you get two bar magnets.
 
  
-Gauss's law for magnetism states that no magnetic monopoles exists and that the total flux through a closed surface must be zero. This page describes the time-domain integral and differential forms of Gauss's law for magnetism and how the law can be derived. The frequency-domain equation is also given. At the end of the page, a brief history of the Gauss's law for magnetism is provided.
+Gauss's law for magnetism states that no magnetic monopoles exists and that
+the total flux through a closed surface must be zero. This page describes the
+time-domain integral and differential forms of Gauss's law for magnetism and
+how the law can be derived. The frequency-domain equation is also given. At
+the end of the page, a brief history of the Gauss's law for magnetism is
+provided.
 
-
+.. _gauss_magnetic_integral:
 
 Integral equation
 -----------------
@@ -27,11 +32,24 @@ where:
 
 - \\( \\mathbf{b} \\) is the magnetic flux
     
-The equation states that there is no net magnetic flux \\(\\mathbf{b}\\) (which can be thought of as the number of magnetic field lines through an area) that passes through an arbitrary closed surface \\(\\mathbf{s}\\). This means the number of magnetic field lines that enter and exit through this closed surface \\(\\mathbf{s}\\) is the same. This is explained by the concept of a magnet that has a north and a south pole, where the strength of the north pole is equal to the strength of the south pole. This is equivalent to saying that a magnetic monopole, meaning a solitary north or south pole, does not exist because for every positive magnetic pole, there must be an equal amount of negative magnetic poles.
+The equation states that there is no net magnetic flux \\(\\mathbf{b}\\)
+(which can be thought of as the number of magnetic field lines through an
+area) that passes through an arbitrary closed surface \\(\\mathbf{s}\\). This
+means the number of magnetic field lines that enter and exit through this
+closed surface \\(\\mathbf{s}\\) is the same. This is explained by the concept
+of a magnet that has a north and a south pole, where the strength of the north
+pole is equal to the strength of the south pole. This is equivalent to saying
+that a magnetic monopole, meaning a solitary north or south pole, does not
+exist because for every positive magnetic pole, there must be an equal amount
+of negative magnetic poles.
+
+.. _gauss_magnetic_differential:
 
 Differential equation
 ---------------------
-Gauss's law for magnetic fields in the differential form can be derived using the divergence theorem. The divergence theorem states:
+
+Gauss's law for magnetic fields in the differential form can be derived using
+the divergence theorem. The divergence theorem states:
 
 .. math::
         \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da}
@@ -116,8 +134,24 @@ Units
 Discoverers of the law
 ----------------------
 
-Gauss's law for magnetism is a physical application of Gauss's theorem (also known as the divergence theorem) in calculus, which was independently discovered by Lagrange in 1762, Gauss in 1813, Ostrogradsky in1826, and Green in 1828. Gauss's law for magnetism simply describes one physical phenomena that a magnetic monopole does not exist in reality. So this law is also called "absence of free magnetic poles".
+Gauss's law for magnetism is a physical application of Gauss's theorem (also
+known as the divergence theorem) in calculus, which was independently
+discovered by Lagrange in 1762, Gauss in 1813, Ostrogradsky in1826, and Green
+in 1828. Gauss's law for magnetism simply describes one physical phenomena
+that a magnetic monopole does not exist in reality. So this law is also called
+"absence of free magnetic poles".
 
-People had long been noticing that when a bar magnet is divided into two pieces, two small magnets are created with their own south and north poles. This can be explained by Ampere's circuital law: the bar magnet is made of many circular currents rings, each of which is essentially a magnetic dipole; the macroscopic magnetism is from the alignment of the microscopic magnetic dipoles. Because a small current ring always generates an equivalent magnetic dipole, there is no way of generating a free magnetic charge. So far, no magnetic monopole has been found in experiments, despite that many theorists believe a magnetic monopole exists and are still searching for it.
+People had long been noticing that when a bar magnet is divided into two
+pieces, two small magnets are created with their own south and north poles.
+This can be explained by Ampere's circuital law: the bar magnet is made of
+many circular currents rings, each of which is essentially a magnetic dipole;
+the macroscopic magnetism is from the alignment of the microscopic magnetic
+dipoles. Because a small current ring always generates an equivalent magnetic
+dipole, there is no way of generating a free magnetic charge. So far, no
+magnetic monopole has been found in experiments, despite that many theorists
+believe a magnetic monopole exists and are still searching for it.
 
-However, as pointed out by Pierre Curie in 1894, magnetic monopoles can exist conceivably. Introducing fictitious magnetic charges to the Maxwell's equations can give Gauss's law for magnetism the same appearance as Gauss's law for electricity, and the mathematics can become symmetric.
+However, as pointed out by Pierre Curie in 1894, magnetic monopoles can exist
+conceivably. Introducing fictitious magnetic charges to the Maxwell's
+equations can give Gauss's law for magnetism the same appearance as Gauss's
+law for electricity, and the mathematics can become symmetric.
