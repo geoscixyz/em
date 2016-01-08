@@ -100,7 +100,7 @@ Units
 -----
 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Magnetic flux density    | \\(\\mathbf{b}\\) |\\(\\frac{\\text{Wb}}      | Weber per square meter               |
+| Magnetic flux density    | \\(\\mathbf{b}\\) |\\(\\frac{\\text{Wb}}      | Weber per square meter                |
 |                          |                   |{\\text{m}^{2}}\\)         |                                       | 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric current density | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}}       |                                       |
