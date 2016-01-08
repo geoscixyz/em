@@ -16,9 +16,9 @@ Some questions to think about that will influence the survey design:
 
 Detectability
 -------------
-In order for a target to be detectable, the secondary field (whether that be the electric field, magnetic field, or voltage potential) must be larger than the noise (geologic noise, instrument noise, etc) and it must be relatively large enough compared to the primary field. For example, if the noise in the primary field is anticipated to be 5% and the instrument sensitivity is 5 mV, then the secondary field must at least be above 5 mV to be detectable but also be more than 5% different compared to the primary field. This provides us with two metrics: relative detectability and absolute detectability.
+In order for a target to be detectable, the secondary field (whether that be the electric field, magnetic field, or voltage potential) must be larger than the noise (geologic noise, instrument noise, etc) and it must be relatively large enough compared to the primary field. For example, if the noise in the primary field is anticipated to be 5% and the instrument sensitivity is 5 mV, then the secondary field must at least be above 5 mV to be detectable but also be more than 5% different compared to the primary field. This provides us with two metrics: relative difference and absolute difference.
 
-Relative detectability (\\( RD \\)) and absolute detectability (\\( AD \\)) are determined as follows:
+Relative difference (\\( RD \\)) and absolute difference (\\( AD \\)) are determined as follows:
 
 .. math::
         RD = \frac{F^S}{F^P} * 100,
