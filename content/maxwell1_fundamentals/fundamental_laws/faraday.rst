@@ -149,7 +149,7 @@ These induced currents are parallel to :math:`{\bf e}` , and have a magnitude wh
 Therefore, we can use Faraday's law in differential form to understand the manner in which rotational currents are induced in conductive objects, by an artificially generated primary field.
 
 According to the Biot-Savart law Section :ref:`biot_savart`, current densities are responsible for generating magnetic fields.
-This implies that currents induced by the primary field will result in the creation of an anomalous magnetic field, commonly refered to as the secondary field LinkXXX.
+This implies that currents induced by the primary field will result in the creation of an anomalous magnetic field, commonly refered to as the secondary field.
 The secondary field can be measured at locations above the Earth's surface, and provides important information regarding subsurface geological structures.
 But how is the secondary field measured?
 
