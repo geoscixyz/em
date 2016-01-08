@@ -61,10 +61,16 @@ Integral equations in time
 
 .. summary of relevant equations
 
+- :ref:`Gauss's Law for Magnetic Fields <gauss_magnetic_integral>`
+	.. include:: ../equation_bank/gauss_magnetic_int_time.rst
+
 .. _differential_equations_frequency:
 
 Differential equations in frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- :ref:`Gauss's Law for Magnetic Fields <gauss_magnetic_frequency>`
+	.. include:: ../equation_bank/gauss_magnetic_frequency.rst
 
 .. summary of relevant equations
 

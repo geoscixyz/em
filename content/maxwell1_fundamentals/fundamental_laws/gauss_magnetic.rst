@@ -6,6 +6,7 @@ Gauss's Law for Magnetic Fields
 .. figure:: images/BarMagnet.png
     :figwidth: 50%
     :align: right
+    :name: barmagnet
 
     When a bar magnet is cut in two, you get two bar magnets.
 
@@ -22,10 +23,10 @@ provided.
 Integral equation
 -----------------
 
-The Gauss's law for magnetic fields in integral form is given below:
+The Gauss's law for magnetic fields in integral form is given by:
 
 .. math::
-    \oint_S \mathbf{b} \cdot d\mathbf{a} =  0
+    \oint_S \mathbf{b} \cdot \mathbf{da} =  0,
     :label: gauss_magnetic_integral
 
 where:
@@ -34,11 +35,11 @@ where:
     
 The equation states that there is no net magnetic flux \\(\\mathbf{b}\\)
 (which can be thought of as the number of magnetic field lines through an
-area) that passes through an arbitrary closed surface \\(\\mathbf{s}\\). This
+area) that passes through an arbitrary closed surface \\(S\\). This
 means the number of magnetic field lines that enter and exit through this
-closed surface \\(\\mathbf{s}\\) is the same. This is explained by the concept
+closed surface \\(S\\) is the same. This is explained by the concept
 of a magnet that has a north and a south pole, where the strength of the north
-pole is equal to the strength of the south pole. This is equivalent to saying
+pole is equal to the strength of the south pole (:numref:`barmagnet`). This is equivalent to saying
 that a magnetic monopole, meaning a solitary north or south pole, does not
 exist because for every positive magnetic pole, there must be an equal amount
 of negative magnetic poles.
@@ -52,76 +53,77 @@ Gauss's law for magnetic fields in the differential form can be derived using
 the divergence theorem. The divergence theorem states:
 
 .. math::
-        \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da}
+        \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da},
 
-where \\( \\mathbf{f} \\) is a vector. The right-hand side looks very similar to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem, Equation :eq:`gauss_magnetic_integral` is rewritten as following:
+where \\( \\mathbf{f} \\) is a vector. The right-hand side looks very similar to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem, Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
 
 .. math::
-        0 = \oint_S \mathbf{b} \cdot d\mathbf{a} = \int_V ( \nabla \cdot \mathbf{b} ) dv
+        0 = \oint_S \mathbf{b} \cdot d\mathbf{a} = \int_V ( \nabla \cdot \mathbf{b} ) dv.
         :label: gauss_magnetic_div_theorem
 
 Because the expression is set to zero, the integrand \\( (\\nabla \\cdot \\mathbf{b}) \\) must be zero also. Thus the differential form of Gauss's law becomes:
 
 .. math::
-        \nabla \cdot \mathbf{b} = 0
+        \nabla \cdot \mathbf{b} = 0.
         :label: gauss_magnetic_diff_time
 
 
 Derivation using Biot-Savart law
 --------------------------------
-Gauss's law can be derived using the Biot-Savart law, which is defined as:
+Gauss's law can be derived using the :ref:`Biot-Savart law <biot_savart>`, which is defined as:
 
 .. math::
-        \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}
+        \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2},
        :label: gauss_biot_savart 
 
 where:
 
 - \\( \\mathbf{b}(\\mathbf{r}) \\) is the magnetic flux at the point \\( \\mathbf{r} \\)
 - \\( \\mathbf{j}(\\mathbf{r'}) \\) is the current density at the point \\( \\mathbf{r'} \\)
-- \\( \\mu_0 \\) is the magnetic permeability of free space
+- \\( \\mu_0 \\) is the magnetic permeability of free space.
 
-Take the divergence of both sides:
+Taking the divergence of both sides of Equation :eq:`gauss_biot_savart` yields:
 
 .. math::
-        \nabla \cdot \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \nabla \cdot \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}
+        \nabla \cdot \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \nabla \cdot \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}.
         :label: gauss_bs_div
 
-To carry through the divergence of the integrand, the following vector identity is used:
+To carry through the divergence of the integrand in Equation :eq:`gauss_bs_div`, the following vector identity is used:
 
 .. math::
-        \nabla \cdot (\mathbf{A} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B})
+        \nabla \cdot (\mathbf{A} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B}).
 
-By applying the vector identity, the integrand becomes:
+Thus, the integrand becomes:
 
 .. math::
         \left[ \mathbf{j} (\mathbf{r'}) \cdot \left( \nabla \times \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \right) \right] - \left[ \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \cdot \left( \nabla \times \mathbf{j} (\mathbf{r'}) \right) \right]
+        :label: gauss_inside_div
 
-The first part is zero as the curl of \\( \\frac{(\\widehat{\\mathbf{r}-\\mathbf{r'}})}{\\lvert \\mathbf{r} - \\mathbf{r'} \\rvert ^2} \\) is zero. The second part becomes zero because \\(\\mathbf{j}\\) depends on \\(r'\\) and \\(\\nabla\\) depends only on \\(r\\). Plugging this back into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero. Thus, we see that:
+The first part of Equation :eq:`gauss_inside_div` is zero as the curl of \\( \\frac{(\\widehat{\\mathbf{r}-\\mathbf{r'}})}{\\lvert \\mathbf{r} - \\mathbf{r'} \\rvert ^2} \\) is zero. The second part of Equation :eq:`gauss_inside_div` becomes zero because \\(\\mathbf{j}\\) depends on \\(r'\\) and \\(\\nabla\\) depends only on \\(r\\). Plugging this back into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero. Thus, we see that:
 
 .. math::
-        \nabla \cdot \mathbf{b}(\mathbf{r}) = 0
+        \nabla \cdot \mathbf{b}(\mathbf{r}) = 0,
 
-which is Gauss's law for magnetics in differential form.
+which is Gauss's law for magnetism in differential form.
 
 Differential equation in the frequency-domain
 ---------------------------------------------
-The equation can also be written in the freqyency-domain as:
+The equation can also be written in the frequency-domain as:
 
 .. math::
-        \nabla \cdot \mathbf{B} = 0
+        \nabla \cdot \mathbf{B} = 0.
         :label: gauss_magnetic_diff_freq
 
+.. _gauss_magnetic_frequency:
 
 Units
 -----
 
-+----------------------------+-------------------+---------------------+-------------------------+
-|Magnetic flux               | \\(\\mathbf{b}\\) | T                   | tesla                   |
-+----------------------------+-------------------+---------------------+-------------------------+
-|Electric current density    | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}} | ampere per square meter |
-|                            |                   | {\\text{m}^2}\\)    |                         |
-+----------------------------+-------------------+---------------------+-------------------------+
++----------------------------+-------------------+-------------------------------------+-------------------------+
+|Magnetic flux               | \\(\\mathbf{b}\\) | T                                   | tesla                   |
++----------------------------+-------------------+-------------------------------------+-------------------------+
+|Electric current density    | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}}{\\text{m}^2}\\) | ampere per square meter |
++----------------------------+-------------------+-------------------------------------+-------------------------+
 
 
 **Constants** 
@@ -136,7 +138,7 @@ Discoverers of the law
 
 Gauss's law for magnetism is a physical application of Gauss's theorem (also
 known as the divergence theorem) in calculus, which was independently
-discovered by Lagrange in 1762, Gauss in 1813, Ostrogradsky in1826, and Green
+discovered by Lagrange in 1762, Gauss in 1813, Ostrogradsky in 1826, and Green
 in 1828. Gauss's law for magnetism simply describes one physical phenomena
 that a magnetic monopole does not exist in reality. So this law is also called
 "absence of free magnetic poles".
