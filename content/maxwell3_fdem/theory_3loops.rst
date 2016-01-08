@@ -1,4 +1,4 @@
-.. _theory_3loops
+.. _theory_3loops:
 
 Theory for three-loop systems
 -----------------------------
@@ -68,9 +68,9 @@ where \\( \\mathbf{A}_1 \\) is derived using the Biot-Savart law:
 
 .. math::
         \mathbf{A}_1 = \frac{\mu_0 I_1}{4\pi} \oint \frac{dl_1}{\lvert \mathbf{r} - \mathbf{r'}\rvert^2}.
-        :label: A
+        :label: A1
      
-By subbing Equation :eq:`A` into :eq:`phi22`, we get the following integral expression for the flux:
+By subbing Equation :eq:`A1` into :eq:`phi22`, we get the following integral expression for the flux:
 
 .. math::
         \Phi_2 = \frac{\mu_0 I_1}{4\pi} \oint \left ( \oint \frac{dl_1}{\lvert \mathbf{r} - \mathbf{r'}\rvert^2} \right ) \cdot dl_2.
