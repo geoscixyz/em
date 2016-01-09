@@ -132,7 +132,7 @@ standard Gaussian pillbox (see boundary conditions page), the integral can be
 evaluated as
 
 .. math::
-		(\mathbf{j}_2-\mathbf{j}_1)\cdot\hat{\mathbf{n}} &= 0\\
+		(\mathbf{j}_2-\mathbf{j}_1)\cdot\hat{\mathbf{n}} &= 0\
 		j_{2n} &= j_{1n}. 
 		:label: JnCont
 

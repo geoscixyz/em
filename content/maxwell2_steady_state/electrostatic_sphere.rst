@@ -19,9 +19,9 @@ Setup
 
 The problem setup is shown in the figure below, where we have
 
-- a uniform electric field oriented in the \\(x\\)-direction: \\(\\mathbf{E_0} = E_0 \\mathbf{\\hat{x}}\\)
-- a whole-space background with conductivity \\(\\sigma_0\\)
-- a sphere with radius \\(R\\) and conductivity \\(\\sigma_1\\)
+- a uniform electric field oriented in the :math:`x`-direction: :math:`\mathbf{E_0} = E_0 \mathbf{\hat{x}}`
+- a whole-space background with conductivity :math:`\sigma_0`
+- a sphere with radius :math:`R` and conductivity :math:`\sigma_1`
 - the origin of coordinate system coincides with the centre of the sphere
 
 
@@ -66,23 +66,23 @@ considering the zero-frequency case, in which case, Maxwell's equations are
 Knowing that the curl of the gradient of any scalar potential is always zero,
 according to :eq:`Faraday_DC`, we can define a scalar potential so that the
 primary electric field is the gradient of a potential. For convenience, we
-define it to be the negative gradient of the potential, \\(V\\)
+define it to be the negative gradient of the potential, :math:`V`
 
 .. math::
 	\mathbf{e} = -\nabla V
 	:label: DC_Potential
 
-To define the potential at a point \\(p\\) from an electric field requires integration
+To define the potential at a point :math:`p` from an electric field requires integration
 
 .. math::
     V = -\int_{ref}^p \mathbf{e} \cdot \mathbf{dl}
     :label: V_from_e
 
-The choice of reference point \\(ref\\) is arbitrary, but it is often
+The choice of reference point :math:`ref` is arbitrary, but it is often
 convenient to consider the reference point to be infinitely far away, so
-\\(ref = \\infty\\). In this case, the electric potential at \\(p\\) is
+:math:`ref = \infty`. In this case, the electric potential at :math:`p` is
 equivalent to the amount of work done to bring a positive charge from
-infinity to the point \\(p\\).
+infinity to the point :math:`p`.
 
 
 Potentials 
@@ -118,13 +118,13 @@ the integration from :eq:`V_from_e` gives
 
     plt.show()
 
-The total potential outside the sphere \\( (r > R) \\) is
+The total potential outside the sphere :math:` (r > R) ` is
 
 .. math::
 	V_1 = -E_0 \big(1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0} \big) r \cos\theta
 	:label: totalP_outside
 
-and inside the sphere \\( (r < R) \\)
+and inside the sphere :math:` (r < R) `
 
 .. math::
 	V_2 = -E_0 \frac{3\sigma_0}{\sigma_1+2\sigma_0}r \cos\theta
@@ -219,36 +219,36 @@ Current Density
 
 The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space. 
 According to Ohm’s law there is a linear relationship between the current density and the electric field at any location within the field: 
-\\(\\mathbf{J} = \\sigma \\mathbf{E}\\). This can be directly used to compute both the total and the primary current densities. 
+:math:`\mathbf{J} = \sigma \mathbf{E}`. This can be directly used to compute both the total and the primary current densities. 
 
 Secondary Current
 ^^^^^^^^^^^^^^^^^
 
 The secondary current density is defined as a difference between the total
-current density, \\( \\mathbf{J_T} = \\sigma \\mathbf{E_T} \\) and the primary 
-current \\(\\mathbf{J_0} = \\sigma_0 \\mathbf{E_0}\\)
+current density, :math:` \mathbf{J_T} = \sigma \mathbf{E_T} ` and the primary 
+current :math:`\mathbf{J_0} = \sigma_0 \mathbf{E_0}`
 
 .. math::
-    \mathbf{J_s} &= \mathbf{J_T} - \mathbf{J_0} \\
-                 &= \sigma\mathbf{E_T} - \sigma_0 \mathbf{E_0} \\
-                 &= (\sigma_0 + \Delta\sigma)(\mathbf{E_0} + \mathbf{E_s}) - \sigma_0 \mathbf{E_0} \\
+    \mathbf{J_s} &= \mathbf{J_T} - \mathbf{J_0} \
+                 &= \sigma\mathbf{E_T} - \sigma_0 \mathbf{E_0} \
+                 &= (\sigma_0 + \Delta\sigma)(\mathbf{E_0} + \mathbf{E_s}) - \sigma_0 \mathbf{E_0} \
                  &= \Delta\sigma\mathbf{E_0}  + \sigma \mathbf{E_s}
     :label: Secondary_Current_Definition
 
 
-Outside the sphere, the secondary current \\(\\mathbf{J_s}\\) acts as a electric dipole, due to and in 
+Outside the sphere, the secondary current :math:`\mathbf{J_s}` acts as a electric dipole, due to and in 
 accordance with the charge build-up at the interface (see Charge Accumulation below).
 
-Inside a conductive sphere, \\(\\mathbf{J_T}\\) is bigger than \\(\\mathbf{J_{0}}\\), but in the same time 
-\\(\\mathbf{E_0}\\) is bigger than \\(\\mathbf{E_{Total}}\\). 
-The secondary current \\(\\mathbf{J_s}\\) is in the reverse direction compared to the  secondary electric 
-field \\(\\mathbf{E_s}\\). The boundary condition, stating that the normal component of current density is 
+Inside a conductive sphere, :math:`\mathbf{J_T}` is bigger than :math:`\mathbf{J_{0}}`, but in the same time 
+:math:`\mathbf{E_0}` is bigger than :math:`\mathbf{E_{Total}}`. 
+The secondary current :math:`\mathbf{J_s}` is in the reverse direction compared to the  secondary electric 
+field :math:`\mathbf{E_s}`. The boundary condition, stating that the normal component of current density is 
 continuous, is then respected by the secondary current.
 
-Inside a resistive sphere, \\(\\mathbf{J_T}\\) is smaller than \\(\\mathbf{J_{0}}\\) but in the same time 
-\\(\\mathbf{E_0}\\) is smaller than \\(\\mathbf{E_{Total}}\\). 
-The secondary current \\(\\mathbf{J_s}\\) is again in the reverse direction compared to the  secondary 
-electric field \\(\\mathbf{E_s}\\) and the boundary condition for the normal component of current density 
+Inside a resistive sphere, :math:`\mathbf{J_T}` is smaller than :math:`\mathbf{J_{0}}` but in the same time 
+:math:`\mathbf{E_0}` is smaller than :math:`\mathbf{E_{Total}}`. 
+The secondary current :math:`\mathbf{J_s}` is again in the reverse direction compared to the  secondary 
+electric field :math:`\mathbf{E_s}` and the boundary condition for the normal component of current density 
 is respected.
 
 

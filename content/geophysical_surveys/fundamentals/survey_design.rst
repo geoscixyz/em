@@ -18,7 +18,7 @@ Detectability
 -------------
 In order for a target to be detectable, the secondary field (whether that be the electric field, magnetic field, or voltage potential) must be larger than the noise (geologic noise, instrument noise, etc) and it must be relatively large enough compared to the primary field. For example, if the noise in the primary field is anticipated to be 5% and the instrument sensitivity is 5 mV, then the secondary field must at least be above 5 mV to be detectable but also be more than 5% different compared to the primary field. This provides us with two metrics: relative difference and absolute difference.
 
-Relative difference (\\( RD \\)) and absolute difference (\\( AD \\)) are determined as follows:
+Relative difference (:math:`RD`) and absolute difference (:math:`AD`) are determined as follows:
 
 .. math::
         RD = \frac{F^S}{F^P} * 100,
@@ -30,9 +30,9 @@ Relative difference (\\( RD \\)) and absolute difference (\\( AD \\)) are determ
      
 where:
 
-- \\( F^S = F^T - F^P \\) is the secondary field
-- \\( F^P \\) is the primary field
-- \\( F^T \\) is the total field
+- :math:`F^S = F^T - F^P` is the secondary field
+- :math:`F^P` is the primary field
+- :math:`F^T` is the total field
 
 To test whether the target is adequately detectable given a certain survey layout, we use :ref:`forward modelling <forward_modelling>` to compute the primary field using a model that does not contain the target and the total field using a model that does contain the target.
 

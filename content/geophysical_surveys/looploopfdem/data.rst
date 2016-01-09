@@ -19,12 +19,12 @@ receiver loop induces currents which act to oppose the change in flux. The volta
     :name: looploopEMbasics
 
 
-    A time varying current ( \\(I_0 \\cos \\omega t\\)) generates a primary magnetic field \\(\\mathbf{H_p} \\cos \\omega t\\) which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (\\(\\mathbf{H_s} \\cos(\\omega t + \\psi)\\)). Both the primary and secondary fields reach the receiver. Image adapted from the GPG_. TODO: cc - by 4.0? or re-create? 
+    A time varying current ( :math:`I_0 \cos \omega t`) generates a primary magnetic field :math:`\mathbf{H_p} \cos \omega t` which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (:math:`\mathbf{H_s} \cos(\omega t + \psi)`). Both the primary and secondary fields reach the receiver. Image adapted from the GPG_. TODO: cc - by 4.0? or re-create? 
 
 .. _GPG: http://gpg.geosci.xyz/en/latest/content/electromagnetics/responses_from_a_conductor_in_free_space.html
 
 The voltage in the receiver loop is measured as a function of time, defining a
-time-series. This is converted to a time-derivative of magnetic flux density (\\(\\frac{\\partial \\mathbf{b}}{\\partial t}\\)) through :ref:`faraday`. 
+time-series. This is converted to a time-derivative of magnetic flux density (:math:`\frac{\partial \mathbf{b}}{\partial t}`) through :ref:`faraday`. 
 
 To obtain a datum defined in the frequency domain, a Fourier transform of
 these must be taken. To accomplish this, the time-series is segmented into

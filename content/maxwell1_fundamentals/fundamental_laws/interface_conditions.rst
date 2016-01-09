@@ -47,7 +47,7 @@ Griffiths (c.f.  [1]_).
     :align: center
     :name: twoLayerMedium
 
-    Two layered medium. [#f1]_
+    Two layered medium. [2]_
 
 
 Normal Component of Electric Displacement
@@ -58,7 +58,7 @@ Normal Component of Electric Displacement
     :scale: 70% 
     :name: pillbox
 
-    Gaussian pillbox. [#f1]_
+    Gaussian pillbox. [2]_
 
 Consider an extremely small Gaussian pillbox of height :math:`h` and cross-
 sectional area :math:`S_{\text{top}} = \pi r_{\text{top}}^2`. The pillbox is
@@ -128,7 +128,7 @@ Tangential Component of the Electric Field
     :scale: 70% 
     :name: rectangle
 
-    Gaussian rectangle. [#f1]_
+    Gaussian rectangle. [2]_
 
 The interface condition on the tangential component of the electric field,
 denoted as :math:`e_{t}`, is derived from :ref:`Faraday's law<faraday>` in
@@ -198,9 +198,10 @@ References
 
 .. [1] Griffiths, David J. Introduction to Electrodynamics, 3rd edition. Prentice Hall, Upper Saddle River, New Jersey. 1999.
 
-
-.. rubric:: Footnotes
-.. [#f1] Figures were created by `Luz`_ and are licenced under `CC BY 2.0`_
+.. [2] Figures were created by `Luz`_ and are licenced under `CC BY 2.0`_
 
 .. _Luz: https://luzcaudillo.wordpress.com/
+
 .. _CC BY 2.0: http://creativecommons.org/licenses/by/2.0/
+
+

@@ -31,13 +31,13 @@ The Gauss's law for magnetic fields in integral form is given by:
 
 where:
 
-- \\( \\mathbf{b} \\) is the magnetic flux
+- :math:` \mathbf{b} ` is the magnetic flux
     
-The equation states that there is no net magnetic flux \\(\\mathbf{b}\\)
+The equation states that there is no net magnetic flux :math:`\mathbf{b}`
 (which can be thought of as the number of magnetic field lines through an
-area) that passes through an arbitrary closed surface \\(S\\). This
+area) that passes through an arbitrary closed surface :math:`S`. This
 means the number of magnetic field lines that enter and exit through this
-closed surface \\(S\\) is the same. This is explained by the concept
+closed surface :math:`S` is the same. This is explained by the concept
 of a magnet that has a north and a south pole, where the strength of the north
 pole is equal to the strength of the south pole (:numref:`barmagnet`). This is equivalent to saying
 that a magnetic monopole, meaning a solitary north or south pole, does not
@@ -55,13 +55,13 @@ the divergence theorem. The divergence theorem states:
 .. math::
         \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da},
 
-where \\( \\mathbf{f} \\) is a vector. The right-hand side looks very similar to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem, Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
+where :math:` \mathbf{f} ` is a vector. The right-hand side looks very similar to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem, Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
 
 .. math::
         0 = \oint_S \mathbf{b} \cdot d\mathbf{a} = \int_V ( \nabla \cdot \mathbf{b} ) dv.
         :label: gauss_magnetic_div_theorem
 
-Because the expression is set to zero, the integrand \\( (\\nabla \\cdot \\mathbf{b}) \\) must be zero also. Thus the differential form of Gauss's law becomes:
+Because the expression is set to zero, the integrand :math:` (\nabla \cdot \mathbf{b}) ` must be zero also. Thus the differential form of Gauss's law becomes:
 
 .. math::
         \nabla \cdot \mathbf{b} = 0.
@@ -78,9 +78,9 @@ Gauss's law can be derived using the :ref:`Biot-Savart law <biot_savart>`, which
 
 where:
 
-- \\( \\mathbf{b}(\\mathbf{r}) \\) is the magnetic flux at the point \\( \\mathbf{r} \\)
-- \\( \\mathbf{j}(\\mathbf{r'}) \\) is the current density at the point \\( \\mathbf{r'} \\)
-- \\( \\mu_0 \\) is the magnetic permeability of free space.
+- :math:` \mathbf{b}(\mathbf{r}) ` is the magnetic flux at the point :math:` \mathbf{r} `
+- :math:` \mathbf{j}(\mathbf{r'}) ` is the current density at the point :math:` \mathbf{r'} `
+- :math:` \mu_0 ` is the magnetic permeability of free space.
 
 Taking the divergence of both sides of Equation :eq:`gauss_biot_savart` yields:
 
@@ -99,7 +99,7 @@ Thus, the integrand becomes:
         \left[ \mathbf{j} (\mathbf{r'}) \cdot \left( \nabla \times \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \right) \right] - \left[ \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \cdot \left( \nabla \times \mathbf{j} (\mathbf{r'}) \right) \right]
         :label: gauss_inside_div
 
-The first part of Equation :eq:`gauss_inside_div` is zero as the curl of \\( \\frac{(\\widehat{\\mathbf{r}-\\mathbf{r'}})}{\\lvert \\mathbf{r} - \\mathbf{r'} \\rvert ^2} \\) is zero. The second part of Equation :eq:`gauss_inside_div` becomes zero because \\(\\mathbf{j}\\) depends on \\(r'\\) and \\(\\nabla\\) depends only on \\(r\\). Plugging this back into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero. Thus, we see that:
+The first part of Equation :eq:`gauss_inside_div` is zero as the curl of :math:` \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} ` is zero. The second part of Equation :eq:`gauss_inside_div` becomes zero because :math:`\mathbf{j}` depends on :math:`r'` and :math:`\nabla` depends only on :math:`r`. Plugging this back into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero. Thus, we see that:
 
 .. math::
         \nabla \cdot \mathbf{b}(\mathbf{r}) = 0,
@@ -120,17 +120,17 @@ Units
 -----
 
 +----------------------------+-------------------+-------------------------------------+-------------------------+
-|Magnetic flux               | \\(\\mathbf{b}\\) | T                                   | tesla                   |
+|Magnetic flux               | :math:`\mathbf{b}`| T                                   | tesla                   |
 +----------------------------+-------------------+-------------------------------------+-------------------------+
-|Electric current density    | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}}{\\text{m}^2}\\) | ampere per square meter |
+|Electric current density    | :math:`\mathbf{j}`|:math:`\frac{\text{A}}{\text{m}^2}`  | ampere per square meter |
 +----------------------------+-------------------+-------------------------------------+-------------------------+
 
 
 **Constants** 
 
-+--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-| Magnetic constant        | \\(\\mu_0 = 4\\pi ×10^{−7} \\frac{\\text{N}}{\\text{A}^2} \\approx 1.2566370614...×10^{-6} \\frac{\\text{T}\\cdot \\text{m}}{\\text{A}}\\)|
-+--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Magnetic constant        | :math:`\mu_0 = 4\pi ×10^{−7} \frac{\text{N}}{\text{A}^2} \approx 1.2566370614...×10^{-6} \frac{\text{T}\cdot \text{m}}{\text{A}}`|
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
 Discoverers of the law
