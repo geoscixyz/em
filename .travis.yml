@@ -17,8 +17,9 @@ install:
   - pip install -r requirements.txt
 
 # command to run tests
-script: sphinx-build -nW -b html -d _build/doctrees . _build/html
-script: sphinx-build -nW -b latex -d _build/doctrees . _build/latex
+script: 
+  - sphinx-build -nW -b html -d _build/doctrees . _build/html
+  - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
 
 # Flags used here, not in `make html`:
 #  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
