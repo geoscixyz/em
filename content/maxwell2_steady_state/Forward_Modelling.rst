@@ -89,7 +89,9 @@ cannot flow into the air. Mathematically this can be stated as
 .. math::
   \mathbf{j}\cdot \hat{\mathbf{n}} = 0 \qquad \text{on} \quad \partial_s \Omega,
 
-where :math:`\partial_s \Omega` indicates the surface of the earth and :math:`\hat{\mathbf{n}}` is the unit surface normal vector. Applying Ohm's law in the earth, this becomes
+where :math:`\partial_s \Omega` indicates the surface of the earth and
+:math:`\hat{\mathbf{n}}` is the unit surface normal vector. Applying Ohm's law
+in the earth, this becomes
 
 .. math::
   \sigma \mathbf{e}\cdot\hat{\mathbf{n}} = 0. 

@@ -49,7 +49,9 @@ Griffiths (c.f.  [1]_).
 
     Two layered medium. 
 
+
 .. [#f1]_ comment out footnote to patch pdf
+
 
 
 Normal Component of Electric Displacement

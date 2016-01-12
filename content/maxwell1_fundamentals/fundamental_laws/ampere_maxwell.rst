@@ -288,12 +288,19 @@ Units
 Discovers of the law
 --------------------
 
-The first observation that spurred researchers to look for the relationship linking magnetic field and current was made by Hans Christian Ørsted in 1820, who noticed that magnetic needles were deflected by electric currents. This led several physicists in Europe to study this phenomenon in parallel. While Jean-Baptiste Biot and Félix Savart were experimenting with a setup similar to Ørsted's experiment (that lead them to define in 1820 a relationship known now as the Biot-Savart's law), André-Marie Ampère's experiment focused on measuring the forces that two electric wires exert on each other. He formulated the Ampere’s circuital law in 1826 [1]_,
-which relates the magnetic field associated with a closed loop to the electric
-current passing through it. In its original form, the current enclosed by the
-loop only refers to free current caused by moving charges, causing several issues
-regarding the conservation of electric charge and the propagation of
-electromagnetic energy.
+The first observation that spurred researchers to look for the relationship
+linking magnetic field and current was made by Hans Christian Ørsted in 1820,
+who noticed that magnetic needles were deflected by electric currents. This
+led several physicists in Europe to study this phenomenon in parallel. While
+Jean-Baptiste Biot and Félix Savart were experimenting with a setup similar to
+Ørsted's experiment (that lead them to define in 1820 a relationship known now
+as the Biot-Savart's law), André-Marie Ampère's experiment focused on
+measuring the forces that two electric wires exert on each other. He
+formulated the Ampere’s circuital law in 1826 [1]_, which relates the magnetic
+field associated with a closed loop to the electric current passing through
+it. In its original form, the current enclosed by the loop only refers to free
+current caused by moving charges, causing several issues regarding the
+conservation of electric charge and the propagation of electromagnetic energy.
 
 In 1861 [2]_, James Clerk Maxwell extended Ampere’s law by introducing the
 displacement current into the electric current term to satisfy

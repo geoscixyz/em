@@ -35,14 +35,14 @@ where:
     
 The equation states that there is no net magnetic flux :math:`\mathbf{b}`
 (which can be thought of as the number of magnetic field lines through an
-area) that passes through an arbitrary closed surface :math:`S`. This
-means the number of magnetic field lines that enter and exit through this
-closed surface :math:`S` is the same. This is explained by the concept
-of a magnet that has a north and a south pole, where the strength of the north
-pole is equal to the strength of the south pole (:numref:`barmagnet`). This is equivalent to saying
-that a magnetic monopole, meaning a solitary north or south pole, does not
-exist because for every positive magnetic pole, there must be an equal amount
-of negative magnetic poles.
+area) that passes through an arbitrary closed surface :math:`S`. This means
+the number of magnetic field lines that enter and exit through this closed
+surface :math:`S` is the same. This is explained by the concept of a magnet
+that has a north and a south pole, where the strength of the north pole is
+equal to the strength of the south pole (:numref:`barmagnet`). This is
+equivalent to saying that a magnetic monopole, meaning a solitary north or
+south pole, does not exist because for every positive magnetic pole, there
+must be an equal amount of negative magnetic poles.
 
 .. _gauss_magnetic_differential:
 
@@ -55,13 +55,17 @@ the divergence theorem. The divergence theorem states:
 .. math::
         \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da},
 
-where :math:` \mathbf{f} ` is a vector. The right-hand side looks very similar to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem, Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
+where :math:` \mathbf{f} ` is a vector. The right-hand side looks very similar
+to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem,
+Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
 
 .. math::
         0 = \oint_S \mathbf{b} \cdot d\mathbf{a} = \int_V ( \nabla \cdot \mathbf{b} ) dv.
         :label: gauss_magnetic_div_theorem
 
-Because the expression is set to zero, the integrand :math:` (\nabla \cdot \mathbf{b}) ` must be zero also. Thus the differential form of Gauss's law becomes:
+Because the expression is set to zero, the integrand :math:` (\nabla \cdot
+\mathbf{b}) ` must be zero also. Thus the differential form of Gauss's law
+becomes:
 
 .. math::
         \nabla \cdot \mathbf{b} = 0.
@@ -70,7 +74,9 @@ Because the expression is set to zero, the integrand :math:` (\nabla \cdot \math
 
 Derivation using Biot-Savart law
 --------------------------------
-Gauss's law can be derived using the :ref:`Biot-Savart law <biot_savart>`, which is defined as:
+
+Gauss's law can be derived using the :ref:`Biot-Savart law <biot_savart>`,
+which is defined as:
 
 .. math::
         \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2},
@@ -88,7 +94,8 @@ Taking the divergence of both sides of Equation :eq:`gauss_biot_savart` yields:
         \nabla \cdot \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \nabla \cdot \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}.
         :label: gauss_bs_div
 
-To carry through the divergence of the integrand in Equation :eq:`gauss_bs_div`, the following vector identity is used:
+To carry through the divergence of the integrand in Equation
+:eq:`gauss_bs_div`, the following vector identity is used:
 
 .. math::
         \nabla \cdot (\mathbf{A} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B}).
@@ -99,15 +106,23 @@ Thus, the integrand becomes:
         \left[ \mathbf{j} (\mathbf{r'}) \cdot \left( \nabla \times \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \right) \right] - \left[ \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \cdot \left( \nabla \times \mathbf{j} (\mathbf{r'}) \right) \right]
         :label: gauss_inside_div
 
-The first part of Equation :eq:`gauss_inside_div` is zero as the curl of :math:` \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} ` is zero. The second part of Equation :eq:`gauss_inside_div` becomes zero because :math:`\mathbf{j}` depends on :math:`r'` and :math:`\nabla` depends only on :math:`r`. Plugging this back into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero. Thus, we see that:
+The first part of Equation :eq:`gauss_inside_div` is zero as the curl of
+:math:` \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} -
+\mathbf{r'} \rvert ^2} ` is zero. The second part of Equation
+:eq:`gauss_inside_div` becomes zero because :math:`\mathbf{j}` depends on
+:math:`r'` and :math:`\nabla` depends only on :math:`r`. Plugging this back
+into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero.
+Thus, we see that:
 
 .. math::
         \nabla \cdot \mathbf{b}(\mathbf{r}) = 0,
 
 which is Gauss's law for magnetism in differential form.
 
+
 Differential equation in the frequency-domain
 ---------------------------------------------
+
 The equation can also be written in the frequency-domain as:
 
 .. math::

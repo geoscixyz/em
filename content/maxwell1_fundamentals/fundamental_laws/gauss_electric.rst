@@ -119,7 +119,9 @@ individual charge.
    \mathbf{e}\left(\sum_{k=1,n} Q_i\right) = \sum_{k=1,n} \mathbf{e}(Q_i)
    :label:
 
-If we consider the the electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
+If we consider the the electric field due to a spatially extended body with
+charge density :math:`\rho`, the sum becomes an integral over infinitesimal
+volume elements of the body
 
 .. math::
   \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r} - \mathbf{r'}|^2}\;\widehat{(\mathbf{r} - \mathbf{r'})}\;\mathrm{d}v,

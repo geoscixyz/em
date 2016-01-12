@@ -89,7 +89,10 @@ nodes.
 
 .. figure:: ./images/Yee-cube-w-b.png
 
-  Cubic cell with :math:`\mathbf{E}` discretized onto cell edges, :math:`\mathbf{b}` onto cell faces, and physical properties onto cell centres. Electrical potential :math:`\phi` is discretized onto the mesh nodes.
+  Cubic cell with :math:`\mathbf{E}` discretized onto cell edges,
+  :math:`\mathbf{b}` onto cell faces, and physical properties onto cell
+  centres. Electrical potential :math:`\phi` is discretized onto the mesh
+  nodes.
 
 By constructing discrete approximations to the differential operators in
 equations :eq:`FaradayAnal` and :eq:`AmpereAnal`, we can construct a system of
