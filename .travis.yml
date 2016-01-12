@@ -19,7 +19,7 @@ install:
 # command to run tests
 script: 
   - sphinx-build -nW -b html -d _build/doctrees . _build/html
-  - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
+  # - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
   - sphinx-build -nW -b linkcheck -d _build/doctrees   . _build/linkcheck
 
 # Flags used here, not in `make html`:
