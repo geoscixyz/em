@@ -29,11 +29,14 @@ def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
             - rho1 (float)  : resistivity of the sphere
             - flag (string) : "sec", "total", "prim" 
                               (default="sec")
+                              "sec": secondary potential only due to sphere
+                              "prim": primary potential from the point source
+                              "total": "sec"+"prim"
             - order (float) : maximum order of Legendre polynomial 
                               (default=12)
 
         Written by Seogi Kang (skang@eos.ubc.ca)
-        Ph.D. studnet of University of British Columbia, Canada
+        Ph.D. student of University of British Columbia, Canada
 
     """
 
@@ -41,7 +44,7 @@ def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
     for i in range(order):
         Pleg.append(special.legendre(i, monic=0))            
             
-    # Center of the shpere should be alined in txloc in y-direction
+    # Center of the sphere should be aligned in txloc in y-direction
     yc = txloc[1]
     xyz = np.c_[rxloc[:,0]-xc, rxloc[:,1]-yc, rxloc[:,2]]
     r = np.sqrt( (xyz**2).sum(axis=1) )
@@ -51,6 +54,7 @@ def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
     costheta = xyz[:,0]/r * (txloc[0]-xc)/x0
     phi = np.zeros_like(r)
     R = (r**2+x0**2.-2.*r*x0*costheta)**0.5    
+    # primary potential in a whole space 
     prim = rho*1./(4*np.pi*R)
 
     if flag =="prim":
@@ -73,5 +77,6 @@ def DCSpherePointCurrent(txloc, rxloc, xc, radius, rho, rho1, \
         return out    
 
 if __name__ == '__main__':
+    #TODO add an exmple run
     
     
