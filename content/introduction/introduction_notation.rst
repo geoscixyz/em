@@ -11,13 +11,13 @@ Vectors
 -------
 
 - vectors are bold:                          
-    * ie. \\(\\mathbf{v}\\), \\(\\boldsymbol{\\nabla\\cdot}\\)                       
+    * ie. :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`                       
 - tensors are bold and underlined:           
-    * ie. \\(\\mathbf{\\underline{v}}\\), \\(\\boldsymbol{\\underline{\\sigma}}\\)   
+    * ie. :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`   
 - time domain variable are lower case:       
-    * ie. \\(\\mathbf{e}\\), \\(\\mathbf{j}\\), \\(\\mathbf{h}\\), \\(\\mathbf{b}\\) 
+    * ie. :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}` 
 - frequency domain variables are upper case: 
-    * ie. \\(\\mathbf{E}\\), \\(\\mathbf{J}\\), \\(\\mathbf{H}\\), \\(\\mathbf{B}\\)
+    * ie. :math:`\mathbf{E}`, :math:`\mathbf{J}`, :math:`\mathbf{H}`, :math:`\mathbf{B}`
 
 Integrals
 ---------
@@ -52,7 +52,7 @@ Integrals
 Fourier Transform Convention
 ----------------------------
 
-We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\) time dependence. 
+We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t}` time dependence. 
 
  .. math::
     F(\omega) = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} dt

@@ -30,10 +30,10 @@ Gauss’s law in integral form is given below:
 
 where:
 
- - \\( \\mathbf{e} \\) is the electric field
- - \\( Q \\) is the enclosed electric charge
- - \\( \\varepsilon_0 \\) is the electric permittivity of free space
- - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
+ - :math:` \mathbf{e} ` is the electric field
+ - :math:` Q ` is the enclosed electric charge
+ - :math:` \varepsilon_0 ` is the electric permittivity of free space
+ - :math:` \hat{\mathbf{n}} ` is the outward pointing unit-normal
 
 .. _gauss_electric_differential:
 
@@ -187,17 +187,17 @@ Units
 -----
 
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Surface area      |  \\(\\text{S}\\)    | \\(\\text{m}^{2}\\)                |      Square meter                     |
+|     Surface area      |  :math:`\text{S}`   | :math:`\text{m}^{2}`               |      Square meter                     |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Volume            |  :math:`V`          | \\(\\text{m}^{3}\\)                |                  Cubic meter          |
+|     Volume            |  :math:`V`          | :math:`\text{m}^{3}`               |                  Cubic meter          |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric charge   | \\(\\text{q, Q}\\)  | \\(\\text{C}\\)                    |            Coulomb                    |
+|     Electric charge   | :math:`\text{q, Q}` | :math:`\text{C}`                   |            Coulomb                    |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electric charge density| :math:`\rho`        |\\(\\frac{\\text{C}}{\\text{m}^3}\\)|  Coulomb per cubic meter              |
+|Electric charge density| :math:`\rho`        |:math:`\frac{\text{C}}{\text{m}^3}` |  Coulomb per cubic meter              |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric field    | \\(\\mathbf{e}\\)   |\\(\\frac{\\text{V}}{\\text{m}}\\)  | Volt per meter                        |
+|     Electric field    | :math:`\mathbf{e}`  |:math:`\frac{\text{V}}{\text{m}}`   | Volt per meter                        |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electrical permittivity|:math:`\varepsilon_0`| \\(\\frac{\\text{F}}{\\text{m}}\\) | Farad per meter                       |
+|Electrical permittivity|:math:`\varepsilon_0`| :math:`\frac{\text{F}}{\text{m}}`  | Farad per meter                       |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
 
 **Conversions**

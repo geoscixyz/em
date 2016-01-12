@@ -15,10 +15,12 @@ before_install:
 install: 
   - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
   - pip install -r requirements.txt
-  # - pip install git+https://github.com/simpeg/simpeg.git@v0.1.3
 
 # command to run tests
-script: sphinx-build -nW -b html -d _build/doctrees . _build/html
+script: 
+  - sphinx-build -nW -b html -d _build/doctrees . _build/html
+  # - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
+  - sphinx-build -nW -b linkcheck -d _build/doctrees   . _build/linkcheck
 
 # Flags used here, not in `make html`:
 #  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.

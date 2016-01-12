@@ -9,6 +9,8 @@ Faraday's law is named after English scientist Michael Faraday (1791-1867), and 
         :align: center
         :scale: 50%
 
+.. _faraday_integral_time:
+
 Integral Form in the Time-Domain
 --------------------------------
 
@@ -17,10 +19,10 @@ Faraday's law in integral form can be expressed using the following equation:
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
 where:
- - \\( \\mathbf{e} \\) is the electric field defined around a closed path :math:`C`
- - \\( \\mathbf{b} \\) is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
- - \\( \\hat{\\mathbf{n}} \\) is an outward normal unit vector perpendicular to :math:`da`
- - \\( \ d\\mathbf{l} \\) is a vector element of length along contour :math:`C`
+ - :math:` \mathbf{e} ` is the electric field defined around a closed path :math:`C`
+ - :math:` \mathbf{b} ` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
+ - :math:` \hat n ` is an outward normal unit vector perpendicular to :math:`da`
+ - :math:` \ d\mathbf{l} ` is a vector element of length along contour :math:`C`
  
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
 
@@ -102,20 +104,20 @@ Units
 -----
 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Magnetic flux density    | \\(\\mathbf{b}\\) |\\(\\frac{\\text{Wb}}      | Weber per square meter                |
-|                          |                   |{\\text{m}^{2}}\\)         |                                       | 
+| Magnetic flux density    |:math:`\mathbf{b}` |:math:`\frac{\text{Wb}}    | Weber per square meter                |
+|                          |                   |{\text{m}^{2}}`            |                                       | 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electric current density | \\(\\mathbf{j}\\) |\\(\\frac{\\text{A}}       |                                       |
-|                          |                   |{\\text{m}^{2}}\\)         | Ampere per square meter               | 
+| Electric current density |:math:`\mathbf{j}` |:math:`\frac{\text{A}}     |                                       |
+|                          |                   |{\text{m}^{2}}`            | Ampere per square meter               | 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electric field intensity | \\(\\mathbf{e}\\) |\\(\\frac{\\text{V}}       |                                       |
-|                          |                   |{\\text{m}}\\)             | Volt per meter                        |
+| Electric field intensity |:math:`\mathbf{e}` |:math:`\frac{\text{V}}     |                                       |
+|                          |                   |{\text{m}}`                | Volt per meter                        |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electric potential       | \\(\\text{V}\\)   | V                         | Volt                                  |
+| Electric potential       |:math:`\text{V}`   | V                         | Volt                                  |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electromotive force      | \\(\\mathcal{E}\\)| V                         | Volt                                  |
+| Electromotive force      |:math:`\mathcal{E}`| V                         | Volt                                  |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electric current         | \\(\\text{I}\\)   | A                         | Ampere                                |
+| Electric current         |:math:`\text{I}`   | A                         | Ampere                                |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 
 Consider the units of quantities on the left and right-hand sides of Eq. :eq:`faradays_law_int_time`.
