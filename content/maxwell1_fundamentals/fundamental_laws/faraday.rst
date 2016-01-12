@@ -104,7 +104,7 @@ Units
 -----
 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Magnetic flux density    |:math:`\mathbf{b}` |:math:`\frac{\text{Wb}}    | Weber per square meter               |
+| Magnetic flux density    |:math:`\mathbf{b}` |:math:`\frac{\text{Wb}}    | Weber per square meter                |
 |                          |                   |{\text{m}^{2}}`            |                                       | 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric current density |:math:`\mathbf{j}` |:math:`\frac{\text{A}}     |                                       |
@@ -117,7 +117,7 @@ Units
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electromotive force      |:math:`\mathcal{E}`| V                         | Volt                                  |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
-| Electric current         |:math:`\text{I}`   | A                         | ampere                                |
+| Electric current         |:math:`\text{I}`   | A                         | Ampere                                |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 
 Consider the units of quantities on the left and right-hand sides of Eq. :eq:`faradays_law_int_time`.
