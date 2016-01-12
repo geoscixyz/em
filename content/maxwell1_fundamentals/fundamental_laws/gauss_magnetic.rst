@@ -31,7 +31,7 @@ The Gauss's law for magnetic fields in integral form is given by:
 
 where:
 
-- :math:` \mathbf{b} ` is the magnetic flux
+- :math:`\mathbf{b}` is the magnetic flux
     
 The equation states that there is no net magnetic flux :math:`\mathbf{b}`
 (which can be thought of as the number of magnetic field lines through an
@@ -55,7 +55,7 @@ the divergence theorem. The divergence theorem states:
 .. math::
         \int_V (\mathbf{\nabla} \cdot \mathbf{f}) dv = \oint_S \mathbf{f} \cdot \mathbf{da},
 
-where :math:` \mathbf{f} ` is a vector. The right-hand side looks very similar
+where :math:`\mathbf{f}` is a vector. The right-hand side looks very similar
 to Equation :eq:`gauss_magnetic_integral`. Using the divergence theorem,
 Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
 
@@ -63,8 +63,8 @@ Equation :eq:`gauss_magnetic_integral` is rewritten as follows:
         0 = \oint_S \mathbf{b} \cdot d\mathbf{a} = \int_V ( \nabla \cdot \mathbf{b} ) dv.
         :label: gauss_magnetic_div_theorem
 
-Because the expression is set to zero, the integrand :math:` (\nabla \cdot
-\mathbf{b}) ` must be zero also. Thus the differential form of Gauss's law
+Because the expression is set to zero, the integrand :math:`(\nabla \cdot
+\mathbf{b})` must be zero also. Thus the differential form of Gauss's law
 becomes:
 
 .. math::
@@ -84,9 +84,9 @@ which is defined as:
 
 where:
 
-- :math:` \mathbf{b}(\mathbf{r}) ` is the magnetic flux at the point :math:` \mathbf{r} `
-- :math:` \mathbf{j}(\mathbf{r'}) ` is the current density at the point :math:` \mathbf{r'} `
-- :math:` \mu_0 ` is the magnetic permeability of free space.
+- :math:`\mathbf{b}(\mathbf{r})` is the magnetic flux at the point :math:`\mathbf{r}`
+- :math:`\mathbf{j}(\mathbf{r'})` is the current density at the point :math:`\mathbf{r'}`
+- :math:`\mu_0` is the magnetic permeability of free space.
 
 Taking the divergence of both sides of Equation :eq:`gauss_biot_savart` yields:
 
@@ -107,8 +107,8 @@ Thus, the integrand becomes:
         :label: gauss_inside_div
 
 The first part of Equation :eq:`gauss_inside_div` is zero as the curl of
-:math:` \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} -
-\mathbf{r'} \rvert ^2} ` is zero. The second part of Equation
+:math:`\frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} -
+\mathbf{r'} \rvert ^2}` is zero. The second part of Equation
 :eq:`gauss_inside_div` becomes zero because :math:`\mathbf{j}` depends on
 :math:`r'` and :math:`\nabla` depends only on :math:`r`. Plugging this back
 into :eq:`gauss_bs_div`, the right-hand side of the expression becomes zero.
