@@ -2,23 +2,23 @@
 
 **Fields**
 
- - \\(\\mathbf{e}\\): electric field  [N/C]   
- - \\(\\mathbf{h}\\): magnetic field  [A/m] 
+ - :math:`\mathbf{e}` : electric field  [N/C]   
+ - :math:`\mathbf{h}` : magnetic field  [A/m] 
  
 
 
 **Fluxes**
 
- - \\(\\mathbf{j}\\): current density       [A/m\\(^2\\)] 
- - \\(\\mathbf{b}\\): magnetic flux density [T]         
- - \\(\\mathbf{d}\\): electric displacement [C/m\\(^2\\)]
+ - :math:`\mathbf{j}` : current density       [A/m:math:`^2` ] 
+ - :math:`\mathbf{b}` : magnetic flux density [T]         
+ - :math:`\mathbf{d}` : electric displacement [C/m:math:`^2` ]
  
 
 
 **Physical Properties**
 
- - \\( \\sigma \\):    electric conductivity    [S/m]          
- - \\( \\rho \\):      electric resistivity     [\\(\\Omega\\)m]
- - \\( \\mu \\):       magnetic permeability    [H/m]           
- - \\(\\varepsilon\\): dielectric permittivity  [F/m] 
+ - :math:`\sigma` :    electric conductivity    [S/m]          
+ - :math:`\rho` :      electric resistivity     [:math:`\Omega` m]
+ - :math:`\mu` :       magnetic permeability    [H/m]           
+ - :math:`\varepsilon` : dielectric permittivity  [F/m] 
 

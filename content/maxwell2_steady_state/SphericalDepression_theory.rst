@@ -44,15 +44,15 @@ outwards from the source, with magnitude:
 where :math:`R` is the distance from the source to a point of measure
 :math:`P`, and :math:`4\pi R^2` is the area of a ball centered at the
 source. Because our problem is electrostatic,
-:math:`\vec E = - \nabla \psi` according to Faraday’s law. The scalar
-electric potential :math:`\psi` can be obtained by integrating the
+:math:`\vec E = - \nabla \phi` according to Faraday’s law. The scalar
+electric potential :math:`\phi` can be obtained by integrating the
 electric field from :math:`R` to :math:`\infty`. By substituting Ohm’s
 law (:math:`\vec E = \rho \vec J`) into the path integral:
 
-.. math:: \psi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}
+.. math:: \phi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}
 
 For reasons which will becomes apparent in the next section, we would
-like to re-express :math:`\psi` in terms of a radial coordinate system
+like to re-express :math:`\phi` in terms of a radial coordinate system
 (:math:`r,\theta,\phi`), centered at (:math:`x,y,z`) = (0,0,0). Because
 the points which represent the problem geometry do not necessarily form
 a right-triangle, :math:`R` must be expressed using the cosine law:
@@ -63,8 +63,8 @@ For solutions where :math:`r<x_0`, :math:`1/R` can be split into a sum
 of spherical harmonic modes using the binomial theorem:
 
 .. math::
-   \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \\
-   &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+   \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \
+   &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \
    &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big) 
    :label: RSol1
 
@@ -75,25 +75,25 @@ unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
 similar approach for :math:`r < x_0` can be expressed as follows:
 
 .. math::
-   \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
-   &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+   \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \
+   &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \
    &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
    :label: RSol2
 
 Similar to Eq. :eq:`RSol1`, since :math:`x_0<r`, the infinite series in
 Eq. :eq:`RSol2` is also boundary and conveges as
 :math:`n\rightarrow\infty`. Therefore using Eqs. :eq:`RSol1` and
-:eq:`RSol2`, the electric scalar potential :math:`\psi` can be
+:eq:`RSol2`, the electric scalar potential :math:`\phi` can be
 expressed as an infinite sum of spherical harmonic modes, where:
 
 .. math::
-   \psi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{r^n \, P_n \big (cos \theta \big )}{x_0^{n+1}} \; \; \; \textrm{for} \; \; \; r<x_0
+   \phi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{r^n \, P_n \big (cos \theta \big )}{x_0^{n+1}} \; \; \; \textrm{for} \; \; \; r<x_0
    :label: PsiWholespace1
 
 and
 
 .. math::
-   \psi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{x_0^n \, P_n \big (cos \theta \big )}{r^{n+1}} \; \; \; \textrm{for} \; \; \; x_0<r
+   \phi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{x_0^n \, P_n \big (cos \theta \big )}{r^{n+1}} \; \; \; \textrm{for} \; \; \; x_0<r
    :label: PsiWholespace2
 
 Unfortunately, this method cannot be used to find a bounded and
@@ -108,33 +108,33 @@ presence of a conducting sphere of radius :math:`a` and resistivity
 :math:`I` is injected at (:math:`x_0,0,0`).
 Due to the radial symmetry of the problem,
 :math:`\partial /\partial \phi = 0`. Away from the source, the electric
-field is divergence free. As a result, :math:`\psi` can be expressed in
+field is divergence free. As a result, :math:`\phi` can be expressed in
 terms of the following 2d Poisson’s equation:
 
 .. math::
-   \nabla^2 \psi = \frac{1}{r} \frac{\partial }{\partial r} \big ( r^2 \big ) \frac{\partial \psi}{\partial r} + \frac{1}{r^2 sin \theta} \frac{\partial}{\partial \theta}
-   \Bigg ( sin \theta \frac{\partial \psi}{\partial \theta} \Bigg ) = 0
+   \nabla^2 \phi = \frac{1}{r} \frac{\partial }{\partial r} \big ( r^2 \big ) \frac{\partial \phi}{\partial r} + \frac{1}{r^2 sin \theta} \frac{\partial}{\partial \theta}
+   \Bigg ( sin \theta \frac{\partial \phi}{\partial \theta} \Bigg ) = 0
    :label: PoissonEq2d
 
-The boundary conditions for our problem state that :math:`\psi`, and
+The boundary conditions for our problem state that :math:`\phi`, and
 current flow normal to the sphere’s surface, are continuous at
 :math:`r=a`. Therefore:
 
 .. math::
-   \psi = \psi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \psi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \psi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a
+   \phi = \phi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \phi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \phi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a
    :label: BoundaryConditions
 
 For a source which is outside the sphere (:math:`a < x_0`), the desired
 solution for the potential is:
 
 .. math::
-   \psi = \frac{I \rho}{4\pi R} + \sum_{n=0}^\infty A_n \frac{1}{r^{n+1}} P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r>a
+   \phi = \frac{I \rho}{4\pi R} + \sum_{n=0}^\infty A_n \frac{1}{r^{n+1}} P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r>a
    :label: PsiSolAn
 
 and
 
 .. math::
-   \psi_1 = \sum_{n=0}^\infty B_n r^n P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r<a
+   \phi_1 = \sum_{n=0}^\infty B_n r^n P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r<a
    :label: Psi1SolBn
 
 This makes sense considering :math:`1/r` terms within the sphere would
@@ -158,7 +158,7 @@ Therefore, the electric scalar potential observed outside the sphere is
 equal to:
 
 .. math:: 
-   \psi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+   \phi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
    :label: Potential_Sphere_WholeSpace
 
 Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential for a wholespace from
@@ -196,9 +196,9 @@ Variables
 +---------------------+-----------------------------------------------------------------------------------------+
 |:math:`I`            | Intenisty of the current                                                                |
 +---------------------+-----------------------------------------------------------------------------------------+
-|:math:`\psi`         | Total potential outside of the sphere (:math:`r > a`)                                   |
+|:math:`\phi`         | Total potential outside of the sphere (:math:`r > a`)                                   |
 +---------------------+-----------------------------------------------------------------------------------------+
-|:math:`\psi_1`       | Total potential inside of the sphere (:math:`r < a`)                                    |
+|:math:`\phi_1`       | Total potential inside of the sphere (:math:`r < a`)                                    |
 +---------------------+-----------------------------------------------------------------------------------------+
 
 Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
@@ -215,7 +215,7 @@ done because all current flows entirely through the ground. By setting
 current :math:`I` at (:math:`x_0,0,0`) is:
 
 .. math:: 
-   \psi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
+   \phi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
    :label: Potential_Sphere_Pole_HemisphereDepression_Halfspace
 
 .. figure:: ./figures/SphericalDepression_PoleDipole.png
@@ -234,7 +234,7 @@ and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
 .. math:: 
    \begin{split}
-   \psi (r , \theta, \phi) &= \psi_{+} + \psi_{\, -}\\
+   \phi (r , \theta, \phi) &= \phi_{+} + \phi_{\, -}\\
    &= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
    \end{split}
    :label: Potential_Sphere_Dipole_HemisphereDepression_Halfspace

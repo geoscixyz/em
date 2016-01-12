@@ -1,6 +1,6 @@
 # GeoSci.xyz EM
 
-[![Build Status](https://travis-ci.org/ubcgif/em.svg?branch=master)](https://travis-ci.org/ubcgif/em)
+[![Build Status](https://travis-ci.org/ubcgif/em.svg?branch=master)](https://travis-ci.org/ubcgif/em)  [![license](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0)
 
 http://em.geosci.xyz
 

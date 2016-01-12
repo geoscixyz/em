@@ -33,10 +33,10 @@ Some examples
 Infinite vertical wire
 ----------------------
 
-Given an infinite vertical wire along the axis \\(\\mathbf{z}\\),
-infinitesimally thin carrying an electric current of intensity \\(i\\), the
-value of generated magnetic flux at every point in space at a distance \\(r\\)
-(with direction indicated by the  unit vector \\(\\mathbf{\\hat{r}}\\)) from
+Given an infinite vertical wire along the axis :math:`\mathbf{z}`,
+infinitesimally thin carrying an electric current of intensity :math:`i`, the
+value of generated magnetic flux at every point in space at a distance :math:`r`
+(with direction indicated by the  unit vector :math:`\mathbf{\hat{r}}`) from
 the wire is:
 
  .. math::
@@ -49,9 +49,9 @@ the wire is:
 Magnetic flux along the central axis of a loop
 ----------------------------------------------
 
-Given a loop of radius \\(R\\), which is infinitesimally thin, carrying a electric current of
-intensity \\(i\\), the generated magnetic flux along the central axis of the loop
-\\(\\mathbf{z}\\), at a distance \\(r\\), is:
+Given a loop of radius :math:`R`, which is infinitesimally thin, carrying a electric current of
+intensity :math:`i`, the generated magnetic flux along the central axis of the loop
+:math:`\mathbf{z}`, at a distance :math:`r`, is:
 
  .. math::
 	\mathbf{b}= \frac{\mu_{0} I_{enc}}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \mathbf{\hat{z}}
@@ -61,5 +61,5 @@ intensity \\(i\\), the generated magnetic flux along the central axis of the loo
  	:scale: 15%
 
 
-Note: Considering \\(\\mathbf{dl}\\) and \\(\\mathbf{\hat{z}}\\) form a direct
-(orthonormal system, the direction of the flux is given by the sign of \\(i\\) )
+Note: Considering :math:`\mathbf{dl}` and :math:`\mathbf{\hat{z}}` form a direct
+(orthonormal system, the direction of the flux is given by the sign of :math:`i` )

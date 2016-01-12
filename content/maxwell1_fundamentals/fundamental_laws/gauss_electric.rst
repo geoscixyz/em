@@ -30,10 +30,10 @@ Gauss’s law in integral form is given below:
 
 where:
 
- - \\( \\mathbf{e} \\) is the electric field
- - \\( Q \\) is the enclosed electric charge
- - \\( \\varepsilon_0 \\) is the electric permittivity of free space
- - \\( \\hat{\\mathbf{n}} \\) is the outward pointing unit-normal
+ - :math:` \mathbf{e} ` is the electric field
+ - :math:` Q ` is the enclosed electric charge
+ - :math:` \varepsilon_0 ` is the electric permittivity of free space
+ - :math:` \hat{\mathbf{n}} ` is the outward pointing unit-normal
 
 .. _gauss_electric_differential:
 
@@ -63,9 +63,11 @@ integrands, giving the differential form of Gauss's law:
 	\boldsymbol{\nabla} \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0}.
 	:label: Gauss_e_diff
 
+.. _coulomb:
+
 Equivalence to Coulomb's law
 ----------------------------
-
+ 
  .. figure:: images/CoulombsLaw.png
     :align: right
     :scale: 75% 
@@ -117,7 +119,9 @@ individual charge.
    \mathbf{e}\left(\sum_{k=1,n} Q_i\right) = \sum_{k=1,n} \mathbf{e}(Q_i)
    :label:
 
-If we consider the the electric field due to a spatially extended body with charge density :math:`\rho`, the sum becomes an integral over infinitesimal volume elements of the body
+If we consider the the electric field due to a spatially extended body with
+charge density :math:`\rho`, the sum becomes an integral over infinitesimal
+volume elements of the body
 
 .. math::
   \mathbf{e} = \frac{1}{4\pi\varepsilon_0}\int_V \frac{\rho}{|\mathbf{r} - \mathbf{r'}|^2}\;\widehat{(\mathbf{r} - \mathbf{r'})}\;\mathrm{d}v,
@@ -185,17 +189,17 @@ Units
 -----
 
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Surface area      |  \\(\\text{S}\\)    | \\(\\text{m}^{2}\\)                |      Square meter                     |
+|     Surface area      |  :math:`\text{S}`   | :math:`\text{m}^{2}`               |      Square meter                     |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Volume            |  :math:`V`          | \\(\\text{m}^{3}\\)                |                  Cubic meter          |
+|     Volume            |  :math:`V`          | :math:`\text{m}^{3}`               |                  Cubic meter          |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric charge   | \\(\\text{q, Q}\\)  | \\(\\text{C}\\)                    |            Coulomb                    |
+|     Electric charge   | :math:`\text{q, Q}` | :math:`\text{C}`                   |            Coulomb                    |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electric charge density| :math:`\rho`        |\\(\\frac{\\text{C}}{\\text{m}^3}\\)|  Coulomb per cubic meter              |
+|Electric charge density| :math:`\rho`        |:math:`\frac{\text{C}}{\text{m}^3}` |  Coulomb per cubic meter              |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric field    | \\(\\mathbf{e}\\)   |\\(\\frac{\\text{V}}{\\text{m}}\\)  | Volt per meter                        |
+|     Electric field    | :math:`\mathbf{e}`  |:math:`\frac{\text{V}}{\text{m}}`   | Volt per meter                        |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electrical permittivity|:math:`\varepsilon_0`| \\(\\frac{\\text{F}}{\\text{m}}\\) | Farad per meter                       |
+|Electrical permittivity|:math:`\varepsilon_0`| :math:`\frac{\text{F}}{\text{m}}`  | Farad per meter                       |
 +-----------------------+---------------------+------------------------------------+---------------------------------------+
 
 **Conversions**
