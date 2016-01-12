@@ -93,7 +93,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','_static','AUTHORS.rst','content/equation_bank/*','content/maxwell1_fundamentals/formative_laws_and_people/*','content/maxwell1_fundamentals/constitutive_relations/*']
+exclude_patterns = ['_build','_static','AUTHORS.rst','README.md','content/equation_bank/*','content/maxwell1_fundamentals/formative_laws_and_people/*','content/maxwell1_fundamentals/constitutive_relations/*']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -122,6 +122,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+# number figures
 numfig = True
 
 # -- Options for HTML output ----------------------------------------------
@@ -178,8 +179,7 @@ html_favicon = 'em.ico'
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
    '**': [
-       'globaltoc.html', 
-       'relations.html', 
+       'globaltoc.html',  
        'searchbox.html',
        ],
 }

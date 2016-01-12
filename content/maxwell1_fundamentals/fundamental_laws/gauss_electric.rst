@@ -63,9 +63,11 @@ integrands, giving the differential form of Gauss's law:
 	\boldsymbol{\nabla} \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0}.
 	:label: Gauss_e_diff
 
+.. _coulomb:
+
 Equivalence to Coulomb's law
 ----------------------------
-
+ 
  .. figure:: images/CoulombsLaw.png
     :align: right
     :scale: 75% 
