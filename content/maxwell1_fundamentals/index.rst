@@ -28,6 +28,7 @@ Overview of Maxwell's Equations
 
 Maxwell's equations connect electric and mangetic fields, fluxes and physical properties. 
 
+
 .. include:: maxwell_variables.rst
 
 
