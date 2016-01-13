@@ -6,10 +6,10 @@ Physical Properties
 In geophysics we characterize materials by their physical properties. The
 relevant  properties for electromagnetics are:
 
- - electrical conductivity, :math:`\sigma` (or its reciprocal, resistivity, :math:`\rho`)
- - chargeability (a parameter that characterizes how electrical conductivity depends upon frequency)
- - magnetic permeability, :math:`\mu`
- - electrical permittivity, :math:`\varepsilon`
+ - :ref:`electrical_conductivity_index`: :math:`\sigma` (or its reciprocal, resistivity, :math:`\rho`)
+ - :ref:`chargeability_index`: a parameter that characterizes how electrical conductivity depends upon frequency
+ - :ref:`magnetic_permeability_index`, :math:`\mu`
+ - :ref:`electrical_permittivity_index`, :math:`\varepsilon`
 
 A physical property quantifies how a rock responds to a particular input and
 it therefore connects a forcing field to a resulting flux. Typically the
@@ -29,14 +29,14 @@ needed then application of the Fourier transform yields
  - :math:`\mathbf{b}(t)=\mu(t) \ast \mathbf{h}(t)`
  - :math:`\mathbf{d}(t)=\varepsilon(t) \ast \mathbf{e}(t)`
 
-The constitutive relations, along with Maxwell's equations,  form a complete set of equations for electromagnetic. 
+The constitutive relations, along with Maxwell's equations,  form a complete set of equations for electromagnetics. 
 
 In this section we present basic material regarding the various physical properties. For each property we provide:
--laboratory experiment
--Useful tables
--Additional information 
--References 
 
+- laboratory experiment
+- Useful tables
+- Additional information 
+- References 
 
 
 **Contents:**
@@ -44,8 +44,8 @@ In this section we present basic material regarding the various physical propert
 .. toctree::
     :maxdepth: 1
 
-    physical_properties_electrical_conductivity
-    physical_properties_chargeability
-    physical_properties_magnetic_permeability
-    physical_properties_electrical_permittivity
+    electrical_conductivity/index
+    chargeability/index
+    magnetic_permeability/index
+    electrical_permittivity/index
 

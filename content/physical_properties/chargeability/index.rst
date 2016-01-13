@@ -1,41 +1,10 @@
-.. _physical_properties_electrical_conductivity: 
-
-Electrical Conductivity
-=======================
-
-Electrical conductivity is a physical property that describes how easily electric currents can flow through a medium. Conductivity, and its reciprocal, "resistivity", are used interchangeably.  
-The conductivity of earth materials depends on many factors but primarily upon mineral content, porosity, saturating fluids, connecting paths and temperature.
-
-
-
-**** maybe the following is in a comment box***
-The measured conductivity (or resistivity) often shows a frequency dependence. Effectively the material can act like a capacitor and build up a charge when an electric field is applied. The ability to accumulate charge is called "chargeability" and the survey designed to measure the effect is called an IP (Induced Polarization) or, SIP (spectral IP) survey. Chargeabilty is often listed as an independent physical property (such as density, magnetic suspectibilty) and we will continue with that in this EM resource. It is however, just an element that is necessary in order to provide a complete description of electrical conductivity.
-**************
-
-
-
-ToC: Contents: 
-(a) Lab setup/measurements
-(b) Units (also difference between resistance, resistivity; R=rho L/A)
-(c) Factors that affect electrical conductivity (metallic, ionic, semi-conductor, fluids, connectivity)
-(d) Some mathematical relationships (eg Archie's law,) (big topic but low priority. A placeholder will do. )
-(e) Tables of conductivty (one from GPG, other tables for rocks and minerals)
-(f) Where conductivity can be a diagnostic physical property.
-
-References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
-
-Knight and Enders: An introduction to Rock Physics Principles for near surface geophysics: Investigations in geophysics No13; SEG Near;-Surface Geophysics edited by Dwain Butler
-
-Stan Ward: Resistivity ad Induced Polarization Methods (p147..)
-Investigations in geophysics #5; Geotechical and environemental geophysics.
-
-
-
+.. _electrical_chargeability_index:
 
 Chargeability
 =============
 
-ToC: Contents: 
+ToC: Contents:
+ 
 (a) Lab setup/measurements
 (b) Impedance curve with frequency (Z(w)); sigma(w); definition of eta from the asymptotic values; transforming to time to get time dependent conductivity; over-voltage diagram; using V_inf and V_0 to theoretically define eta. 
 (c) Factors that affect chargeabilty (microscopic phenomenon (images from GPG); conceptual models metallic and membrane polarization illustrating charge accumulation)
@@ -60,4 +29,3 @@ Formula for conductivity and for resistivity. Definitions of variables. eta is t
 Historically "chargeabilty" has been referred to as "over-voltage". The description arises from geophysial surveys in the 1950's and is illustrated in the following diagram:
 
 Our generic diagram in GPG (or equivalent), showing 1/2 duty waveform, V_inf, V_0, eta, V_s
-

@@ -3,8 +3,7 @@
 Introduction
 ============
 
-Why Electromagnetics?
----------------------
+**Why Electromagnetics ?**
 
 
 **Contents:**

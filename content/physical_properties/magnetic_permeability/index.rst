@@ -1,4 +1,4 @@
-.. _physical_properties_magnetic_permeability: 
+.. _magnetic_permeability_index: 
 
 Magnetic Permeability
 =====================
@@ -6,6 +6,7 @@ Magnetic Permeability
 Comment: The description can parallel what is presented for electrical conductivity. We also have the bifurcation that mostly we are thinking of real 
 
 ToC: Contents: 
+
 (a) Lab setup/measurements
 (b) Units of permeability; physical understanding of difference between B and H;
 Magnetic susceptibility

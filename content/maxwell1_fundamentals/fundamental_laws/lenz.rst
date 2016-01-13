@@ -33,10 +33,10 @@ the reason for the negative sign in Faraday's Law, equation
 :eq:`faraday_lenz_time`. :numref:`Lenzs_Law_Diagram` and the demonstration
 linked below provide visual illustrations of Lenz's Law.
 
- .. figure:: ./images/LenzsLawDiagram.png
-	:align: center
-	:scale: 110% 
-	:name: Lenzs_Law_Diagram
+ .. figure:: images/LenzsLawDiagram.png
+    :align: center
+    :scale: 90% 
+    :name: Lenzs_Law_Diagram
 
     In panel (a) we see a situation in which the magnetic flux through the
     loop is increasing as a function of time. The induced current direction
