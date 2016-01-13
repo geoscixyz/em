@@ -10,9 +10,9 @@ DC Resistivity (DCR)
 The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DCR_index>`. Many choices are possible for electrode layouts and the final choice is motivated by the following factors:
 
 
-(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIM_DAS`_.  The cable had xxxx connections, each of which could serve as a current electrode or potential electrode. 
+(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of which could serve as a current electrode or potential electrode. 
 
-.. _MIM_DAS: http://www.smedg.org.au/Sym01NS.htm
+.. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
 (b) The area of interest is approximately 5km x 5km. Although full 3D coverage was desireable, the field acquistion was limited to 10 east-west lines. A full set of xxx electrodes were deployed along each line.
 
@@ -33,7 +33,25 @@ The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DC
 
 Survey Design
 -------------
-The geologic structures are primarily striking north-south and a cross-section of the geologic units and their resistivities is shown in. The unit of interest is the Mt. Novit Horizon which is conductive compared to the host Moondarra Siltsone. Two forward modellings are generated. The first is without the conductor, the second is with.  The pole-dipole pseudo-sections obtained with xxxx electrodes spaced xxxx meters apart is shown in {figure:  4 of them are needed}. 
+The geologic structures are primarily striking north-south and a cross-section of the geologic units and their resistivities is shown in. The unit of interest is the Mt. Novit Horizon which is conductive compared to the host Moondarra Siltsone. Two forward modellings are generated. The first is without the conductor, the second is with.  The pole-dipole pseudo-sections obtained with 15 electrodes spaced 100 meters apart is shown in :numref:`DC2D_Inv`. 
+
+.. figure:: ./images/MtIsa_DCIP2D_Inv.png
+	:scale: 75%
+	:align: center
+	:figwidth: 75%
+	:name: DC2D_Inv
+
+  	(Top) Pseudo conductivity section (log10) along the geologicalsection. (Bottom) Recovered 2D conductivity model from the inversion of DCR data. The true conductivity model is shown in grey scale for reference.
+
+
+.. figure:: ./images/MtIsa_DCIP2D_Inv_NoTarget.png
+	:scale: 75%
+	:align: center
+	:figwidth: 75%
+	:name: DC2D_Inv_NoTarget
+
+  	(Top) Pseudo conductivity section (log10) along the geologicalsection. (Bottom) Recovered 2D conductivity model from the inversion of DCR data. The true conductivity model is shown in grey scale for reference.
+
 
 To determine if the survey is well designed we use the criteria in {link:general  basics of survey design where we look at the absolute difference and relative difference  ?Sarah} The difference sections are shown in {figure}. They show xxx
 If errors are assigned as 5% + floor 0.0001 V then the secondary signal from the target is detectable.
