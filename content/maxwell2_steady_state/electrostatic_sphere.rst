@@ -33,7 +33,7 @@ The problem setup is shown in the figure below, where we have
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -105,7 +105,7 @@ the integration from :eq:`V_from_e` gives
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -140,7 +140,7 @@ and inside the sphere :math:`(r < R)`
     sig2 = 10.**-5         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -190,7 +190,7 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     sig2 = 10.**-5         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -271,7 +271,7 @@ the charges and not the reverse.
     sig2 = 10.**-5         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -329,7 +329,7 @@ The figure below shows surface charge density at the surface of sphere.
     sig2 = 10.**-5         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -377,7 +377,7 @@ The reverse is observed for a resistive sphere.
     sig1 = 100.         # conductivity of the sphere
     R    = 50.          # radius of the sphere
     E0   = 1.           # inducing field strength
-    n = 100             #level of discretisation
+    n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -421,7 +421,7 @@ The only parameters that have changed are the radius and the conductivity of the
     R0    = 10.          
     R1 = 20.
     E0   = 1.           
-    n = 100             
+    n = 50             
     xr = np.linspace(-100, 100, n) 
     yr = xr.copy()      
     zr = np.r_[0]          
