@@ -30,6 +30,7 @@ Units
 +-----------------------+-----------------------------------+---------------------------------------+
 | Mineralization        |  1430                             | 0.7                                   |
 +-----------------------+-----------------------------------+---------------------------------------+
+
 Table of physical properties for few rock units found at Mount Isa.
 
 The electrical properties of the conductive 
