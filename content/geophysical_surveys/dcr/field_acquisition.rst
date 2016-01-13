@@ -68,7 +68,7 @@ these curves are stacked to reduce the noise.
    A typical transmitter `waveform <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm>`_
 
 The primary voltage, or DC component of the measured voltage is taken before
-any IP effect has taken place, as noted by :math:` \mathrm{V}_{\sigma} ` in
+any IP effect has taken place, as noted by :math:`\mathrm{V}_{\sigma}` in
 :numref:`IP_waveform2`, whereas the IP measurement is taken as an integral
 beneath the voltage curve between two user defined time points (t1 and t2).
 The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.

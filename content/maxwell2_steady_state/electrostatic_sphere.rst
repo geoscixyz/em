@@ -118,13 +118,13 @@ the integration from :eq:`V_from_e` gives
 
     plt.show()
 
-The total potential outside the sphere :math:` (r > R) ` is
+The total potential outside the sphere :math:`(r > R)` is
 
 .. math::
 	V_1 = -E_0 \big(1 - \frac{R^3}{r^3}\frac{\sigma_1 - \sigma_0}{\sigma_1 + 2\sigma_0} \big) r \cos\theta
 	:label: totalP_outside
 
-and inside the sphere :math:` (r < R) `
+and inside the sphere :math:`(r < R)`
 
 .. math::
 	V_2 = -E_0 \frac{3\sigma_0}{\sigma_1+2\sigma_0}r \cos\theta
@@ -225,7 +225,7 @@ Secondary Current
 ^^^^^^^^^^^^^^^^^
 
 The secondary current density is defined as a difference between the total
-current density, :math:` \mathbf{J_T} = \sigma \mathbf{E_T} ` and the primary 
+current density, :math:`\mathbf{J_T} = \sigma \mathbf{E_T}` and the primary 
 current :math:`\mathbf{J_0} = \sigma_0 \mathbf{E_0}`
 
 .. math::
