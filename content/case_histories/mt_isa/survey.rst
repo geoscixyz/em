@@ -61,3 +61,15 @@ Inversion of Synthetic data
 Following the work {link: general basics of survey design} we invert the synthetic data using 2D algorithm.  The parameters used in the inversion were:  xxxxx. The Mt. Norvit Horizon is evident.
 
 
+Using 2D forward modelling, we can also visualize where current flows and
+where charge buildup occurs in our single pole source experiment. The
+interactive figure below shows how current flows through the earth for a given
+source location. Note in particular how current is channelled into the
+conductive circular unit and away from the steeply dipping resistive units. We
+can also clearly see charge buildup occuring at the interfaces between units.
+
+.. raw:: html
+  :file: ./images/Isa_Current.html
+
+Current density (arrows) and charge density (color) for a range of source
+locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
