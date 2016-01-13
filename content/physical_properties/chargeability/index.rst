@@ -1,17 +1,18 @@
-.. _electrical_chargeability_index:
+.. _chargeability_index:
 
 Chargeability
 =============
 
 ToC: Contents:
- 
+
 (a) Lab setup/measurements
-(b) Impedance curve with frequency (Z(w)); sigma(w); definition of eta from the asymptotic values; transforming to time to get time dependent conductivity; over-voltage diagram; using V_inf and V_0 to theoretically define eta. 
+(b) Impedance curve with frequency (:math:`Z(\omega)`); :math:`sigma(\omega)`; definition of eta from the asymptotic values; transforming to time to get time dependent conductivity; over-voltage diagram; using V_inf and :math:`V_0` to theoretically define eta. 
 (c) Factors that affect chargeabilty (microscopic phenomenon (images from GPG); conceptual models metallic and membrane polarization illustrating charge accumulation)
 (d) Some mathematical relationships (Cole-Cole (conductivity and resistivity); stretched exponential.   (maybe here is python widget for Cole-Cole) )
-(e) Units: the intinsic chargeabilty is dimensionless. [0,1]. In practise surveys are explicitly designed to find chargeable material and the field data acquire units that correspond to the survey.  In this regard, any datum that is connected with chargeable .
-(e) Tables of chargeability (one from GPG, other tables for rocks and minerals)
-(f) Where chargeabilty can be a diagnostic physical property.
+(e) Units: the intinsic chargeabilty is dimensionless. :math:`[0,1]`. In practise surveys are explicitly designed to find chargeable material and the field data acquire units that correspond to the survey.  In this regard, any datum that is connected with chargeable .
+(f) Tables of chargeability (one from GPG, other tables for rocks and minerals)
+(g) Where chargeabilty can be a diagnostic physical property.
+
 
 References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
 
@@ -21,11 +22,25 @@ Stan Ward: Resistivity ad Induced Polarization Methods (p147..)
 Investigations in geophysics #5; Geotechical and environemental geophysics.
 
 
----------  Scraps:  to be included as it fits into the above framework. 
-The electrical conductivity of a material can depend upon frequency. In Ohm's Law, \\J=\\sigma E\\, \\sigma\\ is a complex number. The underlying microscopic phenomonae accounting for this is complicated and depends upon the minerals, grain sizes, and surface-to-volume ratios and the abundance of clays. There is no simple mathematical formula that describes the relation between conductivity and frequency but one that has some practical use is the Cole-Cole model.
+**Scraps:**  to be included as it fits into the above framework. 
+The electrical conductivity of a material can depend upon frequency. In Ohm's
+Law, :math:`J=\sigma E`, :math:`\sigma` is a complex number. The underlying
+microscopic phenomonae accounting for this is complicated and depends upon the
+minerals, grain sizes, and surface-to-volume ratios and the abundance of
+clays. There is no simple mathematical formula that describes the relation
+between conductivity and frequency but one that has some practical use is the
+Cole-Cole model.
 
-Formula for conductivity and for resistivity. Definitions of variables. eta is the "chargeability" (dimensionless 0<eta<1); eta is often related to the concentration of a chargeable mineral, for instance eta is related to the total percentage of sulfide minerals. tau is a time constant generally thought to be related to grain size; c is a variable associated with (?distribution of grain size?)
+Formula for conductivity and for resistivity. Definitions of variables. eta is
+the "chargeability" (dimensionless :math:`0<\eta<1`); :math:`\eta` is often related to
+the concentration of a chargeable mineral, for instance eta is related to the
+total percentage of sulfide minerals. :math:`\tau` is a time constant generally thought
+to be related to grain size; :math:`c` is a variable associated with (?distribution of
+grain size?)
 
-Historically "chargeabilty" has been referred to as "over-voltage". The description arises from geophysial surveys in the 1950's and is illustrated in the following diagram:
+Historically "chargeabilty" has been referred to as "over-voltage". The
+description arises from geophysial surveys in the 1950's and is illustrated in
+the following diagram:
 
-Our generic diagram in GPG (or equivalent), showing 1/2 duty waveform, V_inf, V_0, eta, V_s
+Our generic diagram in GPG (or equivalent), showing 1/2 duty waveform,
+:math:`V_\infty`, :math:`V_0`, :math:`\eta`, :math:`V_s`
