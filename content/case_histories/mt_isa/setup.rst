@@ -14,7 +14,7 @@ Setup
 Geological Background
 ---------------------
 
-.. figure:: images/Location_map.png
+.. figure:: images/Location_Map_Paper.png
     :align: right
     :scale: 80% 
     :figwidth: 40%
@@ -24,7 +24,7 @@ Geological Background
 
 The Mount Isa region :numref:`Location_map` hosts numerous deposits (Pb, Zn, Ag, Cu, ???) and the area is under continual exploration. The geographical area of interest for this study is the Cluny region. 
 
-.. figure:: ./images/Geological_Section.png
+.. figure:: ./images/Geological_Section_Paper.png
     :align: left
     :scale: 80% 
     :name: Geology_Section
