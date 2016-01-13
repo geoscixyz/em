@@ -11,7 +11,6 @@ Contents:
     electrostatic_sphere
     Forward_Modelling
     Maxwell_Discretization
-    Mt_Isa_case_study
     SphericalDepression_theory
     SphericalDepression_numerics
 
