@@ -15,7 +15,7 @@ saturating fluids, connecting paths and temperature.
     The measured conductivity (or resistivity) often shows a frequency
     dependence. Effectively the material can act like a capacitor and build up
     a charge when an electric field is applied. The ability to accumulate
-    charge is called :ref`"chargeability"<electrical_chargeability>` and the survey designed to measure the
+    charge is called :ref:`"chargeability"<chargeability_index>` and the survey designed to measure the
     effect is called an IP (Induced Polarization) or, SIP (spectral IP)
     survey. Chargeabilty is often listed as an independent physical property
     (such as density, magnetic suspectibilty) and we will continue with that
