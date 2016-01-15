@@ -1,4 +1,4 @@
-.. _electrical_conductivity_mathematical_relationships:
+.. _magnetic_permeability_mathematical_relationships:
 
 Some mathematical relationships
 ===============================

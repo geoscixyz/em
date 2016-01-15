@@ -1,4 +1,4 @@
-.. _electrical_conductivity_lab_setup_measurements:
+.. _magnetic_permeability_lab_setup_measurements:
 
 Lab Setup and Measurements
 ==========================
