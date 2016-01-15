@@ -1,7 +1,9 @@
 .. _constitutive_relations_index: 
 
-Constitutive Relationships and Physical Properties
-==================================================
+Constitutive Relationships
+==========================
+
+.. todo:: do we want seperate pages for each? or one page for all? 
 
 For each of the constitutive relationships provide background regarding a
 basic (frequency domain) experiment by which to measure the physical property,
@@ -11,7 +13,7 @@ properties).
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     j_e_sigma
     b_h_mu

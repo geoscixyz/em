@@ -3,6 +3,21 @@
 Physical Properties
 ===================
 
+**Contents:**
+
+.. toctree::
+    :maxdepth: 1
+
+    electrical_conductivity/index
+    chargeability/index
+    magnetic_permeability/index
+    electrical_permittivity/index
+    constitutive_relations/index
+
+
+Overview
+--------   
+
 In geophysics we characterize materials by their physical properties. The
 relevant  properties for electromagnetics are:
 
@@ -37,15 +52,4 @@ In this section we present basic material regarding the various physical propert
 - Useful tables
 - Additional information 
 - References 
-
-
-**Contents:**
-
-.. toctree::
-    :maxdepth: 1
-
-    electrical_conductivity/index
-    chargeability/index
-    magnetic_permeability/index
-    electrical_permittivity/index
 
