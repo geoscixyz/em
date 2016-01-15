@@ -3,5 +3,5 @@
 Units & Values
 ==============
 
-(also difference between resistance, resistivity; R=rho L/A)
+.. todo:: (also difference between resistance, resistivity; R=rho L/A)
 

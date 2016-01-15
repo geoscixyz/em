@@ -3,6 +3,8 @@
 Basic Electromagnetic Experiments
 =================================
 
+.. todo:: write this page :)
+
 sources, data, time, frequency
 
  .. figure:: images/geophysics.png

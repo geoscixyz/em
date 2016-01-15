@@ -22,7 +22,7 @@ saturating fluids, connecting paths and temperature.
     in this EM resource. It is however, just an element that is necessary in
     order to provide a complete description of electrical conductivity.
 
-**TODO: where is it diagnostic?**
+.. todo:: where is it diagnostic?
 
 
 **Contents**
