@@ -6,13 +6,13 @@ About
 Why?
 ----
 
-.. why does em.geosci.xyz exist
+.. todo:: why are we doing this
 
 
 What?
 -----
 
-.. what is it
+.. todo:: what is it
  
 
 

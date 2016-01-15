@@ -1,14 +1,27 @@
 .. _j_e_sigma:
 
-
 (J,E): sigma
-========================
+============
 
-Ohm's law is one of the three constitutive equations used in conjunction with Maxwell's equations. It is not a formal law as it describes the relationship between the current density :math:`\mathbf{J}`, which is defined as the electrical current through a cross-sectional area, and the electric field :math:`\mathbf{E}` for some materials, but not all. The law was originally published in 1827 by Georg Ohm in his book entitled "The galvanic circuit investigated mathematically" and was accepted widely by the 1850's. It is written in the frequency-domain as:
+Ohm's law is one of the three constitutive equations used in conjunction with
+Maxwell's equations. It is not a formal law as it describes the relationship
+between the current density :math:`\mathbf{J}`, which is defined as the
+electrical current through a cross-sectional area, and the electric field
+:math:`\mathbf{E}` for some materials, but not all. The law was originally
+published in 1827 by Georg Ohm in his book entitled "The galvanic circuit
+investigated mathematically" and was accepted widely by the 1850's. It is
+written in the frequency-domain as:
 
 .. include:: ../../equation_bank/ohms_law_freq.rst
 
-where :math:`\sigma` is the electrical conductivity, which is defined as the amount of resistance a material has to an electric current. The equation states that in order to generate a certain current density, the electric field must be increased as the electrical conductivity increases. Conductivity (or its inverse, resistivity :math:`\rho`) is a tensor as both the current density and the electric field are vectors with components in three orthogonal directions in Cartesian coordinates. For isotropic materials, this tensor simplifies to a scalar value as the conductivity does not vary with direction.
+where :math:`\sigma` is the electrical conductivity, which is defined as the
+amount of resistance a material has to an electric current. The equation
+states that in order to generate a certain current density, the electric field
+must be increased as the electrical conductivity increases. Conductivity (or
+its inverse, resistivity :math:`\rho`) is a tensor as both the current density
+and the electric field are vectors with components in three orthogonal
+directions in Cartesian coordinates. For isotropic materials, this tensor
+simplifies to a scalar value as the conductivity does not vary with direction.
 
 The electric field and the current density are complex numbers in the frequency-domain. The equation can also be written in the time-domain:
 
