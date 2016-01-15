@@ -3,12 +3,13 @@
 Electrical Conductivity
 =======================
 
+.. What is it
+
 Electrical conductivity is a physical property that describes how easily
 electric currents can flow through a medium. Conductivity, and its reciprocal,
 "resistivity", are used interchangeably. The conductivity of earth materials
 depends on many factors but primarily upon mineral content, porosity,
 saturating fluids, connecting paths and temperature.
-
 
 .. note::
     The measured conductivity (or resistivity) often shows a frequency
@@ -21,16 +22,18 @@ saturating fluids, connecting paths and temperature.
     in this EM resource. It is however, just an element that is necessary in
     order to provide a complete description of electrical conductivity.
 
+**TODO: where is it diagnostic?**
 
 
-ToC: Contents: 
+**Contents**
 
-(a) Lab setup/measurements
-(b) Units (also difference between resistance, resistivity; R=rho L/A)
-(c) Factors that affect electrical conductivity (metallic, ionic, semi-conductor, fluids, connectivity)
-(d) Some mathematical relationships (eg Archie's law,) (big topic but low priority. A placeholder will do. )
-(e) Tables of conductivty (one from GPG, other tables for rocks and minerals)
-(f) Where conductivity can be a diagnostic physical property.
+ .. toctree::
+    :maxdepth: 2
+
+    electrical_conductivity_lab_setup_measurements
+    electrical_conductivity_units_values
+    electrical_conductivity_factors
+    electrical_conductivity_mathematical_relationships
 
 References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
 
