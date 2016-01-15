@@ -25,6 +25,7 @@ Investigations in geophysics #5; Geotechical and environemental geophysics.
 
 .. todo:: 
     **Scraps:**  to be included as it fits into the above framework. 
+    
     The electrical conductivity of a material can depend upon frequency. In Ohm's
     Law, :math:`J=\sigma E`, :math:`\sigma` is a complex number. The underlying
     microscopic phenomonae accounting for this is complicated and depends upon the
