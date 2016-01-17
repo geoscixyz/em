@@ -67,5 +67,6 @@ We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t
 **References** 
 
  .. bibliography:: ../references.bib
-    :cited: 
-    :style: plain
+    :style: alpha
+    :encoding: latex+latin
+    :filter: docname in docnames
