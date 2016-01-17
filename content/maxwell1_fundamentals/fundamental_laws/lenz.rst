@@ -28,7 +28,7 @@ by Lenz's Law.
 Lenz's Law states that the induced current will flow in such a direction that
 its secondary or induced magnetic fields act to oppose the  observed change in
 magnetic flux. Simply put, "nature abhors a change in flux" so the induced
-current flows in such a manner to cancel  out the change [Giffiths]_. This is
+current flows in such a manner to cancel  out the change :cite:`griffiths1999`. This is
 the reason for the negative sign in Faraday's Law, equation
 :eq:`faraday_lenz_time`. :numref:`Lenzs_Law_Diagram` and the demonstration
 linked below provide visual illustrations of Lenz's Law.
@@ -52,5 +52,9 @@ Illustrative Demo:
 
 **References** 
 
-.. [Giffiths] Griffiths, David. J (1999). Introduction to Electrodynamics (3rd ed.). Prentice Hall.  
+ .. bibliography:: ../../references.bib
+    :style: alpha
+    :encoding: latex+latin
+    :filter: docname in docnames
+  
 
