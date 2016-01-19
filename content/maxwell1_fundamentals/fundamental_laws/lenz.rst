@@ -56,5 +56,3 @@ Illustrative Demo:
     :style: alpha
     :encoding: latex+latin
     :filter: docname in docnames
-  
-

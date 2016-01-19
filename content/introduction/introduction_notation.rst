@@ -3,7 +3,7 @@
 Notation and Conventions
 ========================
 
-We choose the notation set forth in :cite:`Ward1988`. Their chapter has
+We choose the notation set forth in :cite:`ward1988`. Their chapter has
 been the foundation of many research papers, is used by geophysicists world-
 wide, and it is clean and unambiguous.
 
