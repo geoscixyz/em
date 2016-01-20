@@ -33,7 +33,7 @@ experts, worldwide, contribute. Join the development on github_.
 **Contents:**
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :name: `EM GeoSci`
 
    content/introduction/index
@@ -44,6 +44,7 @@ experts, worldwide, contribute. Join the development on github_.
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
    content/case_histories/index
+   content/references
 
 
 Contributors:
@@ -52,10 +53,4 @@ Contributors:
 .. include:: AUTHORS.rst
 
 
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
 

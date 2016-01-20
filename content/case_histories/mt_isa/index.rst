@@ -19,9 +19,9 @@ This was one of the first examples of inverting DC/IP field data to recover 3D d
     interpretation
     synthesis
 
-**References**
+.. **References**
 
- .. bibliography:: ../../references.bib
-    :style: alpha
-    :encoding: latex+latin
-    :filter: docname in docnames
+..  .. bibliography:: ../../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames

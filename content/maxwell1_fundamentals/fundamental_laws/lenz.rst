@@ -50,9 +50,9 @@ Illustrative Demo:
 `MIT Physics Demo - Lenz's Law with Copper Pipe 
 <http://video.mit.edu/watch/physics-demo-lenzs-law-with-copper-pipe-10268/>`_.
 
-**References** 
+.. **Refereneces** 
 
- .. bibliography:: ../../references.bib
-    :style: alpha
-    :encoding: latex+latin
-    :filter: docname in docnames
+..  .. bibliography:: ../../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames

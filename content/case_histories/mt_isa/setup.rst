@@ -51,9 +51,9 @@ Moondarra Siltstone are considered to be favourable host
 stratigraphy for mineralisation.
 
 
-**References:**
+.. **References:**
 
- .. bibliography:: ../../references.bib
-    :style: alpha
-    :encoding: latex+latin
-    :filter: docname in docnames
+..  .. bibliography:: ../../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames

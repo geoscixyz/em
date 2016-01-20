@@ -316,11 +316,9 @@ demonstrated the equivalence of electromagnetic waves and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
 
+.. **References** 
 
-
-**References**
-
- .. bibliography:: ../../references.bib
-    :style: alpha
-    :encoding: latex+latin
-    :filter: docname in docnames
+..  .. bibliography:: ../../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames
