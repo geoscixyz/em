@@ -30,9 +30,11 @@ To obtain a datum defined in the frequency domain, a Fourier transform of
 these must be taken. To accomplish this, the time-series is segmented into
 windows, in the case of the Resolve system, 10Hz or 0.1s windows, and a
 discrete Fourier transform of the data in this window is taken to provide a
-single complex number defining the harmonic at the transmitter frequency. This can be done in real-time. [1]_ 
+single complex number defining the harmonic at the transmitter frequency. This can be done in real-time. :cite:`slattery2012` 
 
-Noise: Spheric Pulses (from lightning) -> narrow bandwidth, strong peaks (considered acceptable when < 10 spheric pulses at a given frequency per 100 samples continuously). Monitored separately. [1]_
+Noise: Spheric Pulses (from lightning) -> narrow bandwidth, strong peaks
+(considered acceptable when < 10 spheric pulses at a given frequency per 100
+samples continuously). Monitored separately. :cite:`slattery2012`
 
 Filters: spheric rejection median & Hanning filter
 
@@ -59,4 +61,3 @@ TODO: In-Flight Calibration, bucking coils
 
 TODO: Thibaut's notebook / images
 
-.. [1] Slattery, S.R. and Andriashek, L.D. (2012): Overview of airborne-electromagnetic and -magnetic geophysical survey data collection using the RESOLVE® and GEOTEM® surveys near Red Deer,central Alberta; Energy Resources Conservation Board, ERCB/AGS Open File Report 2012-07, 246 p. Available at: http://www.ags.gov.ab.ca/publications/OFR/PDF/OFR_2012_07.PDF

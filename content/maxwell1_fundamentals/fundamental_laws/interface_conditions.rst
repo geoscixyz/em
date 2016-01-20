@@ -41,7 +41,7 @@ In the following derivations, we consider a two layer medium where each layer
 has its corresponding physical properties. In this page, the subindices 1 and
 2 denote dependency on layer 1 and layer 2, respectively. This is illustrated
 in :numref:`twoLayerMedium`. Our derivations follow those presented by
-Griffiths (c.f.  [1]_).
+Griffiths (c.f.  :cite:`griffiths1999`).
 
 .. figure:: images/twoLayerMedium.png
     :align: center
@@ -201,11 +201,6 @@ component of the magnetic field
   
 That is, the tangential component of the magnetic field is discontinuous at
 the interface.
-
-References
-----------
-
-.. [1] Griffiths, David J. Introduction to Electrodynamics, 3rd edition. Prentice Hall, Upper Saddle River, New Jersey. 1999.
 
 
 .. .. rubric:: Footnotes

@@ -9,7 +9,7 @@ problems. Here we examine the case of a conducting sphere in a uniform
 electrostatic field. This scenario gives us a setting to examine aspects of
 the DC resistivity experiment, including the behavior of electric potentials,
 electric fields, current density and the build up of charges at interfaces.
-This work follows the derivation in [1]_ and is supported by apps developed in
+This work follows the derivation in :cite:`ward1988` and is supported by apps developed in
 a `Jupyter Notebook`_.
 
 .. _Jupyter Notebook: https://github.com/ubcgif/em/blob/AmpereMaxwell/examples/sphere/ElectrostaticSphere.ipynb
@@ -437,6 +437,3 @@ The only parameters that have changed are the radius and the conductivity of the
     inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
     plt.show()
 
-
-
-.. [1] Ward, S. H., & Hohmann, W. *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists. 1988.

@@ -30,7 +30,14 @@ experts, worldwide, contribute. Join the development on github_.
 
 .. _github: https://github.com/ubcgif/em
 
-**Contents:**
+Contributors:
+-------------
+
+.. include:: AUTHORS.rst
+
+
+Contents:
+---------
 
 .. toctree::
    :maxdepth: 3
@@ -44,18 +51,10 @@ experts, worldwide, contribute. Join the development on github_.
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
    content/case_histories/index
+   content/references
 
 
-Contributors:
--------------
-
-.. include:: AUTHORS.rst
 
 
-.. Indices and tables
-.. ==================
 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
 

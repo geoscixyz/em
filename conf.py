@@ -38,6 +38,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
 ]
 
@@ -95,6 +96,8 @@ language = None
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build','_static','AUTHORS.rst','README.md','content/equation_bank/*','content/maxwell1_fundamentals/formative_laws_and_people/*','content/maxwell1_fundamentals/constitutive_relations/*']
 
+nitpick_ignore = [()]
+
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
 #default_role = None
@@ -147,7 +150,7 @@ html_theme_options = {
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'EM' 
+# html_short_title = 'EM' 
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -385,7 +388,7 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())

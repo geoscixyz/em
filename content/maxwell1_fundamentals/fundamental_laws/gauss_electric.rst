@@ -94,7 +94,7 @@ where :math:`\mathbf{F}` is the force between the two charges :math:`q` and :mat
 Having defined Coulomb's law, one might next naturally ask the question how
 would a standard reference charge behave in the presence of any distribution
 of electric charge we might dream up? Answering this question brings us to the
-concept of the electric field. We follow the presentation of [2]_. We can
+concept of the electric field. We follow the presentation of :cite:`griffiths1999`. We can
 define the electric field of an arbitrary charge :math:`Q` as the force
 experienced by a unit charge :math:`q` due to :math:`Q`
 
@@ -159,8 +159,8 @@ simply the charge density :math:`\rho`. This establishes the desired result
 .. math::
    \boldsymbol{\nabla} \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0}.
 
-For a more detailed discussion, see page 36 of [1]_. For an alternate
-derivation and discussion, see pages 65-70 of [2]_.
+For a more detailed discussion, see page 36 of :cite:`fleisch2008`. For an alternate
+derivation and discussion, see pages 65-70 of :cite:`griffiths1999`.
 
 Notes on Electric flux
 ----------------------
@@ -206,9 +206,3 @@ Units
 
   .. math:: 
       \varepsilon_0 = \frac{\text{F}}{\text{m}} = \frac{\text{C}}{\text{V} \cdot \text{m}}.
-
-References
-----------
-.. [1] A student’s guide to Maxwell’s equations (PDF)
-
-.. [2] Griffiths, David J. Introduction to Electrodynamics, 3rd edition. Prentice Hall, Upper Saddle River, New Jersey. 1999.

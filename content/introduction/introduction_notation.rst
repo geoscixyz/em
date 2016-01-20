@@ -3,7 +3,7 @@
 Notation and Conventions
 ========================
 
-We choose the notation set forth in [Ward_and_Hohmann]_. Their chapter has
+We choose the notation set forth in :cite:`ward1988`. Their chapter has
 been the foundation of many research papers, is used by geophysicists world-
 wide, and it is clean and unambiguous.
 
@@ -64,6 +64,9 @@ We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t
 
 
 
-**References** 
+.. **References** 
 
-.. [Ward_and_Hohmann] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.
+..  .. bibliography:: ../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames

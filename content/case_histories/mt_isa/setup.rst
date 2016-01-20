@@ -39,9 +39,9 @@ Creek Formation and Eastern Creek Volcanics as shown in :numref:`Geology_Section
 Horizon consists of a sequence of mica schists, phyllites and
 metasiltstones containing gossanous material of coarse grained
 pyrite, pyrrhotite, and magnetite, with variable sphalerite, galena,
-marcasite, chalcopyrite, arsenopyrite and accessories [1]_. Exploration along this horizon has occurred over a 40
+marcasite, chalcopyrite, arsenopyrite and accessories :cite:`russel1978`. Exploration along this horizon has occurred over a 40
 year period. The best drilling intersection recorded is from a 4
-m interval containing 100 g/T Ag, 7.6% Pb and 11.6% Zn [2]_. 
+m interval containing 100 g/T Ag, 7.6% Pb and 11.6% Zn :cite:`poole1981`. 
 
 
 At Mt Isa, copper mineralisation
@@ -50,6 +50,10 @@ the case within the Cluny region. Native Bee Siltstone and
 Moondarra Siltstone are considered to be favourable host
 stratigraphy for mineralisation.
 
-.. [1] Russel, R.R., 1978, The Mount Novit Pb-Ag-Zn Deposit - variations on a Mount Isa theme: Third Australian Geological Convention, Geological Society Australia, **31**, 31
 
-.. [2] Poole, J.R., 1981, A reassessment of the Mount Novit Prospect: unpublished company report.
+.. **References:**
+
+..  .. bibliography:: ../../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames
