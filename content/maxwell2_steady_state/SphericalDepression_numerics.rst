@@ -56,7 +56,7 @@ The above resistivity model shows a depressed hemisphere model. The
 resistivity of the depressed hemi-sphere is set to :math:`10^8` ohm-m (close
 to infinity) to simulate air, and the half-space is set to and :math:`10^3`
 ohm-m.  To compute potentials from the above depressed hemi-sphere model, we
-first use numerical solutions using DCIP3D code [1]_. Then to check the
+first use numerical solutions using DCIP3D code :cite:`oldenburg1994`. Then to check the
 accuracy of our numerical algorithm we use analytic solution of a sphere
 problem that we derived in Section :ref:`effecttopo_theory`. For the numerical
 evaluation of that an analytic solution we use :ref:`effecttopo_code`. To
@@ -145,6 +145,3 @@ straight from the positive to negative charges.
 .. |ComparisonSecFineChargs| image:: ./figures/ComparisonSecFineChargs.png
 .. |ComparisonSecFineEfield| image:: ./figures/ComparisonSecFineEfield.png
 
-References
-==========
-.. [1] Oldenburg, D. W. and Li, Y., 1994, Inversion of induced polarization data, Geophysics. 

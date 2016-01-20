@@ -54,7 +54,7 @@ Now let us restrict our attention to three dimensions. There are several ways
 to discretize Maxwell's equations in 3D, including finite difference, finite
 element and finite volume approaches. Here we consider a mimetic finite volume
 approach applied to a uniform grid. For a full description see chapters 3 and
-4 of [1]_. Consider Faraday's law and the quasi-static Ampere's law in the
+4 of :cite:`haber2014`. Consider Faraday's law and the quasi-static Ampere's law in the
 frequency domain
 
 .. math::
@@ -72,7 +72,7 @@ discretizations of Maxwell's equations used in geophysical prospecting apply
 the quasi-static approximation, meaning that they ignore the electric
 displacement term :math:`-i\omega\mathbf{D}` in :ref:`Ampere's law
 <ampere_maxwell>`. In broad terms, ignoring displacement is justified when the
-area of interest is smaller than the source wavelength. See [2]_ for more
+area of interest is smaller than the source wavelength. See :cite:`ward1988` for more
 information.
 
 We divide the earth into a grid of cubic cells. The edges of the grid are
@@ -123,10 +123,4 @@ determine :math:`\tilde{\mathbf{e}}` and :math:`\tilde{\mathbf{b}}`
 simultaneously. We can also combine the two equations to form two smaller
 systems of equations to solve for :math:`\tilde{\mathbf{e}}` and
 :math:`\tilde{\mathbf{b}}` independently.
- 
-References
-----------
 
-.. [1] Haber, Eldad. Computational Methods in Geophysical Electromagnetics. Society for Industrial and Applied Mathematics, Philadelphia, 2015.
-
-.. [2] Ward, Stanley H. and Gerald W. Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, Volume 1. Ed. Misac N. Nabighian. Society of Exploration Geophysicists, Tulsa, 1988.

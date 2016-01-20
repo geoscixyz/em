@@ -315,10 +315,3 @@ of electromagnetic waves as predicated by Maxwell’s electromagnetic theory, an
 demonstrated the equivalence of electromagnetic waves and light.
 
 These efforts have lain solid foundations for the development of modern electromagnetism.
-
-.. **References** 
-
-..  .. bibliography:: ../../references.bib
-..     :style: alpha
-..     :encoding: latex+latin
-..     :filter: docname in docnames
