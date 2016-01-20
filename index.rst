@@ -33,7 +33,7 @@ experts, worldwide, contribute. Join the development on github_.
 **Contents:**
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :name: `EM GeoSci`
 
    content/introduction/index
