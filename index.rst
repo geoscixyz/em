@@ -30,7 +30,14 @@ experts, worldwide, contribute. Join the development on github_.
 
 .. _github: https://github.com/ubcgif/em
 
-**Contents:**
+Contributors:
+-------------
+
+.. include:: AUTHORS.rst
+
+
+Contents:
+---------
 
 .. toctree::
    :maxdepth: 3
@@ -47,10 +54,7 @@ experts, worldwide, contribute. Join the development on github_.
    content/references
 
 
-Contributors:
--------------
 
-.. include:: AUTHORS.rst
 
 
 
