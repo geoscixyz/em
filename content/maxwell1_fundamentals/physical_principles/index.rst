@@ -10,3 +10,5 @@ Physical Principles
 
     maxwells_equations_in_homogeneous_media/index
     sources_in_a_homogeneous_medium/index
+    principles_of_electromagnetic_induction/index
+    sphere/index
