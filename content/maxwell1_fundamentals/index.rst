@@ -19,7 +19,15 @@ more detail to promote a physical understanding and provide insight as to
 where the law is useful. In addition we provide a short synopsis of the
 scientists involved in discovering the law.
 
+.. toctree:: 
+    :maxdepth: 1
+
+    fundamental_laws/index
+    understanding_physical_principles/index
+    
 .. LJH: Move the following to its own page?
+
+
 
 .. _overview_maxwell_equations:
 
@@ -88,10 +96,7 @@ Boundary Conditions
 Fundamental Laws
 ----------------
 
-.. toctree:: 
-    :maxdepth: 1
 
-    fundamental_laws/index
 
 .. toctree::
     :hidden:
