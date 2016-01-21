@@ -1,6 +1,9 @@
 .. _fundamental_laws_index:
 
-Contents:
+Fundamental Laws
+================
+
+**Contents:**
 
 .. toctree::
     :maxdepth: 1
