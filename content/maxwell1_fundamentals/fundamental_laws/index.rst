@@ -13,7 +13,7 @@ Fundamental Laws
     faraday
     ampere_maxwell
     conservation_of_charge
-    interface_conditions
     biot_savart
     lenz
+    interface_conditions
     
