@@ -23,5 +23,4 @@ scientists involved in discovering the law.
 
     quick_guide_maxwell
     fundamental_laws/index
-    understanding_physical_principles/index
-    
+    physical_principles/index

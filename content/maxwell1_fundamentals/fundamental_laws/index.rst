@@ -6,7 +6,7 @@ Fundamental Laws
 **Contents:**
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     gauss_electric
     gauss_magnetic
