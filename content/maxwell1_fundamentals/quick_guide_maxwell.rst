@@ -13,7 +13,7 @@ Maxwell's equations connect electric and mangetic fields, fluxes and physical pr
 
 
 Differential equations in time
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 
 - :ref:`Faraday's Law <faraday_differential_time>`
@@ -35,7 +35,7 @@ Differential equations in time
 .. _integral_equations_time:
 
 Integral equations in time
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 .. summary of relevant equations
 
@@ -45,7 +45,7 @@ Integral equations in time
 .. _differential_equations_frequency:
 
 Differential equations in frequency
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 - :ref:`Gauss's Law for Magnetic Fields <gauss_magnetic_frequency>`
     .. include:: ../equation_bank/gauss_magnetic_frequency.rst
@@ -55,8 +55,10 @@ Differential equations in frequency
 .. _boundary_conditions:
 
 Boundary Conditions
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
+
+.. This because of the include statement, we don't need a toctree entry for the maxwell variables page (and want to suppress warnings)
 
 .. toctree::
     :hidden:
