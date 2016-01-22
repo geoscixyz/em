@@ -99,6 +99,111 @@ Immediately apparent is that the two equations are very similar. Replace :math:`
 
 Wave equations in frequency-domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To get the frequency-domain wave equations, we use the Fourier transform using an :math:`e^{i\omega t}` time dependence. If we look at the derivative of :math:`e^{i\omega t}` with respect to time, we see that it is :math:`i\omega e^{i\omega t}`. Thus, we can easily convert Equations :eq:`hme7` and :eq:`hmh7` to the frequency-domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega`. The frequency-domain equations are then expressed as:
 
-.. todo:: use the fourier transform to get the frequency-domain expressions
+.. math::  \boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0
+        :name: hme8
+
+.. math:: \boldsymbol{\nabla}^2 \mathbf{H} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{H}  = 0
+        :name: hmh8
+
+Wave number
+^^^^^^^^^^^
+
+Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simple form:
+
+.. math:: \boldsymbol{\nabla}^2 \mathbf{E} - k^2 \mathbf{E}  = 0
+
+.. math:: \boldsymbol{\nabla}^2 \mathbf{H} - k^2 \mathbf{H}  = 0
+
+where :math:`k` is the wave number and :math:`k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega`. In electromagnetic methods, we usually deal with relatively low frequencies, :math:`f \lt 10^5` Hz. Recall that the dielectric permittivity of free space is :math:`8.85 \times 10^{-12}` F/m. To see which part of :math:`k^2` carries more weight for electromagnetic methods, we examine the following:
+
+.. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma} \approx \frac{(6.28)(8.85 \times 10^{-12})(10^5)}{\sigma} = \frac{5 \times 10^{-6}}{\sigma}
+
+This shows that even for the largest expected frequencies, the first part of :math:`k^2` will be substantially smaller than realistic conductivities for the earth. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
+
+.. math::  \boldsymbol{\nabla}^2 \mathbf{E} - i \mu \sigma \omega \mathbf{E}  = 0
+        :name: hme9
+
+.. math:: \boldsymbol{\nabla}^2 \mathbf{H} - i \mu \sigma \omega \mathbf{H}  = 0
+        :name: hmh9
+
+In time-domain, these equations become:
+
+.. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t}  = 0
+        :name: hme10
+
+.. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t}  = 0
+        :name: hmh10
+
+Wave equation solution in 1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Equations :eq:`hme10` and :eq:`hmh10` are written in 1D as following:
+
+.. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t}
+        :name: hme11
+
+.. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t}
+        :name: hmh11
+
+These are second-order linear differential equations which we can analytically solve for a solution. The solutions have a sinusoidal time-dependence :math:`e^{i\omega t}` and have two parts to decribe the up-going wave and the down-going wave. As this equations for the electric and magnetic field are identical, we will only carry through with the expression for the electric field. The same analysis can be done for the magnetic field.
+
+The solution to Equation :eq:`hme11` is written as:
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-i(kz-\omega t)} + \mathbf{e}_n e^{i(kz-\omega t)}
+
+Recall that the wavenumber is expressed as:
+
+.. math:: k = \sqrt{\mu\epsilon\omega^2 - i\mu\sigma\omega}
+
+which can be divided into a real and an imaginary component:
+
+.. math:: k = \alpha - i\beta
+
+According to :cite:`stratton1941`, :math:`\alpha` and :math:`\beta` are:
+
+.. math:: \alpha = \omega \left ( \frac{\mu \epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right )^{1/2} + 1 \right ] \right )^{1/2}
+
+.. math:: \beta = \omega \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2}
+
+However, when we ignore displacements currents, :math:`\alpha` and :math:`\beta` become identical, simple values.
+
+.. math:: \alpha = \beta = \sqrt{\frac{\omega \mu \sigma}{2}}
+        :name: ab
+
+Taking a closer look at the wave going in the positive z-direction and using :math:`\alpha` and :math:`\beta` , we write:
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-i(kz-\omega t)}
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-ikz} e^{i\omega t}
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-i\alpha z} e^{i^2\beta z}  e^{i\omega t}
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-i\alpha z} e^{-\beta z}  e^{i\omega t}
+
+From this final expression, a few conclusions can be made.
+
+First, the term :math:`e^{-\beta z}` decreases as :math:`z` increases because :math:`\beta` is real. This means that the wave attenuates as :math:`z` gets larger. This leads to the idea of skin depth, which is the depth where the amplitude of the electromagnetic wave has decreased by :math:`1/e`:
+
+.. math:: \delta = \frac{1}{\beta} = \frac{1}{ \sqrt{\frac{\omega \mu \sigma}{2}}} = \sqrt{\frac{2}{\omega \mu \sigma}}
+
+Knowing that :math:`\mu = 4\pi \times 10^{-7}` and :math:`\omega = 2\pi f`, we get the following expression for skin depth:
+
+.. math:: \delta \approx 500 \sqrt{\frac{1}{f\sigma}} = 500 \sqrt{\frac{\rho}{f}},
+
+where :math:`\rho` is the resistivity.
+
+Secondly, we can write:
+
+.. math:: e^{-i\alpha z} = \cos{\alpha z} - i \sin{\alpha z},
+
+which shows that the wave indeed varies sinusoidally in the :math:`z`-direction. The same thing can be done for :math:`e^{i\omega t}`, showing that the wave also varies sinusoidally with time.
+
+.. todo:: phase velocity, some plots
+
+
+
+
+
 
