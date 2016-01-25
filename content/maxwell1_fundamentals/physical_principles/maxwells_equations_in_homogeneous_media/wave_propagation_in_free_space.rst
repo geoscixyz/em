@@ -3,8 +3,6 @@
 Wave Propagation in Free Space
 ==============================
 
-.. todo:: illustration of how Ampere-Maxwell-Faraday interact to propagate energy in free space. this page is under construction
-
 In this section, we look at getting the second-order differential equations from Maxwell's equations. We first do the analysis in time-domain and then use Fourier transforms to get the frequency-domain counterparts.
 
 Wave equations in time-domain
@@ -119,6 +117,7 @@ Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simple form:
 where :math:`k` is the wave number and :math:`k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega`. In electromagnetic methods, we usually deal with relatively low frequencies, :math:`f \lt 10^5` Hz. Recall that the dielectric permittivity of free space is :math:`8.85 \times 10^{-12}` F/m. To see which part of :math:`k^2` carries more weight for electromagnetic methods, we examine the following:
 
 .. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma} \approx \frac{(6.28)(8.85 \times 10^{-12})(10^5)}{\sigma} = \frac{5 \times 10^{-6}}{\sigma}
+        :name: kcomp
 
 This shows that even for the largest expected frequencies, the first part of :math:`k^2` will be substantially smaller than realistic conductivities for the earth. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
 
@@ -141,10 +140,10 @@ Wave equation solution in 1D
 
 Equations :eq:`hme10` and :eq:`hmh10` are written in 1D as following:
 
-.. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t}
+.. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} = 0
         :name: hme11
 
-.. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t}
+.. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t} = 0
         :name: hmh11
 
 These are second-order linear differential equations which we can analytically solve for a solution. The solutions have a sinusoidal time-dependence :math:`e^{i\omega t}` and have two parts to decribe the up-going wave and the down-going wave. As this equations for the electric and magnetic field are identical, we will only carry through with the expression for the electric field. The same analysis can be done for the magnetic field.
@@ -182,7 +181,13 @@ Taking a closer look at the wave going in the positive z-direction and using :ma
 
 .. math:: \mathbf{e} = \mathbf{e}_p e^{-i\alpha z} e^{-\beta z}  e^{i\omega t}
 
-From this final expression, a few conclusions can be made.
+From this final expression, a few conclusions can be made. Additionally, the analysis can be repeated for the magnetic field so that the final equations for both the electric and magnetic field are:
+
+.. math:: \mathbf{e} = \mathbf{e}_p e^{-i\alpha z} e^{-\beta z}  e^{i\omega t}
+        :name: hme12
+
+.. math:: \mathbf{h} = \mathbf{h}_p e^{-i\alpha z} e^{-\beta z}  e^{i\omega t}
+        :name: hmh12
 
 First, the term :math:`e^{-\beta z}` decreases as :math:`z` increases because :math:`\beta` is real. This means that the wave attenuates as :math:`z` gets larger. This leads to the idea of skin depth, which is the depth where the amplitude of the electromagnetic wave has decreased by :math:`1/e`:
 
@@ -200,10 +205,50 @@ Secondly, we can write:
 
 which shows that the wave indeed varies sinusoidally in the :math:`z`-direction. The same thing can be done for :math:`e^{i\omega t}`, showing that the wave also varies sinusoidally with time.
 
-.. todo:: phase velocity, some plots
+Speed of light
+^^^^^^^^^^^^^^
 
+So far, we considered that :math:`\mu\epsilon\omega^2 \lt \lt \mu \sigma \omega` and ignored the displacements currents. However, in the case where :math:`\mu\epsilon\omega^2 \gt \gt \mu \sigma \omega`, Equations :eq:`hme7` and :eq:`hmh7` (or :eq:`hme8` and :eq:`hmh8` for the frequency-domain) become:
 
+.. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}  = 0
+        :name: hme13
 
+.. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
+        :name: hmh14
 
+The following derivation will be the same for both the magnetic and electric fields. Let's use the magnetic field for this analysis. In 1D, 1quation :eq:`hmh14` is now written as:
 
+.. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} = \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2},
+        :name: hmh15
 
+for which there is a solution of the form:
+
+.. math:: \mathbf{h} = \mathbf{h}_0 \sin \left ( 2\pi \frac{z-vt}{\lambda} \right ),
+        :name: slwave
+
+where :math:`v` is the speed of the sinosoidal wave and :math:`\lambda` is its wavelength. We can check this solution by taking the derivatives with respect to :math:`z` and :math:`t` to see if we get back to Equation :eq:`hmh15`.
+
+.. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} = \frac{\partial}{\partial z} \left [ \mathbf{h}_0 \cos \left(  2\pi \frac{z-vt}{\lambda} \right) \left( \frac{2\pi}{\lambda}\right) \right ] = - \mathbf{h}_0 \sin \left(  2\pi \frac{z-vt}{\lambda} \right) \left( \frac{2\pi}{\lambda}\right)^2
+
+.. math:: \frac{\partial^2 \mathbf{h}}{\partial t^2} =\frac{\partial}{\partial t} \left [ \mathbf{h}_0 \cos \left ( 2\pi \frac{z-vt}{\lambda} \right ) \left ( \frac{-2\pi v}{\lambda} \right) \right ] = - \mathbf{h}_0 \sin \left ( 2\pi \frac{z-vt}{\lambda} \right ) \left ( \frac{-2\pi v}{\lambda} \right)^2
+
+We now plug these solutions into Equation :eq:`hmh15` and simplify:
+
+.. math:: \left (\frac{2\pi}{\lambda} \right)^2 = \epsilon \mu \left (\frac{-2\pi v}{\lambda} \right)^2
+
+.. math:: 1 = \epsilon \mu v^2
+
+.. math:: v = \sqrt{\frac{1}{\epsilon \mu}}
+        :name: v
+
+This shows that the solution to Equation :eq:`hmh15` is a wave of the form given in Equation :eq:`slwave` if Equation :eq:`v` holds true. In free space, we can quickly evaluate Equation :eq:`v`, knowing that :math:`\mu = 4\pi \times 10^{-7} \frac{T \cdot m}{A}` and :math:`\epsilon = 8.85 \times 10^{-12} \frac{F}{m}`:
+
+.. math:: v = \sqrt{\frac{1}{( 4\pi \times 10^{-7})(8.85 \times 10^{-12})}} = 3 \times 10^8
+
+The units of :math:`v` work out as following:
+
+.. math:: \sqrt{ \frac{1}{\left[\frac{T \cdot m}{A} \right] \left [ \frac{F}{m} \right ]} } = \left ( \frac{A}{T \cdot F} \right) ^ {1/2} = \left ( \frac{\frac{C}{s}}{\frac{V\cdot s}{m^2} \cdot F} \right) ^ {1/2} = 
+
+.. math:: \left ( \frac{\frac{F \cdot V}{s}}{\frac{V\cdot s}{m^2} \cdot F} \right) ^ {1/2} = \left ( \frac{F\cdot V}{s} \frac{m^2}{V \cdot F \cdot s} \right ) ^{1/2} = \frac{m}{s}
+
+Thus, the velocity of the wave is :math:`3 \times 10^8 \frac{m}{s}`, which is the speed of light! The same derivation can be done using the electric field.
