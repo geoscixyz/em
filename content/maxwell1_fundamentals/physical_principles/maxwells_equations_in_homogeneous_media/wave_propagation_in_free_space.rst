@@ -97,7 +97,7 @@ Immediately apparent is that the two equations are very similar. Replace :math:`
 
 Wave equations in frequency-domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To get the frequency-domain wave equations, we use the Fourier transform using an :math:`e^{i\omega t}` time dependence. If we look at the derivative of :math:`e^{i\omega t}` with respect to time, we see that it is :math:`i\omega e^{i\omega t}`. Thus, we can easily convert Equations :eq:`hme7` and :eq:`hmh7` to the frequency-domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega`. The frequency-domain equations are then expressed as:
+To get the frequency-domain wave equations, we use the Fourier transform using an :math:`e^{i\omega t}` time dependence. If we look at the derivative of :math:`e^{i\omega t}` with respect to time, we see that it is :math:`i\omega e^{i\omega t}`. Thus, we can easily convert Equations :eq:`hme7` and :eq:`hmh7` to the frequency-domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega^2`. The frequency-domain equations are then expressed as:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0
         :name: hme8
@@ -119,7 +119,7 @@ where :math:`k` is the wave number and :math:`k^2 = \mu \epsilon \omega^2 - i \m
 .. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma} \approx \frac{(6.28)(8.85 \times 10^{-12})(10^5)}{\sigma} = \frac{5 \times 10^{-6}}{\sigma}
         :name: kcomp
 
-This shows that even for the largest expected frequencies, the first part of :math:`k^2` will be substantially smaller than realistic conductivities for the earth. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
+This shows that even for the largest expected frequencies, the first part of :math:`k^2` will be substantially smaller for realistic earth conductivities. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} - i \mu \sigma \omega \mathbf{E}  = 0
         :name: hme9
@@ -197,9 +197,7 @@ Knowing that :math:`\mu = 4\pi \times 10^{-7}` and :math:`\omega = 2\pi f`, we g
 
 .. math:: \delta \approx 500 \sqrt{\frac{1}{f\sigma}} = 500 \sqrt{\frac{\rho}{f}},
 
-where :math:`\rho` is the resistivity.
-
-Secondly, we can write:
+where :math:`\rho` is the resistivity. Secondly, we can write:
 
 .. math:: e^{-i\alpha z} = \cos{\alpha z} - i \sin{\alpha z},
 
@@ -216,7 +214,7 @@ So far, we considered that :math:`\mu\epsilon\omega^2 \lt \lt \mu \sigma \omega`
 .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
         :name: hmh14
 
-The following derivation will be the same for both the magnetic and electric fields. Let's use the magnetic field for this analysis. In 1D, 1quation :eq:`hmh14` is now written as:
+The following derivation will be the same for both the magnetic and electric fields. Let's use the magnetic field for this analysis. In 1D, Equation :eq:`hmh14` is now written as:
 
 .. math:: \frac{\partial^2 \mathbf{h}}{\partial z^2} = \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2},
         :name: hmh15
