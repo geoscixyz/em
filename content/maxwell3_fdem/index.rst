@@ -1,9 +1,11 @@
 .. _maxwell3_fdem_index:
 
-Maxwell's Equations III: Time Varying Fields (Frequency Domain)
-===============================================================
+Maxwell III: FDEM
+=================
 
 Contents:
 
 .. toctree::
     :maxdepth: 1
+
+    theory_3loops

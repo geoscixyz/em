@@ -1,4 +1,0 @@
-.. _maxwell:
-
-Maxwell
-=======

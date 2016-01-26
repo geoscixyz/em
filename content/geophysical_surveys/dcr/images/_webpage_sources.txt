@@ -1,0 +1,11 @@
+current_wire:                   http://www.aliexpress.com/item/In-stock-8-Gauge-1-ft-Red-Car-Auto-Audio-Power-Ground-Wire-Cable-line-AWG/619638915.html
+generator_dcip_7500W:           http://williamsonneelectric.com/sgx50005000wattsubaruportablegenerator.aspx
+IP_waveform.jpg                 http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm
+IP_waveform2.jpg                http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm
+pole-dipole_pseudo:             http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm
+polediple.PNG:                  http://en.openei.org/wiki/DC_Resistivity_Survey_(Pole-Dipole_Array)
+receiver_electrode_porous_pots: http://www.agiusa.com/agicatalog.shtml
+transmitter_dcip_vip5000:       http://www.hazzazi-sa.com/agents/iris-instruments?page=1
+DCR_Intro:			https://docs.google.com/drawings/d/1dkAvLiNThg3AK5nsSRT3sktd4ITjZaQg4RQbAs9h7jY/edit
+
+

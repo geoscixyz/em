@@ -16,6 +16,8 @@ import sys
 import os
 import shlex
 
+sys.path.append('./examples')
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -36,6 +38,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
 ]
 
@@ -56,12 +59,12 @@ master_doc = 'index'
 # General information about the project.
 project = u'em'
 copyright = """
-<a rel="license" 
+  <a rel="license" 
    href="http://creativecommons.org/licenses/by/4.0/"
    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
    </a>
-   2015, UBCGIF.<br />
+   2015-2016, UBCGIF.<br />
    Except where noted, this work is licensed under a <br />
    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
 """
@@ -91,7 +94,9 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','_static','AUTHORS.rst','content/equation_bank/*','content/maxwell1_fundamentals/formative_laws_and_people/*','content/maxwell1_fundamentals/constitutive_relations/*']
+exclude_patterns = ['_build','_static','AUTHORS.rst','README.md','content/equation_bank/*']
+
+nitpick_ignore = [()]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -120,6 +125,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+# number figures
 numfig = True
 
 # -- Options for HTML output ----------------------------------------------
@@ -144,11 +150,11 @@ html_theme_options = {
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'EM' 
+# html_short_title = 'EM' 
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+# html_logo = 'em.ico'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -175,7 +181,10 @@ html_favicon = 'em.ico'
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['globaltoc.html','relations.html','searchbox.html'],
+   '**': [
+       'globaltoc.html',  
+       'searchbox.html',
+       ],
 }
 
 
@@ -252,7 +261,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = 'em.ico'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -379,9 +388,9 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
-from checkDependencies import *
+from checkDependencies import checkDependencies
 checkDependencies()

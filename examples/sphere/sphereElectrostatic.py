@@ -1,8 +1,8 @@
 from scipy.constants import epsilon_0
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+import matplotlib.colors as colors
 import numpy as np
-from SimPEG.Utils import ndgrid, mkvc
+# from SimPEG.Utils import ndgrid, mkvc
 
 # Plot options
 ftsize_title = 18      #font size for titles
@@ -12,6 +12,133 @@ ftsize_label = 14      #font size for axis labels
 # Radius function and useful sigma ratio
 r  = lambda x,y,z: np.sqrt(x**2.+y**2.+z**2.)
 sigf = lambda sig0,sig1: (sig1-sig0)/(sig1+2.*sig0)
+
+# From SimPEG , TODO: get SimPEG working on rtd
+def mkvc(x, numDims=1):
+    """Creates a vector with the number of dimension specified
+
+    e.g.::
+
+        a = np.array([1, 2, 3])
+
+        mkvc(a, 1).shape
+            > (3, )
+
+        mkvc(a, 2).shape
+            > (3, 1)
+
+        mkvc(a, 3).shape
+            > (3, 1, 1)
+
+    """
+    if type(x) == np.matrix:
+        x = np.array(x)
+
+    if hasattr(x, 'tovec'):
+        x = x.tovec()
+
+    assert isinstance(x, np.ndarray), "Vector must be a numpy array"
+
+    if numDims == 1:
+        return x.flatten(order='F')
+    elif numDims == 2:
+        return x.flatten(order='F')[:, np.newaxis]
+    elif numDims == 3:
+        return x.flatten(order='F')[:, np.newaxis, np.newaxis]
+
+def ndgrid(*args, **kwargs):
+    """
+    Form tensorial grid for 1, 2, or 3 dimensions.
+
+    Returns as column vectors by default.
+
+    To return as matrix input:
+
+        ndgrid(..., vector=False)
+
+    The inputs can be a list or separate arguments.
+
+    e.g.::
+
+        a = np.array([1, 2, 3])
+        b = np.array([1, 2])
+
+        XY = ndgrid(a, b)
+            > [[1 1]
+               [2 1]
+               [3 1]
+               [1 2]
+               [2 2]
+               [3 2]]
+
+        X, Y = ndgrid(a, b, vector=False)
+            > X = [[1 1]
+                   [2 2]
+                   [3 3]]
+            > Y = [[1 2]
+                   [1 2]
+                   [1 2]]
+
+    """
+
+    # Read the keyword arguments, and only accept a vector=True/False
+    vector = kwargs.pop('vector', True)
+    assert type(vector) == bool, "'vector' keyword must be a bool"
+    assert len(kwargs) == 0, "Only 'vector' keyword accepted"
+
+    # you can either pass a list [x1, x2, x3] or each seperately
+    if type(args[0]) == list:
+        xin = args[0]
+    else:
+        xin = args
+
+    # Each vector needs to be a numpy array
+    assert np.all([isinstance(x, np.ndarray) for x in xin]), "All vectors must be numpy arrays."
+
+    if len(xin) == 1:
+        return xin[0]
+    elif len(xin) == 2:
+        XY = np.broadcast_arrays(mkvc(xin[1], 1), mkvc(xin[0], 2))
+        if vector:
+            X2, X1 = [mkvc(x) for x in XY]
+            return np.c_[X1, X2]
+        else:
+            return XY[1], XY[0]
+    elif len(xin) == 3:
+        XYZ = np.broadcast_arrays(mkvc(xin[2], 1), mkvc(xin[1], 2), mkvc(xin[0], 3))
+        if vector:
+            X3, X2, X1 = [mkvc(x) for x in XYZ]
+            return np.c_[X1, X2, X3]
+        else:
+            return XYZ[2], XYZ[1], XYZ[0]
+        
+
+# Examples
+def get_Setup(XYZ,sig0,sig1,R,E0,ax):
+    xplt = np.linspace(-R, R, num=100)
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    top = np.sqrt(R**2-xplt**2)
+    bot = -np.sqrt(R**2-xplt**2)
+    
+    ax.plot(xplt, top, xplt, bot, color=[0.1,0.1,0.6],linewidth=1.5)
+    ax.fill_between(xplt,bot,top,color=[0.1,0.1,0.6],alpha=0.5 )
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    ax.set_xlabel('x',fontsize=12)
+    ax.set_ylabel('y',fontsize=12)
+    ax.arrow(0.,0.,np.sqrt(2.)*R/2.,np.sqrt(2.)*R/2.,head_width=0.,head_length=0.)
+    ax.text(np.sqrt(R)/4.-1.,np.sqrt(R)/4.+10.,'$R$',fontsize=13)
+    [ax.arrow(xr.min(),_,R*3./4.,0.,head_width=R/10.,head_length=R/20.,color='k') for _ in np.linspace(-2*R,2*R,num=5)]
+    ax.text(xr.min()+0.05, R/10., '$\mathbf{E_0} = E_0 \mathbf{\hat{x}}$', fontsize=14)
+    ax.patch.set_facecolor([0.4,0.7,0.4])
+    ax.patch.set_alpha(0.2)
+    ax.text(-1.,-np.sqrt(R)/2.-10.,'$\sigma_1$',fontsize=14)
+    ax.text(-0.05,-R-10,'$\sigma_0$',fontsize=14)  
+    ax.set_aspect('equal')
+    
+    return ax
 
 def get_Conductivity(XYZ,sig0,sig1,R):
     '''
@@ -65,6 +192,77 @@ def get_Potential(XYZ,sig0,sig1,R,E0):
     
     return Vt,Vp,Vs
 
+def Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax):
+    
+    Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+    xcirc = xr[np.abs(xr) <= R]
+    
+    Pplot = ax.pcolor(xr,yr,Vp.reshape(xr.size,yr.size))
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_title('Primary Potential',fontsize=ftsize_title)
+    cb = plt.colorbar(Pplot,ax=ax)
+    cb.set_label(label= 'Potential ($V$)',size=ftsize_label)
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_aspect('equal')
+    ax.tick_params(labelsize=ftsize_axis)
+    
+    #fig.set_tight_layout(True)
+    
+    return ax
+
+def Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax):
+    
+    Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+    xcirc = xr[np.abs(xr) <= R]
+
+    
+    Pplot = ax.pcolor(xr,yr,Vt.reshape(xr.size,yr.size))
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_title('Total Potential',fontsize=ftsize_title)
+    cb = plt.colorbar(Pplot,ax=ax)
+    cb.set_label(label= 'Potential ($V$)',size=ftsize_label)
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_aspect('equal')
+    ax.tick_params(labelsize=ftsize_axis)
+    
+    return ax
+
+def Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax):
+    
+    Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+    xcirc = xr[np.abs(xr) <= R]
+
+    Pplot = ax.pcolor(xr,yr,Vs.reshape(xr.size,yr.size))
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_title('Secondary Potential',fontsize=ftsize_title)
+    cb = plt.colorbar(Pplot,ax=ax)
+    cb.set_label(label= 'Potential ($V$)',size=ftsize_label)
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_aspect('equal')
+    ax.tick_params(labelsize=ftsize_axis)
+    
+    return ax
 
 
 def get_ElectricField(XYZ,sig0,sig1,R,E0):
@@ -98,7 +296,73 @@ def get_ElectricField(XYZ,sig0,sig1,R,E0):
     Es = Et - Ep
     
     return Et, Ep, Es
- 
+
+def Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax):
+    
+    Et, Ep, Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+
+    xcirc = xr[np.abs(xr) <= R]
+
+    EtXr = Et[:,0].reshape(xr.size, yr.size)
+    EtYr = Et[:,1].reshape(xr.size, yr.size)
+    EtAmp = np.sqrt(Et[:,0]**2+Et[:,1]**2 + Et[:,2]**2).reshape(xr.size, yr.size)
+    
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.tick_params(labelsize=ftsize_axis)
+    ax.set_aspect('equal')
+    
+    Eplot = ax.pcolor(xr,yr,EtAmp)
+    cb = plt.colorbar(Eplot,ax=ax)
+    cb.set_label(label= 'Amplitude ($V/m$)',size=ftsize_label) #weight='bold')
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.streamplot(xr,yr,EtXr,EtYr,color='gray',linewidth=2.,density=0.75)#angles='xy',scale_units='xy',scale=0.05)
+    ax.set_title('Total Field',fontsize=ftsize_title)
+    
+    
+    return ax
+    
+    
+def Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax):
+    
+    Et, Ep, Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+
+    xcirc = xr[np.abs(xr) <= R]
+
+    EsXr = Es[:,0].reshape(xr.size, yr.size)
+    EsYr = Es[:,1].reshape(xr.size, yr.size)
+    EsAmp = np.sqrt(Es[:,0]**2+Es[:,1]**2+Es[:,2]**2).reshape(xr.size, yr.size)
+    
+    #fig = plt.figure()
+    #ax = fig.add_subplot(111)
+    
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_ylabel('Y coordinate ($m$)',fontsize = ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize = ftsize_label)
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.tick_params(labelsize=ftsize_axis)
+    ax.set_aspect('equal')
+    
+    Eplot = ax.pcolor(xr,yr,EsAmp)
+    cb = plt.colorbar(Eplot,ax=ax)
+    cb.set_label(label= 'Amplitude ($V/m$)',size=ftsize_label) #weight='bold')
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.streamplot(xr,yr,EsXr,EsYr,color='gray',linewidth=2.,density=0.75)#,angles='xy',scale_units='xy',scale=0.05)
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_title('Secondary Field',fontsize=ftsize_title)
+    
+    #plt.tight_layout(True)
+    
+    return ax
+
 
 def get_Current(XYZ,sig0,sig1,R,Et,Ep,Es):
     '''
@@ -107,7 +371,6 @@ def get_Current(XYZ,sig0,sig1,R,Et,Ep,Es):
     '''
     
     x,y,z= XYZ[:,0], XYZ[:,1], XYZ[:,2]
-    
     
     r_cur=r(x,y,z)
     
@@ -134,6 +397,74 @@ def get_Current(XYZ,sig0,sig1,R,Et,Ep,Es):
     
     return Jt,Jp,Js
 
+def Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax):
+    
+    Et,Ep,Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    Jt,Jp,Js = get_Current(XYZ,sig0,sig1,R,Et,Ep,Es)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    xcirc = xr[np.abs(xr) <= R]
+
+    JtXr = Jt[:,0].reshape(xr.size, yr.size)
+    JtYr = Jt[:,1].reshape(xr.size, yr.size)
+    JtAmp = np.sqrt(Jt[:,0]**2+Jt[:,1]**2+Jt[:,2]**2).reshape(xr.size, yr.size)
+    
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
+    
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax.tick_params(labelsize=ftsize_axis)
+    ax.set_aspect('equal')
+    
+    Jplot = ax.pcolor(xr,yr,JtAmp.reshape(xr.size,yr.size))
+    cb = plt.colorbar(Jplot,ax=ax)
+    cb.set_label(label= 'Current Density ($A/m^2$)',size=ftsize_label) #weight='bold')
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.streamplot(xr,yr,JtXr,JtYr,color='gray',linewidth=2.,density=0.75)#,angles='xy',scale_units='xy',scale=1)
+    ax.set_title('Total Current Density',fontsize=ftsize_title)
+    
+    # plt.tight_layout(True)
+    
+    return ax
+    
+def Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax):
+    
+    Et,Ep,Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    Jt,Jp,Js = get_Current(XYZ,sig0,sig1,R,Et,Ep,Es)
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    xcirc = xr[np.abs(xr) <= R]
+        
+    JsXr = Js[:,0].reshape(xr.size, yr.size)
+    JsYr = Js[:,1].reshape(xr.size, yr.size)
+    JsAmp = np.sqrt(Js[:,1]**2+Js[:,0]**2+Jt[:,2]**2).reshape(xr.size,yr.size)
+    
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
+    
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax.tick_params(labelsize=ftsize_axis)
+    ax.set_aspect('equal')
+    
+    Jplot = ax.pcolor(xr,yr,JsAmp.reshape(xr.size,yr.size))
+    cb = plt.colorbar(Jplot,ax=ax)
+    cb.set_label(label= 'Current Density ($A/m^2$)',size=ftsize_label) #weight='bold')
+    cb.ax.tick_params(labelsize=ftsize_axis)
+    ax.streamplot(xr,yr,JsXr,JsYr,color='gray',linewidth=2.,density=0.75)#,angles='xy',scale_units='xy',scale=1)
+    ax.set_title('Secondary Current Density',fontsize=ftsize_title)
+    
+    # plt.tight_layout(True)
+    
+    return ax
+
 def get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep):
     
     x,y,z= XYZ[:,0], XYZ[:,1], XYZ[:,2]
@@ -155,6 +486,29 @@ def get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep):
     rho[ind2] = epsilon_0*3.*Ep[ind2,0]*sigf(sig0,sig1)*x[ind2]/(np.sqrt(x[ind2]**2.+y[ind2]**2.))
     
     return rho
+
+def Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax):
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    xcirc = xr[np.abs(xr) <= R]
+    
+    Et, Ep, Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    rho = get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep)
+    
+    ax.set_xlim([xr.min(),xr.max()])
+    ax.set_ylim([yr.min(),yr.max()])
+    ax.set_aspect('equal')
+    Cplot = ax.pcolor(xr,yr,rho.reshape(xr.size, yr.size))
+    cb1 = plt.colorbar(Cplot,ax=ax)
+    cb1.set_label(label= 'Charge Density ($C/m^2$)',size=ftsize_label) #weight='bold')
+    cb1.ax.tick_params(labelsize=ftsize_axis)
+    ax.plot(xcirc,np.sqrt(R**2-xcirc**2),'--k',xcirc,-np.sqrt(R**2-xcirc**2),'--k')
+    ax.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax.tick_params(labelsize=ftsize_axis)
+    ax.set_title('Charges Density', fontsize=ftsize_title)
+    
+    return ax
 
 def MN_Potential_total(sig0,sig1,R,E0,start,end,nbmp,mn):
     
@@ -651,6 +1005,169 @@ def plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipo
     
     return fig
 
+def inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt):
+    
+    xr,yr,zr = np.unique(XYZ[:,0]),np.unique(XYZ[:,1]),np.unique(XYZ[:,2])
+    
+#Defining the Profile
+    start = np.array([xstart,ystart])
+    end = np.array([xend,yend])
+    
+    #Calculating the differents fields
+    Sigma0    = get_Conductivity(XYZ,sig0,sig1,R0)
+    Sigma1    = get_Conductivity(XYZ,sig0,sig2,R1)
+    Vt0,Vp0,Vs0 = get_Potential(XYZ,sig0,sig1,R0,E0)
+    Vt1,Vp1,Vs1 = get_Potential(XYZ,sig0,sig2,R1,E0)
+    MP0,EL0,VtdMP0,VtdMPn0,VsdMP0,VsdMPn0 = MN_Potential_total(sig0,sig1,R0,E0,start,end,nb_dipole,electrode_spacing)
+    MP1,EL1,VtdMP1,VtdMPn1,VsdMP1,VsdMPn1 = MN_Potential_total(sig0,sig2,R1,E0,start,end,nb_dipole,electrode_spacing)
+    
+    #Primary Field
+    Ep = np.zeros(shape=(len(Sigma0),3))
+    Ep[:,0] = E0
+
+    #Delineating the 2 differents circles
+    xcirc0 = xr[np.abs(xr) <= R0]
+    xcirc1 = xr[np.abs(xr) <= R1]
+
+    # Initializing the figure
+    fig = plt.figure(figsize=(20,20))
+    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6)
+    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6)
+    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4)
+    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6)
+    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6)
+
+    #Plotting the Configuration 0
+    cf0 = ax0.pcolor(xr,yr,Sigma0.reshape(xr.size, yr.size)
+               ,norm=colors.LogNorm(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2)))
+    cb0=plt.colorbar(cf0,ax=ax0)
+    cb0.set_clim(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2))
+    cb0.set_ticks(np.linspace(min(sig0,sig1,sig2),max(sig0,sig1,sig2),10))
+    cb0.set_ticklabels(np.linspace(min(sig0,sig1,sig2),max(sig0,sig1,sig2),10))
+    cb0.set_label(label= 'Conductivity ($S/m$)',size=ftsize_label) #weight='bold')
+    cb0.ax.tick_params(labelsize=ftsize_axis)
+    ax0.streamplot(xr,yr,Ep[:,0].reshape(xr.size,yr.size),Ep[:,1].reshape(xr.size,yr.size),color='gray'
+                    ,density=0.5,linewidth=2.)
+    ax0.plot(xcirc0,np.sqrt(R0**2-xcirc0**2),'--k',xcirc0,-np.sqrt(R0**2-xcirc0**2),'--k')
+    ax0.set_title('Configuration 0',fontsize=ftsize_title)
+    ax0.annotate('E0',(-80,80),xytext=(-80,80),fontsize=ftsize_title,color='gray',weight='bold')
+    ax0.set_xlim([xr.min(),xr.max()])
+    ax0.set_ylim([yr.min(),yr.max()])
+    ax0.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax0.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax0.tick_params(labelsize=ftsize_axis)
+    ax0.set_aspect('equal')
+    
+    #Plotting the Configuration 1
+    cf1 = ax1.pcolor(xr,yr,Sigma1.reshape(xr.size, yr.size)
+              ,norm=colors.LogNorm(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2)))
+    cb1 = plt.colorbar(cf1,ax=ax1)
+    cb1.set_clim(vmin = min(sig0,sig1,sig2), vmax = max(sig0,sig1,sig2))
+    cb1.set_ticks(np.linspace(min(sig0,sig1,sig2),max(sig0,sig1,sig2),10))
+    cb1.set_ticklabels(np.linspace(min(sig0,sig1,sig2),max(sig0,sig1,sig2),10))
+    cb1.set_label(label= 'Conductivity ($S/m$)',size=ftsize_label) #weight='bold')
+    cb1.ax.tick_params(labelsize=ftsize_axis)
+    ax1.streamplot(xr,yr,Ep[:,0].reshape(xr.size,yr.size),Ep[:,1].reshape(xr.size,yr.size),color='gray'
+                    ,density=0.5,linewidth=2.)
+    ax1.plot(xcirc1,np.sqrt(R1**2-xcirc1**2),'--k',xcirc1,-np.sqrt(R1**2-xcirc1**2),'--k')
+    ax1.set_title('Configuration 1',fontsize=ftsize_title)
+    ax1.annotate('E0',(-80,80),xytext=(-80,80),fontsize=ftsize_title,color='gray',weight='bold')
+    ax1.set_xlim([xr.min(),xr.max()])
+    ax1.set_ylim([yr.min(),yr.max()])
+    ax1.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax1.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax1.tick_params(labelsize=ftsize_axis)
+    ax1.set_aspect('equal')
+    
+    #Plotting the Fields (Part 1)
+    ax3.set_xlim([xr.min(),xr.max()])
+    ax3.set_ylim([yr.min(),yr.max()])
+    ax3.plot(xcirc0,np.sqrt(R0**2-xcirc0**2),'--k',xcirc0,-np.sqrt(R0**2-xcirc0**2),'--k')
+    ax3.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax3.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax3.tick_params(labelsize=ftsize_axis)
+    ax3.set_aspect('equal')
+    
+    ax4.set_xlim([xr.min(),xr.max()])
+    ax4.set_ylim([yr.min(),yr.max()])
+    ax4.plot(xcirc1,np.sqrt(R1**2-xcirc1**2),'--k',xcirc1,-np.sqrt(R1**2-xcirc1**2),'--k')
+    ax4.set_ylabel('Y coordinate ($m$)',fontsize=ftsize_label)
+    ax4.set_xlabel('X coordinate ($m$)',fontsize=ftsize_label)
+    ax4.tick_params(labelsize=ftsize_axis)
+    ax4.set_aspect('equal')
+    
+    #Plotting the Graph (Part 1)
+    ax2.set_title('Potential Differences',fontsize=ftsize_title)
+    ax2.set_ylabel('Potential difference ($V$)',fontsize=ftsize_label)
+    ax2.set_xlabel('Distance from start point ($m$)',fontsize=ftsize_label)
+    ax2.tick_params(labelsize=ftsize_axis)
+    ax2.grid()
+
+    if PlotOpt == 'Total':
+        
+        #Plotting the Fields (Part 1)
+        ax3.pcolor(xr,yr,Vt0.reshape(xr.size,yr.size))
+        cb3 = plt.colorbar(ax3.pcolor(xr,yr,Vt0.reshape(xr.size, yr.size)),ax=ax3)
+        cb3.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb3.ax.tick_params(labelsize=ftsize_axis)
+        ax3.set_title('Total Potential',fontsize=ftsize_title)
+               
+        gphy0 = ax2.plot(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VtdMP0
+                         ,marker='o',color='blue',linewidth=3.,label ='Left Model Response' )
+
+        ax4.pcolor(xr,yr,Vt1.reshape(xr.size,yr.size))
+        cb4 = plt.colorbar(ax4.pcolor(xr,yr,Vt1.reshape(xr.size, yr.size)),ax=ax4)
+        cb4.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb4.ax.tick_params(labelsize=ftsize_axis)
+        ax4.set_title('Total Potential',fontsize=ftsize_title)
+               
+        #Plotting the Graph (Part 2)
+        gphy1 = ax2.plot(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VtdMP1
+                ,marker='o',color='red',linewidth=2.,label ='Right Model Response' )
+        ax2.legend(('Left Model Response','Right Model Response'),loc=4)
+
+    elif PlotOpt == 'Secondary':
+               
+        #Plotting the Fields (Part 2)
+        ax3.pcolor(xr,yr,Vs0.reshape(xr.size,yr.size))
+        ax3.set_title('Secondary Potential',fontsize=ftsize_title)
+        cb3 = plt.colorbar(ax3.pcolor(xr,yr,Vs0.reshape(xr.size, yr.size)),ax=ax3)
+        cb3.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb3.ax.tick_params(labelsize=ftsize_axis)
+
+        gphy0 = ax2.plot(np.sqrt((MP0[0,0]-MP0[:,0])**2+(MP0[:,1]-MP0[0,1])**2),VsdMP0,color='blue'
+                ,marker='o',linewidth=3.,label ='Left Model Response' )
+        
+        
+        ax4.pcolor(xr,yr,Vs1.reshape(xr.size,yr.size))
+        cb4 = plt.colorbar(ax4.pcolor(xr,yr,Vs1.reshape(xr.size, yr.size)),ax=ax4)
+        cb4.set_label(label= 'Potential ($V$)',size=ftsize_label) #weight='bold')
+        cb4.ax.tick_params(labelsize=ftsize_axis)
+        ax4.set_title('Total Potential',fontsize=ftsize_title)
+        
+        #Plotting the Graph (Part 2)
+        gphy1 = ax2.plot(np.sqrt((MP1[0,0]-MP1[:,0])**2+(MP1[:,1]-MP1[0,1])**2),VsdMP1
+                 ,marker='o',color='red',linewidth=2.,label ='Right Model Response' )
+        ax2.legend(('Left Model Response','Right Model Response'),loc=4 )
+    else:
+        print('What dont you get? Total or Secondary?')
+    
+    #Legends
+    ax3.plot(MP0[:,0],MP0[:,1],color='gray')           
+    Dip_Midpoint0 = ax3.scatter(MP0[:,0],MP0[:,1],color='black')
+    Electrodes0 = ax3.scatter(EL0[:,0],EL0[:,1],color='red')
+    ax3.legend([Dip_Midpoint0,Electrodes0], ["Dipole Midpoint", "Electrodes"],scatterpoints=1)
+    
+    ax4.plot(MP1[:,0],MP1[:,1],color='gray')           
+    Dip_Midpoint1 = ax4.scatter(MP1[:,0],MP1[:,1],color='black')
+    Electrodes1 = ax4.scatter(EL1[:,0],EL1[:,1],color='red')
+    ax4.legend([Dip_Midpoint1,Electrodes1], ["Dipole Midpoint", "Electrodes"],scatterpoints=1)
+    
+    plt.tight_layout(True)
+    
+    return fig
+
+
 if __name__ == '__main__':
     sig0 = 10.          # conductivity of the wholespace
     sig1 = 100.         # conductivity of the sphere
@@ -665,15 +1182,26 @@ if __name__ == '__main__':
     XYZ = ndgrid(xr,yr,zr) # Space Definition
     PlotOpt = 'Total'
 
-    example = 'Charges' # ElectricFields, Currents, Charges
+    # fig, ax = plt.subplots(1,2)
+    # ax[0] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
+    # ax[1] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
 
-    if example is 'Potentials':
-        fig, ax = plot_Potentials(XYZ, R, sig1, sig0, E0)
-    elif example is 'ElectricFields':
-        fig, ax = plot_ElectricField(XYZ, R, sig1, sig0 , E0, PlotOpt)
-    elif example is 'Currents':
-        fig, ax = plot_Currents(XYZ, R, sig1, sig0, E0, PlotOpt)
-    elif example is 'Charges':
-        fig, ax = plot_Charges(XYZ,R,sig0,sig1,E0)
-   
+    
+    # plt.tight_layout()
+    # plt.show()
+
+    fig, ax = plt.subplots(1,1, figsize = (6,6))
+    ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
     plt.show()
+
+    # example = 'Charges' # ElectricFields, Currents, Charges
+
+    # if example is 'Potentials':
+    #     fig, ax = plot_Potentials(XYZ, R, sig1, sig0, E0)
+    # elif example is 'ElectricFields':
+    #     fig, ax = plot_ElectricField(XYZ, R, sig1, sig0 , E0, PlotOpt)
+    # elif example is 'Currents':
+    #     fig, ax = plot_Currents(XYZ, R, sig1, sig0, E0, PlotOpt)
+    # elif example is 'Charges':
+    #     fig, ax = plot_Charges(XYZ,R,sig0,sig1,E0)
+

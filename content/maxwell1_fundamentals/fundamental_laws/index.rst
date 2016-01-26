@@ -1,12 +1,19 @@
-.. fundamental_laws_index:
+.. _fundamental_laws_index:
 
-Contents:
+Fundamental Laws
+================
+
+**Contents:**
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     gauss_electric
     gauss_magnetic
     faraday
     ampere_maxwell
     conservation_of_charge
+    biot_savart
+    lenz
+    interface_conditions
+    

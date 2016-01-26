@@ -3,7 +3,7 @@
 Notation and Conventions
 ========================
 
-We choose the notation set forth in [Ward_and_Hohmann]_. Their chapter has
+We choose the notation set forth in :cite:`ward1988`. Their chapter has
 been the foundation of many research papers, is used by geophysicists world-
 wide, and it is clean and unambiguous.
 
@@ -11,13 +11,13 @@ Vectors
 -------
 
 - vectors are bold:                          
-    * ie. \\(\\mathbf{v}\\), \\(\\boldsymbol{\\nabla\\cdot}\\)                       
+    * ie. :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`                       
 - tensors are bold and underlined:           
-    * ie. \\(\\mathbf{\\underline{v}}\\), \\(\\boldsymbol{\\underline{\\sigma}}\\)   
+    * ie. :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`   
 - time domain variable are lower case:       
-    * ie. \\(\\mathbf{e}\\), \\(\\mathbf{j}\\), \\(\\mathbf{h}\\), \\(\\mathbf{b}\\) 
+    * ie. :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}` 
 - frequency domain variables are upper case: 
-    * ie. \\(\\mathbf{E}\\), \\(\\mathbf{J}\\), \\(\\mathbf{H}\\), \\(\\mathbf{B}\\)
+    * ie. :math:`\mathbf{E}`, :math:`\mathbf{J}`, :math:`\mathbf{H}`, :math:`\mathbf{B}`
 
 Integrals
 ---------
@@ -52,7 +52,7 @@ Integrals
 Fourier Transform Convention
 ----------------------------
 
-We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\) time dependence. 
+We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t}` time dependence. 
 
  .. math::
     F(\omega) = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} dt
@@ -64,6 +64,9 @@ We also adopt their choice of sign in the Fourier Transform: \\(e^{i\\omega t}\\
 
 
 
-**References** 
+.. **References** 
 
-.. [Ward_and_Hohmann] Ward, S. H., & Hohmann, W. (1988). *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists.
+..  .. bibliography:: ../references.bib
+..     :style: alpha
+..     :encoding: latex+latin
+..     :filter: docname in docnames
