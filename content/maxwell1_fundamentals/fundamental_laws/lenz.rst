@@ -35,16 +35,16 @@ linked below provide visual illustrations of Lenz's Law.
 
  .. figure:: images/LenzsLawDiagram.png
     :align: center
-    :scale: 90% 
+    :scale: 25% 
     :name: Lenzs_Law_Diagram
 
     In panel (a) we see a situation in which the magnetic flux through the
     loop is increasing as a function of time. The induced current direction
-    and the secondary magnetic field which opposes the increase in flux is
+    and the secondary magnetic field which opposes the increase in flux are
     shown in panel (b). Similarly, panel (c) shows when the magnetic flux
     through the loop is decreasing as a function of time and panel (d)
     demonstrates the direction of the induced current and secondary magnetic
-    field.
+    field.  (Figure was created by M. Mitchell using the following Wikimedia Commons images: `VFPt_dipole <https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg>`_ and `VFPt ringcurrentNoLoop <https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg>`_ both of which are licensed under `Creative Commons Attribution-Share Alike 3.0 Unported <https://creativecommons.org/licenses/by-sa/3.0/deed.en>`_.)
 
 Illustrative Demo:
 `MIT Physics Demo - Lenz's Law with Copper Pipe 
