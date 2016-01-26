@@ -35,12 +35,12 @@ linked below provide visual illustrations of Lenz's Law.
 
  .. figure:: images/LenzsLawDiagram.png
     :align: center
-    :scale: 90% 
+    :scale: 25% 
     :name: Lenzs_Law_Diagram
 
     In panel (a) we see a situation in which the magnetic flux through the
     loop is increasing as a function of time. The induced current direction
-    and the secondary magnetic field which opposes the increase in flux is
+    and the secondary magnetic field which opposes the increase in flux are
     shown in panel (b). Similarly, panel (c) shows when the magnetic flux
     through the loop is decreasing as a function of time and panel (d)
     demonstrates the direction of the induced current and secondary magnetic
