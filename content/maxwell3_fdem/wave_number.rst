@@ -40,7 +40,7 @@ Using the vector identity :math:`\nabla \times \left( \nabla \times {\bf A} \rig
     \nabla \times \left( \nabla \times {\bf H} \right) = \nabla \left( \nabla \cdot {\bf H} \right) - \nabla^2 {\bf H} \\
     :label: curl_ampere
 
-Since :math:`\nabla \cdot {\bf B} = 0`, and :math:`\nabla \cdot \mu {\bf H} = \mu \cdot {\bf H} = 0`.
+Since :math:`\nabla \cdot {\bf B} = 0`, and :math:`\nabla \cdot \mu {\bf H} = \mu \nabla \cdot {\bf H} = 0`.
 
 Then equation :eq:`curl_ampere` simplifies to,
 
