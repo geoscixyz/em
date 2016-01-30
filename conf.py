@@ -392,5 +392,9 @@ intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
+
+from autodoc import make_formula_sheet
+make_formula_sheet()
+
 from checkDependencies import checkDependencies
 checkDependencies()
