@@ -13,6 +13,7 @@ Physical Properties
     magnetic_permeability/index
     electrical_permittivity/index
     constitutive_relations/index
+    details/index
 
 
 Overview
