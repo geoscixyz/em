@@ -12,7 +12,7 @@ electric fields, current density and the build up of charges at interfaces.
 This work follows the derivation in :cite:`ward1988` and is supported by apps developed in
 a `Jupyter Notebook`_.
 
-.. _Jupyter Notebook: https://github.com/ubcgif/em/blob/AmpereMaxwell/examples/sphere/ElectrostaticSphere.ipynb
+.. _Jupyter Notebook: https://github.com/ubcgif/em/blob/master/examples/sphere/ElectrostaticSphere.ipynb
 
 Setup
 -----
