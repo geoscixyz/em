@@ -15,3 +15,4 @@ In this section, we combine the first-order partial :ref:`differential equations
     wave_propagation_in_free_space
     effects_of_conductivity
     quasi_static_maxwells_equations
+    details

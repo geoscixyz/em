@@ -3,9 +3,10 @@
 Maxwell I: Fundamentals
 =======================
 
-..todo:: 
-    In this chapter:
-     - from equations to experiments 
+**Purpose:** from equations to experiments. 
+
+.. todo:: 
+    intro here 
 
 **Contents**
 

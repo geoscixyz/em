@@ -3,7 +3,14 @@
 Maxwell II: Steady State
 ========================
 
-Contents:
+**Purpose:**
+
+.. todo:: Introduction (DCR, MMR, magnetostatics) 
+    - this concerns the numerical and physical aspects of these surveys. details about implementation of the survey are covered in Surveys/DCR.
+    - why? 
+
+
+**Contents:**
 
 .. toctree::
     :maxdepth: 1
