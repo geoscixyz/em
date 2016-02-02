@@ -37,7 +37,7 @@ And for the magnetic field :math:`\vec H`:
 	\vec H = - \big (\sigma + i \omega \varepsilon \big ) \vec F + \frac{1}{i \omega \mu} \nabla \big ( \nabla  \cdot \vec F \big )
 	:label: SchelkunoffH
 
-For his derivation, Wait began by considering the induced magnetic dipole moment resulting from an incident plane wave.
+For his derivation, Wait (1951) began by considering the induced magnetic dipole moment resulting from an incident plane wave.
 If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which induces the dipole moment is approximately uniform about the sphere.
 For an inducing field of the form :math:`\vec H_0 (i\omega) = H_0 e^{i\omega t} \hat z` (Figure reference), symmetry of the problem implies that :math:`\vec E` only has components in :math:`\hat \phi`.
 Therefore by Eq. :eq:`EcurlF`, it follows that our Schelkunoff potential will only have components in :math:`\hat z`.
@@ -67,7 +67,7 @@ According to Wait, these conditions are satisfied by the following:
 	\end{cases}
 	:label: BoundaryConditions
 
-To solve the boundary value problem, Wait expressed the Schelkunoff potentials, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
+To solve the boundary value problem, Wait (1951) expressed the Schelkunoff potentials, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
 For the boundary conditions to be satisfied however, he found that coefficients :math:`a_n=b_n=0 \; \forall \; n>0`.
 As a result, the solution to the Schelkunoff potentials inside and outside the sphere are defined by:
 
@@ -97,7 +97,7 @@ where
 and
 
 .. math::
-	\alpha_s = \gamma_b R = \Big [ i \omega \mu_s \sigma_s - \omega^2 \mu_s \varepsilon_s \Big ]^{1/2} R
+	\alpha_s = \gamma_s R = \Big [ i \omega \mu_s \sigma_s - \omega^2 \mu_s \varepsilon_s \Big ]^{1/2} R
 	:label: alpha_s
 
 The total magnetic field outside the sphere, in response to an inducing field of the form :math:`\vec H_0 e^{i\omega t}`, may be obtained by substituting Eqs. :eq:`Foutside` and :eq:`a0` into Eq. :eq:`SchelkunoffH`.
@@ -163,11 +163,25 @@ where :math:`\kappa` is the magnetic susceptibility of the sphere, and :math:`\m
 According to Eq. :eq:`ChiLimits`, the inductive limit of :math:`\chi (\omega)` is constant.
 As a result, the dipole moment which characterizes the sphere in this case is proportional only to :math:`R^3`, and the strength of the inducing field.
 For purely magnetic responses however, the magnetization factor ultimately depends on the magnetic susceptibility of the sphere.
-For small magnetic susceptibilities (:math:`\kappa < 0.1`), the relationship between $\kappa$ and the resulting dipole moment is approximately linear.
+For small magnetic susceptibilities (:math:`\kappa < 0.1`), the relationship between :math:`\kappa` and the resulting dipole moment is approximately linear.
 For large values however, the effects of self-demagnetization within the sphere will result in a weaker magnetic dipole moment for the sphere.
 As :math:`\kappa \rightarrow \infty`, Eq. :eq:`ChiLimits` can be used to show that :math:`\chi \rightarrow 3`.
 The magnetization factor for :math:`\omega = 0`, denoted here as :math:`\chi (\kappa)`, is plotted in Figure (reference). 
 
+For a purely conductive object (i.e. :math:`\mu_s = \mu_0`), Eq. :eq:`ChiApprox` can be further simplified.
+By neglecting electric displacement (i.e. :math:`\sigma_s \ll \omega \varepsilon_s`):
+
+.. math::
+	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{3}{\alpha^2} - \frac{3}{\alpha \, tanh(\alpha )} + 1 \Bigg ]
+	:label: ChiConductive 
+
+where
+
+.. math::
+	\alpha = \Big [ i \omega \mu_0 \sigma_s \Big ]^{1/2} R
+	:label: alpha_c
+	
+Eq. :eq:`ChiConductive` is commonly used to understand the excitation of a compact conductive object in a resistive medium.
 
 
 
