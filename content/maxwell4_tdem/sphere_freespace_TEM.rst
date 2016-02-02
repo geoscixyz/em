@@ -9,59 +9,78 @@ Introduction
 
 
 
-Excitation of a Conducting and Magnetically Permeable Sphere by a Homogeneous Field
-===================================================================================
+Obtaining the Time-Domain Response of a Conducting and Permeable Sphere
+=======================================================================
 
 .. figure:: ./images/figGeometrySphere.png
 	:align: center
         :scale: 50%
         :name: GeometrySphere
 
+In the frequency domain, the induced magnetic dipole moment was given by:
+
 .. math::
 	\vec m (\omega) = \frac{4\pi}{3}R^3 \chi (\omega) \vec H_0 (i \omega)
 	:label: DipoleMoment
 
-where
+where :math:`R` was the radius of the sphere, :math:`\chi (\omega)` was an excitation factor, and :math:`H_0 (i \omega)` was a harmonic inducing field.
+The time-dependent magnetization of the sphere may be obtained by inverse Fourier transform:
 
 .. math::
-	\chi (\omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s  \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
-	:label: ChiApprox
-
-where
+	\begin{align}
+	m(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty m(\omega) e^{i\omega t} \, d\omega \\
+	     &= \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi} \int_{-\infty}^\infty \chi(\omega) H_0 (i\omega) e^{i\omega t} \, d\omega \Bigg ] \\
+	     &= \frac{4\pi}{3} R^3 \Big [ \chi_\delta (t) \otimes h_0 (t) \Big ]
+	\end{align}
+	
+where :math:`\chi_\delta (t)` is the excitation's impulse response, :math:`h_0 (t)` is a time-dependent inducing field, and :math:`\chi_\delta (t) \otimes h_0 (t)` is a convolution.
+The excitation's impulse response is defined at the inverse Fourier transform of :math:`\chi (\omega)`:
 
 .. math::
-	\alpha_s = \Big [ i \omega \mu_s \sigma_s - \omega^2 \mu_s \varepsilon_s \Big ]^{1/2} R
-	:label: alpha_s
+	\chi_\delta (t) = \frac{1}{2\pi} \int_{-\infty}^\infty \chi (\omega) e^{i\omega t} \, d\omega
 	
-	
-The impulse response of :math:`\chi (\omega)` is:
+
+Because the time-domain signal is causal, the response to step-off excitation can be obtain using inverse sine and cosine transforms (Newmann et al., 1986):
 
 .. math::
-	\chi_\delta (t) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} \chi (\omega) e^{i \omega t} \; d \omega
-	
-and
-
-.. math::
-	\vec m (t) = \frac{4\pi}{3} R^3 \chi_\delta (t) \otimes \vec h_0(t)
-	
-	
-Step-Off Excitation
-===================
-
-1) You can get the time-domain signal to step-off excitation by inverse sine and cosine transforms
-
-.. math::
-
-	m(t) = - \; \frac{2}{\pi} \int_0^\infty \frac{Im [m(\omega)]}{\omega} \; cos(\omega t) \;d \omega = m(0) \; - \; \frac{2}{\pi} \int_0^\infty \frac{Re [m(\omega)]}{\omega} \; sin(\omega t) \; d \omega
+	\begin{split}
+	m(t) &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Im [\chi(\omega)]}{\omega} \; cos(\omega t) \;d \omega \Bigg ] \\
+	     &= m(0) - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Re [\chi(\omega)]}{\omega} \; sin(\omega t) \; d \omega \Bigg ]
+	\end{split}
 
 and
 
 .. math::
+	\begin{split}
+	\frac{\partial \, m(t)}{\partial t} &= \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Im [\chi (\omega)] \; sin(\omega t) \;d \omega \Bigg ] \\
+					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Re [\chi(\omega)]\; cos(\omega t) \; d \omega \Bigg ]
+	\end{split}
 
-	\frac{\partial \, m(t)}{\partial t} = \frac{2}{\pi} \int_0^\infty Im [m(\omega)] \; sin(\omega t) \;d \omega = - \; \frac{2}{\pi} \int_0^\infty Re [m(\omega)]\; cos(\omega t) \; d \omega
 
 
-2) 
+Step-Off Response from a Conducting Sphere in a Resistive Medium
+================================================================
+
+If the sphere is non-permeable (i.e. :math:`\mu = \mu_0`), and by neglecting electric displacement (i.e. :math:`\omega \varepsilon \ll \sigma`), the excitation factos can be approximated by:
+
+.. math::
+	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{3}{\alpha^2} - \frac{3 coth (\alpha)}{\alpha} + 1 \Bigg ]
+
+where
+
+.. math::
+	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R
+
+
+
+
+
+Step-Off Response from a Conducting and Magnetically Permeable Sphere in a Resistive Medium
+===========================================================================================
+
+
+
+
 
 
 
