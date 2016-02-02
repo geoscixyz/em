@@ -7,3 +7,5 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
+    
+    sphere_freespace_TEM
