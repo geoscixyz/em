@@ -15,7 +15,7 @@ Wave Propagation in free space
 Effects of Conductivity
 -----------------------
 
-.. _quasi_static_maxwells_equations:
+.. _quasi_static_maxwells_equations_details:
 
 Quasi Static Maxwell's Equations
 --------------------------------
