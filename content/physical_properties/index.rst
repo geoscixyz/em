@@ -3,6 +3,8 @@
 Physical Properties
 ===================
 
+**Purpose**
+
 **Contents:**
 
 .. toctree::

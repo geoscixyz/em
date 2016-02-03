@@ -3,6 +3,8 @@
 Maxwell III: FDEM
 =================
 
+**Purpose:**
+
 Contents:
 
 .. toctree::

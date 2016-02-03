@@ -3,7 +3,7 @@
 Electromagnetic Geophysics
 ==========================
 
-**Purpose of GeoSci EM:** To facilitate the understanding and use of
+**Purpose:** To facilitate the understanding and use of
 electromagnetics in solving exploration, geotechnical and environmental
 problems.
 
