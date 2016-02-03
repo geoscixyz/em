@@ -6,6 +6,13 @@ Response from a Conducting and Permeable Sphere in Free-Space
 Introduction
 ============
 
+1. Introduce what were are doing
+
+2. General flavour of obtaining time-domain responses from our frequency-dependent excitation factor
+
+3. The impulse response and step-response for a purely conductive sphere (Wait, 1951; Wait and Spies, 1969)
+
+4. Approximations of the time dependent decay for conductive and permeable objects (Becker et al., 'no date')
 
 
 
@@ -64,12 +71,31 @@ Step-Off Response from a Conducting Sphere in a Resistive Medium
 If the sphere is non-permeable (i.e. :math:`\mu = \mu_0`), and by neglecting electric displacement (i.e. :math:`\omega \varepsilon \ll \sigma`), the excitation factos can be approximated by:
 
 .. math::
-	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{3}{\alpha^2} - \frac{3 coth (\alpha)}{\alpha} + 1 \Bigg ]
+	\chi (\omega) = \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 coth (\alpha)}{\alpha} \Bigg ]
+	:label: ChiConductive
 
 where
 
 .. math::
 	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R
+
+To obtain the excitation factor's impulse response, Wait and Spies (1969) used a change of variables on Eq. :eq:`ChiConductive`:, and expressed the hyperpolic cotanjent term as an infinite series.
+By setting :math:`s=i\omega` and :math:`\beta=\sqrt{\mu_0 \sigma}`:
+
+.. math::
+	\begin{align}
+	\chi (s)&= \frac{3}{2} \Bigg [ 1 + \frac{3}{\beta^2 s} - \frac{3 \, coth (\beta s^{1/2} )}{\beta s^{1/2}} \Bigg ] \\
+		&= \frac{3}{2} \Bigg [ 1 + \frac{3}{\beta^2 s} + \frac{3}{\beta s^{1/2}} \Bigg ( \frac{1 + e^{2 \beta s^{1/2} } }{1 -  e^{2 \beta s^{1/2}}} \Bigg ) \Bigg ] \\
+		&= \frac{3}{2} \Bigg [ 1 + \frac{3}{\beta^2 s} - \frac{3}{\beta s^{1/2}} - \frac{6}{\beta} \sum_{n = 1}^\infty \frac{exp \big [ -2n \beta s^{1/2} \big ]}{s^{1/2}} \Bigg ]
+	\end{align}
+
+Wait and Spies were then able to obtain the excitation's impulse response using the inverse Laplace transform:
+
+.. math::
+	\chi_\delta (t) = \frac{1}{2 \pi i} \int_{c - i\infty}^{c + i\infty} \chi (s) e^{st} ds = \mathcal{L}^{-1} \big [ \chi (s) \big ]
+
+where :math:`c` is a positive constant.
+
 
 
 
