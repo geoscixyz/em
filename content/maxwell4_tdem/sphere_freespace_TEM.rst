@@ -143,6 +143,8 @@ By substituting Eq. :eq:`ChiChangeVar` into Eq. :eq:`LaplaceIFT`, a conductive s
 
 where :math:`\delta(t)` is the Dirac delta function.
 We can see that Eq. :eq:`ImpulseConductive` is zero for :math:`t<0`, implying it is causal.
+It should be noted that our expression for :math:`\chi_\delta (t)` differs from the one in Wait and Spies by a factor of :math:`-3/2`.
+This is because of how we chose to define :math:`\chi (\omega)`.
 Although the impulse response is written as an infinite series, exponential functions of the form :math:`e^{-an^2}` are negligible for sufficiently large :math:`n`.
 Thus, only a finite number of terms in the sum are required to approximate the sphere's impulse response to an acceptable accuracy.
 
@@ -177,8 +179,6 @@ where :math:`\textrm{erfc}(z)` is the complimentary error function given by:
 	\textrm{erfc}(z) = \frac{2}{\sqrt{\pi}} \int_z^\infty e^{-t^2} dt
 	:label: erfc
 	
-It should be noted that our expression differs from the one in Wait and Spies by a factor of :math:`-3/2`.
-This is because of how we chose to define :math:`\chi (\omega)`.
 Although a rigorous proof will not be provided here, Eq. :eq:`IntImpulse0t` goes to 0 as :math:`t` goes to infinity.
 Thus:
 
@@ -192,13 +192,10 @@ This results in the following expression:
 
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi_\delta (\tau) h_0 \big [ 1 - u(t-\tau) \big ] d\tau \Bigg ] = - \; \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi_\delta (\tau) d\tau \Bigg ] h_0
-
+	:label: ConvolutionStepOff
+	
 Therefore, the response to step-on and step-off excitation behave identically and have opposing sign.
-
-Rate of Decay
-+++++++++++++
-
-dfasdf
+The rate of decay for the step-off response is obtained by taking the derivative of Eq. :eq:`ConvolutionStepOff` with respect to :math:`t`:
 
 .. math::
 	\begin{align}
@@ -206,22 +203,40 @@ dfasdf
 			     &= \frac{4\pi}{3}R^3 \Bigg [ - \; \int_{-\infty}^{\infty} \chi_\delta (\tau) \delta (t-\tau) d\tau \Bigg ] h_0 \\
 			     &= - \; \frac{4\pi}{3}R^3 \, \chi_\delta (t) \, h_0
 	\end{align}
+	:label: dmdtStepOff
 
-
-
-
-
-
+Therefore, the rate of decay may be obtained directly if the excitation's impulse response is known.
 
 
 Step-Off Response from a Conducting and Magnetically Permeable Sphere in a Resistive Medium
 ===========================================================================================
 
+Here we consider the time-dependent magnetization of a conductive and magnetically permeable sphere within a resistive medium (:math:`\sigma_b \ll \sigma`).
+In this case, the frequency-dependent excitation of the sphere is defined by:
+
+.. math::
+	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{2\mu (tanh \, \alpha - \alpha) + \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)}{\mu (tanh \, \alpha - \alpha) - \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)} \Bigg ]
+	:label: ChiPermeable
+
+where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll \sigma`):
+
+.. math::
+	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R
+	:label: alphaPermeable
+
+
+
+General Form of Step Responses and the Impulse Response
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 
 
+
+
+Approximations of the Time-Dependent Response
++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
