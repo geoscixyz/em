@@ -21,13 +21,15 @@ Obtaining the Time-Domain Response of a Conducting and Permeable Sphere
 =======================================================================
 
 .. figure:: ./images/figGeometrySphere.png
-	:align: center
-        :scale: 50%
+	:align: right
+        :scale: 40%
         :name: GeometrySphere
 
-Consider a conductive and permeable sphere in a resistive media (Figure  ).
+
+Consider a conductive and permeable sphere in a resistive media.
+The geometry of this cases is illustrated in Figure (reference).
 This sphere is excited by a time-dependent field :math:`h_0(t)`.
-In the frequency domain, the induced magnetic dipole moment :math:`\vec m(t)` of the sphere was given by:
+In the frequency domain, the magnetic dipole moment :math:`\vec m(\omega)` induced by the primary field was given by:
 
 .. math::
 	\vec m (\omega) = \frac{4\pi}{3}R^3 \chi (\omega) \vec H_0 (i \omega) 
@@ -37,20 +39,20 @@ where :math:`R` was the radius of the sphere, :math:`\chi (\omega)` was an excit
 Recall that our sphere is isotropic.
 As a result, all excitation is parallel to the inducing field.
 
-To obtain the time-dependent magnetic dipole moment of the sphere, we can apply an inverse Fourier transform to Eq. :eq:`DipoleMoment`:
+To obtain the time-dependent magnetic dipole moment of the sphere, defined by :math:`m(t)`, we can apply an inverse Fourier transform to Eq. :eq:`DipoleMoment`:
 
 .. math::
 	m(t) = \frac{1}{2\pi} \int_{-\infty}^\infty m(\omega) e^{i\omega t} \, d\omega = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi} \int_{-\infty}^\infty \chi(\omega) H_0 (i\omega) e^{i\omega t} \, d\omega \Bigg ]
 	:label: mIFT
 
-By taking the inverse Fourier transform of the product of two frequency-dependent functions, :math:`m(t)` can be expressed in terms of a convolution:
+The inverse Fourier transform of the product of two frequency-dependent functions can be expressed as a convolution:
 
 .. math::
 	m(t) = \frac{4\pi}{3} R^3 \big [ \chi_\delta (t) \otimes h_0(t) \big ] 
 	:label: mConvolutionDef
 	
-where :math:`\chi_\delta (t)` is defined as the excitation's impulse response and :math:`h_0 (t)` is a time-dependent inducing field.
-The excitation's impulse response is defined as the inverse Fourier transform of :math:`\chi (\omega)`:
+where :math:`\chi_\delta (t)` is defined as the excitation's impulse response, and :math:`h_0 (t)` is the time-dependent inducing field.
+The excitation's impulse response is the inverse Fourier transform of :math:`\chi (\omega)`:
 
 .. math::
 	\chi_\delta (t) = \frac{1}{2\pi} \int_{-\infty}^\infty \chi (\omega) e^{i\omega t} \, d\omega
@@ -62,7 +64,9 @@ The convolution :math:`\chi_\delta (t) \otimes h_0 (t)` is defined as:
 	\chi_\delta (t) \otimes h_0 (t) = \int_{-\infty}^\infty \chi_\delta (\tau) h_0 (t -\tau) d\tau = \int_{-\infty}^\infty \chi_\delta (t - \tau) h_0 (\tau) d\tau 
 	:label: ConvolutionDef
 
-As we will find out later, the time-domain response of the sphere is causal.
+Therefore, we can obtain the sphere's time-domain excitation two different ways: 1) obtain the sphere's frequency-domain magnetization and take the inverse Fourier transform, or 2) use the inverse Fourier transform to obtain the sphere's impulse response and convolve it with a time-dependent inducing field waveform.
+
+The time-domain response of the sphere is causal, implying :math:`\chi_\delta (t<0)=0`.
 As a result, the convolution is frequently expressed as an integral from 0 to :math:`\infty`.
 For many geophysical applications, we are interested in the response to step-off excitation.
 In this case, the sphere is excited by an inducing field of the form:
@@ -89,6 +93,8 @@ where :math:`m(0)` represents some initial dipole moment at :math:`t=0`. For the
 					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Re [\chi(\omega)]\; cos(\omega t) \; d \omega \Bigg ] h_0 
 	\end{split}
 	:label: dmdtSineCosine
+
+Eqs :eq:`mSineCosine` and :eq:`dmdtSineCosine` have been used extensively in geophysical applications to examine transient responses using expressions derived in the frequency-domain.
 
 
 Response from a Conducting Sphere in a Resistive Medium
@@ -138,31 +144,31 @@ By substituting Eq. :eq:`ChiChangeVar` into Eq. :eq:`LaplaceIFT`, a conductive s
 where :math:`\delta(t)` is the Dirac delta function.
 We can see that Eq. :eq:`ImpulseConductive` is zero for :math:`t<0`, implying it is causal.
 Although the impulse response is written as an infinite series, exponential functions of the form :math:`e^{-an^2}` are negligible for sufficiently large :math:`n`.
-Thus, only a finite number of terms are required to approximate the sphere's impulse response.
+Thus, only a finite number of terms in the sum are required to approximate the sphere's impulse response to an acceptable accuracy.
 
 
 Step Response
 ++++++++++++++++
 
 Consider the sphere's response to step-excitation.
-In this case, the inducing field is of the form:
+At time :math:`t=0`, an inducing field of amplitude :math:`h_0` excites the sphere.
+The inducing field can be expressed as:
 
 .. math::
 	h_0 (t) = h_0 u(t)
 	:label: StepOn
 
-where :math:`h_0` is the amplitude of the field, and :math:`u(t)` is the unit step function.
 Using Eqs. :eq:`ConvolutionDef`, :eq:`ImpulseConductive` and :eq:`StepOn` to solve Eq. :eq:`mConvolutionDef`:
 
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi_\delta (\tau) h_0 u(t-\tau) d\tau \Bigg ] = \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi_\delta (\tau) d\tau \Bigg ] h_0
 	:label: ConvolutionStep
 
-The convolution is in Eq. :eq:`ConvolutionStep` only requires us to integrate the impulse response from 0 to :math:`t`.
+The convolution is in Eq. :eq:`ConvolutionStep` only requires integration from 0 to :math:`t`.
 By substituting Eq. :eq:`ChiConductive` into Eq :eq:`ConvolutionStep`, we can obtain the final expression presented in Wait and Spies (1969):
 
 .. math::
-	\int_0^t \chi_\delta (t) d\tau = \frac{9}{2} \Bigg [ \frac{1}{3} + \frac{t}{\beta^2} - \frac{2}{\beta} \sqrt{\dfrac{t}{\pi}} \Bigg ( 1 + 2 \sum_{n=1}^\infty e^{-(n\beta)^2/t} \Bigg ) - 2 \sum_{n=1}^\infty n \; \textrm{erfc}\Bigg ( \frac{n\beta}{\sqrt{t}} \Bigg ) \Bigg ] u(t)
+	\int_0^t \chi_\delta (t) d\tau = \frac{9}{2} \Bigg [ \frac{1}{3} + \frac{t}{\beta^2} - \frac{2}{\beta} \sqrt{\dfrac{t}{\pi}} \Bigg ( 1 + 2 \sum_{n=1}^\infty e^{-(n\beta)^2/t} \Bigg ) + 4 \sum_{n=1}^\infty n \; \textrm{erfc}\Bigg ( \frac{n\beta}{\sqrt{t}} \Bigg ) \Bigg ] u(t)
 	:label: IntImpulse0t
 
 where :math:`\textrm{erfc}(z)` is the complimentary error function given by:
@@ -177,7 +183,7 @@ Although a rigorous proof will not be provided here, Eq. :eq:`IntImpulse0t` goes
 Thus:
 
 .. math::
-	\int_0^\infty \chi_\delta (\tau) d\tau = 0
+	\lim_{t\rightarrow\infty} \; \int_0^t \chi_\delta (\tau) d\tau = 0
 	:label: IntImpulseLimit
 	
 This is expected given that inductive responses decay to zero after sufficient time.
