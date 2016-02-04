@@ -172,7 +172,7 @@ For a purely conductive object (i.e. :math:`\mu_s = \mu_0`), Eq. :eq:`ChiApprox`
 By neglecting electric displacement (i.e. :math:`\sigma_s \ll \omega \varepsilon_s`):
 
 .. math::
-	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{3}{\alpha^2} - \frac{3}{\alpha \, tanh(\alpha )} + 1 \Bigg ]
+	\chi (\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth}(\alpha)}{\alpha} \Bigg ]
 	:label: ChiConductive 
 
 where
