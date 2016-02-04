@@ -155,7 +155,7 @@ For a conductive and permeable sphere in free-space, Eq. :eq:`ChiApprox` can be 
 	\chi (\omega) = \begin{cases}
 	\dfrac{3 \big ( \mu_s - \mu_0 \big )}{ \big ( \mu_s + 2 \mu_0 \big ) } = \dfrac{3 \kappa }{3 + \kappa} & \textrm{ as } \omega \rightarrow 0 \\
 	\\
-	- \dfrac{3}{2} & \textrm{ as } \omega \rightarrow \infty
+	\dfrac{3}{2} \Bigg [ \dfrac{3 \mu_s}{\mu_0 \alpha} - 1 \Bigg ] & \textrm{ as } \omega \rightarrow \infty
 	\end{cases}
 	:label: ChiLimits
 	
