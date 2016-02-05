@@ -29,33 +29,40 @@ Obtaining the Time-Domain Response of a Conducting and Permeable Sphere
 Consider a conductive and permeable sphere in a resistive media.
 The geometry of this cases is illustrated in Figure (reference).
 This sphere is excited by a time-dependent field :math:`h_0(t)`.
-In the frequency domain, the magnetic dipole moment :math:`\vec m(\omega)` induced by the primary field was given by:
+In the frequency domain, the magnetic dipole moment :math:`\vec m(i \omega)` induced by the primary field was given by:
 
 .. math::
-	\vec m (\omega) = \frac{4\pi}{3}R^3 \chi (\omega) \vec H_0 (i \omega) 
+	\vec m (i \omega) = \frac{4\pi}{3}R^3 \chi (i \omega) \vec H_0 (i \omega) 
 	:label: DipoleMoment
 
-where :math:`R` was the radius of the sphere, :math:`\chi (\omega)` was an excitation factor, and :math:`H_0 (i \omega)` was a harmonic inducing field.
+where :math:`R` was the radius of the sphere, :math:`\chi (i \omega)` was an excitation factor, and :math:`H_0 (i \omega)` was a harmonic inducing field.
 Recall that our sphere is isotropic.
 As a result, all excitation is parallel to the inducing field.
 
 To obtain the time-dependent magnetic dipole moment of the sphere, defined by :math:`m(t)`, we can apply an inverse Fourier transform to Eq. :eq:`DipoleMoment`:
 
 .. math::
-	m(t) = \frac{1}{2\pi} \int_{-\infty}^\infty m(\omega) e^{i\omega t} \, d\omega = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi} \int_{-\infty}^\infty \chi(\omega) H_0 (i\omega) e^{i\omega t} \, d\omega \Bigg ]
+	m(t) = \frac{1}{2\pi} \int_{-\infty}^\infty m(i \omega) e^{i\omega t} \, d\omega = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi} \int_{-\infty}^\infty \chi(i \omega) H_0 (i\omega) e^{i\omega t} \, d\omega \Bigg ]
 	:label: mIFT
 
-The inverse Fourier transform of the product of two frequency-dependent functions can be expressed as a convolution:
+More generally, by letting :math:`s = i\omega`, :math:`m(t)` can be obtained via the inverse Laplace transform:
+
+.. math::
+	m(t) = \frac{1}{2\pi i} \int_{c-\infty}^{c+\infty} m(s) e^{s t} \, ds = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi(s) H_0 (s) e^{s t} \, ds \Bigg ] = \mathcal{L}^{-1} \big [m(s) \big ]
+	:label: mILT
+
+where :math:`c` is some positive constant.
+The inverse Fourier transform of the product of two frequency-dependent functions can be expressed as a convolution, thus:
 
 .. math::
 	m(t) = \frac{4\pi}{3} R^3 \big [ \chi_\delta (t) \otimes h_0(t) \big ] 
 	:label: mConvolutionDef
 	
 where :math:`\chi_\delta (t)` is defined as the excitation's impulse response, and :math:`h_0 (t)` is the time-dependent inducing field.
-The excitation's impulse response is the inverse Fourier transform of :math:`\chi (\omega)`:
+The excitation's impulse response is the inverse Fourier transform, or inverse Laplace transform, of :math:`\chi (i\omega)`:
 
 .. math::
-	\chi_\delta (t) = \frac{1}{2\pi} \int_{-\infty}^\infty \chi (\omega) e^{i\omega t} \, d\omega
+	\chi_\delta (t) = \frac{1}{2\pi} \int_{-\infty}^\infty \chi (i \omega) e^{i\omega t} \, d\omega = \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi (s) e^{s t} ds
 	:label: ImpulseIFT
 
 The convolution :math:`\chi_\delta (t) \otimes h_0 (t)` is defined as:
@@ -64,7 +71,7 @@ The convolution :math:`\chi_\delta (t) \otimes h_0 (t)` is defined as:
 	\chi_\delta (t) \otimes h_0 (t) = \int_{-\infty}^\infty \chi_\delta (\tau) h_0 (t -\tau) d\tau = \int_{-\infty}^\infty \chi_\delta (t - \tau) h_0 (\tau) d\tau 
 	:label: ConvolutionDef
 
-Therefore, we can obtain the sphere's time-domain excitation two different ways: 1) obtain the sphere's frequency-domain magnetization and take the inverse Fourier transform, or 2) use the inverse Fourier transform to obtain the sphere's impulse response and convolve it with a time-dependent inducing field waveform.
+Therefore, we can obtain the sphere's time-domain excitation two different ways: 1) obtain the sphere's frequency-domain magnetization and take the inverse Fourier/Laplace transform, or 2) use the inverse Fourier/Laplace transform to obtain the sphere's impulse response and convolve it with a time-dependent inducing field waveform.
 
 The time-domain response of the sphere is causal, implying :math:`\chi_\delta (t<0)=0`.
 As a result, the convolution is frequently expressed as an integral from 0 to :math:`\infty`.
@@ -80,8 +87,8 @@ According to Newmann (et al., 1996), the time-dependent magnetization at :math:`
 
 .. math::
 	\begin{split}
-	m(t) &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Im [\chi(\omega)]}{\omega} \; cos(\omega t) \;d \omega \Bigg ] h_0 \\
-	     &= m(0) - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Re [\chi(\omega)]}{\omega} \; sin(\omega t) \; d \omega \Bigg ] h_0
+	m(t) &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Im [\chi(i\omega)]}{\omega} \; cos(\omega t) \;d \omega \Bigg ] h_0 \\
+	     &= m(0) - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Re [\chi(i\omega)]}{\omega} \; sin(\omega t) \; d \omega \Bigg ] h_0
 	\end{split}
 	:label: mSineCosine
 
@@ -89,8 +96,8 @@ where :math:`m(0)` represents some initial dipole moment at :math:`t=0`. For the
 
 .. math::
 	\begin{split}
-	\frac{d \, m(t)}{d t} &= \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Im [\chi (\omega)] \; sin(\omega t) \;d \omega \Bigg ] h_0\\
-					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Re [\chi(\omega)]\; cos(\omega t) \; d \omega \Bigg ] h_0 
+	\frac{d \, m(t)}{d t} &= \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Im [\chi (i\omega)] \; sin(\omega t) \;d \omega \Bigg ] h_0\\
+					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Re [\chi(i\omega)]\; cos(\omega t) \; d \omega \Bigg ] h_0 
 	\end{split}
 	:label: dmdtSineCosine
 
@@ -104,7 +111,7 @@ Here we consider the time-dependent magnetization of a purely conductive sphere 
 In this case, the frequency-dependent excitation of the sphere is defined by:
 
 .. math::
-	\chi (\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth} (\alpha)}{\alpha} \Bigg ]
+	\chi (i\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth} (\alpha)}{\alpha} \Bigg ]
 	:label: ChiConductive
 
 where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll \sigma`):
@@ -144,7 +151,7 @@ By substituting Eq. :eq:`ChiChangeVar` into Eq. :eq:`LaplaceIFT`, a conductive s
 where :math:`\delta(t)` is the Dirac delta function.
 We can see that Eq. :eq:`ImpulseConductive` is zero for :math:`t<0`, implying it is causal.
 It should be noted that our expression for :math:`\chi_\delta (t)` differs from the one in Wait and Spies by a factor of :math:`-3/2`.
-This is because of how we chose to define :math:`\chi (\omega)`.
+This is because of how we chose to define :math:`\chi (i\omega)`.
 Although the impulse response is written as an infinite series, exponential functions of the form :math:`e^{-an^2}` are negligible for sufficiently large :math:`n`.
 Thus, only a finite number of terms in the sum are required to approximate the sphere's impulse response to an acceptable accuracy.
 
@@ -215,7 +222,7 @@ Here we consider the time-dependent magnetization of a conductive and magnetical
 In this case, the frequency-dependent excitation of the sphere is defined by:
 
 .. math::
-	\chi (\omega) = \frac{3}{2} \Bigg [ \frac{2\mu (tanh \, \alpha - \alpha) + \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)}{\mu (tanh \, \alpha - \alpha) - \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)} \Bigg ]
+	\chi (i\omega) = \frac{3}{2} \Bigg [ \frac{2\mu (tanh \, \alpha - \alpha) + \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)}{\mu (tanh \, \alpha - \alpha) - \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)} \Bigg ]
 	:label: ChiPermeable
 
 where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll \sigma`):
@@ -224,11 +231,67 @@ where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll
 	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R
 	:label: alphaPermeable
 
+Wait and Spies (1969) derived step and impulse responses for the conductive and magnetically permeable sphere using the inverse Laplace transform.
+The inverse Laplace transform was solved using pole-residue theorem.
+As this derivation is somewhat more technical, only the final results are provided here.
+Useful approximations of the transient response, according to Torquil, Morisson and Becker, are then presented for a more practical understanding.
 
-
-General Form of Step Responses and the Impulse Response
+General Form of the Step and Impulse Response
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Here, we present general expressions for the step-on response, step-off response, rate of decay, and impulse response for a conductive and magnetically permeable sphere.
+According to Eqs. :eq:`DipoleMoment` and :eq:`mILT`, the time-dependent excitation of the sphere can be expressed as:
+
+.. math::
+	m(t) = \frac{4\pi}{3}R^3 \mathcal{L}^{-1} \big [ \chi(s) H_0 (s) \big ]
+	:label: mStepILTpermeable
+	
+where :math:`H_0 (s)` is the Laplace transform of :math:`h_0 (t)`.
+For a step-on excitation:
+
+.. math::
+	\mathcal{L}^{-1} \big [ \chi(s) H_0 (s) \big ] = \frac{h_0}{2\pi i} \int_{c-i\infty}^{c+i\infty} \frac{\chi (s)}{s} e^{st} ds
+	:label: mStepILTpermeable2
+
+where :math:`h_0` is the amplitude of the step waveform and :math:`H_0 (s) = h_0/s`.
+
+.. math::
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) \Bigg ] u(t)
+	:label: mStepOnPermeable
+
+where :math:`\xi_n` are defined by poles of the inverse Laplace transform, and obey the following expression:
+
+.. math::
+	\textrm{tan} \, \xi_n = \frac{(\mu - \mu_0) \xi_n}{\mu + \mu_0(\xi_n^2 - 1)}
+	:label: Coefficients
+
+According to Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
+
+.. math::
+	n\pi \leq \xi_n \leq (n+1/2)\pi
+	:label: CoeffIntervals
+
+The response described by Eq :eq:`mStepOnPermeable` contains two terms.
+The first term represents the sphere's magnetic response.
+This may be obtained by setting :math:`\omega \rightarrow 0` in Eq. :eq:`ChiPermeable`.
+The second term represents the sphere's inductive response.
+The inductive response a sum of modes which decrease in magnitude as :math:`n \rightarrow \infty`.
+Thus, only a finite portion of the sum is required to approximate the sphere's inductive response.
+
+For a step-off response, the field is magnetized at :math:`t<0`.
+Once the inducing field is removed, only the inductive response is non-zero.
+Using Eq. :eq:`mStepOnPermeable`, the step-off excitation is:
+
+.. math::
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} u(-t) + 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
+	:label: mStepOnPermeable
+
+
+The rate of decay at :math:`t>0` can be obtained by taking the time-derivative of Eq. :eq:`mStepOnPermeable`:
+
+.. math::
+	\frac{d \, m(t)}{dt} = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} u(-t) + 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
+	:label: dmdtStepOnPermeable
 
 
 
