@@ -3,18 +3,18 @@
 Wave Propagation in Free Space
 ==============================
 
-In this section, we look at getting the second-order differential equations from Maxwell's equations. We first do the analysis in time-domain and then use Fourier transforms to get the frequency-domain counterparts.
+In this section, we combine the first-order partial :ref:`differential equations <differential_equations_time>` into second-order equations for :math:`\mathbf{e}` or :math:`\mathbf{h}` and show how EM fields propagate in homogenous media. The plane wave solutions have propogation and attenuating components and the relative balance of these is determined by the complex wave number. When electrical conductivity :math:`\sigma` is zero, the electromagnetic waves propagate without attenuation. When :math:`\sigma` is large, as it is with most earth rocks, the EM waves are diffusive and attenuate rapidly within one or two wavelengths. In many problems, the wave propagation portion of the equation (or effectively, the displacement current), can be neglected and quasi-static Maxwell's equations can be solved. The following content parallels that offered in many EM resources :cite:`ward1988,griffiths1999,stratton1941`. We first generate the second-order differential equations in the time-domain and then use Fourier transforms to get the frequency-domain counterparts.
 
 Wave equations in time-domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations:
+We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations in the time-domain:
 
 .. include:: ../../../equation_bank/faraday_time.rst
 
 .. include:: ../../../equation_bank/ampere_maxwell_time.rst
 
-and the the three constitutive relations:
+and the three constitutive relations:
 
 .. include:: ../../../equation_bank/ohms_law_time.rst
 
@@ -24,76 +24,19 @@ and the the three constitutive relations:
 .. math:: \mathbf{b} = \mu \mathbf{h}
         :name: bmuh
 
-We first take the curl of Equations :eq:`faraday_time` and :eq:`ampere_maxwell_time`:
-
-.. math:: \boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{e}) = - \boldsymbol{\nabla} \times \frac{\partial \mathbf{b}}{\partial t}
-        :name: hme1
-
-.. math:: \boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{h}) = \boldsymbol{\nabla} \times \mathbf{j} + \boldsymbol{\nabla} \times \frac{\partial \mathbf{d}}{\partial t}
-        :name: hmh1
-
-The constitutive relations can be substituted into Equations :eq:`hme1` and :eq:`hmh1` to get the following expressions in terms of only :math:`\mathbf{e}` and :math:`\mathbf{h}`:
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \boldsymbol{\nabla} \times \left (  \frac{\partial}{\partial t} (\mu \mathbf{h}) \right )
-        :name: hme2
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \boldsymbol{\nabla} \times (\sigma \mathbf{e}) + \boldsymbol{\nabla} \times \left (  \frac{\partial}{\partial t} (\epsilon \mathbf{e}) \right )
-        :name: hmh2
-
-Because we assume a homogenous space, the physical properties :math:`\mu`, :math:`\epsilon`, and :math:`\sigma` can be moved out front of the derivative terms, simplifying the above expressions.
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \boldsymbol{\nabla} \times \frac{\partial \mathbf{h}}{\partial t}
-        :name: hme3
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \sigma \boldsymbol{\nabla} \times \mathbf{e} + \epsilon \boldsymbol{\nabla} \times \frac{\partial \mathbf{e}}{\partial t}
-        :name: hmh3
-
-If we further assume that we can take the first and second derivatives of :math:`\mathbf{e}` and :math:`\mathbf{h}`, we can either take the spatial derivatives first or the time derivatives. Equations :eq:`hmh2` and :eq:`hmh3` can then also be written as:
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \boldsymbol{\nabla} \times \mathbf{h} \right )
-        :name: hme4
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \sigma \boldsymbol{\nabla} \times \mathbf{e} + \epsilon \frac{\partial}{\partial t} \left ( \boldsymbol{\nabla} \times \mathbf{e} \right )
-        :name: hmh4
-
-These expressions are now in terms of :math:`\boldsymbol{\nabla} \times \mathbf{e}` and :math:`\boldsymbol{\nabla} \times \mathbf{h}`. Thus, we can use Equations :eq:`faraday_time` and :eq:`ampere_maxwell_time` to generate two equations with either only :math:`\mathbf{e}` or :math:`\mathbf{h}`. We first start with Equation :eq:`hme4`, substitute in Equation :eq:`ampere_maxwell_time`, and simplify using the constitutive relations:
-
-.. math::  \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} \right )
-
-.. math::  \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \sigma \mathbf{e} + \frac{\partial (\epsilon \mathbf{e})}{\partial t} \right )
-
-.. math::  \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}
-        :name: hme5
-
-Additionally, we can simplify the first term of this expression by using the vector identity :math:`\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{x} = \boldsymbol{\nabla} \boldsymbol{\nabla} \cdot \mathbf{x} - \boldsymbol{\nabla}^2 \mathbf{x}`. Recalling that :math:`\boldsymbol{\nabla} \cdot \mathbf{e}` and :math:`\boldsymbol{\nabla} \cdot \mathbf{h}` are zero in a homogenous space, the vector identity simply becomes :math:`\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{x} = - \boldsymbol{\nabla}^2 \mathbf{x}`. If we now substitute that into :eq:`hme5`, we get the following equation:
-
-.. math::  \boldsymbol{\nabla}^2 \mathbf{e}  - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} = 0
-        :name: hme6
-
-This is the wave equation for the electric field in the time-domain. The same approach can be done for the magnetic field, starting with Equation :eq:`hmh4`:
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \frac{\partial \mathbf{b}}{\partial t} - \epsilon \frac{\partial}{\partial t} \left (\frac{\partial \mathbf{b}}{\partial t} \right )
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \frac{\partial (\mu \mathbf{h}) }{\partial t} - \epsilon \frac{\partial}{\partial t} \left (\frac{\partial (\mu \mathbf{h})}{\partial t} \right )
-
-.. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2}
-
-.. math:: - \boldsymbol{\nabla}^2 \mathbf{h} = - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2}
-
-.. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2} - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} = 0
-        :name: hmh6
-
-Equation :eq:`hmh6` is then the wave equation for the magnetic field in the time-domain.
-
-We now have two wave equations or second-order differential equations; one for the electric field and one for the magnetic field, summarized in Equations :eq:`hme7` and :eq:`hmh7`.
+The goal is to combine these equations to obtain a single equation that involves :math:`\mathbf{e}` or :math:`\mathbf{h}`. For instance, to develop an equation for :math:`\mathbf{e}`, we take the curl of :eq:`faraday_time` and then substitute in Equations :eq:`ohms_law_time` and :eq:`depse`. Because all of the physical properties are assumed to be constant in space and time, they are not affected by curl operators or time derivatives. Thus the equation for :math:`\mathbf{e}` becomes Equation :eq:`hme7`. 
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}  = 0
         :name: hme7
 
+A similar procedure can be used to obtain an equation that involves only :math:`\mathbf{e}`, starting from Equation :eq:`ampere_maxwell_time` and using Equation :eq:`bmuh`:
+
 .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
         :name: hmh7
 
-Immediately apparent is that the two equations are very similar. Replace :math:`\mathbf{e}` with :math:`\mathbf{h}` in one wave equation and you get the other wave equation. The first temr is the Laplacian, the second term involves a first derivative, and the third term has a second-order time-dependence. If :math:`\sigma` is zero, the second term vanishes and the equations become a pure wave equation. Alternatively, if the third term were zero, the equations reduce to the heat equation and the field is diffusive. This becomes clearer when the equations are transformed to the frequency-domain.
+Check out :ref:`this page <wave_propagation_in_free_space_details>` for the detailed derivation of Equations :eq:`hme7` and :eq:`hmh7`.
+
+The equations for :math:`\mathbf{e}` and :math:`\mathbf{h}` are identical in form. The first term is the Laplacian, the second term involves a first derivative in time, and the third term has a second order time derivative. This is the general form taken by a propagating and attenuating wave. If :math:`\sigma` = 0, the second term vanishes and the equations become a pure wave equation so that the energy propagates without loss. Alternatively, if the third term were zero, the equations reduce to the heat equation and the field is diffusive. This becomes clearer when the equations are transformed to the frequency-domain.
 
 Wave equations in frequency-domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,21 +48,27 @@ To get the frequency-domain wave equations, we use the Fourier transform using a
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{H}  = 0
         :name: hmh8
 
-Wave number
-^^^^^^^^^^^
-
-Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simple form:
+Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simpler form:
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{E} - k^2 \mathbf{E}  = 0
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} - k^2 \mathbf{H}  = 0
 
-where :math:`k` is the wave number and :math:`k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega`. In electromagnetic methods, we usually deal with relatively low frequencies, :math:`f \lt 10^5` Hz. Recall that the dielectric permittivity of free space is :math:`8.85 \times 10^{-12}` F/m. To see which part of :math:`k^2` carries more weight for electromagnetic methods, we examine the following:
+where :math:`k` is the wave number defined by
 
-.. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma} \approx \frac{(6.28)(8.85 \times 10^{-12})(10^5)}{\sigma} = \frac{5 \times 10^{-6}}{\sigma}
+.. math:: k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega. 
+        :name: ksquared
+
+The behaviour of electromagnetic waves is governed by the relative values of the two terms that make up :math:`k^2`. If :math:`\sigma` = 0, the electromagnetic energy propagates as unattenuating waves in the medium. If the imaginary term dominates, then the waves diffuse as they propagate. The behaviour thus depends upon the ratio:
+
+.. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma}
         :name: kcomp
 
-This shows that even for the largest expected frequencies, the first part of :math:`k^2` will be substantially smaller for realistic earth conductivities. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
+In many of the problems in geophysics, we deal with relatively low frequencies, :math:`f \lt 10^5` Hz. If the electric permittivity is that of free space, :math:`\epsilon = 8.85 \times 10^{-12}` F/m, and even if the electrical conductivity is small (:math:`10^{-4}` S/m), then this ratio becomes
+
+.. math:: \frac{\mu \epsilon \omega^2}{\mu \sigma \omega} \approx \frac{(6.28)(8.85 \times 10^{-12})(10^{5})}{10^{-4}} = 0.06
+
+This shows that even for quite high frequencies, the first part of :math:`k^2` will be substantially smaller for realistic earth conductivities. Thus, :math:`\mu \epsilon \omega^2 \lt\lt \mu \sigma \omega`. This means that displacement currents can be neglected and the wave equations can be simplified:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} - i \mu \sigma \omega \mathbf{E}  = 0
         :name: hme9
