@@ -26,18 +26,17 @@ Obtaining the Time-Domain Response of a Conducting and Permeable Sphere
         :name: GeometrySphere
 
 
-Consider a conductive and permeable sphere in a resistive media.
-The geometry of this cases is illustrated in Figure (reference).
-This sphere is excited by a time-dependent field :math:`h_0(t)`.
-In the frequency domain, the magnetic dipole moment :math:`\vec m(i \omega)` induced by the primary field was given by:
+Consider a conductive and permeable sphere in a resistive media (Figure reference).
+Under the influence of an applied magnetic field, the sphere will exhibit an electromagnetic response.
+This response may be represented by an induced magnetic dipole moment.
+In the frequency domain, the magnetic dipole moment :math:`\vec m(i \omega)` induced by the primary field is given by:
 
 .. math::
 	\vec m (i \omega) = \frac{4\pi}{3}R^3 \chi (i \omega) \vec H_0 (i \omega) 
 	:label: DipoleMoment
 
-where :math:`R` was the radius of the sphere, :math:`\chi (i \omega)` was an excitation factor, and :math:`H_0 (i \omega)` was a harmonic inducing field.
-Recall that our sphere is isotropic.
-As a result, all excitation is parallel to the inducing field.
+where :math:`R` is the radius of the sphere, :math:`\chi (i \omega)` is an excitation factor, and :math:`H_0 (i \omega)` is a harmonic inducing field.
+It should be noted that because of our problem geometry, all excitation is parallel to the inducing field.
 
 To obtain the time-dependent magnetic dipole moment of the sphere, defined by :math:`m(t)`, we can apply an inverse Fourier transform to Eq. :eq:`DipoleMoment`:
 
@@ -45,7 +44,7 @@ To obtain the time-dependent magnetic dipole moment of the sphere, defined by :m
 	m(t) = \frac{1}{2\pi} \int_{-\infty}^\infty m(i \omega) e^{i\omega t} \, d\omega = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi} \int_{-\infty}^\infty \chi(i \omega) H_0 (i\omega) e^{i\omega t} \, d\omega \Bigg ]
 	:label: mIFT
 
-More generally, by letting :math:`s = i\omega`, :math:`m(t)` can be obtained via the inverse Laplace transform:
+By letting :math:`s = i\omega`, :math:`m(t)` can also be obtained via the following inverse Laplace transform (Wait, 1951; Wait and Spies, 1969):
 
 .. math::
 	m(t) = \frac{1}{2\pi i} \int_{c-\infty}^{c+\infty} m(s) e^{s t} \, ds = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi(s) H_0 (s) e^{s t} \, ds \Bigg ] = \mathcal{L}^{-1} \big [m(s) \big ]
@@ -59,7 +58,7 @@ The inverse Fourier transform of the product of two frequency-dependent function
 	:label: mConvolutionDef
 	
 where :math:`\chi_\delta (t)` is defined as the excitation's impulse response, and :math:`h_0 (t)` is the time-dependent inducing field.
-The excitation's impulse response is the inverse Fourier transform, or inverse Laplace transform, of :math:`\chi (i\omega)`:
+The excitation's impulse response is the inverse Fourier transform of :math:`\chi (i\omega)`, or inverse Laplace transform, of :math:`\chi (s)`:
 
 .. math::
 	\chi_\delta (t) = \frac{1}{2\pi} \int_{-\infty}^\infty \chi (i \omega) e^{i\omega t} \, d\omega = \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi (s) e^{s t} ds
@@ -215,8 +214,8 @@ The rate of decay for the step-off response is obtained by taking the derivative
 Therefore, the rate of decay may be obtained directly if the excitation's impulse response is known.
 
 
-Step-Off Response from a Conducting and Magnetically Permeable Sphere in a Resistive Medium
-===========================================================================================
+Response from a Conductive and Magnetically Permeable Sphere in a Resistive Medium
+==================================================================================
 
 Here we consider the time-dependent magnetization of a conductive and magnetically permeable sphere within a resistive medium (:math:`\sigma_b \ll \sigma`).
 In this case, the frequency-dependent excitation of the sphere is defined by:
@@ -232,9 +231,9 @@ where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll
 	:label: alphaPermeable
 
 Wait and Spies (1969) derived step and impulse responses for the conductive and magnetically permeable sphere using the inverse Laplace transform.
-The inverse Laplace transform was solved using pole-residue theorem.
+Inverse Laplace transforms were solved using the pole-residue theorem.
 As this derivation is somewhat more technical, only the final results are provided here.
-Useful approximations of the transient response, according to Torquil, Morisson and Becker, are then presented for a more practical understanding.
+For a more practical understanding, approximations of the transient response will be presented according to Torquil, Morisson and Becker.
 
 General Form of the Step and Impulse Response
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -254,18 +253,20 @@ For a step-on excitation:
 	:label: mStepILTpermeable2
 
 where :math:`h_0` is the amplitude of the step waveform and :math:`H_0 (s) = h_0/s`.
+By solving the inverse Laplace transform, the time-dependent response to step excitation is given by:
 
 .. math::
-	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) \Bigg ] u(t)
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) \Bigg ] u(t)
 	:label: mStepOnPermeable
 
-where :math:`\xi_n` are defined by poles of the inverse Laplace transform, and obey the following expression:
+where :math:`\xi_n` are defined by poles of the inverse Laplace transform.
+These poles behave according to the following expression:
 
 .. math::
 	\textrm{tan} \, \xi_n = \frac{(\mu - \mu_0) \xi_n}{\mu + \mu_0(\xi_n^2 - 1)}
 	:label: Coefficients
 
-According to Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
+From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
 
 .. math::
 	n\pi \leq \xi_n \leq (n+1/2)\pi
@@ -275,7 +276,7 @@ The response described by Eq :eq:`mStepOnPermeable` contains two terms.
 The first term represents the sphere's magnetic response.
 This may be obtained by setting :math:`\omega \rightarrow 0` in Eq. :eq:`ChiPermeable`.
 The second term represents the sphere's inductive response.
-The inductive response a sum of modes which decrease in magnitude as :math:`n \rightarrow \infty`.
+The inductive response is a sum of modes which decrease in magnitude as :math:`n \rightarrow \infty`.
 Thus, only a finite portion of the sum is required to approximate the sphere's inductive response.
 
 For a step-off response, the field is magnetized at :math:`t<0`.
@@ -283,17 +284,51 @@ Once the inducing field is removed, only the inductive response is non-zero.
 Using Eq. :eq:`mStepOnPermeable`, the step-off excitation is:
 
 .. math::
-	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} u(-t) + 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
-	:label: mStepOnPermeable
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} \big [ 1 - u(t) \big ] + \frac{6\mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
+	:label: mStepOffPermeable
 
 
-The rate of decay at :math:`t>0` can be obtained by taking the time-derivative of Eq. :eq:`mStepOnPermeable`:
+The rate of decay at time :math:`t>0` can be obtained by taking the time-derivative of Eq. :eq:`mStepOffPermeable`:
 
 .. math::
-	\frac{d \, m(t)}{dt} = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} u(-t) + 6 \sum_{n=1}^\infty \frac{ e^{\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
-	:label: dmdtStepOnPermeable
+	\frac{d \, m(t)}{dt} = - \, \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{9\mu}{\mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2 \big ]} \Bigg ] u(t)
+	:label: dmdtStepOffPermeable
 
 
+The impulse response can be obtained by the following properties of the convolution:
+
+.. math::
+	\chi_\delta (t) = \frac{d}{dt} \Big [ \chi_\delta (t) \otimes u(t) \Big ] = \frac{d}{dt} \mathcal{L}^{-1} \Bigg [ \frac{\chi(s)}{s} \Bigg ]
+	:label: ImpulsePermeable3
+
+The above inverse Laplace transform was solved to obtain the step-on response in Eq :eq:`mStepOnPermeable`, thus:
+
+.. math::
+	\begin{align}
+	\chi_\delta (t) &= \frac{d}{dt} \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t) \Bigg ]\\
+			&= Q \, \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu}{\beta^2 \mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t) \Bigg ]
+	\end{align}
+	:label: ImpulsePermeableInital
+
+where
+
+.. math::
+	Q = \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ 1 }{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg )
+	:label: Qdef
+
+:math:`Q` happens to be the convolution of :math:`\chi_\delta (t)` and :math:`u(t)`, evalutated at :math:`t=0`.
+This can be checked using Eq. :eq:`mStepOnPermeable`.
+By the initial value theorem of the Laplace transform:
+
+.. math::
+	Q = \big [\chi_\delta (t) \otimes u(t) \big ] \Big |_{t=0} = \lim_{s \rightarrow \infty} \chi(s) = - \, \frac{3}{2}
+	:label: Qsolve
+
+Therefore, the impulse response for a conductive and permeable sphere is:
+
+.. math::
+	\chi_\delta (t) = - \, \frac{3}{2} \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu}{\beta^2 \mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t)
+	:label: ImpulsePermeableFinal
 
 
 
@@ -301,7 +336,8 @@ The rate of decay at :math:`t>0` can be obtained by taking the time-derivative o
 Approximations of the Time-Dependent Response
 +++++++++++++++++++++++++++++++++++++++++++++
 
-
+Expressions derived in the previous section are very complicated.
+However, the response at e
 
 
 
