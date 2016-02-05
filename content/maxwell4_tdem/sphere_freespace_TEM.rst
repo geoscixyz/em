@@ -256,14 +256,14 @@ where :math:`h_0` is the amplitude of the step waveform and :math:`H_0 (s) = h_0
 By solving the inverse Laplace transform, the time-dependent response to step excitation is given by:
 
 .. math::
-	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) \Bigg ] u(t)
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu+r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) \Bigg ] u(t)
 	:label: mStepOnPermeable
 
-where :math:`\xi_n` are defined by poles of the inverse Laplace transform.
+where :math:`\mu_r = \mu/\mu_0` is the relative permeability, and :math:`\xi_n` are defined by poles of the inverse Laplace transform.
 These poles behave according to the following expression:
 
 .. math::
-	\textrm{tan} \, \xi_n = \frac{(\mu - \mu_0) \xi_n}{\mu + \mu_0(\xi_n^2 - 1)}
+	\textrm{tan} \, \xi_n = \frac{(\mu_r - 1) \xi_n}{\mu_r - 1 + \xi_n^2}
 	:label: Coefficients
 
 From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
@@ -271,6 +271,14 @@ From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:
 .. math::
 	n\pi \leq \xi_n \leq (n+1/2)\pi
 	:label: CoeffIntervals
+
+The value of each coefficient may be found iteratively using very few iterations according to:
+
+.. math::
+	\xi_n^{(k+1)} = n\pi + \mathrm{tan}^{-1} \Bigg ( \frac{(\mu_r - 1)\xi_n^{(k)}}{\mu_r - 1 + \big ( \xi_n^{(k)} \big )^2}  \Bigg )
+	:label: CoeffIteration
+
+
 
 The response described by Eq :eq:`mStepOnPermeable` contains two terms.
 The first term represents the sphere's magnetic response.
@@ -284,14 +292,14 @@ Once the inducing field is removed, only the inductive response is non-zero.
 Using Eq. :eq:`mStepOnPermeable`, the step-off excitation is:
 
 .. math::
-	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} \big [ 1 - u(t) \big ] + \frac{6\mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} u(t) \Bigg ) \Bigg ]
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} \big [ 1 - u(t) \big ] + 6 \mu_r \, \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} u(t) \Bigg ) \Bigg ]
 	:label: mStepOffPermeable
 
 
 The rate of decay at time :math:`t>0` can be obtained by taking the time-derivative of Eq. :eq:`mStepOffPermeable`:
 
 .. math::
-	\frac{d \, m(t)}{dt} = - \, \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{9\mu}{\mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2 \big ]} \Bigg ] u(t)
+	\frac{d \, m(t)}{dt} = - \, \frac{4\pi}{3}R^3 \, h_0 \Bigg [ 9\mu_r \, \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu_r + 2)(\mu_r - 1)+\xi_n^2 \big ]} \Bigg ] u(t)
 	:label: dmdtStepOffPermeable
 
 
@@ -305,15 +313,15 @@ The above inverse Laplace transform was solved to obtain the step-on response in
 
 .. math::
 	\begin{align}
-	\chi_\delta (t) &= \frac{d}{dt} \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t) \Bigg ]\\
-			&= Q \, \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu}{\beta^2 \mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t) \Bigg ]
+	\chi_\delta (t) &= \frac{d}{dt} \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) u(t) \Bigg ]\\
+			&= Q \, \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu_r}{\beta^2} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) u(t)
 	\end{align}
 	:label: ImpulsePermeableInital
 
 where
 
 .. math::
-	Q = \frac{3}{2} \Bigg ( \frac{2 (\mu - \mu_0)}{\mu + 2\mu_0} - \frac{6 \mu}{\mu_0} \sum_{n=1}^\infty \frac{ 1 }{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg )
+	Q = \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ 1 }{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg )
 	:label: Qdef
 
 :math:`Q` happens to be the convolution of :math:`\chi_\delta (t)` and :math:`u(t)`, evalutated at :math:`t=0`.
@@ -327,20 +335,11 @@ By the initial value theorem of the Laplace transform:
 Therefore, the impulse response for a conductive and permeable sphere is:
 
 .. math::
-	\chi_\delta (t) = - \, \frac{3}{2} \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu}{\beta^2 \mu_0} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu + 2\mu_0)(\mu - \mu_0)+\xi_n^2} \Bigg ) u(t)
+	\chi_\delta (t) = - \, \frac{3}{2} \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu_r}{\beta^2} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) u(t)
 	:label: ImpulsePermeableFinal
 
 
-
-
-Approximations of the Time-Dependent Response
-+++++++++++++++++++++++++++++++++++++++++++++
-
-Expressions derived in the previous section are very complicated.
-However, the response at e
-
-
-
+The time-dependent decay for several conductive and magnetically permeable spheres are shown in Figure ??.
 
 
 Dipole Response in Free-Space
