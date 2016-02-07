@@ -3,15 +3,14 @@
 Some mathematical relationships
 ===============================
 
-.. (big topic but low priority. A placeholder will do. )
-
 .. todo:: Citations
 
+.. _ionic_conductivity: 
 
 Ionic conductivity
 ------------------
 
-Conduction in surface rocks is mostly electrolytic, taking place in the connected pore spaces, along grain boundaries and in fractures, but negligibly through the mineral grains or silicate framework (CITES). For this case, the charge carrier is mostly ions dissolved in an electrolyte, so we often call this as ‘ionic conductivity’. Ionic conductivity of a rock is ranging from :math:`10^{3}`-:math:`10^{-5}` S/m. Porous media such as rocks at the earth’s surface that we are usually dealing with can be considered to solid semi-conductor. 
+Conduction in surface rocks is mostly electrolytic, taking place in the connected pore spaces, along grain boundaries and in fractures, but negligibly through the mineral grains or silicate framework (CITES). For this case, the charge carrier is mostly ions dissolved in an electrolyte, so we often call this as ionic conductivity. Ionic conductivity of a rock is ranging from :math:`10^{3}`-:math:`10^{-5}` S/m. Porous media such as rocks at the earth’s surface that we are usually dealing with can be considered to solid semi-conductor. 
 
 Ionic conductivity is resulting from the ordered movement of ions in an electrolyte under the application of an external electric field. Without an external electric field, the ions move randomly as a result of thermal agitation and collisions with other ions and atoms. Because both cations (+) and anions (-) are present in an electrolyte, the conductivity can be expressed as 
 
@@ -53,8 +52,11 @@ The resistivity index can be written as
 
 		RI = \frac{\rho}{\rho_w} = S_w^{-n}, 
 
-Note that Archie’s law is purely empirical law intending to describe ion flow in clean and consolidated sands. Electrical conduction is assumed not to be present within the rock grains. Hence it may not work for a rock includes considerable amount of clay minerals because a clay or shale particle acts as a separate conducting path. 
+.. note::
+	Archie’s law is purely empirical law intending to describe ion flow in clean and consolidated sands. Electrical conduction is assumed not to be present within the rock grains. Hence it may not work for a rock includes considerable amount of clay minerals because a clay or shale particle acts as a separate conducting path. 
 
+
+.. _effects_of_clays: 
 
 Effects of clay minerals
 ------------------------
@@ -82,7 +84,7 @@ where :math:`\sigma_n` is the normal rock conductivity and :math:`\sigma_s` is t
 
 This clearly shows that as the concentration of the electrolyte increases the relative contribution of the electrolyte conduction path (:math:`\sigma_n`) to the clay conduction path (:math:`\sigma_s`) increases. 
 
-Waxman and Smits (1968) give the expression for the resistivity of a clay-bearing rock
+Waxman and Smits (1968) (CITE) give the expression for the resistivity of a clay-bearing rock
 
 	.. math::
 		\rho = \frac{\rho_w F_t}{1+ \rho_w BQ}, 

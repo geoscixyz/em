@@ -15,7 +15,7 @@ Electrical resistivity is the reciprocal of electrical conductivity, and materia
 
    Flow of charges under an applied electric field.
 
-The electrical charge is mostly carried by ions and electrons (charge carriers). Mobilities of the charge carriers vary dynamically resulting in diverse range for the conductivity a material from highly conducting metals to nearly perfect insulators as shown in :numref:`LogCond`. 
+The electrical charge is mostly carried by ions and electrons (charge carriers). Mobilities of the charge carriers vary dynamically resulting in diverse range for the conductivity of a material from highly conducting metals to nearly perfect insulators as shown in :numref:`LogCond`. 
 
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/LogCond.png
    :align: center
@@ -45,7 +45,6 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
     order to provide a complete description of electrical conductivity.
 
 
-
 **Contents**
 
  .. toctree::
@@ -55,8 +54,6 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
     electrical_conductivity_units_values    
     electrical_conductivity_factors
     electrical_conductivity_mathematical_relationships
-
-.. todo:: References
 
     .. References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
 
