@@ -47,7 +47,7 @@ To obtain the time-dependent magnetic dipole moment of the sphere, defined by :m
 By letting :math:`s = i\omega`, :math:`m(t)` can also be obtained via the following inverse Laplace transform (Wait, 1951; Wait and Spies, 1969):
 
 .. math::
-	m(t) = \frac{1}{2\pi i} \int_{c-\infty}^{c+\infty} m(s) e^{s t} \, ds = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi(s) H_0 (s) e^{s t} \, ds \Bigg ] = \mathcal{L}^{-1} \big [m(s) \big ]
+	m(t) = \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} m(s) e^{s t} \, ds = \frac{4 \pi}{3} R^3 \Bigg [ \frac{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} \chi(s) H_0 (s) e^{s t} \, ds \Bigg ] = \mathcal{L}^{-1} \big [m(s) \big ]
 	:label: mILT
 
 where :math:`c` is some positive constant.
@@ -86,8 +86,8 @@ According to Newmann (et al., 1996), the time-dependent magnetization at :math:`
 
 .. math::
 	\begin{split}
-	m(t) &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Im [\chi(i\omega)]}{\omega} \; cos(\omega t) \;d \omega \Bigg ] h_0 \\
-	     &= m(0) - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{Re [\chi(i\omega)]}{\omega} \; sin(\omega t) \; d \omega \Bigg ] h_0
+	m(t) &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{\mathrm{Im} [\chi(i\omega)]}{\omega} \; \mathrm{cos}(\omega t) \;d \omega \Bigg ] h_0 \\
+	     &= m(0) - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \frac{\mathrm{Re} [\chi(i\omega)]}{\omega} \; \mathrm{sin}(\omega t) \; d \omega \Bigg ] h_0
 	\end{split}
 	:label: mSineCosine
 
@@ -95,8 +95,8 @@ where :math:`m(0)` represents some initial dipole moment at :math:`t=0`. For the
 
 .. math::
 	\begin{split}
-	\frac{d \, m(t)}{d t} &= \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Im [\chi (i\omega)] \; sin(\omega t) \;d \omega \Bigg ] h_0\\
-					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty Re [\chi(i\omega)]\; cos(\omega t) \; d \omega \Bigg ] h_0 
+	\frac{d \, m(t)}{d t} &= \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \mathrm{Im} [\chi (i\omega)] \; \mathrm{sin}(\omega t) \;d \omega \Bigg ] h_0\\
+					    &= - \frac{4\pi}{3}R^3 \Bigg [ \frac{2}{\pi} \int_0^\infty \mathrm{Re} [\chi(i\omega)]\; \mathrm{cos}(\omega t) \; d \omega \Bigg ] h_0 
 	\end{split}
 	:label: dmdtSineCosine
 
@@ -119,6 +119,7 @@ where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll
 	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R
 	:label: alpha
 
+From Eq. :eq:`alpha`, we can see that the sphere's excitation factor is dependent on the product of :math:`\sqrt{\sigma}R`.
 
 Impulse Response
 ++++++++++++++++
@@ -172,7 +173,7 @@ Using Eqs. :eq:`ConvolutionDef`, :eq:`ImpulseConductive` and :eq:`StepOn` to sol
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi_\delta (\tau) h_0 u(t-\tau) d\tau \Bigg ] = \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi_\delta (\tau) d\tau \Bigg ] h_0
 	:label: ConvolutionStep
 
-The convolution is in Eq. :eq:`ConvolutionStep` only requires integration from 0 to :math:`t`.
+The convolution in Eq. :eq:`ConvolutionStep` only requires integration of the impulse response from 0 to :math:`t`.
 By substituting Eq. :eq:`ChiConductive` into Eq :eq:`ConvolutionStep`, we can obtain the final expression presented in Wait and Spies (1969):
 
 .. math::
@@ -193,35 +194,42 @@ Thus:
 	:label: IntImpulseLimit
 	
 This is expected given that inductive responses decay to zero after sufficient time.
-The response to step-off excitation may be obtained by implementing the appropriate waveform into Eq. :eq:`ConvolutionStep`.
+The response to step-off excitation may be obtained by replacing the waveform in Eq. :eq:`ConvolutionStep` with Eq. :eq:`StepOff`.
 This results in the following expression:
 
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi_\delta (\tau) h_0 \big [ 1 - u(t-\tau) \big ] d\tau \Bigg ] = - \; \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi_\delta (\tau) d\tau \Bigg ] h_0
 	:label: ConvolutionStepOff
 	
-Therefore, the response to step-on and step-off excitation behave identically and have opposing sign.
+Comparing Eqs. :eq:`ConvolutionStep` and :eq:`ConvolutionStepOff`, the response to step-on and step-off excitation behave identically and have opposing sign.
 The rate of decay for the step-off response is obtained by taking the derivative of Eq. :eq:`ConvolutionStepOff` with respect to :math:`t`:
 
 .. math::
 	\begin{align}
 	\frac{d \, m(t)}{dt} &= \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi_\delta (\tau) \frac{d \, h_0 (t-\tau)}{dt} d\tau \Bigg ] \\
-			     &= \frac{4\pi}{3}R^3 \Bigg [ - \; \int_{-\infty}^{\infty} \chi_\delta (\tau) \delta (t-\tau) d\tau \Bigg ] h_0 \\
+			     &= \frac{4\pi}{3}R^3 \Bigg [ - \; \int_{-\infty}^{\infty} \chi_\delta (\tau) \, h_0 \, \delta (t-\tau) d\tau \Bigg ] \\
 			     &= - \; \frac{4\pi}{3}R^3 \, \chi_\delta (t) \, h_0
 	\end{align}
 	:label: dmdtStepOff
 
 Therefore, the rate of decay may be obtained directly if the excitation's impulse response is known.
+The unit step-off response for a sphere of radius :math:`R` = 10 m, for several conductivities, is shown in Figure ??.
+
+.. figure:: ./images/mtConductive.png
+        :width: 50%     
+.. figure:: ./images/dmdtConductive.png
+        :width: 50%
 
 
 Response from a Conductive and Magnetically Permeable Sphere in a Resistive Medium
 ==================================================================================
 
 Here we consider the time-dependent magnetization of a conductive and magnetically permeable sphere within a resistive medium (:math:`\sigma_b \ll \sigma`).
+Expressions for the step-on response, step-off response, rate of decay, and impulse response are presented.
 In this case, the frequency-dependent excitation of the sphere is defined by:
 
 .. math::
-	\chi (i\omega) = \frac{3}{2} \Bigg [ \frac{2\mu (tanh \, \alpha - \alpha) + \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)}{\mu (tanh \, \alpha - \alpha) - \mu_0 (\alpha^2 \, tanh \, \alpha - \alpha + tanh \, \alpha)} \Bigg ]
+	\chi (i\omega) = \frac{3}{2} \Bigg [ \frac{2\mu (\mathrm{tanh} \, \alpha - \alpha) + \mu_0 (\alpha^2 \, \mathrm{tanh} \, \alpha - \alpha + \mathrm{tanh} \, \alpha)}{\mu (\mathrm{tanh} \, \alpha - \alpha) - \mu_0 (\alpha^2 \, \mathrm{tanh} \, \alpha - \alpha + \mathrm{tanh} \, \alpha)} \Bigg ]
 	:label: ChiPermeable
 
 where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll \sigma`):
@@ -230,15 +238,14 @@ where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll
 	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R
 	:label: alphaPermeable
 
-Wait and Spies (1969) derived step and impulse responses for the conductive and magnetically permeable sphere using the inverse Laplace transform.
-Inverse Laplace transforms were solved using the pole-residue theorem.
-As this derivation is somewhat more technical, only the final results are provided here.
-For a more practical understanding, approximations of the transient response will be presented according to Torquil, Morisson and Becker.
+Once again, step and impulse responses for the conductive and magnetically permeable sphere can be derived using the inverse Laplace transform (Wait and Spies, 1969).
+The inverse Laplace transforms can be solved using the pole-residue theorem.
+As this derivation is somewhat more technical, only the final results from Wait and Spies are provided here.
 
-General Form of the Step and Impulse Response
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Step Response
++++++++++++++
 
-Here, we present general expressions for the step-on response, step-off response, rate of decay, and impulse response for a conductive and magnetically permeable sphere.
+In this case, it is easier to begin by presented expressions for the step response.
 According to Eqs. :eq:`DipoleMoment` and :eq:`mILT`, the time-dependent excitation of the sphere can be expressed as:
 
 .. math::
@@ -253,10 +260,10 @@ For a step-on excitation:
 	:label: mStepILTpermeable2
 
 where :math:`h_0` is the amplitude of the step waveform and :math:`H_0 (s) = h_0/s`.
-By solving the inverse Laplace transform, the time-dependent response to step excitation is given by:
+By solving the inverse Laplace transform, the time-dependent response to step excitation is given by (Wait and Spies, 1969):
 
 .. math::
-	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu+r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) \Bigg ] u(t)
+	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) \Bigg ] u(t)
 	:label: mStepOnPermeable
 
 where :math:`\mu_r = \mu/\mu_0` is the relative permeability, and :math:`\xi_n` are defined by poles of the inverse Laplace transform.
@@ -301,7 +308,16 @@ The rate of decay at time :math:`t>0` can be obtained by taking the time-derivat
 .. math::
 	\frac{d \, m(t)}{dt} = - \, \frac{4\pi}{3}R^3 \, h_0 \Bigg [ 9\mu_r \, \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu_r + 2)(\mu_r - 1)+\xi_n^2 \big ]} \Bigg ] u(t)
 	:label: dmdtStepOffPermeable
+	
+The unit step-off response for a sphere of radius :math:`R` = 10 m and conductivity :math:`\sigma` = 10 S/m, for several relative permeabilities, is shown in Figure ??.
 
+.. figure:: ./images/mtPermeable.png
+        :width: 50%     
+.. figure:: ./images/dmdtPermeable.png
+        :width: 50%
+
+Impulse Response
+++++++++++++++++
 
 The impulse response can be obtained by the following properties of the convolution:
 
@@ -339,7 +355,7 @@ Therefore, the impulse response for a conductive and permeable sphere is:
 	:label: ImpulsePermeableFinal
 
 
-The time-dependent decay for several conductive and magnetically permeable spheres are shown in Figure ??.
+
 
 
 Dipole Response in Free-Space
