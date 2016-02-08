@@ -13,7 +13,7 @@ To measure the resistance of a rock specimen (:numref:`cube`), which has a certa
 
 :numref:`DCcircuit` shows as a schematic diagram for a mearsurement system for the resistance of a rock. Since we know, the intensity of an input DC current and measured voltage, then by using Ohm's law (:math:`V=IR`) we can obtain the resistance of a rock (:math:`R=V/I`).
 
-.. figure:: ../../../examples/physical_properties/electrical_conductivity/DCcircuit.png
+.. figure:: ./figures/DCcircuit.png
    :align: center
    :name: DCcircuit
 
