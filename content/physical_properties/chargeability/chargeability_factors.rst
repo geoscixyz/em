@@ -132,6 +132,3 @@ Summary of what affects the chargeability of material
 	  size as much as material type. Therefore, discrimination of mineral type
 	  on the basis of chargeability alone is not recommended.
 
-.. todo:: 
-    Factors that affect chargeabilty (microscopic phenomenon (images from GPG); conceptual models metallic and membrane polarization illustrating charge accumulation)
-
