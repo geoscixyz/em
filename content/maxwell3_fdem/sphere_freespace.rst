@@ -6,14 +6,24 @@ Response from a Conducting and Permeable Sphere in Free-Space
 Introduction
 ============
 
-
+Frequency-domain responses from ore bodies and unexploded ordnance items are of great practical importance to geophysicists.
+On a fundamental level, these responses can be understood by considering the excitation of a conductive and magnetically permeable sphere, under the influence of a harmonic inducing field.
+Here, expressions derived by Wait (1951) are used to characterize the excitation of the sphere in terms of an induced dipole moment.
+We examine how a target's dipole moment depends on its size and physical properties.
+A simple model for predicing the sphere's dipole response in free-space is then presented.
+For a sufficiently compact target, the free-space response represents a low-order approximation to the response of a conductive and permeable object within a resistive medium.
 
 
 Plane Wave Excitation of a Conducting and Magnetically Permeable Sphere
 =======================================================================
 
-In this section, equations derived by Wait (1951) are used to describe the induced magnetic dipole moment of a conductive and permeable sphere, resulting from excitation by a uniform magnetic field.
+In this section, equations derived by Wait (1951) are used to describe the induced magnetic dipole moment of a conductive and permeable sphere, resulting from excitation by a uniform magnetic field (Figure ??).
 According to Ward and Hohmann (1989), the frequency-domain wave equation within a homogeneous media can be expressed in terms of the magnetic Schelkunoff potential :math:`\vec F`:
+
+.. figure:: ./images/figGeometrySphere.png
+	:align: right
+        :scale: 45%
+        :name: GeometrySphere
 
 .. math::
 	\nabla^2 \vec F - \gamma^2 \vec F = 0
@@ -39,7 +49,7 @@ And for the magnetic field :math:`\vec H`:
 
 For his derivation, Wait (1951) began by considering the induced magnetic dipole moment resulting from an incident plane wave.
 If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which induces the dipole moment is approximately uniform about the sphere.
-For an inducing field of the form :math:`\vec H_0 (i\omega) = H_0 e^{i\omega t} \hat z` (Figure reference), symmetry of the problem implies that :math:`\vec E` only has components in :math:`\hat \phi`.
+For an inducing field of the form :math:`\vec H_0 (i\omega) = H_0 e^{i\omega t} \hat z`, symmetry of the problem implies that :math:`\vec E` only has components in :math:`\hat \phi`.
 Therefore by Eq. :eq:`EcurlF`, it follows that our Schelkunoff potential will only have components in :math:`\hat z`.
 The Schulkunoff potential may be obtained by considering seperate solutions inside and outside of the sphere:
 
@@ -51,13 +61,9 @@ The Schulkunoff potential may be obtained by considering seperate solutions insi
 	\end{cases}
 	:label: SolnsInsideOutside
 
-.. figure:: ./images/figGeometrySphere.png
-	:align: center
-        :scale: 50%
-        :name: GeometrySphere
 
 For our problem, boundary conditions on the sphere require that tanjential components of the magnetic field and normal components of the flux density must be continuous.
-According to Wait, these conditions are satisfied by the following:
+According to Wait (1951), these conditions are satisfied by the following:
 
 .. math::
 	\textrm{At }r=R: \; \begin{cases}
@@ -123,7 +129,7 @@ where
 	\chi (\omega) \! =\! \frac{3}{2 e^{-\alpha_b}} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_b \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s \big ( \alpha_b^2 +\alpha_b + 1 \big ) \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_b \big ( \alpha_b + 1 \big ) \big [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
 	:label: ChiFull
 
-If the sphere is located in free-space, then :math:`\alpha_b \ll 1`, :math:`\mu_b = \mu_0`, and Eq. :eq:`ChiFull` will reduce to:
+If the sphere is located within a resistive medium, then :math:`\alpha_b \ll \alpha_s`, :math:`\mu_b = \mu_0`, and Eq. :eq:`ChiFull` will reduce to:
 
 .. math::
 	\chi (\omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s  \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
@@ -155,7 +161,7 @@ For a conductive and permeable sphere in free-space, Eq. :eq:`ChiApprox` can be 
 	\chi (\omega) = \begin{cases}
 	\dfrac{3 \big ( \mu_s - \mu_0 \big )}{ \big ( \mu_s + 2 \mu_0 \big ) } = \dfrac{3 \kappa }{3 + \kappa} & \textrm{ as } \omega \rightarrow 0 \\
 	\\
-	\dfrac{3}{2} \Bigg [ \dfrac{3 \mu_s}{\mu_0 \alpha} - 1 \Bigg ] & \textrm{ as } \omega \rightarrow \infty
+	\dfrac{3}{2}  & \textrm{ as } \omega \rightarrow \infty
 	\end{cases}
 	:label: ChiLimits
 	
@@ -169,7 +175,7 @@ As :math:`\kappa \rightarrow \infty`, Eq. :eq:`ChiLimits` can be used to show th
 The magnetization factor for :math:`\omega = 0`, denoted here as :math:`\chi (\kappa)`, is plotted in Figure (reference). 
 
 For a purely conductive object (i.e. :math:`\mu_s = \mu_0`), Eq. :eq:`ChiApprox` can be further simplified.
-By neglecting electric displacement (i.e. :math:`\sigma_s \ll \omega \varepsilon_s`):
+By neglecting electric displacement (i.e. :math:`\omega \varepsilon_s \ll \sigma_s`):
 
 .. math::
 	\chi (\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth}(\alpha)}{\alpha} \Bigg ]
@@ -189,11 +195,18 @@ Dipole Response in Free-Space
 =============================
 
 Here, we present a model for predicting the anomalous frequency-domain response in free-space, from a conductive and permeable sphere, due to an inductive loop source.
+This scenario represents a low-order approximation for a conductive and magnetically permeable object within a resistive medium.
+The geometry of this problem is shown in Figure ??.
+
+.. figure::
+	./images/figResponseVacuum.png
+        :align: center
+	:figwidth: 50%
+
 In the previous section, analytic expressions were derived by considering a uniform inducing field about the sphere.
 However, if the radius of the sphere is sufficiently smaller than its distance from an inductive source, this condition will hold approximately for small enough frequencies.
 According to Ward and Hohmann (1988?), a distance larger than 5 times the average dimension of the object is required for a dipole source.
 If the frequency-dependent dipole moment of a conductive and permeable sphere is known, the resulting free-space dipole field may be calculated using Eq. :eq:`DipoleField`, where :math:`\vec m (\omega)` is given by Eq. :eq:`DipoleMoment`.
-The geometry of this problem can be seen in Fig. (\ref{}).
 By decomposing the problem into separable cartesian components, Eq. :eq:`DipoleField` can be re-expressed as:
 
 .. math::
@@ -231,10 +244,7 @@ By substituting Eq. :eq:`mDecomposition` into Eq. :eq:`DipoleVacuumLin`, the fre
 	{\bf B}(\omega) = {\bf G \, M \, H_0}
 	:label: DipoleVacuumLinSys
 
-.. figure::
-	./images/figResponseVacuum.png
-        :align: center
-	:figwidth: 50%
+
 	
 	
 	
