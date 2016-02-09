@@ -6,15 +6,13 @@ Response from a Conducting and Permeable Sphere in Free-Space
 Introduction
 ============
 
-1. Introduce what were are doing
-
-2. General flavour of obtaining time-domain responses from our frequency-dependent excitation factor
-
-3. The impulse response and step-response for a purely conductive sphere (Wait, 1951; Wait and Spies, 1969)
-
-4. Approximations of the time dependent decay for conductive and permeable objects (Becker et al., 'no date')
-
-5. Dipole response in free space
+Time-domain responses from ore bodies and unexploded ordnance items are of great practical importance to geophysicists.
+On a fundamental level, these responses can be understood by considering the excitation of a conductive and magnetically permeable sphere.
+Wait (1951) was able to characterize a sphere's frequency-domain excitation in terms of an induced dipole moment.
+Here, expressions derived by Wait (1951) are transformed to the time-domain according to Wait and Spies (1969).
+These expressions are used to provide explicit solutions for the step and impulse responses which characterize conductive and magnetically permeable spheres.
+A simple model for predicing the sphere's dipole response in free-space is then presented.
+For a sufficiently compact target, and at sufficiently late times, the free-space response represents a good approximation to the response of a conductive and permeable object within a resistive medium.
 
 
 Obtaining the Time-Domain Response of a Conducting and Permeable Sphere
@@ -150,10 +148,10 @@ By substituting Eq. :eq:`ChiChangeVar` into Eq. :eq:`LaplaceIFT`, a conductive s
 
 where :math:`\delta(t)` is the Dirac delta function.
 We can see that Eq. :eq:`ImpulseConductive` is zero for :math:`t<0`, implying it is causal.
-It should be noted that our expression for :math:`\chi_\delta (t)` differs from the one in Wait and Spies by a factor of :math:`-3/2`.
+It should be noted that our expression for :math:`\chi_\delta (t)` differs from the one in Wait and Spies (1969) by a factor of :math:`-3/2`.
 This is because of how we chose to define :math:`\chi (i\omega)`.
-Although the impulse response is written as an infinite series, exponential functions of the form :math:`e^{-an^2}` are negligible for sufficiently large :math:`n`.
-Thus, only a finite number of terms in the sum are required to approximate the sphere's impulse response to an acceptable accuracy.
+Although the impulse response is written as an infinite series, exponential terms become negligible when the product of :math:`(n\beta)^2t` is sufficiently large.
+As a result, only a finite portion of the sum is required to approximate the response to a reasonable degree of accuracy, with more terms being required at early times.
 
 
 Step Response
@@ -214,6 +212,8 @@ The rate of decay for the step-off response is obtained by taking the derivative
 
 Therefore, the rate of decay may be obtained directly if the excitation's impulse response is known.
 The unit step-off response for a sphere of radius :math:`R` = 10 m, for several conductivities, is shown in Figure ??.
+Solid lines are responses predicted using Eqs. :eq:`mSineCosine` and :eq:`dmdtSineCosine`.
+Circular dots are responses predicted using analytic expressions derived in this section.
 
 .. figure:: ./images/mtConductive.png
         :width: 50%     
@@ -245,7 +245,7 @@ As this derivation is somewhat more technical, only the final results from Wait 
 Step Response
 +++++++++++++
 
-In this case, it is easier to begin by presented expressions for the step response.
+For a conductive and magnetically permeable sphere, it is easier to begin by presented expressions for the step response.
 According to Eqs. :eq:`DipoleMoment` and :eq:`mILT`, the time-dependent excitation of the sphere can be expressed as:
 
 .. math::
@@ -266,7 +266,7 @@ By solving the inverse Laplace transform, the time-dependent response to step ex
 	m(t) = \frac{4\pi}{3}R^3 \, h_0 \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} - 6\mu_r \, \sum_{n=1}^\infty \frac{ e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) \Bigg ] u(t)
 	:label: mStepOnPermeable
 
-where :math:`\mu_r = \mu/\mu_0` is the relative permeability, and :math:`\xi_n` are defined by poles of the inverse Laplace transform.
+where :math:`\mu_r = \mu/\mu_0` is the relative permeability, and :math:`\xi_n` are defined according to poles of the inverse Laplace transform.
 These poles behave according to the following expression:
 
 .. math::
@@ -279,7 +279,7 @@ From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:
 	n\pi \leq \xi_n \leq (n+1/2)\pi
 	:label: CoeffIntervals
 
-The value of each coefficient may be found iteratively using very few iterations according to:
+The value of each coefficient may be found iteratively using very few iterations (:math:`<10`) according to:
 
 .. math::
 	\xi_n^{(k+1)} = n\pi + \mathrm{tan}^{-1} \Bigg ( \frac{(\mu_r - 1)\xi_n^{(k)}}{\mu_r - 1 + \big ( \xi_n^{(k)} \big )^2}  \Bigg )
@@ -292,7 +292,7 @@ The first term represents the sphere's magnetic response.
 This may be obtained by setting :math:`\omega \rightarrow 0` in Eq. :eq:`ChiPermeable`.
 The second term represents the sphere's inductive response.
 The inductive response is a sum of modes which decrease in magnitude as :math:`n \rightarrow \infty`.
-Thus, only a finite portion of the sum is required to approximate the sphere's inductive response.
+Thus, only a finite portion of the sum is required to approximate the sphere's inductive response, with more terms being required at earlier times.
 
 For a step-off response, the field is magnetized at :math:`t<0`.
 Once the inducing field is removed, only the inductive response is non-zero.
@@ -310,6 +310,9 @@ The rate of decay at time :math:`t>0` can be obtained by taking the time-derivat
 	:label: dmdtStepOffPermeable
 	
 The unit step-off response for a sphere of radius :math:`R` = 10 m and conductivity :math:`\sigma` = 10 S/m, for several relative permeabilities, is shown in Figure ??.
+Solid lines are responses predicted using Eqs. :eq:`mSineCosine` and :eq:`dmdtSineCosine`.
+Circular dots are responses predicted using analytic expressions derived in this section.
+
 
 .. figure:: ./images/mtPermeable.png
         :width: 50%     
@@ -319,7 +322,7 @@ The unit step-off response for a sphere of radius :math:`R` = 10 m and conductiv
 Impulse Response
 ++++++++++++++++
 
-The impulse response can be obtained by the following properties of the convolution:
+The impulse response for a conductive and magnetically permeable sphere can be obtained by the following properties of the convolution:
 
 .. math::
 	\chi_\delta (t) = \frac{d}{dt} \Big [ \chi_\delta (t) \otimes u(t) \Big ] = \frac{d}{dt} \mathcal{L}^{-1} \Bigg [ \frac{\chi(s)}{s} \Bigg ]
@@ -361,53 +364,54 @@ Therefore, the impulse response for a conductive and permeable sphere is:
 Dipole Response in Free-Space
 =============================
 
-Here, we present a model for predicting the anomalous frequency-domain response in free-space, from a conductive and permeable sphere, due to an inductive loop source.
-In the previous section, analytic expressions were derived by considering a uniform inducing field about the sphere.
-However, if the radius of the sphere is sufficiently smaller than its distance from an inductive source, this condition will hold approximately for small enough frequencies.
+.. figure::
+	./images/figDipoleFieldTEM.png
+        :align: right
+	:figwidth: 45%
+	
+Here, we present a model for predicting the anomalous time-domain response in free-space, from a conductive and permeable sphere, due to an inductive loop source.
+The geometry of this problem can be seen in Figure ??.
+Analytic expressions for the sphere's frequency-dependent excitation factor were derived by considering a uniform inducing field about the sphere.
+For more information, see (add link).
+This condition is also required in the time-domain.
+If the radius of the sphere is sufficiently smaller than its distance from an inductive source, the inducing field may be considered approximately homogeneous.
 According to Ward and Hohmann (1988?), a distance larger than 5 times the average dimension of the object is required for a dipole source.
-If the frequency-dependent dipole moment of a conductive and permeable sphere is known, the resulting free-space dipole field may be calculated using Eq. :eq:`DipoleField`, where :math:`\vec m (\omega)` is given by Eq. :eq:`DipoleMoment`.
-The geometry of this problem can be seen in Fig. (\ref{}).
-By decomposing the problem into separable cartesian components, Eq. :eq:`DipoleField` can be re-expressed as:
+For an object with dipole moment :math:`{\bf m}(t)`, at location :math:`P`, the field at location :math:`Q` is:
 
 .. math::
-	{\bf B}(\omega) = \frac{\mu_0}{4 \pi r^3} \Big [ 3 {\bf \hat r \otimes \hat r - I} \Big ] \cdot {\bf m} (\omega) = {\bf G} \, {\bf m} (\omega)
+	{\bf B}(\omega) = \frac{\mu_0}{4 \pi} \Bigg [ \frac{3{\bf \vec r \big [ \vec r \cdot m} (t) \big ]}{r^5} - \frac{{\bf m}(t)}{r^3} \Bigg ]
+	:label: DipoleField
+
+where :math:`{\bf \vec r}` is the vector distance from :math:`P` to :math:`Q`.
+By decomposing the problem into separable cartesian components, Eq. :eq:`DipoleField` can be re-expressed using a linear formulation:
+
+.. math::
+	{\bf B}(\omega) = \frac{\mu_0}{4 \pi r^3} \Big [ 3 {\bf \hat r \otimes \hat r - I} \Big ] \cdot {\bf m} (t) = {\bf G} \, {\bf m} (t)
 	:label: DipoleVacuumLin
 	
 where
 
 .. math::
-	{\bf B} (\omega) = \begin{bmatrix} B_x (\omega) \\ B_y(\omega) \\ B_z(\omega) \end{bmatrix}, \; \;
-	{\bf m}(\omega) = \begin{bmatrix} m_x (\omega) \\ m_y(\omega) \\ m_z(\omega) \end{bmatrix} \; \; \textrm{and} \; \;
+	{\bf B} (t) = \begin{bmatrix} B_x (t) \\ B_y(t) \\ B_z(t) \end{bmatrix}, \; \;
+	{\bf m}(t) = \begin{bmatrix} m_x (t) \\ m_y(t) \\ m_z(t) \end{bmatrix} \; \; \textrm{and} \; \;
 	{\bf I} = \begin{bmatrix} 1&0&0\\0&1&0\\0&0&1 \end{bmatrix}
 	:label: DipoleOperator
 
-The vector from :math:`P` to :math:`Q` is denoted by :math:`\vec r`, and has unit-direction :math:`{\bf \hat r}`.
+The unit-vector direction from :math:`P` to :math:`Q` is denoted by :math:`{\bf \hat r}`.
 For our formulation, we use :math:`{\bf \hat r \otimes \hat r}` to represent an outer-product.
 We can see from Eq. :eq:`DipoleVacuumLin` that :math:`{\bf G}` is a :math:`3\times 3` linear operator, which depends solely on the geometry of the problem.
-Because the magnetization factor for our sphere is a scalar quantity, it may be used to obtain each cartesian component of the induced dipole moment separately.
-As a result, we may express :math:`{\bf m} (\omega)` as follows:
+Because the excitation factor for our sphere is a scalar quantity, it may be used to obtain each cartesian component of the induced dipole moment separately.
+As a result, we may express :math:`{\bf m} (t)` as follows:
 
 .. math::
-	{\bf m} (\omega) = {\bf M \, H_0}
+	{\bf m}(t) = \frac{4\pi}{3} R^3 \, \chi_\delta (t) \otimes \begin{bmatrix} h_x (t) \\ h_y(t) \\ h_z (t) \end{bmatrix}
 	:label: mDecomposition
 	
-where
+where :math:`h_x(t)`, :math:`h_y(t)` and :math:`h_z(t)` are separate cartesian components of the inducing field.
+The convolution is performed with each component of the inducing field separately.
+The net dipole moment is the sum of all 3 contributions.
 
-.. math::
-	{\bf M} = \Bigg ( \frac{4}{3} \pi R^3 \chi (\omega ) \Bigg ) {\bf I} \; \; \textrm{and} \; \;
-	{\bf H_0} = \begin{bmatrix} H_x(\omega) \\ H_y (\omega) \\ H_z (\omega) \end{bmatrix}
-	:label: Magnetization
-	
-By substituting Eq. :eq:`mDecomposition` into Eq. :eq:`DipoleVacuumLin`, the free-space dipole response can be expressed as:
 
-.. math::
-	{\bf B}(\omega) = {\bf G \, M \, H_0}
-	:label: DipoleVacuumLinSys
-
-.. figure::
-	./images/figResponseVacuum.png
-        :align: center
-	:figwidth: 50%
 	
 	
 	
