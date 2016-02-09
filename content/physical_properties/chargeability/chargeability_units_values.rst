@@ -6,10 +6,29 @@ Units & Values
 Units
 -----
 
-	- V/V (Dimensionless)
-	- ms
-	- mV/V
+By definition of the intrinsic chargeability, :math:`\eta = \frac{V_0-V_\infty}{V_0}`, the unit will be V/V (Dimensionless); :math:`\eta` will be bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from inifinte to zero frequency normalized by voltage at zero frequency, :math:`V_0`. As shown in below diagram, when the current switched-on in the on-time, polarization charges start to build up (:math:`V_0`) then at a late time it asymptotes to steatdy-state (:math:`V_0`). After the current is switched-off built polarization charge is decaying and asymptotes to zero.  	
 
+.. figure:: ../../../examples/physical_properties/electrical_conductivity/DCIPcurve.png
+   :align: center
+   :scale: 50% 
+   :name: DCIPcurve
+   
+Since we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain pseudo-chargeability, :math:`M`:
+
+.. math::
+	M = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt,
+
+where :math:`t_1` and :math:`t_2` are arbitraty times used for integration. The unit of this pseudo-chareability (M) is often ms. 
+
+.. note::
+	Depending on the used time window, measured pseudo-chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated pseudo-charegability could be significantly underestimated. We will treat this later in :ref:`chargeability_mathematical_relationships`  
+
+There can be different types of the pseudo-chargeability:
+
+.. math::
+	M = (t_2-t_1)\int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt, 
+
+and its unit is mV/V. 
 
 Values
 ------
@@ -19,7 +38,7 @@ The following tables (from Telford et al, 1976) provides a very general guide to
 These examples show that a wide range of variability can be expected, implying that it is difficult to use values of intrinsic chargeability (in models obtained by inversion of IP data) to determine exactly what type of rock or material is in the ground. However, this is an ongoing topic of research.
 
 
-**Table 2:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
+**Table 1:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
 
 +-----------------------+--------------------------+
 |  **Material type**    | **Chargeability (msec)** |
@@ -43,7 +62,7 @@ These examples show that a wide range of variability can be expected, implying t
 | quartzites            | 5-12                     |  
 +-----------------------+--------------------------+
 
-**Table 3:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
+**Table 2:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
 
 +-----------------------+--------------------------+
 |  **Material type**    | **Chargeability (msec)** |
@@ -74,6 +93,4 @@ These examples show that a wide range of variability can be expected, implying t
 
 .. todo:: 
     Units: the intrinsic changeability is dimensionless. :math:`[0,1]`. In practice surveys are explicitly designed to find chargeable material and the field data acquire units that correspond to the survey.  In this regard, any datum that is connected with chargeable .
-
-.. todo:: Tables of chargeability (one from GPG, other tables for rocks and minerals)
 

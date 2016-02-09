@@ -27,3 +27,6 @@ where :math:`t_1` and :math:`t_2` are arbitrary times. The unit of pseudo-charge
 
    Figure Measured time domain IP curve. 
 
+.. todo::
+	Add Newmon't standard?   
+
