@@ -10,7 +10,7 @@ Maxwell's Equations in Homogeneous Media
 .. toctree::
     :maxdepth: 2
 
-    wave_propagation_in_free_space
+    wave_equation_free_space/index
     effects_of_conductivity
     quasi_static_maxwells_equations
     details
