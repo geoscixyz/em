@@ -12,7 +12,6 @@ Loop Loop FDEM
 .. toctree::
     :maxdepth: 1
 
-    governing_equations
     field_acquisition
     data
     survey_design
