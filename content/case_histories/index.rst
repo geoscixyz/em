@@ -37,9 +37,11 @@ The titles, and EM systems used are provided below.
 - Australia mineral exploration (MMR)
 - Sea Floor Logging (FDEM)
 
+**Content**
 
 .. toctree:: 
     :maxdepth: 2
 
     mt_isa/index
+    bookpurnong/index
 
