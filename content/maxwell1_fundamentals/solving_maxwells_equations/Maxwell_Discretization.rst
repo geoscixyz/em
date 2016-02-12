@@ -35,7 +35,7 @@ usually cuboids or tetrahedra, with physical properties constant in each cell.
 These three types of earth models, with their increasing complexity, are
 illustrated in figure 1.
 
-.. figure:: ./images/1-2-3.png 
+.. figure:: ../images/1-2-3.png 
 
   Visualization of 1D, 2D, and 3D discretizations.
 
@@ -87,7 +87,7 @@ centres of cell faces. When electrical potential is considered (in
 electrostatic problems) it is discretized at cell corners, called the mesh
 nodes.
 
-.. figure:: ./images/Yee-cube-w-b.png
+.. figure:: ../images/Yee-cube-w-b.png
 
   Cubic cell with :math:`\mathbf{E}` discretized onto cell edges,
   :math:`\mathbf{b}` onto cell faces, and physical properties onto cell

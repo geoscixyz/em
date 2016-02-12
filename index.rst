@@ -24,6 +24,15 @@ an impact upon the problem at hand.
 
 .. _Case Histories: http://case-histories.geosci.xyz
 
+Examples are available through `Jupyter Notebooks`_ and can be run through Binders_
+
+.. image:: http://mybinder.org/badge.svg 
+   :target: http://mybinder.org/repo/ubcgif/em_examples
+   :align: center
+
+.. _Jupyter Notebooks: http://github.com/ubcgif/em_examples
+.. _Binders: http://mybinder.org/repo/ubcgif/em_examples
+
 This resource is Open Source and while currently being developed by brilliant
 and enthusiastic graduate students and faculty at UBC, the vision is to have
 experts, worldwide, contribute. Join the development on github_.
@@ -46,13 +55,12 @@ Contents:
    content/introduction/index
    content/physical_properties/index
    content/maxwell1_fundamentals/index
-   content/maxwell2_steady_state/index
+   content/maxwell2_dc/index
    content/maxwell3_fdem/index
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
    content/case_histories/index
    content/equation_bank
-
    content/references
 
 

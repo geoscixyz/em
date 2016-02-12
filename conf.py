@@ -154,7 +154,7 @@ html_theme_options = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'em.ico'
+# html_logo = 'emgeosci.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -184,9 +184,11 @@ html_sidebars = {
    '**': [
        'globaltoc.html',  
        'searchbox.html',
+       'sourcelink.html',
        ],
 }
 
+show_related = True
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -395,6 +397,15 @@ sys.path.append(os.getcwd())
 
 from autodoc import make_formula_sheet
 make_formula_sheet()
+
+import sphinx.environment
+from docutils.utils import get_source_line
+
+def _supress_nonlocal_image_warn(self, msg, node):
+    if not msg.startswith('nonlocal image URI found:'):
+        self._warnfunc(msg, '%s:%s' % get_source_line(node))
+
+sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
 
 from checkDependencies import checkDependencies
 checkDependencies()

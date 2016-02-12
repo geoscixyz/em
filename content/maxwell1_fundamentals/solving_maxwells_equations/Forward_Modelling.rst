@@ -116,7 +116,7 @@ Consider the situation in the figure below, at a boundary between two media
 with different conductivities but both with dielectric permittivity
 :math:`\varepsilon = \varepsilon_0`.
 
-.. image:: images/boundryChargeBuildup.PNG
+.. image:: ../images/boundryChargeBuildup.PNG
    :scale: 75 %
    :align: center
    
@@ -168,14 +168,14 @@ terms of the ratio of the two conductivities
 In the case where current is flowing from a resistive layer to a more
 conductive layer (i.e. :math:`\sigma_2 > \sigma_1`),
 
-.. image:: images/resOnTop.PNG
+.. image:: ../images/resOnTop.PNG
    :scale: 75 %
    :align: center
 
 .. math:: 
 		\sigma_1 < \sigma_2 \implies \tau_f <0
 
-.. image:: images/negChargeBuildup.PNG
+.. image:: ../images/negChargeBuildup.PNG
    :scale: 75 %
    :align: center
 
@@ -183,14 +183,14 @@ We get a buildup of negative charges on the boundary, and in the case where
 flow is from a resistive layer to a conductive layer (i.e. :math:`\sigma_1 >
 \sigma_2`)
 
-.. image:: images/condOnTop.PNG
+.. image:: ../images/condOnTop.PNG
    :scale: 75 %
    :align: center
 
 .. math:: 
 		\sigma_1 > \sigma_2 \implies \tau_f >0
 
-.. image:: images/posChargeBuildup.PNG
+.. image:: ../images/posChargeBuildup.PNG
    :scale: 75 %
    :align: center
 
@@ -198,7 +198,7 @@ We get a buildup of positive charges on the boundary.
 
 
 Discretization
---------------------------
+--------------
 
 For an arbitrary conductivity model, equation :eq:`DCfwd` cannot be solved
 exactly. In order to simulate a geophysical survey over an earth with a
@@ -230,8 +230,9 @@ discrete divergence of Ampere's law to get
 
 Since we used a mimetic discretization method,
 :math:`\mathbf{G}^T\mathbf{C}^T` is identically zero, which corresponds the
-vector calculus identity :math:`\boldsymbol{\nabla\cdot}\left(\boldsymbol{\nab
-la\times}\mathbf{b}\right) = 0`. Hence the first term of equation
+vector calculus identity 
+:math:`\boldsymbol{\nabla\cdot}\left(\boldsymbol{\nabla\times}\mathbf{b}\right) = 0`. 
+Hence the first term of equation
 :eq:`divAmpere` vanishes, which yields the discrete DC potential equation
 
 .. math::

@@ -35,7 +35,7 @@ outwards from the source, with magnitude:
 
 .. math:: J = \frac{I}{4 \pi R^2}
 
-.. figure:: ./figures/SphericalDepression_Wholespace.png
+.. figure:: ../../images/SphericalDepression_Wholespace.png
    :align: center
    :name: SphericalDepression_Wholespace
 
@@ -166,7 +166,7 @@ Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exst
 conducting sphere. Python code functions which evaluate above solution is given at :ref:`effecttopo_code`.
 
 
-.. figure:: ./figures/SphericalDepression_Sphere.png
+.. figure:: ../../images/SphericalDepression_Sphere.png
    :align: center
    :name: SphericalDepression_Sphere
 
@@ -218,7 +218,7 @@ current :math:`I` at (:math:`x_0,0,0`) is:
    \phi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
    :label: Potential_Sphere_Pole_HemisphereDepression_Halfspace
 
-.. figure:: ./figures/SphericalDepression_PoleDipole.png
+.. figure:: ../../images/SphericalDepression_PoleDipole.png
    :align: center
    :name: SphericalDepression_PoleDipole
 
@@ -254,13 +254,13 @@ an azimuthal angle relative the axis of symmetry, whereas
 :math:`\theta_1` and :math:`\theta_2` are strictly angles related to the
 trigonometry of the problem.
 
-.. figure:: ./figures/SphericalDepression_DipoleDipole.png
+.. figure:: ../../images/SphericalDepression_DipoleDipole.png
    :align: center
    :name: SphericalDepression_DipoleDipole
 
    Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.
 
-.. |SphericalDepression_Wholespace| image:: ./figures/SphericalDepression_Wholespace.png
-.. |SphericalDepression_Sphere| image:: ./figures/SphericalDepression_Sphere.png
-.. |SphericalDepression_PoleDipole| image:: ./figures/SphericalDepression_PoleDipole.png
-.. |SphericalDepression_DipoleDipole| image:: ./figures/SphericalDepression_DipoleDipole.png
+.. |SphericalDepression_Wholespace| image:: ../../images/SphericalDepression_Wholespace.png
+.. |SphericalDepression_Sphere| image:: ../../images/SphericalDepression_Sphere.png
+.. |SphericalDepression_PoleDipole| image:: ../../images/SphericalDepression_PoleDipole.png
+.. |SphericalDepression_DipoleDipole| image:: ../../images/SphericalDepression_DipoleDipole.png

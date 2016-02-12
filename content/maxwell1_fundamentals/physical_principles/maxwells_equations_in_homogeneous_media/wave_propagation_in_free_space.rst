@@ -1,12 +1,12 @@
 .. _wave_propagation_in_free_space:
 
 Wave Propagation in Homogeous Media
-==============================
+===================================
 
-In this section we combine the first order partial differential equations {link}  into second order equations for e or  h  and show how EM fields propagate in homogenous media.  The plane wave solutions have propagation and attenuating components and the relative balance of these is determined by the complex wave number. When electrical conductivity, \sigma=0, the electromagnetic waves propagate without attenuation. When sigma is large, as it is with most earth rocks, the EM waves are diffusive and attenuate rapidly within one or two wavelengths. In many problems the wave propagation portion of the equation (or effectively the displacement current) can be neglected and quasi-static Maxwell’s equations can be solved. The following work parallels that offered in many EM resources (WH88, Stratton, Griffiths). We first generate the second-order differential equations in time and then use Fourier transforms to get the frequency-domain counterparts.
+In this section we combine the first order partial differential equations {link}  into second order equations for e or  h  and show how EM fields propagate in homogenous media.  The plane wave solutions have propagation and attenuating components and the relative balance of these is determined by the complex wave number. When electrical conductivity, :math:`\sigma=0`, the electromagnetic waves propagate without attenuation. When sigma is large, as it is with most earth rocks, the EM waves are diffusive and attenuate rapidly within one or two wavelengths. In many problems the wave propagation portion of the equation (or effectively the displacement current) can be neglected and quasi-static Maxwell’s equations can be solved. The following work parallels that offered in many EM resources (WH88, Stratton, Griffiths). We first generate the second-order differential equations in time and then use Fourier transforms to get the frequency-domain counterparts.
 
 Wave equations in the time domain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations:
 
@@ -115,7 +115,7 @@ We now have two wave equations or second-order differential equations; one for t
 
 
 Wave equations in the frequency domain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To get the frequency-domain wave equations, we use the Fourier transform with an :math:`e^{i\omega t}` time dependence. A derivative of :math:`e^{i\omega t}` with respect to time is :math:`i\omega e^{i\omega t}`. Thus Equations :eq:`hme7` and :eq:`hmh7` can be converted to the frequency domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega^2`. The frequency-domain equations are then expressed as:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0

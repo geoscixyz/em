@@ -46,7 +46,7 @@ effects in the DC problem.
 Numerical validations
 =====================
 
-.. figure:: ./figures/resismodel.png
+.. figure:: ../../images/resismodel.png
    :align: center
    :name: resismodel
 
@@ -74,7 +74,7 @@ our noise level is roughly 10 percent for the DC problem. This shows our
 numerical solution has a capability to accurately compute those topographic
 effects, although our choice of discretization is clearly important.
 
-.. figure:: ./figures/ComparisonTotFine.png
+.. figure:: ../../images/ComparisonTotFine.png
    :align: center
    :name: ComparisonTotFine
 
@@ -86,7 +86,7 @@ below figure correspondingly show numerical, analytic, and absolute errors of
 secondary potentials. The maximum error occurs at the hemi-sphere boundary
 close to the current source, but it is less than 20 percent.
 
-.. figure:: ./figures/ComparisonSecFine.png
+.. figure:: ../../images/ComparisonSecFine.png
    :align: center
    :name: ComparisonSecFine
 
@@ -110,7 +110,7 @@ the right side is much smaller than the postive charge on the other side.
 These postive and negative charges will generate electric fields based on
 Coulomb's law (See Section :ref:`coulomb`).
 
-.. figure:: ./figures/ComparisonSecFineChargs.png
+.. figure:: ../../images/ComparisonSecFineChargs.png
    :align: center
    :name: ComparisonSecFineChargs
 
@@ -133,15 +133,15 @@ as shown in the bottom panel. Outside of the hemi-sphere, the electric field
 is dipolar in shape, while inside the hemi-sphere, the electric fields flow
 straight from the positive to negative charges.
 
-.. figure:: ./figures/ComparisonSecFineEfield.png
+.. figure:: ../../images/ComparisonSecFineEfield.png
    :align: center
    :name: ComparisonSecFineEfield
 
    Section views of total (top panel), primary (middle panel), and secondary (bottom panel) electric fields. 
 
-.. |resismodel| image:: ./figures/resismodel.png
-.. |ComparisonTotFine| image:: ./figures/ComparisonTotFine.png
-.. |ComparisonSecFine| image:: ./figures/ComparisonSecFine.png
-.. |ComparisonSecFineChargs| image:: ./figures/ComparisonSecFineChargs.png
-.. |ComparisonSecFineEfield| image:: ./figures/ComparisonSecFineEfield.png
+.. |resismodel| image:: ../../images/resismodel.png
+.. |ComparisonTotFine| image:: ../../images/ComparisonTotFine.png
+.. |ComparisonSecFine| image:: ../../images/ComparisonSecFine.png
+.. |ComparisonSecFineChargs| image:: ../../images/ComparisonSecFineChargs.png
+.. |ComparisonSecFineEfield| image:: ../../images/ComparisonSecFineEfield.png
 
