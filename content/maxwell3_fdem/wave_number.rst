@@ -1,7 +1,7 @@
 .. _waveNumber:
 
 Wave Number
-==========
+===========
 
 .. :math:`\Phi_{\mathbf{B}}`
 
