@@ -5,9 +5,9 @@ Solving Maxwell's Equations
 
 **Contents**
 
-    .. toctree::
+.. toctree::
     :maxdepth: 2
 
-    Maxwell_Discretizations
+    Maxwell_Discretization
     Forward_Modelling
 
