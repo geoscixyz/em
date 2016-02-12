@@ -48,7 +48,7 @@ How is it organized?
 --------------------
 
 The motivation for the structure of em.geosci follows from
-:ref:`introduction_basic_electromagnetic_experiment`. The goal is to identify
+:ref:`introduction_basic_electromagnetic_experiments`. The goal is to identify
 topics that are logically self-contained and then use links to connect them.
 At the large scale we have the following items.
 
