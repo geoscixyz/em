@@ -1,7 +1,20 @@
 .. _introduction_index:
 
+Introduction
+=============
+
+**Contents:**
+
+.. toctree::
+    :maxdepth: 2
+
+    introduction_about
+    introduction_basic_electromagnetic_experiments
+    introduction_notation
+    
+
 How to use this resource
-========================
+------------------------
 
 There are multiple ways to use em.geosci
 
@@ -46,12 +59,5 @@ results or carry out further exploration of a topic.
 .. .. todo:: Summary about problems we face. Some images (DL lecture) showing the variety of problems in which EM can play a role. (Statement of the problem, image, where one of the physical properties can be diagnostic. This could be an extensive folder that serves as a strong motivator)
 
 
-**Contents:**
 
-.. toctree::
-    :maxdepth: 2
-
-    introduction_about
-    introduction_basic_electromagnetic_experiments
-    introduction_notation
 
