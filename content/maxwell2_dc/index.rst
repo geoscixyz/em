@@ -17,7 +17,7 @@ DCR for mineral exploration can be found in the :ref:`Mt. Isa Case History
 <mt_isa_index>`. That case history also illustrates how IP (Induced
 Polarization) can be analysed using steady state equations. Any current
 flowing in the earth will generate magnetic fields which can be measured. This
-is referred to as an MMR (MagnetoMetric Resistivity). {link to ??}. Finally,
+is referred to as an :ref:`MMR (MagnetoMetric Resistivity)<fields_from_grounded_sources_mmr>`. Finally,
 earth materials can have a magnetic permeability that is different from that
 of free space. In the presence of an external field such material will become
 magnetized and the fields can be measured and interpreted. This constitutes
