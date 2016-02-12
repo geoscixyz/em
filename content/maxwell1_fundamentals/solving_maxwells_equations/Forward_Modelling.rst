@@ -230,8 +230,9 @@ discrete divergence of Ampere's law to get
 
 Since we used a mimetic discretization method,
 :math:`\mathbf{G}^T\mathbf{C}^T` is identically zero, which corresponds the
-vector calculus identity :math:`\boldsymbol{\nabla\cdot}\left(\boldsymbol{\nab
-la\times}\mathbf{b}\right) = 0`. Hence the first term of equation
+vector calculus identity 
+:math:`\boldsymbol{\nabla\cdot}\left(\boldsymbol{\nabla\times}\mathbf{b}\right) = 0`. 
+Hence the first term of equation
 :eq:`divAmpere` vanishes, which yields the discrete DC potential equation
 
 .. math::
