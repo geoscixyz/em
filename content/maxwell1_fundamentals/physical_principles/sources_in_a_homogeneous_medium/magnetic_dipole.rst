@@ -13,7 +13,7 @@ Harmonic
 
     This example is available in a notebook_
 
-.. _notebook: https://github.com/ubcgif/em/blob/examples/examples/maxwell1_fundamentals/Magnetic_Dipole_Harmonic.ipynb
+.. _notebook: https://github.com/ubcgif/em_examples/blob/master/notebooks/maxwell1_fundamentals/Magnetic_Dipole_Harmonic.ipynb
 
 Transient
 ---------
