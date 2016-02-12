@@ -1,6 +1,6 @@
 .. _dc_maxwells_equations_and_setup_boundary_conditions:
 
-Boundary Conditions
+Boundary conditions
 ===================
 
 .. todo:: what are the boundary conditions we employ, what do they mean?

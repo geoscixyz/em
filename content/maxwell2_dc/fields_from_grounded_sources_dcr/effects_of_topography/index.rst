@@ -1,6 +1,6 @@
 .. _effects_of_topography_index:
 
-Effects of Topography
+Effects of topography
 =====================
 
 .. todo:: which examples are we looking at and why?

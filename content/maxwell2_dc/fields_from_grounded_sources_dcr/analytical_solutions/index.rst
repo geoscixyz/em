@@ -1,6 +1,6 @@
 .. _dcr_analytical_solutions_index:
 
-Analytical Solutions
+Analytical solutions
 ====================
 
 .. todo:: overview of analytical solutions, why are they useful
