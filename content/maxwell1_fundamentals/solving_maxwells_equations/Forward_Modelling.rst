@@ -198,7 +198,7 @@ We get a buildup of positive charges on the boundary.
 
 
 Discretization
---------------------------
+--------------
 
 For an arbitrary conductivity model, equation :eq:`DCfwd` cannot be solved
 exactly. In order to simulate a geophysical survey over an earth with a
