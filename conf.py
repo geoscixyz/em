@@ -398,5 +398,14 @@ sys.path.append(os.getcwd())
 from autodoc import make_formula_sheet
 make_formula_sheet()
 
+import sphinx.environment
+from docutils.utils import get_source_line
+
+def _supress_nonlocal_image_warn(self, msg, node):
+    if not msg.startswith('nonlocal image URI found:'):
+        self._warnfunc(msg, '%s:%s' % get_source_line(node))
+
+sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
+
 from checkDependencies import checkDependencies
 checkDependencies()
