@@ -43,7 +43,7 @@ insight.
 .. toctree::
     :maxdepth: 1
     
-    maxwells_equations_and_setup/index
+    maxwells_equations_and_setup
     fields_from_grounded_sources_dcr/index
     fields_from_grounded_sources_mmr/index
     
