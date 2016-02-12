@@ -3,9 +3,6 @@
 Case Histories
 ==============
 
-Introduction
-------------
-
 Case histories provide the context for our development of educational and
 research material presented in em.geosci. Each case history focuses upon a
 particular problem to be solved and provides the motivation for working with
@@ -20,6 +17,14 @@ experience and to address important issues regarding reproducability. Case
 histories for our initial launch of em.geosci are those that have been
 developed by past and present students at the Geophysical Inversion Facility.
 The titles, and EM systems used are provided below.
+
+**Content**
+
+.. toctree:: 
+    :maxdepth: 2
+
+    mt_isa/index
+    bookpurnong/index
 
 - MIM: Mineral Exploration; DCR and IP; (2D and 3D inversions)
 - Bukpurnong: Environmental (ground water) FDEM (Resolve), TDEM (SkyTEM)
@@ -36,12 +41,3 @@ The titles, and EM systems used are provided below.
 - Bathurst (ZTEM; Dighem)
 - Australia mineral exploration (MMR)
 - Sea Floor Logging (FDEM)
-
-**Content**
-
-.. toctree:: 
-    :maxdepth: 2
-
-    mt_isa/index
-    bookpurnong/index
-
