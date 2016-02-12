@@ -38,19 +38,12 @@ insight.
 
 
 
-**Contents:**
+**Contents**
 
 .. toctree::
     :maxdepth: 1
     
-    steady_state_equations
-    Sources and BC (grounded and closed loop)
-    Forward Modelling 
-
-DWO See Structure document.
+    maxwells_equations_and_setup/index
+    fields_from_grounded_sources_dcr/index
+    fields_from_grounded_sources_mmr/index
     
-
-.. toctree::
-   :hidden:
-
-   SphericalDepression_code
