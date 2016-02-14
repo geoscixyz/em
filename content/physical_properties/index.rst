@@ -4,22 +4,12 @@ Physical Properties
 ===================
 
 **Purpose**
+Generate a resource that has a commpilation of values for physical properties as a function of rock type, mineral composition and saturating fluids. Background about how the laboratory measurements are made and the connection with constitutive relationships are presented. Each section will begin with examples for where the particular physical property has been diagnostic. 
 
-**Contents:**
-
-.. toctree::
-    :maxdepth: 1
-
-    electrical_conductivity/index
-    chargeability/index
-    magnetic_permeability/index
-    electrical_permittivity/index
-    constitutive_relations/index
 
 
 Overview
---------   
-
+--------
 In geophysics we characterize materials by their physical properties. The
 relevant  properties for electromagnetics are:
 
@@ -50,8 +40,30 @@ The constitutive relations, along with Maxwell's equations,  form a complete set
 
 In this section we present basic material regarding the various physical properties. For each property we provide:
 
-- laboratory experiment
+- examples {links} to applications
+- constitutive relationship and laboratory experiment
 - Useful tables
 - Additional information 
 - References 
+
+
+
+
+
+**Contents:**
+
+.. toctree::
+    :maxdepth: 1
+
+    electrical_conductivity/index
+    chargeability/index
+    magnetic_permeability/index
+    electrical_permittivity/index
+    constitutive_relations/index
+
+
+Overview
+--------   
+
+
 
