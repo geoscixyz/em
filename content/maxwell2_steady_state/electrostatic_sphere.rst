@@ -36,13 +36,12 @@ The problem setup is shown in the figure below, where we have
     n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
+    colorsphere=[0.1,0.1,0.6]
 
     fig, ax = plt.subplots(1,1, figsize = (6,6))
-    ax = get_Setup(XYZ,sig0,sig1,R,E0,ax)
+    ax = get_Setup(XYZ,sig0,sig1,R,E0,ax,False,colorsphere)
 
     plt.show()
 
@@ -108,8 +107,6 @@ the integration from :eq:`V_from_e` gives
     n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
@@ -135,9 +132,9 @@ and inside the sphere :math:`(r < R)`
     
     from examples.sphere import *
 
-    sig0 = 10.**-3          # conductivity of the wholespace in S/m
-    sig1 = 10.**-1         # conductivity of the sphere in S/m
-    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
     n = 50             #level of discretisation
@@ -185,9 +182,9 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     
     from examples.sphere import *
 
-    sig0 = 10.**-3          # conductivity of the wholespace in S/m
-    sig1 = 10.**-1         # conductivity of the sphere in S/m
-    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
     n = 50             #level of discretisation
@@ -266,9 +263,9 @@ the charges and not the reverse.
     
     from examples.sphere import *
 
-    sig0 = 10.**-3          # conductivity of the wholespace in S/m
-    sig1 = 10.**-1         # conductivity of the sphere in S/m
-    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
     n = 50             #level of discretisation
@@ -324,9 +321,9 @@ The figure below shows surface charge density at the surface of sphere.
 
     from examples.sphere import *
 
-    sig0 = 10.**-3          # conductivity of the wholespace in S/m
-    sig1 = 10.**-1         # conductivity of the sphere in S/m
-    sig2 = 10.**-5         # conductivity of the sphere in S/m
+    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
     n = 50             #level of discretisation
@@ -373,8 +370,8 @@ The reverse is observed for a resistive sphere.
     import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.          # conductivity of the wholespace
-    sig1 = 100.         # conductivity of the sphere
+    sig0 = 10.**-3.          # conductivity of the wholespace
+    sig1 = 10.**-1.         # conductivity of the sphere
     R    = 50.          # radius of the sphere
     E0   = 1.           # inducing field strength
     n = 50             #level of discretisation
@@ -390,8 +387,8 @@ The reverse is observed for a resistive sphere.
     ystart=-100.
     xend=100.
     yend=100.
-    nb_dipole=11
-    electrode_spacing=20
+    nb_dipole=31
+    electrode_spacing=10
 
     plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
     plt.show()
@@ -415,11 +412,11 @@ The only parameters that have changed are the radius and the conductivity of the
     import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.         
-    sig1 = 100.         
-    sig2 = 13.10344828
-    R0    = 10.          
-    R1 = 20.
+    sig0 = 10.**-3.         
+    sig1 = 10.**-2.         
+    sig2 = 1.310344828 * 10**-3.
+    R0    = 20.          
+    R1 = 40.
     E0   = 1.           
     n = 50             
     xr = np.linspace(-100, 100, n) 
@@ -434,6 +431,5 @@ The only parameters that have changed are the radius and the conductivity of the
     electrode_spacing = 20.
     PlotOpt = 'Total'
     
-    inversion_uncertainty(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
     plt.show()
-
