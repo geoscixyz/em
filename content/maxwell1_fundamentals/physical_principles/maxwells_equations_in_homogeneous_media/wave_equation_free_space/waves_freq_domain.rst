@@ -17,7 +17,7 @@ Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simpler form:
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  = 0
 
-where :math:`k` is the :ref:`wave number <wave_number>`. These equations are referred to as the vector Helmholtz equations. In a homogeneous medium, they support plane wave solutions. The electric and magnetic fields lie in a (x, y) plane and the wave propagates perpendicular to the plane (in the z-direction), as shown in FIGURE ???.
+where :math:`k` is the :ref:`wave number <wave_number>`. These equations are referred to as the vector Helmholtz equations. In a homogeneous medium, they support plane wave solutions. The electric and magnetic fields lie in a (x, y) plane and the wave propagates perpendicular to the plane (in the z-direction), as shown in :numref:`eha`.
 
 With this geometry, the governing equation for the electric field in 1D is:
 

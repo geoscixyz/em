@@ -31,7 +31,14 @@ From this, we can define the concept of skin depth. The skin depth :math:`\delta
 
 .. math:: \delta = \frac{1}{\beta}
 
-Figure ?? illustrates the concept of skin depth.
+:numref:`sd` illustrates the concept of skin depth.
+
+.. figure:: images/skindepth.png
+        :figwidth: 50%
+        :align: right
+        :name: sd
+
+        Skindepth is defined as the depth at which the amplitude of the wave has been reduced by :math:`1/e`.
 
 From Equation :eq:`wn1`, it is seen that :math:`\beta`, and hence :math:`\delta`, are dependent upon the ratios of physical properties and frequency. For many geophysical surveys, we have :math:`\frac{\epsilon \omega}{\sigma} \lt \lt 1` and :math:`k` is well-approximated as:
 

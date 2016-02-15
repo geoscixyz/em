@@ -34,9 +34,23 @@ The above solution was for the electric field but the magnetic field also has a 
 
 .. math:: \boldsymbol{\nabla} \times \mathbf{h} = \epsilon \frac{d\mathbf{e}}{dt}
 
-but will be 90 degree out of phase with the electric field.
+but will be 90 degrees out of phase with the electric field.
 
-The figures ???, motivated by those from :cite:`ward1988` outline some of the essential elements.
+:numref:`eha` and :numref:`ehb`, motivated by those from :cite:`ward1988`, outline some of the essential elements.
+
+.. figure:: images/EHa.png
+        :figwidth: 100%
+        :align: center
+        :name: eha
+
+        The electric and magnetic field propagate sinusoidally in the z-direction but they are 90 degrees out of phase.
+
+.. figure:: images/EHb.png
+        :figwidth: 100%
+        :align: center
+        :name: ehb
+
+        The electric and magnetic field propogate sinusoidally in time.
 
 The same conclusions are arrived at by working in the frequency-domain. Again, for a plane wave travelling in the z-direction, the wave equation for :math:`\mathbf{E}` is 
 
