@@ -108,7 +108,7 @@ charge cannot pass through this hemi-sphere region and accumulated on the left
 side closer to the input current. The magnitude of negative charge build-up on
 the right side is much smaller than the postive charge on the other side.
 These postive and negative charges will generate electric fields based on
-Coulomb's law (See Section :ref:`coulomb`).
+Coulomb's law (See Section :ref:`gauss_electric_equivalence_to_coulombs_law`).
 
 .. figure:: ../../images/ComparisonSecFineChargs.png
    :align: center

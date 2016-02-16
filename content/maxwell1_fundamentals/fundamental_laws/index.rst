@@ -3,10 +3,12 @@
 Fundamental Laws
 ================
 
+.. todo:: Overview of this section, and why it is important. 
+
 **Contents:**
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     gauss_electric
     gauss_magnetic
@@ -16,4 +18,4 @@ Fundamental Laws
     biot_savart
     lenz
     interface_conditions
-    
+    details
