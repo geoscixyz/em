@@ -116,7 +116,7 @@ Consider the situation in the figure below, at a boundary between two media
 with different conductivities but both with dielectric permittivity
 :math:`\varepsilon = \varepsilon_0`.
 
-.. image:: ../images/boundryChargeBuildup.PNG
+.. image:: ./images/boundryChargeBuildup.PNG
    :scale: 75 %
    :align: center
    
@@ -168,14 +168,14 @@ terms of the ratio of the two conductivities
 In the case where current is flowing from a resistive layer to a more
 conductive layer (i.e. :math:`\sigma_2 > \sigma_1`),
 
-.. image:: ../images/resOnTop.PNG
+.. image:: ./images/resOnTop.PNG
    :scale: 75 %
    :align: center
 
 .. math:: 
 		\sigma_1 < \sigma_2 \implies \tau_f <0
 
-.. image:: ../images/negChargeBuildup.PNG
+.. image:: ./images/negChargeBuildup.PNG
    :scale: 75 %
    :align: center
 
@@ -183,14 +183,14 @@ We get a buildup of negative charges on the boundary, and in the case where
 flow is from a resistive layer to a conductive layer (i.e. :math:`\sigma_1 >
 \sigma_2`)
 
-.. image:: ../images/condOnTop.PNG
+.. image:: ./images/condOnTop.PNG
    :scale: 75 %
    :align: center
 
 .. math:: 
 		\sigma_1 > \sigma_2 \implies \tau_f >0
 
-.. image:: ../images/posChargeBuildup.PNG
+.. image:: ./images/posChargeBuildup.PNG
    :scale: 75 %
    :align: center
 
@@ -210,7 +210,7 @@ difference, finite element, or finite volume methods. However if we use a
 mimetic discretization of the full Maxwell equations, we can derive a
 discretization of the DC equation from the discrete Maxwell equations. For a
 brief discussion of the discretization of Maxwell's equation, see the section
-:ref:`Maxwell_Discretization` on this website. The following notation for the
+:ref:`finite_volume_discretization` on this website. The following notation for the
 discrete system in this section comes from that page.
 
 The discrete potential field condition is :math:`\tilde{\mathbf{e}} =

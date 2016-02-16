@@ -8,7 +8,7 @@ Fields from grounded sources: DCR
 **Contents**
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
     analytical_solutions/index
     effects_of_topography/index

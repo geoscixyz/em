@@ -3,11 +3,14 @@
 Solving Maxwell's Equations
 ===========================
 
+.. todo:: what is covered here and why
+
+
 **Contents**
 
 .. toctree::
     :maxdepth: 2
 
-    Maxwell_Discretization
-    Forward_Modelling
-
+    numeric/index
+    analytic/index
+    semianalytic/index
