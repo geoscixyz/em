@@ -830,6 +830,15 @@ def interactive_two_configurations_comparison(log_sig0,log_sig1,log_sig2,R0,R1,x
     XYZ = ndgrid(xr,yr,zr) # Space Definition
     PlotOpt = 'Total'
     
+    #Initializing the figure
+    fig = plt.figure(figsize=(20,20))
+    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6) #Configuration Conductive Sphere
+    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6) #Configuration Resistive Sphere
+    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4) # Data
+    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6) #Potential Conductive Sphere
+    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6) #Potential Resistive Potential
+    ax = [ax0,ax1,ax2,ax3,ax4]
+    
     if matching_spheres_example:
         sig0 = 10.**(-3)         
         sig1 = 10.**(-2)         
@@ -837,10 +846,10 @@ def interactive_two_configurations_comparison(log_sig0,log_sig1,log_sig2,R0,R1,x
         R0   = 20.          
         R1   = 40.
 
-        two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,dipole_number,electrode_spacing,PlotOpt)
+        two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,dipole_number,electrode_spacing,PlotOpt,ax)
 
     else:
-        two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,dipole_number,electrode_spacing,PlotOpt)
+        two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,dipole_number,electrode_spacing,PlotOpt,ax)
 
     plt.tight_layout(True)
     plt.show()
