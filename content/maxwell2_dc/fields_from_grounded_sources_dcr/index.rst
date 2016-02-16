@@ -10,7 +10,11 @@ Fields from grounded sources: DCR
 .. toctree::
     :maxdepth: 3
 
-    analytical_solutions/index
+    current_sources_in_a_wholespace
+    current_sources_in_a_halfspace
+    electrostatic_sphere
+    point_current_source_and_sphere
+    layered_earth
     effects_of_topography/index
     effects_of_localized_conductivity_amonalies
     dcr_in_complex_media
