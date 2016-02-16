@@ -371,14 +371,13 @@ The reverse is observed for a resistive sphere.
     from examples.sphere import *
 
     sig0 = 10.**-3.          # conductivity of the wholespace
-    sig1 = 10.**-1.         # conductivity of the sphere
+    sig1 = 10.**-1.         # conductivity of the conductive sphere
+    sig2 = 10.**-5.         # conductivity of the resistive sphere
     R    = 50.          # radius of the sphere
     E0   = 1.           # inducing field strength
     n = 50             #level of discretisation
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
     PlotOpt = 'Total'
@@ -390,7 +389,25 @@ The reverse is observed for a resistive sphere.
     nb_dipole=31
     electrode_spacing=10
 
-    plot_PotentialDifferences(XYZ,R,sig0,sig1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    #Initializing the figure
+    fig = plt.figure(figsize=(20,20))
+    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6)
+    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6)
+    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4)
+    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6)
+    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6)
+    ax = [ax0,ax1,ax2,ax3,ax4]
+
+    two_configurations_comparison(XYZ,sig0,sig1,sig2,R,R,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt,ax)
+
+    #Set Title
+    ax[0].set_title('Conductive Sphere',fontsize=ftsize_title)
+    ax[1].set_title('Resistive Sphere',fontsize=ftsize_title)
+    ax[3].set_title('Conductive Sphere: \n Total Potential',fontsize=ftsize_title)
+    ax[4].set_title('Resistive Sphere: \n Total Potential',fontsize=ftsize_title)
+    ax[2].legend(('Conductive Sphere Response','Resistive Sphere Response'),loc=4 )
+
+    plt.tight_layout()
     plt.show()
 
 
@@ -430,6 +447,18 @@ The only parameters that have changed are the radius and the conductivity of the
     nb_dipole = 11
     electrode_spacing = 20.
     PlotOpt = 'Total'
+
+    #Initializing the figure
+    fig = plt.figure(figsize=(20,20))
+    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6) #Configuration Conductive Sphere
+    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6) #Configuration Resistive Sphere
+    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4) # Data
+    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6) #Potential Conductive Sphere
+    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6) #Potential Resistive Potential
+    ax = [ax0,ax1,ax2,ax3,ax4]
     
-    two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    #Plot Configuration, Potential and Data
+    two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt,ax)
+    
+    plt.tight_layout()
     plt.show()
