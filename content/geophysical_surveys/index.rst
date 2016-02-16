@@ -10,7 +10,6 @@ Geophysical Surveys
 
     fundamentals/index
     dcr/index
-    emi_tutorial/index
     looploopfdem/index
 
 
