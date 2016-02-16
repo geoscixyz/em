@@ -1,13 +1,13 @@
-.. _electrical_conductivity_index: 
+.. _electrical_conductivity_index:
 
 Electrical Conductivity
 =======================
 
 .. What is it
 
-Electrical conductivity is an intrinsic property that quantifies how well electrical charges move in a given material. As shown in :numref:`Chargeflow`, under the applied electric field, charges in a rock flow from positive to negative potential. Since electric current is how much charges move within a unit of time, a high conductivity means a material that readily allows the flow of electric current. In geophysics, conductivity is usually represented by the Greek letter :math:`\sigma` (S/m). 
+Electrical conductivity is an intrinsic property that quantifies how well electrical charges move in a given material. As shown in :numref:`Chargeflow`, under the applied electric field, charges in a rock flow from positive to negative potential. Since electric current is how much charges move within a unit of time, a high conductivity means a material that readily allows the flow of electric current. In geophysics, conductivity is usually represented by the Greek letter :math:`\sigma` (S/m).
 
-Electrical resistivity is the reciprocal of electrical conductivity, and material’s ability to oppose an electric current. It is usually represented by the Greek letter :math:`\rho` (:math:`\Omega`-m) in geophysics. 
+Electrical resistivity is the reciprocal of electrical conductivity, and material’s ability to oppose an electric current. It is usually represented by the Greek letter :math:`\rho` (:math:`\Omega`-m) in geophysics.
 
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/Chargeflow.png
    :align: center
@@ -15,13 +15,13 @@ Electrical resistivity is the reciprocal of electrical conductivity, and materia
 
    Flow of charges under an applied electric field.
 
-The electrical charge is mostly carried by ions and electrons (charge carriers). Mobilities of the charge carriers vary dynamically resulting in diverse range for the conductivity of a material from highly conducting metals to nearly perfect insulators as shown in :numref:`LogCond`. 
+The electrical charge is mostly carried by ions and electrons (charge carriers). Mobilities of the charge carriers vary dynamically resulting in diverse range for the conductivity of a material from highly conducting metals to nearly perfect insulators as shown in :numref:`LogCond`.
 
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/LogCond.png
    :align: center
    :name: LogCond
 
-   Figure Captions Various conductivity values for different materials. 
+   Figure Captions Various conductivity values for different materials.
 
 .. todo:: where is it diagnostic?
 
@@ -51,15 +51,8 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
     :maxdepth: 2
 
     electrical_conductivity_lab_setup_measurements
-    electrical_conductivity_units_values    
+    electrical_conductivity_units_values
     electrical_conductivity_factors
     electrical_conductivity_mathematical_relationships
-
-    .. References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
-
-    .. Knight and Enders: An introduction to Rock Physics Principles for near surface geophysics: Investigations in geophysics No13; SEG Near;-Surface Geophysics edited by Dwain Butler
-
-    .. Stan Ward: Resistivity ad Induced Polarization Methods (p147..)
-    .. Investigations in geophysics #5; Geotechical and environemental geophysics.
 
 

@@ -11,12 +11,12 @@ Earth material can be polarizable under the external electric field, which makes
 
    Overvoltage effects. (a) Input current. (b) Measured voltage.
 
-Here :math:`V_\infty` and :math:`V_0` respecively indicate measured voltage at infinte and zero frequencies. The chargeability can be expressed as 
+Here :math:`V_\infty` and :math:`V_0` respecively indicate measured voltage at infinte and zero frequencies. The chargeability can be expressed as
 
 .. math::
     \eta = \frac{V_0-V_\infty}{V_0}
 
-or 
+or
 
 .. math::
     \eta = \lim_{t \to 0} V_s(t),
@@ -35,10 +35,6 @@ growing interest in the possibility of using chargeability to aid in the
 detection and delineation of contaminants in the ground. There has also been
 some effort to apply IP to oil and gas exploration.
 
-
-.. todo:: Citations
-
-
 **Contents**
 
  .. toctree::
@@ -53,8 +49,6 @@ some effort to apply IP to oil and gas exploration.
 
 .. Knight and Enders: An introduction to Rock Physics Principles for near surface geophysics: Investigations in geophysics No13; SEG Near;-Surface Geophysics edited by Dwain Butler
 
-.. Stan Ward: Resistivity ad Induced Polarization Methods (p147..)
-.. Investigations in geophysics #5; Geotechical and environemental geophysics.
-    
+
 
 

@@ -3,7 +3,7 @@
 Factors that affect chargeability
 =================================
 
-The chargeability of earth materials is essentially an electrochemical effect caused by many factors, not all of which are completely understood. If ground is chargeable, it responds as if resistivity was a complex quantity - it behaves somewhat like a leaky capacitor. Therefore the chargeability can be measured in a number of ways using time domain or frequency domain techniques. 
+The chargeability of earth materials is essentially an electrochemical effect caused by many factors, not all of which are completely understood. If ground is chargeable, it responds as if resistivity was a complex quantity - it behaves somewhat like a leaky capacitor. Therefore the chargeability can be measured in a number of ways using time domain or frequency domain techniques.
 Aspects affecting the chargeability of a sample include:
 
 	 - the grain size of particles in the sample;
