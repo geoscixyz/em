@@ -31,6 +31,6 @@ where :math:`t_1` and :math:`t_2` are arbitrary times. The unit of pseudo-charge
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/DCIPcurve.png
    :align: center
    :scale: 50%
-   :name: DCIPcurve
+   :name: DCIPcurve_labsetup
 
    Figure Measured time domain IP curve.
