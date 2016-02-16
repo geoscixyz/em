@@ -25,10 +25,10 @@ With this geometry, the governing equation for the electric field in 1D is:
 
 where :math:`\mathbf{E} \equiv \mathbf{E}(z,\omega)`. This has a solution as following:
 
-.. math:: \mathbf{E} = \mathbf{E}_0 e^{\pm ikz},
+.. math:: \mathbf{E} = \mathbf{E}_0 e^{\pm ikz} = 0,
         :name: fd1
 
-where :math:`k = (\mu \epsilon \omega - i\mu\sigma\omega)^2` is the complex :ref:`wave number <wave_number>` and :math:`\mathbf{E}_0` is the amplitude. Writing the wave number as :math:`k = k_R + ik_I` and substituting into Equation :eq:`fd1` yields:
+where :math:`k = \sqrt{\mu \epsilon \omega^2 - i\mu\sigma\omega}` is the complex :ref:`wave number <wave_number>` and :math:`\mathbf{E}_0` is the amplitude. Writing the wave number as :math:`k = k_R + ik_I` and substituting into Equation :eq:`fd1` yields:
 
 .. math:: \mathbf{E} = \mathbf{E}_0 e^{\pm i(k_R +ik_I)z},
 

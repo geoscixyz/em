@@ -48,7 +48,7 @@ Thus the skin depth becomes:
 
 .. math:: \delta = \frac{1}{\beta} = \sqrt{\frac{2}{\omega \mu \sigma}}.
 
-Assuming permeability of free space, :math:`\mu_0 = 4\pi times 10^{-7}` H/m, and writing :math:`\omega=2\pi f`, we obtain the following useful equation for :math:`\delta` in meters:
+Assuming permeability of free space, :math:`\mu_0 = 4\pi \times 10^{-7}` H/m, and writing :math:`\omega=2\pi f`, we obtain the following useful equation for :math:`\delta` in meters:
 
 .. math:: \delta \approx 500 \sqrt{\frac{1}{f \sigma}} = 500 \sqrt{\frac{\rho}{f}}.
 
