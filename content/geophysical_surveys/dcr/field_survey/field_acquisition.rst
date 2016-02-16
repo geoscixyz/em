@@ -21,7 +21,7 @@ the transmitter controller, and either quantity can be set to a particular
 amount within the power limit. An example of a generator hooked up to a
 transmitter in the field is shown in :numref:`generator_DC` below.
 
-.. figure:: images/generator_transmitter.jpg
+.. figure:: ../images/generator_transmitter.jpg
    :scale: 40%
    :align: center
    :name: generator_DC
@@ -36,7 +36,7 @@ current wire (red) used for a DC/IP survey is shown in
 :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires
 (orange).
 
-.. figure:: images/current_receiver_wire.JPG
+.. figure:: ../images/current_receiver_wire.JPG
    :scale: 10%
    :align: center
    :name: current_receiver_wire_DC
@@ -60,7 +60,7 @@ the positive on-time and will discharge during the corresponding off-time. The
 mirror image will happen during the negative on-time and off-time. Once again
 these curves are stacked to reduce the noise.
 
-.. figure:: images/IP_waveform.jpg
+.. figure:: ../images/IP_waveform.jpg
    :scale: 100%
    :align: center
    :name: IP_waveform
@@ -73,7 +73,7 @@ any IP effect has taken place, as noted by :math:`\mathrm{V}_{\sigma}` in
 beneath the voltage curve between two user defined time points (t1 and t2).
 The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
 
-.. figure:: images/IP_waveform2.jpg
+.. figure:: ../images/IP_waveform2.jpg
    :scale: 80%
    :align: center
    :name: IP_waveform2
@@ -84,7 +84,6 @@ The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
 
 Receivers
 ---------
-
 
 **DC resistivity**: Two receiver electrodes are used to measure the voltage difference in a DC/IP
 survey. Non-polarizing electrodes are commonly porous pots composed of a solid
@@ -97,7 +96,7 @@ collected simultaneously. An example of a porous pot receiver electrode for a
 DC/IP survey with a copper sulphate solution is shown in
 :numref:`porous_pot_receiver`.
 
-.. figure:: images/receiver_electrode_porous_pots_receiver.jpg
+.. figure:: ../images/receiver_electrode_porous_pots_receiver.jpg
    :scale: 70%
    :align: center
    :name: porous_pot_receiver
@@ -115,7 +114,7 @@ and two potential electrodes. Conventionally, for a 2D survey the receiver
 electrodes are placed in a linear fashion away from the transmitter electrode
 as shown in the figure below.
 
-.. figure:: images/poledipole.png
+.. figure:: ../images/poledipole.png
    :scale: 80%
    :align: center
 
@@ -129,7 +128,7 @@ of the survey to place the data points. The plotting point is located half-way
 between the nearest current electrode and the receiver electrode at a depth of
 one-half the horizontal transmitter-receiver separation.
 
-.. figure:: images/pole-dipole_pseudo.jpg
+.. figure:: ../images/pole-dipole_pseudo.jpg
    :scale: 100%
    :align: center
 
@@ -146,7 +145,7 @@ shown in :numref:`MIMDAS_layout`.
 
 **MIMDAS** :
 
-.. figure:: images/MIMDASlayout.jpeg
+.. figure:: ../images/MIMDASlayout.jpeg
    :scale: 90%
    :align: center
    :name: MIMDAS_layout

@@ -1,10 +1,8 @@
-.. _dcr_survey_design:
+.. _dcr_survey_geometry:
 
-Survey Design
-=============
+Survey geometry
+===============
 
- - Factors that are important
- - Depth of investigation
 
 Common DC resistivity survey designs
 - pole-pole
@@ -14,3 +12,5 @@ Common DC resistivity survey designs
 - Wenner array
 - Gradient array
 
+Factors that are important
+- ie. Depth of investigation
