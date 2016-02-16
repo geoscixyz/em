@@ -51,6 +51,8 @@ Contents:
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
    content/case_histories/index
+   content/equation_bank
+
    content/references
 
 
