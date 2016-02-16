@@ -77,9 +77,9 @@ are set to transparent using a :ref:`Depth of Investigation<depth_of_investigati
 .. toctree::
     :maxdepth: 2
 
-    field_acquisition
-    data
-    survey_design
+    governing_equations
+    example
+    field_survey/index
     interpretation
     practical_considerations
     

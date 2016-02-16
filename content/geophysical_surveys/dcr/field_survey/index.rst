@@ -15,5 +15,5 @@ quick overview of field survey
     survey_geometry
     topography
     field_notes
-    essential_information
+    essential_information_for_interpretation
     data
