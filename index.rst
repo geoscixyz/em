@@ -54,8 +54,6 @@ Contents:
    content/equation_bank
 
    content/references
-   content/emi_tutorial
-
 
 
 
