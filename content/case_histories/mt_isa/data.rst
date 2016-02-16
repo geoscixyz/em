@@ -8,6 +8,8 @@ DCR
 
 Presentation of data, difficulties, anything germain.
 
+.. raw:: html
+  :file: ./images/MIM_2D_data.html
 
 IP
 --
