@@ -855,8 +855,7 @@ def interactive_two_configurations_comparison(log_sig0,log_sig1,log_sig2,R0,R1,x
     plt.show()
 
 
-
-if __name__ == '__main__':
+def run(PlotIt=True):
     sig0 = -3.          # conductivity of the wholespace
     sig1 = -1.         # conductivity of the sphere
     sig0, sig1 = conductivity_log_wrapper(sig0,sig1)
@@ -868,17 +867,28 @@ if __name__ == '__main__':
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = ndgrid(xr,yr,zr) # Space Definition
 
-    fig, ax = plt.subplots(2,5,figsize=(50,10))
-    ax[0,0] = get_Setup(XYZ,sig0,sig1,R,E0,ax[0,0],True,[0.6,0.1,0.1])
-    ax[1,0] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[1,0])
-    ax[0,1] = Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0,1])
-    ax[1,1] = Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1,1])
-    ax[0,2] = Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0,2])
-    ax[1,2] = Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1,2])
-    ax[0,3] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0,3])
-    ax[1,3] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1,3])
-    ax[0,4] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[0,4])
-    ax[1,4] = Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[1,4])
+    Vt,Vp,Vs = get_Potential(XYZ,sig0,sig1,R,E0)
+    Et, Ep, Es = get_ElectricField(XYZ,sig0,sig1,R,E0)
+    Jt,Jp,Js = get_Current(XYZ,sig0,sig1,R,Et,Ep,Es)
+    rho = get_ChargesDensity(XYZ,sig0,sig1,R,Et,Ep)
+
+    if PlotIt:
+        fig, ax = plt.subplots(2,5,figsize=(50,10))
+        ax[0,0] = get_Setup(XYZ,sig0,sig1,R,E0,ax[0,0],True,[0.6,0.1,0.1])
+        ax[1,0] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[1,0])
+        ax[0,1] = Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0,1])
+        ax[1,1] = Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1,1])
+        ax[0,2] = Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0,2])
+        ax[1,2] = Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1,2])
+        ax[0,3] = Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0,3])
+        ax[1,3] = Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1,3])
+        ax[0,4] = Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax[0,4])
+        ax[1,4] = Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[1,4])
+
+        plt.show()
+
+    return Vt,Vp,Vs,Et,Ep,Es,Jt,Jp,Js,rho
     
 
-    plt.show()
+if __name__ == '__main__':
+    run()
