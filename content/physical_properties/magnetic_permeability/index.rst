@@ -13,6 +13,7 @@ Magnetic Permeability and Magnetic Susceptibility
     magnetic_permeability_units_values
     magnetic_permeability_factors
     magnetic_permeability_lab_setup_measurements
+    magnetic_permeability_mathematical_relationships
 
 
 
