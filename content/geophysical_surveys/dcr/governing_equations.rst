@@ -3,5 +3,5 @@
 Governing Equations
 ===================
 
- - DC equations, links to steady state
- - canonical example : currents in a half-space (or layer over-halfspace)
+Short section on governing equations with links back to Maxwell1, Maxwell2
+

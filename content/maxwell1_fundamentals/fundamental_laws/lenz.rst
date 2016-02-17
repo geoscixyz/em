@@ -44,8 +44,16 @@ linked below provide visual illustrations of Lenz's Law.
     shown in panel (b). Similarly, panel (c) shows when the magnetic flux
     through the loop is decreasing as a function of time and panel (d)
     demonstrates the direction of the induced current and secondary magnetic
-    field.  (Figure was created by M. Mitchell using the following Wikimedia Commons images: `VFPt_dipole <https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg>`_ and `VFPt ringcurrentNoLoop <https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg>`_ both of which are licensed under `Creative Commons Attribution-Share Alike 3.0 Unported <https://creativecommons.org/licenses/by-sa/3.0/deed.en>`_.)
+    field.  (Figure was created by M. Mitchell using the following Wikimedia 
+    Commons images: `VFPt_dipole <https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg>`_ 
+    and `VFPt ringcurrentNoLoop <https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg>`_ 
+    both of which are licensed under `Creative Commons Attribution-Share Alike 3.0 
+    Unported <https://creativecommons.org/licenses/by-sa/3.0/deed.en>`_.)
 
 Illustrative Demo:
-`MIT Physics Demo - Lenz's Law with Copper Pipe 
-<http://video.mit.edu/watch/physics-demo-lenzs-law-with-copper-pipe-10268/>`_.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA" frameborder="0" allowfullscreen></iframe></div>
+
+Thanks to the Technical Services Group (TSG) at MIT's Department of Physics for this great demo!
