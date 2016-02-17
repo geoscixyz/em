@@ -1,4 +1,4 @@
-_dcr_in_complex_media:
+.. _dcr_in_complex_media:
 
 DCR in complex media
 ====================
