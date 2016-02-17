@@ -3,12 +3,6 @@
 Direct Current Resistivity
 ==========================
 
-
-- Intro:
-	- brief overview of the experiment
-	- applications
-	- links to case-histories
-
  .. figure:: images/DCR_Intro.png
     :align: right
     :scale: 80% 
@@ -78,9 +72,8 @@ are set to transparent using a :ref:`Depth of Investigation<depth_of_investigati
     :maxdepth: 2
 
     governing_equations
-    field_acquisition
-    data
-    survey_design
+    example
+    field_survey/index
     interpretation
     practical_considerations
     

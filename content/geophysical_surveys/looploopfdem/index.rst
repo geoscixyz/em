@@ -13,9 +13,9 @@ Loop Loop FDEM
     :maxdepth: 1
 
     governing_equations
-    field_acquisition
-    data
-    survey_design
+    example
+    field_survey/index
     interpretation
     practical_considerations
+    
     
