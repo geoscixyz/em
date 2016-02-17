@@ -156,13 +156,13 @@ for a half-space,
 .. math::
     \Theta = tan^{-1} \frac{Im({Z_{xy}})}{Re({Z_{xy}})} 
     = tan^{-1} \frac{\omega \mu}{(1-j) \sqrt{\frac{\omega \mu \sigma}{2}}} 
-    = \mathbf{ \frac{\pi}{4} }
+    = \frac{\pi}{4}
 
 
-If \\(\\sigma \\) **increases** at depth, then \\(\ \Theta \\) **increases** before returning to 45°
+If \\(\\sigma \\) **increases** at depth, then \\(\\Theta \\) **increases** before returning to 45°
 
 
-If \\(\\sigma \\) **decreases** at depth, then \\(\\Theta \\) decreases before returning to 45°
+If \\(\\sigma \\) **decreases** at depth, then \\(\\Theta \\) **decreases** before returning to 45°
 
 
 Survey Design
