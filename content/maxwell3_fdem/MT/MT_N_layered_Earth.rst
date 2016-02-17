@@ -141,6 +141,10 @@ Apparent Resistivity
 .. math::
     \rho_{app} = \frac{1}{\mu_0 \omega} |\hat{Z_{xy}}|
 
+For a half-space, \\(\\rho_{app} = \\rho_{earth}\\).
+
+For a unhomogeneous earth, \\(\\rho_{app}\\) at a particular frequency is an average of the conductivity of the earth on about a sphere with a radius equal to the skin depth.
+
 Phase
 *****
 
