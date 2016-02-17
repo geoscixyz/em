@@ -10,9 +10,9 @@ electrostatic field. This scenario gives us a setting to examine aspects of
 the DC resistivity experiment, including the behavior of electric potentials,
 electric fields, current density and the build up of charges at interfaces.
 This work follows the derivation in :cite:`ward1988` and is supported by apps developed in
-a `Jupyter Notebook`_.
+a `binder`_.
 
-.. _Jupyter Notebook: https://github.com/ubcgif/em/blob/master/examples/sphere/ElectrostaticSphere.ipynb
+.. _binder: http://app.mybinder.org/2812269173/notebooks/steady_state/electrostatic_sphere/ElectrostaticSphere_example.ipynb
 
 Setup
 -----
