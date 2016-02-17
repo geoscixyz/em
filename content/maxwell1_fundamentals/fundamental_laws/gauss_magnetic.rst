@@ -79,7 +79,7 @@ Gauss's law can be derived using the :ref:`Biot-Savart law <biot_savart>`,
 which is defined as:
 
 .. math::
-        \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2},
+        \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \frac{(\mathbf{j} (\mathbf{r'}) dv) \times ~\mathbf{\hat{\underline{r}}}}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2},
        :label: gauss_biot_savart 
 
 where:
@@ -91,7 +91,7 @@ where:
 Taking the divergence of both sides of Equation :eq:`gauss_biot_savart` yields:
 
 .. math::
-        \nabla \cdot \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \nabla \cdot \frac{(\mathbf{j} (\mathbf{r'}) dv) \times (\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}.
+        \nabla \cdot \mathbf{b}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_V \nabla \cdot \frac{(\mathbf{j} (\mathbf{r'}) dv) \times ~\mathbf{\hat{\underline{r}}}}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2}.
         :label: gauss_bs_div
 
 To carry through the divergence of the integrand in Equation
@@ -103,11 +103,11 @@ To carry through the divergence of the integrand in Equation
 Thus, the integrand becomes:
 
 .. math::
-        \left[ \mathbf{j} (\mathbf{r'}) \cdot \left( \nabla \times \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \right) \right] - \left[ \frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \cdot \left( \nabla \times \mathbf{j} (\mathbf{r'}) \right) \right]
+        \left[ \mathbf{j} (\mathbf{r'}) \cdot \left( \nabla \times \frac{~\mathbf{\hat{\underline{r}}}}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \right) \right] - \left[ \frac{~\mathbf{\hat{\underline{r}}}}{\lvert \mathbf{r} - \mathbf{r'} \rvert ^2} \cdot \left( \nabla \times \mathbf{j} (\mathbf{r'}) \right) \right]
         :label: gauss_inside_div
 
 The first part of Equation :eq:`gauss_inside_div` is zero as the curl of
-:math:`\frac{(\widehat{\mathbf{r}-\mathbf{r'}})}{\lvert \mathbf{r} -
+:math:`\frac{~\mathbf{\hat{\underline{r}}}}{\lvert \mathbf{r} -
 \mathbf{r'} \rvert ^2}` is zero. The second part of Equation
 :eq:`gauss_inside_div` becomes zero because :math:`\mathbf{j}` depends on
 :math:`r'` and :math:`\nabla` depends only on :math:`r`. Plugging this back

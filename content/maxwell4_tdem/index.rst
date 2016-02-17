@@ -3,6 +3,8 @@
 Maxwell IV: TDEM
 ================
 
+**Purpose:**
+
 Contents:
 
 .. toctree::

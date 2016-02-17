@@ -3,8 +3,11 @@
 Practical Considerations
 ========================
 
-Other items that come into play in practice
-- Effects of topography
+- Waveform (dual polarity for handling self-potentials)
+- Contact resistance of electrodes
+- Repetitive use current/potential electrodes
+- …. lots of items
+
 
 Data challenges
 - polarity
