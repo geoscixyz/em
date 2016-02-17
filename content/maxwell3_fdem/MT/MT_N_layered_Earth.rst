@@ -5,7 +5,8 @@ Response of a layered Earth to a plane wave
 
 This work follows the derivation in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
-.. _binder: http://app.mybinder.org/2812269173/notebooks/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+
 
 
 
