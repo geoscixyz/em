@@ -15,6 +15,7 @@ Fields from grounded sources: DCR
     electrostatic_sphere
     point_current_source_and_sphere
     layered_earth
-    effects_of_topography/index
+    effects_of_topography
     effects_of_localized_conductivity_amonalies
     dcr_in_complex_media
+    details/index

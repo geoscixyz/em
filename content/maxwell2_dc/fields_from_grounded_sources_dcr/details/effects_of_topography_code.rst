@@ -1,4 +1,4 @@
-.. _effecttopo_code:
+.. _effects_of_topography_code:
 
 Code: Sphere solution of DC problem
 ===================================
