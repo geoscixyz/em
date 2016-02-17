@@ -76,7 +76,7 @@ For more information about survey design for specific geophysical methods, see
 tthe following pages:
 
 - :ref:`DC resistivity survey geometry <dcr_survey_geometry>`
-- :ref:`Loop-loop FDEM survey geometry <looploopfdem_geometry>`
+- :ref:`Loop-loop FDEM survey geometry <looploopfdem_survey_geometry>`
 
         
 

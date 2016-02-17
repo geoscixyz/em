@@ -11,6 +11,7 @@ This builds upon the solution for :ref:`point_current_source_and_sphere`. By set
 symmetry, the solution for a 
 hemispherical depression within a halfspace is presented.  
 
+.. _effects_of_topography_electric_potential_hemispherical_depression:
 
 Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 -------------------------------------------------------------------------------
@@ -72,6 +73,8 @@ trigonometry of the problem.
    Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.
 
 
+.. _effects_of_topography_examples:
+
 Examples
 --------
 
@@ -116,6 +119,9 @@ Observations of total, primary, and secondary electric fields and charge
 density will provide us with a comprehensive understanding of topographic
 effects in the DC problem.
 
+
+.. _effects_of_topography_numerical_validations:
+
 Numerical validations
 *********************
 
@@ -131,8 +137,8 @@ to infinity) to simulate air, and the half-space is set to and :math:`10^3`
 ohm-m.  To compute potentials from the above depressed hemi-sphere model, we
 first use numerical solutions using DCIP3D code :cite:`oldenburg1994`. Then to check the
 accuracy of our numerical algorithm we use analytic solution of a sphere
-problem that we derived in Section :ref:`effecttopo_theory`. For the numerical
-evaluation of that an analytic solution we use :ref:`effecttopo_code`. To
+problem that we derived in Section :ref:`effects_of_topography_electric_potential_hemispherical_depression`. For the numerical
+evaluation of that an analytic solution we use :ref:`effects_of_topography_code`. To
 proceed with this validation, we consider a pole transmitter injected in the
 ground. In the above figure, injected current source location is shown.
 
