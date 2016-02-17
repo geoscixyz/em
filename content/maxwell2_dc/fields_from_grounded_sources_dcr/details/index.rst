@@ -3,9 +3,6 @@
 Details
 =======
 
-.. topic:: GOAL
-
-    the purpose of this is to
 
 .. toctree::
    :hidden:
