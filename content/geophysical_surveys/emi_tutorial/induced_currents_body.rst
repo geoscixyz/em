@@ -71,6 +71,9 @@ Consider complex response function, :math:`Q` as
 	For low frequencies the response is in the imaginary part, for high frequencies it will be in the real part.
 
 .. todo::
+
+	Add plot for response function (real and imaginary)...
+
 	Make interative phasor diagram ...
 
 Phase of the complex response function can be written as
@@ -86,6 +89,10 @@ We consider Faraday's law :math:`\nabla \times \vec{E} = -\imath\omega\vec{B}`, 
 .. math::
 	\psi = -\frac{\pi}{2} - tan^{-1}\Big(\frac{R}{\omega L}\Big)
 
+So the phase of the current vary with frequency. At low frequencies the information aboutthe conductor is in the quadarature (imaginary part) portion, at high freuquencies it is in out-of-phase (real part) portion.
 
+- Question: If we replace the loop by a body
 
+.. todo::
+	Add box figure with finite length
 
