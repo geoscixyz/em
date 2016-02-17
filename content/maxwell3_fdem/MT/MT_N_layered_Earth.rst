@@ -3,7 +3,11 @@
 Response of a layered Earth to a plane wave
 ===========================================
 
-.. _Jupyter Notebook:
+This work follows the derivation in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
+
+.. _binder: http://app.mybinder.org/2812269173/notebooks/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+
+
 
 Introduction
 ------------
@@ -60,6 +64,12 @@ with k the wavenumber:
     k = \sqrt{\omega ^2 \mu \epsilon - i \omega \mu \sigma }
     :label: kwavenumber
 
+
+We usually assume that the displacement current is negligible, which means \\(\\sigma >> \\omega \\varepsilon\\). In this case 
+
+.. math::
+    k \simeq (1-j) \sqrt{ \frac{\omega \mu \sigma}{2} }
+    :label: kwavenumber_steadystate
 
 Taking the problem from the point of view of the electric field, we know the :ref:E_wave_propagation_equation has a solution in the form of:
 
@@ -135,7 +145,20 @@ Phase
 *****
 
 .. math::
-    \Theta =tan^{-1} \frac{Im(\hat{Z_{xy}})}{Re(\hat{Z_{xy}})} 
+    \Theta =tan^{-1} \frac{Im(\hat{Z_{xy}})}{Re(\hat{Z_{xy}})}
+
+for a half-space,
+
+.. math::
+    \Theta = tan^{-1} \frac{Im({Z_{xy}})}{Re({Z_{xy}})} 
+    = tan^{-1} \frac{\omega \mu}{(1-j) \sqrt{\frac{\omega \mu \sigma}{2}}} 
+    = \mathbf{ \frac{\pi}{4} }
+
+
+If \\(\\sigma \\) **increases** at depth, then \\(\ \Theta \\) **increases** before returning to 45°
+
+
+If \\(\\sigma \\) **decreases** at depth, then \\(\\Theta \\) decreases before returning to 45°
 
 
 Survey Design
