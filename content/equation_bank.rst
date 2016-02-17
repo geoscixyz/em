@@ -20,6 +20,12 @@ Equation Bank
 
         
 
+ - dcr_fwd
+
+    .. include:: equation_bank/dcr_fwd.rst
+
+        
+
  - electromotive_force_time
 
     .. include:: equation_bank/electromotive_force_time.rst

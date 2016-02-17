@@ -3,18 +3,21 @@
 Maxwell I: Fundamentals
 =======================
 
-In this chapter we first present a synopsis of Maxwell's equations in three forms:
-
-(a) :ref:`differential_equations_time`
-(b) :ref:`integral_equations_time`
-(c) :ref:`differential_equations_frequency`
-
-These are designed to be a quick access to the relevant equations with proper
-:ref:`notation<introduction_notation>` and units. Each of the four fundamental
-Maxwell equations, as well as the conservation of charge, is then explored in
-more detail to promote a physical understanding and provide insight as to
-where the law is useful. In addition we provide a short synopsis of the
-scientists involved in discovering the law.
+**Purpose:** Provide mathematical and physical understanding of Maxwell's equations that form the basis for EM surveys.
+ 
+This section contains essential material to understand Maxwell's equations and
+how they might be implemented in geophysical surveys. For many people the
+starting point might be the synopsis of the equations presented in the :ref:`Quick-
+Guide<quick_guide_maxwell>`, but background about the individual laws, their discovers, and
+associated physical principles are provided. These equations can be solved
+once appropriate boundary and interface conditions are provided. The details
+about the numerical solutions are left for other sources but we provide an
+overview here and links to SimPEG that the user can investigate. Great insight
+can be obtained by computing and visualizing electromagnetic fields that arise
+from controlled sources (e.g. electric and magnetic dipoles) in a homogeneous
+earth or an earth with topographic variations. Understanding these fields in
+frequency, or in time, provides a solid foundation for working with more
+complex situations that arise with individual surveys.
 
 **Contents**
 
