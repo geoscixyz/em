@@ -95,7 +95,7 @@ Unfortunately, this method cannot be used to find a bounded and
 convergent series for :math:`r=x_0`.
 
 Electric Potential for a Conducting Sphere in a Wholespace
-***********************************************************
+----------------------------------------------------------
 
 Let us now consider the electrical scalar potential at :math:`P` in the
 presence of a conducting sphere of radius :math:`a` and resistivity
