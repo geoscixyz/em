@@ -3,12 +3,6 @@
 Direct Current Resistivity
 ==========================
 
-
-- Intro:
-	- brief overview of the experiment
-	- applications
-	- links to case-histories
-
  .. figure:: images/DCR_Intro.png
     :align: right
     :scale: 80% 

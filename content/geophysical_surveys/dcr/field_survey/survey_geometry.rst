@@ -4,6 +4,7 @@ Survey geometry
 ===============
 
 .. todo:: 
+
     Common DC resistivity survey designs
     - pole-dipole
     - Schlumberger array

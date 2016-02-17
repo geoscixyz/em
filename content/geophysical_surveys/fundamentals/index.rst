@@ -6,7 +6,7 @@ Fundamentals
 this covers the fundamentals common to the geophysical methods we will discuss
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     seven_steps
     survey_design
