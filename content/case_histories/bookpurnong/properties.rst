@@ -21,3 +21,6 @@ For the purpose of studying the effect of SIS, hydrogeologists have sampled and 
 
 Those field physical property measurements confirmed that the water conductivity at Bookpurnong is at the order of 1 S/m. The actual conductivity of the ground may be lower if taking into account the porosity, but it is still much higher than the usual earth media. Also, the overall conductivity is higher towards the bank than in the flush zone; and higher near the surface than at depth. Please remember those information, as we will need this type of geological information to validate our interpretation models in Synthesis.
 
+Reference:
+K.L. Holland, I.D. Jolly, K.L. McEwan1, T.M. Doody, M. White, V. Berens, N. Souter, 2008, The ‘Bookpurnong Experiment’: will groundwater management and flooding improve the health of the floodplain vegetation? 2nd International Salinity Forum: Salinity, Water and Society – Global issues, local action. Adelaide, Australia.
+
