@@ -7,8 +7,8 @@ Details
 
 .. _wave_propagation_in_free_space_details: 
 
-Wave Propagation in free space
-------------------------------
+Derivation of wave euqations for homogeneous media
+--------------------------------------------------
 
 To derive the wave equations in time-domain, we begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations:
 
@@ -119,8 +119,10 @@ We now have two wave equations or second-order differential equations; one for t
 
 .. _speed_light_details: 
 
-Speed of light
---------------
+Solving the wave equation when :math:`\sigma=0`
+----------------------------------------------
+
+.. todo:: already have most of this. maybe remove or just add to the other material?
 
 In the case where :math:`\sigma` is zero, Equations :eq:`hme7` and :eq:`hmh7` become:
 

@@ -3,6 +3,11 @@
 Electromagnetic waves in free space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. todo:: add purpose/summary
+
+Time-domain
+-----------
+
 When electrical conductivity is zero, Maxwell's equations for :math:`\mathbf{e}` and :math:`\mathbf{h}` in the time-domain become:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}  = 0
@@ -13,11 +18,11 @@ When electrical conductivity is zero, Maxwell's equations for :math:`\mathbf{e}`
 
 The fields satisfy a wave equation. In 1D, we can easily find an analytic solution for such a wave equation. For a wave travelling in the z direction, the :math:`\mathbf{e}`-field, written in 1D as
 
-.. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \epsilon \frac{\partial \mathbf{e}}{\partial t} = 0
+.. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = 0
 
 and has a solution as following:
 
-.. math:: \mathbf{e} = e_0 \cos \left( 2 \pi \frac{z-vt}{\lambda} \right ),
+.. math:: \mathbf{e} = \mathbf{e_0} \cos \left( 2 \pi \frac{z-vt}{\lambda} \right ),
         :name: hme31
 
 where :math:`v` is the velocity of the wave:
@@ -28,7 +33,7 @@ In free space, with properties :math:`\mu_0` and :math:`\epsilon_0`, the velocit
 
 .. math:: c = \frac{1}{\sqrt{\epsilon \mu}} = 3 \times 10^8 m/s,
 
-which is the speed of light. Details of this derivation can be found :ref:`here <speed_light_details>`.
+which is the speed of light. Further details about the speed of light can be found :ref:`here <speed_light_details>`.
 
 The above solution was for the electric field but the magnetic field also has a harmonic dependence since since
 
@@ -51,6 +56,10 @@ but will be 90 degrees out of phase with the electric field.
         :name: ehb
 
         The electric and magnetic field propogate sinusoidally in time.
+
+
+Frequency-domain
+----------------
 
 The same conclusions are arrived at by working in the frequency-domain. Again, for a plane wave travelling in the z-direction, the wave equation for :math:`\mathbf{E}` is 
 

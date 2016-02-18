@@ -1,9 +1,11 @@
-.. _waves_freq_domain:
+.. _plane_wave_solution:
 
-Wave equations in the frequency domain
-======================================
+Plane wave solution
+===================
 
-To get the frequency-domain wave equations, we use the Fourier transform using an :math:`e^{i\omega t}` time dependence. If we look at the derivative of :math:`e^{i\omega t}` with respect to time, we see that it is :math:`i\omega e^{i\omega t}`. Thus, we can easily convert the :ref:`time-domain wave equations <wave_equations_time_domain>` to the frequency-domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega^2`. The frequency-domain equations are then expressed as:
+.. todo:: add purpose
+
+To get the frequency-domain wave equations, we use the Fourier transform using an :math:`e^{i\omega t}` time dependence. If we look at the derivative of :math:`e^{i\omega t}` with respect to time, we see that it is :math:`i\omega e^{i\omega t}`. Thus, we can easily convert the :ref:`time-domain wave equations <damped_wave_equation>` to the frequency-domain by replacing :math:`\partial/\partial t` with :math:`i \omega` and  :math:`\partial^2/\partial t^2` with :math:`-\omega^2`. The frequency-domain equations are then expressed as:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0
         :name: hme8
@@ -11,13 +13,13 @@ To get the frequency-domain wave equations, we use the Fourier transform using a
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{H}  = 0
         :name: hmh8
 
-Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simpler form:
+Equations :eq:`hme8` and :eq:`hmh8` can be written in a simpler form:
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{E} + k^2 \mathbf{E}  = 0
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  = 0
 
-where :math:`k` is the :ref:`wave number <wave_number>`. These equations are referred to as the vector Helmholtz equations. In a homogeneous medium, they support plane wave solutions. The electric and magnetic fields lie in a (x, y) plane and the wave propagates perpendicular to the plane (in the z-direction), as shown in :numref:`eha`.
+where :math:`k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega` is the :ref:`wave number <wave_number>`. These equations are referred to as the vector Helmholtz equations. In a homogeneous medium, they support plane wave solutions. The electric and magnetic fields lie in a (x, y) plane and the wave propagates perpendicular to the plane (in the z-direction), as shown in :numref:`eha`.
 
 With this geometry, the governing equation for the electric field in 1D is:
 

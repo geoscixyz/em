@@ -1,7 +1,19 @@
+.. _effect_conductivity_homogeneous_media:
+
+Effect of conductivity
+======================
+
+.. todo:: purpose
+
+- :ref:`wave_number`
+- :ref:`skindepth`
+- :ref:`phase_velocity`
+- :ref:`wavelength`
+
 .. _wave_number:
 
-Wavenumber and skin depth
-=========================
+Wave number
+-----------
 
 Using plane wave solution with terms :math:`e^{\pm ikz}`, along with the time dependence :math:`e^{i\omega t}`, the electric field (and analogiceously the magnetic field) can be written as:
 
@@ -26,6 +38,11 @@ The wave travelling in the positive z-direction has the form:
         :name: wn2
 
 The real and positive quantity :math:`\beta` controls how quickly the wave decays with :math:`z`.
+
+.. _skindepth:
+
+Skindepth
+---------
 
 From this, we can define the concept of skin depth. The skin depth :math:`\delta` is the distance the wave travels for its amplitude to have decayed by a factor of :math:`1/e` with the above notation. Skin depth is then defined as:
 
@@ -54,14 +71,32 @@ Assuming permeability of free space, :math:`\mu_0 = 4\pi \times 10^{-7}` H/m, an
 
 For problems involving high frequencies, for example GPR surveys, or very early time transient EM problems, the displacement current may be important. Then Equation :eq:`wn1` needs to be invoked.
 
-To see how physical properties and frequencies affect skin depth, check out :ref:`this app <>`. NEED APP LINK
+To see how physical properties and frequencies affect skin depth, check out 
 
-To see a a table of skin depths for some representative rocks and frequencies, check out :ref:`this page <>`. NEED LINK/FIGURE
+.. todo:: NEED APP LINK
+
+The following table shows skin depths for some representative rocks and frequencies:
+
++---------------------+----------------+------------------+----------+------------+--------------+
+|                     | Resistivity    | Conductivity     | f = 1 Hz | f = 100 Hz | f = 1,000 Hz |
+|                     | :math:`\rho`   | :math:`\sigma`   |          |            |              |
++---------------------+----------------+------------------+----------+------------+--------------+
+| Magmatic rocks      | 10,000         | 0.0001           | 50,000 m | 5,000 m    | 1,581 m      |
++---------------------+----------------+------------------+----------+------------+--------------+
+| Metamorphic rocks,  |                |                  | 15,811 m | 1,581 m    | 500 m        |
+| limestone           | 1,000          | 0.001            |          |            |              |
++---------------------+----------------+------------------+----------+------------+--------------+
+| Sediments           | 100            | 0.01             | 5,000 m  | 500 m      | 158 m        |
++---------------------+----------------+------------------+----------+------------+--------------+
+| Sea water           | 0.3            | 3.3              | 274 m    | 27 m       | 9 m          | 
++---------------------+----------------+------------------+----------+------------+--------------+
+| Suphides, graphite  | 0.01           | 100              | 50 m     | 5 m        | 2 m          |
++---------------------+----------------+------------------+----------+------------+--------------+
 
 .. _phase_velocity:
 
-Phase velocity and wavelength
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Phase velocity
+--------------
 
 The complex sinusoidal term in Equation :eq:`wn2` represents a travelling wave. The phase velocity is expressed as:
 
@@ -81,6 +116,11 @@ end
         :name: wn3
 
 In free space, Equation :eq:`wn3` equates to :math:`3\times 10^8` m/s, which is the speed of light. Details of the derivation can be found :ref:`here <speed_light_details>`.
+
+.. _wavelength:
+
+Wavelength
+----------
 
 Finally, the wavelength if the waves is given by:
 
