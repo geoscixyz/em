@@ -3,14 +3,17 @@
 Constitutive Relationships
 ==========================
 
-.. todo:: do we want seperate pages for each? or one page for all? 
+Summary
+-------
 
-For each of the constitutive relationships provide background regarding a
-basic (frequency domain) experiment by which to measure the physical property,
-whether it’s a scalar, tensor, or has frequency dependence. How the physical
-property links a field and flux.  (Links with sections in physical
-properties).  
 
+The constitutive equations provide the connections between the fields and fluxes in Maxwell's equations. The coefficient that links these entities is a physical property. For each constitutive relation we provide:
+- constitutive equation and its physical understanding
+- a laboratory setup
+- some history (if available)
+- units and references
+
+Constitutive equations for Maxwell's equations
 
 .. toctree::
     :maxdepth: 1
