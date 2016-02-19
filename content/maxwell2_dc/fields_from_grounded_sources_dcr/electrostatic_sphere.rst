@@ -12,7 +12,7 @@ electric fields, current density and the build up of charges at interfaces.
 This work follows the derivation in :cite:`ward1988` and is supported by apps developed in
 a `binder`_.
 
-.. _binder:  http://mybinder.org/repo/ubcgif/EM_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
+.. _binder:  http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
 
 Setup
 -----
