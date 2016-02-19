@@ -120,7 +120,7 @@ We now have two wave equations or second-order differential equations; one for t
 .. _speed_light_details: 
 
 Solving the wave equation when :math:`\sigma=0`
-----------------------------------------------
+-----------------------------------------------
 
 .. todo:: already have most of this. maybe remove or just add to the other material?
 
