@@ -3,8 +3,37 @@
 Chargeability
 =============
 
-.. todo:: what is it and where can it be diagnostic
+Earth material can be polarizable under the external electric field, which makes additional polarization charge build-up. Chargeability indicates a rock's capability to build polarization charge build-up under the external electric field. The underlying microscopic phenomonan accounting for this is complicated and depends upon the minerals, grain sizes, and surface-to-volume ratios and the abundance of clays. Historically "chargeabilty" has been referred to as "over-voltage". The description arises from geophysial surveys in the 1950's and is illustrated in the following diagram:
 
+.. figure:: ./figures/IPonoff.png
+   :align: center
+   :name: IPonoff
+
+   Overvoltage effects. (a) Input current. (b) Measured voltage.
+
+Here :math:`V_\infty` and :math:`V_0` respecively indicate measured voltage at infinte and zero frequencies. The chargeability can be expressed as
+
+.. math::
+    \eta = \frac{V_0-V_\infty}{V_0}
+
+or
+
+.. math::
+    \eta = \lim_{t \to 0} V_s(t),
+    :label: pseudo_chargeability_int
+
+where :math:`V_s (t)` is measured voltage at off-time.
+
+Geophysical application, which uses chargeability called induced polarization (IP) technique. Mineral exploration for sulfides (disseminated and massive) is unquestionably
+the most common application of IP because those types of ore minerals are
+often chargeable.There are also applications in hydrogeology. For example,
+mapping salt water intrusions in aquifers that include clayey layers may be
+difficult using resistivity alone. However, the increased chargeability
+associated with clay may help differentiate between zones with more saline
+water and clay, both of which have low resistivity. In addition, there is a
+growing interest in the possibility of using chargeability to aid in the
+detection and delineation of contaminants in the ground. There has also been
+some effort to apply IP to oil and gas exploration.
 
 **Contents**
 
@@ -16,34 +45,10 @@ Chargeability
     chargeability_factors
     chargeability_mathematical_relationships
 
-References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
+.. References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
 
-Knight and Enders: An introduction to Rock Physics Principles for near surface geophysics: Investigations in geophysics No13; SEG Near;-Surface Geophysics edited by Dwain Butler
+.. Knight and Enders: An introduction to Rock Physics Principles for near surface geophysics: Investigations in geophysics No13; SEG Near;-Surface Geophysics edited by Dwain Butler
 
-Stan Ward: Resistivity ad Induced Polarization Methods (p147..)
-Investigations in geophysics #5; Geotechical and environemental geophysics.
 
-.. todo:: 
-    **Scraps:**  to be included as it fits into the above framework. 
-    
-    The electrical conductivity of a material can depend upon frequency. In Ohm's
-    Law, :math:`J=\sigma E`, :math:`\sigma` is a complex number. The underlying
-    microscopic phenomonae accounting for this is complicated and depends upon the
-    minerals, grain sizes, and surface-to-volume ratios and the abundance of
-    clays. There is no simple mathematical formula that describes the relation
-    between conductivity and frequency but one that has some practical use is the
-    Cole-Cole model.
 
-    Formula for conductivity and for resistivity. Definitions of variables. eta is
-    the "chargeability" (dimensionless :math:`0<\eta<1`); :math:`\eta` is often related to
-    the concentration of a chargeable mineral, for instance eta is related to the
-    total percentage of sulfide minerals. :math:`\tau` is a time constant generally thought
-    to be related to grain size; :math:`c` is a variable associated with (?distribution of
-    grain size?)
 
-    Historically "chargeabilty" has been referred to as "over-voltage". The
-    description arises from geophysial surveys in the 1950's and is illustrated in
-    the following diagram:
-
-    Our generic diagram in GPG (or equivalent), showing 1/2 duty waveform,
-    :math:`V_\infty`, :math:`V_0`, :math:`\eta`, :math:`V_s`

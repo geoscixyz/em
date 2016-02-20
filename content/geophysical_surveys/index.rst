@@ -1,6 +1,6 @@
 .. _geophysical_surveys_index:
 
-Geophysical Surveys   
+Geophysical Surveys
 ===================
 
 **Contents:**
@@ -11,3 +11,4 @@ Geophysical Surveys
     fundamentals/index
     dcr/index
     looploopfdem/index
+
