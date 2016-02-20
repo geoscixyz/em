@@ -15,7 +15,7 @@ relevant  properties for electromagnetics are:
 
  - :ref:`electrical_conductivity_index`: :math:`\sigma` (or its reciprocal, resistivity, :math:`\rho`)
  - :ref:`chargeability_index`: a parameter that characterizes how electrical conductivity depends upon frequency
- - :ref:`magnetic_permeability_index`, :math:`\mu`
+ - :ref:`magnetic_permeability_index`: given by :math:`\mu` and :math:`\chi`, respectively.
  - :ref:`electrical_permittivity_index`, :math:`\varepsilon`
 
 A physical property quantifies how a rock responds to a particular input and
