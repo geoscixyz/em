@@ -53,3 +53,17 @@ If the transmitter current waveform is not sinusoid, it is said to operate in ti
 
 The figure above shows the time-domain loop-loop system used at Bookpurnong. The commercial name of the system is SkyTEM, operated by SkyTEM Surveys ApS, Danmark. Its transmitter is a large loop and its two receiver loops are mounted at the rear of the frame, in orthogonal orientations measuring dB/dt in z (vertical) and x (in-line horizontal) directions. The final data are normalized as if the dipole moments of the transmitter and the receiver are both unity. One special feature of SkyTEM is its capability of operating in dual-mode - transmitting a high moment pulse and a low moment pulse sequentially. A high moment pulse has greater penetrating depth, but is difficult to cut off clearly in electronics, causing unaccepted bias in the early times. A low moment does not see very deep, but has cleaner early time channels. The high moment is 113000 NIA at 25 Hz and the low moment is 12560 NIA at 222.22 Hz at Bookpurnong. 
 
+
+Survey design
+-----------------------
+
+Choosing the instrument and the survey parameters and layout is usually referred to as "survey design". In most cases, a geophysical survey is designed using the rules of thumbs or emprical criteria. In an EM survey, the most important goal in the survey design is to match the scale of investigation to the scale of the target, using the concept of skin depth or diffusion distance. At Bookpurnong, the background conductivity is about 1 S/m, and we are interested in the subsurface from 0 to about 50 m depth. The skin depths of the RESOLVE frequencies range from about 1 to 25 m. The diffusion distances of the SkyTEM time channels range 4 to 120 m. So the interested volume of the Earth should be reasonablly sensed by the two systems. 
+
+Another consideration is the sounding spacing. For a towed system, the in-line spacing is adjustable by the flight speed and sampling rates, and can easily achieve high density soundings. The cross-line spacing is usually a trade-oof between the cost and resolution. At Bookpurnong, RESOLVE and SkyTEM fly in a 100 m cross-line spacing (Figure), so any single location can be at least sensed by two SkyTEM lines.
+
+.. figure:: ./images/booky-coverage.jpg
+    :align: left
+    :scale: 80% 
+    :name: booky-coverage
+    
+    
