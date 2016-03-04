@@ -1,7 +1,7 @@
 .. _amplitudeandphase:
 
 Amplitude and phase
--------------------
+===================
 
 .. figure:: ./images/Concepts_3loops_only_K.png
    :align: center
@@ -10,14 +10,14 @@ Amplitude and phase
 
    Conceptual diagram for 3-loops system.
 
-Based upon the induced current in the body (Loop2), in CITE, here we consider amplitude and phase of the secondary magnetic field (:math:`H^s`) normalized by primary magnetic field (:math:`H^p`), :math:`\frac{H^s}{H^p}`, measured at Rx (Loop3). For this, we first consider the primary magnetic field at body (Loop2), :math:`H^p_2`, resulting from a current, :math:`i^p`, flowing in the Loop1, which can be expressed as
+Based upon the induced current in the body (Loop2), in :ref:`induced_currents_body`, here we consider amplitude and phase of the secondary magnetic field (:math:`H^s`) normalized by primary magnetic field (:math:`H^p`), :math:`\frac{H^s}{H^p}`, measured at Rx (Loop3). For this, we first consider the primary magnetic field at body (Loop2), :math:`H^p_2`, resulting from a current, :math:`i^p`, flowing in the Loop1, which can be expressed as
 
 .. math::
 	H^p_2(t) = K_{12} i^p(t),
 
 where :math:`i^p = I^p cos(\omega t)` and :math:`K_{12}` is coefficint depending on the geomtry of the system, the area, and number of turns of the primary coil, and attenuation of the wave between Loop1 and Loop2.
 
-Effectively, through Faraday's law, :math:`\mathcal{E} = -\imath \omega \Phi^p`, volatage will be generated, which generates induced currents (this has been done in CITE):
+Effectively, through Faraday's law, :math:`\mathcal{E} = -\imath \omega \Phi^p`, volatage will be generated, which generates induced currents (this has been done in :ref:`induced_currents_body`):
 
 .. math::
     I(\omega) = \frac{-\imath \alpha}{1+\imath\alpha}\frac{\Phi^p}{L},
@@ -104,6 +104,7 @@ The lag in the phase of :math:`\frac{\pi}{2}` is due to the inductive coupling b
 
 .. math::
 	H^s = K_{23}|I(\omega)| cos (\omega t - (\frac{\pi}{2}+\phi))
+
 	    = K_{23}|I(\omega)| sin (\omega t - \phi)
 
 	    = K_{23}|I(\omega)| [cos (\omega t-\frac{\pi}{2}) cos (\phi) + cos (\omega t-\pi) sin (\phi)]
