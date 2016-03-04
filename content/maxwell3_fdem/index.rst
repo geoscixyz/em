@@ -6,6 +6,6 @@ Maxwell III: FDEM
 Contents:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
-    theory_3loops
+    emi_tutorial/index

@@ -7,11 +7,11 @@ The fundamental principles of electromagnetic (EM) induction can be understood w
 
 - Loop1: is the transmitter. It carries a current that produces an associated magnetic field. This magnetic field is called the primary field. For induction experiments the current in the transmitter varies with time and hence the magnetic field varies with time.
 
-- Loop 2: represents a conductive body. The  time varying magnetic field generates an  Electromotive Force (EMF) and hence a current in the conductor. These are called secondary currents. The generate secondary magnetic fields.
+- Loop2: represents a conductive body. The  time varying magnetic field generates an  Electromotive Force (EMF) and hence a current in the conductor. These are called secondary currents. The generate secondary magnetic fields.
 
-- Loop 3: is the receiver: This measures magnetic field which consists of the sum of the primary and secondary fields.
+- Loop3: is the receiver: This measures magnetic field which consists of the sum of the primary and secondary fields.
 
-.. figure:: ./figures/Concepts_3loops.png
+.. figure:: ./images/Concepts_3loops.png
    :align: center
    :scale: 60%
    :name: Concepts_3loops
@@ -30,12 +30,15 @@ Goals for this tutorial:
 	- Provide the final expression which encapsulated both coupling and induction responses.
 	- Provide an interactive notebook in which the above goals can be crystallized. (350)
 
-Contents:
----------
+**Contents:**
 
 .. toctree::
     :maxdepth: 1
 
     induced_currents_body
+    amplitudeandphase
+    mutualinductance
+
+
 
 

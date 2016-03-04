@@ -11,7 +11,6 @@ Geophysical Surveys
     fundamentals/index
     dcr/index
     looploopfdem/index
-    emi_tutorial/index
 
 
 For each geophysical method, we will follow the framework:
