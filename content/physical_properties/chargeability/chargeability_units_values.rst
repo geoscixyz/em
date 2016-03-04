@@ -11,7 +11,7 @@ By definition of the intrinsic chargeability, :math:`\eta = \frac{V_0-V_\infty}{
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/DCIPcurve.png
    :align: center
    :scale: 50%
-   :name: DCIPcurve
+   :name: DCIPcurve_values
 
 Since we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain pseudo-chargeability, :math:`M`:
 

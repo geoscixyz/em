@@ -21,7 +21,7 @@ A simple and often used system on the field is GDD's `SCIP Tester <http://www.gd
 
    Figure GDD SCIP tester.
 
-Measured voltage can be stacked and we could obtain half-period voltage as shown in :numref:`DCIPcurve`. We alterantively define pseudo-chargeability (M) as
+Measured voltage can be stacked and we could obtain half-period voltage as shown in :numref:`DCIPcurve_lab`. We alterantively define pseudo-chargeability (M) as
 
 .. math::
 	M = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt
@@ -31,6 +31,6 @@ where :math:`t_1` and :math:`t_2` are arbitrary times. The unit of pseudo-charge
 .. figure:: ../../../examples/physical_properties/electrical_conductivity/DCIPcurve.png
    :align: center
    :scale: 50%
-   :name: DCIPcurve
+   :name: DCIPcurve_lab
 
    Figure Measured time domain IP curve.
