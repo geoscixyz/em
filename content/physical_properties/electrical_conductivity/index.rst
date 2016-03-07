@@ -3,9 +3,26 @@
 Electrical Conductivity
 =======================
 
-.. What is it
+..todo:: link same iconic figure used in introduction to em.geosci when conductivity is mentioned. use one for conductivity and another for chargeabilty
 
-Electrical conductivity is an intrinsic property that quantifies how well electrical charges move in a given material. As shown in :numref:`Chargeflow`, under the applied electric field, charges in a rock flow from positive to negative potential. Since electric current is how much charges move within a unit of time, a high conductivity means a material that readily allows the flow of electric current. In geophysics, conductivity is usually represented by the Greek letter :math:`\sigma` (S/m).
+..Purpose:: 
+  Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity. Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called :ref:`"chargeability"< is so important in geophysics that it is often considered as another physical property. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable. 
+
+
+
+.. toctree::
+    :maxdepth: 2
+
+    Case Histories
+    Constitutive relationship and laboratory experiment 
+    Useful tables
+    Additional information
+    References
+  
+
+
+
+As shown in :numref:`Chargeflow` positive charges in a rock flow in the same direction as the electric field. In a circuit that involves a battery the charges move from the positive to negative potential. The electric current is how much charges move within a unit of time, a high conductivity means a material that readily allows the flow of electric current. In geophysics, conductivity is usually represented by the Greek letter :math:`\sigma` (S/m).
 
 Electrical resistivity is the reciprocal of electrical conductivity, and material’s ability to oppose an electric current. It is usually represented by the Greek letter :math:`\rho` (:math:`\Omega`-m) in geophysics.
 
@@ -34,12 +51,7 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
 .. Seogi Not sure we need to comment here. Rather, we have a section for complex conductivity
 
 .. note::
-    The measured conductivity (or resistivity) often shows a frequency
-    dependence. Effectively the material can act like a capacitor and build up
-    a charge when an electric field is applied. The ability to accumulate
-    charge is called :ref:`"chargeability"<chargeability_index>` and the survey designed to measure the
-    effect is called an IP (Induced Polarization) or, SIP (spectral IP)
-    survey. Chargeabilty is often listed as an independent physical property
+    Chargeabilty is often listed as an independent physical property
     (such as density, magnetic suspectibilty) and we will continue with that
     in this EM resource. It is however, just an element that is necessary in
     order to provide a complete description of electrical conductivity.
@@ -47,12 +59,6 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
 
 **Contents**
 
- .. toctree::
-    :maxdepth: 2
-
-    electrical_conductivity_lab_setup_measurements
-    electrical_conductivity_units_values
-    electrical_conductivity_factors
-    electrical_conductivity_mathematical_relationships
+ 
 
 

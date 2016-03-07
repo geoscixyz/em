@@ -3,7 +3,11 @@
 Damped wave equation
 ^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Purpose, summary, goal
+.. topic:: Purpose
+
+	Generate the damped wave equations for \mathbf{e} and \mathbf{h}
+
+	
 
 We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations in the time-domain:
 
