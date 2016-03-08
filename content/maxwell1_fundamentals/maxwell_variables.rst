@@ -1,6 +1,5 @@
 .. _maxwell_variables:
 
-
 **Fields**
 
  - :math:`\mathbf{e}` : electric field  [N/C]   
