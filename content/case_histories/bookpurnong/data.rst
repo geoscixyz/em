@@ -52,7 +52,7 @@ The sounding below is taken from a location on the floodplain. As the frequency 
 
 
 SkyTEM(HM)
-------
+----------
 
 In a similar manner, we show the data on a map from four time channels. The high responses are likely to be associated with the salinization, compatible with the RESOLVE data map. The last time channel is very noisy, but we are still able to see a long-wavelength trend.
 
@@ -76,7 +76,7 @@ A clean time transient decay is provided below. The variation of the decay rate 
     :name: booky-skytem3
     
 SkyTEM(LM)
-------    
+----------    
     
 TBD
 
