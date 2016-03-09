@@ -37,7 +37,7 @@ If the current waveform in the transmitter loop is sinusoidal at a certain frequ
 The figure above shows the frequency-domain loop-loop system used at Bookpurnong. The commercial name of the system is RESOLVE, operated by Fugro Airborne (now CGG). It operates five pairs of horizontal co-planar (HCP) loop-loop configurations at 382, 1822, 7970, 35920 and 130100 Hz, and one pair of vertical co-axial loop-loop configuration at 3258 Hz. The measured secondary magnetic field (Hs) is represented as the ratio to the primary field (Hp) in part per million.
 
 Time domain system
------------------------
+------------------
 
 If the transmitter current waveform is not sinusoid, it is said to operate in time domain. Usually the time-domain transmitter waveform is designed as an abrupt pulse or step off (on-time) followed by a no-current quiet peroid (off-time). The turn-off of the primary field excites the secondary current and field in the ground. The receiver loop measures the time-decaying transient at a number of time channels during the off-time when the primary field is absent. In theory, a time-domain system is equivelant to the convolution of the transmitter waveform with the inverse Fourier transform of a multi-frequency frequency-domain system. Early time channels are roughly equal to higher frequencies. Unlike a frequency-domain system, the time-domain data re real values of the actual field. Direct measurement of the magnetic field (B in Tesla) is possible, but people usually measure the time derivatives of the magnetic field (dB/dt in volt) for logistic reasons. You may find the following concepts useful. Click the links to learn more in Geophysical Surveys.
 
@@ -55,7 +55,7 @@ The figure above shows the time-domain loop-loop system used at Bookpurnong. The
 
 
 Survey design
------------------------
+-------------
 
 Choosing the instrument and the survey parameters and layout is usually referred to as "survey design". In most cases, a geophysical survey is designed using the rules of thumbs or emprical criteria. In an EM survey, the most important goal in the survey design is to match the scale of investigation to the scale of the target, using the concept of skin depth or diffusion distance. At Bookpurnong, the background conductivity is about 1 S/m, and we are interested in the subsurface from 0 to about 50 m depth. The skin depths of the RESOLVE frequencies range from about 1 to 25 m. The diffusion distances of the SkyTEM time channels range 4 to 120 m. So the interested volume of the Earth should be reasonablly sensed by the two systems. 
 
