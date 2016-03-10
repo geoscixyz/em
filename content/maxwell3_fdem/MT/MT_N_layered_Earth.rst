@@ -5,6 +5,9 @@ Response of a layered Earth to a plane wave
 
 This work follows the derivation in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
+ .. image:: http://mybinder.org/badge.svg 
+    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+
 .. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
 
 
@@ -13,6 +16,8 @@ This work follows the derivation in :cite:`ward1988` and is supported by interac
 Introduction
 ------------
 
+The problem setup is shown in the figure below (See :numref:`MTlayeredEarth`), where we have
+
  .. figure:: images/MT_N_layered_Earth-1.hires.png
     :align: center
     :scale: 20% 
@@ -20,23 +25,23 @@ Introduction
 
     Earth Model Configuration
 
-The problem setup is shown in the figure below (See :numref:`MTlayeredEarth`), where we have
-
-| -a layered Earth, each layer with its own physical properties \\(\\sigma, \\varepsilon, \\mu \\) 
-
-| -a plane wave coming from air, perpendicular to the Earth's surface, traveling along the axis Z (oriented downward), with an electric field \\(\\mathbf{E_x}\\) and a magnetic field \\(\\mathbf{H_y}\\)
-
-| - the origin of coordinate system coincides with the Earth's surface
 
 
+ - a layered Earth, each layer with its own physical properties :math:`\sigma, \varepsilon, \mu`
 
+ - a plane wave coming from air, perpendicular to the Earth's surface, traveling along the axis Z (oriented downward), with an electric field :math: `\mathbf{E_x}` and a magnetic field :math:`\mathbf{H_y}`.
+
+ - the origin of coordinate system coincides with the Earth's surface
+
+In MagnetoTellurics problem, the key diagnosed physical property is conducity
+ :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`, as we expect the contrasts of the others physical properties to be negligible. 
 
 
 
 Governing Equations
 -------------------
 
-The governing equation for DC resistivity problem can be obtained from
+The governing equation for MagnetoTellurics problem can be obtained from
 :ref:`Maxwell's equations <maxwell1_fundamentals_index>`. We start by
 considering the zero-frequency case, in which case, Maxwell's equations are
 
