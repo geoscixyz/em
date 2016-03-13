@@ -4,6 +4,9 @@ python:
 
 sudo: false
 
+env:
+  - TEST_DIR=tests
+
 before_install:
   - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh -O miniconda.sh; else wget http://repo.continuum.io/miniconda/Miniconda3-3.8.3-Linux-x86_64.sh -O miniconda.sh; fi
   - chmod +x miniconda.sh
@@ -18,9 +21,7 @@ install:
 
 # command to run tests
 script: 
-  - sphinx-build -nW -b html -d _build/doctrees . _build/html
-  - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
-  - sphinx-build -nW -b linkcheck -d _build/doctrees   . _build/linkcheck
+  - nosetests $TEST_DIR 
 
 # Flags used here, not in `make html`:
 #  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
