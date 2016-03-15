@@ -11,7 +11,7 @@ Introduction
     introduction_about
     introduction_basic_electromagnetic_experiments
     introduction_notation
-    
+
 
 How to use this resource
 ------------------------
@@ -22,10 +22,10 @@ There are multiple ways to use em.geosci
 
     - what is :ref:`Faraday's law<faraday>`?
     - how does an electromagnetic wave decay as it propagates?
-    - ... 
+    - ...
 
 - to obtain information about a geophysical survey (instrumentation, data acquisition, processing)
-- to find :ref:`Case Histories<case_histories_index>` about the use of geophysics in solving applied problems. 
+- to find :ref:`Case Histories<case_histories_index>` about the use of geophysics in solving applied problems.
 
 These objectives are interconnected and the sequence in which the questions
 are asked will depend upon the problem. The advantage of a digital resource is
@@ -48,7 +48,7 @@ will be able to interface with SimPEG_, our open-source modelling and
 simulation package, so that he/she can generate their own codes and test
 results or carry out further exploration of a topic.
 
-.. _SimPEG : http://simpeg.xyz
+.. _SimPEG : http://www.simpeg.xyz
 
 
 .. Introduction
