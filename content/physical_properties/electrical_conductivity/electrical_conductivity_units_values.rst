@@ -2,7 +2,7 @@
 
 Units & Values
 ==============
-
+:numref:`resistivity_table1`
 Units
 -----
 

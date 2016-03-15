@@ -3,22 +3,20 @@
 Electrical Conductivity
 =======================
 
-..todo:: link same iconic figure used in introduction to em.geosci when conductivity is mentioned. use one for conductivity and another for chargeabilty
+.. todo:: link same iconic figure used in introduction to em.geosci when conductivity is mentioned. use one for conductivity and another for chargeabilty
+.. Seogi: Not sure which figure.
 
-..Purpose:: 
-  Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity. Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called :ref:`"chargeability"< is so important in geophysics that it is often considered as another physical property. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable. 
-
-
+Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity. Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called :ref:`"chargeability"< is so important in geophysics that it is often considered as another physical property. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable.
 
 .. toctree::
     :maxdepth: 2
 
     Case Histories
-    Constitutive relationship and laboratory experiment 
+    Constitutive relationship and laboratory experiment
     Useful tables
     Additional information
     References
-  
+
 
 
 
@@ -59,6 +57,6 @@ The electrical charge is mostly carried by ions and electrons (charge carriers).
 
 **Contents**
 
- 
+
 
 
