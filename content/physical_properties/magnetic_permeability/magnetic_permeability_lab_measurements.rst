@@ -1,7 +1,7 @@
-.. _magnetic_permeability_lab_setup_measurements:
+.. _magnetic_permeability_lab_measurements:
 
-How Laboratory Measurements are Performed
-=========================================
+Laboratory Measurements
+=======================
 
 Magnetic permeability measurements can be understood by considering a forced, in-series LC circuit (Figure needs reference).
 math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.

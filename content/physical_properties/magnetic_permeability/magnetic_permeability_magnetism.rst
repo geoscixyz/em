@@ -1,7 +1,7 @@
-.. _magnetic_permeability_definition:
+.. _magnetic_permeability_magnetism:
 
-What are Magnetic Permeability and Magnetic Susceptibility?
-===========================================================
+Magnetism in Rocks
+==================
 
 
 Magnetism is attributed to the movement of electrical charges.

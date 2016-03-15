@@ -1,7 +1,7 @@
 .. _magnetic_permeability_factors:
 
-Factors which Affect a Rock's Magnetic Properties
-=================================================
+Factors Impacting Magnetic Properties
+=====================================
 
 The typical range of intrinsic magnetic susceptibilities for various rock types are shown in Figure (needs reference).
 Magnetism in rocks is primarily attributed to the presence of iron-bearing minerals.
