@@ -3,9 +3,12 @@
 Laboratory Measurements
 =======================
 
+Introduction
+------------
+
 Magnetic permeability measurements can be understood by considering a forced, in-series LC circuit (Figure needs reference).
-math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.
-:math:`L` represents a linear self-inductance, which ultimately depends on the rock's magnetic permeability.
+:math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.
+:math:`L` represents a linear self-inductance, which ultimately depends on the rock's magnetic permeability :math:`\mu`.
 The current within the wire is defined by the following ordinary differential equation:
 
 .. math::
@@ -19,13 +22,16 @@ where :math:`F(t)` represents the driving voltage. Eq. :eq:`Forced_Oscillator` h
 	:label: Omega_Resonance
 
 In typical laboratory measurements, rock samples are placed in a holder.
-Introduction of the sample changes the inductive element of the circuit, thus changing its resonance frequency. 
-Each instrument has an experimentally derived curve, which defines the change in resonance frequency with or without the sample, as a function of the rock's magnetic permeability.
-Therefore, the magnetic permeability of the rock can be determined by measuring the change in resonance frequency, and determining its position on the curve.
+Introduction of a sample changes the inductive element of the circuit, thus changing the circuit's resonance frequency. 
+Each instrument has an experimentally derived curve, which defines the change in resonance frequency as a function of the rock's magnetic permeability.
+Therefore, the magnetic permeability is obtained by measuring the resonance frequency of the circuit and finding the corresponding magnetic permeability value on the curve. 
 
 .. figure:: ./figures/figSuscMeasure.png
 	:align: center
         :scale: 50%
+        
+Theory
+------
 
 The underlying physics of magnetic permeability measurements can be understood by considering the circuit diagram in Figure (needs reference).
 For sensitive measurements, a portion of the wire is wound around a ferrite.
@@ -50,7 +56,7 @@ By neglecting edge effects near the ends of the coil, the magnetomotive force ex
 
 where :math:`N` is the number of turns the coil has, and :math:`\Delta S` is the length of the coil.
 Because ferrites are so permeable, they behave like a magnetic circuit in this case.
-The applied magnetomotive force generates a magnetic flux $\Phi$, which permeates through the material.
+The applied magnetomotive force generates a magnetic flux :math:`\Phi`, which permeates through the material.
 This can be described using Hopkinson's law, which is analogous to Ohm's law:
 
 .. math::
@@ -81,7 +87,7 @@ In most laboratory experiments, the magnetic reluctance is given by (Clark and E
 	\Re = \Re_0 + \frac{\alpha}{\mu_s}
 	:label: Reluctance_Sample
 	
-where :math:`\Re_0` and $\alpha$ can be experimentally determined, and depend on the geometry of the instrument.
+where :math:`\Re_0` and :\math:`\alpha` can be experimentally determined, and depend on the geometry of the instrument.
 By definition of the self-inductance, and by using Eqs. :eq:`Hopkinsons_Law` and :eq:`Reluctance_Sample`:
 
 .. math::

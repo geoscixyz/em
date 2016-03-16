@@ -3,6 +3,20 @@
 Units & Typical Values for Rocks
 ================================
 
+The magnetic field intensity :math:`{\bf H}` is frequently given in Amp\`{e}res per meter (A/m), whereas the magnetic flux density is given in Teslas (T).
+By the constitutive relationship, the magnetic permeability of a material is represented using :math:`T \! \cdot \! m/A`.
+Where Henrys (H) are used to represent magnetic inductance, and Webers (Wb) are used to represent magnetic flux, the magnetic permeability can also be given in the following units:
+
+.. math::
+	\frac{T \cdot m}{A} = \frac{H}{m} = \frac{Wb}{A \cdot m}
+	:label: Units_Hm_WbAm
+
+Therefore, the magnetic permeability can also be used to charaterize the magnetic inductance per unit length, or the magnetic flux per unit length per unit field intensity. 
+
+
+
+
+
 Magnetization and the magnetic field intensity are both in units of Amp\`{e}res per meter (A/m).
 Therefore, the SI units for magnetic susceptibility are (A/m)/(A/m).
 For this reason, the magnetic susceptibility is commonly expressed as a uniktless quantity.
