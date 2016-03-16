@@ -41,9 +41,11 @@ some effort to apply IP to oil and gas exploration.
     :maxdepth: 2
 
     chargeability_lab_setup_measurements
-    chargeability_units_values
+    chargeability_units
     chargeability_factors
-    chargeability_mathematical_relationships
+    chargeability_complex_conductivity
+    chargeability_measured_voltage
+
 
 .. References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
 

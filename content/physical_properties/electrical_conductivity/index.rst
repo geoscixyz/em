@@ -3,7 +3,7 @@
 Electrical Conductivity
 =======================
 
-Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. See :ref:`electrical_conductivity_units_values` for conductivity of various rocks. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity. Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called "chargeability" is so important in geophysics that it is often considered as another physical property. See :ref:`chargeability_units_values` chargeability of varous rocks. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable.
+Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. See :ref:`electrical_conductivity_tables` for conductivity of various rocks. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity. Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called "chargeability" is so important in geophysics that it is often considered as another physical property. See :ref:`chargeability_units_values` chargeability of varous rocks. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable.
 
 .. toctree::
     :maxdepth: 2
@@ -27,9 +27,6 @@ As shown in :numref:`Chargeflow` positive charges in a rock flow in the same dir
     (such as density, magnetic suspectibilty) and we will continue with that
     in this EM resource. It is however, just an element that is necessary in
     order to provide a complete description of electrical conductivity.
-
-
-**Contents**
 
 
 

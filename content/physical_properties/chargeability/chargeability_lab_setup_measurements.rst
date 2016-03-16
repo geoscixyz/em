@@ -3,7 +3,7 @@
 Lab Setup and Measurements
 ==========================
 
-To measure chargeability, we use similar set-up for conductivity measurement shown in :numref:`DCcircuit` except for the input current waveform. Rather than DC, we put half-duty rectangular waveform as shown in :numref:`ACcircuit`. If a rock specimen is chargeable then measured voltage will show overvoltage effect.
+To measure chargeability, we use similar set-up for DC measurement except for the input current waveform. Rather than DC, we put half-duty rectangular waveform as shown in :numref:`ACcircuit`. If a rock specimen is chargeable then measured voltage will show overvoltage effect.
 
 Based upon the definition of the chargeability (:math:`\eta=\frac{V_0-V_\infty}{V_0}`), where :math:`V_\infty` and :math:`V_0` are correspondingly measured voltage at zero and inifite frequency, we cannot measure correct chargeability.
 
