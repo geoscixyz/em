@@ -10,6 +10,8 @@ By definition of the intrinsic chargeability, :math:`\eta = \frac{V_0-V_\infty}{
    :scale: 50%
    :name: DCIPcurve
 
+   Time curve for DC-IP data.
+
 Since we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain pseudo-chargeability, :math:`M`:
 
 .. math::
@@ -18,7 +20,7 @@ Since we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we of
 where :math:`t_1` and :math:`t_2` are arbitraty times used for integration. The unit of this pseudo-chareability (M) is often ms.
 
 .. note::
-	Depending on the used time window, measured pseudo-chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated pseudo-charegability could be significantly underestimated. We will treat this later in :ref:`chargeability_mathematical_relationships_measured_voltage`
+	Depending on the used time window, measured pseudo-chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated pseudo-charegability could be significantly underestimated. We will treat this later in :ref:`chargeability_measured_voltage`
 
 There can be different types of the pseudo-chargeability:
 

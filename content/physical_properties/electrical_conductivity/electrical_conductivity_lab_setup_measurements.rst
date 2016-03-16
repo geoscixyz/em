@@ -81,7 +81,7 @@ Electrical conductivity can be frequency-depenent and complex-valued, which is e
 
 are frequency dependent. :numref:`ComplexImpedance` shows amplitude and phase of the measured complex impedance at a porphyry deposit called `Highland Valley Copper`_.
 
-.. _Highland Valley Copper: https://en.wikipedia.org/wiki/Highland_Valley_Copper_mine`
+.. _Highland Valley Copper: https://en.wikipedia.org/wiki/Highland_Valley_Copper_mine
 
 .. figure:: ./figures/ComplexImpedance.png
    :align: left

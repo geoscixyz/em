@@ -12,4 +12,4 @@ Contents:
 
     theory_3loops
     MT/index
-    sphere_freespace
+    sphere_freespace_FEM
