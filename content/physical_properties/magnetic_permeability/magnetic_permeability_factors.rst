@@ -1,9 +1,9 @@
 .. _magnetic_permeability_factors:
 
-Factors Impacting Magnetic Properties
-=====================================
+Impact of Mineralogy on Magnetic Properties
+===========================================
 
-The typical range of intrinsic magnetic susceptibilities for various rock types are shown in Figure (needs reference).
+For reference, the typical range of intrinsic magnetic susceptibilities for various rock types are shown in Figure (needs reference).
 Magnetism in rocks is primarily attributed to the presence of iron-bearing minerals.
 Magnetite, titano-magnetite and maghemite are ferrimagnetic minerals, and exhibit very strong induced magnetization; with magnetite being the most susceptible.
 Even in small abundances, these iron-oxide minerals frequently represent the dominant contribution towards a rock's magnetic susceptibility.
@@ -12,12 +12,7 @@ Other iron-bearing minerals may be weakly paramagnetic.
 If sufficiently abundant however, they offer a secondary contribution towards the rock's magnetic susceptibility.
 Notable paramagnetic minerals include: lepidocrosite, dolomite, biotite, siderite, and fayalite.
 Anti-ferrimagnetic minerals, most notably hematite, exhibit extremely weak induced magnetization.
-As a result, their contribution is considered more or less negligible; goethite is one of the few exceptions.
-
-.. figure:: ./figures/figMagSuscTable.png
-	:align: center
-        :scale: 70%
-
+As a result, their contribution is considered more or less negligible.
 
 The magnetic susceptibility of a rock ultimately depends on its mineralogy.
 Rocks containing higher abundances of magnetite, titano-magnetite and maghemite are more susceptible.
@@ -36,3 +31,7 @@ Some rocks become enriched with magnetite and pyrrhotite during metamorphism, ma
 Skarns and mineralized veins frequently exhibit high magnetic susceptibilities.
 In general, unmineralized metamorphic rocks exhibit a broad range of magnetic susceptibilities.
 These rocks include: metasediments, amphibolites, granulites, eclogites and schists.
+
+.. figure:: ./figures/figMagSuscTable.png
+	:align: center
+        :scale: 70%

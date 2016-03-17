@@ -5,17 +5,17 @@ Magnetism in Rocks
 
 
 Magnetism is attributed to the movement of electrical charges.
-Within a material, the motion and spin of individual electrons is responsible for generating a collection of magnetic moments :math:`\{\vec m_i \}`.
-The total magnetic moment for the material :math:`\vec m`, is equal to the vector sum of all electron magnetic moments:
+Within a material, the motion and spin of individual electrons is responsible for generating a collection of magnetic moments :math:`\{{\bf m_i}\}`.
+The total magnetic moment for the material :math:`{\bf m}`, is equal to the vector sum of all electron magnetic moments:
 
 .. math::
-	\vec m = \sum_i \vec m_i
+	{\bf m} = \sum_i {\bf m_i}
 	:label: Sum_Dipoles
 	
-Magnetization :math:`\vec M` is defined as the magnetic moment per unit volume:
+Magnetization :math:`{\bf M}` is defined as the magnetic moment per unit volume:
 
 .. math::
-	\vec M = \frac{d \vec m}{d V}
+	{\bf M} = \frac{d {\bf m}}{d V}
 	:label: Mag_Definition
 
 The majority of rocks are paramagnetic.
@@ -34,28 +34,21 @@ Magnetic susceptibility is defined as the ratio between induced magnetization an
 Provided the magnetic field is not too strong, this relationship is linear:
 
 .. math::
-	\vec M = \chi \vec H
+	{\bf M} = \chi {\bf H}
 	:label: Const_Rel_Mag
 
-where :math:`\chi` is magnetic susceptibility of the rock, :math:`\vec H` is the magnetic field intensity, and :math:`\vec M` is the induced magnetization.
+where :math:`\chi` is magnetic susceptibility of the rock, :math:`{\bf H}` is the magnetic field intensity, and :math:`{\bf M}` is the induced magnetization.
 Because the majority of rocks are paramagnetic, they are almost always characterized by magnetic susceptibilities greater than 0.
 
-When a magnetic field is applied to a susceptible object, there is a corresponding change in magnetic flux through the object.
-Magnetic permeability is defined as the ratio between the density of magnetic flux and the applied magnetic field intensity:
+According to the magnetic constitutive relationship (link), the relationship between magnetic susceptibiliy and magnetic permeability (link), and Eq. ():
 
 .. math::
-	\vec B = \mu \vec H
-	:label: Const_Rel_Flux
-
-where :math:`\vec B` is the magnetic flux density, and :math:`\mu` is the material's magnetic permeability.
-If the magnetization within the material is linear, then magnetic susceptibility and magnetic permeability are related by the following expression:
-
-.. math::
-	\mu = \mu_0 \big [ 1+ \chi \big ]
-	:label: Rel_Mu_Chi
+	{\bf B} = \mu {\bf H} = \mu_0 \big [1 +\chi \, ] {\bf H} = \mu_0 \big [ {\bf H + M} \big ]
+	:label: Rel_BMH
 
 where :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
-Therefore, both :math:`\chi` and :math:`\mu` can be used as diagnostic magnetic properties for rocks.
+Eq. () implies that induced magnetization contributes towards the net magnetic flux density within the rock.
+Furthermore, the nature of this contribution may be represented by the rock's magnetic permeability.
 
 
 

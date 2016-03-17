@@ -3,8 +3,8 @@
 Laboratory Measurements
 =======================
 
-Introduction
-------------
+General Approach
+----------------
 
 Magnetic permeability measurements can be understood by considering a forced, in-series LC circuit (Figure needs reference).
 :math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.
@@ -30,8 +30,8 @@ Therefore, the magnetic permeability is obtained by measuring the resonance freq
 	:align: center
         :scale: 50%
         
-Theory
-------
+Background Theory
+-----------------
 
 The underlying physics of magnetic permeability measurements can be understood by considering the circuit diagram in Figure (needs reference).
 For sensitive measurements, a portion of the wire is wound around a ferrite.
