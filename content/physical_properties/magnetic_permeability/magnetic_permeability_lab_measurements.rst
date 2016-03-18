@@ -6,10 +6,17 @@ Laboratory Measurements
 General Approach
 ----------------
 
+
+
+        
 Magnetic permeability measurements can be understood by considering a forced, in-series LC circuit (Figure needs reference).
 :math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.
 :math:`L` represents a linear self-inductance, which ultimately depends on the rock's magnetic permeability :math:`\mu`.
 The current within the wire is defined by the following ordinary differential equation:
+
+.. figure:: ./figures/figPermeabilityVsRes.png
+	:align: right
+        :scale: 40%
 
 .. math::
 	\frac{d^2 I (t)}{d t} + \frac{1}{LC} I(t) = F(t)
@@ -20,15 +27,15 @@ where :math:`F(t)` represents the driving voltage. Eq. :eq:`Forced_Oscillator` h
 .. math::
 	\omega_r = \frac{1}{\sqrt{LC}}
 	:label: Omega_Resonance
+	
 
 In typical laboratory measurements, rock samples are placed in a holder.
 Introduction of a sample changes the inductive element of the circuit, thus changing the circuit's resonance frequency. 
 Each instrument has an experimentally derived curve, which defines the change in resonance frequency as a function of the rock's magnetic permeability.
 Therefore, the magnetic permeability is obtained by measuring the resonance frequency of the circuit and finding the corresponding magnetic permeability value on the curve. 
 
-.. figure:: ./figures/figSuscMeasure.png
-	:align: center
-        :scale: 50%
+
+
         
 Background Theory
 -----------------
@@ -41,6 +48,10 @@ The ferrite does not form a closed path.
 Within the gap, a rock of magnetic permeability :math:`\mu_s` is placed.
 The coil-ferrite system acts as an inductive element for the circuit, and is denoted by :math:`L`.
 Thus, the current within the wire can be describe using Eq. (reference).
+
+.. figure:: ./figures/figSuscMeasure.png
+	:align: right
+        :scale: 50%
 
 
 The driving voltage generates a current within the wire.
@@ -95,12 +106,9 @@ By definition of the self-inductance, and by using Eqs. :eq:`Hopkinsons_Law` and
 	:label: Inductance
 
 Therefore, the self-inducance of the circuit is inversely proportional to the magnetic reluctance.
-For our theoretical experiment, the magnetic permeability of a rock sample may be determined by:
+For our theoretical experiment, the magnetic permeability of a rock sample may be determined by the following expression:
 
-1) Finding the resonance frequency :math:`\omega_r` of the circuit.
+.. math::
+	\mu_s = \frac{\alpha}{C (N \omega_r )^2 - \Re_0}
+	:label: EqFinal
 
-2) Using :math:`\omega_r` and :math:`C` to obtain the circuit's self-inductance :math:`L`.
-
-3) Using :math:`L` to obtain the magnetic reluctance :math:`\Re`.
-
-4) Then using :math:`\Re`, and experimentally derived parameters :math:`\Re_0` and :math:`\alpha`, to obtain the sample's magnetic permeability :math:`\mu_s`.
