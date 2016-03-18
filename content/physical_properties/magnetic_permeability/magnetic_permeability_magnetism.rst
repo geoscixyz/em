@@ -3,6 +3,12 @@
 Magnetism in Rocks
 ==================
 
+The magnetic permeability of a rock is determined by the nature of induced magnetization it experiences in response to an applied magnetic field.
+Here, we define induced magnetization by considering a collection of magnetic dipole moments.
+A mathematical relationship between induced magnetization and the magnetic permeability is then presented.
+
+Theory of Magnetism
+-------------------
 
 Magnetism is attributed to the movement of electrical charges.
 Within a material, the motion and spin of individual electrons is responsible for generating a collection of magnetic moments :math:`\{{\bf m_i}\}`.
@@ -39,15 +45,20 @@ Provided the magnetic field is not too strong, this relationship is linear:
 
 where :math:`\chi` is magnetic susceptibility of the rock, :math:`{\bf H}` is the magnetic field intensity, and :math:`{\bf M}` is the induced magnetization.
 Because the majority of rocks are paramagnetic, they are almost always characterized by magnetic susceptibilities greater than 0.
+However, some rocks are diamagnetic, an experience induced magnetizations which opposed the applied magnetic field.
+These rocks are characterized by magnetic susceptibilities less than 0.
 
-According to the magnetic constitutive relationship (link), the relationship between magnetic susceptibiliy and magnetic permeability (link), and Eq. ():
+Relationship Between Magnetization and Magnetic Permeability
+------------------------------------------------------------
+
+According to the magnetic constitutive relationship (link), the relationship between magnetic susceptibiliy and magnetic permeability (link), and Eq. :eq:`Const_Rel_Mag`:
 
 .. math::
 	{\bf B} = \mu {\bf H} = \mu_0 \big [1 +\chi \, ] {\bf H} = \mu_0 \big [ {\bf H + M} \big ]
 	:label: Rel_BMH
 
 where :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
-Eq. () implies that induced magnetization contributes towards the net magnetic flux density within the rock.
+Eq. :eq:`Rel_BMH` implies that induced magnetization contributes towards the net magnetic flux density within the rock.
 Furthermore, the nature of this contribution may be represented by the rock's magnetic permeability.
 
 

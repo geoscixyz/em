@@ -3,45 +3,46 @@
 Laboratory Measurements
 =======================
 
+Magnetic permeability measurements represent an integral part of classifying physical rock properties.
+Here, we present the general approach for measuring the magnetic permeabilities of rock samples.
+Background theory is then provided for a simplified instrument configuration.
+
 General Approach
 ----------------
 
 
-
-        
-Magnetic permeability measurements can be understood by considering a forced, in-series LC circuit (Figure needs reference).
-:math:`V` represents a driving voltage for the circuit, :math:`I` is the current in the wire, and :math:`C` is a known capacitive element.
-:math:`L` represents a linear self-inductance, which ultimately depends on the rock's magnetic permeability :math:`\mu`.
-The current within the wire is defined by the following ordinary differential equation:
-
-.. figure:: ./figures/figPermeabilityVsRes.png
+.. figure:: ./figures/figSuscMeasure.png
 	:align: right
-        :scale: 40%
+        :scale: 50%
+
+Magnetic permeability measurements can be understood by considering the forced, in-series LC circuit diagram in Figure (needs reference).
+A driving voltage :math:`V(t)` generates a current :math:`I(t)` within the wire; which is defined by the following ordinary differential equation:
 
 .. math::
 	\frac{d^2 I (t)}{d t} + \frac{1}{LC} I(t) = F(t)
 	:label: Forced_Oscillator
-
-where :math:`F(t)` represents the driving voltage. Eq. :eq:`Forced_Oscillator` has a natural resonance frequency of:
+	
+For this circuit, the inductive element :math:`L` depends on the magnetic permeability :math:`\mu_s` of the rock sample, :math:`C` is a known capacitive element, and :math:`F(t)` is used to represent the driving voltage.
+From Eq. :eq:`Forced_Oscillator`, the circuit has a natural resonance frequency :math:`\omega_r` at:
 
 .. math::
 	\omega_r = \frac{1}{\sqrt{LC}}
 	:label: Omega_Resonance
-	
 
-In typical laboratory measurements, rock samples are placed in a holder.
-Introduction of a sample changes the inductive element of the circuit, thus changing the circuit's resonance frequency. 
-Each instrument has an experimentally derived curve, which defines the change in resonance frequency as a function of the rock's magnetic permeability.
-Therefore, the magnetic permeability is obtained by measuring the resonance frequency of the circuit and finding the corresponding magnetic permeability value on the curve. 
+A relationship between the permeability of the sample and the resonance frequency of the circuit may not be straightforward.
+In most cases, an experimentally derived curve is used to characterize an empirical relationship between these two quantities.
+Once established, the magnetic permeability of a sample may be obtained by 1) determining the resonance frequency of the circuit, then 2) finding the corresponding magnetic permeability value on the curve. 
 
-
+.. figure:: ./figures/figPermeabilityVsRes.png
+	:align: center
+        :scale: 30%
 
         
-Background Theory
------------------
+Background Theory: A Simplified Experiment
+------------------------------------------
 
-The underlying physics of magnetic permeability measurements can be understood by considering the circuit diagram in Figure (needs reference).
-For sensitive measurements, a portion of the wire is wound around a ferrite.
+Once again, let us considering the circuit diagram in Figure (needs reference).
+For sensitive permeability measurements, a portion of the wire is frequently wound around a ferrite.
 Ferrites are non-conductive and extremely permeable (:math:`\mu_{f} \sim 1000\mu_0`).
 As a result, they become extremely magnetized when exposed to a magnetic field, but experience negligible EM induction under 5 kHz (reference?).
 The ferrite does not form a closed path.
@@ -49,12 +50,7 @@ Within the gap, a rock of magnetic permeability :math:`\mu_s` is placed.
 The coil-ferrite system acts as an inductive element for the circuit, and is denoted by :math:`L`.
 Thus, the current within the wire can be describe using Eq. (reference).
 
-.. figure:: ./figures/figSuscMeasure.png
-	:align: right
-        :scale: 50%
-
-
-The driving voltage generates a current within the wire.
+The driving voltage :math:`V(t)` generates a current :math:`I(t)` within the wire.
 This current creates a magnetic field :math:`H` within the coil.
 If the material within the coil was conductive, it would experience an electromotive force.
 Because ferrites are purely magnetic, they experience a magnetomotive force :math:`\mathcal{F}` instead.
@@ -98,7 +94,7 @@ In most laboratory experiments, the magnetic reluctance is given by (Clark and E
 	\Re = \Re_0 + \frac{\alpha}{\mu_s}
 	:label: Reluctance_Sample
 	
-where :math:`\Re_0` and :\math:`\alpha` can be experimentally determined, and depend on the geometry of the instrument.
+where :math:`\Re_0` and :math:`\alpha` can be experimentally determined, and depend on the geometry of the instrument.
 By definition of the self-inductance, and by using Eqs. :eq:`Hopkinsons_Law` and :eq:`Reluctance_Sample`:
 
 .. math::
@@ -106,7 +102,7 @@ By definition of the self-inductance, and by using Eqs. :eq:`Hopkinsons_Law` and
 	:label: Inductance
 
 Therefore, the self-inducance of the circuit is inversely proportional to the magnetic reluctance.
-For our theoretical experiment, the magnetic permeability of a rock sample may be determined by the following expression:
+Using Eqs. :eq:`Omega_Resonance`, :eq:`Reluctance_Sample` and :eq:`Inductance`, the magnetic permeability of a rock sample may be determined by the following expression:
 
 .. math::
 	\mu_s = \frac{\alpha}{C (N \omega_r )^2 - \Re_0}
