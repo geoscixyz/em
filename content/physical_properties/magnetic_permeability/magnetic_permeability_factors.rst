@@ -4,7 +4,7 @@ Impact of Mineralogy on Magnetic Properties
 ===========================================
 
 Magnetism in rocks is primarily attributed to the presence of iron-bearing minerals.
-A collection of relevant iron-bearing minerals are listed here.
+These minerals, and their relative importance in rock magnetism, are listed here.
 The magnetic susceptibilities of common rock types are discussed qualitatively.
 
 Important Iron-Bearing Minerals
