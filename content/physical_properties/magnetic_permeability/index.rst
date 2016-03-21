@@ -8,8 +8,8 @@ In addition to compositional differences, rocks and other objects may be differe
 In mineral exploration, contrasts in magnetic permeabilities between rock types can be exploited to recover subsurface geological structures.
 Contrasts in magnetic permeability have also been used to locate unexploded ordnance items; as their casings are significantly more permeable than the medium in which they are buried.
 
-What is Magnetic Permeability?
-------------------------------
+Formal Definition
+-----------------
 
 When exposed to an applied magnetic field, the collection of individual magnetic dipole moments within most materials will attempt to reorient themselves along the direction of the field.
 This generates an induced magnetization, which contributes towards the net magnetic flux density inside the material.

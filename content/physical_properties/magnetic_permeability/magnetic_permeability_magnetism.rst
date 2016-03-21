@@ -35,6 +35,8 @@ This process is illustrated in Figure (needs reference).
 .. figure:: ./figures/figMagDipoles.png
 	:align: center
         :scale: 70%
+        
+        Magnetization :math:`{\bf M}` in matter, as represented by the partial alignment of magnetic dipole moments :math:`{\bf m_i}` in response to an applied magnetic field :math:`{\bf H}`.
 
 Magnetic susceptibility is defined as the ratio between induced magnetization and the strength of an applied magnetic field.
 Provided the magnetic field is not too strong, this relationship is linear:
