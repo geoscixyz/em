@@ -63,3 +63,12 @@ These rocks include: metasediments, amphibolites, granulites, eclogites and schi
 .. figure:: ./figures/figMagSuscTable.png
 	:align: center
         :scale: 70%
+        
+        
+        
+        
+        
+        
+References:
+
+Clark and Emerson, "Notes on Rock Magnetization Characteristics in Applied Geophysical Studies," Exploration Geophysics, vol. 22, pp. 547-555, 1991.

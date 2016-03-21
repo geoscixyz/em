@@ -76,4 +76,8 @@ The partial alignment of magnetic dipole moments under an applied field, and the
 
 
 
-References: Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
+References: 
+
+Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
+
+Griffiths, David J., "Introduction to Electrodynamics", 3rd Ed., Prentice Hall, 1999.

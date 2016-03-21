@@ -63,6 +63,12 @@ Furthermore, the nature of this contribution may be represented by the rock's ma
 
 
 
+References:
+
+Griffiths, David J., "Introduction to Electrodynamics", 3rd Ed., Prentice Hall, 1999.
+
+
+
 
 
 
