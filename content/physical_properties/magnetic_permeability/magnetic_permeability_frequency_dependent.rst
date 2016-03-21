@@ -25,12 +25,14 @@ where :math:`\mu (\omega)` may also be characterized a frequency-dependent magne
 
 .. math::
 	\mu (\omega) = \mu_0 \big [ 1 + \chi (\omega) \, \big ]
+	:label: SuscPermRel
 
 As presented earlier, magnetic susceptibility represents the proportional degree of induced magnetization, in response to an applied magnetic field.
 For rocks exhibiting magnetic viscosity, the relaxation process may be understood by considering a Debye model:
 
 .. math::
 	\chi(\omega) = \chi_\infty + \frac{\chi_0 - \chi_\infty}{1 + i \omega \tau}
+	:label: EqDebye
 	
 
 where :math:`\chi_0` defines the zero-frequency limit, :math:`\chi_\infty` defines the infinite frequency limit, and :math:`\tau` defines the rate of magnetic relaxation.
@@ -40,20 +42,22 @@ This can be represented by introducing a weighting function :math:`f(\tau)`, and
 
 .. math::
 	\chi (\omega) = \chi_\infty + \big ( \chi_0 - \chi_\infty \big ) \int_0^\infty \frac{f(\tau)}{1 + i\omega\tau} d\tau
-
+	:label: EqWeigthFcn
 
 The magnetic viscosity of a rock ultimately depends on the distribution of time relaxation constants.
-From expression (), a multitude of models have been proposed.
+From expression :eq:`EqWeigthFcn`, a multitude of models have been proposed.
 One of the simplest and most popular models is obtained by assuming a log-uniform distribution of time relaxation constants:
 
 .. math::
 	\chi(\omega) = \chi_0 - \frac{\chi_0 - \chi_\infty}{ln (\tau_2/\tau_1)} ln \Bigg ( \frac{1 + i\omega\tau_2}{1 + i\omega\tau_1} \Bigg )
+	:label: EqLogUniform
 	
 where :math:`\tau_1` and :math:`\tau_2` represent lower and upper bounds for distribution.
 A specific weighting function may also be used to obtain the Cole-Cole model:
 
 .. math::
 	\chi(\omega) = \chi_\infty + \frac{\chi_0 - \chi_\infty}{1 + (i \omega \tau_c)^\alpha}
+	:label: EqColeCole
 
 where :math:`\tau_c` represents the center of a distribution of time-relaxation constants, and :math:`\alpha` represents the broadness of the distribution.
 The frequency-dependent magnetic susceptibilities for a Debye model, log-uniform distribution, and Cole-Cole model are compared in Figure ().
