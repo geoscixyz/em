@@ -14,6 +14,9 @@ a `binder`_.
 
 .. _binder:  http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
 
+.. image:: http://mybinder.org/badge.svg 
+    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
+
 Setup
 -----
 

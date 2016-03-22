@@ -3,39 +3,44 @@
 Response of a layered Earth to a plane wave
 ===========================================
 
-This work follows the derivation in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
-
- .. image:: http://mybinder.org/badge.svg 
-    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
-
-.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
-
-
-
-
 Introduction
 ------------
 
-The problem setup is shown in the figure below (See :numref:`MTlayeredEarth`), where we have
+We present here a 1D modelisation of the MagnetoTelluric waves and the associated geophysical data to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
- .. figure:: images/MT_N_layered_Earth-1.hires.png
+ .. image:: http://mybinder.org/badge.svg 
+    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
     :align: center
-    :scale: 20% 
-    :name: MTlayeredEarth
 
-    Earth Model Configuration
+.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+
+MagnetoTelluric is a widely used method, especially for imaging geothermal structures. Its ability to image deep structure, up to kilometers depth is unique in EM geophysics. It is a passive method that use waves generated mostly in the Earth's Atmosphere. High frequencies are mainly produced by lightning strikes all around the globe, travelling through the Earth's Ionosphere that acts as a waveguide. Low Frequencies source waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
+
+In MagnetoTellurics problem, the key diagnosed physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`, as we expect the contrasts of the others physical properties to be negligible. 
 
 
+
+Setup
+-----
+
+An example of a 1D MagnetoTelluric modelisation, with a 2-layers Earth, is shown in the movie below, where we have:
 
  - a layered Earth, each layer with its own physical properties :math:`\sigma, \varepsilon, \mu`
 
- - a plane wave coming from air, perpendicular to the Earth's surface, traveling along the axis Z (oriented downward), with an electric field :math: `\mathbf{E_x}` and a magnetic field :math:`\mathbf{H_y}`.
+ - a plane wave traveling along the axis Z coming from air, composed of an electric field :math:`\mathbf{E_x}` and a magnetic field :math:`\mathbf{H_y}`. These are the fields we will be measuring with our geophysical instruments to obtain information from the underground
 
- - the origin of coordinate system coincides with the Earth's surface
 
-In MagnetoTellurics problem, the key diagnosed physical property is conducity
- :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`, as we expect the contrasts of the others physical properties to be negligible. 
+ .. raw:: html
+  :file: ./images/movieMT_time.html
 
+
+We can see that several phenomenons are occuring. Just to mention few of them:
+
+ - the incoming wave (down component) is reflected at the surface
+
+ - once in the ground we observe a diffusive effect of the Earth on the wave that will regulate the depth of investigation and the resolution of the survey. The decay is more important in the second layer with a higher conductivity
+
+ - :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are continuous and phased compared to each other
 
 
 Governing Equations
@@ -54,7 +59,7 @@ considering the zero-frequency case, in which case, Maxwell's equations are
     :label: Ampere
 
 Knowing that the divergent of **E** and **H** are equal to 0 here (no free charge)
-according to :eq:`gauss_electric_frequency` and :eq: `gauss_magnetic_frequency`, we can combine the equations to write the Helmhotz (wave propagation) equation for both **E** and **B** field:
+according to :ref:`Gauss's Law for Electric Fields<gauss_electric>` and :ref:`Gauss's Law for Magnetic Fields<gauss_magnetic_frequency>`, we can combine the equations to write the Helmhotz (wave propagation) equation for both **E** and **B** field:
 
 .. math::
     \nabla ^2  \mathbf{E_x} + k^2 \mathbf{E_x} = 0
@@ -77,7 +82,7 @@ We usually assume that the displacement current is negligible, which means \\(\\
     k \simeq (1-j) \sqrt{ \frac{\omega \mu \sigma}{2} }
     :label: kwavenumber_steadystate
 
-Taking the problem from the point of view of the electric field, we know the :ref:E_wave_propagation_equation has a solution in the form of:
+Taking the problem from the point of view of the electric field, we know the :eq:`E_wave_propagation_equation` has a solution in the form of:
 
 .. math::
     E_x (z) = U e^{i k z} + D e^{-i k z}
@@ -85,19 +90,27 @@ Taking the problem from the point of view of the electric field, we know the :re
 .. math::
     H_y (z) = \frac{(\nabla \times \mathbf{E_x})_y}{- i \omega \mu} = \frac{k}{ \omega \mu} (U e^{i k z} -D e^{-i k z} ) = \frac{1}{Z} (U e^{i k z} -D e^{-i k z} )
 
-with U and D are the complex amplitudes of the Up and Down components of the field and Z the intrinsic impedance of the space.
+with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex amplitudes of the Up and Down components of the field and Z the intrinsic impedance of the space.
 
-Writing the solution in the j-th layer, we got:
+Writing the solution in the j-th layer (See :numref:`MTlayeredEarth`), we got:
 
-.. math::
+ .. math::
     E_{x,j} (z) = U_j e^{i k (z-z_{j-1})} + D_j e^{-i k (z-z_{j-1})}
     
-.. math::
+ .. math::
     H_{y,j} (z) = \frac{1}{Z_j} (D_j e^{-i k (z-z_{j-1})} - U_j e^{i k (z-z_{j-1})})
+
+
+ .. figure:: images/MT_N_layered_Earth-1.hires.png
+    :align: center
+    :scale: 20% 
+    :name: MTlayeredEarth
+
+    1D general Earth Model Configuration
 
 Which can be rewrite as:
 
-.. math::
+ .. math::
     \left(\begin{matrix} E_{x,j} \\ H_{y,j} \end{matrix} \right) = \left(\begin{matrix} 1 & 1 \\ -\frac{1}{Z_j} & \frac{1}{Z_j} \end{matrix} \right) \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
     = P_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
 
@@ -180,11 +193,6 @@ Interpretation
 Pratical Consideration
 ----------------------
 
-Building some Intuition for MT problem
---------------------------------------
-
-.. raw:: html
-  :file: ./images/movieMT_time.html
 
 
 
