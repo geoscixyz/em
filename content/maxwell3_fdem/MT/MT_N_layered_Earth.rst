@@ -140,6 +140,16 @@ We are now only missing a Boundary Condition to be able to compute our MT forwar
 .. math::
     \left(\begin{matrix} U_n \\ D_n \end{matrix} \right)  = \left(\begin{matrix} 0 \\ 1 \end{matrix} \right) 
 
+Building Intuition for MT problems
+----------------------------------
+
+Skin Depth and Depth of investigation
+*************************************
+
+Reflection Coefficient
+**********************
+
+
 
 Field Acquisition
 -----------------
