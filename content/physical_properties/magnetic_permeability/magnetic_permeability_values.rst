@@ -3,8 +3,8 @@
 Typical Values for Rocks
 ========================
 	
-The range of magnetic susceptibilities (in SI) for rocks is illustrated in Figure (needs reference) (Clark and Emerson, 1991).
-Recall that magnetic permeabilities for these rocks may be obtained using the appropriate expression from the units section (link).
+The range of magnetic susceptibilities (in SI) for rocks is illustrated in the figure below (Adapted from Clark and Emerson, 1991).
+Recall that a relationship between the magnetic permeability and magnetic susceptibility is defined in the :ref:`units section <magnetic_permeability_units>`.
 
 
 .. figure:: ./figures/figMagSuscTable.png

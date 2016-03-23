@@ -15,6 +15,13 @@ When exposed to an applied magnetic field, the collection of individual magnetic
 This generates an induced magnetization, which contributes towards the net magnetic flux density inside the material.
 The degree in which the induced magnetization impacts the magnetic flux density depends on the material's magnetic permeability.
 
+  .. figure:: ./figures/figBvsHillustr.png
+    :name: BvsHillustr
+    :figwidth: 45%
+    :align: right
+
+    Magnetic flux density as a function of magnetic field intensity for various classifications of permeable rock types: diamagnetic, vacuum, paramagnetic, and ferromagnetic.
+
 Magnetic permeability :math:`\mu` defines the ratio between the magnetic flux density :math:`{\bf B}` within a material, and the intensity of an applied magnetic field :math:`{\bf H}`; provided the fields are sufficiently weak:
 
 .. math::
@@ -22,13 +29,8 @@ Magnetic permeability :math:`\mu` defines the ratio between the magnetic flux de
 	:label: Const_Rel_Flux
 	
 In a vacuum, the relationship between :math:`{\bf B}` and :math:`{\bf H}` is given by the permeability of free-space :math:`\mu_0 = 4\pi \times 10^{-7}` T :math:`\!\cdot\!` m/A.
-An illustration representing the magnetic flux density as a function of the applied field strength for various rock classifications are shown in Figure ().
+An illustration representing the magnetic flux density as a function of the applied field strength for various rock classifications is shown here.
 
-.. figure:: ./figures/figBvsHillustr.png
-	:align: center
-        :scale: 40%
-        
-        Magnetic flux density as a function of magnetic field intensity for various classifications of permeable rock types: diamagnetic, non-permeable, paramagnetic, and ferromagnetic.
 
 
 
@@ -48,11 +50,11 @@ These rocks are characterized by relative permeabilities :math:`\mu_r > 1`.
 A relative permeability of :math:`\mu_r = 1` is used to characterize materials which are incapable of supporting induced magnetization.
 In rare cases, a very small magnetization can be induced in rocks, which opposes the applied field, and reduces the density of magnetic flux.
 These rocks are characterized by magnetic permeabili3810 characters, 495 words, 78 linesties :math:`\mu_r < 1`.
-The partial alignment of magnetic dipole moments under an applied field, and the resulting magnetic flux densities in all three cases, are represented in Figure.
+The partial alignment of magnetic dipole moments under an applied field, and the resulting magnetic flux densities in all three cases, are represented in the figure below.
 
 .. figure:: ./figures/figMagFluxDensity.png
 	:align: center
-        :scale: 60%
+        :scale: 70%
 	
 	Partial alignment of magnetic dipole moments under the influence of an applied magnetic field for various cases. (a) Paramagnetic (:math:`\mu_r > 1`).
 	Magnetization is parallel to the applied field and increases the density of magnetic flux. (b) Non-permeable (:math:`\mu_r = 1`).

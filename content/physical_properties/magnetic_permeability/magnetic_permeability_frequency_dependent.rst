@@ -15,7 +15,7 @@ References may be found at the bottom of the page.
 Mathematical Description
 ------------------------
 
-For rocks which are characterized by frequency-dependent magnetic permeabilities, the magnetic constitutive relationship becomes:
+For rocks which are characterized by frequency-dependent magnetic permeabilities, the :ref:`magnetic constitutive relationship <magnetic_permeability_index>` becomes:
 
 .. math::
 	{\bf B}(\omega) = \mu (\omega) \, {\bf H}(\omega)
@@ -27,7 +27,7 @@ where :math:`\mu (\omega)` may also be characterized a frequency-dependent magne
 	\mu (\omega) = \mu_0 \big [ 1 + \chi (\omega) \, \big ]
 	:label: SuscPermRel
 
-As presented earlier, magnetic susceptibility represents the proportional degree of induced magnetization, in response to an applied magnetic field.
+As presented :ref:`earlier <magnetic_permeability_magnetism>`, magnetic susceptibility represents the proportional degree of induced magnetization, in response to an applied magnetic field.
 For rocks exhibiting magnetic viscosity, the relaxation process may be understood by considering a Debye model:
 
 .. math::
@@ -60,7 +60,7 @@ A specific weighting function may also be used to obtain the Cole-Cole model:
 	:label: EqColeCole
 
 where :math:`\tau_c` represents the center of a distribution of time-relaxation constants, and :math:`\alpha` represents the broadness of the distribution.
-The frequency-dependent magnetic susceptibilities for a Debye model, log-uniform distribution, and Cole-Cole model are compared in Figure ().
+The frequency-dependent magnetic susceptibilities for a Debye model, log-uniform distribution, and Cole-Cole model are compared in the figure below.
 
 
 .. figure:: ./figures/figChiOmegaDistr.png

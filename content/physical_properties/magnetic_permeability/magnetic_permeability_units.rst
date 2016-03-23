@@ -3,18 +3,20 @@
 Units
 =====
 
-The magnetic field intensity :math:`{\bf H}` is frequently given in Amp\`{e}res per meter (A/m), whereas the magnetic flux density is given in Teslas (T).
-By the magnetic constitutive relationship (link), the magnetic permeability of a material is represented in units of T :math:`\! \cdot \!` m/A.
-Where Henrys (H) are used to represent a unit of magnetic inductance, the magnetic permeability can also be given in H/m:
+Two sets of units may be used to represent the magnetic permeability: Teslas times meters per Ampere (T :math:`\! \cdot \!` m/A), and Henrys per meter (H/m):
 
 .. math::
 	\frac{H}{m} = \frac{T \cdot m}{A} 
 	:label: Units_Hm
 
-Therefore, the magnetic permeability characterizes the magnetic inductance per unit length of a material.
+The magnetic field intensity :math:`{\bf H}` is frequently given in Amperes per meter (A/m), whereas the magnetic flux density is given in Teslas (T).
+Therefore, the first choice in units is defined by the :ref:`magnetic constitutive relationship <magnetic_permeability_index>`.
+Henrys are used to represent a unit of magnetic inductance.
+Therefore, the magnetic permeability also characterizes the magnetic inductance per unit length of a material.
+
 More commonly, the magnetic properties of rocks are represented using the magnetic susceptibility :math:`\chi`.
 Magnetic susceptibility represents the proportion of total magnetic flux density attributed to induced magnetization.
-A physical description of the magnetic susceptibility is discussed here (link).
+A physical description of the magnetic susceptibility is discussed :ref:`here <magnetic_permeability_magnetism>`.
 Magnetic susceptibility is related to the magnetic permeability by the following equation:
 
 .. math::

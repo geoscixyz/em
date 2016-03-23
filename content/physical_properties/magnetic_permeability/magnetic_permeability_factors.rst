@@ -22,11 +22,11 @@ As a result, their contribution is considered more or less negligible.
 Magnetic Susceptibility of Various Rock Types
 ---------------------------------------------
 
-For reference, the typical range of intrinsic magnetic susceptibilities for various rock types are shown in Figure (needs reference).
+For reference, the typical range of intrinsic magnetic susceptibilities for various rock types can be found at the bottom of the page.
 The magnetic susceptibility of a rock ultimately depends on its mineralogy.
 Rocks containing higher abundances of magnetite, titano-magnetite and maghemite are more susceptible.
 Magnetite is frequently the dominant source of magnetic susceptibility in rocks.
-A rough estimate of magnetic susceptibility based on \% volume magnetite content is shown along the top of Figure (needs reference).
+A rough estimate of magnetic susceptibility based on \% volume magnetite content represented by vertical red dashed lines.
 
 Igneous
 _______

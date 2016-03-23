@@ -1,5 +1,6 @@
 .. _magnetic_permeability_magnetism:
 
+
 Magnetism in Rocks
 ==================
 
