@@ -1,7 +1,7 @@
 .. _electrical_conductivity_tables:
 
-Useful tables
-=============
+Tables of values
+================
 
 Electrical conductivity
 -----------------------

@@ -1,7 +1,7 @@
 .. _electrical_conductivity_lab_setup_measurements:
 
-Constitutitve relationships and Lab measurments
-===============================================
+Lab set up and measurments
+==========================
 
 Ohm's Law at DC
 ---------------

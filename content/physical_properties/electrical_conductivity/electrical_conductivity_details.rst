@@ -1,7 +1,7 @@
 .. _electrical_conductivity_detials:
 
-Additional information
-======================
+Relevant topics
+===============
 
 .. toctree::
     :maxdepth: 2
