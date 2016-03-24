@@ -179,8 +179,8 @@ We see the skin depth is highly dependent on both the frequency of our signal an
 
  In :numref:`SkinDepth_MT` and in the movie, we can see that even at very high frequency (20000 Hz), MT is still a deep exploration method in resistive environment (:math:`10^{-5} S/m`) with a skin depth of about 1125m. Skin Depth is often use as an estimator for the depth of investigation of a survey.
 
-Reflection Coefficient
-**********************
+Reflection and Transmission Coefficients
+****************************************
 
 .. figure:: images/Reflection_MT.png
  :align: right
@@ -220,7 +220,7 @@ Using :ref:`Faraday's law<faraday>`, assuming variations in :math:`\mu` are negl
     k_j E^i - k_j E^r = k_{j+1} E^t
     :label: faraday continuity condition
 
-Replacing the differents components of equation :eq:`faraday continuity condition` with equation :eq:`Continuity of E`, we obtain:
+Replacing the differents components of equation :eq:`faraday continuity condition` with equation :eq:`Continuity of E`, we obtain the reflection coefficient R and the transmission coefficient T:
 
 .. math::
     R = \frac{E^r}{E^i} = \frac{k_j - k_{j+1}}{k_j + k_{j+1}}
