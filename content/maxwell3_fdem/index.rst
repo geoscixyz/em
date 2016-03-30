@@ -11,4 +11,4 @@ Contents:
     :maxdepth: 1
 
     theory_3loops
-    sphere_freespace
+    sphere_freespace/index
