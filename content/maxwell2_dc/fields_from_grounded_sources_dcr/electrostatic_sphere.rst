@@ -9,13 +9,13 @@ problems. Here we examine the case of a conducting sphere in a uniform
 electrostatic field. This scenario gives us a setting to examine aspects of
 the DC resistivity experiment, including the behavior of electric potentials,
 electric fields, current density and the build up of charges at interfaces.
-This work follows the derivation in :cite:`ward1988` and is supported by apps developed in
-a `binder`_.
+This work follows the derivation in :cite:`ward1988` and is supported by apps developed in a `binder`_.
 
 .. _binder:  http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
 
-.. image:: http://mybinder.org/badge.svg 
+ .. image:: http://mybinder.org/badge.svg 
     :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
+    :align: center
 
 Setup
 -----
