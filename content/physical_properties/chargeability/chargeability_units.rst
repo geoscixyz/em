@@ -5,7 +5,7 @@ Units
 
 By definition of the intrinsic chargeability, :math:`\eta = \frac{V_0-V_\infty}{V_0}`, the unit will be V/V (Dimensionless); :math:`\eta` will be bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from inifinte to zero frequency normalized by voltage at zero frequency, :math:`V_0`. As shown in below diagram, when the current switched-on in the on-time, polarization charges start to build up (:math:`V_0`) then at a late time it asymptotes to steatdy-state (:math:`V_0`). After the current is switched-off built polarization charge is decaying and asymptotes to zero.
 
-.. figure:: ../../../examples/physical_properties/electrical_conductivity/DCIPcurve.png
+.. figure:: ./figures/DCIPcurve.png
    :align: center
    :scale: 50%
    :name: DCIPcurve

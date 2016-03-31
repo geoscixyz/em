@@ -35,7 +35,7 @@ Although we cannot measure exact :math:`V_{\infty}` and :math:`V_0`, when :math:
 
 By using a specific time window (:math:`t_1` = 800 msec :math:`t_2` = 1400 msec), we numerically evaluate :math:`\frac{V_s(t)}{V_0}` then evaluate integration from :math:`t_1` to :math:`t_2`.
 
-.. figure:: ../../../examples/physical_properties/chargeability/colecole_resis.png
+.. figure:: ./figures/colecole_resis.png
    :align: center
    :name: colecole_resis_V
 

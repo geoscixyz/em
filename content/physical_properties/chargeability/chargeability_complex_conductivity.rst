@@ -23,7 +23,7 @@ where :math:`\sigma_{\infty}` is conductivity at infinite frequency.
 
 Left panel of :numref:`colecole_resis` shows Cole-Cole resistivity with parameters: :math:`\eta=0.5`, :math:`\tau=0.1` s, :math:`c=0.5`, :math:`\sigma_{\infty}=1` S/m.
 
-.. figure:: ../../../examples/physical_properties/chargeability/colecole_resis.png
+.. figure:: ./figures/colecole_resis.png
    :align: center
    :name: colecole_resis
 
