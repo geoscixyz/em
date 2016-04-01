@@ -1,7 +1,7 @@
 .. _excitation_factor
 
-Excitation Factor for a Conductive and Permeable Sphere
--------------------------------------------------------
+Excitation Factor for Special Cases
+-----------------------------------
 
 .. math::
 	\vec m (\omega) = 4 \pi a_0 \vec H_0 (i \omega) = \frac{4\pi}{3}R^3 \chi (\omega) \vec H_0 (i \omega)

@@ -3,54 +3,62 @@
 Derivation of the Excitation Factor
 -----------------------------------
 
+In this section, the excitation factor for a conductive and magnetically permeable sphere is derived according to Wait (1951).
+The excitation factor characterizes the magnetic dipole moment induced by a uniform, harmonic magnetic field.
+The geometry of this problem is illustrated in Figure ().
 
-In this section, equations derived by Wait (1951) are used to describe the induced magnetic dipole moment of a conductive and permeable sphere, resulting from excitation by a uniform magnetic field (Figure ??).
-According to Ward and Hohmann (1989), the frequency-domain wave equation within a homogeneous media can be expressed in terms of the magnetic Schelkunoff potential :math:`\vec F`:
-
-.. figure:: ./images/figProblemGeometry.png
-	:align: center
-        :figwidth: 85%
-        :name: GeometrySphere
+Let us begin by considering Maxwell's equations in the frequency domain:
 
 .. math::
-	\nabla^2 \vec F - \gamma^2 \vec F = 0
+	\begin{align}
+	\nabla \times {\bf E} &= - i \omega \mu {\bf H}\\
+	\nabla \times {\bf H} &= \big ( \sigma + i \omega \varepsilon \big ) {\bf E}
+	\end{align}
+	:label: Maxwell_Schelk
+	
+where :math:`\omega` is the angular frequency, :math:`\sigma` is the conductivity, :math:`\mu` is the magnetic permeability, and :math:`\varepsilon` is the electric permittivity.
+According to Ward and Hohmann (1988), the electric field :math:`{\bf E}` and magnetic field intensity :math:`{\bf H}` may be written in terms of the following Schelkunoff potential :math:`{\bf F}`, where:
+
+.. math::
+	{\bf E} = - \nabla \times {\bf F}
+	:label: SchelkunoffE
+	
+and
+
+.. math::
+	{\bf H} = - \big (\sigma + i \omega \varepsilon \big ) {\bf F} + \frac{1}{i \omega \mu} \nabla \big ( \nabla  \cdot {\bf F} \big )
+	:label: SchelkunoffH
+	
+By subsituting Eqs. :eq:`SchelkunoffE` and :eq:`SchelkunoffH` into Maxwell's equations, we can obtain a wave equation in terms of the :math:`{\bf F}` potential:
+
+.. math::
+	\nabla^2 {\bf F} - \gamma^2 {\bf F} = 0
 	:label: Schelkunoff_Wave
 
-For a propagation media with conductivity :math:`\sigma`, magnetic permeability :math:`\mu` and electric permittivity :math:`\varepsilon`, the wavenumber :math:`\gamma` can be expressed as follows:
+The wavenumber :math:`\gamma` depends on the physical properties of the media, and is given by:
 
 .. math::
 	\gamma = \Big [ i \omega \mu \sigma - \omega^2 \mu \varepsilon \Big ]^{1/2}
 	:label: Wave_Number
 
-By definition of the Schelkunoff potential, the electric field :math:`\vec E` may be obtained by substituting :math:`\vec F` into the following expression:
+For his derivation, Wait (1951) considered the induced magnetic dipole moment resulting from an incident plane wave.
+If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which excites the sphere is approximately uniform about the sphere.
+For an inducing field of the form :math:`{\bf H_0} (i\omega) = H_0 e^{i\omega t} {\bf \hat z}`, symmetry of the problem implies that :math:`{\bf E}` only has components in :math:`\boldsymbol{\hat \phi}`.
+Therefore by Eq. :eq:`SchelkunoffE`, it follows that our Schelkunoff potential will only have components in :math:`{\bf \hat z}` as well.
 
-.. math::
-	\vec E = - \nabla \times \vec F
-	:label: EcurlF
-
-And for the magnetic field :math:`\vec H`:
-
-.. math::
-	\vec H = - \big (\sigma + i \omega \varepsilon \big ) \vec F + \frac{1}{i \omega \mu} \nabla \big ( \nabla  \cdot \vec F \big )
-	:label: SchelkunoffH
-
-For his derivation, Wait (1951) began by considering the induced magnetic dipole moment resulting from an incident plane wave.
-If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which induces the dipole moment is approximately uniform about the sphere.
-For an inducing field of the form :math:`\vec H_0 (i\omega) = H_0 e^{i\omega t} \hat z`, symmetry of the problem implies that :math:`\vec E` only has components in :math:`\hat \phi`.
-Therefore by Eq. :eq:`EcurlF`, it follows that our Schelkunoff potential will only have components in :math:`\hat z`.
 The Schulkunoff potential may be obtained by considering seperate solutions inside and outside of the sphere:
 
 .. math::
-	\vec F (\omega) = \begin{cases}
-	F_b e^{i \omega t} \hat z \; \; \textrm{  at  } \; \; r>R \\
+	{\bf F} (\omega) = \begin{cases}
+	F_b e^{i \omega t} {\bf \hat z} \; \; \textrm{  at  } \; \; r>R \\
 	\\
-	F_s e^{i \omega t} \hat z \; \; \textrm{  at  } \; \; r<R 
+	F_s e^{i \omega t} {\bf \hat z} \; \; \textrm{  at  } \; \; r<R 
 	\end{cases}
 	:label: SolnsInsideOutside
 
 
 For our problem, boundary conditions on the sphere require that tanjential components of the magnetic field and normal components of the flux density must be continuous.
-According to Wait (1951), these conditions are satisfied by the following:
+According to Wait (1951), these conditions are satisfied by the following expressions:
 
 .. math::
 	\textrm{At }r=R: \; \begin{cases}
@@ -60,7 +68,7 @@ According to Wait (1951), these conditions are satisfied by the following:
 	\end{cases}
 	:label: BoundaryConditions
 
-To solve the boundary value problem, Wait (1951) expressed the Schelkunoff potentials, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
+To solve the boundary value problem, Wait (1951) expressed the solutions, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
 For the boundary conditions to be satisfied however, he found that coefficients :math:`a_n=b_n=0 \; \forall \; n>0`.
 As a result, the solution to the Schelkunoff potentials inside and outside the sphere are defined by:
 
@@ -93,35 +101,36 @@ and
 	\alpha_s = \gamma_s R = \Big [ i \omega \mu_s \sigma_s - \omega^2 \mu_s \varepsilon_s \Big ]^{1/2} R
 	:label: alpha_s
 
-The total magnetic field outside the sphere, in response to an inducing field of the form :math:`\vec H_0 e^{i\omega t}`, may be obtained by substituting Eqs. :eq:`Foutside` and :eq:`a0` into Eq. :eq:`SchelkunoffH`.
+The total magnetic field outside the sphere, in response to an inducing field of the form :math:`{\bf H_0} e^{i\omega t}`, may be obtained by substituting Eqs. :eq:`Foutside` and :eq:`a0` into Eq. :eq:`SchelkunoffH`.
 Note that our derivation of :math:`a_0` did not require us to include the frequency-dependent term :math:`e^{i\omega t}` of the primary field.
-Therefore, we may generalize our solution for any inducing field of the form :math:`\vec H_0 (i\omega )`.
-For practical purposes, it is common to examine the dipole response of the sphere.
-In this case, the dipole response :math:`\vec B (\omega)` at location :math:`Q` is:
+Therefore, we may generalize our solution for any harmonic inducing field of the form :math:`{\bf H_0} (i\omega )`.
+
+If the sphere lies within a resistive background (:math:`\sigma_b \ll \sigma_s`, :math:`\mu_b = \mu_0`, and :math:`\varepsilon_b = \varepsilon_0`), then Eq. :eq:`a0` reduces to:
 
 .. math::
-	\vec B (\omega) =\frac{\mu_0}{4\pi} \Bigg [ \frac{3\vec r \; \big [ \vec m(\omega) \cdot \vec r \; \big ]}{r^5} - \frac{\vec m (\omega) }{r^3} \Bigg ] 
+	a_0 \! =\! \frac{R^3}{2} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 \big [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
+	:label: a0reduced
+
+Wait (1951) simplified the solution outside the sphere by considering the dipole field within a vacuum.
+For a dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by (Griffiths, 1999):
+
+.. math::
+	{\bf H} (i \omega) =\frac{1}{4\pi} \Bigg [ \frac{3 {\bf r} \; \big [ {\bf m} (i\omega) \cdot {\bf r} \; \big ]}{r^5} - \frac{{\bf m} (i\omega) }{r^3} \Bigg ] 
 	:label: DipoleField
 
-where :math:`\mu_0` is the permeability of free-space, :math:`\vec r` defines the spatial vector from :math:`P` to :math:`Q`, and :math:`\vec m (\omega)` is the frequency-dependent dipole moment induced by the primary field.
-The dipole moment can be expressed as the product of the sphere's volume, the inducing field, and a magnetization factor :math:`\chi (\omega)`:
+where :math:`{\bf r}` defines the spatial vector from :math:`P` to :math:`Q`.
+The dipole field was derived by performing a multipole expansion on Eq. :eq:`Foutside`, and neglecting higher order terms.
+This lead to an explicit expression for the magnetic dipole moment in terms of coefficient :math:`a_0`, where:
 
 .. math::
-	\vec m (\omega) = 4 \pi a_0 \vec H_0 (i \omega) = \frac{4\pi}{3}R^3 \chi (\omega) \vec H_0 (i \omega)
+	{\bf m} (i \omega) = 4 \pi a_0 {\bf H_0} (i \omega) = \frac{4\pi}{3}R^3 \chi (i \omega) {\bf H_0} (i \omega)
 	:label: DipoleMoment
 
-where
+According the Eq. :eq:`DipoleMoment`, :math:`{\bf m} (i\omega)` may also be expressed as the product of the inducing field, the sphere's volume, and an excitation factor :math:`\chi (i\omega)`, where:
 
 .. math::
-	\chi (\omega) \! =\! \frac{3}{2 e^{-\alpha_b}} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_b \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s \big ( \alpha_b^2 +\alpha_b + 1 \big ) \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_b \big ( \alpha_b + 1 \big ) \big [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
-	:label: ChiFull
-
-If the sphere is located within a resistive medium, then :math:`\alpha_b \ll \alpha_s`, :math:`\mu_b = \mu_0`, and Eq. :eq:`ChiFull` will reduce to:
-
-.. math::
-	\chi (\omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s  \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
+	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s  \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
 	:label: ChiApprox
 
-
-
+and :math:`\alpha_s` is given by Eq. :eq:`alpha_s`.
 

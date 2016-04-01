@@ -1,68 +1,44 @@
 .. _dipole_response
 
-Dipole Response from a Compact Body
------------------------------------
-
 Dipole Response in Free-Space
-=============================
+-----------------------------
+
+
+
+Consider the problem geometry illustrated in Figure (??); wherein a homogeneous sphere with physical properties :math:`\mu , \; \sigma` and :math:`\varepsilon`
+A transmitter loop (Tx) generate
+
+
+
+.. math::
+	{\bf H} (i \omega) =\frac{\mu_0}{4\pi} \Bigg [ \frac{3 {\bf r} \; \big [ {\bf m}(i \omega) \cdot {\bf r} \; \big ]}{r^5} - \frac{{\bf m} (i \omega) }{r^3} \Bigg ] 
+
+So long as observations are sufficiently far from the sphere (:math:`\sim 5 \times` the diameter), the response is approximately equal to the dipole field:
+
+
+.. math::
+	{\bf m} (i \omega) = \frac{4\pi}{3}R^3 \chi (i \omega) \, {\bf H_0} (i \omega)
+
+
+.. math::
+	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu  \big [ tanh(\alpha) - \alpha \big ] - \mu_0 [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
+
+where
+
+.. math::
+	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R
 
 
 
 
 
-
-Linear Operator for the Free-Space Dipole Response
-==================================================
-
-Here, we present a model for predicting the anomalous frequency-domain response in free-space, from a conductive and permeable sphere, due to an inductive loop source.
-This scenario represents a low-order approximation for a conductive and magnetically permeable object within a resistive medium.
-The geometry of this problem is shown in Figure ??.
-
-.. figure::
-	./images/figResponseVacuum.png
+.. figure:: ./images/figDipoleGeometry.png
         :align: center
-	:figwidth: 50%
+        :figwidth: 90%
+        :name: DipoleGeometry
 
-In the previous section, analytic expressions were derived by considering a uniform inducing field about the sphere.
-However, if the radius of the sphere is sufficiently smaller than its distance from an inductive source, this condition will hold approximately for small enough frequencies.
-According to Ward and Hohmann (1988?), a distance larger than 5 times the average dimension of the object is required for a dipole source.
-If the frequency-dependent dipole moment of a conductive and permeable sphere is known, the resulting free-space dipole field may be calculated using Eq. :eq:`DipoleField`, where :math:`\vec m (\omega)` is given by Eq. :eq:`DipoleMoment`.
-By decomposing the problem into separable cartesian components, Eq. :eq:`DipoleField` can be re-expressed as:
+        :math:`(a)` Problem geometry for a homogeneous sphere in free-space. :math:`(b)` Dipole field from a conductive and magnetically permeable sphere, under the influence of a uniform inducing field.
 
-.. math::
-	{\bf B}(\omega) = \frac{\mu_0}{4 \pi r^3} \Big [ 3 {\bf \hat r \otimes \hat r - I} \Big ] \cdot {\bf m} (\omega) = {\bf G} \, {\bf m} (\omega)
-	:label: DipoleVacuumLin
-	
-where
-
-.. math::
-	{\bf B} (\omega) = \begin{bmatrix} B_x (\omega) \\ B_y(\omega) \\ B_z(\omega) \end{bmatrix}, \; \;
-	{\bf m}(\omega) = \begin{bmatrix} m_x (\omega) \\ m_y(\omega) \\ m_z(\omega) \end{bmatrix} \; \; \textrm{and} \; \;
-	{\bf I} = \begin{bmatrix} 1&0&0\\0&1&0\\0&0&1 \end{bmatrix}
-	:label: DipoleOperator
-
-The vector from :math:`P` to :math:`Q` is denoted by :math:`\vec r`, and has unit-direction :math:`{\bf \hat r}`.
-For our formulation, we use :math:`{\bf \hat r \otimes \hat r}` to represent an outer-product.
-We can see from Eq. :eq:`DipoleVacuumLin` that :math:`{\bf G}` is a :math:`3\times 3` linear operator, which depends solely on the geometry of the problem.
-Because the magnetization factor for our sphere is a scalar quantity, it may be used to obtain each cartesian component of the induced dipole moment separately.
-As a result, we may express :math:`{\bf m} (\omega)` as follows:
-
-.. math::
-	{\bf m} (\omega) = {\bf M \, H_0}
-	:label: mDecomposition
-	
-where
-
-.. math::
-	{\bf M} = \Bigg ( \frac{4}{3} \pi R^3 \chi (\omega ) \Bigg ) {\bf I} \; \; \textrm{and} \; \;
-	{\bf H_0} = \begin{bmatrix} H_x(\omega) \\ H_y (\omega) \\ H_z (\omega) \end{bmatrix}
-	:label: Magnetization
-	
-By substituting Eq. :eq:`mDecomposition` into Eq. :eq:`DipoleVacuumLin`, the free-space dipole response can be expressed as:
-
-.. math::
-	{\bf B}(\omega) = {\bf G \, M \, H_0}
-	:label: DipoleVacuumLinSys
 
 
 
