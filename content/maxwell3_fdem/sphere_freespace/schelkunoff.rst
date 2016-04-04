@@ -3,9 +3,19 @@
 Derivation of the Excitation Factor
 -----------------------------------
 
-In this section, the excitation factor for a conductive and magnetically permeable sphere is derived according to Wait (1951).
-The excitation factor characterizes the magnetic dipole moment induced by a uniform, harmonic magnetic field.
-The geometry of this problem is illustrated in Figure ().
+In this section, the excitation factor for a conductive and magnetically permeable sphere in free-space is derived according to Wait (1951).
+The excitation factor characterizes the magnetic dipole moment, induced by a uniform, harmonic magnetic field.
+
+The geometry of our problem is illustrated in Figure (??), where :math:`{\bf H_0}(i\omega)` represents the inducing field, :math:`{\bf m}(i\omega)` is the induced magnetic dipole moment of the sphere, and :math:`{\bf H}(i\omega)` is the resulting dipole response.
+:math:`\sigma_s`, :math:`\mu_s` and :math:`\varepsilon_s` represent the conductivity, magnetic permeability and electric permittivity of the sphere.
+:math:`\sigma_b`, :math:`\mu_b` and :math:`\varepsilon_b` represent the conductivity, magnetic permeability and electric permittivity of the background media.
+
+.. figure:: ./images/figGeometrySchelk.png
+        :align: right
+        :figwidth: 40%
+        :name: SchelkunoffGeometry
+
+        Geometry for the free-space dipole response from a conductive and magnetically permeable sphere.
 
 Let us begin by considering Maxwell's equations in the frequency domain:
 
@@ -105,11 +115,17 @@ The total magnetic field outside the sphere, in response to an inducing field of
 Note that our derivation of :math:`a_0` did not require us to include the frequency-dependent term :math:`e^{i\omega t}` of the primary field.
 Therefore, we may generalize our solution for any harmonic inducing field of the form :math:`{\bf H_0} (i\omega )`.
 
-If the sphere lies within a resistive background (:math:`\sigma_b \ll \sigma_s`, :math:`\mu_b = \mu_0`, and :math:`\varepsilon_b = \varepsilon_0`), then Eq. :eq:`a0` reduces to:
+If the sphere lies within a resistive background (:math:`\sigma_b \ll \sigma_s`, :math:`\mu_b = \mu_0`, and :math:`\varepsilon_b = \varepsilon_0`), and if electric displacement within the sphere is neglected (:math:`\omega \varepsilon_s \ll \sigma_s`), then Eq. :eq:`a0` reduces to:
 
 .. math::
-	a_0 \! =\! \frac{R^3}{2} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 \big [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
+	a_0 \! =\! \frac{R^3}{2} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu_s \big [ tanh(\alpha) - \alpha \big ] - \mu_0 \big [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
 	:label: a0reduced
+	
+where
+
+.. math::
+	\alpha = \Big [ i\omega \mu_s \sigma_s \Big ]^{1/2}R
+	:label: alpha
 
 Wait (1951) simplified the solution outside the sphere by considering the dipole field within a vacuum.
 For a dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by (Griffiths, 1999):
@@ -129,8 +145,7 @@ This lead to an explicit expression for the magnetic dipole moment in terms of c
 According the Eq. :eq:`DipoleMoment`, :math:`{\bf m} (i\omega)` may also be expressed as the product of the inducing field, the sphere's volume, and an excitation factor :math:`\chi (i\omega)`, where:
 
 .. math::
-	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_0 \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s  \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_0 [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
+	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu_s  \big [ tanh(\alpha) - \alpha \big ] - \mu_0 [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
 	:label: ChiApprox
 
-and :math:`\alpha_s` is given by Eq. :eq:`alpha_s`.
 
