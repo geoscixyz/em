@@ -3,8 +3,60 @@
 Lab set up and measurments
 ==========================
 
-Ohm's Law at DC
----------------
+Electrical conductivity can be frequency-depenent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. In order to measure complex conductivity of a rock specimen, we inject sinusoidal that is, AC currents to the rock, and measure voltages. :numref:`GSCcompleximpedance` shows the Lab set-up at GSC. The frequency range of the Lab set-up is from 0.016 Hz - 1 MHz (logarithmically-sampled).
+
+.. figure:: ./figures/GSCcompleximpedance.png
+   :scale: 50%
+   :align: center
+   :name: GSCcompleximpedance
+
+   Complex impedance measurment system at Geological Survey of Canada (GSC).
+
+.. figure:: ./figures/ACcircuit_simple.png
+   :scale: 80%
+   :align: left
+   :name: ACcircuit_simple
+
+   A simple AC circuit.
+
+An equivalent circuit diagram for the Lab measurments is shown in :numref:`ACcircuit_simple`. For a source that is providing a voltage the currents depends upon the conductivity of the rock. The electrical impedance is defined as
+
+.. math::
+
+   Z(\omega) = \frac{V(\omega)}{I(\omega)}
+
+where
+
+- :math:`I(\omega)`: Complex current (A)
+- :math:`V(\omega)`: Complex voltage (V)
+- :math:`Z(\omega)`: Complex impendance (:math:`\Omega`)
+
+
+An example of lab measurements is shown :numref:`ComplexImpedance`.
+
+.. figure:: ./figures/ComplexImpedance.png
+   :align: left
+   :name: ComplexImpedance
+
+   Amplitude and phase of the measured complex impedance at `Highland Valley Copper`_ deposit.
+
+.. _Highland Valley Copper: https://en.wikipedia.org/wiki/Highland_Valley_Copper_mine
+
+We note there are two features of the impednace measurments of interest:
+
+.. note::
+
+   (i) The very low frequency: :math:`f \rightarrow 0` response. This is called the steady-state or "DC" response.
+
+   (ii) The change in the response that occurs with frequency. Any variation is attributed to "chargeability".
+
+Although the "DC" and "chargeability" are really parts of a complete description of the conductivity, it is convenient to treat them individually:
+
+   - DC conductivity / resistivity
+   - Chargeability
+
+DC Conductivity / Resistivity
+-----------------------------
 
 .. figure:: ./figures/DCcircuit_simple.png
    :align: left
@@ -23,7 +75,6 @@ where
 - :math:`V`: Voltage (V)
 - :math:`I`: Current (A)
 - :math:`R`: Resistance (Ohm)
-
 
 
 In the lab, the resistor shown in :numref:`DCcircuit_simple` is replaced by cube with size :math:`L`. Accordingly, resistivity and conductivity can be expressed as
@@ -47,111 +98,112 @@ But it is usually written as
    \mathbf{J}= \sigma \mathbf{E}.
 
 .. figure:: ./figures/Cube.png
-   :scale: 50%
+   :scale: 70%
    :align: center
    :name: Cube
 
-   Figure A rock specimen.
+   A rock specimen.
 
-Lab Setup and Measurements
---------------------------
+A conceptual diagram of the lab set up for DC conductivity is shown in :numref:`DCsetup`,
 
-.. figure:: ./figures/GSCcompleximpedance.png
-   :scale: 50%
+.. figure:: ./figures/DCsetup.png
+   :scale: 70%
    :align: center
-   :name: GSCcompleximpedance
+   :name: DCsetup
 
-   Complex impedance measurment system at Geological Survey of Canada (GSC).
-
-
-Electrical conductivity can be frequency-depenent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. Lab set-up at GSC shown in :numref:`GSCcompleximpedance` measures complex impedances by injecting sinusoidal currents ranging from 0.016 Hz - 1 MHz (logarithmically-sampled).
-
-.. figure:: ./figures/ACcircuit_simple.png
-   :scale: 80%
-   :align: left
-   :name: ACcircuit_simple
-
-   A simple AC circuit.
-
-:numref:`ACcircuit_simple` shows a corresponding circuit diagram for the above measurement set-up. In the :numref:`ACcircuit_simple`, all variables:
-
-- :math:`I(\omega)`: Complex current (A)
-- :math:`V(\omega)`: Complex voltage (V)
-- :math:`Z(\omega)`: Complex impendance (:math:`\Omega`)
-
-are frequency dependent. :numref:`ComplexImpedance` shows amplitude and phase of the measured complex impedance at a porphyry deposit called `Highland Valley Copper`_.
-
-.. _Highland Valley Copper: https://en.wikipedia.org/wiki/Highland_Valley_Copper_mine
-
-.. figure:: ./figures/ComplexImpedance.png
-   :align: left
-   :name: ComplexImpedance
-
-   Amplitude and phase of the measured complex impedance at `Highland Valley Copper`_ deposit.
+   A DC conductivity measurment set-up.
 
 
-.. Seogi Dummies
+Chargeability
+-------------
 
-.. Similarly, this can be rewritten as
+Chargeability can be measured in both frequency and time domains  as shown in :numref:`ACsetup`.
 
-.. .. math::
-..    \mathbf{E}= \rho \mathbf{J},
+   - For the frequency domain measurment, we inject sinusoidal currents to the rock
 
-.. where :math:`\mathbf{J}` is the electric current (A/:math:`m^2`) and :math:`\mathbf{E}` is the electric field (V/m). Using conductivity, $\sigma$, this can be written as
+   - For the time domain measurement, we inject half-duty cylce currents including both on- and off-time.
 
-.. .. math::
-..    \mathbf{J}= \sigma \mathbf{E},
+In both measurments, voltages measured are affected by chargeabiliy of the rock hence we can obtain chareability of the rock.
 
-.. This shows relationship between applied electric field and current. Accordingly, unit of the conductivity will be
+.. figure:: ./figures/ACsetup.png
+   :scale: 70%
+   :align: center
+   :name: ACsetup
 
-..    .. math::
-..       \frac{A/m^2}{V/m} = S/m,
+   A chargeability measurment set-up in either frequency or time domain.
 
-.. where S=A/V is the conductance (S). Similarly, unit of the resistivity will be
 
-..    .. math::
-..       \frac{V/m}{A/m^2} = \Omega\text{-}m.
+Time domain measurements
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. We interpret units of conductivity and resistitivity as
+Measured voltage can be stacked and we could obtain half-period voltage as shown in :numref:`DCIPcurve`.
 
-..    - :math:`\sigma` (S/m): How much current flows with the applied electric field (or voltage).
+- :math:`V_0`: Voltage right after current switch-off (DC)
+- :math:`V_{\infty}`: Voltage right after current switch-on
+- :math:`V_s(t)`:Voltage at off-time
+- :math:`t_1` and :math:`t_2` are arbitrary times determining integreation window
 
-..    - :math:`\rho` (:math:`\Omega`-m): How much voltage (or electric field) is generated with the appliec current.
+When the current switched-on in the on-time, polarization charges start to build up (:math:`V_{\infty}`) then at a late time it asymptotes to steatdy-state (:math:`V_0`). After the current is switched-off built polarization charge is decaying (:math:`V_s`) and asymptotes to zero.
 
-.. These can be related how we excite the system (source), and what we measure (receiver).
 
-.. To measure the resistance of a rock specimen (:numref:`cube`), which has a certain length (:math:`l`; :math:`m`) and area (:math:`A`; :math:`m^2`), we need to let the current flow through the rock specimen, and measure potential difference due to the rock.
+.. figure:: ./figures/DCIPcurve.png
+   :align: center
+   :scale: 50%
+   :name: DCIPcurve
 
-.. :numref:`DCcircuit` shows as a schematic diagram for a mearsurement system for the resistance of a rock. Since we know, the intensity of an input DC current and measured voltage, then by using Ohm's law (:math:`V=IR`) we can obtain the resistance of a rock (:math:`R=V/I`).
+   Figure Measured time domain IP curve.
 
-.. .. figure:: ./figures/DCcircuit.png
-..    :scale: 50%
-..    :align: center
-..    :name: DCcircuit
+Data could be
 
-..    Figure A DC circuit.
+.. math::
+   :label: etaintrinsic
+   :nowrap:
 
-.. Importantly, measured resistance will be dependent upon the geometry of a rock specimen hence reistance cannot be considered as an intrinsic property of a certain rock. Measured resistance will be depedent upon area and length of the rock. For instance, as we increase the area, the amount of current flow in a rock increases, which makes decrease in resistance. Increased length of the rock will oppose the current flow making increased resistance. This can be formulated as
+   \begin{eqnarray}
+      \eta = \frac{V_0-V_\infty}{V_0} \ \text{{V/V}} \\
+   \end{eqnarray}
 
-.. .. math::
-..    R = \rho \frac{l}{A},
+.. math::
+   :label: etaappint_msec
+   :nowrap:
 
-.. where :math:`\rho` is the resistivity, and this is an intrinsic property of a rock because it is indepdent upon the geometry of a rock specimen. Effectively, the resistivity can be written as
+   \begin{eqnarray}
+      \eta^{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[msec]}
+   \end{eqnarray}
 
-.. .. math::
-..    \rho = R\frac{A}{l}
+.. math::
+   :label: etaappint_mVV
+   :nowrap:
 
-.. We consider the unit of the resisitivty
+   \begin{eqnarray}
+      \eta^{app} = \frac{1}{t_2-t_1}\int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[mV/V]}
+   \end{eqnarray}
 
-.. .. math::
-..    \Omega \frac{m^2}{m} = \Omega\text{-}m
+.. math::
+   :label: etaapp_mVV
+   :nowrap:
 
-.. Similarly, the conductivity of a rock, which is the inverse of resistivity can be expressed as
+   \begin{eqnarray}
+      \eta^{app} = \frac{V_s(t)}{V_0}  \ \text{[mV/V]}
+   \end{eqnarray}
 
-.. .. math::
-..    \sigma = \frac{1}{\rho} = S\frac{l}{A},
 
-.. where :math:`S` (S) is the conductance. The unit of conductivity is
+By definition of the chargeability, :math:`\eta`, it is intrinsic, dimensionless (V/V), and bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from inifinte to zero frequency normalized by voltage at zero frequency, :math:`V_0`.
 
-.. .. math::
-..    \frac{1}{\Omega\text{-}m} = \text{S\m}.
+However, because we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain apparent chargeability, :math:`\eta^{app}` as shown in :numref:`etaappint_msec` and :numref:`etaappint_mVV`.
+
+.. note::
+   Depending on the used time window, measured apparent chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated apparent charegability could be significantly underestimated.
+
+
+A simple and often used system on the field is GDD's `SCIP Tester <http://www.gddinstrumentation.com/index.php/scip-tester>`_.
+
+Frequency domain measurements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo::
+   PFE (Percent frequency effect)
+
+.. todo::
+   Phase difference
+

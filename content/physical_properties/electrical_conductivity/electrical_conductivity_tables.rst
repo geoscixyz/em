@@ -1,10 +1,10 @@
 .. _electrical_conductivity_tables:
 
-Tables of values
-================
+Tables of value
+===============
 
-Electrical conductivity
------------------------
+DC conductivity / resistivity
+-----------------------------
 
 The electrical conductivity of matter has a large variation. Consider the table below:
 

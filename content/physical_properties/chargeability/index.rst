@@ -40,7 +40,6 @@ some effort to apply IP to oil and gas exploration.
  .. toctree::
     :maxdepth: 2
 
-    chargeability_lab_setup_measurements
     chargeability_units
     chargeability_factors
     chargeability_complex_conductivity
