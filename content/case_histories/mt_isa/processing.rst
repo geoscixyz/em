@@ -18,6 +18,11 @@ Although our ultimate goal is to generate a 3D conductivity model there are mult
 
 As an example we invert line xxxx. The results are shown below.
 
+Presentation of data, difficulties, anything germain.
+
+.. raw:: html
+  :file: ./images/MIM_Cond_Inv.html
+  
 
 3D inversion of DCR data
 Summary about what was done for the DCR inversion and final models.
