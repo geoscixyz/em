@@ -6,8 +6,8 @@ Derivation of the Excitation Factor
 In this section, the excitation factor for a conductive and magnetically permeable sphere in free-space is derived according to Wait (1951).
 The excitation factor characterizes the magnetic dipole moment, induced by a uniform, harmonic magnetic field.
 
-The geometry of our problem is illustrated in Figure (??), where :math:`{\bf H_0}(i\omega)` represents the inducing field, :math:`{\bf m}(i\omega)` is the induced magnetic dipole moment of the sphere, and :math:`{\bf H}(i\omega)` is the resulting dipole response.
-:math:`\sigma_s`, :math:`\mu_s` and :math:`\varepsilon_s` represent the conductivity, magnetic permeability and electric permittivity of the sphere.
+The geometry of our problem is illustrated in :numref:`SchelkunoffGeometry`, where :math:`{\bf H_0}(i\omega)` represents the inducing field, :math:`{\bf m}(i\omega)` is the induced magnetic dipole moment of the sphere, and :math:`{\bf H}(i\omega)` is the resulting dipole response.
+:math:`\sigma_s`, :math:`\mu_s` and :math:`\varepsilon_s` represent the conductivity, magnetic permeability and electric permittivity of the sphere, respectively.
 :math:`\sigma_b`, :math:`\mu_b` and :math:`\varepsilon_b` represent the conductivity, magnetic permeability and electric permittivity of the background media.
 
 .. figure:: ./images/figGeometrySchelk.png
@@ -17,7 +17,7 @@ The geometry of our problem is illustrated in Figure (??), where :math:`{\bf H_0
 
         Geometry for the free-space dipole response from a conductive and magnetically permeable sphere.
 
-Let us begin by considering Maxwell's equations in the frequency domain:
+Let us begin the derivation by considering Maxwell's equations in the frequency domain:
 
 .. math::
 	\begin{align}

@@ -4,7 +4,7 @@ Excitation Factor for Special Cases
 -----------------------------------
 
 The characteristic dipole response from a conductive and magnetically permeable sphere is defined by its excitation factor.
-Here, we presented analytic expressions and discuss the excitation factors for several specific cases, including: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency response from a highly permeable sphere.
+Here, we present analytic expressions and discuss the excitation factors for several specific cases, including: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency response from a highly permeable sphere.
 
 
 Conductive and Magnetically Permeable Sphere
@@ -27,10 +27,11 @@ where
 	./images/figChiOmega.png
 	:figwidth: 45%
 	:align: right
+	:name: ChiOmega
 
 	Magnetization factor for a conductive and magnetically permeable sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = 1.1 :math:`\mu_0`.
 
-The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = 1.1 :math:`\mu_0`, can be seen in Figure (reference).
+The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = 1.1 :math:`\mu_0`, can be seen in :numref:`ChiOmega`.
 At low frequencies, :math:`\chi (i\omega)` is positive, implying the excitation of the sphere is parallel to the inducing field.
 Because the EM induction is negligible at sufficiently low frequencies, this case represents a purely magnetic response by the sphere.
 At high frequencies, :math:`\chi(i\omega)` is negative.
@@ -61,10 +62,11 @@ For a purely conductive object (i.e. :math:`\mu = \mu_0`), Eq. :eq:`ChiApprox` c
 	./images/figChiConductive.png
 	:figwidth: 45%
 	:align: right
+	:name: ChiConductive
 
 	Magnetization factor for a conductive sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = :math:`\mu_0`.
 
-The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = :math:`\mu_0`, can be seen in Figure (reference).
+The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = :math:`\mu_0`, can be seen in :numref:`ChiConductive`.
 Because the sphere is non-permeable, there is no magnetic response at low frequencies.
 Thus we expect :math:`\chi (i\omega) \rightarrow 0` as :math:`\omega \rightarrow 0`.
 At higher frequencies however, the sphere's inductive response is approximately equal to that of the previous case.
@@ -95,6 +97,7 @@ Where :math:`\kappa` is the magnetic susceptibility (link) of the sphere, and :m
 	./images/figChiKappa.png
 	:figwidth: 40%
 	:align: right
+	:name: ChiKappa
 	
 	Zero-frequency excitation facter at :math:`\omega` = 0 for increasing magnetic susceptibilities (red), compared to a linear trend with respect to :math:`\kappa` (black).
 
@@ -107,7 +110,7 @@ As :math:`\kappa \rightarrow \infty`, Eq. :eq:`ChiLimits` can be used to show th
 	\lim_{\kappa \rightarrow \infty} \, \bar \chi (\kappa) = 3.
 	:label: ChiLimitKappa
 	
-The zero-frequency excitation factor :math:`\bar \chi (\kappa)`, as a function of :math:`\kappa` is plotted in Figure (reference). 
+The zero-frequency excitation factor :math:`\bar \chi (\kappa)`, as a function of :math:`\kappa` is plotted in :numref:`ChiKappa`. 
 This figure demonstrates the deviation from a linear relationship as :math:`\kappa` becomes sufficiently large.
 
 

@@ -12,7 +12,7 @@ Here, expressions from Wait (1951) are used to characterize the dipole response 
 
         Problem geometry for a conductive and magnetically permeable sphere in free-space.
 
-Consider the problem geometry illustrated in Figure (??), wherein a sphere of radius :math:`R`, conductivity :math:`\sigma` and magnetic permeability :math:`\mu` is located in the vicinity of an inductive source transmitter (Tx).
+Consider the problem geometry illustrated in :numref:`FreeSpaceSphere`, wherein a sphere of radius :math:`R`, conductivity :math:`\sigma` and magnetic permeability :math:`\mu` is located in the vicinity of an inductive source transmitter (Tx).
 The transmitter generates a harmonic primary field :math:`{\bf H_0} (i\omega)`, which induces an excitation within the sphere.
 Because we are in free-space, :math:`{\bf H_0} (i\omega)` may be calculated using the Biot-Savart law (link).
 The excitation induced within the sphere, produces a secondary field :math:`{\bf H_s} (i\omega)` which is then measured by a receiver coil (Rx).
@@ -25,7 +25,7 @@ The excitation induced within the sphere, produces a secondary field :math:`{\bf
         
         Response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic inducing field :math:`{\bf H_0} (i\omega)`. The induced dipole moment is represented by :math:`{\bf m} (i\omega)` and the resulting dipole response is represented by :math:`{\bf H} (i\omega)`.
 
-Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic field (Figure ??).
+To approximate the sphere's response, Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic field (:numref:`DipoleField`).
 For a magnetic dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by:
 
 .. math::
@@ -41,7 +41,8 @@ If these conditions are satisfied, the magnetic dipole moment characterizing the
 	:label: eqDipoleMoment
 
 where :math:`\chi (i\omega)` is defined as the sphere's excitation factor.
-The excitation factor is therefore a product of the sphere's volume, its excitation factor, and the inducing field; where the excitation factor characterizes the nature of the sphere's frequency-domain response.
+The dipole moment is therefore a product of the sphere's volume, its excitation factor, and the inducing field.
+The excitation factor is used to characterize the nature of the sphere's frequency-domain response.
 An explicit expression for the excitation factor is given by (Wait, 1951):
 
 .. math::
@@ -58,14 +59,14 @@ where
         Excitation factor for a sphere with physical properties :math:`R=25` m, :math:`\sigma = 10` S/m and :math:`\mu = 1.1 \mu_0`.
 
 .. math::
-	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R,
+	\alpha = \Big [ i \omega \mu \sigma \Big ]^{1/2} R
 
-:math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
-An example for the excitation factor as a function of frequency is shown in Figure ??.
+and :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
+An example for the excitation factor as a function of frequency is shown in :numref:`ExcitationEx`.
 
-To summarize, Eqs. :eq:`eqDipoleVacuum`, :eq:`eqDipoleMoment` and :eq:`eqExcitationFactor` can be used to approximate the dipole response for a variety of cases.
-The nature of the sphere's response in each case is characterized by the sphere's excitation factor.
-These cases are discussed in the following section (link).
+To summarize, Eqs. :eq:`eqDipoleVacuum`, :eq:`eqDipoleMoment` and :eq:`eqExcitationFactor` can be used to approximate the dipole response from a conductive and magnetically permeable sphere.
+The nature of the sphere's response is characterized by the sphere's excitation factor.
+The excitation factors for several cases are discussed in the following section (link).
 
 
 
