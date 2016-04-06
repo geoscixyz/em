@@ -1,9 +1,10 @@
 .. _dipole_response
 
-Dipole Response in Free-Space
+The Sphere's Dipolar Response
 -----------------------------
 
-Here, expressions from Wait (1951) are used to characterize the dipole response from a conductive and magnetically permeable sphere in free-space.
+**Purpose**: Here, expressions from Wait (1951) presented for predicting the dipole response from a conductive and magnetically permeable sphere in free-space.
+We show how the characteristic response of the sphere is dependent on its excitation factor; where the excitation factor is used to define the induced dipole moment of the sphere.
 
 .. figure:: ./images/figFreeSpaceSphere.png
         :align: right
@@ -13,9 +14,9 @@ Here, expressions from Wait (1951) are used to characterize the dipole response 
         Problem geometry for a conductive and magnetically permeable sphere in free-space.
 
 Consider the problem geometry illustrated in :numref:`FreeSpaceSphere`, wherein a sphere of radius :math:`R`, conductivity :math:`\sigma` and magnetic permeability :math:`\mu` is located in the vicinity of an inductive source transmitter (Tx).
-The transmitter generates a harmonic primary field :math:`{\bf H_0} (i\omega)`, which induces an excitation within the sphere.
+The transmitter generates a harmonic primary field :math:`{\bf H_0} (i\omega)` which induces an excitation within the sphere.
 Because we are in free-space, :math:`{\bf H_0} (i\omega)` may be calculated using the Biot-Savart law (link).
-The excitation induced within the sphere, produces a secondary field :math:`{\bf H_s} (i\omega)` which is then measured by a receiver coil (Rx).
+The excitation induced within the sphere produces a secondary field :math:`{\bf H_s} (i\omega)` which is then measured by a receiver coil (Rx).
 
 
 .. figure:: ./images/figDipoleField.png
@@ -25,7 +26,7 @@ The excitation induced within the sphere, produces a secondary field :math:`{\bf
         
         Response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic inducing field :math:`{\bf H_0} (i\omega)`. The induced dipole moment is represented by :math:`{\bf m} (i\omega)` and the resulting dipole response is represented by :math:`{\bf H} (i\omega)`.
 
-To approximate the sphere's response, Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic field (:numref:`DipoleField`).
+To approximate the sphere's response, Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere under the influence of a uniform, harmonic field (:numref:`DipoleField`).
 For a magnetic dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by:
 
 .. math::

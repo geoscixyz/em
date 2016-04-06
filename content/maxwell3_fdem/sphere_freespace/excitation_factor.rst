@@ -3,7 +3,7 @@
 Excitation Factor for Special Cases
 -----------------------------------
 
-The characteristic dipole response from a conductive and magnetically permeable sphere is defined by its excitation factor.
+**Purpose**: The characteristic dipole response from a conductive and magnetically permeable sphere is defined by its excitation factor.
 Here, we present analytic expressions and discuss the excitation factors for several specific cases, including: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency response from a highly permeable sphere.
 
 
@@ -111,7 +111,7 @@ As :math:`\kappa \rightarrow \infty`, Eq. :eq:`ChiLimits` can be used to show th
 	:label: ChiLimitKappa
 	
 The zero-frequency excitation factor :math:`\bar \chi (\kappa)`, as a function of :math:`\kappa` is plotted in :numref:`ChiKappa`. 
-This figure demonstrates the deviation from a linear relationship as :math:`\kappa` becomes sufficiently large.
+This figure demonstrates the increased self-demagnetization of the sphere as :math:`\kappa` becomes sufficiently large.
 
 
 
