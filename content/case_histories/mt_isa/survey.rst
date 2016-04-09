@@ -3,14 +3,14 @@
 Survey
 ======
 
-From the :ref:`Property<mt_isa_properties>` segment of the case history, it is expected that the mineralization is both conductive and chargeable. A DCIP survey is therefore appropriate. Other factors that suggest this is a good choice is that there is minimal topography in the area and DCIP surveys have been successfully carried out in other areas of the Mt. Isa region. 
+From the :ref:`Property<mt_isa_properties>` segment of the case history, it is expected that the mineralization is both conductive and chargeable. A DCIP survey is therefore appropriate. Other factors that suggest this is a good choice is that there is minimal topography in the area and DCIP surveys have been successfully carried out in other areas of the Mt. Isa region.
 
 DC Resistivity (DCR)
--------------------- 
+--------------------
 The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DCR_index>`. Many choices are possible for electrode layouts and the final choice is motivated by the following factors:
 
 
-(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of which could serve as a current electrode or potential electrode. 
+(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of which could serve as a current electrode or potential electrode.
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
@@ -22,9 +22,9 @@ The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DC
 	:name: Pseudo_PDP_East
 
   	Data for pole moving east to west.
-  
 
-(d) It is desireable to illuminate the target bodies from as different directions as possible. This motivates the second acquistion with the current pole on the right as seen in :numref:`Pseudo_PDP_West`. 
+
+(d) It is desireable to illuminate the target bodies from as different directions as possible. This motivates the second acquistion with the current pole on the right as seen in :numref:`Pseudo_PDP_West`.
 
 .. figure:: ./images/Pseudo_PDP_West.gif
 	:name: Pseudo_PDP_West
@@ -33,7 +33,7 @@ The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DC
 
 Survey Design
 -------------
-The geologic structures are primarily striking north-south and a cross-section of the geologic units and their resistivities is shown in. The unit of interest is the Mt. Novit Horizon which is conductive compared to the host Moondarra Siltsone. Two forward modellings are generated. The first is without the conductor, the second is with.  The pole-dipole pseudo-sections obtained with 15 electrodes spaced 100 meters apart is shown in :numref:`DC2D_Inv`. 
+The geologic structures are primarily striking north-south and a cross-section of the geologic units and their resistivities is shown in. The unit of interest is the Mt. Novit Horizon which is conductive compared to the host Moondarra Siltsone. Two forward modellings are generated. The first is without the conductor, the second is with.  The pole-dipole pseudo-sections obtained with 15 electrodes spaced 100 meters apart is shown in :numref:`DC2D_Inv`.
 
 .. figure:: ./images/MtIsa_DCIP2D_Inv.png
 	:scale: 75%
@@ -69,7 +69,7 @@ conductive circular unit and away from the steeply dipping resistive units. We
 can also clearly see charge buildup occuring at the interfaces between units.
 
 .. raw:: html
-  :file: ./images/Isa_Current.html
+  :file: ./images/Mt_Isa_Current_Anim.html
 
 Current density (arrows) and charge density (color) for a range of source
 locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
