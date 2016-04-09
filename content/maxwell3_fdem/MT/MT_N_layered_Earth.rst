@@ -3,13 +3,18 @@
 Response of a layered Earth to a plane wave
 ===========================================
 
- .. raw:: html
-  :file: ./images/movieMT_time.html
+.. topic:: Purpose
+
+    We present here a 1D modelisation of the MagnetoTelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data.
+
+
+.. raw:: html
+    :file: ./images/movieMT_time.html
 
 Introduction
 ------------
 
-We present here a 1D modelisation of the MagnetoTelluric waves and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
+We present here a 1D modelisation of the MagnetoTelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
  .. image:: http://mybinder.org/badge.svg 
     :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
@@ -231,6 +236,8 @@ Replacing the differents components of equation :eq:`faraday continuity conditio
     :label: Transmission Coefficient
 
 
+Refraction angle
+****************
 
 
 Field Acquisition
@@ -245,6 +252,10 @@ In MT, the source is unknown but we are avoiding the problem by measuring the ra
 
 Notice this is a complex number, with a norm and an angle.
 
+Impendance tensor
+*****************
+
+
 Data
 ----
 
@@ -258,6 +269,8 @@ Data
 
 Apparent Resistivity
 ********************
+
+The apparent resistivity is obtained through the amplitude of the apparent Impedance :math:`\hat{Z_{xy}}`.
 
 .. math::
     \rho_{app} = \frac{1}{\mu_0 \omega} |\hat{Z_{xy}}|^2
@@ -277,6 +290,8 @@ For a unhomogeneous earth, :math:`\rho_{app}` at a particular frequency is an av
 
 Phase
 *****
+
+The phase is obtained through the angle of the apparent Impedance :math:`\hat{Z_{xy}}`.
 
 .. math::
     \Theta =tan^{-1} \frac{Im(\hat{Z_{xy}})}{Re(\hat{Z_{xy}})}
