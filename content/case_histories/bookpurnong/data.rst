@@ -11,7 +11,7 @@ An important task in this particular step is to visualize the data. Data visuali
 
 (2) Data quality control.
 
-(3) Quanlitative interpretation.
+(3) Qualitative interpretation.
 
 (4) Quality control for advanced interpretation, e.g. predicted data in inversion.
 
