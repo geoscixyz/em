@@ -10,4 +10,5 @@ Contents:
 .. toctree::
     :maxdepth: 1
     
-    sphere_freespace_TEM
+    SphereFreespaceTEM/index
+    SphereFreespaceTEM/sphere_freespace_TEM
