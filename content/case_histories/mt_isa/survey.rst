@@ -7,16 +7,28 @@ From the :ref:`Property<mt_isa_properties>` segment of the case history, it is e
 
 DC Resistivity (DCR)
 --------------------
-The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DCR_index>`. Many choices are possible for electrode layouts and the final choice is motivated by the following factors:
+
+The fundamentals for a DCR survey can be found in the :ref:`Geophysical
+Surveys: DCR<DCR_index>` section. Many choices are possible for electrode
+layouts and the final choice is motivated by the following factors:
 
 
-(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of which could serve as a current electrode or potential electrode.
+(a) MIM, the company who was exploring the property, had developed their own
+data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of
+which could serve as a current electrode or potential electrode.
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
-(b) The area of interest is approximately 5km x 5km. Although full 3D coverage was desireable, the field acquistion was limited to 10 east-west lines. A full set of xxx electrodes were deployed along each line.
+(b) The area of interest is approximately 5km x 5km. Although full 3D coverage
+was desireable, the field acquistion was limited to 10 east-west lines. A
+full set of xxx electrodes were deployed along each line.
 
-(c) The choice of a pole-dipole was motivated by past experience that this was an effective survey for deep targets. The layout shown in {figure} indicates a current electrode at postion 1 with potentials measured across all other dipoles. The current electrode is then moved one electrode to the right. {Verify whether potentials to the left are recorded.} This produces a pseudo-section as shown in :numref:`Pseudo_PDP_East`.
+(c) The choice of a pole-dipole was motivated by past experience that this was
+an effective survey for deep targets. The layout shown in {figure} indicates
+a current electrode at postion 1 with potentials measured across all other
+dipoles. The current electrode is then moved one electrode to the right.
+{Verify whether potentials to the left are recorded.} This produces a pseudo-
+section as shown in :numref:`Pseudo_PDP_East`.
 
  .. figure:: ./images/Pseudo_PDP_East.gif
 	:name: Pseudo_PDP_East
@@ -24,7 +36,9 @@ The fundamentals for a DCR survey can be found :ref:`Geophysical Surveys: DCR<DC
   	Data for pole moving east to west.
 
 
-(d) It is desireable to illuminate the target bodies from as different directions as possible. This motivates the second acquistion with the current pole on the right as seen in :numref:`Pseudo_PDP_West`.
+(d) It is desireable to illuminate the target bodies from as different
+directions as possible. This motivates the second acquistion with the current
+pole on the right as seen in :numref:`Pseudo_PDP_West`.
 
  .. figure:: ./images/Pseudo_PDP_West.gif
 	:name: Pseudo_PDP_West
@@ -65,20 +79,22 @@ difference and relative difference  ?Sarah} The difference sections are shown
 in {figure}. They show xxx If errors are assigned as 5% + floor 0.0001 V then
 the secondary signal from the target is detectable.
 
-
 Inversion of Synthetic data Following the work {link: general basics of survey
 design} we invert the synthetic data using 2D algorithm.  The parameters used
 in the inversion were:  xxxxx. The Mt. Norvit Horizon is evident.
 
-Using 2D forward modelling, we can also visualize where current flows and
-where charge buildup occurs in our single pole source experiment. The
-interactive figure below shows how current flows through the earth for a given
-source location. Note in particular how current is channelled into the
-conductive circular unit and away from the steeply dipping resistive units. We
-can also clearly see charge buildup occuring at the interfaces between units.
+Using 2D forward modelling, we can also simulate current flows that could be
+expected at Mt. Isa. Note in particular the current channeling into the
+conductive Breakaway Shale as well as through the deeper mineralization.
 
-.. raw:: html
-  :file: ./images/Mt_Isa_Current_Anim.html
+.. _Mt_Isa_Simulation:
+.. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/Mt_Isa_Current_Anim.html
 
 Current density (arrows) and charge density (color) for a range of source
 locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
