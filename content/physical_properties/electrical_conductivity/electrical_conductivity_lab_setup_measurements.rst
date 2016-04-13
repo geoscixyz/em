@@ -156,41 +156,25 @@ When the current switched-on in the on-time, polarization charges start to build
 Data could be
 
 .. math::
+   \eta = \frac{V_0-V_\infty}{V_0} \ \text{[V/V]}
    :label: etaintrinsic
-   :nowrap:
-
-   \begin{eqnarray}
-      \eta = \frac{V_0-V_\infty}{V_0} \ \text{{V/V}} \\
-   \end{eqnarray}
 
 .. math::
+   \eta^{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[msec]}
    :label: etaappint_msec
-   :nowrap:
-
-   \begin{eqnarray}
-      \eta^{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[msec]}
-   \end{eqnarray}
 
 .. math::
+   \eta^{app} = \frac{1}{t_2-t_1}\int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[mV/V]}
    :label: etaappint_mVV
-   :nowrap:
-
-   \begin{eqnarray}
-      \eta^{app} = \frac{1}{t_2-t_1}\int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[mV/V]}
-   \end{eqnarray}
 
 .. math::
+   \eta^{app} = \frac{V_s(t)}{V_0}  \ \text{[mV/V]}
    :label: etaapp_mVV
-   :nowrap:
-
-   \begin{eqnarray}
-      \eta^{app} = \frac{V_s(t)}{V_0}  \ \text{[mV/V]}
-   \end{eqnarray}
 
 
 By definition of the chargeability, :math:`\eta`, it is intrinsic, dimensionless (V/V), and bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from inifinte to zero frequency normalized by voltage at zero frequency, :math:`V_0`.
 
-However, because we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain apparent chargeability, :math:`\eta^{app}` as shown in :numref:`etaappint_msec` and :numref:`etaappint_mVV`.
+However, because we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain apparent chargeability, :math:`\eta^{app}` as shown in Eq. :eq:`etaappint_msec` and :eq:`etaappint_mVV`.
 
 .. note::
    Depending on the used time window, measured apparent chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated apparent charegability could be significantly underestimated.
