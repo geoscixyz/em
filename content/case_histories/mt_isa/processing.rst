@@ -66,7 +66,7 @@ configuration seems to agree on the general distribution of conductivities.
 2-D Model
 *********
 
- .. figure:: images\MtIsa_Data_Merge.png
+ .. figure:: images/MtIsa_Data_Merge.png
     :align: right
     :figwidth: 50%
     :name: MtIsa_Data_Merge
@@ -74,7 +74,7 @@ configuration seems to agree on the general distribution of conductivities.
     Merge the P-DP and DP-P data configuration with their respective
     uncertainties
 
- .. figure:: images\MtIsa_2D_2_3DMesh.png
+ .. figure:: images/MtIsa_2D_2_3DMesh.png
     :align: right
     :figwidth: 50%
     :name: MtIsa_2D_2_3DMesh
