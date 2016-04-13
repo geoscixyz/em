@@ -1,4 +1,4 @@
-.. _airborne_fdem_governing_equations:
+.. _airborne_tdem_governing_equations:
 
 Governing Equations
 ===================

@@ -1,4 +1,4 @@
-.. _airborne_fdem_receivers:
+.. _airborne_tdem_receivers:
 
 Receivers
 =========

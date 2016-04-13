@@ -1,4 +1,4 @@
-.. _airborne_fdem_data:
+.. _airborne_tdem_data:
 
 Data
 ====

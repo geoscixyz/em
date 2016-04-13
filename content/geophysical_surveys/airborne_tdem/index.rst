@@ -1,4 +1,4 @@
-.. _airborne_fdem_index:
+.. _airborne_tdem_index:
 
 Airborne FDEM
 =============
