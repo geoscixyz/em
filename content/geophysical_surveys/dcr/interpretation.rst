@@ -5,7 +5,7 @@ Interpretation
 
 **Goal:** Interpret the data generated from the :ref:`two-sphere problem<dcr_example>`.
 
- .. figure:: images\TwoSphere_AppRes.png
+ .. figure:: images/TwoSphere_AppRes.png
     :align: right
     :figwidth: 50%
     :name: DCR_AppRes

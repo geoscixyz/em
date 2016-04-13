@@ -5,7 +5,7 @@ Example
 
 **Goal:** Simulate numerically a DCR experiment.
 
- .. figure:: images\TwoSphere_model.png
+ .. figure:: images/TwoSphere_model.png
     :align: right
     :figwidth: 50%
     :name: DCR_TwoSpheres
@@ -36,4 +36,4 @@ conductivity contrasts. Important to note the difference in polarity between
 the conductive and resistive anomaly as predicted by the :ref:`theory<bound_charge_Q>`.
 
  .. raw:: html
-    :file: images\TwoSphere_Current_Anim.html
+    :file: images/TwoSphere_Current_Anim.html

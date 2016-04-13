@@ -3,7 +3,7 @@
 Direct Current Resistivity
 ==========================
 
- .. figure:: images\DCR_Intro.png
+ .. figure:: images/DCR_Intro.png
     :align: right
     :scale: 80%
     :figwidth: 50%
