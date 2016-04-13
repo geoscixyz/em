@@ -29,7 +29,7 @@ where
 	:align: right
 	:name: ChiOmega
 
-	Magnetization factor for a conductive and magnetically permeable sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = 1.1 :math:`\mu_0`.
+	Excitation factor for a conductive and magnetically permeable sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = 1.1 :math:`\mu_0`.
 
 The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = 1.1 :math:`\mu_0`, can be seen in :numref:`ChiOmega`.
 At low frequencies, :math:`\chi (i\omega)` is positive, implying the excitation of the sphere is parallel to the inducing field.
@@ -64,7 +64,7 @@ For a purely conductive object (i.e. :math:`\mu = \mu_0`), Eq. :eq:`ChiApprox` c
 	:align: right
 	:name: ChiConductive
 
-	Magnetization factor for a conductive sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = :math:`\mu_0`.
+	Excitation factor for a conductive sphere in free-space with :math:`R` = 25 m, :math:`\sigma` = 10 S/m, and :math:`\mu` = :math:`\mu_0`.
 
 The excitation factor for a sphere with :math:`R` = 25 m, :math:`\sigma` = 10 S/m and :math:`\mu` = :math:`\mu_0`, can be seen in :numref:`ChiConductive`.
 Because the sphere is non-permeable, there is no magnetic response at low frequencies.
@@ -102,16 +102,22 @@ Where :math:`\kappa` is the magnetic susceptibility (link) of the sphere, and :m
 	Zero-frequency excitation facter at :math:`\omega` = 0 for increasing magnetic susceptibilities (red), compared to a linear trend with respect to :math:`\kappa` (black).
 
 :math:`\bar \chi (\kappa)` represents the zero-frequency excitation factor for a permeable sphere, and depends on the sphere's magnetic susceptibility.
+The zero-frequency excitation factor :math:`\bar \chi (\kappa)`, as a function of :math:`\kappa` is plotted in :numref:`ChiKappa`. 
+
 For small magnetic susceptibilities (:math:`\kappa < 0.1`), the relationship between :math:`\kappa` and the excitation factor is approximately linear.
 For large values however, the effects of self-demagnetization (link) within the sphere will result in a proportionally weaker induced dipole moment.
-As :math:`\kappa \rightarrow \infty`, Eq. :eq:`ChiLimits` can be used to show that:
+The effects of self-demagnetization for the sphere are given by:
+
+.. math::
+	\textrm{S. D.} = \kappa - \bar \chi (\kappa) = \frac{\kappa^2}{3 + \kappa}
+	:label: ChiSelfDemag
+
+The largest possible magnetic response from a sphere can be obtained by taking the limit of Eq. :eq:`ChiLimits` as :math:`\kappa \rightarrow \infty`:
 
 .. math::
 	\lim_{\kappa \rightarrow \infty} \, \bar \chi (\kappa) = 3.
 	:label: ChiLimitKappa
 	
-The zero-frequency excitation factor :math:`\bar \chi (\kappa)`, as a function of :math:`\kappa` is plotted in :numref:`ChiKappa`. 
-This figure demonstrates the increased self-demagnetization of the sphere as :math:`\kappa` becomes sufficiently large.
 
 
 

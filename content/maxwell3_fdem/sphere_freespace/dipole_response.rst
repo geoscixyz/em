@@ -3,7 +3,7 @@
 The Sphere's Dipolar Response
 -----------------------------
 
-**Purpose**: Here, expressions from Wait (1951) presented for predicting the dipole response from a conductive and magnetically permeable sphere in free-space.
+**Purpose**: Here, expressions from Wait (1951) are presented for predicting the dipole response from a conductive and magnetically permeable sphere in free-space.
 We show how the characteristic response of the sphere is dependent on its excitation factor; where the excitation factor is used to define the induced dipole moment of the sphere.
 
 .. figure:: ./images/figFreeSpaceSphere.png
@@ -24,9 +24,10 @@ The excitation induced within the sphere produces a secondary field :math:`{\bf 
         :figwidth: 40%
         :name: DipoleField
         
-        Response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic inducing field :math:`{\bf H_0} (i\omega)`. The induced dipole moment is represented by :math:`{\bf m} (i\omega)` and the resulting dipole response is represented by :math:`{\bf H} (i\omega)`.
+        Dipolar response :math:`{\bf H} (i\omega)` (purple) from a conductive and magnetically permeable sphere, under the influence of a spatially uniform, harmonic inducing field :math:`{\bf H_0} (i\omega)` (red). The induced dipole moment (blue) is represented by :math:`{\bf m} (i\omega)`.
 
-To approximate the sphere's response, Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere under the influence of a uniform, harmonic field (:numref:`DipoleField`).
+To approximate the sphere's response, Wait (1951) considered the dipole response from a conductive and magnetically permeable sphere under the influence of a spatially uniform, harmonic field (:numref:`DipoleField`).
+For inductive sources, the inducing field may be considered spatially uniform about the sphere if 1) the radius of the sphere is much smaller than the wavelength of the inducing field , and 2) the distance between the transmitter and the sphere is sufficiently larger than the sphere's radius (typically :math:`> 10R` ).
 For a magnetic dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by:
 
 .. math::
@@ -34,8 +35,7 @@ For a magnetic dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`
 	:label: eqDipoleVacuum
 
 where :math:`{\bf r}` is the vector distance between :math:`P` and :math:`Q`.
-For practical problems, the inducing field may be considered approximately uniform about the sphere if 1) the radius of the sphere is much smaller than the wavelength of the inducing field , and 2) the distance between the transmitter and the sphere is sufficiently larger than the sphere's radius (typically :math:`> 10R` ).
-If these conditions are satisfied, the magnetic dipole moment characterizing the sphere's excitation is given by:
+The magnetic dipole moment which characterizes the sphere's excitation is given by:
 
 .. math::
 	{\bf m} (i \omega) = \frac{4\pi}{3}R^3 \chi (i \omega) \, {\bf H_0} (i \omega)
@@ -70,6 +70,7 @@ The nature of the sphere's response is characterized by the sphere's excitation 
 The excitation factors for several cases are discussed in the following section (link).
 
 
+References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.
 
 
 

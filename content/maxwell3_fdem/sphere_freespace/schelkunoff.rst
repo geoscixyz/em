@@ -14,7 +14,7 @@ The geometry of this problem is illustrated in :numref:`SchelkunoffGeometry`, wh
         :figwidth: 40%
         :name: SchelkunoffGeometry
 
-        Geometry for the free-space dipole response from a conductive and magnetically permeable sphere.
+        Dipolar response :math:`{\bf H} (i\omega)` (purple) from a conductive and magnetically permeable sphere, under the influence of a spatially uniform, harmonic inducing field :math:`{\bf H_0} (i\omega)` (red). The induced dipole moment (blue) is represented by :math:`{\bf m} (i\omega)`.
 
 Let us begin the derivation by considering Maxwell's equations in the frequency domain:
 
@@ -51,7 +51,7 @@ The wavenumber :math:`\gamma` depends on the physical properties of the media, a
 	:label: Wave_Number
 
 For his derivation, Wait (1951) considered the induced magnetic dipole moment resulting from an incident plane wave.
-If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which excites the sphere is approximately uniform about the sphere.
+If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which excites the sphere is spatially uniform about the sphere.
 For an inducing field of the form :math:`{\bf H_0} (i\omega) = H_0 e^{i\omega t} {\bf \hat z}`, symmetry of the problem implies that :math:`{\bf E}` only has components in :math:`\boldsymbol{\hat \phi}`.
 Therefore by Eq. :eq:`SchelkunoffE`, it follows that our Schelkunoff potential will only have components in :math:`{\bf \hat z}` as well.
 
@@ -148,3 +148,4 @@ According the Eq. :eq:`DipoleMoment`, :math:`{\bf m} (i\omega)` may also be expr
 	:label: ChiApprox
 
 
+References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.

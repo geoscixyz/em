@@ -15,7 +15,7 @@ ____________
         :figwidth: 40%
         :name: ProblemGeometry
 
-        Problem geometry for a compact body located within a resistive medium.
+        Problem geometry for a compact target located within a resistive medium.
 
 .. figure:: ./images/figFreeSpaceb.png
         :align: right
@@ -24,7 +24,7 @@ ____________
 
         Problem geometry for a conductive and magnetically permeable sphere in free-space.
 
-For a buried target within a resistive medium, the frequency-domain response can be understood by considering the problem geometry illustrated in :numref:`ProblemGeometry`; wherein a compact body of conductivity :math:`\sigma` and magnetic permeability :math:`\mu` is located within a resistive medium (:math:`\sigma_b \ll \sigma`, :math:`\mu_b=\mu_0`).
+For a compact target within a resistive medium, the frequency-domain response can be understood by considering the problem geometry illustrated in :numref:`ProblemGeometry`; where the target has conductivity :math:`\sigma` and magnetic permeability :math:`\mu`, and the host medium has conductivity :math:`\sigma_b \ll \sigma` and magnetic permeability :math:`\mu_b=\mu_0`.
 In this case, the transmitter generates a harmonic primary field :math:`{\bf H_p} (i\omega)`, which induces an excitation within the target.
 The excitation induced within the target produces a secondary field :math:`{\bf H_s} (i\omega)`, which is then measured by a receiver coil (Rx).
 
@@ -38,7 +38,7 @@ Outline
 _______
 
 The analysis presented in this section follows expressions derived by Wait (1951).
-Wait considered the free-space dipole response from a conductive and magnetically permeable sphere, under the influence of a uniform, harmonic field.
+Wait considered the free-space dipole response from a conductive and magnetically permeable sphere, under the influence of a spatially uniform, harmonic field.
 Analytic expression, and the conditions in which they are valid, are presented here (link).
 The characteristic response of a conductive and magnetically permeable sphere may be defined in terms of an excitation factor.
 The excitation factors for several special cases are presented here (link).
@@ -56,3 +56,8 @@ A supporting derivation for the excitation factor can be found here (link).
     dipole_response
     excitation_factor
     schelkunoff
+
+
+References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.
+
+
