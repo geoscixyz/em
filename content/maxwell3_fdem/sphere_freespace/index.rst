@@ -30,7 +30,7 @@ The excitation induced within the target produces a secondary field :math:`{\bf 
 
 On a fundamental level, the geophysical problem illustrated in :numref:`ProblemGeometry` may be understood by considering a conductive and magnetically permeable sphere in free-space (:numref:`FreeSpaceGeometry`).
 This is accomplished by assuming the frequency-dependent attenuation (link) of EM signals, and inductive responses from the host media, are negligible.
-For the free-space problem, background physical properties are now given by :math:`\sigma_b=0` and :math:`\mu_b=\mu_0`, and the primary field :math:`{\bf H_0} (i\omega)` may be calculated using the Biot-Savart law (link).
+For the free-space problem, background physical properties are now given by :math:`\sigma_b=0` and :math:`\mu_b=\mu_0`, and the primary field :math:`{\bf H_0} (i\omega)` may be calculated using the :ref:`Biot-Savart law <biot_savart>`.
 The free-space problem will act as the basis for our analysis of frequency-domain responses.
 
 

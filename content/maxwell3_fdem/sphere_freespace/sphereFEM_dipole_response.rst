@@ -15,7 +15,7 @@ We show how the characteristic response of the sphere is dependent on its excita
 
 Consider the problem geometry illustrated in :numref:`FreeSpaceSphere`, wherein a sphere of radius :math:`R`, conductivity :math:`\sigma` and magnetic permeability :math:`\mu` is located in the vicinity of an inductive source transmitter (Tx).
 The transmitter generates a harmonic primary field :math:`{\bf H_0} (i\omega)` which induces an excitation within the sphere.
-Because we are in free-space, :math:`{\bf H_0} (i\omega)` may be calculated using the Biot-Savart law (link).
+Because we are in free-space, :math:`{\bf H_0} (i\omega)` may be calculated using the :ref:`Biot-Savart law <biot_savart>`.
 The excitation induced within the sphere produces a secondary field :math:`{\bf H_s} (i\omega)` which is then measured by a receiver coil (Rx).
 
 
