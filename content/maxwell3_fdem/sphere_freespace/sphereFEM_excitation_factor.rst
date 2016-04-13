@@ -11,7 +11,7 @@ Conductive and Magnetically Permeable Sphere
 ============================================
 
 
-According to Eq. :eq:`eqExcitationFactor`, the excitation factor for a conductive and magnetically permeable sphere is given by:
+According to Wait (1951), the excitation factor for a conductive and magnetically permeable sphere is given by:
 
 .. math::
 	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu  \big [ tanh(\alpha) - \alpha \big ] - \mu_0 [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
@@ -120,6 +120,7 @@ The largest possible magnetic response from a sphere can be obtained by taking t
 	
 
 
+References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.
 
 
 
