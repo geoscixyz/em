@@ -1,4 +1,4 @@
-.. _dipole_response
+.. _sphereFEM_dipole_response:
 
 The Sphere's Dipolar Response
 -----------------------------
@@ -67,7 +67,7 @@ An example for the excitation factor as a function of frequency is shown in :num
 
 To summarize, Eqs. :eq:`eqDipoleVacuum`, :eq:`eqDipoleMoment` and :eq:`eqExcitationFactor` can be used to approximate the dipole response from a conductive and magnetically permeable sphere.
 The nature of the sphere's response is characterized by the sphere's excitation factor.
-The excitation factors for several cases are discussed in the following section (link).
+The excitation factors for several cases are discussed in the :ref:`following section<sphereFEM_excitation_factor>`.
 
 
 References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.

@@ -1,4 +1,4 @@
-.. _sphere_freespace_index
+.. _sphereFEM_freespace_index:
 
 Response from a Conductive and Magnetically Permeable Sphere
 ------------------------------------------------------------
@@ -39,11 +39,11 @@ _______
 
 The analysis presented in this section follows expressions derived by Wait (1951).
 Wait considered the free-space dipole response from a conductive and magnetically permeable sphere, under the influence of a spatially uniform, harmonic field.
-Analytic expression, and the conditions in which they are valid, are presented here (link).
+Analytic expression, and the conditions in which they are valid, are presented :ref:`here<sphereFEM_dipole_response>`.
 The characteristic response of a conductive and magnetically permeable sphere may be defined in terms of an excitation factor.
-The excitation factors for several special cases are presented here (link).
+The excitation factors for several special cases are presented :ref:`here<sphereFEM_excitation_factor>`.
 These cases include: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency excitation of a highly permeable sphere.
-A supporting derivation for the excitation factor can be found here (link).
+A supporting derivation for the excitation factor can be found here :ref:`here<sphereFEM_schelkunoff>`.
 
 
 
@@ -53,9 +53,9 @@ A supporting derivation for the excitation factor can be found here (link).
 .. toctree::
     :maxdepth: 1
 
-    dipole_response
-    excitation_factor
-    schelkunoff
+    sphereFEM_dipole_response
+    sphereFEM_excitation_factor
+    sphereFEM_schelkunoff
 
 
 References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.

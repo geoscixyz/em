@@ -1,4 +1,4 @@
-.. _schelkunoff
+.. _sphereFEM_schelkunoff:
 
 Derivation of the Excitation Factor
 -----------------------------------

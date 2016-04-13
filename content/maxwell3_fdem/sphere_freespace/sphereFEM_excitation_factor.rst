@@ -1,4 +1,4 @@
-.. _excitation_factor
+.. _sphereFEM_excitation_factor:
 
 Excitation Factor for Special Cases
 -----------------------------------
