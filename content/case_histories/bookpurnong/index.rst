@@ -15,9 +15,18 @@ In this case history, airborne EM surveys are used to assess the ground saliniza
 
 (4) Interpretation of airborne EM data using a 1D layered model.
 
-This is your best resource for Airborne EM 101.
+References:
+
+- \A. Viezzoli, E. Auken, T. Munday, 2009, Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia, Exploration Geophysics: 40, 173–183.
+
+- \A. Viezzoli, T. Munday, E. Auken, A. V. Christiansen, 2010, Accurate quasi 3D versus practical full 3D inversion of AEM data – the Bookpurnong case study, Preview, 149, 23-31.
 
 
+.. figure:: images/airborne-example-placeholder.jpg
+    :align: left
+    :scale: 80% 
+    :figwidth: 40%
+    :name: airborne
 
 .. toctree:: 
     :maxdepth: 1
