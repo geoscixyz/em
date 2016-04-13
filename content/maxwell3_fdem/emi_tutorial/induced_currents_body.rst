@@ -3,6 +3,9 @@
 Induced currents in the body
 ============================
 
+.. topic:: Purpose
+  XXX
+
 Consider a simple equivalent circuit as shown in :numref:`Concepts_3loops_only`.
 
 .. figure:: ./images/Concepts_3loops_only.png
@@ -12,7 +15,9 @@ Consider a simple equivalent circuit as shown in :numref:`Concepts_3loops_only`.
 
    Conceptual diagram for 3-loops system.
 
-Through the Tx (Loop1) we flow time-varying currents, then it generates time varying magnetic flux, which will exite the body (Loop2). Let :math:`\Phi^{p}` be the primary magnetic flux from the Tx. The body treats like and R-L circuilt.
+
+A time-varying current is put through the Tx (loop 1), which then generates a time varying magnetic flux (primary magnetic flux), which we denote :math:`\Phi^{p}`. If coupled, this will induce currents in the body (Loop2) according to :ref:`Lenz's Law<lenz_law>`. We can examine the nature of the induced current by treating the loop as a Resistor-
+Inductor (RL) circuit.
 
 .. figure:: ./images/RLcircuit.png
    :align: right
@@ -21,7 +26,7 @@ Through the Tx (Loop1) we flow time-varying currents, then it generates time var
 
    Conceptual diagram of RL circuit.
 
-Electrical impedance of the RL circuit can be written as
+The electrical impedance of the RL circuit can be written as
 
 .. math::
     Z(\omega) = R + \imath \omega L,
@@ -32,7 +37,7 @@ Using Ohm's law we obtain
 .. math::
     V(\omega) = I(\omega) Z(\omega).
 
-Voltage, can be expressed using :math:`\Phi^{p}` as
+Voltage can be expressed using :math:`\Phi^{p}` as
 
 .. math::
     V = \mathcal{E} = -\frac{\partial \Phi^p}{\partial t} = -\imath \omega \Phi^p
@@ -81,7 +86,7 @@ Consider complex response function, :math:`Q` as
 .. note::
     For low frequencies the response is in the imaginary part, for high frequencies it will be in the real part.
 
-Phase of the current, :math:`\theta_I` can be written as
+The phase of the current, :math:`\theta_I` can be written as
 
 .. math::
     \theta_I = \theta_V - \theta_Z = -\frac{\pi}{2} - tan^{-1}\Big(\frac{\omega L}{R}\Big),
@@ -91,4 +96,4 @@ where :math:`\theta_z=\Re[z] / \Im[z]` and :math:`\Re[z]` and :math:`\Im[z]` are
 
 Considering Faraday's law: :math:`V = -\imath\omega\Phi^p`, then recoginze factor of :math:`-\imath\omega`, which makes :math:`\frac{\pi}{2}` lag of phase in the induced current. And :math:`tan^{-1}(\frac{\omega L}{R})` lag of phase is induced by the Loop2.
 
-So the phase of the current vary with frequency. At low frequencies the information about the conductor is in the quadarature (imaginary part) portion, at high freuquencies it is in out-of-phase (real part) portion.
+So the phase of the current vary with frequency. At low frequencies the information about the conductor is in the quadrature (imaginary part) portion, at high frequencies it is in out-of-phase (real part) portion.
