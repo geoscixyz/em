@@ -15,6 +15,7 @@
 import sys
 import os
 import shlex
+import sphinx_bootstrap_theme
 
 sys.path.append('./examples')
 
@@ -59,7 +60,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'em'
 copyright = """
-  <a rel="license" 
+  <a rel="license"
    href="http://creativecommons.org/licenses/by/4.0/"
    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -132,14 +133,79 @@ numfig = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
+# Theme options are theme-specific and customize the look and feel of a
+# theme further.
 html_theme_options = {
-  'font_family': 'serif',
-  'head_font_family': 'serif',
+    # Navigation bar title. (Default: ``project`` value)
+    'navbar_title': "EM",
+
+    # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "Contents",
+
+    # A list of tuples containing pages or urls to link to.
+    # Valid tuples should be in the following forms:
+    #    (name, page)                 # a link to a page
+    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+    #    (name, "http://example.com", True) # arbitrary absolute url
+    # Note the "1" or "True" value above as the third argument to indicate
+    # an arbitrary url.
+    # 'navbar_links': [
+    #     ("Fundamentals", "maxwell1_fundamentals/index.html"),
+    #     ("Static", "maxwell2_dc"),
+    #     ("FDEM", "maxwell3_fdem"),
+    #     ("TDEM", "maxwell4_tdem"),
+    #     ("Surveys", "geophysical_surveys"),
+    # ],
+
+    # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': True,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': True,
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    'navbar_pagenav_name': "Page",
+
+    # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': -1,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    'navbar_class': "navbar navbar-inverse",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "true",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "nav",
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing (default) or the name of a valid theme
+    # such as "amelia" or "cosmo".
+    'bootswatch_theme': "Yeti",
+
+    # Choose Bootstrap version.
+    # Values: "3" (default) or "2" (in quotes)
+    'bootstrap_version': "3",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -150,7 +216,7 @@ html_theme_options = {
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title = 'EM' 
+# html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -180,15 +246,15 @@ html_favicon = 'em.ico'
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-html_sidebars = {
-   '**': [
-       'globaltoc.html',  
-       'searchbox.html',
-       'sourcelink.html',
-       ],
-}
+# html_sidebars = {
+#    '**': [
+#        'globaltoc.html',
+#        'searchbox.html',
+#        'sourcelink.html',
+#        ],
+# }
 
-show_related = True
+# show_related = True
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
