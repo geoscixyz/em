@@ -10,3 +10,4 @@ Principles of Electromagnetic Induction
 
     frequency_domain
     time_domain
+    fourier_transform
