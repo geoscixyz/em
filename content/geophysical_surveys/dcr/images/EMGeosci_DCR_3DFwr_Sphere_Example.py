@@ -72,11 +72,18 @@ vmin = -3.
 vmax = -1.
 depth = 200. # Maximum depth to plot
 dx_in = 5
+
+srvy_end = [(-200.  ,  0.), (200.  ,  0.)]
 #%% SCRIPT STARTS HERE
 # Create mesh
-hxind = [(dx_in,13,-1.3), (dx_in, 130), (dx_in,13,1.3)]
-hyind = [(dx_in,13,-1.3), (dx_in, 65), (dx_in,13,1.3)]
-hzind = [(dx_in,13,-1.3),(dx_in, 55)]
+nx = int(np.abs(srvy_end[0][0] - srvy_end[1][0]) /dx_in)
+ny = int( np.max(radi) /dx_in )
+nz = int( np.abs( np.min(loc[2,:]) - np.max(radi) )  /dx_in )
+
+# Create mesh
+hxind = [(dx_in,13,-1.3), (dx_in, nx), (dx_in,13,1.3)]
+hyind = [(dx_in,13,-1.3), (dx_in, ny), (dx_in,13,1.3)]
+hzind = [(dx_in,13,-1.3),(dx_in, nz)]
 
 mesh = Mesh.TensorMesh([hxind, hyind, hzind], 'CCN')
 
@@ -134,7 +141,6 @@ plt.gca().set_aspect('equal', adjustable='box')
 
 plt.show()
 cfm1=get_current_fig_manager().window
-gin=[1]
 
 # Keep creating sections until returns an empty ginput (press enter on figure)
 #while bool(gin)==True:
@@ -144,12 +150,12 @@ cfm1.activateWindow()
 plt.sca(ax_prim)
 
 # Takes two points from ginput and create survey
-gin = [(-200.  ,  0.), (200.  ,  0.)]
+
 #gin = plt.ginput(2, timeout = 0)
 
 # Add z coordinate to all survey... assume flat
 nz = mesh.vectorNz
-var = np.c_[np.asarray(gin),np.ones(2).T*nz[-1]]
+var = np.c_[np.asarray(srvy_end),np.ones(2).T*nz[-1]]
 
 # Snap the endpoints to the grid. Easier to create 2D section.
 indx = Utils.closestPoints(mesh, var )
@@ -174,8 +180,8 @@ hx = np.r_[padx[::-1], np.ones(ncx)*dx , padx]
 hz = np.r_[padx[::-1], np.ones(ncz)*dx]
 
 # Create 2D mesh
-x0 = gin[0][0] - np.sum(padx) * np.cos(azm)
-y0 = gin[0][1] - np.sum(padx) * np.sin(azm)
+x0 = srvy_end[0][0] - np.sum(padx) * np.cos(azm)
+y0 = srvy_end[0][1] - np.sum(padx) * np.sin(azm)
 mesh2d = Mesh.TensorMesh([hx, hz], x0=(x0,mesh.vectorNz[-1] - np.sum(hz) ))
 
 #%% Create array of points for interpolating from 3D to 2D mesh
@@ -237,12 +243,16 @@ plt.tight_layout(pad=0.5)
 #im1 = axs.pcolormesh([],[],[], alpha=0.75,extent = (xx[0],xx[-1],yy[-1],yy[0]),interpolation='nearest',vmin=-1e-2, vmax=1e-2)
 #im2 = axs.pcolormesh([],[],[],alpha=0.2,extent = (xx[0],xx[-1],yy[-1],yy[0]),interpolation='nearest',cmap='gray')
 #im1 = axs.pcolormesh(xx,zz,np.zeros((mesh2d.nCy,mesh2d.nCx)), alpha=0.75,vmin=-1e-2, vmax=1e-2)
-im2 = axs.pcolormesh(xx,zz,np.zeros((mesh2d.nCy,mesh2d.nCx)), alpha=0.75,vmin=-1e-2, vmax=1e-2)
+im2 = axs.pcolormesh(xx,zz,np.zeros((mesh2d.nCy,mesh2d.nCx)),vmin=-1e-2, vmax=1e-2)
 cbar = plt.colorbar(im2,format="$10^{%.1f}$",fraction=0.04,orientation="horizontal")
 im3 = axs.streamplot(xx, zz, np.zeros((mesh2d.nCy,mesh2d.nCx)), np.zeros((mesh2d.nCy,mesh2d.nCx)),color='k')
 im4 = axs.scatter([],[], c='r', s=200)
 im5 = axs.scatter([],[], c='r', s=200)
 
+circle1=plt.Circle((-98,-98),45,color='w',fill=False, lw=3)
+circle2=plt.Circle((102,-98),45,color='k',fill=False, lw=3)
+axs.add_artist(circle1)
+axs.add_artist(circle2)
 
 problem = DC.ProblemDC_CC(mesh)
 tinf = np.squeeze(Rx[-1][-1,:3]) + np.array([dl_x,dl_y,0])*10*a
@@ -308,8 +318,8 @@ def animate(ii):
 
 
     global im2, cbar
-    axs.pcolormesh(mesh2d.vectorCCx,mesh2d.vectorCCy,np.log10(m2D), alpha=0.25, cmap = 'gray')
-    im2 = axs.pcolormesh(mesh2d.vectorCCx,mesh2d.vectorCCy,Q_sub, alpha=0.25, vmin=-1e-4,vmax = 1e-4)
+    #axs.pcolormesh(mesh2d.vectorCCx,mesh2d.vectorCCy,np.log10(m2D), alpha=0.25, cmap = 'gray')
+    im2 = axs.pcolormesh(mesh2d.vectorCCx,mesh2d.vectorCCy,Q_sub, alpha=0.75, vmin=-1e-4,vmax = 1e-4, cmap = 'RdBu')
 
     # Add colorbar
     cbar = fig.colorbar(im2, orientation="horizontal",ticks=np.linspace(-1,1, 3))
