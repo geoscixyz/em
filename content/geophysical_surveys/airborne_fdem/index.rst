@@ -1,7 +1,7 @@
-.. _looploopfdem_index:
+.. _airborne_fdem_index:
 
-Loop Loop FDEM
-==============
+Airborne FDEM
+=============
 
 - Intro:
 	- brief overview of the experiment
@@ -15,7 +15,8 @@ Loop Loop FDEM
     governing_equations
     example
     field_survey/index
+    systems
     interpretation
     practical_considerations
-    
-    
+
+

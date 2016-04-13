@@ -1,4 +1,4 @@
-.. _fdem_fields_from_grounded_sources_sphere:
+.. _tdem_fields_from_grounded_sources_sphere:
 
 Sphere
 ======

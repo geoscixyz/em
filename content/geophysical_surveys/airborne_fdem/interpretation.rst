@@ -1,10 +1,10 @@
-.. _looploopfdem_interpretation:
+.. _airborne_fdem_interpretation:
 
 Interpretation
 ==============
 
 - inversion
-- appraisal 
+- appraisal
 	- depth of investigation
 	- hypothesis testing
 
