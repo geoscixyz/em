@@ -3,7 +3,7 @@
 Maxwell II: DC
 ==============
 
-**Purpose:** Provide background and physical understanding for steady state Maxwell equations as they apply to geoscience problems. 
+**Purpose:** Provide background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.
 
 When electromagnetic fields no longer change with time then Maxwell's
 equations are in a "steady state". Here we examine these equations and present
@@ -42,8 +42,8 @@ insight.
 
 .. toctree::
     :maxdepth: 1
-    
+
     governing_equations/index
     fields_from_grounded_sources_dcr/index
     fields_from_grounded_sources_mmr/index
-    
+
