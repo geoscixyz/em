@@ -1,10 +1,12 @@
 .. _electrical_conductivity_mathematical_relationships:
 
-Some mathematical relationships
+Some Mathematical Relationships
 ===============================
 
-.. (big topic but low priority. A placeholder will do. )
 
-.. todo:: (eg Archie's law,) 
+.. toctree::
+    :maxdepth: 2
 
-
+    mathematical_relationships/electrical_conductivity_mathematical_relationships_Archie
+    mathematical_relationships/electrical_conductivity_mathematical_relationships_ColeColeresistivity
+    mathematical_relationships/electrical_conductivity_mathematical_relationships_ColeColeconductivity
