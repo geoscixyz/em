@@ -14,7 +14,7 @@ The electrical conductivity of matter has a large variation. Consider the table 
 
    Various conductivity values for different materials.
 
-Even for rock units that we regularly XXX. The range is large.
+Even for rock units, the range of electrical conductivity is large.
 
 .. figure:: ./figures/resistivity_table1.png
    :align: center
