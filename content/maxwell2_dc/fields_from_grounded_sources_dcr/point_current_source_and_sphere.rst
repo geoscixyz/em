@@ -7,8 +7,8 @@ In this section, we build up an analytical solution for a conducting sphere in t
 
 1. A solution for the electric scalar potential, due to a point current source
 within a wholespace of resistivity :math:`\rho`, is solved. This solution is then
-re-expressed within a polar coordinate system and decomposed into a sum of spherical 
-harmonic modes. 
+re-expressed within a polar coordinate system and decomposed into a sum of spherical
+harmonic modes.
 
 2. The solution for a conducting sphere within a wholespace is then
 determined by solving a boundary value problem for each spherical harmonic.
@@ -60,7 +60,7 @@ of spherical harmonic modes using the binomial theorem:
 .. math::
    \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \
    &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \
-   &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big) 
+   &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big)
    :label: RSol1
 
 where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
@@ -137,7 +137,7 @@ be infinite as :math:`r \rightarrow 0`, and :math:`r` terms outside the
 sphere would be infinite as :math:`r \rightarrow \infty`. Because
 Legendre polynomials can be used to form an orthogonal set of basis
 functions, coefficients :math:`A_n` and :math:`B_n` may be determined
-independently for each :math:`n`. Using locations :math:`r<x_0`, Eq. :eq:`PsiWholespace1` 
+independently for each :math:`n`. Using locations :math:`r<x_0`, Eq. :eq:`PsiWholespace1`
 can be substituted into Eq. :eq:`PsiSolAn`. This
 can be use to solve Eq. :eq:`PoissonEq2d`, using boundary conditions
 from :eq:`BoundaryConditions` for each harmonic mode :math:`n`. The
@@ -152,14 +152,15 @@ and
 Therefore, the electric scalar potential observed outside the sphere is
 equal to:
 
-.. math:: 
+.. math::
    \phi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
    :label: Potential_Sphere_WholeSpace
 
 Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential for a wholespace from
 Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exstence of a
-conducting sphere. Python code functions which evaluate above solution is given at :ref:`effects_of_topography_code`.
+conducting sphere. Python code functions which evaluate above solution is given at `DC sphere code`_.
 
+.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/notebooks/Maxwell2_DC/fields_from_grounded_sources_dcr/codes/DCsphere.py
 
 .. figure:: ../images/SphericalDepression_Sphere.png
    :align: center
@@ -169,19 +170,19 @@ conducting sphere. Python code functions which evaluate above solution is given 
 
 Variables
 *********
-                                                                              
+
 +---------------------+-----------------------------------------------------------------------------------------+
 |:math:`\rho`         | Resistivity of the whole-space                                                          |
 +---------------------+-----------------------------------------------------------------------------------------+
-|:math:`\rho_1`       | Resistivity of the sphere                                                               | 
+|:math:`\rho_1`       | Resistivity of the sphere                                                               |
 +---------------------+-----------------------------------------------------------------------------------------+
-|:math:`(0,0,0)`      | Origin of the coordinate and center location of the sphere                              |                            
+|:math:`(0,0,0)`      | Origin of the coordinate and center location of the sphere                              |
 +---------------------+-----------------------------------------------------------------------------------------+
 |:math:`(\pm x_0,0,0)`| Location of the point current source, which has to be alined with :math:`x`-axis        |
 +---------------------+-----------------------------------------------------------------------------------------+
 |:math:`x_0`          | Distance from current source from the origin (a postive scalar value)                   |
 +---------------------+-----------------------------------------------------------------------------------------+
-|:math:`r`            | Distance from the origin to the measurement point :math:`P(x,y,z)`                      |                                    
+|:math:`r`            | Distance from the origin to the measurement point :math:`P(x,y,z)`                      |
 +---------------------+-----------------------------------------------------------------------------------------+
 |:math:`R`            | Distance between the measurement point (:math:`P`) and the point current source         |
 +---------------------+-----------------------------------------------------------------------------------------+
