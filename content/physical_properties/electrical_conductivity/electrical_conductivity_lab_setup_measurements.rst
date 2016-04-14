@@ -1,7 +1,7 @@
 .. _electrical_conductivity_lab_setup_measurements:
 
 Lab set up and measurements
-==========================
+===========================
 
 Electrical conductivity can be frequency-dependent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. In order to measure complex conductivity of a rock specimen, we inject sinusoidal that is, AC currents to the rock, and measure voltages. :numref:`GSCcompleximpedance` shows the Lab set-up at GSC. The frequency range of the Lab set-up is from 0.016 Hz - 1 MHz (logarithmically-sampled).
 
