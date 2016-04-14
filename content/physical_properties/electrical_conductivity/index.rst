@@ -5,7 +5,7 @@ Electrical Conductivity
 
 .. topic:: Purpose
 
-  Using any electromagnetic geophysical survey we excite the earth, and measure signals from the earth. Measured EM signals is mostly depending upon electrical conductivity constrasts of earth materials. Therefore, understanding ...
+  Using any electromagnetic geophysical survey we excite the earth, and measure signals from the earth. Measured EM signals is mostly depending upon electrical conductivity contrasts of earth materials. Therefore, understanding ...
 
 
 Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity.
@@ -27,8 +27,8 @@ where :math:`\sigma` (S/m) is conductivity,  :math:`\mathbf{J}` (A/m :math:`^2`)
    Flow of charges under an applied electric field.
 
 .. note::
-    Chargeabilty is often listed as an independent physical property
-    (such as density, magnetic suspectibilty) and we will continue with that
+    Chargeability is often listed as an independent physical property
+    (such as density, magnetic susceptibility) and we will continue with that
     in this EM resource. It is however, just an element that is necessary in
     order to provide a complete description of electrical conductivity.
 

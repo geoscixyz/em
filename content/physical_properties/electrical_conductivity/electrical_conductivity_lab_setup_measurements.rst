@@ -1,16 +1,16 @@
 .. _electrical_conductivity_lab_setup_measurements:
 
-Lab set up and measurments
+Lab set up and measurements
 ==========================
 
-Electrical conductivity can be frequency-depenent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. In order to measure complex conductivity of a rock specimen, we inject sinusoidal that is, AC currents to the rock, and measure voltages. :numref:`GSCcompleximpedance` shows the Lab set-up at GSC. The frequency range of the Lab set-up is from 0.016 Hz - 1 MHz (logarithmically-sampled).
+Electrical conductivity can be frequency-dependent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. In order to measure complex conductivity of a rock specimen, we inject sinusoidal that is, AC currents to the rock, and measure voltages. :numref:`GSCcompleximpedance` shows the Lab set-up at GSC. The frequency range of the Lab set-up is from 0.016 Hz - 1 MHz (logarithmically-sampled).
 
 .. figure:: ./figures/GSCcompleximpedance.png
    :scale: 50%
    :align: center
    :name: GSCcompleximpedance
 
-   Complex impedance measurment system at Geological Survey of Canada (GSC).
+   Complex impedance measurement system at Geological Survey of Canada (GSC).
 
 .. figure:: ./figures/ACcircuit_simple.png
    :scale: 80%
@@ -19,7 +19,7 @@ Electrical conductivity can be frequency-depenent and complex-valued, which is e
 
    A simple AC circuit.
 
-An equivalent circuit diagram for the Lab measurments is shown in :numref:`ACcircuit_simple`. For a source that is providing a voltage the currents depends upon the conductivity of the rock. The electrical impedance is defined as
+An equivalent circuit diagram for the Lab measurements is shown in :numref:`ACcircuit_simple`. For a source that is providing a voltage the currents depends upon the conductivity of the rock. The electrical impedance is defined as
 
 .. math::
 
@@ -42,7 +42,7 @@ An example of lab measurements is shown :numref:`ComplexImpedance`.
 
 .. _Highland Valley Copper: https://en.wikipedia.org/wiki/Highland_Valley_Copper_mine
 
-We note there are two features of the impednace measurments of interest:
+We note there are two features of the impedance measurements of interest:
 
 .. note::
 
@@ -82,7 +82,7 @@ In the lab, the resistor shown in :numref:`DCcircuit_simple` is replaced by cube
    - Resistivity: :math:`\rho = \frac{RA}{L}` (:math:`\Omega\text{-}m`)
    - Conductivity: :math:`\sigma = \frac{1}{\rho} = \frac{L}{RA}` (:math:`S/m`)
 
-Ohm's law analogous to :math:`V=IR` for the circult case become
+Ohm's law analogous to :math:`V=IR` for the circuit case become
 
 .. math::
    \mathbf{E}= \rho \mathbf{J},
@@ -111,7 +111,7 @@ A conceptual diagram of the lab set up for DC conductivity is shown in :numref:`
    :align: center
    :name: DCsetup
 
-   A DC conductivity measurment set-up.
+   A DC conductivity measurement set-up.
 
 
 Chargeability
@@ -121,16 +121,16 @@ Chargeability can be measured in both frequency and time domains  as shown in :n
 
    - For the frequency domain measurment, we inject sinusoidal currents to the rock
 
-   - For the time domain measurement, we inject half-duty cylce currents including both on- and off-time.
+   - For the time domain measurement, we inject half-duty cycle currents including both on- and off-time.
 
-In both measurments, voltages measured are affected by chargeabiliy of the rock hence we can obtain chareability of the rock.
+In both measurements, voltages measured are affected by chargeability of the rock hence we can obtain chargeability of the rock.
 
 .. figure:: ./figures/ACsetup.png
    :scale: 70%
    :align: center
    :name: ACsetup
 
-   A chargeability measurment set-up in either frequency or time domain.
+   A chargeability measurement set-up in either frequency or time domain.
 
 
 Time domain measurements
@@ -141,7 +141,7 @@ Measured voltage can be stacked and we could obtain half-period voltage as shown
 - :math:`V_0`: Voltage right after current switch-off (DC)
 - :math:`V_{\infty}`: Voltage right after current switch-on
 - :math:`V_s(t)`:Voltage at off-time
-- :math:`t_1` and :math:`t_2` are arbitrary times determining integreation window
+- :math:`t_1` and :math:`t_2` are arbitrary times determining integration window
 
 When the current switched-on in the on-time, polarization charges start to build up (:math:`V_{\infty}`) then at a late time it asymptotes to steatdy-state (:math:`V_0`). After the current is switched-off built polarization charge is decaying (:math:`V_s`) and asymptotes to zero.
 
@@ -172,12 +172,12 @@ Data could be
    :label: etaapp_mVV
 
 
-By definition of the chargeability, :math:`\eta`, it is intrinsic, dimensionless (V/V), and bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from inifinte to zero frequency normalized by voltage at zero frequency, :math:`V_0`.
+By definition of the chargeability, :math:`\eta`, it is intrinsic, dimensionless (V/V), and bounded to :math:`[0,1)`. The chargeability can be considered as net voltage difference from infinite to zero frequency normalized by voltage at zero frequency, :math:`V_0`.
 
 However, because we cannot measure exact value of :math:`V_{\infty}` and :math:`V_0`, we often alternatively measure voltage at off-time, :math:`V_s(t)` then integrate in certain range of time to obtain apparent chargeability, :math:`\eta^{app}` as shown in Eq. :eq:`etaappint_msec` and :eq:`etaappint_mVV`.
 
 .. note::
-   Depending on the used time window, measured apparent chargeability can under- or over-estiamte intrinsic chargeabiility. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated apparent charegability could be significantly underestimated.
+   Depending on the used time window, measured apparent chargeability can under- or over-estimate intrinsic chargeability. For instance, if discharging happens within really short time window and our integration time window is on much later time, then the integrated apparent chargeability could be significantly underestimated.
 
 
 A simple and often used system on the field is GDD's `SCIP Tester <http://www.gddinstrumentation.com/index.php/scip-tester>`_.

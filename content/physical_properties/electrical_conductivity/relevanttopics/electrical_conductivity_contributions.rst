@@ -19,4 +19,4 @@ Each ion is able to only a certain quantity of charge, it indicates that the mor
 
 An increase in temperature will increase the mobility of ions in the solution resulting in an increase of the conductivity. Based upon that temperature increase and salinity decrease with depth, conductivity should increase with depth. However, the effect of pressure should be considered to understand conductivity of the earth with depth as we shall explore later.
 
-Most minerals forming rocks are nonconductive. However, the porosity and pore distribution of a rock specimen will have effect on determining conductivity. In addition, clay minerals in a rock can be a separate conducting path from electrolyte conduction, which will increase the conductivity of a rock.
+Most minerals forming rocks are non-conductive. However, the porosity and pore distribution of a rock specimen will have effect on determining conductivity. In addition, clay minerals in a rock can be a separate conducting path from electrolyte conduction, which will increase the conductivity of a rock.

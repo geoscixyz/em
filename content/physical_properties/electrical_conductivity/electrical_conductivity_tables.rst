@@ -20,7 +20,7 @@ Even for rock units, the range of electrical conductivity is large.
    :align: center
    :name: resistivity_table1
 
-   Electrical conductivity and resistivty of common rocks.
+   Electrical conductivity and resistivity of common rocks.
 
 
 
