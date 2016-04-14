@@ -10,3 +10,5 @@ Suggested reviewers:
 - [ ] @(github-name)
 - [ ] @(github-name)
 
+Before merging: please run a spell check through your documents! 
+
