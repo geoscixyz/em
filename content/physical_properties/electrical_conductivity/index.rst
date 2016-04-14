@@ -53,7 +53,7 @@ Contents
 
     electrical_conductivity_lab_setup_measurements
     electrical_conductivity_tables
-    electrical_conductivity_relvanttopics
+    relevanttopics/index
     electrical_conductivity_mathematical_relationships
     electrical_conductivity_references
 
