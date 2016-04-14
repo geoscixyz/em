@@ -31,7 +31,7 @@ There are two primary causes of chargeability. In both cases the re-distribution
 	  a large surface area-to-volume ratio.
 
 	- Non-ionic fluids (such as contaminants) can markedly change the
-	  behaviour of surface-electrolyte interactions.
+	  behavior of surface-electrolyte interactions.
 
 	- Changes in ion concentration (such as increased salinity) will also
 	  affect both types of polarization.
