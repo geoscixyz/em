@@ -10,3 +10,4 @@ Principles of Electromagnetic Induction
 
     frequency_domain
     time_domain
+    going_between_time_and_freq
