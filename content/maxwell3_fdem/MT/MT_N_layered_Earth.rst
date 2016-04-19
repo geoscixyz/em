@@ -5,8 +5,7 @@ Response of a layered Earth to a plane wave
 
 .. topic:: Purpose
 
-    We present here a 1D modelisation of the MagnetoTelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data.
-
+    Plane wave propagation through the earth is at the core of the Magnetotelluric problem. Here, we investigate the physics of plane wave propagation through a 1D layered earth and discuss the connection between the physical responses and what we observe in MT data
 
 .. raw:: html
     :file: ./images/movieMT_time.html
@@ -14,7 +13,7 @@ Response of a layered Earth to a plane wave
 Introduction
 ------------
 
-We present here a 1D modelisation of the MagnetoTelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
+We present here a 1D modelisation of the Magnetotelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
  .. image:: http://mybinder.org/badge.svg 
     :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
@@ -22,9 +21,9 @@ We present here a 1D modelisation of the MagnetoTelluric waves in a layered Eart
 
 .. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
 
-MagnetoTelluric is a widely used method, especially for imaging geothermy. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use waves generated mostly in the Earth's Atmosphere. High frequencies are mainly produced by lightning strikes all around the globe, travelling through the Earth's Ionosphere that acts as a waveguide. Low Frequencies waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
+Magnetotelluric is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
-In MagnetoTellurics problems, the key diagnosed physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`, as we expect the contrasts of the others physical properties to be negligible. 
+In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( ~:math:`<10^5 Hz`), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
 
 
 
@@ -36,28 +35,29 @@ Setup
     :scale: 50% 
     :name: MTlayeredEarth
 
-    1D general Earth Model Configuration
+    1D layered Earth Model
 
-An example of a 1D MagnetoTelluric modelisation, with a 2-layers Earth, is shown in the movie above, where we have:
+In the movie above, we show an example of plane wave electromagnetic fields propagating in a 2-layered earth with:
 
- - a layered Earth, each layer with its own physical properties :math:`\sigma, \varepsilon, \mu`
+ - a layered Earth, each layer with its own physical properties :math:`\sigma_j, \varepsilon_j, \mu_j`
 
- - a plane wave traveling along the axis Z coming from air, composed of an electric field :math:`\mathbf{E_x}` and a magnetic field :math:`\mathbf{H_y}`. These are the fields we will be measuring with our geophysical instruments at the surface to obtain information from the underground
+ - a plane wave traveling along the axis :math:`\mathbf{\hat{z}}` coming from air, composed of an electric field :math:`\mathbf{E_x}` and a orthogonal magnetic field :math:`\mathbf{H_y}`. These are the fields we will be measuring with our geophysical instruments at the surface to obtain information from the underground
 
 
 We can see that several phenomenons are occuring. Just to mention few of them:
 
  - the incoming wave (down component) is reflected at the surface
 
- - once in the ground we observe a diffusive effect of the Earth on the wave that will regulate the depth of investigation and the resolution of the survey. The decay is more important in the second layer with a higher conductivity
+ - once in the ground we observe a diffusive effect of the Earth on the wave 
 
- - :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are continuous and phased compared to each other
+ - the depth of investigation is regulate by the damping effect on the amplitudes, which is characterized by the skin depth. We notice the decay is more important in the second layer with a higher conductivity
 
+ - :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are continuous. There is a phase shift between the two.
 
 Governing Equations
 -------------------
 
-The governing equation for MagnetoTellurics problem can be obtained from
+The governing equation for Magnetotelluric problem can be obtained from
 :ref:`Maxwell's equations <maxwell1_fundamentals_index>`. We start with :ref:`Faraday's law<faraday>` and :ref:`Ampere's law<ampere_maxwell>`:
 
 .. math::
@@ -68,8 +68,7 @@ The governing equation for MagnetoTellurics problem can be obtained from
     \nabla \times \mathbf{H_y} = (\sigma + i \omega \varepsilon) \mathbf{E_x}
     :label: Ampere
 
-Knowing that the divergent of **E** and **H** are equal to 0 here (no free charge)
-according to :ref:`Gauss's Law for Electric Fields<gauss_electric>` and :ref:`Gauss's Law for Magnetic Fields<gauss_magnetic_frequency>`, we can combine the equations to write the Helmhotz (wave propagation) equation for both **E** and **B** field:
+Knowing that that :math:\mathbf{E} and :math:\mathbf{H} are divergence free, according to :ref:`Gauss's Law for Electric Fields<gauss_electric>` and :ref:`Gauss's Law for Magnetic Fields<gauss_magnetic_frequency>`, we can combine the equations to write the Helmhotz (wave propagation) equation for both :math:\mathbf{E} and :math:\mathbf{H} field:
 
 .. math::
     \nabla ^2  \mathbf{E_x} + k^2 \mathbf{E_x} = 0
@@ -86,7 +85,7 @@ with k the wavenumber:
     :label: kwavenumber
 
 
-In the ground, we usually assume that the displacement current is negligible, which means :math:`\sigma >> \omega \varepsilon`. In this case 
+In the ground, we can generally assume that the displacement current is negligible, which means :math:`\sigma \ll \omega \varepsilon`. In this case 
 
 .. math::
     k_{ground} \simeq (1-i) \sqrt{ \frac{\omega \mu \sigma}{2} }
@@ -105,12 +104,12 @@ Taking the problem from the point of view of the electric field, we know the equ
     :label: Electric field components
     
 .. math::
-    H_y (z) = \frac{(\nabla \times \mathbf{E_x})_y}{- i \omega \mu} = \frac{k}{ \omega \mu} (D e^{-i k z} - U e^{i k z}) = \frac{1}{Z} (D e^{-i k z} - U e^{i k z})
+    H_y (z) = \frac{1}{- i \omega \mu} (\nabla \times \mathbf{E_x})_y = \frac{k}{ \omega \mu} (D e^{-i k z} - U e^{i k z}) = \frac{1}{Z} (D e^{-i k z} - U e^{i k z})
     :label: Magnetic field components
 
-with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex amplitudes of the Up and Down components of the field and Z the intrinsic impedance of the space.
+with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex amplitudes of the Up and Down components of the field and :math:`Z = frac{ \omega \mu}{k}` the intrinsic impedance of the space.
 
-Writing the solution in the j-th layer (See :numref:`MTlayeredEarth`), we got:
+Writing the solution for the j-th layer (See :numref:`MTlayeredEarth`), we obtain:
 
  .. math::
     E_{x,j} (z) = U_j e^{i k (z-z_{j-1})} + D_j e^{-i k (z-z_{j-1})}
@@ -121,30 +120,30 @@ Writing the solution in the j-th layer (See :numref:`MTlayeredEarth`), we got:
     :label: Magnetic field components in layers
 
 
-Which can be rewrite as:
+which can be re-written in matrix form as:
 
  .. math::
     \left(\begin{matrix} E_{x,j} \\ H_{y,j} \end{matrix} \right) = \left(\begin{matrix} 1 & 1 \\ -\frac{1}{Z_j} & \frac{1}{Z_j} \end{matrix} \right) \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
     = P_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right)
     :label: Propagation matrix 
 
-The transition of the Up and Down component inside a layer can then be write as such
+The transfert of the Up and Down components inside a layer can then be write as such
 
  .. figure:: images/InsideLayer.png
     :align: center
     :scale: 100% 
     :name: InsideLayer
 
-    Transition inside a layer, variables definition.
+    Transfert of Up and Down components inside a layer, variables definition.
 
 
 .. math::
     \left(\begin{matrix} U_j' \\ D_j' \end{matrix} \right)  = \left(\begin{matrix} e^{i k h_j} & 0 \\ 0 & e^{-i k h_j} \end{matrix} \right) \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
     = T_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
 
-With the variables U, D, U' and D' define as in (:numref:`InsideLayer`)
+With the variables U, D, U' and D' defined as in (:numref:`InsideLayer`)
 
-Using the continuity of the tangential \\(\\mathbf{E_x}\\) and \\(\\mathbf{H_y}\\) field at the interfaces, we find an iterative relation between the fields in consecutive layers:
+Using the continuity of the tangential :math:`\mathbf{E_x}` and :math:`\mathbf{H_y}` field at the interfaces, we find an iterative relation between the fields in consecutive layers:
 
 .. math::
     \left(\begin{matrix} E_{x,j} \\ H_{y,j} \end{matrix} \right) = P_j T_j P^{-1}_J \left(\begin{matrix} E_{x,j+1} \\ H_{y,j+1} \end{matrix} \right)
@@ -153,6 +152,8 @@ We are now only missing a Boundary Condition to be able to compute our MT forwar
 
 .. math::
     \left(\begin{matrix} U_n \\ D_n \end{matrix} \right)  = \left(\begin{matrix} 0 \\ 1 \end{matrix} \right) 
+
+We assume with this boundary condition that the last layer is a half-space. Knowing all the model parameters, the forward can now be solved by first use the matrix :math:`P_{n}` to calculate the fields :math:`\mathbf{E_{x,n}}` and :math:`\mathbf{H_{y,n}}` and then propagate the field iteratively up to the top layer using the matrix :math:`P_j T_j P^{-1}_J`.
 
 Building Intuition for MT problems
 ----------------------------------
@@ -187,7 +188,7 @@ We see the skin depth is highly dependent on both the frequency of our signal an
 Reflection and Transmission Coefficients
 ****************************************
 
-.. figure:: images/Reflection_MT.png
+.. figure:: images/Reflection_MT_annotated.png
  :align: right
  :scale: 50% 
  :name: Reflection_MT
@@ -235,6 +236,7 @@ Replacing the differents components of equation :eq:`faraday continuity conditio
     T = \frac{E^t}{E^i} = \frac{2 k_j}{k_j + k_{j+1}}
     :label: Transmission Coefficient
 
+These coefficients tell us how much energy of the incoming has been reflected or transmitted.
 
 Refraction angle
 ****************
@@ -243,10 +245,10 @@ Refraction angle
 Field Acquisition
 -----------------
 
-In MT, the source is unknown but we are avoiding the problem by measuring the ratio of the fields. usually at the surface. We define an apparent impedance
+In MT, the source is unknown but we are avoiding the problem by measuring the ratio of the fields, which cancel the amplitude of the source. The data are acquired usually at the surface. We define an apparent impedance:
 
 .. math::
-    \hat{Z_{xy}} = \frac{E_x}{H_y}
+    \hat{Z}_{xy} = \frac{E_x}{H_y}
     :label: Apparent Impedance Definition
 
 
@@ -279,22 +281,22 @@ The apparent resistivity is obtained through the amplitude of the apparent Imped
 For a half-space, :math:`\rho_{app} = \rho_{earth}` :
 
 .. math::
-    \hat{Z_{xy}} = \frac{\omega \mu}{k_{earth}} = (1+i) \sqrt{\frac{\omega \mu}{2 \sigma_{earth}}}
+    \hat{Z}_{xy} = \frac{\omega \mu}{k_{earth}} = (1+i) \sqrt{\frac{\omega \mu}{2 \sigma_{earth}}}
 
 .. math::
     \rho_{app} = \frac{1}{\mu_0 \omega} |1+i|^2 \frac{\omega \mu}{2 \sigma_{earth}} = \rho_{earth}
 
 
 
-For a unhomogeneous earth, :math:`\rho_{app}` at a particular frequency is an average of the conductivity of the earth on about a sphere with a radius equal to the skin depth.
+For a nonhomogeneous earth, :math:`\rho_{app}` at a particular frequency is an average of the conductivity of the earth on about a sphere with a radius equal to the skin depth.
 
 Phase
 *****
 
-The phase is obtained through the angle of the apparent Impedance :math:`\hat{Z_{xy}}`.
+The phase is obtained through the angle of the apparent Impedance :math:`\hat{Z}_{xy}`.
 
 .. math::
-    \Theta =tan^{-1} \frac{Im(\hat{Z_{xy}})}{Re(\hat{Z_{xy}})}
+    \Theta =tan^{-1} \frac{Im(\hat{Z}_{xy})}{Re(\hat{Z}_{xy})}
     :label: Phase Definition
 
 for a half-space,
@@ -322,8 +324,3 @@ Interpretation
 Pratical Consideration
 ----------------------
 
-
-
-
-
-.. [1] Ward, S. H., & Hohmann, W. *Electromagnetic Theory for Geophysical Applications Applications.* In Electromagnetic methods in applied geophysics (1st ed., pp. 130–311). Society of Exploration Geophysicists. 1988.

@@ -25,18 +25,18 @@ The problem setup is shown in the figure below, where we have
 - a uniform electric field oriented in the :math:`x`-direction: :math:`\mathbf{E_0} = E_0 \mathbf{\hat{x}}`
 - a whole-space background with conductivity :math:`\sigma_0`
 - a sphere with radius :math:`R` and conductivity :math:`\sigma_1`
-- the origin of coordinate system coincides with the centre of the sphere
+- the origin of coordinate system coincides with the center of the sphere
 
 
 .. plot::
 
     from examples.sphere import *
 
-    sig0 = 10.**-3.         # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.         # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
@@ -103,11 +103,11 @@ the integration from :eq:`V_from_e` gives
 
     from examples.sphere import *
 
-    sig0 = 10.**-3.         # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.         # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
@@ -135,12 +135,12 @@ and inside the sphere :math:`(r < R)`
     
     from examples.sphere import *
 
-    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -162,14 +162,14 @@ and inside the sphere :math:`(r < R)`
     plt.tight_layout()
     plt.show()
     
-
+.. _dc_e_field:
 
 Electric Field
 --------------
 
 When an external electric field crosses conductivity discontinuities within heterogeneous media, 
 it leads to charge buildup on the interface, which immediately gives 
-rise to a secondary electric field governed by Gauss’s Law, to oppose the change of the primary field. 
+rise to a secondary electric field governed by Gauss's Law, to oppose the change of the primary field. 
 Considering that the electric field is defined as the negative gradient of the potential, 
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
@@ -185,12 +185,12 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     
     from examples.sphere import *
 
-    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -213,12 +213,13 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     plt.tight_layout()
     plt.show()
 
+.. _current_density_J:
 
 Current Density
 ---------------
 
 The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space. 
-According to Ohm’s law there is a linear relationship between the current density and the electric field at any location within the field: 
+According to Ohm's law there is a linear relationship between the current density and the electric field at any location within the field: 
 :math:`\mathbf{J} = \sigma \mathbf{E}`. This can be directly used to compute both the total and the primary current densities. 
 
 Secondary Current
@@ -266,12 +267,12 @@ the charges and not the reverse.
     
     from examples.sphere import *
 
-    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.          # conductivity of the whole space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
     dx = xr[1]-xr[0]       # mesh spacing
@@ -293,6 +294,7 @@ the charges and not the reverse.
     plt.tight_layout()
     plt.show()
 
+.. _bound_charge_Q:
 
 Charge Accumulation
 -------------------
@@ -366,7 +368,7 @@ For a conductive sphere, the potential differences measured in the area of
 influence of the sphere are smaller than the background. This can be anticipated using Ohm's law.
 The reverse is observed for a resistive sphere.
 
-.. LJH: this statement needs a bit more explination
+.. LJH: this statement needs a bit more explanation
 
 .. plot::
     
