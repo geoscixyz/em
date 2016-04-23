@@ -103,7 +103,7 @@ increases our confidence in the data.
 
 .. _MIM_DC2D_Inv_FULL:
 
-.. list-table:: : 2-D inverions of combined P-DP and DP-P data
+ .. list-table:: : 2-D inverions of combined P-DP and DP-P data
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
@@ -113,11 +113,32 @@ increases our confidence in the data.
 
 
 
-3-D Model
-*********
+DCR: 3-D Inversion
+------------------
+
+ .. figure:: images/MtIsa_3D_Topo.png
+    :align: right
+    :figwidth: 50%
+    :name: MtIsa_3D_Topo
+
+    : Perspective view of topography and electrode locations over the 3-D domain.
 
 In preparation for the 3-D inversion, data locations were geo-referenced in
-planimetry to the local grid. In order to minimize topographic effects, the
-vertical position were re-assigned to each datum to agree with a global DEM
-provided by AusXX. As shown in XXX, the area of investigation shows up to xx m
-in elevation variations, which was not captured by the inline ground survey.
+planimetry to the local grid (:numref:`MtIsa_3D_Topo`). In order to minimize topographic effects, the
+vertical position of the electrodes were re-assigned based on a global DEM
+provided by `Geoscience Australia`_.
+
+*More details about the invfile:///C:/Users/dominiquef.MIRAGEOSCIENCE/Documents/GIT/UBC_GIF/em/_build/html/_images/MtIsa_3D_Model.pngersion here*
+
+
+ .. figure:: images/MtIsa_3D_Model.png
+    :align: center
+    :figwidth: 100%
+    :name: MtIsa_3D_Model
+
+    : Sections through the recovered 3-D conductivity model. Topography and electrode locations shown for reference.
+
+he final 3-D conductivity model is presented in :numref:`MtIsa_3D_Model`. The
+inversion confirms a mostly 2-D Earth
+
+.. _Geoscience Australia: http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/
