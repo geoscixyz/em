@@ -7,3 +7,11 @@ DCR
 ---
 Cross-sections, plan view maps,  and volume rendered images of conductivity.The Breakaway shale unit has very large conductivities (higher than expected); the Novit Horizon does appear as a low to moderate conductor.
 other comments about conductivity and perhaps the relationship between 2D and 3D results.
+
+
+ .. figure:: images/MtIsa_3D_DCModel_Plan.png
+    :align: right
+    :figwidth: 50%
+    :name: MtIsa_3D_DCModel_Plan
+
+    : Sections through the recovered 3-D conductivity model. Topography and electrode locations shown for reference.
