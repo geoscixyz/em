@@ -59,7 +59,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'em'
 copyright = """
-  <a rel="license" 
+  <a rel="license"
    href="http://creativecommons.org/licenses/by/4.0/"
    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -96,7 +96,9 @@ language = None
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build','_static','AUTHORS.rst','README.md','content/equation_bank/*']
 
-linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples']
+linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
+                    'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf'
+                    ]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -150,7 +152,7 @@ html_theme_options = {
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title = 'EM' 
+# html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -182,7 +184,7 @@ html_favicon = 'em.ico'
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
    '**': [
-       'globaltoc.html',  
+       'globaltoc.html',
        'searchbox.html',
        'sourcelink.html',
        ],
