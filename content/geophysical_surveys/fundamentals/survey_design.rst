@@ -40,7 +40,7 @@ Relative difference (:math:`RD`) and absolute difference (:math:`AD`) are determ
 .. math::
         AD = F^S,
         :label: absolute_detect
-     
+
 where:
 
 - :math:`F^S = F^T - F^P` is the secondary field
@@ -73,14 +73,14 @@ able to design an appropriate survey. In the end, spending time on survey
 design will likely provide better information and recovery about the target.
 
 For more information about survey design for specific geophysical methods, see
-tthe following pages:
+the following pages:
 
 - :ref:`DC resistivity survey geometry <dcr_survey_geometry>`
-- :ref:`Loop-loop FDEM survey geometry <looploopfdem_survey_geometry>`
+- :ref:`Airborne FDEM survey geometry <airborne_fdem_survey_geometry>`
 
-        
 
- 
+
+
 
 
 
