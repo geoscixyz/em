@@ -205,23 +205,10 @@ As a final step of data quality control, the P-DP and DP-P configuration are
 merged and :ref:`re-inverted<MIM_IP2D_Inv_FULL>`
 in 2-D using their respective uncertainties. In preperation for the 3-D
 inversion, the individual 2-D models are transfered onto a 3-D mesh as shown
-in :numref:`MtIsa_IP2D_2_3DMesh`. Since each 2-D model is the result of an
-independant inversion, small scales discrepancies are expected. We note
-however several features recovered on all 10 lines, supporting the idea of a
-strongly 2-D earth along N-S:
+in :numref:`MtIsa_IP2D_2_3DMesh`.
 
-a) A resistive domain on the western edge of the survey, marked by a steeply
-dipping contact near location 11,300 m, which may correspond to the Surprise
-Creek Formation
 
-b) A narrow, steeply dipping conductor near 12,300 m, adjacente to a more
-resistive unit, possibly the conductive Breakaway Shale within a resistive
-Native Bee Siltstone.
-
-Consistant 2-D inversions in good agreement with the known geology gradually
-increases our confidence in the data.
-
-.. _MIM_DC2D_Inv_FULL:
+.. _MIM_IP2D_Inv_FULL:
 
  .. list-table:: : 2-D inverions of combined P-DP and DP-P data
    :header-rows: 0
@@ -239,20 +226,16 @@ IP: 3-D Inversion
 In preparation for the 3-D inversion, data locations were geo-referenced in
 planimetry to the local grid (:numref:`MtIsa_3D_Topo`). In order to minimize
 topographic effects, the vertical position of the electrodes were re-assigned
-based on a global DEM provided by `Geoscience Australia`_. In total, 3678 P-DP
+based on a global DEM provided by `Geoscience Australia`_. In total, 3233 P-DP
 and DP-P observations were inverted. Additional smoothing in the N-S
 orientation was applied in order to compensate for the 500 m line spacing.
 
-Sections through the recovered 3-D conductivity model is presented in
-:numref:`MtIsa_3D_IPModel`. This result confirms that the geology over the
-Cluny region is mostly 2-D, with alternating regions of high and low
-conductivity trending north-south. Volume rendering of high conductivity (1
-S/m) seems to indicate the geology to be steeply dipping. See the
-:ref:`Interpretation Section`<mt_isa_interpretation>` for more details.
+Sections through the recovered 3-D chargeability model is presented in
+:numref:`MtIsa_3D_IPModel`. This result
 
  .. figure:: images/MtIsa_3D_IPModel.png
     :align: center
     :figwidth: 100%
     :name: MtIsa_3D_IPModel
 
-    : Sections through the recovered conductivity model and 3-D volume rendering of high conductivity (1 S/m). Topography and electrode locations are shown for reference.
+    : Sections through the recovered chargeability model and 3-D volume rendering of high chargeability (40 msec). Topography and electrode locations are shown for reference.
