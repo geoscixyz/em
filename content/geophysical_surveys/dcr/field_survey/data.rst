@@ -6,6 +6,7 @@ Data
  - Data as apparent resistivity
 
 .. _dcr_pseudosection:
+
 Pseudo-section
 --------------
 
@@ -29,7 +30,3 @@ pole on the right as seen in :numref:`Pseudo_PDP_West`.
     :name: Pseudo_PDP_West
 
     Data for pole moving west to east.
-
-
- - uncertainties
-
