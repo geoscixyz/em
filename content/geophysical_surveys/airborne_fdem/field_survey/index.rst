@@ -10,7 +10,7 @@ quick overview of field survey
 .. toctree::
     :maxdepth: 2
 
-    bird
+    transmitters_receivers
     survey_geometry
     topography
     field_notes
