@@ -23,7 +23,7 @@ We present here a 1D modelisation of the Magnetotelluric waves in a layered Eart
 
 Magnetotelluric is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
-In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( ~:math:`<10^5 Hz`), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
+In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( :math:`\prec 10^5 Hz` ), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
 
 
 
@@ -68,7 +68,7 @@ The governing equation for Magnetotelluric problem can be obtained from
     \nabla \times \mathbf{H_y} = (\sigma + i \omega \varepsilon) \mathbf{E_x}
     :label: Ampere
 
-Knowing that that :math:\mathbf{E} and :math:\mathbf{H} are divergence free, according to :ref:`Gauss's Law for Electric Fields<gauss_electric>` and :ref:`Gauss's Law for Magnetic Fields<gauss_magnetic_frequency>`, we can combine the equations to write the Helmhotz (wave propagation) equation for both :math:\mathbf{E} and :math:\mathbf{H} field:
+Knowing that that :math:`\mathbf{E}` and :math:`\mathbf{H}` are divergence free, according to :ref:`Gauss's Law for Electric Fields<gauss_electric>` and :ref:`Gauss's Law for Magnetic Fields<gauss_magnetic_frequency>`, we can combine the equations to write the Helmhotz (wave propagation) equation for both :math:`\mathbf{E}` and :math:`\mathbf{H}` fields:
 
 .. math::
     \nabla ^2  \mathbf{E_x} + k^2 \mathbf{E_x} = 0
@@ -107,7 +107,7 @@ Taking the problem from the point of view of the electric field, we know the equ
     H_y (z) = \frac{1}{- i \omega \mu} (\nabla \times \mathbf{E_x})_y = \frac{k}{ \omega \mu} (D e^{-i k z} - U e^{i k z}) = \frac{1}{Z} (D e^{-i k z} - U e^{i k z})
     :label: Magnetic field components
 
-with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex amplitudes of the Up and Down components of the field and :math:`Z = frac{ \omega \mu}{k}` the intrinsic impedance of the space.
+with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex amplitudes of the Up and Down components of the field and :math:`Z = \frac{ \omega \mu}{k}` the intrinsic impedance of the space.
 
 Writing the solution for the j-th layer (See :numref:`MTlayeredEarth`), we obtain:
 
