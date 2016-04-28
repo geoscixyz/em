@@ -1,11 +1,21 @@
 .. _airborne_fdem_bird:
 
-Bird
-====
+CHANGE: name of this rst to Transmitter and recevier
 
-- multiple pairs of loop-loop in a tube
-- multiple freq
-- tx/rx offsets
+Platform
+========
+
+- Helicopter
+- Bird/tube
+
+Coils
+=====
+
+- Multi-freq
 - HCP/VCA
-- primary removal
+- Separation
+- Bucking and primary removal
+- Measurement
+
+
 
