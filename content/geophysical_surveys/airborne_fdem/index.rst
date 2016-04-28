@@ -15,7 +15,6 @@ Airborne FDEM
     governing_equations
     example
     field_survey/index
-    systems
     interpretation
     practical_considerations
 
