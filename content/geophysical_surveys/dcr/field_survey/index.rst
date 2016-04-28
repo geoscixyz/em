@@ -12,7 +12,7 @@ quick overview of field survey
 
     transmitters
     receivers
-    survey_geometry
+    survey
     topography
     field_notes
     essential_information_for_interpretation

@@ -1,9 +1,9 @@
-.. _dcr_survey_geometry:
+.. _dcr_survey:
 
-Survey geometry
-===============
+Survey
+======
 
-.. todo:: 
+.. todo::
 
     Common DC resistivity survey designs
     - pole-dipole
