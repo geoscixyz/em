@@ -35,6 +35,7 @@ Receiver
 - coil (generally): db/dt, but there are some b-field measuring devices(?)
 - measure a voltage
     - amplitude and phase
+
 (with diagram ? and links back to fundamentals)
 
 
