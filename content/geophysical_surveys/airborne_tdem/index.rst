@@ -14,8 +14,11 @@ Airborne FDEM
 
     governing_equations
     example
-    field_survey/index
+    transmitters
+    receivers
     systems
+    survey_design
+    data
     interpretation
     practical_considerations
 

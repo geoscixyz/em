@@ -65,7 +65,7 @@ and secondary magnetic fields reach the receiver. The time-varying magnetic
 flux through the receiver loop induces currents which act to oppose the change
 in flux. The voltage in the receiver loop is what we use to define a datum.
 
- .. figure:: ../images/Hp_Hs_schematic.jpg
+ .. figure:: ./images/Hp_Hs_schematic.png
     :align: center
     :scale: 80%
     :name: looploopEMbasics
