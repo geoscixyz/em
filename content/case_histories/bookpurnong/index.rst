@@ -22,9 +22,9 @@ The readers can anticipate to learn the following:
 
     References:
 
-    :cite:`viezzoli2009`, `paper <http://library.seg.org/doi/abs/10.1071/EG08027>`_
+    :cite:`viezzoli2009`, `Viezzoli 2009 paper <http://library.seg.org/doi/abs/10.1071/EG08027>`_
 
-    :cite:`Viezzoli2010`, `paper <http://www.hgg.geo.au.dk/ref_manager/VIEZZOLI2010C.pdf>`_
+    :cite:`Viezzoli2010`, `Viezzoli 2010 <http://www.hgg.geo.au.dk/ref_manager/VIEZZOLI2010C.pdf>`_
 
 
 .. todo::
@@ -35,7 +35,6 @@ The readers can anticipate to learn the following:
 .. figure:: images/airborne-example-placeholder.jpg
     :align: left
     :scale: 80%
-    :figwidth: 40%
     :name: airborne
 
     figure caption

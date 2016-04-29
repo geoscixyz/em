@@ -15,6 +15,7 @@ Interpretation
     interpretation of loop-loop EM data.
 
 .. todo::
+
     Move following content to either first pass interpretation or inversion
 
 The primary goal of processing the raw data is to prepare the delivered data.
@@ -42,10 +43,11 @@ QC / first pass interpretation
 ------------------------------
 
 .. todo::
+
     ie. apparent resistivity, numbers that are more representative of what we are looking for.
     Each method (ie computing an apparent resistivity, interpreting in-phase vs. quadrature) has:
-        - processing
-        - interpreting features
+    - processing
+    - interpreting features
 
 Inversion
 ---------
@@ -55,9 +57,11 @@ Inversion
     - processing, estimating uncertainties
     - basic steps taken in the inversion: links (keep in mind there will eventually be a whole section / new website on inversion)
     - appraisal
+
         - Inversion QC: Tikhonov curve, data fit, misfit map, histogram, geologic meaning.
         - Depth of investigation
         - Hypothesis testing
+
     - interpreting
 
 .. todo::
