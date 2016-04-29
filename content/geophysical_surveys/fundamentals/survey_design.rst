@@ -75,8 +75,8 @@ design will likely provide better information and recovery about the target.
 For more information about survey design for specific geophysical methods, see
 the following pages:
 
-- :ref:`DC resistivity survey geometry <dcr_survey_geometry>`
-- :ref:`Airborne FDEM survey geometry <airborne_fdem_survey_geometry>`
+- :ref:`DC resistivity survey geometry <dcr_survey_design>`
+- :ref:`Airborne FDEM survey geometry <airborne_fdem_survey_design>`
 
 
 
