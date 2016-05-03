@@ -9,7 +9,7 @@ Irrigation District of the Riverland region of South Australia (Figure :numref
 the groundwater and formed a hydraulic gradient towards the floodplain (Figure
 :numref:`booky-hydro`). The groundwater flow from the high land to the the
 floodplain brings in substantial amount of natural saline water, causing tree
-health problems (Figure :numref:`deadtree`). In order to preserve the
+health problems. In order to preserve the
 ecosystem, Bookpurnong Salt Interception Scheme (SIS) is implemented to
 experiment the water management methods that use pumping and flooding, with a
 hope of replacing the saline water with fresh water.
@@ -25,14 +25,6 @@ hope of replacing the saline water with fresh water.
     :align: center
     :scale: 30%
     :name: booky-hydro
-
-
-.. figure:: images/booky-deadtree.jpg
-    :align: center
-    :scale: 30%
-    :name: deadtree
-
-
 
 
 In hydrology, the interaction between the river water and ground water can be
