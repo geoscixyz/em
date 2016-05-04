@@ -3,7 +3,7 @@
 Bookpurnong
 ===========
 
-..topic :: Purpose
+.. topic :: Purpose
 
     Airborne EM is an important type of survey in geophysical that can be found useful in solving different geological questions, especially the ones that require quick data coverage over a large area. Hydrological and environmental studies can be good subject of airborne EM. In this case history, :ref:`airborne FDEM surveys <airborne_fdem_index>`, and
     :ref:`airborne TDEM surveys <airborne_tdem_index>` are used to assess the
