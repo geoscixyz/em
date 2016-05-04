@@ -3,6 +3,36 @@
 Data
 ====
 
+"Data" can mean the physical quantities measured by the actual electronics, or the EM field measured by the conceptual loop-loop system in the three-loop model. The former is what actually happens in the field operation, and the latter is what is presented to the interpreters. We refer to them as "raw data" or "delivered data" respectively.
+
+Conceptual definition
+---------------------
+
+A harmonic current is used to generate a time-harmonic magnetic field. This induces secondary currents in the subsurface, which in turn produce secondary magnetic fields. Both the primary and secondary magnetic fields reach the receiver, but the primary is usually cancelled by a bucking coil, leaving only the secondary field. The (secondary) time-varying magnetic flux through the receiver loop induces currents which act to oppose the change in flux. The voltage in the receiver loop is what we use to define a datum. This describes the theoretical process of obtaining airborne FEM data at each sounding location. 
+
+
+
+
+The voltage in the receiver loop is measured as a function of time, defining a
+time-series. This is converted to a time-derivative of magnetic flux density (:math:`\frac{\partial \mathbf{b}}{\partial t}`) through :ref:`faraday`.
+
+To obtain a datum defined in the frequency domain, a Fourier transform of
+these must be taken. To accomplish this, the time-series is segmented into
+windows, in the case of the Resolve system, 10Hz or 0.1s windows, and a
+discrete Fourier transform of the data in this window is taken to provide a
+single complex number defining the harmonic at the transmitter frequency. This
+can be done in real-time. :cite:`slattery2012`
+
+
+
+From raw data to delivered data
+-------------------------------
+
+Raw data are usually direct dump from the instruments, and may contain repeated measurements at the same location with redundency, high level of random noise, and some expected systematic errors. The raw data are generally in the form of time series at a certain sampling rate, and could be the measurement of some proxy quantities instead of the EM fields. 
+
+Here we make distinction bewteen "raw data" and "delivered data".  The actual quantity of measurement and the electronics may be very different from the conceptual three-loop model.  Then the raw data are processed by stacking, averaging, transforming, filtering, etc. The delivered data are usually in a reduced format of smaller size and higher signal noise ratio. In our website, we interpret "delivered data".
+Here "data" is defined as the EM field measured by the (idealized) instruments. , but we assume that the delivered data, after processing, are consistent with  the conceptual physical model, and with the numerical implementation in our computer simulation. 
+
 .. topic:: Purpose
 
     - essential information for working with and interpreting the data - we want
@@ -23,13 +53,7 @@ Data
 
     **blend in the following text, some may go in interpretation**
 
-    Here we make distinction bewteen "raw data" and "delivered data". Raw data are
-    usually direct dump from the instruments, and may contain repeated
-    measurements at the same location. For EM, the raw data are generally in the
-    form of time series at a certain sampling rate. Then the raw data are
-    processed by stacking, averaging, transforming, filtering, etc. The delivered
-    data are usually in a reduced format of smaller size and higher signal noise
-    ratio. In our website, we interpret "delivered data".
+    
 
 
 .. todo::
@@ -54,36 +78,7 @@ Data
 
 
 
-Loop-loop EM systems like the Airborne Resolve (TODO:link), measure the
-voltage generated in a loop which has a time-varying magnetic flux through it, according to :ref:`faraday`.
-In the case of a frequency domain survey, this is a harmonic signal.
 
-A harmonic current is used to generate a time-harmonic magnetic field
-(:numref:`looploopEMbasics`). This induces secondary currents in the
-subsurface, which intern produce secondary magnetic fields. Both the primary
-and secondary magnetic fields reach the receiver. The time-varying magnetic
-flux through the receiver loop induces currents which act to oppose the change
-in flux. The voltage in the receiver loop is what we use to define a datum.
-
- .. figure:: ./images/Hp_Hs_schematic.png
-    :align: center
-    :scale: 80%
-    :name: looploopEMbasics
-
-
-    A time varying current ( :math:`I_0 \cos \omega t`) generates a primary magnetic field :math:`\mathbf{H_p} \cos \omega t` which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (:math:`\mathbf{H_s} \cos(\omega t + \psi)`). Both the primary and secondary fields reach the receiver. Image adapted from the GPG_. TODO: cc - by 4.0? or re-create?
-
-.. _GPG: http://gpg.geosci.xyz/en/latest/content/electromagnetics/responses_from_a_conductor_in_free_space.html
-
-The voltage in the receiver loop is measured as a function of time, defining a
-time-series. This is converted to a time-derivative of magnetic flux density (:math:`\frac{\partial \mathbf{b}}{\partial t}`) through :ref:`faraday`.
-
-To obtain a datum defined in the frequency domain, a Fourier transform of
-these must be taken. To accomplish this, the time-series is segmented into
-windows, in the case of the Resolve system, 10Hz or 0.1s windows, and a
-discrete Fourier transform of the data in this window is taken to provide a
-single complex number defining the harmonic at the transmitter frequency. This
-can be done in real-time. :cite:`slattery2012`
 
 Noise: Spheric Pulses (from lightning) -> narrow bandwidth, strong peaks
 (considered acceptable when < 10 spheric pulses at a given frequency per 100
