@@ -27,7 +27,7 @@ difference between two electrodes. The measured voltage depends upon the
 positions of the current and potential electrodes with respect to the target
 as well as on the earth’s conductivity.  Obtaining information about the
 spatial distribution of conductivity requires many measurement at different
-locations and electrode configurations. A generic :ref:`dipole-dipole<dcr_survey_geometry>` survey
+locations and electrode configurations. A generic :ref:`dipole-dipole<dcr_survey_design>` survey
 involving two current and two potential electrodes is shown in
 :numref:`DCR_intro`. Artistic representation of the current density and
 charge build-ups are illustrated for (a) conductive and (b) resistive
@@ -38,6 +38,10 @@ spheres in a uniform half-space.
 
     governing_equations
     example
-    field_survey/index
+    transmitters
+    receivers
+    systems
+    survey_design
+    data
     interpretation
     practical_considerations

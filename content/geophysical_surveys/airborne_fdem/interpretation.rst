@@ -3,8 +3,75 @@
 Interpretation
 ==============
 
-- inversion
-- appraisal
-	- depth of investigation
-	- hypothesis testing
+.. topic:: Purpose
+
+    **Some content to start from:**
+    Interpretation is the process that extracts information in the data to
+    make decisions or to derive geologic knowledge. Depending on the specific
+    geologic questions asked, and the resources available, geophysicists can
+    choose from a wide spectrum of approaches ranging from trivial and low-
+    resolution to sophisticated and high-resolution. The following is a list
+    of commonly available options for the quantitative or semi-quantitative
+    interpretation of loop-loop EM data.
+
+.. todo::
+
+    Move following content to either first pass interpretation or inversion
+
+The primary goal of processing the raw data is to prepare the delivered data.
+The procedures usually involve considerations on the instrumentation and field
+operation. Examples are de-noising, leveling, smoothing, filtering, stacking,
+spatial and temporal corrections, convolution/deconvolution, transfer function
+estimation, etc. The readers are suggest to refer to the survey report or the
+field crew for more information.
+
+From an interpreter's point of view, data processing is a step to examine and
+edit the data so it can be reliably interpreted in the next step. There are
+several major reasons why processing is necessary:
+
+(1) Quality control. Data without quality or uncertainty assessment mean nothing. So it is important to know the overall quality of a data set. A data set may be deemed not suitable for interpretation if the noise level is too high. For most data sets, preliminary QC is carried out during acquisition. So the delivered data can still show useful signals in decent quality. But we still have to identify the "bad data".
+
+(2) Uncertainty analysis. Uncertainty is a quantitative way of assessing the data quality. Data with greater noise may be assigned larger uncertainty. Most inversion programs need this information to decide how well the inversion wants to fit a particular datum.
+
+(3) Data simplification. A data set can be difficult to interpret because of its size and noise. For example, the numerical modeling time is roughly proportional to the number of measurements in an airborne survey that has significant data redundancy. So it may be desired to down-sample the data set without losing information. And high-frequency noise associated with non-geologic objects can be effectively removed by low-pass filtering and other smoothing methods.
+
+(4) Model parameterization. Any interpretation is based on models. By processing the data, we may choose more proper models. For example, negative transients in a central loop TEM survey indicate the existance of induced polarization. So we know at some places a real and time-independent conductivity model is not enough to explain the data. Another example is the variation of data in space may indicate the scale of EM induction, which helps the design of discretization for numerical modeling.
+
+
+
+QC / first pass interpretation
+------------------------------
+
+.. todo::
+
+    ie. apparent resistivity, numbers that are more representative of what we are looking for.
+    Each method (ie computing an apparent resistivity, interpreting in-phase vs. quadrature) has:
+    - processing
+    - interpreting features
+
+Inversion
+---------
+
+.. todo::
+
+    - processing, estimating uncertainties
+    - basic steps taken in the inversion: links (keep in mind there will eventually be a whole section / new website on inversion)
+    - appraisal
+
+        - Inversion QC: Tikhonov curve, data fit, misfit map, histogram, geologic meaning.
+        - Depth of investigation
+        - Hypothesis testing
+
+    - interpreting
+
+.. todo::
+
+    **Here are some notes to build from**
+    - Qualitative assessment of data. In some cases, the data itself showing highs and lows can reveal the distribution of the relative physical property. Sometimes simple data transform techniques can also be used to isolate the anomaly and aid the interpretation. This type of approach can include: direct data plotting, conductivity meter (link to EM31 and the data-conductivity transform), empirical template method, etc. Qualitative approach was once the mainstream, but has shown drawbacks in complex geological setting and lacks the ability to decode the conductivity values from the data. However, it still has its value in data quality control and preliminary interpretation.
+    - Time constant (decay constant) analysis. For a time domain system, the voltage measured off time at the receiver is roughly an exponentially decaying function of time. The decay rate is an indicator of the overall conductivity of the ground: good conductors have slower decays (greater time constant) and poor conductors have faster decays (smaller time constant). Time constant method offers a first-order interpretation of the overall conductivity of the ground.
+    - Apparent conductivity and conductivity-depth imaging/transform (CDI or CDT). Apparent conductivity is another semi-qualitative method that further ties the data to the conductivity of the ground. It is defined as the conductivity of a uniform half-space that would generate the same data at a particular time or frequency. Apparent conductivities at different times or frequencies can be assigned to corresponding depths using diffusion depth or skin depth. Along a survey line, this would give a CDI image of conductivity on a cross section. It can be considered as a lumping averaging of the conductivities around the measurement location. So again, apparent conductivity method may not work well if the conductivity varies laterally (2D or 3D earth).
+    - Plate modeling. Some geologic targets can be characterized as conductive thin plates that give rise complicated EM responses due to the geometry and mutual coupling (Link to 3-loop). Plate modeling method attempts to find the geometry and conductivity of a few conducting plate in a uniform hackground that is responsible for most of the anomalous data. It has the advantages of being able to handle the 3D coupling effect efficiently, but may have trouble dealing with too many plates in more complex situations. Link to plate modeling page.
+    - *1D layered earth model inversion. This approach assume the earth's conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the entire decay curve in time or the entire spectrum in frequency-domain. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints, etc. LINK to 1D inversion page (TODO).*
+    - 2D/3D inversion. The previous interpreting methods all assume the earth has a particular structure so simplified calculations can be used. Any violation of those assumptions would result in failures. A 3D inversion discretizes the entire earth to many discrete cells, each of which has a constant conductivity. Then the Maxwell's equations are solved on the mesh. The obtained images of the subsurface are in 3D voxel format. 3D inversions provides the best resolution and works for any complicated models, but it is more computational expensive.
+
 
