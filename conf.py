@@ -59,16 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """
-  <a rel="license"
-   href="http://creativecommons.org/licenses/by/4.0/"
-   style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
-   <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-   </a>
-   2015-2016, UBCGIF.<br />
-   Except where noted, this work is licensed under a <br />
-   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
-"""
+copyright = """UBCGIF 2015-2016"""
 author = u'UBCGIF'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -158,19 +149,20 @@ html_theme_options = {
     #    (name, "http://example.com", True) # arbitrary absolute url
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
-    # 'navbar_links': [
+    'navbar_links': [
+          ("Why", "introduction/introduction_about.html")
     #     ("Fundamentals", "maxwell1_fundamentals/index.html"),
     #     ("Static", "maxwell2_dc"),
     #     ("FDEM", "maxwell3_fdem"),
     #     ("TDEM", "maxwell4_tdem"),
     #     ("Surveys", "geophysical_surveys"),
-    # ],
+    ],
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': True,
 
     # Render the current pages TOC in the navbar. (Default: true)
-    'navbar_pagenav': True,
+    'navbar_pagenav': False,
 
     # Tab name for the current pages TOC. (Default: "Page")
     'navbar_pagenav_name': "Page",
@@ -178,6 +170,7 @@ html_theme_options = {
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
     'globaltoc_depth': -1,
+
 
     # Include hidden TOCs in Site navbar?
     #
@@ -204,22 +197,25 @@ html_theme_options = {
     #
     # Options are nothing (default) or the name of a valid theme
     # such as "amelia" or "cosmo".
-    'bootswatch_theme': "Yeti",
+    'bootswatch_theme': "yeti",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
     'bootstrap_version': "3",
 }
 
+html_sidebars = {'**': ['localtoc.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
+
+
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = 'EM.geosci'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title = 'EM'
+html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
