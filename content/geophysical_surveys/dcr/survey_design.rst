@@ -1,9 +1,9 @@
-.. _dcr_survey_geometry:
+.. _dcr_survey_design:
 
-Survey geometry
-===============
+Survey Design
+=============
 
-.. todo:: 
+.. todo::
 
     Common DC resistivity survey designs
     - pole-dipole
@@ -24,7 +24,7 @@ and two potential electrodes. Conventionally, for a 2D survey the receiver
 electrodes are placed in a linear fashion away from the transmitter electrode
 as shown in the figure below.
 
-.. figure:: ../images/poledipole.png
+.. figure:: ./images/poledipole.png
    :scale: 80%
    :align: center
 
@@ -38,7 +38,7 @@ of the survey to place the data points. The plotting point is located half-way
 between the nearest current electrode and the receiver electrode at a depth of
 one-half the horizontal transmitter-receiver separation.
 
-.. figure:: ../images/pole-dipole_pseudo.jpg
+.. figure:: ./images/pole-dipole_pseudo.jpg
    :scale: 100%
    :align: center
 
@@ -55,7 +55,7 @@ shown in :numref:`MIMDAS_layout`.
 
 **MIMDAS** :
 
-.. figure:: ../images/MIMDASlayout.jpeg
+.. figure:: ./images/MIMDASlayout.jpeg
    :scale: 90%
    :align: center
    :name: MIMDAS_layout
