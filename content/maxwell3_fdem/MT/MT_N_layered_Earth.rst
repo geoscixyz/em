@@ -241,6 +241,11 @@ These coefficients tell us how much energy of the incoming has been reflected or
 Refraction angle
 ****************
 
+In reality, the incident wave is coming from all the possible directions in the air. So how valid is our assumption of an incident vertical wave?
+
+What is important is the refraction angle at the Air-Earth interface, the angle of the transmitted wave in the ground.
+
+As any wave, electromagnetic waves follow Snell's law
 
 Field Acquisition
 -----------------
