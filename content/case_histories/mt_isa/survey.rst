@@ -26,52 +26,45 @@ full set of xxx electrodes were deployed along each line.
 (c) The choice of a pole-dipole was motivated by past experience that this was
 an effective survey for deep targets. The layout shown in {figure} indicates
 a current electrode at postion 1 with potentials measured across all other
-dipoles. The current electrode is then moved one electrode to the right.
-{Verify whether potentials to the left are recorded.} This produces a pseudo-
-section as shown in :numref:`Pseudo_PDP_East`.
+dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`.
 
- .. figure:: ./images/Pseudo_PDP_East.gif
-	:name: Pseudo_PDP_East
-
-  	Data for pole moving east to west.
-
-
-(d) It is desireable to illuminate the target bodies from as different
-directions as possible. This motivates the second acquistion with the current
-pole on the right as seen in :numref:`Pseudo_PDP_West`.
-
- .. figure:: ./images/Pseudo_PDP_West.gif
-	:name: Pseudo_PDP_West
-
-  	Data for pole moving west to east.
 
 Survey Design
 -------------
 
- .. figure:: ./images/MtIsa_DCIP2D_Inv.png
-    :align: right
-    :figwidth: 50%
-    :name: DC2D_Inv
-
-    (Top) Pseudo conductivity section (log10) along the geologicalsection.
-    ((Bottom) Recovered 2D conductivity model from the inversion of DCR data.
-    (The true conductivity model is shown in grey scale for reference.
-
- .. figure:: ./images/MtIsa_DCIP2D_Inv_NoTarget.png
-    :align: right
-    :figwidth: 50%
-    :name: DC2D_Inv_NoTarget
-
-    (Top) Pseudo conductivity section (log10) along the geologicalsection.
-    ((Bottom) Recovered 2D conductivity model from the inversion of DCR data.
-    (The true conductivity model is shown in grey scale for reference.
 
 The geologic structures are primarily striking north-south and a cross-section
 of the geologic units and their resistivities is shown in. The unit of
 interest is the Mt. Novit Horizon which is conductive compared to the host
 Moondarra Siltsone. Two forward modellings are generated. The first is without
 the conductor, the second is with.  The pole-dipole pseudo-sections obtained
-with 15 electrodes spaced 100 meters apart is shown in :numref:`DC2D_Inv`.
+with 15 electrodes spaced 100 meters apart is shown in :numref:`MIM_DPP_Simulation`.
+
+.. _Mt_Isa_Simulation:
+.. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/Mt_Isa_Current_Anim.html
+
+Current density (arrows) and charge density (color) for a range of source
+locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
+
+ .. figure:: ./images/MIM_PDP_Simulation.png
+    :align: right
+    :figwidth: 50%
+    :name: MIM_PDP_Simulation
+
+ .. figure:: ./images/MIM_DPP_Simulation.png
+    :align: right
+    :figwidth: 50%
+    :name: MIM_DPP_Simulation
+
+    (Top) Pseudo conductivity section (log10) along the geologicalsection.
+    ((Bottom) Recovered 2D conductivity model from the inversion of DCR data.
+    (The true conductivity model is shown in grey scale for reference.
 
 To determine if the survey is well designed we use the criteria in
 {link:general  basics of survey design where we look at the absolute
@@ -87,15 +80,5 @@ Using 2D forward modelling, we can also simulate current flows that could be
 expected at Mt. Isa. Note in particular the current channeling into the
 conductive Breakaway Shale as well as through the deeper mineralization.
 
-.. _Mt_Isa_Simulation:
-.. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model
-   :header-rows: 0
-   :widths: 10
-   :stub-columns: 0
 
-   *  - .. raw:: html
-            :file: ./images/Mt_Isa_Current_Anim.html
-
-Current density (arrows) and charge density (color) for a range of source
-locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
 
