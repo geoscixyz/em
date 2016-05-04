@@ -17,16 +17,17 @@ intrusion.
 
 For the purpose of studying the effect of SIS, hydrogeologists have sampled
 and measured the electrical conductivity of the groundwater along several
-transects across the river floodplain (Figure :numref:`booky-drills`). The
+transects across the river floodplain. The
 measured conductivity from several wells along Transect 3 is plotted as cross
-sections from the river bed to the bank both before and after SIS (Figure
-:numref:`booky-salinity`).
+sections from the river bed to the bank both before and after SIS.
+
+.. (Figure :numref:`booky-salinity`).
 
 
-.. figure:: ./images/booky-drills.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-drills
+.. .. figure:: ./images/booky-drills.jpg
+..     :align: left
+..     :scale: 80%
+..     :name: booky-drills
 
 .. figure:: ./images/booky-salinity.jpg
     :align: left

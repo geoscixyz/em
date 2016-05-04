@@ -41,10 +41,10 @@ between the cost and resolution. At Bookpurnong, :ref:`resolve` fly in a
 100 m cross-line spacing (Figure), so any single location can be at least
 sensed by two lines.
 
-.. figure:: ./images/booky-coverage.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-coverage
+.. .. figure:: ./images/booky-coverage.jpg
+..     :align: left
+..     :scale: 80%
+..     :name: booky-coverage
 
 
 Time domain system
