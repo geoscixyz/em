@@ -33,5 +33,16 @@ reduce the measured potentials west of these anomalies.
 IP
 --
 
-Data
-Issues about noise for long-offset IP data.
+Simarly, speudosections of IP :ref:`data<MtISa_IP_data>` were QC for the P-DP and DP-P configuration
+seperatly. Note on several lines the large negative apparent chargeability
+values on the DP-P configuration.
+
+.. _MtISa_IP_data:
+
+.. list-table:: : DCR data seperated in its P-DP and DP-P configuration
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/MIM_IP2D_data_RAW.html
