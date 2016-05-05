@@ -3,10 +3,10 @@
 Airborne FDEM
 =============
 
- .. figure:: ./images/afem_cover.jpg
-    :align: center
-    :scale: 80%
-    :name: afem_cover
+.. figure:: ./images/afem_cover.jpg
+   :align: center
+   :scale: 80%
+   :name: afem_cover
 .. Source: Jean M. Legault, 2015, Airborne Electromagnetic Systems – State of the Art and Future Directions, CSEG RECORDER, VOL. 40, No. 06.
 
 Motivation
@@ -48,10 +48,8 @@ airborne EM may have higher level of noise due to the instability of the
 platform, which limits its depth penetration. For the case histories using
 airborne EM in this website, please refer to:
 
-.. todo:: links
-
-    - Bookpurnong: groundwater salinization evaluation
-    - Tli Kwi Cho: kimberlite exploration
+- Bookpurnong: groundwater salinization evaluation
+- Tli Kwi Cho: kimberlite exploration
 
 
 .. toctree::
