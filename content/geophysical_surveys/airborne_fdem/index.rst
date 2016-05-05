@@ -3,14 +3,11 @@
 Airborne FDEM
 =============
 
-.. todo::
-
-    PLACEHOLDER: figure of an airborne system.
-
-.. topic:: Purpose
-
-    TODO
-
+ .. figure:: ./images/afem_cover.jpg
+    :align: center
+    :scale: 80%
+    :name: afem_cover
+.. Source: Jean M. Legault, 2015, Airborne Electromagnetic Systems – State of the Art and Future Directions, CSEG RECORDER, VOL. 40, No. 06.
 
 Motivation
 ----------
@@ -23,8 +20,8 @@ suitable for portable or towed systems. Because it uses a loop as the
 transmitter and another loop as the receiver, it is sometimes referred to as
 "loop-loop" system.
 
-How it works
-------------
+Basic idea
+----------
 
 In such a survey, the transmitter loop carries a time-varying current, which
 generates a time-varying primary magnetic field everywhere in a whole space.
