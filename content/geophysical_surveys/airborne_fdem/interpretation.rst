@@ -23,7 +23,7 @@ Significant amount of information, especially the relative distribution of condu
 
 Apparent conductivity
 *********************
- Apparent conductivity is another semi-qualitative method that further ties the data to the conductivity of the ground. It is defined as the conductivity of a uniform half-space that would generate the same data at a particular time or frequency. It can be considered as a lumping averaging of the conductivities around the measurement location. Despite its blending effect, it provides qualitative insight about how the conductivity varies from shallow (high frequency) to deep (low frequency). 
+Apparent conductivity is another semi-qualitative method that further ties the data to the conductivity of the ground. It is defined as the conductivity of a uniform half-space that would generate the same data at a particular time or frequency. It can be considered as a lumping averaging of the conductivities around the measurement location. Despite its blending effect, it provides qualitative insight about how the conductivity varies from shallow (high frequency) to deep (low frequency). 
 
 Interpreting features
 *********************
