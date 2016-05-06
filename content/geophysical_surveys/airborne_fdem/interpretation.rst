@@ -25,9 +25,6 @@ Apparent conductivity
 *********************
 Apparent conductivity is another semi-qualitative method that further ties the data to the conductivity of the ground. It is defined as the conductivity of a uniform half-space that would generate the same data at a particular time or frequency. It can be considered as a lumping averaging of the conductivities around the measurement location. Despite its blending effect, it provides qualitative insight about how the conductivity varies from shallow (high frequency) to deep (low frequency). 
 
-Interpreting features
-*********************
-What to say here???
 
 Inversion
 ---------
@@ -48,9 +45,7 @@ Hypothesis testing
 ******************
 1D/2D/3D inversion allows advanced interpretation to be carried out. For example, if we are in doubt of a particular feature in a model, we can run another inversion to test the "what if" hypothesis. One important application is to estimate the depth of investigation. In order to quantify the credibility of the deep structure in a model, another inversion can be run using a very different reference model, effectively asking what if the background is another value. The two inversion would have similar values at shallow depth as that portion is constrained by the data, but may differ at depth. The discrepancy between the two models at different depths indicate whether the data are sensitive to that part of the earth.
 
-Interpreting features
-*********************
-What to say here???
+
 
 .. todo::
 
