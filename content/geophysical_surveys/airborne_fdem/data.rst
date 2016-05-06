@@ -5,12 +5,12 @@ Data
 
 A harmonic current in the transmitter loop is used to generate a primary time-harmonic magnetic field. This induces secondary currents in the subsurface, which in turn produce secondary magnetic fields. Both the primary and secondary magnetic fields reach the receiver, but the primary is usually cancelled by a bucking coil, leaving only the secondary field. The (secondary) time-varying magnetic flux through the receiver loop induces currents which act to oppose the change in flux. The voltage in the receiver loop is what we use to define a datum. 
 
- .. figure:: ./images/Hp_Hs_schematic.png
-    :align: center
-    :scale: 80%
-    :name: looploopEMbasics
+.. figure:: ./images/3loops.jpg
+ :align: center
+ :scale: 80%
+ :name: 3loops
 
-    A time varying current ( :math:`I_0 \cos \omega t`) generates a primary magnetic field :math:`\mathbf{H_p} \cos \omega t` which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (:math:`\mathbf{H_s} \cos(\omega t + \psi)`). Both the primary and secondary fields reach the receiver. 
+ A time varying current ( :math:`I_0 \cos \omega t`) generates a primary magnetic field :math:`\mathbf{H_p} \cos \omega t` which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (:math:`\mathbf{H_s} \cos(\omega t + \psi)`). Both the primary and secondary fields reach the receiver. 
 
 A freq-domain system still transmits signal in time domain, so the voltage in the receiver loop is measured as a function of time, defining a time-series. This is converted to a time-derivative of magnetic flux density. To obtain a datum defined in the frequency domain, a Fourier transform of these must be taken. To accomplish this, the time-series is segmented into
 windows, for example, a 0.1 s window, and a discrete Fourier transform of the data in this window is taken to provide a
@@ -28,15 +28,30 @@ Upon receipt of the delivered data, visualization is usually the first step in u
 
 - Map: contouring a particular time/freq as a function of the horizontal location. Slice the data volume horizontally and examine the horizontal variation of data.
 
-ADD: map figure
+.. figure:: ./images/afem_visual_map.jpg
+    :align: center
+    :scale: 80%
+    :name: afem_visual_map
+
+ Map view of data
 
 - Profile or transverse: plotting all or select time/freq along a flight line as a function of one horizontal dimension. Slice the data volume vertically and examine the horizontal vairation and the relation between times or frequencies.
 
-ADD: profile figure
+.. figure:: ./images/afem_visual_profile.jpg
+    :align: center
+    :scale: 80%
+    :name: afem_visual_profile
+
+ Profile view of data
 
 - Sounding: plotting data at a particular horizontal location as a function of time/freq. Drill the data volume vertically and examine the responses as function of time/freq (pseudo-depth).
 
-ADD: sounding figure
+.. figure:: ./images/afem_visual_sounding.jpg
+    :align: center
+    :scale: 80%
+    :name: afem_visual_sounding
+
+ Sounding view of data
 
 By visualizing the data, we can answer the following questions:
 
