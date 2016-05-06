@@ -12,7 +12,7 @@ the transmitter controller, and either quantity can be set to a particular
 amount within the power limit. An example of a generator hooked up to a
 transmitter in the field is shown in :numref:`generator_DC` below.
 
-.. figure:: ../images/generator_transmitter.jpg
+.. figure:: ./images/generator_transmitter.jpg
    :scale: 40%
    :align: center
    :name: generator_DC
@@ -27,11 +27,11 @@ current wire (red) used for a DC/IP survey is shown in
 :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires
 (orange).
 
-.. figure:: ../images/current_receiver_wire.JPG
+.. figure:: ./images/current_receiver_wire.JPG
    :scale: 10%
    :align: center
    :name: current_receiver_wire_DC
-   
+
    Red current wire (12-gauge) with multiple receiver wires (16-gauge) in orange
 
 A typical time-domain waveform for DC/IP is a two second on, two second off,
@@ -51,7 +51,7 @@ the positive on-time and will discharge during the corresponding off-time. The
 mirror image will happen during the negative on-time and off-time. Once again
 these curves are stacked to reduce the noise.
 
-.. figure:: ../images/IP_waveform.jpg
+.. figure:: ./images/IP_waveform.jpg
    :scale: 100%
    :align: center
    :name: IP_waveform
@@ -64,7 +64,7 @@ any IP effect has taken place, as noted by :math:`\mathrm{V}_{\sigma}` in
 beneath the voltage curve between two user defined time points (t1 and t2).
 The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
 
-.. figure:: ../images/IP_waveform2.jpg
+.. figure:: ./images/IP_waveform2.jpg
    :scale: 80%
    :align: center
    :name: IP_waveform2
