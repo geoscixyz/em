@@ -29,27 +29,27 @@ Upon receipt of the delivered data, visualization is usually the first step in u
 - Map: contouring a particular time/freq as a function of the horizontal location. Slice the data volume horizontally and examine the horizontal variation of data.
 
 .. figure:: ./images/afem_visual_map.jpg
-    :align: center
-    :scale: 80%
-    :name: afem_visual_map
+ :align: center
+ :scale: 80%
+ :name: afem_visual_map
 
  Map view of data
 
 - Profile or transverse: plotting all or select time/freq along a flight line as a function of one horizontal dimension. Slice the data volume vertically and examine the horizontal vairation and the relation between times or frequencies.
 
 .. figure:: ./images/afem_visual_profile.jpg
-    :align: center
-    :scale: 80%
-    :name: afem_visual_profile
+ :align: center
+ :scale: 80%
+ :name: afem_visual_profile
 
  Profile view of data
 
 - Sounding: plotting data at a particular horizontal location as a function of time/freq. Drill the data volume vertically and examine the responses as function of time/freq (pseudo-depth).
 
 .. figure:: ./images/afem_visual_sounding.jpg
-    :align: center
-    :scale: 80%
-    :name: afem_visual_sounding
+ :align: center
+ :scale: 80%
+ :name: afem_visual_sounding
 
  Sounding view of data
 
