@@ -39,12 +39,6 @@ Receiver
 
 - Measurement. If the transmitter waveform is a sinusoid at a certain frequency, the received waveform due to the secondary field is also sinusoidal at the same frequency, but likely with altered magnitude and a phase shift. It is convenient to decompose the receiver waveform to two orthogonal sinusoidal components: one entirely in-phase (real) and the other entirely out-of-phase (imaginary or quadrature). 
 
-.. figure:: ./images/real_imaginary.jpg
-   :align: center
-   :scale: 80%
-   :name: real_imaginary
-
-   An example of deriving airborne FEM data. (a) The transmitter loop carried a time-harmonic current at a fixed frequency. (b) The receiver measures a time-harmonic secondary magnetic field at the same frequency, with phase lag. The signal in (b) can be uniquely decomposed to two orthogonal signals in (c) and (d). (c) The in-phase part is synchronized with the transmitter phase. (d) The out-of-phase part is 90 degree lag with respect to the transmitter.
 
 Configurations
 --------------
