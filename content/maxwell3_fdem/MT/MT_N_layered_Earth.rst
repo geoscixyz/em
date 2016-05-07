@@ -272,8 +272,6 @@ For the reflected wave
 We find the intuitive result that the wave is reflected at the same angle than the incident wave
 
 For the transmitted wave
-
-.. math::
     \norm{k_{ix}}=\norm{k_{tx}}
     \norm{k_{air}} *sin \theta_i = \norm{k_{earth}}*sin \theta_t
     theta_t = sin^{-1} (\norm{\frac{k{_{air}}{k_{earth}}} *sin \theta_i)
