@@ -245,7 +245,41 @@ In reality, the incident wave is coming from all the possible directions in the 
 
 What is important is the refraction angle at the Air-Earth interface, the angle of the transmitted wave in the ground.
 
-As any wave, electromagnetic waves follow Snell's law
+As any wave, electromagnetic waves follow Snell's law, that we can derive from the Maxwell's equation.
+
+Starting from an non orthogonal incident wave, modifyig the solution for :eq:`E_wave_propagation_equation` , we now get:
+
+.. math::
+    E^i(x,z) = = ||E^i|| e^{-i k_{iz} z} e^{-i k_{ix} x}
+
+..math::
+    E^r(x,z) = = ||E^r|| e^{i k_{rz} z} e^{-i k_{rx} x}
+
+..math::
+    E^t(x,z) = = ||E^t|| e^{-i k_{tz} z} e^{-i k_{tx} x}
+
+
+
+The equation :ref:`Continuity of E` is still valid, for all x. This is possible if and only if :math:`\norm{k_{ix}}=\norm{k_{rx}}=\norm{k_{tx}}`
+
+For the reflected wave
+
+.. math::
+   \norm{ \norm}{k_{ix}}=\norm{k_{rx}}
+    \norm{k_{air}} *sin \theta_i = \norm{k_{air}}*sin \theta_r
+    \theta_i = \theta_r
+
+We find the intuitive result that the wave is reflected at the same angle than the incident wave
+
+For the transmitted wave
+    \norm{k_{ix}}=\norm{k_{tx}}
+    \norm{k_{air}} *sin \theta_i = \norm{k_{earth}}*sin \theta_t
+    theta_t = sin^{-1} (\norm{\frac{k{_{air}}{k_{earth}}} *sin \theta_i)
+
+:math:`\norm{\frac{k{_{air}}{k_{earth}}}` is a really small as the conductivity of the earth is usually several order of magnitude higher than the one of the air.
+
+So then :math:`theta_t \simeq 0`. The wave is transmitted vertically into the ground, whatever is the incident angle. Our data are then not affected by it.
+
 
 Field Acquisition
 -----------------
