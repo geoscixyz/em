@@ -5,14 +5,15 @@ Systems
 
 SkyTEM
 ------
-SkyTEM is a time-domain electromagnetic system family operated by SkyTEM Surveys ApS in Denmark. The system is best known for its performance in hydrological and environmental applications. SkyTEM has many different variants using different specifications. Here we only describe the system typically used in hydrological studies.
 
-.. figure:: ./images/atem_skytem.jpg
+.. figure:: ./images/skytem_view.jpg
 	:align: center
 	:scale: 80%
-	:name: atem_skytem
+	:name: skytem_view
 
-Configuration of SkyTEM system and its transmitter waveform.
+A SkyTEM system in operation.
+
+SkyTEM is a time-domain electromagnetic system family operated by SkyTEM Surveys ApS in Denmark. The system is best known for its performance in hydrological and environmental applications. SkyTEM has many different variants using different specifications. Here we only describe the system typically used in hydrological studies.
 
 Coils
 *****
@@ -23,6 +24,14 @@ Waveform
 ********
 
 SkyTEM is capable of operate in a dual mode, using high moment (HM) and low moment (LM) alternatively in a flight. HM uses all the transmitter loop turns on the frame, a peak current of 90 A, and a lower base frequency at 25 Hz. LM uses only one turn of the loop, a peak current of 40 A, and a higher base frequency at 222.22 Hz. HM and LM have different shapes of waveform. LM can turn off the transmitter current rapidly, so it allows reliable measurement of data as early as 12 us, while the HM mode can measure as late as 8800 us. 
+
+
+.. figure:: ./images/skytem_config.jpg
+	:align: center
+	:scale: 80%
+	:name: skytem_config
+
+Configuration of SkyTEM system and its transmitter waveform.
 
 Corrections
 ***********
