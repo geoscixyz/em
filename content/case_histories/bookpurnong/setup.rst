@@ -43,7 +43,7 @@ because their is direct correlation between the salinity and electrical
 conductivity (see next page on Property).
 
 
-.. figure:: images/booky-losegain.jpg
+.. figure:: images/booky-losegain.png
  :align: center
  :scale: 80%
  :name: lose-gain
