@@ -38,8 +38,7 @@ Another consideration is the sounding spacing. For a towed system, the in-line
 spacing is adjustable by the flight speed and sampling rates, and can easily
 achieve high density soundings. The cross-line spacing is usually a trade-off
 between the cost and resolution. At Bookpurnong, :ref:`resolve` fly in a
-100 m cross-line spacing (Figure), so any single location can be at least
-sensed by two lines.
+100 m cross-line spacing. This may not be dense enough to avoid gaps, but could still be reasonable if taking into account the geology is mostly horizontal or sub-horizontal. 
 
 
 Time domain system
@@ -69,7 +68,7 @@ NIA at 222.22 Hz at Bookpurnong.
 
 Survey Design
 *************
-The diffusion distances of the SkyTEM time channels range 4 to 120 m. Using the same designing concept in RESOLVE, the SkyTEM was flown at a 100 m line spacing.
+The diffusion distances of the SkyTEM time channels range 4 to 120 m. Using the same designing concept in RESOLVE, the SkyTEM was flown at a 100 m line spacing, so any single location can be at least sensed by two lines.
 
 
 .. figure:: ./images/booky-coverage.jpg
