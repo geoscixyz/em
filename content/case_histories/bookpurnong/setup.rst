@@ -14,17 +14,19 @@ experiment the water management methods that use pumping and flooding, with a
 hope of replacing the saline water with fresh water.
 
 
-.. .. figure:: images/booky-location.jpg
-..     :align: center
-..     :scale: 30%
-..     :name: booky-location
+.. figure:: images/booky-location.jpg
+ :align: center
+ :scale: 30%
+ :name: booky-location
 
+Location of the research area
 
-.. .. figure:: images/booky-hydro.jpg
-..     :align: center
-..     :scale: 30%
-..     :name: booky-hydro
+.. figure:: images/booky-hydro.jpg
+ :align: center
+ :scale: 30%
+ :name: booky-hydro
 
+Hydrological model at Bookpurnong
 
 In hydrology, the interaction between the river water and ground water can be
 in two modes. If the groundwater table is lower, the river water recharges the
@@ -41,10 +43,10 @@ because their is direct correlation between the salinity and electrical
 conductivity (see next page on Property).
 
 
-.. .. figure:: images/booky-losegain.jpg
-..     :align: center
-..     :scale: 80%
-..     :name: lose-gain
+.. figure:: images/booky-losegain.jpg
+ :align: center
+ :scale: 80%
+ :name: lose-gain
 
-
+Concept of losing and gaining stream
 
