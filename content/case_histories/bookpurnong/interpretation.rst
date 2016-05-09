@@ -86,8 +86,4 @@ interface of the saline water.
     :name: booky-skytemmodel2
 
 
-1D inversion of SkyTEM(LM) data
-*******************************
-
-TBD
 
