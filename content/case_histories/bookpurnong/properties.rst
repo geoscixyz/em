@@ -24,16 +24,19 @@ sections from the river bed to the bank both before and after SIS.
 .. (Figure :numref:`booky-salinity`).
 
 
-.. .. figure:: ./images/booky-drills.jpg
-..     :align: left
-..     :scale: 80%
-..     :name: booky-drills
+.. figure:: ./images/booky-drills.jpg
+ :align: left
+ :scale: 80%
+ :name: booky-drills
+
+Locations of the drills where groundwater samples were taken for the salinity analysis.
 
 .. figure:: ./images/booky-salinity.jpg
     :align: left
     :scale: 80%
     :name: booky-salinity
 
+Groundwater salinity measured by electric conductivity (EC).
 
 Those field physical property measurements confirmed that the water
 conductivity at Bookpurnong is at the order of 1 S/m. The actual conductivity
