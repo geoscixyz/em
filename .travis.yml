@@ -15,13 +15,13 @@ before_install:
   - conda update --yes conda
 
 # command to install dependencies
-install: 
+install:
   - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
   - pip install -r requirements.txt
 
 # command to run tests
-script: 
-  - nosetests $TEST_DIR 
+script:
+  - nosetests $TEST_DIR
 
 # Flags used here, not in `make html`:
 #  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
