@@ -3,35 +3,25 @@
 Survey
 ======
 
-From the :ref:`Property<mt_isa_properties>` segment of the case history, it is expected that the mineralization is both conductive and chargeable. A DCIP survey is therefore appropriate. Other factors that suggest this is a good choice is that there is minimal topography in the area and DCIP surveys have been successfully carried out in other areas of the Mt. Isa region.
+It is expected that the mineralization is both  :ref:`conductive and chargeable <mt_isa_properties>`. A DC/IP survey is therefore an appropriate (and desired) choice for geophysical exploration. In this section, we explore the survey design used at the Cluny property.
 
 DC Resistivity (DCR)
 --------------------
 
-The fundamentals for a DCR survey can be found in the :ref:`Geophysical
-Surveys: DCR<DCR_index>` section. Many choices are possible for electrode
-layouts and the final choice is motivated by the following factors:
+The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys <DCR_index>` section. Many choices are possible for electrode layouts, but the final choice at Cluny was motivated by the following factors:
 
+(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means it each electrode could serve as a current or potential and it could acquire both DCR and IP data.
 
-(a) MIM, the company who was exploring the property, had developed their own
-data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of
-which could serve as a current electrode or potential electrode.
+(b) The area of interest is approximately 2km by 5km. Although full 3D coverage was desireable, the field acquistion was limited to 10 east-west lines. The reason for this was two fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
+
+(c) The choice of a pole-dipole was motivated by past experience that this was an effective survey for deep targets. The layout shown in {figure} indicates a current electrode at position 1 with potentials measured across all other dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a pole-dipole (P-DP) and dipole-pole (DP-P) could be acquired along each line at no additional cost.
+
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
-
-(b) The area of interest is approximately 5km x 5km. Although full 3D coverage
-was desireable, the field acquistion was limited to 10 east-west lines. A
-full set of xxx electrodes were deployed along each line.
-
-(c) The choice of a pole-dipole was motivated by past experience that this was
-an effective survey for deep targets. The layout shown in {figure} indicates
-a current electrode at postion 1 with potentials measured across all other
-dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`.
 
 
 Survey Design
 -------------
-
 
 The geologic structures are primarily striking north-south and a cross-section
 of the geologic units and their resistivities is shown in. The unit of
