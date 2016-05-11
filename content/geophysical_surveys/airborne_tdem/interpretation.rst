@@ -34,7 +34,7 @@ A conductive terrain has a slowly-decaying dB/dt response. For most time (except
 .. figure:: ./images/atem_visual_sounding.jpg
  :align: center
  :scale: 80%
- :name: atem_visual_sounding
+ :name: atem_visual_sounding1
 
 Example sounding showing variation of conductivity at depth. A slowly-decaying dB/dt from time channel 7 to 15 indicates a more conductive layer underneath. 
 
