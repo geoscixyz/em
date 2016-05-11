@@ -23,9 +23,9 @@ where :math:`k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega` is the :ref:`wav
 
 With this geometry, the governing equation for the electric field in 1D is:
 
-.. math:: \frac{\partial^2 \mathbf{E}}{\partial z^2} + k^2 \mathbf{E},
+.. math:: \frac{\partial^2 \mathbf{E}}{\partial z^2} + k^2 \mathbf{E} = 0,
 
-where :math:`\mathbf{E} \equiv \mathbf{E}(z,\omega)`. This has a solution as following:
+where :math:`\mathbf{E} \equiv \mathbf{E}(z,\omega)`. This has a solution of the following form:
 
 .. math:: \mathbf{E} = \mathbf{E}_0 e^{\pm ikz} = 0,
         :name: fd1

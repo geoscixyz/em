@@ -10,7 +10,7 @@ Details
 Derivation of wave euqations for homogeneous media
 --------------------------------------------------
 
-To derive the wave equations in time-domain, we begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations:
+To derive the wave equations in the time domain, we begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law <ampere_maxwell>`:
 
 .. include:: ../../../../equation_bank/faraday_time.rst
 
@@ -41,7 +41,7 @@ The appropriate constitutive relations can be substituted into Equation :eq:`hme
 .. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \boldsymbol{\nabla} \times \left (  \frac{\partial}{\partial t} (\mu \mathbf{h}) \right )
         :name: hme2
 
-Because we assume a homogenous space, the physical properties :math:`\mu`, :math:`\epsilon`, and :math:`\sigma` can be moved out front of the derivative terms. Thi simplifies the above expressions, which only contains :math:`\mu`.
+Because we assume a homogenous space, the physical properties :math:`\mu`, :math:`\epsilon`, and :math:`\sigma` can be moved out front of the derivative terms. This simplifies the above expressions:
 
 .. math:: \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \boldsymbol{\nabla} \times \frac{\partial \mathbf{h}}{\partial t}
         :name: hme3

@@ -15,7 +15,7 @@ Effect of conductivity
 Wave number
 -----------
 
-Using plane wave solution with terms :math:`e^{\pm ikz}`, along with the time dependence :math:`e^{i\omega t}`, the electric field (and analogiceously the magnetic field) can be written as:
+Using the plane wave solution with terms :math:`e^{\pm ikz}`, along with the time dependence :math:`e^{i\omega t}`, the electric field (and analogously the magnetic field) can be written as:
 
 .. math:: \mathbf{e} = \mathbf{e}_0^+ e^{-i(kz - \omega t)} + \mathbf{e}_0^- e^{-i(k z + \omega t)}
 
@@ -110,7 +110,7 @@ so velocity decreases with frequency. Alternatively, in materials where the cond
 
 .. math:: k = \alpha = \sqrt{\mu \epsilon \omega^2}
 
-end
+and
 
 .. math:: v_{phase} = \frac{1}{\sqrt{\mu \epsilon}}.
         :name: wn3
@@ -122,7 +122,7 @@ In free space, Equation :eq:`wn3` equates to :math:`3\times 10^8` m/s, which is 
 Wavelength
 ----------
 
-Finally, the wavelength if the waves is given by:
+Finally, the wavelength of the waves is given by:
 
 .. math:: \lambda = \frac{v}{f}.
 

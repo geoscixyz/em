@@ -5,7 +5,7 @@ Damped wave equation
 
 .. todo:: Purpose, summary, goal
 
-We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations in the time-domain:
+We begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law <ampere_maxwell>` in the time-domain:
 
 .. include:: ../../../../equation_bank/faraday_time.rst
 

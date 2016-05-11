@@ -20,7 +20,7 @@ The fields satisfy a wave equation. In 1D, we can easily find an analytic soluti
 
 .. math:: \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = 0
 
-and has a solution as following:
+and has a solution as follows:
 
 .. math:: \mathbf{e} = \mathbf{e_0} \cos \left( 2 \pi \frac{z-vt}{\lambda} \right ),
         :name: hme31
@@ -79,4 +79,4 @@ where :math:`k` is the circular wave number. Taking the real part yields:
 
 This is the same as Equation :eq:`hme31` where the relationships :math:`k = \frac{2\pi}{\lambda}` and :math:`v = \frac{\omega}{k}` are used. 
 
-Throughout em.geosci, we will solve Maxwell's equations in time and frequency. The above example demonstrates how this can be done for a simple situation when waves propogates in a medium with zero conductivity. Som eof these aspects carry over to conductive media but many things change.
+Throughout em.geosci, we will solve Maxwell's equations in time and frequency. The above example demonstrates how this can be done for a simple situation when waves propogates in a medium with zero conductivity. Some of these aspects carry over to conductive media but many things change.
