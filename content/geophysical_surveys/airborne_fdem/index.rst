@@ -5,7 +5,7 @@ Airborne FDEM
 
 .. figure:: ./images/afem_cover.jpg
    :align: center
-   :scale: 80%
+   :scale: 20%
    :name: afem_cover
 .. Source: Jean M. Legault, 2015, Airborne Electromagnetic Systems – State of the Art and Future Directions, CSEG RECORDER, VOL. 40, No. 06.
 
