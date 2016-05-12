@@ -49,10 +49,9 @@ with 15 electrodes spaced 100 meters apart is shown in :numref:`MIM_DPP_Simulati
    *  - .. raw:: html
             :file: ./images/Mt_Isa_Current_Anim.html
 
-Current density (arrows) and charge density (color) for a range of source
-locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
+Current density (arrows) and charge density (color) for a range of source locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
 
- .. figure:: ./images/MIM_PDP_Simulation.png
+ .. simpegFig:: ./images/MIM_PDP_Simulation.png
     :align: right
     :figwidth: 50%
     :name: MIM_PDP_Simulation

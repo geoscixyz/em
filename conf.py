@@ -473,5 +473,9 @@ def _supress_nonlocal_image_warn(self, msg, node):
 
 sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
 
+from simpegFig import simpegFig
+
 from checkDependencies import checkDependencies
 checkDependencies()
+
+
