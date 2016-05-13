@@ -13,4 +13,3 @@ Solving Maxwell's Equations
 
     numeric/index
     analytic/index
-    semianalytic/index

@@ -3,8 +3,11 @@
 Maxwell I: Fundamentals
 =======================
 
-**Purpose:** Provide mathematical and physical understanding of Maxwell's equations that form the basis for EM surveys.
- 
+.. topic:: Purpose
+
+    Provide mathematical and physical understanding of Maxwell's equations
+    that form the basis for EM surveys.
+
 This section contains essential material to understand Maxwell's equations and
 how they might be implemented in geophysical surveys. For many people the
 starting point might be the synopsis of the equations presented in the :ref:`Quick-
@@ -21,10 +24,10 @@ complex situations that arise with individual surveys.
 
 **Contents**
 
-.. toctree:: 
-    :maxdepth: 1
+.. toctree::
+    :maxdepth: 2
 
-    quick_guide_maxwell
     fundamental_laws/index
-    physical_principles/index
+    maxwells_equations/index
+    quick_guide_maxwell
     solving_maxwells_equations/index

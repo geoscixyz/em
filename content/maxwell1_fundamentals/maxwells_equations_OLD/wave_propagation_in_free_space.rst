@@ -10,13 +10,13 @@ Wave equations in the time domain
 
 We begin with :ref:`Faraday <faraday>` and :ref:`Ampere-Maxwell <ampere_maxwell>` equations:
 
-.. include:: ../../../equation_bank/faraday_time.rst
+.. include:: ../../equation_bank/faraday_time.rst
 
-.. include:: ../../../equation_bank/ampere_maxwell_time.rst
+.. include:: ../../equation_bank/ampere_maxwell_time.rst
 
 and the three constitutive relations:
 
-.. include:: ../../../equation_bank/ohms_law_time.rst
+.. include:: ../../equation_bank/ohms_law_time.rst
 
 .. math:: \mathbf{d} = \epsilon \mathbf{e}
         :name: depse
@@ -30,7 +30,7 @@ The goal is to combine these equations to obtain a single equation that involves
 and with use of a vector identity can be written as  :eq:`hme6`
 
 
-the details of this derivation can be found {here}. 
+the details of this derivation can be found {here}.
 DWO: Reproduce the details starting with eq 1-5 for e to get hme6
 
 A similar procedure can be used to obtain an equation that involves only h:
@@ -133,7 +133,7 @@ Equations :eq:`hme8` and :eq:`hmh8` can be be written in a simpler form:
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  = 0
         :name: helmholtz_H
 
-where :math:`k` is the wave number defined by  
+where :math:`k` is the wave number defined by
 
 ..math:: k^2 = \mu \epsilon \omega^2 - i \mu \sigma \omega
         :name: ksquared
@@ -141,7 +141,7 @@ where :math:`k` is the wave number defined by
 The behaviour of electromagnetic waves is governed by the relative values of the two terms that make up :math:`k^2`. If :math:`sigma=0` the electromagnetic energy propagates as unattentuating waves in the medium. If the imaginary term dominates then the waves diffuse as they propagate. The behaviour thus depends upon the ratio
 
 
-.. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma} 
+.. math:: \frac{ \mu \epsilon \omega^2}{\mu \sigma \omega} = \frac{\epsilon \omega}{\sigma} = \frac{2\pi \epsilon f}{\sigma}
         :name: kcomp
 
 
@@ -280,7 +280,7 @@ This shows that the solution to Equation :eq:`hmh15` is a wave of the form given
 
 The units of :math:`v` work out as following:
 
-.. math:: \sqrt{ \frac{1}{\left[\frac{T \cdot m}{A} \right] \left [ \frac{F}{m} \right ]} } = \left ( \frac{A}{T \cdot F} \right) ^ {1/2} = \left ( \frac{\frac{C}{s}}{\frac{V\cdot s}{m^2} \cdot F} \right) ^ {1/2} = 
+.. math:: \sqrt{ \frac{1}{\left[\frac{T \cdot m}{A} \right] \left [ \frac{F}{m} \right ]} } = \left ( \frac{A}{T \cdot F} \right) ^ {1/2} = \left ( \frac{\frac{C}{s}}{\frac{V\cdot s}{m^2} \cdot F} \right) ^ {1/2} =
 
 .. math:: \left ( \frac{\frac{F \cdot V}{s}}{\frac{V\cdot s}{m^2} \cdot F} \right) ^ {1/2} = \left ( \frac{F\cdot V}{s} \frac{m^2}{V \cdot F \cdot s} \right ) ^{1/2} = \frac{m}{s}
 
