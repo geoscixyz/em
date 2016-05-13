@@ -1,4 +1,4 @@
-.. _sources_in_a_homogeneous_medium_index:
+.. _fdem_sources_in_a_homogeneous_medium_index:
 
 Dipole sources
 ==============
@@ -16,7 +16,4 @@ Dipole sources
     harmonic_electric_dipole/index
     harmonic_magnetic_dipole/index
 
-
-.. transient_electric_dipole/index
-.. transient_magnetic_dipole/index
 

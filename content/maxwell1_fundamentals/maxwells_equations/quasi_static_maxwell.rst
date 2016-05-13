@@ -3,8 +3,8 @@
 Quasi Static Maxwell's Equations
 ================================
 
-
 .. topic:: Purpose
+
     todo
 
 

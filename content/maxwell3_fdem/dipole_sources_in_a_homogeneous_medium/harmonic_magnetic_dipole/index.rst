@@ -8,7 +8,7 @@ Harmonic Magnetic Dipole
     Purpose here
 
 
-.. figure:: ../../../images/MagDipoleWholeSpace.png
+.. figure:: ../../images/MagDipoleWholeSpace.png
     :scale: 80%
 
     This example is available in a notebook_

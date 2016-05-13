@@ -3,7 +3,9 @@
 Maxwell III: FDEM
 =================
 
-**Purpose:**
+.. topic:: Purpose
+
+    Purpose here
 
 Contents:
 
@@ -11,6 +13,7 @@ Contents:
     :maxdepth: 1
 
     governing_equations
+    dipole_sources_in_a_homogeneous_medium/index
     theory_3loops
     sphere_freespace/index
     fields_from_grounded_sources/index
