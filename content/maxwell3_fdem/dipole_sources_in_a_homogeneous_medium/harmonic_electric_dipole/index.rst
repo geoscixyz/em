@@ -8,6 +8,8 @@ Harmonic Electric Dipole
     Purpose here
 
 
+**Contents**
+
 .. toctree::
     :maxdepth: 2
 

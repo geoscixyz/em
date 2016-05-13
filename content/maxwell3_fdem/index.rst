@@ -10,7 +10,7 @@ Maxwell III: FDEM
 Contents:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
 
     governing_equations
     dipole_sources_in_a_homogeneous_medium/index
