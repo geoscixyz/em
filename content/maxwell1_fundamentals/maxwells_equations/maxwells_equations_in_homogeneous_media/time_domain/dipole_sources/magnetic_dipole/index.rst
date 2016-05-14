@@ -18,5 +18,5 @@ Magnetic Dipole
     analytic_solution
     vector_potential
     fields
-    end_members
+    asymptotics
     field_transformations
