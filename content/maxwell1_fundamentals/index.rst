@@ -25,9 +25,10 @@ complex situations that arise with individual surveys.
 **Contents**
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: -1
 
     fundamental_laws/index
     maxwells_equations/index
     quick_guide_maxwell
     solving_maxwells_equations/index
+    looking_for_more
