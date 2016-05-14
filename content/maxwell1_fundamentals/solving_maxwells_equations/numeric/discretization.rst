@@ -1,7 +1,9 @@
-.. _finite_volume_discretization:
+.. _numeric_discretization:
 
-Finite Volume Discretization
-============================
+Discretization
+==============
+
+.. todo:: Parse this material throughout the numeric section as applicable
 
 **aka: A (very) brief introduction to solving Maxwell's equations on a computer**
 
@@ -37,7 +39,7 @@ usually cuboids or tetrahedra, with physical properties constant in each cell.
 These three types of earth models, with their increasing complexity, are
 illustrated in figure 1.
 
-.. figure:: ../../images/1-2-3.png 
+.. figure:: ../../images/1-2-3.png
 
   Visualization of 1D, 2D, and 3D discretizations.
 
@@ -62,7 +64,7 @@ frequency domain
 .. math::
   \boldsymbol{\nabla\times}\mathbf{E} = -i\omega\mathbf{B}
   :label: FaradayAnal
-  
+
 .. math::
   \boldsymbol{\nabla\times}\mu^{-1}\mathbf{B} - \sigma\mathbf{E} = \mathbf{J}_s,
   :label: AmpereAnal
@@ -105,11 +107,11 @@ magnetic flux at cell faces. The discrete versions of equations are
 .. math::
   \mathbf{C} \tilde{\mathbf{E}} -i\omega\tilde{\mathbf{B}} = 0
   :label: FarDiscrete
-  
+
 .. math::
   \mathbf{C}^T \mathbf{M}_{\mu^{-1}}^f \tilde{\mathbf{B}} - \mathbf{M}_{\sigma}^e\tilde{\mathbf{E}} = \tilde{\mathbf{s}},
   :label: AmpDiscrete
-  
+
 where:
 
  - :math:`\mathbf{C}` is the discrete curl operator (all discrete operators are sparse matrices)
