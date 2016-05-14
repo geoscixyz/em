@@ -9,11 +9,9 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: .*
-  script: emgeosci.app
-
 - url: /
   static_files: _build/html/index.html
+  upload: _build/html/index.html
 
 - url: /
   static_dir: _build/html
@@ -21,6 +19,10 @@ handlers:
 - url: /(.*\.(gif|png|jpg|ico|js|css|html))
   static_files: /
   upload: _build/html/(.*\.(gif|png|jpg|ico|js|css|html))
+
+- url: .*
+  script: emgeosci.app
+
 
 libraries:
 - name: webapp2
