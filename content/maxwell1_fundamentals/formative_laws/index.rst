@@ -1,7 +1,7 @@
-.. _fundamental_laws_index:
+.. _formative_laws_index:
 
-Fundamental Laws
-================
+Formative Laws
+==============
 
 
 .. topic:: Purpose

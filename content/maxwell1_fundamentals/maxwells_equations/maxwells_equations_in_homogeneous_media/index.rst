@@ -1,4 +1,4 @@
-.. _maxwells_equations_in_homogeneous_media:
+.. _maxwells_equations_in_homogeneous_media_index:
 
 Maxwell's Equations in Homogeneous Media
 ========================================

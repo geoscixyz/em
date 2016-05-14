@@ -1,4 +1,4 @@
-.. _looking_for_more:
+.. _fundamentals_looking_for_more:
 
 Looking for more?
 =================

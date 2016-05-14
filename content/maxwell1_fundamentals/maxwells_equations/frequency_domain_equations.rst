@@ -1,4 +1,4 @@
-.. _maxwells_equations_frequency:
+.. _frequency_domain_equations:
 
 Frequency Domain Equations
 ==========================
