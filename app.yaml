@@ -1,0 +1,35 @@
+application: emgeosci
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /
+  static_files: _build/html/index.html
+  upload: _build/html/index.html
+
+- url: /
+  static_dir: _build/html
+
+- url: /(.*\.(gif|png|jpg|ico|js|css|html))
+  static_files: /
+  upload: _build/html/(.*\.(gif|png|jpg|ico|js|css|html))
+
+- url: .*
+  script: emgeosci.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: PIL
+  version: "1.1.7"
+- name: numpy
+  version: "latest"
+- name: jinja2
+  version: "latest"
