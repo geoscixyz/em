@@ -28,11 +28,9 @@ Maxwell's Equations
 .. toctree::
     :maxdepth: 2
 
-    maxwells_equations_time
-    maxwells_equations_frequency
-    wave_propagation_in_homogeneous_media
-    quasi_static_maxwell
-    looking_for_more
+    time_domain_equations
+    frequency_domain_equations
+    maxwells_equations_in_homogeneous_media/index
 
 
 **Old Contents**

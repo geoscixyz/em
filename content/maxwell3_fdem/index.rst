@@ -13,7 +13,6 @@ Contents:
     :maxdepth: 3
 
     governing_equations
-    dipole_sources_in_a_homogeneous_medium/index
     theory_3loops
     sphere_freespace/index
     fields_from_grounded_sources/index

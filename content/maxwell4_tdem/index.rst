@@ -13,7 +13,6 @@ Contents:
     :maxdepth: 2
 
     governing_equations
-    dipole_sources_in_a_homogeneous_medium/index
     fields_from_grounded_sources/index
     fields_from_inductive_sources/index
     footprint_and_depth_of_investigation

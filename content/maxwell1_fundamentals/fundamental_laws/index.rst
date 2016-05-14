@@ -4,7 +4,11 @@ Fundamental Laws
 ================
 
 
-.. todo:: Overview of this section, and why it is important. 
+.. topic:: Purpose
+
+    We provide an overview of selected scientists and their laws that
+    ultimately form the physical basis for Maxwell’s equations
+
 
 **Contents:**
 
