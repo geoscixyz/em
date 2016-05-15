@@ -21,16 +21,15 @@ install:
   - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython
     ipython sphinx
   - pip install -r requirements.txt
-  - gcloud -q components update gae-python
 
 script:
   - nosetests $TEST_DIR
 
-deploy:
-  provider: gae
-  skip_cleanup: false
-  keyfile: emgeosci-eca6c1b5ec64.json
-  project: emgeosci
+# deploy:
+#   provider: gae
+#   skip_cleanup: false
+#   keyfile: emgeosci-eca6c1b5ec64.json
+#   project: emgeosci
 
 notifications:
   email:

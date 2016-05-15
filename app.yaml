@@ -5,23 +5,35 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.css)
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.html)
 
 - url: /
   static_files: _build/html/index.html
   upload: _build/html/index.html
 
-- url: /
-  static_dir: _build/html
-
 - url: /(.*\.(gif|png|jpg|ico|js|css|html))
   static_files: /
   upload: _build/html/(.*\.(gif|png|jpg|ico|js|css|html))
 
-- url: .*
+- url: /
   script: emgeosci.app
+
+- url: /.*
+  static_files: _build/html/error.html
+  upload: _build/html/error.html
 
 
 libraries:

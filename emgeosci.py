@@ -17,6 +17,7 @@
 import cgi
 import datetime
 import webapp2
+import logging
 
 from google.appengine.ext import ndb
 from google.appengine.api import users
@@ -28,29 +29,26 @@ import jinja2
 import urllib, hashlib
 import json
 
+TEMPLATEFOLDER = '_build/html/'
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__).split('/')[:-1])),
     extensions=['jinja2.ext.autoescape'],
     autoescape=False)
 
-def setTemplate(self, template_values, templateFile):
-    _templateFolder = '_build/html/'
+def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOLDER):
     # add Defaults
     template_values['_templateFolder'] = _templateFolder
     template_values['_year'] = str(datetime.datetime.now().year)
-
-
     path = os.path.normpath(_templateFolder+templateFile)
     template = JINJA_ENVIRONMENT.get_template(path)
     self.response.write(template.render(template_values))
-
-
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
         setTemplate(self, {"indexPage":True}, 'index.html')
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage)
+    ('/', MainPage),
 ], debug=True)
+
