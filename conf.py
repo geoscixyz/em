@@ -88,7 +88,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','AUTHORS.rst','README.md','content/equation_bank/*', 'content/maxwell1_fundamentals/maxwell_variables.rst']
+exclude_patterns = ['_build','AUTHORS.rst','README.md','content/equation_bank/*', 'content/maxwell1_fundamentals/maxwell_variables.rst', 'error.rst']
 
 linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
                     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
