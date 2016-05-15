@@ -19,7 +19,7 @@ import sphinx_bootstrap_theme
 from _ext import *
 
 sys.path.append('./examples')
-sys.path.insert(0, os.path.abspath('_ext'))
+sys.path.append('./_ext')
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
