@@ -29,7 +29,6 @@ deploy:
   provider: gae
   skip_cleanup: true
   keyfile: emgeosci-eca6c1b5ec64.json
-  project: emgeosci
 
 notifications:
   email:
