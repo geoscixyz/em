@@ -17,11 +17,11 @@ before_install:
   - export PATH=/home/travis/anaconda/bin:/home/travis/miniconda/bin:$PATH
   - conda update --yes conda
 
-
 install:
   - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython
     ipython sphinx
   - pip install -r requirements.txt
+  - gcloud -q components update gae-python
 
 script:
   - nosetests $TEST_DIR
