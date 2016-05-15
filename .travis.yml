@@ -30,7 +30,6 @@ after_success:
     provider: gae
     keyfile: emgeosci-eca6c1b5ec64.json
     project: emgeosci
-    on: feat/gae
 
 notifications:
   email:
