@@ -18,6 +18,7 @@ import shlex
 import sphinx_bootstrap_theme
 
 sys.path.append('./examples')
+sys.path.append('./_ext')
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,6 +42,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
+    'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -205,7 +207,7 @@ html_theme_options = {
     'bootstrap_version': "3",
 }
 
-html_sidebars = {'**': ['localtoc.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
+html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
 
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -302,6 +304,11 @@ html_favicon = 'em.ico'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'emdoc'
+
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/em'
+edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -461,17 +468,7 @@ intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from autodoc import make_formula_sheet
+from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
 make_formula_sheet()
-
-import sphinx.environment
-from docutils.utils import get_source_line
-
-def _supress_nonlocal_image_warn(self, msg, node):
-    if not msg.startswith('nonlocal image URI found:'):
-        self._warnfunc(msg, '%s:%s' % get_source_line(node))
-
-sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
-
-from checkDependencies import checkDependencies
 checkDependencies()
+supress_nonlocal_image_warn()
