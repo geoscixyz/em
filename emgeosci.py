@@ -44,11 +44,16 @@ def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOL
     template = JINJA_ENVIRONMENT.get_template(path)
     self.response.write(template.render(template_values))
 
+class Images(webapp2.RequestHandler):
+    def get(self):
+        self.redirect('http://em.geosci.xyz'+self.request.path)
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         setTemplate(self, {"indexPage":True}, 'index.html')
 
 app = webapp2.WSGIApplication([
+    ('/_images/.*', Images),
     ('/', MainPage),
 ], debug=True)
 
