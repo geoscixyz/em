@@ -44,16 +44,30 @@ def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOL
     template = JINJA_ENVIRONMENT.get_template(path)
     self.response.write(template.render(template_values))
 
+
 class Images(webapp2.RequestHandler):
     def get(self):
         self.redirect('http://em.geosci.xyz'+self.request.path)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        logging.debug('This is a debug message')
         setTemplate(self, {"indexPage":True}, 'index.html')
+
+class Error(webapp2.RequestHandler):
+    def get(self):
+        self.redirect('/error.html')
+
+# def handle_404(request, response, exception):
+#     logging.exception(exception)
+#     request.redirect('http://em.geosci.xyz/error.html')
+#     response.set_status(404)
 
 app = webapp2.WSGIApplication([
     ('/_images/.*', Images),
     ('/', MainPage),
+    ('/.*', Error),
 ], debug=True)
+
+app.error_handlers[404] = Error
 
