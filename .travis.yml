@@ -6,18 +6,7 @@ sudo: false
 env:
   - TEST_DIR=tests
 
-cache:
-  directories:
-  - "$HOME/google-cloud-sdk/"
-
-env:
-# Make sure gcloud command is on our PATH and the App Engine SDK is in the Python path
-- GAE_PYTHONPATH=${HOME}/.cache/google_appengine PATH=$PATH:${HOME}/google-cloud-sdk/bin PYTHONPATH=${PYTHONPATH}:${GAE_PYTHONPATH} CLOUDSDK_CORE_DISABLE_PROMPTS=1
-
 before_install:
-  - if [ ! -d "${GAE_PYTHONPATH}" ]; then
-      python scripts/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}");
-    fi
   - openssl aes-256-cbc -K $encrypted_69967e53c837_key -iv $encrypted_69967e53c837_iv
     -in emgeosci-eca6c1b5ec64.json.enc -out emgeosci-eca6c1b5ec64.json -d
   - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh
@@ -28,22 +17,20 @@ before_install:
   - export PATH=/home/travis/anaconda/bin:/home/travis/miniconda/bin:$PATH
   - conda update --yes conda
 
+
 install:
-  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
+  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython
+    ipython sphinx
   - pip install -r requirements.txt
-  - gcloud config set project emgeosci
-  - gcloud -q components update gae-python
 
 script:
   - nosetests $TEST_DIR
 
-after_success:
-  - gcloud -q preview app deploy app.yaml --promote
-
-# deploy:
-#   provider: gae
-#   skip_cleanup: true
-#   keyfile: emgeosci-eca6c1b5ec64.json
+deploy:
+  provider: gae
+  skip_cleanup: false
+  keyfile: emgeosci-eca6c1b5ec64.json
+  project: emgeosci
 
 notifications:
   email:
