@@ -25,6 +25,9 @@ install:
 script:
   - nosetests $TEST_DIR
 
+after_success:
+  - gcloud config set project emgeosci
+
 deploy:
   provider: gae
   skip_cleanup: true
