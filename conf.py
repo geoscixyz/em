@@ -469,6 +469,6 @@ intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 sys.path.append(os.getcwd())
 
 from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
-make_formula_sheetmake_formula_sheet()
+make_formula_sheet()
 checkDependencies()
 supress_nonlocal_image_warn()
