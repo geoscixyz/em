@@ -16,7 +16,6 @@ import sys
 import os
 import shlex
 import sphinx_bootstrap_theme
-from _ext import *
 
 sys.path.append('./examples')
 sys.path.append('./_ext')
@@ -469,7 +468,7 @@ intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-# from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
-make_formula_sheet()
+from _ext import *
+make_formula_sheetmake_formula_sheet()
 checkDependencies()
 supress_nonlocal_image_warn()
