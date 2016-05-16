@@ -168,14 +168,19 @@ In free space, Equation :eq:`wn3` equates to :math:`3\times 10^8` m/s, which is 
 Wavelength
 ----------
 
+.. figure:: images\planewaveprop.png
+        :figwidth: 20%
+        :align: right
+        :name: pwp
+        
+        A plane harmonic wave propagates into the earth.
+
 Finally, the wavelength of the waves is given by:
 
-.. math:: \lambda = \frac{v}{f} = \frac{\omega}{\alpha f} = frac{2\pi}{\alpha}.
+.. math:: \lambda = \frac{v}{f} = \frac{\omega}{\alpha f} = \frac{2\pi}{\alpha}.
 
 In free space, :math:`\lambda = \frac{3\times10^8}{f}`. In a conducting medium, if the quasistatice approximation is valid, then :math:`\alpha = \beta = 1/\delta` and so :math:`\lambda = 2\pi \delta`.
 
-Thus even though the waves have a sinusoidal description inside the earth, they have lost most of their amplitude by the time they have propagated one wavelength into the earth. The above elements are illustrated in FIGURE ??? where a plane harmonic wave in free space propagates into the earth.
-
-.. todo:: add figure- see 350 em.ppt slide number 65!
+Thus even though the waves have a sinusoidal description inside the earth, they have lost most of their amplitude by the time they have propagated one wavelength into the earth. The above elements are illustrated in :numref:`pwp` where a plane harmonic wave in free space propagates into the earth.
 
 .. todo:: add app: mu epsilon sigma, alpha and beta, skinddepth, phase velocity, and wavelength
