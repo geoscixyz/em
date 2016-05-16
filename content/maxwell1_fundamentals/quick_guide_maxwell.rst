@@ -16,7 +16,7 @@ more detail to promote a physical understanding and provide insight as to
 where the law is useful. In addition we provide a short synopsis of the
 scientists involved in discovering the law.
 
-Maxwell's equations connect electric and mangetic fields, fluxes and physical properties. 
+Maxwell's equations connect electric and mangetic fields, fluxes and physical properties.
 
 
 .. include:: maxwell_variables.rst
@@ -55,6 +55,7 @@ Integral equations in time
 - :ref:`Gauss's Law for Magnetic Fields <gauss_magnetic_integral>`
     .. include:: ../equation_bank/gauss_magnetic_int_time.rst
 
+
 .. _differential_equations_frequency:
 
 Differential equations in frequency
@@ -73,7 +74,4 @@ Boundary Conditions
 
 .. This because of the include statement, we don't need a toctree entry for the maxwell variables page (and want to suppress warnings)
 
-.. toctree::
-    :hidden:
 
-    maxwell_variables
