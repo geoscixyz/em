@@ -17,6 +17,7 @@
 import cgi
 import datetime
 import webapp2
+import logging
 
 from google.appengine.ext import ndb
 from google.appengine.api import users
@@ -28,29 +29,45 @@ import jinja2
 import urllib, hashlib
 import json
 
+TEMPLATEFOLDER = '_build/html/'
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__).split('/')[:-1])),
     extensions=['jinja2.ext.autoescape'],
     autoescape=False)
 
-def setTemplate(self, template_values, templateFile):
-    _templateFolder = '_build/html/'
+def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOLDER):
     # add Defaults
     template_values['_templateFolder'] = _templateFolder
     template_values['_year'] = str(datetime.datetime.now().year)
-
-
     path = os.path.normpath(_templateFolder+templateFile)
     template = JINJA_ENVIRONMENT.get_template(path)
     self.response.write(template.render(template_values))
 
 
+class Images(webapp2.RequestHandler):
+    def get(self):
+        self.redirect('http://em.geosci.xyz'+self.request.path)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        logging.debug('This is a debug message')
         setTemplate(self, {"indexPage":True}, 'index.html')
 
+class Error(webapp2.RequestHandler):
+    def get(self):
+        self.redirect('/error.html')
+
+# def handle_404(request, response, exception):
+#     logging.exception(exception)
+#     request.redirect('http://em.geosci.xyz/error.html')
+#     response.set_status(404)
+
 app = webapp2.WSGIApplication([
-    ('/', MainPage)
+    ('/_images/.*', Images),
+    ('/', MainPage),
+    ('/.*', Error),
 ], debug=True)
+
+app.error_handlers[404] = Error
+

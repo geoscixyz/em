@@ -4,21 +4,60 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+
 handlers:
+
+# favicon
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
 
+# all css
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.css)
+
+# webfonts
+- url: /(.*\.(eot|svg|ttf|woff|woff2|otf))
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.css)
+
+# javascript
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.js)
+
+# plain text source
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.txt)
+
+# images
+- url: /_images/(.*\.(gif|png|jpg|ico))
+  static_files: _build/html/_images/\1
+  upload: _build/html/_images/(.*\.(gif|png|jpg|ico))
+
+# raw html
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: _build/html/\1
+  upload: _build/html/(.*\.html)
+
+# serve index files
+- url: /(.+)/
+  static_files: _build/html/\1/index.html
+  upload: _build/html/(.+)/index.html
+
+- url: /(.+)
+  static_files: _build/html/\1/index.html
+  upload: _build/html/(.+)/index.html
+
 - url: /
   static_files: _build/html/index.html
   upload: _build/html/index.html
-
-- url: /
-  static_dir: _build/html
-
-- url: /(.*\.(gif|png|jpg|ico|js|css|html))
-  static_files: /
-  upload: _build/html/(.*\.(gif|png|jpg|ico|js|css|html))
 
 - url: .*
   script: emgeosci.app
