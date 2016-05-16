@@ -70,9 +70,6 @@ handlers:
   static_files: _build/html/error.html
   upload: _build/html/error.html
 
-error_handlers:
-  - file: _build/html/error.html
-
 # Recommended file skipping declaration from the GAE tutorials
 skip_files:
   - ^(.*/)?app\.yaml
