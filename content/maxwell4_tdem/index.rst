@@ -3,7 +3,9 @@
 Maxwell IV: TDEM
 ================
 
-**Purpose:**
+.. topic:: Purpose
+
+    Purpose here
 
 Contents:
 

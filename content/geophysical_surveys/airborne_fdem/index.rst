@@ -39,7 +39,10 @@ transmitter and receiver on an aircraft, the system can quickly probe the
 earth's conductivity over large areas.
 
 .. todo::
-    statement and link to :ref:`going_between_time_and_freq`
+    statement and link to Fourier_transform_
+
+
+.. _Fourier_transform: https://en.wikipedia.org/wiki/Fourier_transform
 
 Examples
 --------
