@@ -73,6 +73,25 @@ handlers:
 error_handlers:
   - file: _build/html/error.html
 
+# Recommended file skipping declaration from the GAE tutorials
+skip_files:
+  - ^(.*/)?app\.yaml
+  - ^(.*/)?app\.yml
+  - ^(.*/)?#.*#
+  - ^(.*/)?.*~
+  - ^(.*/)?.*\.py[co]
+  - ^(.*/)?.*/RCS/.*
+  - ^(.*/)?\..*
+  - ^(.*/)?tests$
+  - ^(.*/)?test$
+  - ^test/(.*/)?
+  - ^COPYING.LESSER
+  - ^README\..*
+  - \.gitignore
+  - ^\.git/.*
+  - \.*\.lint$
+  - ^(.*/)?.*\.doctree$
+
 libraries:
 - name: webapp2
   version: "2.5.2"
