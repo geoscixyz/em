@@ -21,7 +21,7 @@ We present here a 1D modelisation of the Magnetotelluric waves in a layered Eart
 
 .. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
 
-Magnetotelluric is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
+Magnetotelluric (MT) is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
 In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( :math:`\prec 10^5 Hz` ), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
 
@@ -85,7 +85,7 @@ with k the wavenumber:
     :label: kwavenumber
 
 
-In the ground, we can generally assume that the displacement current is negligible, which means :math:`\sigma \ll \omega \varepsilon`. In this case 
+In the ground, we can generally assume that the displacement current is negligible, which means :math:`\sigma \gg \omega \varepsilon`. In this case 
 
 .. math::
     k_{ground} \simeq (1-i) \sqrt{ \frac{\omega \mu \sigma}{2} }
@@ -241,11 +241,64 @@ These coefficients tell us how much energy of the incoming has been reflected or
 Refraction angle
 ****************
 
+.. figure:: images/RefractionAngle.png
+ :align: right
+ :scale: 50% 
+ :name: Refraction_MT
+
+ Refraction and Reflection angles
+
+
 In reality, the incident wave is coming from all the possible directions in the air. So how valid is our assumption of an incident vertical wave?
 
 What is important is the refraction angle at the Air-Earth interface, the angle of the transmitted wave in the ground.
 
-As any wave, electromagnetic waves follow Snell's law
+As any wave, electromagnetic waves follow Snell's law, that we can derive from the Maxwell's equation.
+
+Starting from an non orthogonal incident wave, modifyig the solution for :eq:`E_wave_propagation_equation` , we now get:
+
+.. math::
+    E^i(x,z) =||E^i|| e^{-i k_{iz} z} e^{-i k_{ix} x}
+
+.. math::
+    E^r(x,z) = ||E^r|| e^{i k_{rz} z} e^{-i k_{rx} x}
+
+.. math::
+    E^t(x,z) = ||E^t|| e^{-i k_{tz} z} e^{-i k_{tx} x}
+
+
+The equation :eq:`Continuity of E` is still valid, for all x. This is possible if and only if :math:`||k_{ix}||=||k_{rx}||=||k_{tx}||`
+
+
+For the reflected wave
+
+.. math::
+   ||k_{ix}||=||k_{rx}||
+
+.. math::
+    ||k_{air}|| *sin (\theta_i) = ||k_{air}||*sin (\theta_r)
+
+.. math::
+    \theta_i = \theta_r
+
+We find the intuitive result that the wave is reflected at the same angle than the incident wave
+
+For the transmitted wave
+
+.. math::
+    ||k_{ix}||=||k_{tx}||
+
+.. math::
+    ||k_{air}|| *sin \theta_i = ||k_{earth}||*sin \theta_t
+
+.. math::
+    \theta_t = sin^{-1} (\frac{||k_{air}||}{||k_{earth}||} *sin (\theta_i))  \simeq 0
+
+As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. The wave is transmitted vertically into the ground, whatever is the incident angle. Our data are then not affected by it.
+
+
+
+
 
 Field Acquisition
 -----------------
