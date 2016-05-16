@@ -294,7 +294,7 @@ For the transmitted wave
 .. math::
     \theta_t = sin^{-1} (\frac{||k_{air}||}{||k_{earth}||} *sin (\theta_i))  \simeq 0
 
-As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. The wave is transmitted vertically into the ground, whatever is the incident angle. Our data are then not affected by it.
+As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small number as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. The wave is transmitted vertically into the ground, whatever is the incident angle. Our data are then not affected by it.
 
 
 
