@@ -41,18 +41,20 @@ experts, worldwide, contribute. Join the development on github_.
 
 .. _github: https://github.com/ubcgif/em
 
-Contributors:
--------------
+
+Contributors
+------------
 
 .. include:: AUTHORS.rst
 
 
-Contents:
----------
+.. Contents
+.. --------
 
 .. toctree::
    :maxdepth: 6
    :name: `EM GeoSci`
+   :hidden:
 
    content/introduction/index
    content/physical_properties/index
