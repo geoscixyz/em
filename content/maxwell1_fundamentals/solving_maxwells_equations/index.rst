@@ -3,14 +3,16 @@
 Solving Maxwell's Equations
 ===========================
 
-.. todo:: what is covered here and why
+.. topic:: Purpose
 
+    Equip a choice from among the arsenal of tools we have for investigating,
+    simulating and visualizing electromagnetic fields and fluxes.
 
 **Contents**
 
 .. toctree::
     :maxdepth: 2
 
-    numeric/index
+    defining_the_problem
     analytic/index
-    semianalytic/index
+    numeric/index

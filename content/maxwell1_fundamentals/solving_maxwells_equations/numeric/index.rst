@@ -8,8 +8,8 @@ Numeric
 .. toctree::
     :maxdepth: 2
 
-    staggered_grid
-    finite_volume_discretization
-    examples
+    discretization
+    dimensionality_and_symmetry
+    setting_up_a_simulation
 
 
