@@ -313,11 +313,24 @@ In MT, the source is unknown but we are avoiding the problem by measuring the ra
 
 Notice this is a complex number, with a norm and an angle.
 
-Impendance tensor
+Impendance matrix
 *****************
 
-Of course, 
+We saw that in 1D, the horizontal orthogonal components of the electric and magnetic fields :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are linked through the :ref:`Faraday's law<faraday>` and :ref:`Ampere's law<ampere_maxwell>`. We can then write the same types of relationship for :math:`\mathbf{E_y}` and  :math:`\mathbf{H_x}` and write the system in a matrix form:
 
+.. math::
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) = \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ \hat{Z}_{yx} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+
+in 1D :math:`\hat{Z}_{xy} = -\hat{Z}_{yx}`
+
+.. math::
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) =  \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ -\hat{Z}_{xy} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+
+The matrix linking the component of  :math:`\mathbf{E}` and  :math:`\mathbf{H}`  is called the impedance matrix.
+
+On field, we do not know a priori the orientation of the source wave. This orientation can also changes over times if the source wave is polarised. We usally record both horizontals components of each field. If the Earth is purely 1D, a simple rotation of the matrix would allow to find the antisymetric matrix and thus obtain the apparent impedance :math:`\hat{Z}_{xy}`.
+
+Note: for a pure 2D Earth, the impedance matrix is also purely off-diagonal (with the right rotation if needed) but is not anymore antisymetric. In 3D the impedance matrix is a full matrix.
 
 Data
 ----
