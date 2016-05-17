@@ -168,7 +168,7 @@ In free space, Equation :eq:`wn3` equates to :math:`3\times 10^8` m/s, which is 
 Wavelength
 ----------
 
-.. figure:: images\planewaveprop.png
+.. figure:: images/planewaveprop.png
         :figwidth: 20%
         :align: right
         :name: pwp
