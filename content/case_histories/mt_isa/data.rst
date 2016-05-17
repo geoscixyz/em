@@ -3,24 +3,19 @@
 Data
 ====
 
+The `MIMDAS`_ system collects both a pole-dipole (P-DP) and a dipole-pole (DP-P) configuration in general. Furthermore, both DC and IP data were collected through the system. The data are viewed prior to quality control measures.
+
+
 .. _mt_isa_data_dc:
 
 DCR
 ---
 
-In preperation for the inversion, a first-pass assessment of data quality is
-completed. The MIMDAS system collects both a pole-dipole (P-DP) and a dipole-
-pole (DP-P) configuration. While sensing the same Earth, these two
-configurations can yield different responses and consequently be subject to
-different noise levels. :ref:`Data <MtISa_DCR_data>` were first seperated by
-line ID, then by survey configuration.
+In preparation for the inversion, a first-pass assessment of data quality is completed through visualization. While sensing the same Earth, these two configurations can yield different responses and consequently be subject to different noise levels. The :ref:`DC data <MtISa_DCR_data>` were first seperated by line and then by survey configuration.
 
-Note that a large portion of the DP-P shows higher apparent conductivity data
-than observed on the P-DP configuration. This may be explained by the presence
-of conductive units on the eastern edge of the survey. As demonstrated with
-the :ref:`numerical simulation<Mt_Isa_Simulation>`, current channeling through
-the Breakaway Shale unit and the mineralization at depth may considerably
-reduce the measured potentials west of these anomalies.
+Note that a large portion of the DP-P shows higher apparent conductivity data than observed on the P-DP configuration. This may be explained by the presence of conductive units on the eastern edge of the survey. As demonstrated with the :ref:`numerical simulation<Mt_Isa_Simulation>`, current channeling through the Breakaway Shale unit and the mineralization at depth may considerably reduce the measured potentials west of these anomalies.
+
+.. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
 .. _MtISa_DCR_data:
 
@@ -38,8 +33,7 @@ reduce the measured potentials west of these anomalies.
 IP
 --
 
-Simarly, speudosections of IP :ref:`data<MtISa_IP_data>` were QC for the P-DP and DP-P configuration
-seperatly. Note on several lines the large negative apparent chargeability
+Simarly, 2D pseudo-sections of :ref:`IP data<MtISa_IP_data>` are shown below for first-pass assessement through visualization. Note on several lines the large negative apparent chargeability
 values on the DP-P configuration.
 
 .. _MtISa_IP_data:
