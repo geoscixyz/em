@@ -8,17 +8,6 @@ Maxwell I: Fundamentals
     We provide the mathematical and physical framework  for equations,
     ultimately formulated by Maxwell, that form the basis for EM surveys.
 
-**Contents**
-
-.. toctree::
-    :maxdepth: 1
-
-    formative_laws/index
-    maxwells_equations/index
-    quick_guide_maxwell
-    solving_maxwells_equations/index
-    looking_for_more
-
 Background about the individual laws, their discoverers, and associated
 physical principles are first provided first in :ref:`formative_laws_index`.
 The first order equations are then combined to generate the formative
@@ -42,4 +31,14 @@ route to take and how to proceed. The final section, :ref:`Looking for More
 <fundamentals_looking_for_more>` presents detailed information and additional
 topics of general relevance to EM.
 
+**Contents**
+
+.. toctree::
+    :maxdepth: 1
+
+    formative_laws/index
+    maxwells_equations/index
+    quick_guide_maxwell
+    solving_maxwells_equations/index
+    looking_for_more
 

@@ -42,12 +42,19 @@ def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOL
     template_values['_year'] = str(datetime.datetime.now().year)
     path = os.path.normpath(_templateFolder+templateFile)
     template = JINJA_ENVIRONMENT.get_template(path)
-    self.response.write(template.render(template_values))
+    resp = self.response.write(template.render(template_values))
 
+    if resp is None:
+        self.redirect('/error.html', permanent=True)
 
 class Images(webapp2.RequestHandler):
     def get(self):
-        self.redirect('http://em.geosci.xyz'+self.request.path)
+        self.redirect('/'+self.request.path)
+
+class Redirect(webapp2.RequestHandler):
+    def get(self):
+        path = str(self.request.path).split(os.path.sep)[3:]
+        self.redirect(('/%s'%os.path.sep.join(path)), permanent=True)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -56,18 +63,15 @@ class MainPage(webapp2.RequestHandler):
 
 class Error(webapp2.RequestHandler):
     def get(self):
-        self.redirect('/error.html')
-
-# def handle_404(request, response, exception):
-#     logging.exception(exception)
-#     request.redirect('http://em.geosci.xyz/error.html')
-#     response.set_status(404)
+        setTemplate(self, {}, 'error.html')
+        # self.redirect('/error.html', permanent=True)
 
 app = webapp2.WSGIApplication([
     ('/_images/.*', Images),
+    ('/en/latest/.*', Redirect),
     ('/', MainPage),
     ('/.*', Error),
 ], debug=True)
 
-app.error_handlers[404] = Error
+# app.error_handlers[404] = Error
 
