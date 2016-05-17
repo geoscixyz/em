@@ -1,31 +1,35 @@
 language: python
 python:
   - 2.7
-
 sudo: false
 
 env:
   - TEST_DIR=tests
 
 before_install:
-  - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh -O miniconda.sh; else wget http://repo.continuum.io/miniconda/Miniconda3-3.8.3-Linux-x86_64.sh -O miniconda.sh; fi
+  - openssl aes-256-cbc -K $encrypted_69967e53c837_key -iv $encrypted_69967e53c837_iv
+    -in emgeosci-eca6c1b5ec64.json.enc -out emgeosci-eca6c1b5ec64.json -d
+  - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh
+    -O miniconda.sh; else wget http://repo.continuum.io/miniconda/Miniconda3-3.8.3-Linux-x86_64.sh
+    -O miniconda.sh; fi
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
   - export PATH=/home/travis/anaconda/bin:/home/travis/miniconda/bin:$PATH
   - conda update --yes conda
 
-# command to install dependencies
 install:
-  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython sphinx
+  - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython
+    ipython sphinx
   - pip install -r requirements.txt
 
-# command to run tests
 script:
   - nosetests $TEST_DIR
 
-# Flags used here, not in `make html`:
-#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
-#  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
+# deploy:
+#   provider: gae
+#   skip_cleanup: false
+#   keyfile: emgeosci-eca6c1b5ec64.json
+#   project: emgeosci
 
 notifications:
   email:
