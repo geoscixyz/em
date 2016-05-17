@@ -35,8 +35,8 @@ fit are also provided.
 
 The depth slices of the two inversions at an elevation of 10 m are very
 similar. The overall conductivity in the upstream part is lower than that in
-the downsrteam part. These models are consistent with the preliminary
-interpertation made based on looking at the data maps. However, the inversion
+the downstream part. These models are consistent with the preliminary
+interpretation made based on looking at the data maps. However, the inversion
 made difference by rendering conductivity values that can be directly
 connected to the water samples with explicit hydrological implication.
 
