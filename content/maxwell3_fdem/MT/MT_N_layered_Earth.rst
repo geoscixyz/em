@@ -21,7 +21,7 @@ We present here a 1D modelisation of the Magnetotelluric waves in a layered Eart
 
 .. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
 
-Magnetotelluric (MT) is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
+The magnetotelluric (MT) method is a widely used geophysical technique, in particular for imaging geothermal systems, that is sensitive to Earth structures as shallow as tens of meters to depths of hundreds of kilometers. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
 In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( :math:`\prec 10^5 Hz` ), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
 
@@ -253,7 +253,9 @@ In reality, the incident wave is coming from all the possible directions in the 
 
 What is important is the refraction angle at the Air-Earth interface, the angle of the transmitted wave in the ground.
 
-As any wave, electromagnetic waves follow Snell's law, that we can derive from the Maxwell's equation.
+As any wave, electromagnetic waves follow `Snell's law`_, that we can derive from the :ref:`Maxwell's equation<maxwells_equations_index>`.
+
+.. _Snell's law: https://en.wikipedia.org/wiki/Snell%27s_law
 
 Starting from an non orthogonal incident wave, modifyig the solution for :eq:`E_wave_propagation_equation` , we now get:
 
@@ -294,8 +296,7 @@ For the transmitted wave
 .. math::
     \theta_t = sin^{-1} (\frac{||k_{air}||}{||k_{earth}||} *sin (\theta_i))  \simeq 0
 
-As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small number as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. The wave is transmitted vertically into the ground, whatever is the incident angle. Our data are then not affected by it.
-
+As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small number as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. Any wave that hits the Earth gets refracted vertically because of the extreme contrast in conductivity, regardless of the angle of incidence.
 
 
 
@@ -314,6 +315,8 @@ Notice this is a complex number, with a norm and an angle.
 
 Impendance tensor
 *****************
+
+Of course, 
 
 
 Data
