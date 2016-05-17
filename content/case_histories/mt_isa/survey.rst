@@ -57,7 +57,7 @@ through the Breakaway Shale and the expected mineralization.
 
 We generate synthetic data for the pole-dipole configuration from the numeric simulation above in order to test the resolving power of our DCR experiment. To asses if this configuration is sensitive to the mineralization at depth, we examine two scenarios; one with and one without the deep conductor. These two pole-dipole pseudo-sections using 15 electrodes spaced 100 meters apart are shown in :numref:`MIM_PDP_Simulation`. At first glance, both pseudo-sections look almost identical. Therefore, we invert these section to examine the differences in the recovered models.
 
-.. figure:: ./images/MIM_PDP_Simulation.png
+.. figure:: ./images/MIM_Sim_AppRes.png
   :align: center
   :figwidth: 50%
   :name: MIM_PDP_Simulation
@@ -67,7 +67,7 @@ We generate synthetic data for the pole-dipole configuration from the numeric si
 
 The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh of 20-m by 20-m cells discretized the subsurface. A reference and initial model of 0.05 S/m was used. The recovered models with and without the deep conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results show that the deep conductor can be resolved. The differing units such as the Mt. Norvit Horizon can be also detected.
 
-.. figure:: ./images/MIM_PDP_Simulation_NoMin.png
+.. figure:: ./images/MIM_Sim_2DCon.png
   :align: center
   :figwidth: 50%
   :name: MIM_PDP_Simulation_Model
