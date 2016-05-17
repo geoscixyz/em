@@ -3,6 +3,8 @@
 Data
 ====
 
+.. _mt_isa_data_dc:
+
 DCR
 ---
 
@@ -10,7 +12,7 @@ In preperation for the inversion, a first-pass assessment of data quality is
 completed. The MIMDAS system collects both a pole-dipole (P-DP) and a dipole-
 pole (DP-P) configuration. While sensing the same Earth, these two
 configurations can yield different responses and consequently be subject to
-different noise levels. :ref:`Data<MtISa_DCR_data>` were first seperated by
+different noise levels. :ref:`Data <MtISa_DCR_data>` were first seperated by
 line ID, then by survey configuration.
 
 Note that a large portion of the DP-P shows higher apparent conductivity data
@@ -29,6 +31,9 @@ reduce the measured potentials west of these anomalies.
 
    *  - .. raw:: html
             :file: ./images/MIM_DC2D_data.html
+
+
+.. _mt_isa_data_ip:
 
 IP
 --

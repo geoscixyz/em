@@ -3,7 +3,7 @@
 Setup
 =====
 
-The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queenland, Australia. Within this region, ten lines acquiring direct current (DCR) and induced polarization (IP) lines were placed over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa.
+The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queenland, Australia. Within this region, ten lines acquiring :ref:`direct current <mt_isa_data_dc>` (DCR) and :ref:`induced polarization <mt_isa_data_ip>` (IP) lines were placed over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa.
 
 .. figure:: images/Location_Map_KDF.png
     :align: left
