@@ -319,12 +319,14 @@ Impendance matrix
 We saw that in 1D, the horizontal orthogonal components of the electric and magnetic fields :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are linked through the :ref:`Faraday's law<faraday>` and :ref:`Ampere's law<ampere_maxwell>`. We can then write the same types of relationship for :math:`\mathbf{E_y}` and  :math:`\mathbf{H_x}` and write the system in a matrix form:
 
 .. math::
-    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) = \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ \hat{Z}_{yx} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) =  \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ -\hat{Z}_{xy} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
 
-in 1D :math:`\hat{Z}_{xy} = -\hat{Z}_{yx}`
+
+which can be generalised: 
 
 .. math::
-    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) =  \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ -\hat{Z}_{xy} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) = \left(\begin{matrix} \hat{Z}_{xx} & \hat{Z}_{xy} \\ \hat{Z}_{yx} & \hat{Z}_{yy} \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+
 
 The matrix linking the component of  :math:`\mathbf{E}` and  :math:`\mathbf{H}`  is called the impedance matrix.
 
@@ -334,7 +336,6 @@ Note: for a pure 2D Earth, the impedance matrix is also purely off-diagonal (wit
 
 Data
 ----
-
  .. figure:: images/MTdata.PNG
     :align: right
     :scale: 70% 
