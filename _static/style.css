@@ -1,3 +1,6 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
 html {
   position: relative;
   min-height: 100%;
