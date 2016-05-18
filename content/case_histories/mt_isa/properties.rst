@@ -45,5 +45,5 @@ Overall we expect the mineralization unit to be conductive and chargeable with r
 | Eastern Creek Volcanics   |  Low              | High            |  High                    |
 +---------------------------+-------------------+-----------------+--------------------------+
 
-Table of the physical properties for the geologic units in the Cluny survey area. Here, low conductivity is considered less than 100 :math:`mS/m` (10 :math:`\Omega \cdot m`). 
+Table of the physical properties for the geologic units in the Cluny survey area. Here, low conductivity is considered less than 100 :math:`mS/m` (10 :math:`\Omega \cdot m`).
 

@@ -30,8 +30,8 @@ As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system coll
 
    *  - .. raw:: html
             :file: ./images/MIM_DC2D_Inv_QC.html
- 
- 
+
+
 
  .. figure:: images/MtIsa_Data_Merge.png
     :align: right
@@ -78,7 +78,7 @@ Consistent 2D inversions in good agreement with the known geology increases our 
 
     : Perspective view of topography and electrode locations over the 3-D domain.
 
-In preparation for the 3D inversion of the DCR data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. A model mesh was constructed to discretize the subsurface into 25 x 50 x 15 m blocks. In total, 3678 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The initial inversion had 21 data outside a normalized misfit of 3, meaning that those predicted data were more than three times their uncertainties away from the observed data. They were removed and the data set was re-inverted. 
+In preparation for the 3D inversion of the DCR data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. A model mesh was constructed to discretize the subsurface into 25 x 50 x 15 m blocks. In total, 3678 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The initial inversion had 21 data outside a normalized misfit of 3, meaning that those predicted data were more than three times their uncertainties away from the observed data. They were removed and the data set was re-inverted.
 
 Sections through the recovered 3D conductivity model are presented in :numref:`MtIsa_3D_DCModel`. This result confirms that the geology over the Cluny region is mostly 2D, with alternating regions of high and low conductivity trending north-south. Volume rendering of high conductivity (above 1 S/m) seems to indicate the geology to be steeply dipping. See the :ref:`Interpretation Section <mt_isa_interpretation>` for more details.
 
@@ -123,7 +123,7 @@ As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system coll
     : Stacked 2-D models recovered from 10 independant 2-D inversions.
 
 
-As a final step of data quality control, the P-DP and DP-P configurations are re-merged and :ref:`re-inverted<MIM_DC2D_Inv_FULL>` in 2D to attempt to recover a single subsurface distribution of chargeability. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_IP2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, the sections are quite varying from line to line. 
+As a final step of data quality control, the P-DP and DP-P configurations are re-merged and :ref:`re-inverted<MIM_DC2D_Inv_FULL>` in 2D to attempt to recover a single subsurface distribution of chargeability. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_IP2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, the sections are quite varying from line to line.
 
 
 .. _MIM_IP2D_Inv_FULL:
@@ -141,7 +141,7 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 3D Inversion
 ************
 
-In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects.The model mesh constructed for the 3D DCR inversion were used as well as the 3D recovered conductivity model. In total, 3678 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to four times the number of data as with the 2D inversions. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. 
+In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects.The model mesh constructed for the 3D DCR inversion were used as well as the 3D recovered conductivity model. In total, 3678 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to four times the number of data as with the 2D inversions. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`.
 
 
  .. figure:: images/MtIsa_3D_IPModel.png

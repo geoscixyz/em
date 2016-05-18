@@ -10,9 +10,9 @@ DC Resistivity (DCR)
 
 The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys <DCR_index>` section. Many choices are possible for electrode layouts, but the final choice at Cluny was motivated by the following factors:
 
-(a) MIM, the company who was exploring the property, had developed their own data acquistion system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means it each electrode could serve as a current or potential and it could acquire both DCR and IP data.
+(a) MIM, the company who was exploring the property, had developed their own data acquisition system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means it each electrode could serve as a current or potential and it could acquire both DCR and IP data.
 
-(b) The area of interest is approximately 2km by 5km. Although full 3D coverage was desireable, the field acquistion was limited to 10 east-west lines. The reason for this was two fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
+(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
 
 (c) The choice of a pole-dipole was motivated by past experience that this was an effective survey for deep targets. The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a pole-dipole (P-DP) and dipole-pole (DP-P) could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
 
@@ -35,7 +35,7 @@ depends mainly on its ability to inject electrical currents into the
 mineralization. The geologic structures at Mount Isa are primarily steeply
 dipping geological units striking north-south. The unit of interest is the Mt.
 Novit Horizon which is conductive compared to the host Moondarra Siltsone. We
-also expect a large conductuctivity contrast between the Breakaway Shale unit
+also expect a large conductive contrast between the Breakaway Shale unit
 and the Native Bee siltstone, which may also be a host for mineralization.
 This alternating sequence of high and low conductivity may be an important
 factor to consider during survey design. To better understand this particular
