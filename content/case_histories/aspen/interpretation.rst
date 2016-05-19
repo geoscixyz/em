@@ -19,18 +19,7 @@ The recovered model from :ref:`pseudo-3D inversion <aspen_processing>` is interp
 
         The figure shows cross-sections at a northing of 12.6, 8.4, and 3 km. The figures are vertically exaggerated to be able to show variations in the conductivity with depth. Solid black lines indicate the tops of the Grand Rapids, Clearwater, and McMurray Formation determined from the recovered model.
 
-Cross-sectional views of the 3D interpolated model are shown in :numref:`asp10`. The recovered model shows that the topography changes from approximately 500 m to 560 m in elevation from west to east. Notably, the large conductor starting at an elevation of about 400 m does not follow the topography but instead is is very flat with a thickness between 30 and 100 m. This conductor is interpreted as the Clearwater Formation and its uniform conductivity of 7 :math:`\Omega m` and relatively uniform thickness is a first indicator that is may act well as a cap rock for SAGD operations. Above the Clearwater Formation, there are several layers, including a thin conductive unit at the surface. Below is a resistive unit that varies in thickness. It is at its thickest towards the west, with agrees with the end of the channel noted in :numref:`asp9`. Towards the east, this resistive unit things out and more conductive units underlie it. These two units are associated with the Quaternary glacial tills and the Grand Rapids Formation.
-
-.. figure:: ./images/FormationMM.png
-        :align: right
-        :figwidth: 70%
-        :name: asp11
-
-        Comparison between the top of the McMurray from (a) borehole core logging and (b) the recovered model from inversion. Panel (a) is courtesy of Imperial Oil :cite:`Imperial2013`.
-
-Isosurfaces for the tops of the Grand Rapids, Clearwater, and McMurray Formation were calculated by choosing transitional resistivity values. These boundaries are shown in :numref:`asp10`. While it was originally thought that only minimal information could be extracted about the McMurray Formation from the EM data, the calculated isosurface shows very similar structures and characteristics to the structure map by :cite:`Imperial2013`, as shown in :numref:`asp11`. In addition, the elevations recovered from the model for the McMurray Formation are very comparable to those from borehole core logging. This suggests that airborne EM can be a great exploration and first-hand interpretation tool for oil sands deposits in Alberta. The recovered model also shows that the McMurray Formation is more resistive than the other layers but it is unlikely that the airborne EM system has enough sensitivity to detect the bottom of the formation, the unconformity at the Devonian limestone, and any salts or salt dissolution that may be present. In addition, without more information, it would be difficult to interpret the thickness of the Wabiskaw Member, which is expected to be a 5 m transitional layer between the Clearwater and McMurray Formations. 
-
-The recovered layers and resistivity values in the interpolated 3D model are similar to those from an airborne time-domain survey using the AeroTEM system over a Husky property, directly north of the Aspen property (:numref:`asp1`) :cite:`ZhdanovEtAl2013`. This indicates that by using the VTEM system and the pseudo-3D inversion method, similar information can be extracted.
+Cross-sectional views of the 3D interpolated model are shown in :numref:`asp10`. The recovered model shows that the topography changes from approximately 500 m to 560 m in elevation from west to east. Notably, the large conductor starting at an elevation of about 400 m does not follow the topography but instead is is very flat with a thickness between 30 and 100 m. This conductor is interpreted as the Clearwater Formation and its uniform conductivity of 7 :math:`\Omega m` and relatively uniform thickness is a first indicator that is may act well as a cap rock for SAGD operations. Above the Clearwater Formation, there are several layers, including a thin conductive unit at the surface. Below is a resistive unit that varies in thickness. It is at its thickest towards the west, with agrees with the end of the channel noted in :numref:`asp9`. Towards the east, this resistive unit things out and more conductive units underlie it. These two units are associated with the Quaternary glacial tills and the Grand Rapids Formation. 
 
 Local pseudo-3D and 3D inversion of field data
 ----------------------------------------------
@@ -63,6 +52,4 @@ Although providing a 3D model, the above results are based on 1D inversions, whi
 Considering these findings, it is considered worthwhile to invert the airborne data in 3D. The pseudo-3D model serves as an initial and reference model, providing a warm start for the 3D inversion. A subset of 571 soundings are inverted in 3D using parallelization and local meshes :cite:`YangEtAl2014`. Plan-view and cross sections of the recovered model are compared to the course and fine pseudo-3D models in :numref:`asp11`, showing small differences in the top layers. The Clearwater Formation remains relatively unchanged, as was expected. The 3D model is shown in :numref:`asp14`.
 
 .. todo:: create a movie scrolling through the 3D model rather than a single view
-
-
 
