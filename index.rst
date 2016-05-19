@@ -19,10 +19,10 @@ functions. Rather, our emphasis is on using analytic and numerical solutions
 to understand electromagnetic  fields and fluxes obtained from various types
 of transmitters in different geological environments.
 
-Our emphasis is on fundamentals and applications and correspondingly `Case
-Histories`_ play an essential role. These provide the motivation for using
-electromagnetics and show the success, or not, of their application in making
-an impact upon the problem at hand.
+Our emphasis is on fundamentals and applications and correspondingly
+:ref:`case_histories_index` play an essential role. These provide the
+motivation for using electromagnetics and show the success, or not, of their
+application in making an impact upon the problem at hand.
 
 .. _Case Histories: http://case-histories.geosci.xyz
 
