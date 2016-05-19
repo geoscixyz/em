@@ -63,12 +63,12 @@ handlers:
   static_files: _build/html/index.html
   upload: _build/html/index.html
 
+- url: /.*
+  static_files: _templates/error.html
+  upload: _templates/error.html
+
 - url: .*
   script: emgeosci.app
-
-- url: /.*
-  static_files: _build/html/error.html
-  upload: _build/html/error.html
 
 # Recommended file skipping declaration from the GAE tutorials
 skip_files:
