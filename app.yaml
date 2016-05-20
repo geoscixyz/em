@@ -21,7 +21,7 @@ handlers:
 # webfonts
 - url: /(.*\.(eot|svg|ttf|woff|woff2|otf))
   static_files: _build/html/\1
-  upload: _build/html/(.*\.css)
+  upload: _build/html/(.*\.(eot|svg|ttf|woff|woff2|otf))
 
 # javascript
 - url: /(.*\.js)
