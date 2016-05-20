@@ -27,6 +27,10 @@ Mt. Isa
     interpretation
     synthesis
 
+.. figure:: images/MtIsa_Cover.png
+    :align: left
+    :figwidth: 100%
+
 .. **References**
 
 ..  .. bibliography:: ../../references.bib
