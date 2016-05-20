@@ -25,6 +25,7 @@ The titles, and EM systems used are provided below.
 
     mt_isa/index
     bookpurnong/index
+    emc/index
 
 - MIM: Mineral Exploration; DCR and IP; (2D and 3D inversions)
 - Bukpurnong: Environmental (ground water) FDEM (Resolve), TDEM (SkyTEM)
