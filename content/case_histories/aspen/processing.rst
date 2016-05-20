@@ -3,7 +3,9 @@
 Processing
 ==========
 
-A synthetic model is first used to better understand the time-domain data beforethe field data are inverted in 1D and 3D.
+The field data were provided in units of pV/(Am^4), meaning the data are normalized by the current (A) in the transmitter, the area (m^2) of the transmitter, and the area (m^2) of the receiver. In order for us to work with these data, we first change them so the units are V/(Am^2). This assumes that the receiver is at a point location rather than being defined as a loop with a certain area. For the VTEM system used in 2014, the transmitter had a radius of 13 m. The transmitter area was multiplied by the data to get the data in the desired units.
+
+Our goal is to obtain a 3D model of the subsurface to understand how the resistivity changes with depth and in the northing and easting directions. Before actually working with the field time-domain data, we use a synthetic model is to better understand the data and determine what parameters should be used in the inversion.
 
 .. todo:: fix phid phim equation references
 
