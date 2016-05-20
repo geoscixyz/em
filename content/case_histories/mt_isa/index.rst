@@ -16,6 +16,12 @@ Mt. Isa
     to the fundamentals of EM as presented in EM.geosci.xyz.
 
 
+.. figure:: images/MtIsa_Cover.png
+    :align: left
+    :figwidth: 100%
+
+**Contents**
+
 .. toctree::
     :maxdepth: 1
 
@@ -27,13 +33,3 @@ Mt. Isa
     interpretation
     synthesis
 
-.. figure:: images/MtIsa_Cover.png
-    :align: left
-    :figwidth: 100%
-
-.. **References**
-
-..  .. bibliography:: ../../references.bib
-..     :style: alpha
-..     :encoding: latex+latin
-..     :filter: docname in docnames
