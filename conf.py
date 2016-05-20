@@ -153,7 +153,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ("Why", "content/introduction/introduction_about"),
+          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          ('Why', 'content/introduction/introduction_about'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
