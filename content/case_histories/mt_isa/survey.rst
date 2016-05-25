@@ -3,42 +3,45 @@
 Survey
 ======
 
-From the :ref:`Property<mt_isa_properties>` segment of the case history, it is expected that the mineralization is both conductive and chargeable. A DCIP survey is therefore appropriate. Other factors that suggest this is a good choice is that there is minimal topography in the area and DCIP surveys have been successfully carried out in other areas of the Mt. Isa region.
+It is expected that the mineralization is both  :ref:`conductive and chargeable <mt_isa_properties>`. A DC/IP survey is therefore an appropriate (and desired) choice for geophysical exploration. In this section, we explore the survey design used at the Cluny property.
 
 DC Resistivity (DCR)
 --------------------
 
-The fundamentals for a DCR survey can be found in the :ref:`Geophysical
-Surveys: DCR<DCR_index>` section. Many choices are possible for electrode
-layouts and the final choice is motivated by the following factors:
+The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys <DCR_index>` section. Many choices are possible for electrode layouts, but the final choice at Cluny was motivated by the following factors:
 
+(a) MIM, the company who was exploring the property, had developed their own data acquisition system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means it each electrode could serve as a current or potential and it could acquire both DCR and IP data.
 
-(a) MIM, the company who was exploring the property, had developed their own
-data acquistion system `MIMDAS`_.  The cable had xxxx connections, each of
-which could serve as a current electrode or potential electrode.
+(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
+
+(c) The choice of a pole-dipole was motivated by past experience that this was an effective survey for deep targets. The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a pole-dipole (P-DP) and dipole-pole (DP-P) could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
+
+.. figure:: ./images/MIM_PDP_Example.png
+  :align: center
+  :figwidth: 50%
+  :name: MIM_PDP_EX
+
+  : The layout for a single current electrode (red) and potential electrode locations (black). Moving the current electrode and repeating the experiment leads to a pseudo-section (coloured dots).
+
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
-
-(b) The area of interest is approximately 5km x 5km. Although full 3D coverage
-was desireable, the field acquistion was limited to 10 east-west lines. A
-full set of xxx electrodes were deployed along each line.
-
-(c) The choice of a pole-dipole was motivated by past experience that this was
-an effective survey for deep targets. The layout shown in {figure} indicates
-a current electrode at postion 1 with potentials measured across all other
-dipoles. This produces a :ref:`pseudo-section<dcr_pseudosection>`.
 
 
 Survey Design
 -------------
 
-
-The geologic structures are primarily striking north-south and a cross-section
-of the geologic units and their resistivities is shown in. The unit of
-interest is the Mt. Novit Horizon which is conductive compared to the host
-Moondarra Siltsone. Two forward modellings are generated. The first is without
-the conductor, the second is with.  The pole-dipole pseudo-sections obtained
-with 15 electrodes spaced 100 meters apart is shown in :numref:`MIM_DPP_Simulation`.
+The :ref:`detectability <surveyDetectability>` property of a given survey
+depends mainly on its ability to inject electrical currents into the
+mineralization. The geologic structures at Mount Isa are primarily steeply
+dipping geological units striking north-south. The unit of interest is the Mt.
+Novit Horizon which is conductive compared to the host Moondarra Siltsone. We
+also expect a large conductive contrast between the Breakaway Shale unit
+and the Native Bee siltstone, which may also be a host for mineralization.
+This alternating sequence of high and low conductivity may be an important
+factor to consider during survey design. To better understand this particular
+setting, we :ref:`simulate<Mt_Isa_Simulation>` the flow of current through the
+expected geology. Important to note the current channeling of the source
+through the Breakaway Shale and the expected mineralization.
 
 .. _Mt_Isa_Simulation:
 .. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model
@@ -48,37 +51,28 @@ with 15 electrodes spaced 100 meters apart is shown in :numref:`MIM_DPP_Simulati
 
    *  - .. raw:: html
             :file: ./images/Mt_Isa_Current_Anim.html
+   *  - Current density (arrows) and charge density (color) for a range of source locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
 
-Current density (arrows) and charge density (color) for a range of source
-locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
 
- .. figure:: ./images/MIM_PDP_Simulation.png
-    :align: right
-    :figwidth: 50%
-    :name: MIM_PDP_Simulation
 
- .. figure:: ./images/MIM_DPP_Simulation.png
-    :align: right
-    :figwidth: 50%
-    :name: MIM_DPP_Simulation
+We generate synthetic data for the pole-dipole configuration from the numeric simulation above in order to test the resolving power of our DCR experiment. To asses if this configuration is sensitive to the mineralization at depth, we examine two scenarios; one with and one without the deep conductor. These two pole-dipole pseudo-sections using 15 electrodes spaced 100 meters apart are shown in :numref:`MIM_PDP_Simulation`. At first glance, both pseudo-sections look almost identical. Therefore, we invert these section to examine the differences in the recovered models.
 
-    (Top) Pseudo conductivity section (log10) along the geologicalsection.
-    ((Bottom) Recovered 2D conductivity model from the inversion of DCR data.
-    (The true conductivity model is shown in grey scale for reference.
+.. figure:: ./images/MIM_Sim_AppRes.png
+  :align: center
+  :figwidth: 50%
+  :name: MIM_PDP_Simulation
 
-To determine if the survey is well designed we use the criteria in
-{link:general  basics of survey design where we look at the absolute
-difference and relative difference  ?Sarah} The difference sections are shown
-in {figure}. They show xxx If errors are assigned as 5% + floor 0.0001 V then
-the secondary signal from the target is detectable.
+  : Log10 pseudo-conductivity section along the geological section (top) with and (bottom) without a deep conductor. The section was created by simulating a pole-dipole survey.
 
-Inversion of Synthetic data Following the work {link: general basics of survey
-design} we invert the synthetic data using 2D algorithm.  The parameters used
-in the inversion were:  xxxxx. The Mt. Norvit Horizon is evident.
 
-Using 2D forward modelling, we can also simulate current flows that could be
-expected at Mt. Isa. Note in particular the current channeling into the
-conductive Breakaway Shale as well as through the deeper mineralization.
+The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh of 20-m by 20-m cells discretized the subsurface. A reference and initial model of 0.05 S/m was used. The recovered models with and without the deep conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results show that the deep conductor can be resolved. The differing units such as the Mt. Norvit Horizon can be also detected.
+
+.. figure:: ./images/MIM_Sim_2DCon.png
+  :align: center
+  :figwidth: 50%
+  :name: MIM_PDP_Simulation_Model
+
+  : The recovered 2D conductivity models from the inversion of the pole-dipole data shown in :numref:`MIM_PDP_Simulation`. The top figure contains the deep conductor and the bottom lacks a deep conductor. In both figures, the true conductivity model is shown in grey scale for reference.
 
 
 

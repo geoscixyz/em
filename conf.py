@@ -17,8 +17,8 @@ import os
 import shlex
 import sphinx_bootstrap_theme
 
-sys.path.append('./examples')
-sys.path.append('./_ext')
+sys.path.append(os.path.abspath('./examples'))
+sys.path.append(os.path.abspath('./_ext'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -61,8 +61,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """UBCGIF 2015-2016"""
-author = u'UBCGIF'
+copyright = """GeoSci 2015-2016"""
+author = u'GeoSci Developers'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -153,7 +153,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ("Why", "content/introduction/introduction_about"),
+          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          ('Why', 'content/introduction/introduction_about'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
