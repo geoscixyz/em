@@ -40,7 +40,7 @@ script:
   - nosetests $TEST_DIR
 
   # - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then
-  - gcloud -q preview app deploy ./geoscixyz/app.yaml --version 1 --promote;
+  - gcloud -q preview app deploy ./app.yaml --version 1 --promote;
     # fi
 
 notifications:
