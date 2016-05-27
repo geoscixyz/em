@@ -12,7 +12,7 @@ The vector potential for a harmonic electric dipole has a simple mathematical re
 For an electric current dipole in the :math:`\hat{x}` direction, and with moment :math:`I ds`, the vector potential :math:`\mathbf{A}` is
 
 .. math::
-	\mathbf{A}(\mathbf{r}) = \frac{I ds}{4\pi \mathbf{r}} e^{-ik\mathbf{r}} \hat{x}
+	\mathbf{A}(\mathbf{r}) = \frac{I ds}{4\pi r} e^{-ikr} \hat{x}
 	:label: A_Potential_for_Je_x
 
 where :math:`k = (\omega^2\mu\epsilon -i\omega\mu\sigma)^{1/2}` 

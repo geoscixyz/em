@@ -34,7 +34,7 @@ The equation with boundary conditions , is solved to generate :math:`\mathbf{A}`
 If :math:`\mathbf{J_e^s}` has only a single component, the :math:`\mathbf{A}` only has a component in that direction. The scalar Green's function for :eq:`Helmholtz_A` is
 
 .. math::
-	G(\mathbf{r}) = \frac{e^{-ik\mathbf{r}}}{4\pi \mathbf{r}}.
+	G(r) = \frac{e^{-ikr}}{4\pi r}.
 	:label: GreensFncFullSpace
 
 and hence the vector potential for an arbitrary electric current source is 
@@ -52,7 +52,7 @@ For an electric current dipole oriented in the :math:`\hat{x}` direction
 and 
 
 .. math::
-	\mathbf{A}(\mathbf{r}) = \frac{I ds}{4\pi \mathbf{r}} e^{-ik\mathbf{r}} \hat{x}
+	\mathbf{A}(\mathbf{r}) = \frac{I ds}{4\pi r} e^{-ikr} \hat{x}
 	:label: A_Potential_for_Je_x
 
 
