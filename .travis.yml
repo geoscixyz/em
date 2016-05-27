@@ -1,14 +1,17 @@
 language: python
 python:
-  - 2.7
+- 2.7
 sudo: false
 
 env:
   - TEST_DIR=tests
+  - GAE_PYTHONPATH=${HOME}/.cache/google_appengine PATH=$PATH:${HOME}/google-cloud-sdk/bin
+    PYTHONPATH=${PYTHONPATH}:${GAE_PYTHONPATH} CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 before_install:
+  - python scripts/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}");
   - openssl aes-256-cbc -K $encrypted_69967e53c837_key -iv $encrypted_69967e53c837_iv
-    -in emgeosci-eca6c1b5ec64.json.enc -out emgeosci-eca6c1b5ec64.json -d
+    -in credentials.tar.gz.enc -out credentials.tar.gz -d
   - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh
     -O miniconda.sh; else wget http://repo.continuum.io/miniconda/Miniconda3-3.8.3-Linux-x86_64.sh
     -O miniconda.sh; fi
@@ -17,20 +20,29 @@ before_install:
   - export PATH=/home/travis/anaconda/bin:/home/travis/miniconda/bin:$PATH
   - conda update --yes conda
 
+  # If the SDK is not already cached, download it and unpack it
+  - if [ ! -d ${HOME}/google-cloud-sdk ]; then
+       curl https://sdk.cloud.google.com | bash;
+    fi
+  - tar -xzf credentials.tar.gz
+  - mkdir -p lib
+  # Here we use the decrypted service account credentials to authenticate the command line tool
+  - gcloud auth activate-service-account --key-file client-secret.json
+
 install:
   - conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython
     ipython sphinx
   - pip install -r requirements.txt
+  - gcloud config set project emgeosci
+  - gcloud -q components update gae-python
 
 script:
   - nosetests $TEST_DIR
 
-# deploy:
-#   provider: gae
-#   skip_cleanup: false
-#   keyfile: emgeosci-eca6c1b5ec64.json
-#   project: emgeosci
+  # - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then
+  - gcloud -q preview app deploy ./geoscixyz/app.yaml --version 1 --promote;
+    # fi
 
 notifications:
   email:
-    - lindseyheagy@gmail.com
+  - lindseyheagy@gmail.com
