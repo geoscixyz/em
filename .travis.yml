@@ -17,7 +17,6 @@ before_install:
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
   - export PATH=/home/travis/anaconda/bin:/home/travis/miniconda/bin:$PATH
-  - conda update --yes conda
 
   # If the SDK is not already cached, download it and unpack it
   - if [ ! -d ${HOME}/google-cloud-sdk ]; then
