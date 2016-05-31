@@ -209,7 +209,7 @@ the interface.
 .. note::
   Figures were created by `Luz`_ and are licenced under `CC BY 2.0`_
 
-.. _Luz: https://luzcaudillo.wordpress.com/
+.. _Luz: https://github.com/lacmajedrez
 
 .. _CC BY 2.0: http://creativecommons.org/licenses/by/2.0/
 
