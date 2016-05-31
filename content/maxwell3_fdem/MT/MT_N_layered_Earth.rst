@@ -21,7 +21,7 @@ We present here a 1D modelisation of the Magnetotelluric waves in a layered Eart
 
 .. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
 
-Magnetotelluric is a widely used method, especially for imaging geothermal. Its ability to image deep structure, up to several kilometers depth, is unique in EM geophysics. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
+The magnetotelluric (MT) method is a widely used geophysical technique, in particular for imaging geothermal systems, that is sensitive to Earth structures as shallow as tens of meters to depths of hundreds of kilometers. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
 In Magnetotelluric problems, the key diagnostic physical property is :ref:`electrical conductivity<electrical_conductivity_index>` :math:`\sigma`. In most cases we expect the contrasts of the others physical properties (magnetic permeability, dielectric permittivity) to be negligible compared to the electrical conductivity contrasts. As a result, at sufficiently low frequencies ( :math:`\prec 10^5 Hz` ), the impact of the other physical properties  contrasts on the EM response is expected to be negligible.
 
@@ -85,7 +85,7 @@ with k the wavenumber:
     :label: kwavenumber
 
 
-In the ground, we can generally assume that the displacement current is negligible, which means :math:`\sigma \ll \omega \varepsilon`. In this case 
+In the ground, we can generally assume that the displacement current is negligible, which means :math:`\sigma \gg \omega \varepsilon`. In this case 
 
 .. math::
     k_{ground} \simeq (1-i) \sqrt{ \frac{\omega \mu \sigma}{2} }
@@ -241,11 +241,65 @@ These coefficients tell us how much energy of the incoming has been reflected or
 Refraction angle
 ****************
 
+.. figure:: images/RefractionAngle.png
+ :align: right
+ :scale: 50% 
+ :name: Refraction_MT
+
+ Refraction and Reflection angles
+
+
 In reality, the incident wave is coming from all the possible directions in the air. So how valid is our assumption of an incident vertical wave?
 
 What is important is the refraction angle at the Air-Earth interface, the angle of the transmitted wave in the ground.
 
-As any wave, electromagnetic waves follow Snell's law
+As any wave, electromagnetic waves follow `Snell's law`_, that we can derive from the :ref:`Maxwell's equation<maxwells_equations_index>`.
+
+.. _Snell's law: https://en.wikipedia.org/wiki/Snell%27s_law
+
+Starting from an non orthogonal incident wave, modifyig the solution for :eq:`E_wave_propagation_equation` , we now get:
+
+.. math::
+    E^i(x,z) =||E^i|| e^{-i k_{iz} z} e^{-i k_{ix} x}
+
+.. math::
+    E^r(x,z) = ||E^r|| e^{i k_{rz} z} e^{-i k_{rx} x}
+
+.. math::
+    E^t(x,z) = ||E^t|| e^{-i k_{tz} z} e^{-i k_{tx} x}
+
+
+The equation :eq:`Continuity of E` is still valid, for all x. This is possible if and only if :math:`||k_{ix}||=||k_{rx}||=||k_{tx}||`
+
+
+For the reflected wave
+
+.. math::
+   ||k_{ix}||=||k_{rx}||
+
+.. math::
+    ||k_{air}|| *sin (\theta_i) = ||k_{air}||*sin (\theta_r)
+
+.. math::
+    \theta_i = \theta_r
+
+We find the intuitive result that the wave is reflected at the same angle than the incident wave
+
+For the transmitted wave
+
+.. math::
+    ||k_{ix}||=||k_{tx}||
+
+.. math::
+    ||k_{air}|| *sin \theta_i = ||k_{earth}||*sin \theta_t
+
+.. math::
+    \theta_t = sin^{-1} (\frac{||k_{air}||}{||k_{earth}||} *sin (\theta_i))  \simeq 0
+
+As :math:`\frac{||k_{air}||}{||k_{earth}||}` is a really small number as the conductivity of the earth is usually several order of magnitude higher than the one of the air, :math:`\theta_t \simeq 0`. Any wave that hits the Earth gets refracted vertically because of the extreme contrast in conductivity, regardless of the angle of incidence.
+
+
+
 
 Field Acquisition
 -----------------
@@ -259,13 +313,29 @@ In MT, the source is unknown but we are avoiding the problem by measuring the ra
 
 Notice this is a complex number, with a norm and an angle.
 
-Impendance tensor
+Impendance matrix
 *****************
 
+We saw that in 1D, the horizontal orthogonal components of the electric and magnetic fields :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are linked through the :ref:`Faraday's law<faraday>` and :ref:`Ampere's law<ampere_maxwell>`. We can then write the same types of relationship for :math:`\mathbf{E_y}` and  :math:`\mathbf{H_x}` and write the system in a matrix form:
+
+.. math::
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) =  \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ -\hat{Z}_{xy} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+
+
+which can be generalised: 
+
+.. math::
+    \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) = \left(\begin{matrix} \hat{Z}_{xx} & \hat{Z}_{xy} \\ \hat{Z}_{yx} & \hat{Z}_{yy} \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
+
+
+The matrix linking the component of  :math:`\mathbf{E}` and  :math:`\mathbf{H}`  is called the impedance matrix.
+
+On field, we do not know a priori the orientation of the source wave. This orientation can also changes over times if the source wave is polarised. We usally record both horizontals components of each field. If the Earth is purely 1D, a simple rotation of the matrix would allow to find the antisymetric matrix and thus obtain the apparent impedance :math:`\hat{Z}_{xy}`.
+
+Note: for a pure 2D Earth, the impedance matrix is also purely off-diagonal (with the right rotation if needed) but is not anymore antisymetric. In 3D the impedance matrix is a full matrix.
 
 Data
 ----
-
  .. figure:: images/MTdata.PNG
     :align: right
     :scale: 70% 
