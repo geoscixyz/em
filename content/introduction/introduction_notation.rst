@@ -4,20 +4,19 @@ Notation and Conventions
 ========================
 
 We choose the notation set forth in :cite:`ward1988`. Their chapter has
-been the foundation of many research papers, is used by geophysicists world-
-wide, and it is clean and unambiguous.
+been the foundation of many research papers, is used by geophysicists world-wide, and it is clean and unambiguous.
 
 Vectors
 -------
 
-- vectors are bold:                          
-    * ie. :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`                       
+- vectors and vectorial operators are bold:                          
+    * e.g., :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`                       
 - tensors are bold and underlined:           
-    * ie. :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`   
+    * e.g., :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`   
 - time domain variable are lower case:       
-    * ie. :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}` 
+    * e.g., :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}` 
 - frequency domain variables are upper case: 
-    * ie. :math:`\mathbf{E}`, :math:`\mathbf{J}`, :math:`\mathbf{H}`, :math:`\mathbf{B}`
+    * e.g., :math:`\mathbf{E}`, :math:`\mathbf{J}`, :math:`\mathbf{H}`, :math:`\mathbf{B}`
 
 Integrals
 ---------
@@ -26,7 +25,7 @@ Integrals
     .. math::
         \int_V f ~dv
 
-   or over a closed volume
+   or over a closed volume:
     .. math::
         \oint_V f ~dv
 
@@ -38,11 +37,11 @@ Integrals
     .. math::
         \oint_S \mathbf{f} \cdot \mathbf{da} = \oint_S \mathbf{f} \cdot \mathbf{\hat{n}} ~da
 
-- Integrating a vector function over a line: 
+- Integrating a vector function over a curve: 
     .. math::
         \int_C \mathbf{f} \cdot \mathbf{dl} = \int_C \mathbf{f} \cdot \mathbf{\hat{n}} ~dl
 
-   or over a closed surface:
+   or over a closed curve:
     .. math::
         \oint_C \mathbf{f} \cdot \mathbf{dl} = \oint_C \mathbf{f} \cdot \mathbf{\hat{n}} ~dl
 
