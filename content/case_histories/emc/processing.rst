@@ -3,7 +3,7 @@
 Processing
 ==========
 
-To understand the first-order conductivity structures in the data, we calculate the divergence of the tippers using horizontal derivatives for each in-phase and quadrature component per frequency :cite:`LoZang2008`:
+To understand the first-order conductivity structures in the data, we calculate the divergence of the tippers using horizontal derivatives for each in-phase and quadrature component per frequency :cite:`lo08`:
 
 .. math:: DT = \nabla \cdot T = \frac{\partial T_{zx}}{\partial x} + \frac{\partial T_{zy}}{\partial y},
 
