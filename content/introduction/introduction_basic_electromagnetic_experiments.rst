@@ -6,7 +6,7 @@ Basic Electromagnetic Experiments
 In :ref:`Case Histories<case_histories_index>` we list a number of problems of
 relevance to today's society. In most of those problems there is a requirement
 to determine what is beneath the surface without direct sampling. This is the
-realm of geophysics. In a generic geophysical survey energy is input to the
+realm of geophysics. In a generic geophysical survey, energy is input to the
 ground. This energy propagates through the subsurface and signals are
 recorded. We briefly discuss each of these below:
 
@@ -19,7 +19,7 @@ The properties of relevance to electromagnetics are:
 
 The success of a geophysical survey depends upon how the physical properties
 of a sought target or geologic structure differ from the background host
-material. If difference exist then a particular geophysical survey that is
+material. If difference exist, then a particular geophysical survey that is
 sensitive to that physical property can be selected. In :ref:`Case Histories
 <case_histories_index>` the reader is invited to view each of the problems and
 determine which of the above properties, or any, might be useful. Making this
@@ -54,7 +54,7 @@ which they travelled.
 Although the data contain information about the subsurface, subsequent
 processing and inversion are required to extract meaningful information. This
 is conceptualized in :numref:`basic_inversion`. The item "Forward" refers to
-predicting the responses from the survey when the physical properties are
+predicting the electromagnetic responses from the survey when the physical properties are
 known. The item "Inverse" refers to the procedure for generating a physical
 property distribution that explains the observations.
 
