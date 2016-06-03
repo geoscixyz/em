@@ -55,7 +55,7 @@ shown in :numref:`MIMDAS_layout`.
 
 **MIMDAS** :
 
-.. figure:: ./images/MIMDASlayout.jpeg
+.. figure:: ./images/MIMDASlayout.jpg
    :scale: 90%
    :align: center
    :name: MIMDAS_layout
