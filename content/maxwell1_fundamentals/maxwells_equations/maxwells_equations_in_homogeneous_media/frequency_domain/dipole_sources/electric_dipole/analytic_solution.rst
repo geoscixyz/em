@@ -67,12 +67,12 @@ The electric and magnetic fields expressed in terms of :math:`\mathbf{A}` are
 In component form the electric field is given by
 
 .. math::
-	\mathbf{E}_e = \frac{I ds}{4 \pi \sigma} \left[ \left( k^2 + \frac{\partial^2}{\partial x^2} \right) \hat{x} + \frac{\partial^2}{\partial x \partial y} \hat{y} + \frac{\partial^2}{\partial x \partial z} \hat{z} \right] \frac{e^{-ikr}}{r}
+	\mathbf{E}_e = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon)} \left[ \left( k^2 + \frac{\partial^2}{\partial x^2} \right) \hat{x} + \frac{\partial^2}{\partial x \partial y} \hat{y} + \frac{\partial^2}{\partial x \partial z} \hat{z} \right] \frac{e^{-ikr}}{r}
 
 which becomes
 
 .. math::
-	\mathbf{E}_e = \frac{I ds}{4 \pi \sigma r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
+	\mathbf{E}_e = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
 	:label: E_Cartesian
 
 While the magnetic field is equal to
