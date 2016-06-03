@@ -8,7 +8,7 @@ relevance to today's society. In most of those problems there is a requirement
 to determine what is beneath the surface without direct sampling. This is the
 realm of geophysics. In a generic geophysical survey, energy is input to the
 ground. This energy propagates through the subsurface and signals are
-recorded. We briefly discuss each of these below:
+recorded. We briefly discuss each of the elements involved in a generic geophysical survey below.
 
 :ref:`Physical properties<physical_properties_index>` : Earth materials can be characterized in terms of their physical properties.
 The properties of relevance to electromagnetics are:
