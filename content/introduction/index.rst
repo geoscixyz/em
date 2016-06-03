@@ -16,7 +16,7 @@ Introduction
 How to use this resource
 ------------------------
 
-There are multiple ways to use em.geosci
+There are multiple ways to use em.geosci:
 
 - to ask a question about some aspect of electromagnetics
 
