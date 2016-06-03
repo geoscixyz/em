@@ -27,7 +27,7 @@ current wire (red) used for a DC/IP survey is shown in
 :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires
 (orange).
 
-.. figure:: ./images/current_receiver_wire.jpg
+.. figure:: images/current_receiver_wire.jpg
    :scale: 10%
    :align: center
    :name: current_receiver_wire_DC
