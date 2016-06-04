@@ -7,14 +7,14 @@ Membrane polarization occurs when pore space narrows to within several
 boundary layer thicknesses (which is the thickness of ions adsorbed to a
 surface).
 
- .. figure:: ../figures/memb1.gif
+ .. figure:: ../images/memb1.gif
 	:align: center
 	:scale: 100 %
 
 Charges cannot flow easily, so they accumulate when an electric field is
 applied.
 
- .. figure:: ../figures/memb2.gif
+ .. figure:: ../images/memb2.gif
 	:figclass: center
 	:align: center
 	:scale: 100 %
@@ -23,13 +23,13 @@ applied.
 The result is a net charge dipole which adds to any other voltages measured at
 the surface.
 
- .. figure:: ../figures/memb3.gif
+ .. figure:: ../images/memb3.gif
 	:align: center
 	:scale: 100 %
 
 A second form of membrane polarization is similar to the first:
 
- .. figure:: ../figures/memb_pol_2nd_type.gif
+ .. figure:: ../images/memb_pol_2nd_type.gif
 	:align: right
 	:scale: 100	%
 
