@@ -19,6 +19,13 @@ class Doc_Test(unittest.TestCase):
             "%s"%(html_path)])
         assert check == 0
 
+
+        def test_images(self):
+            images_path = os.path.sep.join(self.path_to_docs.split(os.path.sep) + ['_build']+['html']+['_images'])
+            for img in os.listdir(images_path):
+                assert img[-3:] in ['png', 'jpg', 'gif'], 'Figure file extension must be png, jpg, gif, not %s'%img
+
+
     def test_latex(self):
         doctrees_path = os.path.sep.join(self.path_to_docs.split(os.path.sep) + ['_build']+['doctrees'])
         latex_path = os.path.sep.join(self.path_to_docs.split(os.path.sep) + ['_build']+['latex'])
@@ -38,6 +45,7 @@ class Doc_Test(unittest.TestCase):
             "%s"%(self.path_to_docs),
             "%s"%(link_path)])
         assert check == 0
+
 
 if __name__ == '__main__':
     unittest.main()
