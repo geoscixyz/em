@@ -13,7 +13,7 @@ This work follows the derivation in :cite:`ward1988` and is supported by apps de
 
 .. _binder:  http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
 
- .. image:: http://mybinder.org/badge.svg 
+ .. image:: http://mybinder.org/badge.svg
     :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/Maxwell2_DC/electrostatic_sphere/ElectrostaticSphere_example.ipynb
     :align: center
 
@@ -60,7 +60,7 @@ considering the zero-frequency case, in which case, Maxwell's equations are
 .. math::
 	\nabla \times \mathbf{e} = 0
 	:label: Faraday_DC
-	
+
 .. math::
 	\nabla \times \mathbf{h} = \mathbf{j}
 	:label: Ampere_DC
@@ -87,7 +87,7 @@ equivalent to the amount of work done to bring a positive charge from
 infinity to the point :math:`p`.
 
 
-Potentials 
+Potentials
 ----------
 
 Assuming an x-directed uniform electric field and zero potential at infinity,
@@ -132,7 +132,7 @@ and inside the sphere :math:`(r < R)`
 
 
 .. plot::
-    
+
     from examples.sphere import *
 
     sig0 = 10.**-3.          # conductivity of the whole-space in S/m
@@ -161,28 +161,28 @@ and inside the sphere :math:`(r < R)`
 
     plt.tight_layout()
     plt.show()
-    
+
 .. _dc_e_field:
 
 Electric Field
 --------------
 
-When an external electric field crosses conductivity discontinuities within heterogeneous media, 
-it leads to charge buildup on the interface, which immediately gives 
-rise to a secondary electric field governed by Gauss's Law, to oppose the change of the primary field. 
-Considering that the electric field is defined as the negative gradient of the potential, 
+When an external electric field crosses conductivity discontinuities within heterogeneous media,
+it leads to charge buildup on the interface, which immediately gives
+rise to a secondary electric field governed by Gauss's Law, to oppose the change of the primary field.
+Considering that the electric field is defined as the negative gradient of the potential,
 according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at any point (x,y,z) is
 
 .. math::
     E_1 = E_0\mathbf{\hat{x}} + E_0\frac{\sigma_1-\sigma_0}{\sigma_1+2\sigma_0}\frac{R^3}{r^5}\big[(2x^2 - y^2 - z^2)\mathbf{\hat{x}} + (3xy)\mathbf{\hat{y}} + (3xz)\mathbf{\hat{z}}\big] \; (r > R)
     :label: eField_outside
-    
+
 .. math::
     E_2 = E_0\frac{3\sigma_0}{\sigma_1+2\sigma_0}\mathbf{\hat{x}} \; (r < R)
     :label: eField_inside
-	
+
 .. plot::
-    
+
     from examples.sphere import *
 
     sig0 = 10.**-3.          # conductivity of the whole-space in S/m
@@ -218,38 +218,38 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
 Current Density
 ---------------
 
-The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space. 
-According to Ohm's law there is a linear relationship between the current density and the electric field at any location within the field: 
-:math:`\mathbf{J} = \sigma \mathbf{E}`. This can be directly used to compute both the total and the primary current densities. 
+The current density describes the magnitude of the electric current per unit cross-sectional area at a given point in space.
+According to Ohm's law there is a linear relationship between the current density and the electric field at any location within the field:
+:math:`\mathbf{J} = \sigma \mathbf{E}`. This can be directly used to compute both the total and the primary current densities.
 
 Secondary Current
 ^^^^^^^^^^^^^^^^^
 
 The secondary current density is defined as a difference between the total
-current density, :math:`\mathbf{J_T} = \sigma \mathbf{E_T}` and the primary 
+current density, :math:`\mathbf{J_T} = \sigma \mathbf{E_T}` and the primary
 current :math:`\mathbf{J_0} = \sigma_0 \mathbf{E_0}`
 
 .. math::
-    \mathbf{J_s} &= \mathbf{J_T} - \mathbf{J_0} \
-                 &= \sigma\mathbf{E_T} - \sigma_0 \mathbf{E_0} \
-                 &= (\sigma_0 + \Delta\sigma)(\mathbf{E_0} + \mathbf{E_s}) - \sigma_0 \mathbf{E_0} \
+    \mathbf{J_s} &= \mathbf{J_T} - \mathbf{J_0} \\
+                 &= \sigma\mathbf{E_T} - \sigma_0 \mathbf{E_0} \\
+                 &= (\sigma_0 + \Delta\sigma)(\mathbf{E_0} + \mathbf{E_s}) - \sigma_0 \mathbf{E_0} \\
                  &= \Delta\sigma\mathbf{E_0}  + \sigma \mathbf{E_s}
-    :label: Secondary_Current_Definition
+    :label: SecondaryCurrentDefinition
 
 
-Outside the sphere, the secondary current :math:`\mathbf{J_s}` acts as a electric dipole, due to and in 
+Outside the sphere, the secondary current :math:`\mathbf{J_s}` acts as a electric dipole, due to and in
 accordance with the charge build-up at the interface (see Charge Accumulation below).
 
-Inside a conductive sphere, :math:`\mathbf{J_T}` is bigger than :math:`\mathbf{J_{0}}`, but in the same time 
-:math:`\mathbf{E_0}` is bigger than :math:`\mathbf{E_{Total}}`. 
-The secondary current :math:`\mathbf{J_s}` is in the reverse direction compared to the  secondary electric 
-field :math:`\mathbf{E_s}`. The boundary condition, stating that the normal component of current density is 
+Inside a conductive sphere, :math:`\mathbf{J_T}` is bigger than :math:`\mathbf{J_{0}}`, but in the same time
+:math:`\mathbf{E_0}` is bigger than :math:`\mathbf{E_{Total}}`.
+The secondary current :math:`\mathbf{J_s}` is in the reverse direction compared to the  secondary electric
+field :math:`\mathbf{E_s}`. The boundary condition, stating that the normal component of current density is
 continuous, is then respected by the secondary current.
 
-Inside a resistive sphere, :math:`\mathbf{J_T}` is smaller than :math:`\mathbf{J_{0}}` but in the same time 
-:math:`\mathbf{E_0}` is smaller than :math:`\mathbf{E_{Total}}`. 
-The secondary current :math:`\mathbf{J_s}` is again in the reverse direction compared to the  secondary 
-electric field :math:`\mathbf{E_s}` and the boundary condition for the normal component of current density 
+Inside a resistive sphere, :math:`\mathbf{J_T}` is smaller than :math:`\mathbf{J_{0}}` but in the same time
+:math:`\mathbf{E_0}` is smaller than :math:`\mathbf{E_{Total}}`.
+The secondary current :math:`\mathbf{J_s}` is again in the reverse direction compared to the  secondary
+electric field :math:`\mathbf{E_s}` and the boundary condition for the normal component of current density
 is respected.
 
 
@@ -264,7 +264,7 @@ the charges and not the reverse.
 
 
 .. plot::
-    
+
     from examples.sphere import *
 
     sig0 = 10.**-3.          # conductivity of the whole space in S/m
@@ -290,7 +290,7 @@ the charges and not the reverse.
     ax[2].set_title('Resistive Sphere: \n Total Current Density',fontsize=ftsize_title)
     ax[3] = Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
     ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
-    
+
     plt.tight_layout()
     plt.show()
 
@@ -306,19 +306,19 @@ charge accumulated on the surface of the sphere can be quantified by
 
 .. math::
 	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}V = \int_V \frac{\rho}{\varepsilon_0} \mathrm{d}V = Q
-	:label:
+	:label: chargeAccumulationIntegral
 
 Based on Gauss's theorem, surface charge density at the interface is given by
 
 .. math::
 	\mathbf{e}_1 \cdot \mathbf{n} - \mathbf{e}_2 \cdot \mathbf{n} = \frac{\rho_s}{\varepsilon_0}
-	:label:
+	:label: chargeAccumualationInterface
 
 According to :eq:`eField_outside` :eq:`eField_inside`, the charge quantities accumulated at the surface is
 
 .. math::
 	\oint_S \rho_s \mathrm{d}a = \varepsilon_0 \oint_S (\mathbf{e}_{1n} - \mathbf{e}_{2n}) = \varepsilon_0 \oint_S 3\mathbf{E_0} R^2 \frac{\sigma_1-\sigma_0}{\sigma_1 + 2\sigma_0}\cos\theta \sin\theta \mathrm{d}\phi\mathrm{d}\theta
-	:label:
+	:label: totalCharge
 
 The figure below shows surface charge density at the surface of sphere.
 
@@ -354,7 +354,7 @@ Data
 ----
 
 During a DC survey, we measure the difference of potentials between two
-electrodes, often along a profile. 
+electrodes, often along a profile.
 
 Therefore, when we look at data (as in the bottom plot), we see that they will
 depend upon the orientation of the survey line, as well as the spacing between electrodes.
@@ -371,7 +371,7 @@ The reverse is observed for a resistive sphere.
 .. LJH: this statement needs a bit more explanation
 
 .. plot::
-    
+
     import matplotlib.pyplot as plt
     from examples.sphere import *
 
@@ -426,24 +426,24 @@ case presented here, where we know that the object is a sphere, whose response c
 calculated analytically, we find several configurations that can produce
 the same data along the same profile.
 
-Here is an example of two spheres generating the response along the chosen profile. 
-The only parameters that have changed are the radius and the conductivity of the sphere. 
+Here is an example of two spheres generating the response along the chosen profile.
+The only parameters that have changed are the radius and the conductivity of the sphere.
 
 .. plot::
 
     import matplotlib.pyplot as plt
     from examples.sphere import *
 
-    sig0 = 10.**-3.         
-    sig1 = 10.**-2.         
+    sig0 = 10.**-3.
+    sig1 = 10.**-2.
     sig2 = 1.310344828 * 10**-3.
-    R0    = 20.          
+    R0    = 20.
     R1 = 40.
-    E0   = 1.           
-    n = 50             
-    xr = np.linspace(-100, 100, n) 
-    yr = xr.copy()      
-    zr = np.r_[0]          
+    E0   = 1.
+    n = 50
+    xr = np.linspace(-100, 100, n)
+    yr = xr.copy()
+    zr = np.r_[0]
     XYZ = ndgrid(xr,yr,zr)
     xstart = -100.
     ystart = 50.
@@ -461,9 +461,9 @@ The only parameters that have changed are the radius and the conductivity of the
     ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6) #Potential Conductive Sphere
     ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6) #Potential Resistive Potential
     ax = [ax0,ax1,ax2,ax3,ax4]
-    
+
     #Plot Configuration, Potential and Data
     two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt,ax)
-    
+
     plt.tight_layout()
     plt.show()
