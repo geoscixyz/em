@@ -16,7 +16,7 @@ where :math:`\rho_0` is resistivity at zero frequency, :math:`\eta` is chargeabi
 
 Left panel of :numref:`colecole_resis` shows Cole-Cole resistivity with parameters: :math:`\eta=0.5`, :math:`\tau=0.1` s, :math:`c=0.5`, :math:`\rho_{\infty}=1` ohm-m.
 
-.. figure:: ../figures/colecole_resis.png
+.. figure:: ../images/colecole_resis.png
    :align: center
    :name: colecole_resis
 

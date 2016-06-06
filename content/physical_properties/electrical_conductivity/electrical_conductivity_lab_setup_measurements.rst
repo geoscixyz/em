@@ -5,14 +5,14 @@ Lab set up and measurements
 
 Electrical conductivity can be frequency-dependent and complex-valued, which is effectively generates polarization effects with the applied electric field. This is often called induced polarization (IP) effects. In order to measure complex conductivity of a rock specimen, we inject sinusoidal that is, AC currents to the rock, and measure voltages. :numref:`GSCcompleximpedance` shows the Lab set-up at GSC. The frequency range of the Lab set-up is from 0.016 Hz - 1 MHz (logarithmically-sampled).
 
-.. figure:: ./figures/GSCcompleximpedance.png
+.. figure:: ./images/GSCcompleximpedance.png
    :scale: 50%
    :align: center
    :name: GSCcompleximpedance
 
    Complex impedance measurement system at Geological Survey of Canada (GSC).
 
-.. figure:: ./figures/ACcircuit_simple.png
+.. figure:: ./images/ACcircuit_simple.png
    :scale: 80%
    :align: left
    :name: ACcircuit_simple
@@ -34,7 +34,7 @@ where
 
 An example of lab measurements is shown :numref:`ComplexImpedance`.
 
-.. figure:: ./figures/ComplexImpedance.png
+.. figure:: ./images/ComplexImpedance.png
    :align: left
    :name: ComplexImpedance
 
@@ -58,7 +58,7 @@ Although the "DC" and "chargeability" are really parts of a complete description
 DC Conductivity / Resistivity
 -----------------------------
 
-.. figure:: ./figures/DCcircuit_simple.png
+.. figure:: ./images/DCcircuit_simple.png
    :align: left
    :scale: 80%
    :name: DCcircuit_simple
@@ -97,7 +97,7 @@ But it is usually written as
 .. math::
    \mathbf{J}= \sigma \mathbf{E}.
 
-.. figure:: ./figures/Cube.png
+.. figure:: ./images/Cube.png
    :scale: 70%
    :align: center
    :name: Cube
@@ -106,7 +106,7 @@ But it is usually written as
 
 A conceptual diagram of the lab set up for DC conductivity is shown in :numref:`DCsetup`,
 
-.. figure:: ./figures/DCsetup.png
+.. figure:: ./images/DCsetup.png
    :scale: 70%
    :align: center
    :name: DCsetup
@@ -125,7 +125,7 @@ Chargeability can be measured in both frequency and time domains  as shown in :n
 
 In both measurements, voltages measured are affected by chargeability of the rock hence we can obtain chargeability of the rock.
 
-.. figure:: ./figures/ACsetup.png
+.. figure:: ./images/ACsetup.png
    :scale: 70%
    :align: center
    :name: ACsetup
@@ -146,7 +146,7 @@ Measured voltage can be stacked and we could obtain half-period voltage as shown
 When the current switched-on in the on-time, polarization charges start to build up (:math:`V_{\infty}`) then at a late time it asymptotes to steatdy-state (:math:`V_0`). After the current is switched-off built polarization charge is decaying (:math:`V_s`) and asymptotes to zero.
 
 
-.. figure:: ./figures/DCIPcurve.png
+.. figure:: ./images/DCIPcurve.png
    :align: center
    :scale: 50%
    :name: DCIPcurve
