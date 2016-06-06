@@ -30,7 +30,7 @@ standard Gaussian pillbox (see boundary conditions page), the integral can be
 evaluated as
 
 .. math::
-    (\mathbf{j}_2-\mathbf{j}_1)\cdot\hat{\mathbf{n}} &= 0\
+    (\mathbf{j}_2-\mathbf{j}_1)\cdot\hat{\mathbf{n}} &= 0 \\
     j_{2n} &= j_{1n}.
     :label: JnCont
 
@@ -41,7 +41,7 @@ materials, we can apply Ohm's law (:math:`\mathbf{j}_f = \sigma\mathbf{e}`) to
 this equation, yielding
 
 .. math::
-    \sigma_2\mathbf{e}_{2n} &= \sigma_1\mathbf{e}_{1n}.
+    \sigma_2\mathbf{e}_{2n} = \sigma_1\mathbf{e}_{1n}.
     :label: ohmsLawCurCont
 
 Since we assume that both materials have dielectric permittivity
@@ -49,7 +49,7 @@ Since we assume that both materials have dielectric permittivity
 the normal component of electric displacement in terms of the electric field
 
 .. math::
-    \mathbf{e}_{2n}-\mathbf{e}_{1n}\ &= \frac{\tau_f}{\varepsilon_0},
+    \mathbf{e}_{2n}-\mathbf{e}_{1n}\ = \frac{\tau_f}{\varepsilon_0},
     :label: Ebound
 
 where :math:`\tau_f` is the free surface charge density on the boundary.
@@ -58,7 +58,7 @@ combining the two previous equations we can express the charge buildup in
 terms of the ratio of the two conductivities
 
 .. math::
-    \frac{\tau_f}{\varepsilon_0} &= \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{e}_{1n}.
+    \frac{\tau_f}{\varepsilon_0} = \Big(\frac{\sigma_1}{\sigma_2}-1\Big)\mathbf{e}_{1n}.
     :label: chargeBuildup
 
 In the case where current is flowing from a resistive layer to a more
