@@ -8,7 +8,7 @@ DC conductivity / resistivity
 
 The electrical conductivity of matter has a large variation. Consider the table below:
 
-.. figure:: ./figures/CondRestable.png
+.. figure:: ./images/CondRestable.png
    :align: center
    :name: LogCond
 
@@ -16,7 +16,7 @@ The electrical conductivity of matter has a large variation. Consider the table 
 
 Even for rock units, the range of electrical conductivity is large.
 
-.. figure:: ./figures/resistivity_table1.png
+.. figure:: ./images/resistivity_table1.png
    :align: center
    :name: resistivity_table1
 

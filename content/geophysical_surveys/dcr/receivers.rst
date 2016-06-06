@@ -16,7 +16,7 @@ collected simultaneously. An example of a porous pot receiver electrode for a
 DC/IP survey with a copper sulphate solution is shown in
 :numref:`porous_pot_receiver`.
 
-.. figure:: ./images/receiver_electrode_porous_pots_receiver.jpg
+.. figure:: images/receiver_electrode_porous_pots_receiver.jpg
    :scale: 70%
    :align: center
    :name: porous_pot_receiver
