@@ -15,7 +15,7 @@ Introduction
 
 We present here a 1D modelisation of the Magnetotelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
- .. image:: http://mybinder.org/badge.svg 
+ .. image:: http://mybinder.org/badge.svg
     :target: http://mybinder.org/repo/ubcgif/Em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
     :align: center
 
@@ -139,7 +139,7 @@ The transfert of the Up and Down components inside a layer can then be write as 
 
 .. math::
     \left(\begin{matrix} U_j' \\ D_j' \end{matrix} \right)  = \left(\begin{matrix} e^{i k h_j} & 0 \\ 0 & e^{-i k h_j} \end{matrix} \right) \left(\begin{matrix} U_j \\ D_j \end{matrix} \right)
-    = T_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
+    = T_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right)
 
 With the variables U, D, U' and D' defined as in (:numref:`InsideLayer`)
 
@@ -196,7 +196,7 @@ Reflection and Transmission Coefficients
  Reflection at
  interface
 
-.. figure :: images/Reflection_Efield.png 
+.. figure :: images/Reflection_Efield.png
  :align: right
  :scale: 50%
  :name: Reflection_Efield
@@ -322,7 +322,7 @@ We saw that in 1D, the horizontal orthogonal components of the electric and magn
     \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) =  \left(\begin{matrix} 0 & \hat{Z}_{xy} \\ -\hat{Z}_{xy} & 0 \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
 
 
-which can be generalised: 
+which can be generalised:
 
 .. math::
     \left(\begin{matrix} E_{x} \\ E_{y} \end{matrix} \right) = \left(\begin{matrix} \hat{Z}_{xx} & \hat{Z}_{xy} \\ \hat{Z}_{yx} & \hat{Z}_{yy} \end{matrix} \right) \left(\begin{matrix} H_x \\ H_y \end{matrix} \right)
