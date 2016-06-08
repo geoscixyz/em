@@ -16,10 +16,10 @@ Introduction
 We present here a 1D modelisation of the Magnetotelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
  .. image:: http://mybinder.org/badge.svg 
-    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+    :target: http://mybinder.org/repo/ubcgif/Em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
     :align: center
 
-.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_N_Layered_Earth/MT_n_layered_earth_example.ipynb
+.. _binder: http://mybinder.org/repo/ubcgif/Em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
 
 The magnetotelluric (MT) method is a widely used geophysical technique, in particular for imaging geothermal systems, that is sensitive to Earth structures as shallow as tens of meters to depths of hundreds of kilometers. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
@@ -111,18 +111,18 @@ with :math:`\mathbf{E_x} = E_x \mathbf{\hat{x}}`  and U and D are the complex am
 
 Writing the solution for the j-th layer (See :numref:`MTlayeredEarth`), we obtain:
 
- .. math::
+.. math::
     E_{x,j} (z) = U_j e^{i k (z-z_{j-1})} + D_j e^{-i k (z-z_{j-1})}
     :label: Electric field components in layers
     
- .. math::
+.. math::
     H_{y,j} (z) = \frac{1}{Z_j} (D_j e^{-i k (z-z_{j-1})} - U_j e^{i k (z-z_{j-1})})
     :label: Magnetic field components in layers
 
 
 which can be re-written in matrix form as:
 
- .. math::
+.. math::
     \left(\begin{matrix} E_{x,j} \\ H_{y,j} \end{matrix} \right) = \left(\begin{matrix} 1 & 1 \\ -\frac{1}{Z_j} & \frac{1}{Z_j} \end{matrix} \right) \left(\begin{matrix} U_j \\ D_j \end{matrix} \right) 
     = P_j \left(\begin{matrix} U_j \\ D_j \end{matrix} \right)
     :label: Propagation matrix 
