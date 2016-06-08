@@ -38,7 +38,7 @@ of the survey to place the data points. The plotting point is located half-way
 between the nearest current electrode and the receiver electrode at a depth of
 one-half the horizontal transmitter-receiver separation.
 
-.. figure:: ./images/pole-dipole_pseudo.jpg
+.. figure:: images/pole-dipole_pseudo.jpg
    :scale: 100%
    :align: center
 
@@ -55,7 +55,7 @@ shown in :numref:`MIMDAS_layout`.
 
 **MIMDAS** :
 
-.. figure:: ./images/MIMDASlayout.jpeg
+.. figure:: images/MIMDASlayout.jpg
    :scale: 90%
    :align: center
    :name: MIMDAS_layout

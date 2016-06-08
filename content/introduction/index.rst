@@ -16,7 +16,7 @@ Introduction
 How to use this resource
 ------------------------
 
-There are multiple ways to use em.geosci
+There are multiple ways to use em.geosci:
 
 - to ask a question about some aspect of electromagnetics
 
@@ -37,19 +37,19 @@ links to case history examples.
 
 The exact organization structure of the menu is therefore inconsequential.
 Even though all material is connected, we have attempted to organize the topics
-into self-contained groups. Each section begins with on overview that can help
+into self-contained groups. Each section begins with an overview that can help
 guide the reader.
 
 A major component of learning is the ability to interact with material, that
 is, to engage with the concepts that are being presented. Throughout the
 resource we have embedded python notebooks that will allow the user to observe
-results after changing parameters. In addition, through Examples, the user
+results after changing parameters. In addition, through Examples_, the user
 will be able to interface with SimPEG_, our open-source modelling and
 simulation package, so that he/she can generate their own codes and test
 results or carry out further exploration of a topic.
 
 .. _SimPEG : http://simpeg.xyz
-
+.. _Examples : http://mybinder.org/repo/ubcgif/em_examples
 
 .. Introduction
 .. ============

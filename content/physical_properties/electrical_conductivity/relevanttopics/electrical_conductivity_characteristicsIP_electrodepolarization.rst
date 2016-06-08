@@ -6,21 +6,21 @@ Electrode polarization
 Electrode polarization occurs when pore space is blocked by metallic
 particles. Again, charges accumulate when an electric field is applied.
 
- .. figure:: ../figures/elec_pol_1.gif
+ .. figure:: ../images/elec_pol_1.gif
 	:align: center
 	:scale: 100 %
 
 The result is two electrical double layers which add to voltages measured at
 the surface.
 
-.. figure:: ../figures/elec_pol_2.gif
+.. figure:: ../images/elec_pol_2.gif
 	:align: center
 	:scale: 100 %
 
 Comments on electrode polarization
 ----------------------------------
 
- .. figure:: ../figures/elec_pol_3.gif
+ .. figure:: ../images/elec_pol_3.gif
 	:align: right
 	:scale: 100 %
 
@@ -32,7 +32,7 @@ grain in pore water), there is an impedance involved in getting current to
 flow across the barrier. These interfaces look like the top figure and have
 the simplified circuit analogue shown in the bottom figure.
 
- .. figure:: ../figures/elec_pol_4.gif
+ .. figure:: ../images/elec_pol_4.gif
 	:align: right
 	:scale: 100 %
 
