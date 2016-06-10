@@ -31,6 +31,15 @@ Mt. Isa
     :align: left
     :figwidth: 100%
 
+**Background reference**
+
+We use the following publication as the major reference for this case
+history.
+
+    References:
+
+    :cite:`rutley2001`, `Rutley 2001 paper <https://www.eoas.ubc.ca/ubcgif/pubs/papers/mim.pdf>`_
+
 .. **References**
 
 ..  .. bibliography:: ../../references.bib
