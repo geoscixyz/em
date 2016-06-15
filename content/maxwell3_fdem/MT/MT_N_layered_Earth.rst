@@ -16,10 +16,10 @@ Introduction
 We present here a 1D modelisation of the Magnetotelluric waves in a layered Earth and the associated geophysical data. Our goal is to build better representation of the different physical phenomenons and better understanding of the resulting data. This work follows the derivation presented in :cite:`ward1988` and is supported by interactive apps developed in a `binder`_.
 
  .. image:: http://mybinder.org/badge.svg
-    :target: http://mybinder.org/repo/ubcgif/Em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
     :align: center
 
-.. _binder: http://mybinder.org/repo/ubcgif/Em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
 
 The magnetotelluric (MT) method is a widely used geophysical technique, in particular for imaging geothermal systems, that is sensitive to Earth structures as shallow as tens of meters to depths of hundreds of kilometers. It is a passive method that use plane waves generated mostly in the Earth's Atmosphere. High frequency waves are mainly produced by lightning strikes all around the globe, traveling through the Earth's Ionosphere that acts as a waveguide. Low frequency waves are produced through the interaction of the Earth's Ionosphere with solar wind and Earth's magnetic field.
 
