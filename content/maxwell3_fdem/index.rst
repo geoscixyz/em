@@ -3,12 +3,14 @@
 Maxwell III: FDEM
 =================
 
-**Purpose:**
+.. topic:: Purpose
+
+    Purpose here
 
 Contents:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
 
     governing_equations
     theory_3loops

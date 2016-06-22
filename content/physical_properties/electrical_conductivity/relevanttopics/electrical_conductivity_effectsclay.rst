@@ -5,7 +5,7 @@ Effects of clay minerals
 
 In the classical petroleum engineering approach to sedimentary rocks, rock containing clay particle often called “dirty sands”. Since clay particle is substantially more conductive than the mineral grains, it could be a separate conducting path. Archie’s law usually working well for sedimentary rocks, and needs to be corrected. Fundamental cause of this abnormally high conductivity based upon the double layer of the absorbed cations as shown in :numref:`DoubleLayer`.
 
-.. figure:: ../figures/DoubleLayer.png
+.. figure:: ../images/DoubleLayer.png
    :align: center
    :name: DoubleLayer
 

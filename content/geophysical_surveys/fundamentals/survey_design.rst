@@ -19,8 +19,11 @@ Some questions to think about that will influence the survey design:
 - Do I need a 2D or 3D survey?
 - How much can I spend on a survey? Time? Money?
 
+  .. _surveyDetectability:
+
 Detectability
 -------------
+  
 
 In order for a target to be detectable, the secondary field (whether that be
 the electric field, magnetic field, or voltage potential) must be larger than

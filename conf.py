@@ -17,7 +17,8 @@ import os
 import shlex
 import sphinx_bootstrap_theme
 
-sys.path.append('./examples')
+sys.path.append(os.path.abspath('./examples'))
+sys.path.append(os.path.abspath('./_ext'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,6 +42,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
+    'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -59,8 +61,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """UBCGIF 2015-2016"""
-author = u'UBCGIF'
+copyright = """GeoSci 2015-2016"""
+author = u'GeoSci Developers'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -86,7 +88,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','_static','AUTHORS.rst','README.md','content/equation_bank/*', 'content/maxwell1_fundamentals/maxwell_variables.rst']
+exclude_patterns = ['_build','AUTHORS.rst','README.md','content/equation_bank/*', 'content/maxwell1_fundamentals/maxwell_variables.rst', 'error.rst']
 
 linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
                     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
@@ -151,7 +153,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ("Why", "content/introduction/introduction_about"),
+          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          ('Why', 'content/introduction/introduction_about'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
@@ -205,7 +208,7 @@ html_theme_options = {
     'bootstrap_version': "3",
 }
 
-html_sidebars = {'**': ['localtoc.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
+html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
 
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -230,7 +233,7 @@ html_favicon = 'em.ico'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
+html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -302,6 +305,11 @@ html_favicon = 'em.ico'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'emdoc'
+
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/em'
+edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -461,17 +469,7 @@ intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from autodoc import make_formula_sheet
+from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
 make_formula_sheet()
-
-import sphinx.environment
-from docutils.utils import get_source_line
-
-def _supress_nonlocal_image_warn(self, msg, node):
-    if not msg.startswith('nonlocal image URI found:'):
-        self._warnfunc(msg, '%s:%s' % get_source_line(node))
-
-sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
-
-from checkDependencies import checkDependencies
 checkDependencies()
+supress_nonlocal_image_warn()

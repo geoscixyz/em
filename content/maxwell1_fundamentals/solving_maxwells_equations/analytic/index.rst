@@ -3,9 +3,15 @@
 Analytic
 ========
 
+.. topic:: Purpose
+
+    Purpose here
+
+
 .. toctree::
     :maxdepth: 2
 
-    methodology
-    examples
+    fields
+    scalar_potentials
+    vector_potentials
 
