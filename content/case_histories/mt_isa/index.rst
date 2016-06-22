@@ -38,7 +38,7 @@ history.
 
     References:
 
-    :cite:`rutley2001`, `Rutley 2001 paper <https://www.eoas.ubc.ca/ubcgif/pubs/papers/mim.pdf>`_
+    :cite:`rutley2001`, `Rutley 2001 paper <http://gif.eos.ubc.ca/sites/default/files/EG01156.pdf>`_
 
 .. **References**
 
