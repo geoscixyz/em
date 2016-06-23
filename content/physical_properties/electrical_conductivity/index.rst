@@ -20,7 +20,7 @@ As shown in :numref:`Chargeflow` positive charges in a rock flow in the same dir
 where :math:`\sigma` (S/m) is conductivity,  :math:`\mathbf{J}` (A/m :math:`^2`) is electric currents, :math:`\mathbf{E}` (V/m) electric fields.
 
 
-.. figure:: ./figures/Charges.png
+.. figure:: ./images/Charges.png
    :align: center
    :name: Chargeflow
 
