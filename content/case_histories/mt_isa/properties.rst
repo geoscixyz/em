@@ -16,7 +16,7 @@ Conductivity
 
     Simplified (log) conductivity distribution expected at Mount Isa (N:12200 m).
 
-Generally, the zone of mineralisation is higher conductivity than the host stratigraphy. The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit which is quite conductive as shown in :numref:`Cond_Section`. The volcanics to the west have low conductivity as well as the Surprise Creek Formation. The Moondarra Siltstone is moderately conductive.
+Generally, the zone of mineralisation has a higher conductivity than the host stratigraphy. The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit which is quite conductive as shown in :numref:`Cond_Section`. The volcanics to the west have low conductivity as well as the Surprise Creek Formation. The Moondarra Siltstone is moderately conductive.
 
 
 Chargeability
