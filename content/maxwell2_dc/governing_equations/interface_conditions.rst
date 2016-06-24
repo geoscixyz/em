@@ -12,7 +12,7 @@ Consider the situation in the figure below, at a boundary between two media
 with different conductivities but both with dielectric permittivity
 :math:`\varepsilon = \varepsilon_0`.
 
-.. image:: ../images/boundryChargeBuildup.png
+.. image:: ..\images\boundryChargeBuildup.png
    :scale: 75 %
    :align: center
 
