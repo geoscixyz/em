@@ -12,7 +12,7 @@ Consider the situation in the figure below, at a boundary between two media
 with different conductivities but both with dielectric permittivity
 :math:`\varepsilon = \varepsilon_0`.
 
-.. image:: ..\images\boundryChargeBuildup.png
+.. image:: ../images/boundryChargeBuildup.png
    :scale: 75 %
    :align: center
 
@@ -64,14 +64,14 @@ terms of the ratio of the two conductivities
 In the case where current is flowing from a resistive layer to a more
 conductive layer (i.e. :math:`\sigma_2 > \sigma_1`),
 
-.. image:: ..\images\resOnTop.png
+.. image:: ../images/resOnTop.png
    :scale: 75 %
    :align: center
 
 .. math::
     \sigma_1 < \sigma_2 \implies \tau_f <0
 
-.. image:: ..\images\negChargeBuildup.png
+.. image:: ../images/negChargeBuildup.png
    :scale: 75 %
    :align: center
 
@@ -79,14 +79,14 @@ We get a buildup of negative charges on the boundary, and in the case where
 flow is from a resistive layer to a conductive layer (i.e. :math:`\sigma_1 >
 \sigma_2`)
 
-.. image:: ..\images\condOnTop.png
+.. image:: ../images/condOnTop.png
    :scale: 75 %
    :align: center
 
 .. math::
     \sigma_1 > \sigma_2 \implies \tau_f >0
 
-.. image:: ..\images\posChargeBuildup.png
+.. image:: ../images/posChargeBuildup.png
    :scale: 75 %
    :align: center
 
