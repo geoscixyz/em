@@ -42,7 +42,7 @@ one-half the horizontal transmitter-receiver separation.
    :scale: 100%
    :align: center
 
-   `A dipole-dipole survey and psuedo-section <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm>`_
+   `A dipole-dipole survey and psuedo-section <http://gpg.geosci.xyz/en/latest/content/DC_resistivity/DC_measurements_and_data.html>`_
 
 **Distributed array** : A distributed array is composed of receiver electrodes that are deployed and
 connected in conventional 2D lines or as a 3D grid network. For any current
