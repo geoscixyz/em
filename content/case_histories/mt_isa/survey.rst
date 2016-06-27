@@ -65,7 +65,7 @@ We generate synthetic data for the pole-dipole configuration from the numeric si
   : Log10 pseudo-conductivity section along the geological section (top) with and (bottom) without a deep conductor. The section was created by simulating a pole-dipole survey.
 
 
-The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh of 20-m by 20-m cells discretized the subsurface. A reference and initial model of 0.05 S/m was used. The recovered models with and without the deep conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results show that the deep conductor can be resolved. The differing units such as the Mt. Norvit Horizon can be also detected.
+The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh of 20-m by 20-m cells discretized the subsurface. A reference and initial model of 0.05 S/m was used. The recovered models with and without the deep conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results show that the deep conductor can be resolved, albeit it does not look like a confined conductor. Rather, due to the current channelling, a horseshoe shape appears. This make sense when looking at the :ref:`current density <Mt_Isa_Simulation>` above. There is not enough sensitivity in the inversion to differentiate the bottom of the mineralized body, but the current does channel into it and affects the inversion result. The differing units such as the Mt. Norvit Horizon located within the Moondarra can be also detected.
 
 .. figure:: ./images/MIM_Sim_2DCon.png
   :align: center

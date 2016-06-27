@@ -16,17 +16,7 @@ The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zin
 Geological Background
 ---------------------
 
-The geology of the Cluny region and the southern extent of the
-Mt Isa lease is dominated by fault-repeated, steeply dipping
-stratigraphy of Native Bee Siltstone, Breakaway Shale,
-Moondarra Siltstone, incorporating Mt Novit Horizon, Surprise
-Creek Formation and Eastern Creek Volcanics as shown in :numref:`Geology_Section`. The Mt Novit
-Horizon consists of a sequence of mica schists, phyllites and
-metasiltstones containing gossanous material of coarse grained
-pyrite, pyrrhotite, and magnetite, with variable sphalerite, galena,
-marcasite, chalcopyrite, arsenopyrite and accessories :cite:`russel1978`. Exploration along this horizon has occurred over a 40
-year period. The best drilling intersection recorded is from a 4
-m interval containing 100 g/T Ag, 7.6% Pb and 11.6% Zn :cite:`poole1981`.
+The geology of the Cluny region and the southern extent of the Mt Isa lease is dominated by fault-repeated, steeply dipping stratigraphy of Native Bee Siltstone, Breakaway Shale, Moondarra Siltstone that incorporates the Mt Novit Horizon, Surprise Creek Formation, and Eastern Creek Volcanics as shown in :numref:`Geology_Section`. The Mt Novit Horizon consists of a sequence of mica schists, phyllites and metasiltstones containing gossanous material of coarse grained pyrite, pyrrhotite, and magnetite, with variable sphalerite, galena, marcasite, chalcopyrite, arsenopyrite and accessories :cite:`russel1978`. Exploration along this horizon has occurred over a 40 year period. The best drilling intersection recorded is from a 4 m interval containing 100 g/T Ag, 7.6% Pb and 11.6% Zn :cite:`poole1981`.
 
 
 .. figure:: ./images/Geological_Section_Paper.png
@@ -34,12 +24,10 @@ m interval containing 100 g/T Ag, 7.6% Pb and 11.6% Zn :cite:`poole1981`.
     :scale: 80%
     :name: Geology_Section
 
-    Vertical cross section of geology from Mount Isa
+    Vertical cross section of geology from Mount Isa. The mineralisation occurs within the Native Bee Siltstone as shown by the circle.
 
 
-At Cluny, copper mineralisation
-is frequently expected in conjunction with lead/zinc mineralisation. The Native Bee Siltstone and
-Moondarra Siltstone are considered to be favourable host stratigraphy for mineralisation.
+At Cluny, copper mineralisation is frequently expected in conjunction with lead/zinc mineralisation. The Native Bee Siltstone and Moondarra Siltstone are considered to be favourable host stratigraphy for mineralisation (denoted by the circle within the Native Bee). An exploration target in this area is delineated in the interpretation as a conductive and chargeable feature.
 
 
 .. **References:**
