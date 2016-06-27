@@ -6,7 +6,7 @@ Mt. Isa
 .. topic :: Prelude
 
     This Case History is based upon the paper: **2-D and 3-D IP/resistivity for
-    the interpretation of Isa-style targets** by Rutley, Oldenburg and Shekthman
+    the interpretation of Isa-style targets** by Rutley, Oldenburg and Shekhtman
     :cite:`rutley2001`.
 
     This was one of the first examples of inverting DC/IP field data to recover 3D
@@ -26,6 +26,7 @@ Mt. Isa
     processing
     interpretation
     synthesis
+    lessons
 
 .. figure:: images/MtIsa_Cover.png
     :align: left
