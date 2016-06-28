@@ -28,7 +28,7 @@ For a time domain system, the voltage measured off time at the receiver is rough
  :scale: 80%
  :name: con-res_decays
 
-A conductive terrain has a slowly-decaying dB/dt response. For most time (except very early time), a high value in dB/dt indicates the existance of conductive objects. 
+ A conductive terrain has a slowly-decaying dB/dt response. For most time (except very early time), a high value in dB/dt indicates the existance of conductive objects. 
 
 
 .. figure:: ./images/atem_visual_sounding.jpg
@@ -36,7 +36,7 @@ A conductive terrain has a slowly-decaying dB/dt response. For most time (except
  :scale: 80%
  :name: atem_visual_sounding1
 
-Example sounding showing variation of conductivity at depth. A slowly-decaying dB/dt from time channel 7 to 15 indicates a more conductive layer underneath. 
+ Example sounding showing variation of conductivity at depth. A slowly-decaying dB/dt from time channel 7 to 15 indicates a more conductive layer underneath. 
 
 Apparent conductivity
 *********************
