@@ -3,11 +3,13 @@
 Data
 ====
 
+.. topic:: Purpose
+
 A harmonic current in the transmitter loop is used to generate a primary time-harmonic magnetic field. This induces secondary currents in the subsurface, which in turn produce secondary magnetic fields. Both the primary and secondary magnetic fields reach the receiver, but the primary is usually cancelled by a bucking coil, leaving only the secondary field. The (secondary) time-varying magnetic flux through the receiver loop induces currents which act to oppose the change in flux. The voltage in the receiver loop is what we use to define a datum. 
 
 .. figure:: ./images/3loops.jpg
  :align: center
- :scale: 80%
+ :width: 80%
  :name: 3loops
 
  A time varying current ( :math:`I_0 \cos \omega t`) generates a primary magnetic field :math:`\mathbf{H_p} \cos \omega t` which induces secondary currents in the subsurface and intern, creates secondary magnetic fields (:math:`\mathbf{H_s} \cos(\omega t + \psi)`). Both the primary and secondary fields reach the receiver. 
@@ -30,7 +32,7 @@ Upon receipt of the delivered data, visualization is usually the first step in u
 
 .. figure:: ./images/afem_visual_map.jpg
  :align: center
- :scale: 80%
+ :width: 80%
  :name: afem_visual_map
 
  Map view of data
@@ -39,7 +41,7 @@ Upon receipt of the delivered data, visualization is usually the first step in u
 
 .. figure:: ./images/afem_visual_profile.jpg
  :align: center
- :scale: 80%
+ :width: 80%
  :name: afem_visual_profile
 
  Profile view of data
@@ -48,7 +50,7 @@ Upon receipt of the delivered data, visualization is usually the first step in u
 
 .. figure:: ./images/afem_visual_sounding.jpg
  :align: center
- :scale: 80%
+ :width: 80%
  :name: afem_visual_sounding
 
  Sounding view of data
