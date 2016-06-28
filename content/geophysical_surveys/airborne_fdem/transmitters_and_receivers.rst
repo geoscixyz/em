@@ -52,5 +52,5 @@ Configurations
    :scale: 80%
    :name: hcp_vca
 
-A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
+   A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
 
