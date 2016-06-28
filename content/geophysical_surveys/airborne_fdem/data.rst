@@ -3,7 +3,9 @@
 Data
 ====
 
-.. topic:: Purpose
+.. topic:: 
+Purpose
+
 
 A harmonic current in the transmitter loop is used to generate a primary time-harmonic magnetic field. This induces secondary currents in the subsurface, which in turn produce secondary magnetic fields. Both the primary and secondary magnetic fields reach the receiver, but the primary is usually cancelled by a bucking coil, leaving only the secondary field. The (secondary) time-varying magnetic flux through the receiver loop induces currents which act to oppose the change in flux. The voltage in the receiver loop is what we use to define a datum. 
 
@@ -25,7 +27,7 @@ The data in a AFEM survey is a relative measure of the secondary field with resp
 
 
 Visualization
--------------------
+-------------
 Upon receipt of the delivered data, visualization is usually the first step in understanding the data. Every datum point in an airborne EM survey can be specified using three parameters: the horizontal sounding location (easting and northing) and the time(t)/frequency(f). Using easting and northing as x and y respectively and time/frequency as z, a 3D data volume can be formed. So there are three ways of plotting data for airbrone EM survey:
 
 - Map: contouring a particular time/freq as a function of the horizontal location. Slice the data volume horizontally and examine the horizontal variation of data.
