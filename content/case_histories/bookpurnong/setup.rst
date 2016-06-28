@@ -16,14 +16,14 @@ hope of replacing the saline water with fresh water.
 
 .. figure:: images/booky-location.jpg
  :align: center
- :scale: 30%
+ :width: 30%
  :name: booky-location
 
 Location of the research area
 
 .. figure:: images/booky-hydro.jpg
  :align: center
- :scale: 30%
+ :width: 30%
  :name: booky-hydro
 
 Hydrological model at Bookpurnong
@@ -45,7 +45,7 @@ conductivity (see next page on Property).
 
 .. figure:: images/booky-losegain.png
  :align: center
- :scale: 80%
+ :width: 80%
  :name: lose-gain
 
 Concept of losing and gaining stream
