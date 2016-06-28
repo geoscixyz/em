@@ -3,6 +3,8 @@
 Systems
 =======
 
+.. _skytem:
+
 SkyTEM
 ------
 
