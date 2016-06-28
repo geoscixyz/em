@@ -26,15 +26,15 @@ sections from the river bed to the bank both before and after SIS.
 
 .. figure:: ./images/booky-drills.jpg
  :align: left
- :scale: 80%
+ :width: 80%
  :name: booky-drills
 
 Locations of the drills where groundwater samples were taken for the salinity analysis.
 
 .. figure:: ./images/booky-salinity.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-salinity
+ :align: left
+ :width: 80%
+ :name: booky-salinity
 
 Groundwater salinity measured by electric conductivity.
 
