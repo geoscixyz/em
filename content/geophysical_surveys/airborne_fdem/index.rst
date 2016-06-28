@@ -3,14 +3,12 @@
 Airborne FDEM
 =============
 
-.. todo::
-
-    PLACEHOLDER: figure of an airborne system.
-
-.. topic:: Purpose
-
-    TODO
-
+.. figure:: ./images/afem_cover.jpg
+   :align: center
+   :width: 40%
+   :name: afem_cover
+   
+.. Source: Jean M. Legault, 2015, Airborne Electromagnetic Systems – State of the Art and Future Directions, CSEG RECORDER, VOL. 40, No. 06.
 
 Motivation
 ----------
@@ -23,8 +21,8 @@ suitable for portable or towed systems. Because it uses a loop as the
 transmitter and another loop as the receiver, it is sometimes referred to as
 "loop-loop" system.
 
-How it works
-------------
+Basic idea
+----------
 
 In such a survey, the transmitter loop carries a time-varying current, which
 generates a time-varying primary magnetic field everywhere in a whole space.
@@ -54,22 +52,20 @@ airborne EM may have higher level of noise due to the instability of the
 platform, which limits its depth penetration. For the case histories using
 airborne EM in this website, please refer to:
 
-.. todo:: links
-
-    - Bookpurnong: groundwater salinization evaluation
-    - Tli Kwi Cho: kimberlite exploration
+- Bookpurnong: groundwater salinization evaluation
+- Tli Kwi Cho: kimberlite exploration
 
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    governing_equations
-    example
-    transmitters_and_receivers
-    systems
-    survey_design
-    data
-    interpretation
-    practical_considerations
+   governing_equations
+   example
+   transmitters_and_receivers
+   systems
+   survey_design
+   data
+   interpretation
+   practical_considerations
 
 

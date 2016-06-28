@@ -10,7 +10,7 @@ hydrologists are primarily concerned about the salinity of the groundwater
 that indicates the recharge (gaining) or discharge (losing) status of the
 river. Using the inversion models shown in Interpretation, both models
 consistently indicate that the upstream part of the river is fresher (less
-conductive) and thus losing water; the downstream part of the river is saliner
+conductive) and thus losing water; the downstream part of the river is more saline
 (more conductive) and thus gaining water.
 
 In order to achieve a more robust interpretation, we compare the models
@@ -47,7 +47,7 @@ Possibilities are:
 
 (1) Systematic errors in the data. For example, the flight height could be incorrect.
 
-(2) Naturally occuring variation of the conductivity or due to SIS.
+(2) Naturally occurring variation of the conductivity or due to SIS.
 
 (3) The weaker conductivity in SkyTEM may be compensated by the thickness.
 
