@@ -68,7 +68,7 @@ NIA at 222.22 Hz at Bookpurnong.
 
 Survey Design
 *************
-The diffusion distances of the SkyTEM time channels range 4 to 120 m. Using the same designing concept in RESOLVE, the SkyTEM was flown at a 100 m line spacing, so any single location can be at least sensed by two lines.
+The diffusion distances of the :ref:`skytem` time channels range 4 to 120 m. Using the same designing concept in :ref:`resolve`, the SkyTEM was flown at a 100 m line spacing, so any single location can be at least sensed by two lines.
 
 
 .. figure:: ./images/booky-coverage.jpg
