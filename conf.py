@@ -464,7 +464,7 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
+# intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
