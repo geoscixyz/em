@@ -12,7 +12,7 @@ RESOLVE
 
 .. figure:: ./images/resolve_view.jpg
 	:align: center
-	:scale: 80%
+	:width: 80%
 	:name: resolve_view
 
 	A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer.
@@ -27,7 +27,7 @@ It operates five pairs of horizontal co-planar (HCP) coils at nominal frequencie
 
 .. figure:: ./images/resolve_bird.jpg
 	:align: center
-	:scale: 80%
+	:width: 80%
 	:name: resolve_bird
 
 A RESOLVE bird and the coils.
