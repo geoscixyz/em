@@ -3,10 +3,6 @@
 Data
 ====
 
-.. topic:: 
-Purpose
-
-
 A harmonic current in the transmitter loop is used to generate a primary time-harmonic magnetic field. This induces secondary currents in the subsurface, which in turn produce secondary magnetic fields. Both the primary and secondary magnetic fields reach the receiver, but the primary is usually cancelled by a bucking coil, leaving only the secondary field. The (secondary) time-varying magnetic flux through the receiver loop induces currents which act to oppose the change in flux. The voltage in the receiver loop is what we use to define a datum. 
 
 .. figure:: ./images/3loops.jpg
