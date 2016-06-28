@@ -36,7 +36,7 @@ Locations of the drills where groundwater samples were taken for the salinity an
     :scale: 80%
     :name: booky-salinity
 
-Groundwater salinity measured by electric conductivity (EC).
+Groundwater salinity measured by electric conductivity.
 
 Those field physical property measurements confirmed that the water
 conductivity at Bookpurnong is at the order of 1 S/m. The actual conductivity
