@@ -6,8 +6,8 @@ Mt. Isa
 .. topic :: Prelude
 
     This Case History is based upon the paper: **2-D and 3-D IP/resistivity for
-    the interpretation of Isa-style targets** by Rutley, Oldenburg and Shekhtman
-    :cite:`rutley2001`.
+    the interpretation of Isa-style targets** by Rutley, Oldenburg and Shekhtman (
+    :cite:`rutley2001` , `PDF`_)
 
     This was one of the first examples of inverting DC/IP field data to recover 3D
     distributions of resistivity and chargeability. Before this time the inversion
@@ -32,18 +32,6 @@ Mt. Isa
     :align: left
     :figwidth: 100%
 
-**Background reference**
 
-We use the following publication as the major reference for this case
-history.
+.. _PDF: http://gif.eos.ubc.ca/sites/default/files/EG01156.pdf
 
-    References:
-
-    :cite:`rutley2001`, `Rutley 2001 paper <http://gif.eos.ubc.ca/sites/default/files/EG01156.pdf>`_
-
-.. **References**
-
-..  .. bibliography:: ../../references.bib
-..     :style: alpha
-..     :encoding: latex+latin
-..     :filter: docname in docnames
