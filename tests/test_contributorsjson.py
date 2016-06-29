@@ -3,7 +3,6 @@ import unittest
 import os
 import json
 
-PATH2JSON = '..'
 
 class ContribsJson_Test(unittest.TestCase):
 
@@ -11,7 +10,10 @@ class ContribsJson_Test(unittest.TestCase):
 
         print '\nTesting contributors.json validity'
 
-        contribsjson = os.path.abspath(os.path.sep.join([PATH2JSON] + ['contributors.json']))
+        dirname, filename = os.path.split(os.path.abspath(__file__))
+        path2json = os.path.sep.join(dirname.split(os.path.sep)[:-1])
+
+        contribsjson = os.path.abspath(os.path.sep.join([path2json] + ['contributors.json']))
         contribs = open(contribsjson)
 
         try:
