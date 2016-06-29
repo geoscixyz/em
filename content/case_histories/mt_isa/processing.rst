@@ -151,7 +151,11 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 3D Inversion
 ************
 
-In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion were used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`.
+In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion were used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. The two main anomalies consistent throughout the inversions for chargeability are:
+
+a) A chargeable body running north-south consistent with the Mt Novit Horizon.
+
+b) A narrow band of no chargeability near 12,300 m aligned with the conductive Breakaway Shale.
 
 
 .. raw:: html
