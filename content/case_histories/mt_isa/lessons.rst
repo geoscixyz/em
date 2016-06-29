@@ -32,14 +32,14 @@ In order to assess the validity of the conductor, we change the initial :ref:`re
     : Sections through the recovered conductivity model and a volume rendered image of conductivities above 1 S/m. The topographic surface and electrode locations (white dots) are shown for reference.
 
 
-In this case study, multiple physical properties are important. Therefore, we carry out the 3D IP inversion for thoroughness. The new recovered conductivity model is used for the inversion. The recovered chargeability models with and without the conductor are shown in :numref:`MtIsa_3D_IPModel`. There are some subtle differences between using the different conductivity models, but nothing that would affect the final IP result. The IP result was expected because the initial inversion did not put any chargeable material in the conductor. 
+In this case study, multiple physical properties are important. Therefore, we carry out the 3D IP inversion for thoroughness. The new recovered conductivity model is used for the inversion. The recovered chargeability models with and without the conductor are shown in :numref:`MtIsa_3D_IP_beforeafter`. There are some subtle differences between using the different conductivity models, but nothing that would affect the final IP interpretation. This result was to be expected because the initial inversion did not put any chargeable material in the conductor. 
 
 
- .. figure:: images/MtIsa_3D_DCModel.png
+ .. figure:: images/MtIsa_3D_IP_Before_After.png
     :align: center
     :figwidth: 80%
-    :name: MtIsa_3D_DCModel
+    :name: MtIsa_3D_IP_beforeafter
 
-    : Sections through the recovered conductivity model and a volume rendered image of conductivities above 1 S/m. The topographic surface and electrode locations (white dots) are shown for reference.
+    : Plan-view sections through the recovered chargeability model (left) with the initial conductivity model and (right) the final conductivity model. Due to the lack of recovered chargeability where the large southeast conductor was located, the final interpretation of this physical property did not change.
 
 
