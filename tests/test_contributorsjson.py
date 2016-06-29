@@ -11,7 +11,7 @@ class ContribsJson_Test(unittest.TestCase):
 
         print '\nTesting contributors.json validity'
 
-        contribsjson = os.path.sep.join([PATH2JSON] + ['contributors.json'])
+        contribsjson = os.path.abspath(os.path.sep.join([PATH2JSON] + ['contributors.json']))
         contribs = open(contribsjson)
 
         try:
