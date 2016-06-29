@@ -19,5 +19,11 @@ Animation of the recovered 3-D conductivity model.
 Animation of the recovered 3-D chargability model.
 
 
-The second lesson here is the importance of a 3D inversion even in the presence of 2D geology. The 2D inversions, in general, reproduce the large-scale features of the subsurface. However, when the geology becomes more complex, the 3D inversion can show the changes in strike cause by folding and faulting, or where mineralisation grade changes. This is most evident in the Mt Norvit Horizon, where the chargeability is north-south in general yet has variability along strike.
+The second lesson here is the importance of a 3D inversion even in the presence of 2D geology :numref:`MtIsa_DC2D_vs_3DModel`. The 2D inversions, in general, reproduce the large-scale features of the subsurface. However, when the geology becomes more complex, the 3D inversion can show the changes in strike cause by folding and faulting, or where mineralisation grade changes. This is most evident in the Mt Norvit Horizon, where the chargeability is north-south in general yet has variability along strike.
 
+.. figure:: images/MtIsa_DC2D_vs_3DModel.png
+    :align: center
+    :figwidth: 100%
+    :name: MtIsa_DC2D_vs_3DModel
+
+    : Comparative sections through the recovered 2D (left) and 3D (right) inversion.
