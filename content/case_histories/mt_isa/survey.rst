@@ -19,24 +19,16 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
 .. Second sentence: The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles.
 
 .. _PDP_survey:
-.. figure:: ./images/DCR_PoleDipole_Array.png
-    :align: left
-    :figwidth: 45%
+.. figure:: ./images/MIM_Arrays.png
+    :align: center
+    :figwidth: 80%
     :name: MIM_PDP_EX
 
-    Pole-dipole survey configuration with remote source electrode to the right.
-
-.. _DPP_survey:
-.. figure:: ./images/DCR_DipolePole_Array.png
-    :align: right
-    :figwidth: 45%
-    :name: MIM_DPP_EX
-
-    Dipole-pole survey configuration with remote source electrode to the left.
-..  : The layout for a single current electrode (red) and potential electrode locations (black). Moving the current electrode and repeating the experiment leads to a pseudo-section (coloured dots).
+    (Left) Pole-dipole survey configuration with remote source electrode to the right. (Right) Dipole-pole survey configuration with remote source electrode to the left.
 
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
+
 
 
 Survey Design
@@ -52,8 +44,8 @@ and the Native Bee siltstone, which may also be a host for mineralization.
 This alternating sequence of high and low conductivity may be an important
 factor to consider during survey design. To better understand this particular
 setting, we :ref:`simulate<Mt_Isa_Simulation>` the flow of current through the
-expected geology. Important to note the current channeling of the source
-through the Breakaway Shale and the expected mineralization. Indeed for the dipole-pole case where the current electrode is beyond the Breakaway Shale, the current flows directly into the Breakaway Shale and any potentials measured to the west of the shale would be small. We will see this problem arise in the next chapter.
+expected geology. It is important to note the current channeling of the source
+through the Breakaway Shale and the expected mineralization. Indeed for the dipole-pole case where the current electrode is beyond the Breakaway Shale, the current flows directly into the Breakaway Shale and any potentials measured to the west of the shale would be small. We will see this problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
 .. _Mt_Isa_Simulation:
 .. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model with (top) and without (bottom) the conductive mineralized zone. Positive (red) and negative (blue) charge built-ups are shown.
