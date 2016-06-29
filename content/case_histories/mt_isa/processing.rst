@@ -35,14 +35,14 @@ As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system coll
 
  .. figure:: images/MtIsa_Data_Merge.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 60%
     :name: MtIsa_Data_Merge
 
     : Merge the P-DP and DP-P data configuration with their respective uncertainties
 
  .. figure:: images/MtIsa_DC2D_2_3DMesh.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 60%
     :name: MtIsa_2D_2_3DMesh
 
     : Stacked 2D models recovered from 10 independent 2D inversions in 3D space.
@@ -82,6 +82,13 @@ In preparation for the 3D inversion of the DCR data, locations were geo-referenc
 
 Sections through the recovered 3D conductivity model are presented in :numref:`MtIsa_3D_DCModel`. This result confirms that the geology over the Cluny region is mostly 2D, with alternating regions of high and low conductivity trending north-south. Volume rendering of high conductivity (above 1 S/m) seems to indicate the geology to be steeply dipping. There is a minor conductor off to the east, which may be overburden on the Eastern Creek Volcanics. The conductivity in this area of the model is supported by a few data, but is also influenced by the model smoothness imposed. Therefore we focus our attention on the two major conductors that are completely within the data region. See the :ref:`Interpretation Section <mt_isa_interpretation>` for more details.
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/9jzMy0L8txQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+Animation of the recovered 3-D conductivity model.
+
+
  .. figure:: images/MtIsa_3D_DCModel.png
     :align: center
     :figwidth: 100%
@@ -91,6 +98,10 @@ Sections through the recovered 3D conductivity model are presented in :numref:`M
 
 
 .. _Geoscience Australia: http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/
+
+
+
+
 
 IP Data
 -------
@@ -141,6 +152,13 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 ************
 
 In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion were used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`.
+
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/g3tfH_IGNcw?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+Animation of the recovered 3-D chargability model.
 
 
  .. figure:: images/MtIsa_3D_IPModel.png
