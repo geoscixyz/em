@@ -33,8 +33,7 @@ Note that a large portion of the DP-P shows higher apparent conductivity data th
 IP
 --
 
-Simarly, 2D pseudo-sections of :ref:`IP data<MtISa_IP_data>` are shown below for first-pass assessement through visualization. Note on several lines the large negative apparent chargeability
-values on the DP-P configuration.
+Simarly, 2D pseudo-sections of IP data are shown below for first-pass assessement through visualization. Note on several lines the large negative apparent chargeability values on the DP-P configuration. The data for this configuration were particularly noisy and exhibited apparent chargeabilities of less than -100 ms. Therefore, data that was greater than an n-spacing of 10 were removed.
 
 .. _MtISa_IP_data:
 
