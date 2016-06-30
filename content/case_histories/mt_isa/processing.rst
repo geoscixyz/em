@@ -127,7 +127,7 @@ As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system coll
 
  .. figure:: images/MtIsa_IP2D_2_3DMesh.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 60%
     :name: MtIsa_IP2D_2_3DMesh
 
     : Stacked 2-D models recovered from 10 independant 2-D inversions.

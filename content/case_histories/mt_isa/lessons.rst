@@ -24,7 +24,7 @@ In order to assess the validity of the conductor, we change the initial :ref:`re
     The conductivity reference model after the conductor to the southeast was removed and replaced with 0.4 S/m.
 
 
- .. figure:: images/MtIsa_3D_DCModel.png
+ .. figure:: images/MtIsa_3D_DCFinalModel.png
     :align: center
     :figwidth: 80%
 

@@ -71,7 +71,7 @@ differences in the recovered models.
   :figwidth: 50%
   :name: MIM_PDP_Simulation
 
-  : Log10 pseudo-conductivity section along the geological section (top) with and (bottom) without a deep conductor. The section was created by simulating a pole-dipole survey.
+  : Log10 pseudo-conductivity section along the geological section  with (bottom) and without (top) a deep conductor. The section was created by simulating a pole-dipole survey.
 
 
 The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh
@@ -90,7 +90,7 @@ channel into it and affects the inversion result.
   :figwidth: 50%
   :name: MIM_PDP_Simulation_Model
 
-  : The recovered 2D conductivity models from the inversion of the pole-dipole data shown in :numref:`MIM_PDP_Simulation`. The top figure contains the deep conductor and the bottom lacks a deep conductor. In both figures, the true conductivity model is shown in grey scale for reference.
+  : The recovered 2D conductivity models from the inversion of the pole-dipole data shown in :numref:`MIM_PDP_Simulation`. The middle figure contains the deep conductor and the top lacks a deep conductor. In both figures, the true conductivity model is shown in grey scale for reference.
 
 
 
