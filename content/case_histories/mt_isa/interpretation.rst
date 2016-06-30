@@ -5,13 +5,19 @@ Interpretation
 
 In this section, inversion results are interpreted to bring the final recovered physical property models back into the realm of geology. :numref:`MtIsa_3D_Model_Plan` shows a plan-view slice of the recovered conductivity model (left) and chargeability model (right). The Breakaway shale unit has very large conductivities (higher than expected); the Novit Horizon appears as a low to moderate conductor. The Moondarra Siltsone breaks around line N14700, most likely due to faulting. The 3D inversion shows more detail than the 2D inversions and attempts to connect features from line to line. Yet, the results confirm the presence of a "2D" geology in general.
 
+.. figure:: images/MtIsa_3D_Model_Interp.png
+    :align: center
+    :figwidth: 90%
+    :name: MtIsa_3D_Model_Interp
+
+    : Perspective view of the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (black) are shown for reference.
 
 .. figure:: images/MtIsa_3D_Model_Plan.png
     :align: center
     :figwidth: 90%
     :name: MtIsa_3D_Model_Plan
 
-    : Sections through the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (white) are shown for reference.
+    : Sections through the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (black) are shown for reference.
 
 
 

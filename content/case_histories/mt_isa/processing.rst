@@ -84,7 +84,7 @@ Sections through the recovered 3D conductivity model are presented in :numref:`M
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/9jzMy0L8txQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
+    <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/9jzMy0L8txQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 Animation of the recovered 3-D conductivity model.
 
@@ -156,7 +156,7 @@ In preparation for the 3D inversion of the IP data, locations were geo-reference
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/g3tfH_IGNcw?rel=0" frameborder="0" allowfullscreen></iframe></div>
+    <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/g3tfH_IGNcw?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 Animation of the recovered 3-D chargability model.
 
