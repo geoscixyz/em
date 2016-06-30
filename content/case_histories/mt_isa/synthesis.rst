@@ -3,15 +3,22 @@
 Synthesis
 =========
 
-This example demonstrates the two important lessons. The first highlights the
-need to interpret the subsurface with multiple physical properties. Here, the
+This example demonstrates the two important lessons. The first highlights the 
+ability for modern inversion capabilities to distinguish subtleties in the subsurface.
+This is highlighted further when interpreting with multiple physical properties. Here, the
 Breakaway shale was a major conductor and the Moondarra siltstone a moderate
 one. However, the shale is unimportant for exploration in this region when
 compared to the Moondarra that hosts the Mt Norvit Horizon. Once the induced
 polarization was introduced, it highlighted the Mt Horvit Horizon within the
 Moondarra and the mineralized zone in the Native Bee siltstone. The shale is
 then exposed as just conductive and the main feature in the conductivity model
-is delineated as non-mineral bearing. The 3D inversion results are shown
+is delineated as non-mineral bearing. This was available in the original inversion
+presented in the case study. However, the Eastern Quartz Volcanics is much more
+evident as a resistive feature separating the Moondarra and Native Bee siltstones.
+Both conductivity models are shown in :numref:`MtIsa_3D_Model_Plan2`. Further 
+interpretation of the IP anomalies are presented in :numref:`MtIsa_3D_Model_IPplan`. 
+
+The 3D inversion results are shown
 below.
 
  .. figure:: images/MtIsa_3D_Model_Plan.png

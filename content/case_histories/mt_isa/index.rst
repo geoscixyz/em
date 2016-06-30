@@ -9,9 +9,10 @@ Mt. Isa
     :cite:`rutley2001`
 
     This was one of the first examples of inverting DC/IP field data to recover 3D
-    distributions of resistivity and chargeability. Before this time the inversion
+    distributions of resistivity and chargeability. Before this time, the inversion
     of field data was primarily carried out in 2D. We use this case history is to
-    provide an example for inverting DCR and IP data and make the connecting links
+    provide an example for inverting DCR and IP data. We show how the current technology
+    has increased the ability to recover details about the subsurface in conjunction with connecting links
     to the fundamentals of EM as presented in EM.geosci.xyz.
 
 
