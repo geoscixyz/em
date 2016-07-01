@@ -13,7 +13,7 @@ Mt. Isa
     of field data was primarily carried out in 2D. We use this case history is to
     provide an example for inverting DCR and IP data. We show how the current technology
     has increased the ability to recover details about the subsurface in conjunction with connecting links
-    to the fundamentals of EM as presented in EM.geosci.xyz.
+    to the fundamentals of EM as presented in `EM.geosci.xyz <http://em.geosci.xyz>`_.
 
 
 .. toctree::
