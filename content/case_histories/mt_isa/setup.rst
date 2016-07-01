@@ -3,7 +3,7 @@
 Setup
 =====
 
-The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queenland, Australia. Within this region, ten lines acquiring :ref:`direct current <dcr_index>` (DCR) and induced polarization (IP) lines were placed over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa.
+The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queenland, Australia. Within this region, ten lines of :ref:`direct current <dcr_index>` (DCR) and induced polarization (IP) data were acquired over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa.
 
 .. figure:: images/Location_Map_KDF.png
     :align: left
@@ -27,7 +27,8 @@ The geology of the Cluny region and the southern extent of the Mt Isa lease is d
     Vertical cross section of geology from Mount Isa. The mineralisation occurs within the Native Bee Siltstone as shown by the circle.
 
 
-At Cluny, copper mineralisation is frequently expected in conjunction with lead/zinc mineralisation. The Native Bee Siltstone and Moondarra Siltstone are considered to be favourable host stratigraphy for mineralisation (denoted by the circle within the Native Bee). An exploration target in this area is delineated in the interpretation as a conductive and chargeable feature.
+At Cluny, copper mineralisation is frequently expected in conjunction with lead/zinc mineralisation. The Native Bee Siltstone and Moondarra Siltstone are considered to be favourable host stratigraphy for mineralisation. An exploration target in this area is a unit that is  conductive and chargeable. In the geologic section :numref:`Geology_Section`  the exploration
+target is denoted by the circle within the Native Bee Siltstone. 
 
 
 .. **References:**
