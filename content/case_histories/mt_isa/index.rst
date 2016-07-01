@@ -12,7 +12,7 @@ Mt. Isa
     distributions of resistivity and chargeability. Prior to this, the inversion
     of field data was primarily carried out in 2D. We use this case history to
     provide an example for inverting DCR and IP data and to link different parts of
-    the survey and processing to the fundamentals of EM as presented in `EM.geosci <http://em.geosci.xyz>`_.
+    the survey and processing to the fundamentals of EM as presented in :ref:`EM.geosci <em_index>`.
     We have re-inverted the data but have kept as many details as possible 
     to be the same as in the original paper. This enables us to show how current technology
     has increased the ability to recover details about the subsurface. 
