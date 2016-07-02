@@ -3,17 +3,23 @@
 Synthesis
 =========
 
- .. figure:: images/MtIsa_3D_Old_vs_New.png
+ .. figure:: images/MtIsa_DC3D_Old_vs_New.png
     :align: right
     :figwidth: 50%
-    :name: MtIsa_3D_Old_vs_New
+    :name: MtIsa_DC3D_Old_vs_New
 
-    : Sections through the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (white) are shown for reference.
+    : Comparative sections through the recovered 3D conductivity model presented in :cite:`rutley2001` (left) and this study (right).
 
+ .. figure:: images/MtIsa_IP3D_Old_vs_New.png
+    :align: right
+    :figwidth: 50%
+    :name: MtIsa_IP3D_Old_vs_New
+
+    : Comparative sections through the recovered 3D chargeability model presented in :cite:`rutley2001` (left) and this study (right).
 
 This example demonstrates the two important lessons. The first highlights the
 ability for modern inversion capabilities to distinguish subtleties in the
-subsurface. Figure :numref:`MtIsa_3D_Old_vs_New` compares the recovered
+subsurface. Figure :numref:`MtIsa_DC3D_Old_vs_New` and :numref:`MtIsa_IP3D_Old_vs_New` compares the recovered
 conductivity and chargeability models presented in :cite:`rutley2001` with the
 updated model presented in this study. Both studies used identical datasets
 and inversion parameter, at the exception of the finer cell size
