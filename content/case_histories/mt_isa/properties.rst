@@ -28,6 +28,7 @@ Summary
 -------
 Overall we expect any mineralization unit in this area to be **conductive and chargeable** with respect to the host rocks. The problematic unit is expected to be the Breakaway shales which are expected to have the highest conductivivity and may be associated with chargeable minerals. The conductivity for the mineralization is appropriate for the expected bulk copper mineralisation (average 4.8%) as measured throughout the Mt Isa region. A summary table is given below.
 
+.. _MIMgeoTable:
 
 +---------------------------+-------------------+------------------------------------------+--------------------------+
 |       **Rock Unit**       | **Conductivity**  | **Resistivity** (:math:`\Omega \cdot m`) | **Induced polarization** |

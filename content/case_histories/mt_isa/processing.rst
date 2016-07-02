@@ -82,6 +82,8 @@ In preparation for the 3D inversion of the DCR data, locations were geo-referenc
 
 The 3D model can be viewed through the animation video that slices vertically and then horizontally through the model. The main feature is the large steeply conductor on the eastern side. The final portion of the animation shows the conductivity as an iso-surface, using a threshold that progressively increases in magnitude. The final image shows only cells that have a conductivity greater than 1 S/m. There is a moderate conductivity feature to the west of the large conductor as well as a smaller conductor near the south-east corner. These are illustrated in the single image presented in :numref:`MtIsa_3D_DCModel`. Overall, the 3D inversion confirms that the geology over the Cluny region is mostly 2D, with alternating regions of high and low conductivity trending north-south  indicating a steeply dipping geology. 
 
+.. _MIMconMovie:
+
 .. raw:: html
 
     <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/9jzMy0L8txQ?rel=0" frameborder="0" allowfullscreen></iframe></div>
@@ -154,7 +156,7 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion was used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. The 3D model can be viewed through the animation video that slices vertically and then horizontally through the model. The final portion of the animation shows the chargeability as an iso-surface, using a threshold that progressively increases in magnitude. The final image shows only cells that have a chargeabilty greater than 50 msec. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. Overall, the IP inversion shows a complex region of north-south trending chargeability in center of the volume but the linear chargeability feature that coincides with the region of moderate conductivity is of most interest.. 
 
 
-
+.. _MIMchgMovie:
 
 .. raw:: html
 
