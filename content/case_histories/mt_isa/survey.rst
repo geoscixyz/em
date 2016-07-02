@@ -10,11 +10,11 @@ DC Resistivity (DCR)
 
 The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys <DCR_index>` section. Many choices are possible for electrode layouts, but the final choice at Cluny was motivated by the following factors:
 
-(a) MIM, the company who was exploring the property, had developed their own data acquisition system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means it each electrode could serve as a current or potential and it could acquire both DCR and IP data.
+(a) MIM, the company who was exploring the property, had developed their own data acquisition system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system, which means each electrode could serve as a current or potential electrode. Both DCR and IP data can be acquired.
 
-(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
+(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two-fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
 
-(c) The choice of a pole-dipole was motivated by past experience that this was an effective survey for deep targets. This produces a :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>` could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
+(c) The choice of a pole-dipole was motivated by past experience that that showed this was an effective survey for deep targets. A typical pseudo-section is shown in  :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>` could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
 
 .. Second sentence: The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles.
 
@@ -24,7 +24,7 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
     :figwidth: 80%
     :name: MIM_PDP_EX
 
-    (Left) Pole-dipole survey configuration with remote source electrode (B) to the right. (Right) Dipole-pole survey configuration with remote source electrode (B) to the left.
+    (Left) Pole-dipole survey configuration with remote source electrode at "infinity. (Right) Dipole-pole survey configuration.
 
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
@@ -36,14 +36,21 @@ Survey Design
 
 The :ref:`detectability <surveyDetectability>` property of a given survey
 depends mainly on its ability to inject electrical currents into the
-mineralization. The geologic structures at Mount Isa are primarily steeply
-dipping geological units striking north-south. We expect a large conductive contrast between the Breakaway Shale unit
-and the Native Bee siltstone, which is a host for mineralization.
-This alternating sequence of high and low conductivity may be an important
+mineralization zone. The geologic structures at Mount Isa are primarily steeply
+dipping geological units striking north-south. This is illustrated in 
+the geologic section ?Fig 98? and the representative conductivity
+model ?fig99?.  
+This alternating sequence of high and low conductivity is an important
 factor to consider during survey design. To better understand this particular
-setting, we :ref:`simulate<Mt_Isa_Simulation>` the flow of current through the
-expected geology. The best flow into the mineralisation (circular, conductive body) is when the pole (just past 11650) is located at the edge of the vertical resistive unit (Eastern Quartz Volcanic). It is also important to note the current channeling of the source
-through the Breakaway Shale and the expected mineralization. Indeed for the dipole-pole case where the current electrode is beyond the Breakaway Shale (around 12350), the current flows directly into the Breakaway Shale and any potentials measured to the west of the shale would be small. We will see this problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
+setting, we simulate the flow of current through the
+expected geology. The solid lines show the direction of the currents and the relative
+thickness of the lines gives some indiction of the magnitude of the currents. The
+thin vertical conductors and resistors respectively attract or repel the currents. 
+The best flow into the mineralisation (represented as the circular, conductive body) 
+occurs when the pole is located near 11650, at the eastern edge of the vertical resistive 
+unit (Eastern Quartz Volcanic). The currents are observed to alter their flow 
+paths to penetrate the body. It is also important to note the channeling of currents 
+that occurs because of the conductive Breakaway Shale.  Indeed for the dipole-pole case, where the current electrode is beyond the Breakaway Shale (around 12350), the current flows directly into the Breakaway Shale and potentials measured to the west of the shale are small. We will see this problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
 .. _Mt_Isa_Simulation:
 .. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model with (top) and without (bottom) the conductive mineralized zone. Positive (red) and negative (blue) charge built-ups are shown.
@@ -60,30 +67,32 @@ through the Breakaway Shale and the expected mineralization. Indeed for the dipo
 We generate synthetic data for the pole-dipole configuration from the numeric
 simulation above in order to test the resolving power of our DCR experiment.
 To asses if this configuration is sensitive to the mineralization at depth, we
-examine two scenarios; one with and one without the deep conductor. These two
+examine two scenarios; one without, and one with, the deep conductor. These two
 pole-dipole pseudo-sections using 15 electrodes spaced 100 meters apart are
-shown in :numref:`MIM_PDP_Simulation`. At first glance, both pseudo-sections
-look almost identical. Therefore, we invert these section to examine the
-differences in the recovered models.
+shown in :numref:`MIM_PDP_Simulation`. The pseudo-sections
+look almost identical near the surface but the data differ substantially
+at lower elevations. To add more insight we invert the two data 
+sets and compare the recovered models.
 
 .. figure:: ./images/MIM_Sim_AppRes.png
   :align: center
   :figwidth: 50%
   :name: MIM_PDP_Simulation
 
-  : Log10 pseudo-conductivity section along the geological section  with (bottom) and without (top) a deep conductor. The section was created by simulating a pole-dipole survey.
+  : Pseudo-conductivity section of apparent conductivity for a simulated pole-dipole survey over a geological 
+  model without a conductor (top image) and with a conductor (bottom image). 
 
 
-The synthetic data are :ref:`inverted <inversion>` with a 2D algorithm. A mesh
+The synthetic data are inverted with a 2D algorithm. A mesh
 of 20-m by 20-m cells discretized the subsurface. A reference and initial
-model of 0.05 S/m was used. The recovered models with and without the deep
+model of 0.05 S/m was used. The recovered models without, and with, the deep
 conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results
-show that the deep conductor can be resolved, albeit it does not look like a
-confined conductor. Rather, due to the current channelling, a horseshoe shape
-appears. This make sense when looking at the :ref:`current density
-<Mt_Isa_Simulation>` above. There is not enough sensitivity in the inversion
-to differentiate the bottom of the mineralized body, but the current does
-channel into it and affects the inversion result.
+show that the deep conductor can be imaged but, because of its close 
+proximity to the conductive shale, and the fact we are using a smooth
+inversion, it does not appear as a confined conductor. 
+Nevertheless, the results indicate an extended conductor at depth.
+This is consistent with the images of current density :ref:`current density
+<Mt_Isa_Simulation>` that show current being channeled into the body. 
 
 .. figure:: ./images/MIM_Sim_2DCon.png
   :align: center
