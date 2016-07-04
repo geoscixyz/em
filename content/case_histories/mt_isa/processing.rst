@@ -19,7 +19,7 @@ The ultimate goal is to generate a 3D subsurface conductivity model. However, we
 Data Quality Control
 ********************
 
-As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system collects simultaneously a pole-dipole (P-DP) and a dipole-pole (DP-P) data configuration. Accordingly, the P-DP and DP-P data were inverted separately in 2D. The uncertainties are assigned as 5% of the data amplitude with a minimum floor value of 0.02mV. The data were inverted and no noticably bad data points were obvious in the data misfit maps. This also means that data were correctly normalized so they corresponded to a unit amplitude current in the transmitter. The figure :ref:`below <MIM_DC2D_Inv_QC>` shows the observed and  predicted data and recovered models for both configurations and for each of the ten 2D lines. There are some regions where there are significant differences in the conductivities obtained from the P-DP and DP-P configurations.  Some of this might be attributable to the fact that the two surveys illuminate buried conductors quite differently (ref ?link to }. Overall, however the inversion results have the same general distribution of conductivity and there doesn't appear to be major issues with normalizations or bad electrodes. 
+As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system collects simultaneously a pole-dipole (P-DP) and a dipole-pole (DP-P) data configuration. Accordingly, the P-DP and DP-P data were inverted separately in 2D. The uncertainties are assigned as 5% of the data amplitude with a minimum floor value of 0.02 mV. The data were inverted and no noticeably bad data points were obvious in the data misfit maps. This also means that data were correctly normalized so they corresponded to a unit amplitude current in the transmitter. The figure :ref:`below <MIM_DC2D_Inv_QC>` shows the observed and  predicted data and recovered models for both configurations and for each of the ten 2D lines. There are some regions where there are significant differences in the conductivities obtained from the P-DP and DP-P configurations.  Some of this might be attributable to the fact that the two surveys illuminate buried conductors quite differently (ref ?link to }. Overall, however the inversion results have the same general distribution of conductivity and there doesn't appear to be major issues with normalizations or bad electrodes. 
 
 .. _MIM_DC2D_Inv_QC:
 
@@ -153,7 +153,7 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 3D Inversion
 ************
 
-In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion was used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. The 3D model can be viewed through the animation video that slices vertically and then horizontally through the model. The final portion of the animation shows the chargeability as an iso-surface, using a threshold that progressively increases in magnitude. The final image shows only cells that have a chargeabilty greater than 50 msec. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. Overall, the IP inversion shows a complex region of north-south trending chargeability in center of the volume but the linear chargeability feature that coincides with the region of moderate conductivity is of most interest. 
+In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion was used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. The 3D model can be viewed through the animation video that slices vertically and then horizontally through the model. The final portion of the animation shows the chargeability as an iso-surface, using a threshold that progressively increases in magnitude. The final image shows only cells that have a chargeability greater than 50 msec. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. Overall, the IP inversion shows a complex region of north-south trending chargeability in center of the volume but the linear chargeability feature that coincides with the region of moderate conductivity is of most interest. 
 
 
 .. _MIMchgMovie:
@@ -162,7 +162,7 @@ In preparation for the 3D inversion of the IP data, locations were geo-reference
 
     <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/g3tfH_IGNcw?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-Animation of the recovered 3-D chargability model.
+Animation of the recovered 3-D chargeability model.
 
 
  .. figure:: images/MtIsa_3D_IPModel.png
@@ -170,5 +170,5 @@ Animation of the recovered 3-D chargability model.
     :figwidth: 100%
     :name: MtIsa_3D_IPModel
 
-    : Sections throughout the recovered chargeability model with a 3D volume rendered image of chargeabilities higher than 50msec. The topography surface and electrode locations (white dots) are shown for reference.
+    : Sections throughout the recovered chargeability model with a 3D volume rendered image of chargeabilities higher than 50 msec. The topography surface and electrode locations (white dots) are shown for reference.
 

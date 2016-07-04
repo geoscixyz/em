@@ -10,7 +10,7 @@ Two primary questions that motivated the initial study were:
 
 - Can conductive and chargeable units, which would be potential targets, within the siltstones be identified?
 
-  The Mt Novit Horizon is characterized by a zone of moderately high conductivity and high chargeabilty. There is variation in amplitude and breakages, which could be a proxy to mineralizaiton grade. The mineralization within the Native Bee Siltstone is also present in the model, albeit not as pronounced as the Mt Novit Horizon.
+  The Mt Novit Horizon is characterized by a zone of moderately high conductivity and high chargeability. There is variation in amplitude and breakages, which could be a proxy to mineralization grade. The mineralization within the Native Bee Siltstone is also present in the model, albeit not as pronounced as the Mt Novit Horizon.
 
 
 Additional questions were asked with the opportunity to re-invert the same data, but use improved algorithms and higher performance computers:
