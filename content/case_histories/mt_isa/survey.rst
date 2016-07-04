@@ -37,23 +37,28 @@ Survey Design
 The :ref:`detectability <surveyDetectability>` property of a given survey
 depends mainly on its ability to inject electrical currents into the
 mineralization zone. The geologic structures at Mount Isa are primarily steeply
-dipping geological units striking north-south. This is illustrated in 
-the geologic section ?Fig 98? and the representative conductivity
-model ?fig99?.  
-This alternating sequence of high and low conductivity is an important
-factor to consider during survey design. To better understand this particular
-setting, we simulate the flow of current through the
-expected geology. The solid lines show the direction of the currents and the relative
-thickness of the lines gives some indiction of the magnitude of the currents. The
-thin vertical conductors and resistors respectively attract or repel the currents. 
-The best flow into the mineralisation (represented as the circular, conductive body) 
-occurs when the pole is located near 11650, at the eastern edge of the vertical resistive 
-unit (Eastern Quartz Volcanic). The currents are observed to alter their flow 
-paths to penetrate the body. It is also important to note the channeling of currents 
-that occurs because of the conductive Breakaway Shale.  Indeed for the dipole-pole case, where the current electrode is beyond the Breakaway Shale (around 12350), the current flows directly into the Breakaway Shale and potentials measured to the west of the shale are small. We will see this problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
+dipping geological units striking north-south. This is illustrated in
+the :ref:`geologic section<Geology_Section>` and the representative :ref:`conductivity
+model<Cond_Section>`.
+
+This alternating sequence of high and low conductivity is an important factor
+to consider during survey design. To better understand this particular
+setting, we simulate the flow of current through the expected geology
+:ref:`below<Mt_Isa_Simulation>`. The arrow lines show the direction of the
+currents due to a moving source at the surface. The thin vertical conductors
+and resistors respectively attract or repel the currents. The best flow into
+the mineralisation (represented as the circular, conductive body) occurs when
+the pole is located near 11650, at the eastern edge of the vertical resistive
+unit (Eastern Quartz Volcanic). The currents are observed to alter their flow
+paths to penetrate the body. It is also important to note the channeling of
+currents that occurs because of the conductive Breakaway Shale.  Indeed for
+the dipole-pole case, where the current electrode is beyond the Breakaway
+Shale (around 12350), the current flows directly into the Breakaway Shale and
+potentials measured to the west of the shale are small. We will see this
+problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
 .. _Mt_Isa_Simulation:
-.. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model with (top) and without (bottom) the conductive mineralized zone. Positive (red) and negative (blue) charge built-ups are shown.
+.. list-table:: : DCR simulation over a synthetic Mt. Isa conductivity model without (top) and with (bottom) the conductive mineralized zone. Conductivity values for the different rock units are representative of the geology at Mt Isa.
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
@@ -71,7 +76,7 @@ examine two scenarios; one without, and one with, the deep conductor. These two
 pole-dipole pseudo-sections using 15 electrodes spaced 100 meters apart are
 shown in :numref:`MIM_PDP_Simulation`. The pseudo-sections
 look almost identical near the surface but the data differ substantially
-at lower elevations. To add more insight we invert the two data 
+at lower elevations. To add more insight we invert the two data
 sets and compare the recovered models.
 
 .. figure:: ./images/MIM_Sim_AppRes.png
@@ -79,20 +84,20 @@ sets and compare the recovered models.
   :figwidth: 50%
   :name: MIM_PDP_Simulation
 
-  : Pseudo-conductivity section of apparent conductivity for a simulated pole-dipole survey over a geological 
-  model without a conductor (top image) and with a conductor (bottom image). 
+  : Pseudo-conductivity section of apparent conductivity for a simulated pole-dipole survey over a geological
+  model without a conductor (top image) and with a conductor (bottom image).
 
 
 The synthetic data are inverted with a 2D algorithm. A mesh
 of 20-m by 20-m cells discretized the subsurface. A reference and initial
 model of 0.05 S/m was used. The recovered models without, and with, the deep
 conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results
-show that the deep conductor can be imaged but, because of its close 
+show that the deep conductor can be imaged but, because of its close
 proximity to the conductive shale, and the fact we are using a smooth
-inversion, it does not appear as a confined conductor. 
+inversion, it does not appear as a confined conductor.
 Nevertheless, the results indicate an extended conductor at depth.
 This is consistent with the images of current density :ref:`current density
-<Mt_Isa_Simulation>` that show current being channeled into the body. 
+<Mt_Isa_Simulation>` that show current being channeled into the body.
 
 .. figure:: ./images/MIM_Sim_2DCon.png
   :align: center

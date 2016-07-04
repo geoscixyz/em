@@ -27,7 +27,7 @@ Geological Background
 ---------------------
 
 .. figure:: ./images/Geological_Section_Paper.png
-    :align: left
+    :align: right
     :figwidth: 50%
     :name: Geology_Section
 
