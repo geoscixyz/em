@@ -19,7 +19,7 @@ Note that a large portion of the DP-P shows higher apparent conductivity data th
 
 .. _MtISa_DCR_data:
 
-.. list-table:: : DCR data seperated in its P-DP and DP-P configuration
+.. list-table:: : DCR data separated in its P-DP and DP-P configuration
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
@@ -33,12 +33,11 @@ Note that a large portion of the DP-P shows higher apparent conductivity data th
 IP
 --
 
-Simarly, 2D pseudo-sections of :ref:`IP data<MtISa_IP_data>` are shown below for first-pass assessement through visualization. Note on several lines the large negative apparent chargeability
-values on the DP-P configuration.
+Similarly, 2D pseudo-sections of IP data are shown below for first-pass assessment through visualization. Note on several lines the large negative apparent chargeability values on the DP-P configuration. The data for this configuration were particularly noisy and exhibited apparent chargeabilities of less than -100 ms. Therefore, data that was greater than an n-spacing of 10 were removed. This is likely due to low potentials measured as predicted by the forward :ref:`simulation <Mt_Isa_Simulation>` of the charge density.
 
 .. _MtISa_IP_data:
 
-.. list-table:: : DCR data seperated in its P-DP and DP-P configuration
+.. list-table:: : DCR data separated in its P-DP and DP-P configuration
    :header-rows: 0
    :widths: 10
    :stub-columns: 0

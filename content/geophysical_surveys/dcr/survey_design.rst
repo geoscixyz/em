@@ -38,11 +38,11 @@ of the survey to place the data points. The plotting point is located half-way
 between the nearest current electrode and the receiver electrode at a depth of
 one-half the horizontal transmitter-receiver separation.
 
-.. figure:: ./images/pole-dipole_pseudo.jpg
+.. figure:: images/pole-dipole_pseudo.jpg
    :scale: 100%
    :align: center
 
-   `A dipole-dipole survey and psuedo-section <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_1/measurements.htm>`_
+   `A dipole-dipole survey and psuedo-section <http://gpg.geosci.xyz/en/latest/content/DC_resistivity/DC_measurements_and_data.html>`_
 
 **Distributed array** : A distributed array is composed of receiver electrodes that are deployed and
 connected in conventional 2D lines or as a 3D grid network. For any current
@@ -55,7 +55,7 @@ shown in :numref:`MIMDAS_layout`.
 
 **MIMDAS** :
 
-.. figure:: ./images/MIMDASlayout.jpeg
+.. figure:: images/MIMDASlayout.jpg
    :scale: 90%
    :align: center
    :name: MIMDAS_layout
