@@ -9,7 +9,7 @@ from the :ref:`physical properties table <MIMgeoTable>` and the :ref:`geologic
 cross-section <Geology_Section>`. The cross-section is most appropriate for
 line N12200.
 
-General 
+General
 -------
 
 The animations for :ref:`conductivity <MIMconMovie>` and :ref:`chargeabilty <MIMchgMovie>` were presented in the previous section and iso-surface images are provided in :numref:`MtIsa_3D_Model_Interp`. On those images the general, labelled A through G are incorporated in the interpretation.
@@ -28,7 +28,7 @@ Bee siltstones.
 
 B: The predominant rocks in this region are the Moondarra and Native Bee
 siltstones. They cannot be distinguished on the basis of conductivity and
-chargeabilty. 
+chargeabilty.
 
 C: Breakaway Shales: This is a highly conductive unit that dominates the
 conductivity model. Conductivities in the inversion exceeded 10 S/m. The black
@@ -51,10 +51,19 @@ shale.
 Enhanced
 --------
 
-We continue in more depth into the interpretation at a finer resolution with horizontal depth
-sections at 125 m below topography (:numref:`MtIsa_3D_Model_Plan`). The labels are the same as in the general section, but here the siltstones are divided into two subsections: B1 and B2. The easterly located Moondara Siltstone (B1) is separated from the
-Native Bee Siltstone (B2) by the resistive Eastern Creek volcanics. The sequence of "Moondarra siltstone - Eastern Creek Volcanics - Native Bee" is present in the southern part of the inversion, consistent with the cross-section located at line N12200. However, as we proceed north,
-the resistor disappears and so does any way of separating Moondarra and Native Bee rocks. The high resistivity of the Eastern Creek Volcanics allows us to determine the location of the two siltstones to the south. The two sub-sections of B are marked for the highest target potential based on their chargeability and their moderate conductivity. 
+We continue in more depth into the interpretation at a finer resolution with
+horizontal sections at 125 m below topography (:numref:`MtIsa_3D_Model_Plan`).
+The labels are the same as in the general section, but here the siltstones are
+divided into two subsections: B1 and B2. The easterly located Moondara
+Siltstone (B1) is separated from the Native Bee Siltstone (B2) by the
+resistive Eastern Creek volcanics. The sequence of "Moondarra siltstone -
+Eastern Creek Volcanics - Native Bee" is clear in the southern part of the
+inversion and consistent with the cross-section located at line N12200. In the
+north, the resistive volcanics between the siltstones disappears, while the
+chargeability low is continuous throughout the section. Using both physical
+properties enables the separation of the Moondarra and Native Bee rocks.  The
+two sub-regions of B contain the highest target potential based on high
+chargeability within the moderate conductivity of the siltstones.
 
 .. figure:: images/MtIsa_3D_Model_Plan.png
     :align: center
