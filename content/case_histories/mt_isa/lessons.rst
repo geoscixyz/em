@@ -10,7 +10,7 @@ The main lesson is examining the interesting conductor at the south-east edge of
     :figwidth: 80%
     :name: MtIsa_3D_DCModel_first
 
-    The initial 3D DCR inversion recovered model. The south-east conductor reaches conductivity values similiar to that of the Breakaway shale.
+    The initial 3D DCR inversion recovered model. The south-east conductor reaches conductivity values similar to that of the Breakaway shale.
 
 
 In order to assess the validity of the conductor, we change the initial :ref:`reference model <inversion>` from the inversion from a 0.04 S/m normal space to a modified version of the recovered model. The goal is to see if the data force the solution to deviate from the reference model. The zone east of the resistive feature (i.e., East Creek volcanics) is set back to 0.4 S/m (:numref:`MtIsa_3D_DCModel_ref`). The data were re-inverted with the new reference model also set to the initial model. One interesting observation was that simply removing the conductor had an initial misfit of twice the desired misfit. The recovered model still required a conductor, but one at much less conductivity (:numref:`MtIsa_3D_DCModel`). The conductor now spans two lines and is removed from the third and fourth lines.

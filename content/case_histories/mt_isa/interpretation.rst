@@ -3,34 +3,74 @@
 Interpretation
 ==============
 
-In this section, we interpet the physical property models recovered through inversion, in terms of geologic units. The basis of our interpretations comes from the :ref:`physical properties table <MIMgeoTable>` and the :ref:`geologic cross-section <Geology_Section>`. The cross-section is most appropriate for line N12200. We also provide two plan view sections (:numref:`MtIsa_3D_Model_Plan`) that aid the discussion.
+In this section, we interpret the physical property models recovered through
+inversion, in terms of geologic units. The basis of our interpretations comes
+from the :ref:`physical properties table <MIMgeoTable>` and the :ref:`geologic
+cross-section <Geology_Section>`. The cross-section is most appropriate for
+line N12200.
 
-The animations for :ref:`conductivity <MIMconMovie>` and :ref:`chargeabilty <MIMchgMovie>` were presented in the previous section and iso-surface images are provided in :numref:`MtIsa_3D_Model_Interp`. On those images the following features are incorporated in the interpretation.
+General
+-------
 
-A: Eastern Creek Volcanics: The quartzite unit is resistive and non-chargeable. It appears as a vertical contact between the Moondarra and Native Bee siltstones.
-
-B: The predominant rocks in this region are the Moondarra and Native Bee siltstones. They cannot be distinguished on the basis of conductivity and chargeabilty. The easternly located Moondara rocks may be separated from the Native Bee siltstones by the resistive Eastern Creek volcanics. There is some indication that we may be seeing the sequency of "Moondarra siltstone - Eastern Creek Volcanics - Native Bee" in the southern part of the inversion, near 12200 where the cross-section is situated. However, as we proceed north, the resistor disappears and so does any way of separating Moondarra and Native Bee rocks.
-
-C: Breakaway Shales: This is a highly conductive unit that dominates the conductivity model. Conductivities in the inversion exceeded 10 S/m. The black line D, which denotes the horizontal location of the near surface portion of the unit, will be used in other images. We note that the shale unit does not appear to be chargeable. This is most evident in the plan-view section in :numref:`MtIsa_3D_Model_Plan` (right). The trace of the high conductivity is associated with chargeabilty lows.
-
-E and F: Mt Novit Horizon: This is characterized by a zone of moderately high conductivity and high chargeabilty. The line E has been drawn to reflect that correlation and it corresponds to a similar trajectory presented in the initial paper by Rutley. The chargeability along this trajectory is not uniform. There is variation in amplitude and breakages.
-
-G: Other regions of chargeability, and potentially minerization, within the siltstone complex. Much of this seems to be "in-board" (west) of the Breakaway shale.
-
-.. figure:: images/MtIsa_3D_Model_Plan.png
-    :align: center
-    :figwidth: 90%
-    :name: MtIsa_3D_Model_Plan
-
-    : Sections through the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (black) are shown for reference.
-
+The animations for :ref:`conductivity <MIMconMovie>` and :ref:`chargeabilty <MIMchgMovie>` were presented in the previous section and iso-surface images are provided in :numref:`MtIsa_3D_Model_Interp`. On those images the general, labelled A through G are incorporated in the interpretation.
 
 .. figure:: images/MtIsa_3D_Model_Interp.png
     :align: center
     :figwidth: 90%
     :name: MtIsa_3D_Model_Interp
 
-    : Perspective view of the recovered 3D conductivity (left) and chargeability (right) models. Interpretated geological units (black) are shown for reference.
+    : Perspective view of the recovered 3D conductivity (left) and chargeability (right) models. Interpreted geological units (black) are shown for reference.
+
+
+A: Surprise Creek Volcanics: The quartzite unit is resistive and non-
+chargeable. It appears as a vertical contact between the Moondarra and Native
+Bee siltstones.
+
+B: The predominant rocks in this region are the Moondarra and Native Bee
+siltstones. They cannot be distinguished on the basis of conductivity and
+chargeabilty.
+
+C: Breakaway Shales: This is a highly conductive unit that dominates the
+conductivity model. Conductivities in the inversion exceeded 10 S/m. The black
+line D, which denotes the horizontal location of the near surface portion of
+the unit, will be used in other images. We note that the shale unit does not
+appear to be chargeable. This is most evident in the plan-view section in
+:numref:`MtIsa_3D_Model_Plan` (right). The trace of the high conductivity is
+associated with chargeabilty lows.
+
+E and F: Mt Novit Horizon: This is characterized by a zone of moderately high
+conductivity and high chargeabilty. The line E has been drawn to reflect that
+correlation and it corresponds to a similar trajectory presented in the
+initial paper by :cite:`rutley2001`. The chargeability along this trajectory
+is not uniform. There is variation in amplitude and there are breakages.
+
+G: Other regions of chargeability, and potentially mineralization, within the
+siltstone complex. Much of this seems to be "in-board" (west) of the Breakaway
+shale.
+
+Enhanced
+--------
+
+We continue in more depth into the interpretation at a finer resolution with
+horizontal sections at 125 m below topography (:numref:`MtIsa_3D_Model_Plan`).
+The labels are the same as in the general section, but here the siltstones are
+divided into two subsections: B1 and B2. The easterly located Moondara
+Siltstone (B1) is separated from the Native Bee Siltstone (B2) by the
+resistive Eastern Creek volcanics. The sequence of "Moondarra siltstone -
+Eastern Creek Volcanics - Native Bee" is clear in the southern part of the
+inversion and consistent with the cross-section located at line N12200. In the
+north, the resistive volcanics between the siltstones disappears, while the
+chargeability low is continuous throughout the section. Using both physical
+properties enables the separation of the Moondarra and Native Bee rocks.  The
+two sub-regions of B contain the highest target potential based on high
+chargeability within the moderate conductivity of the siltstones.
+
+.. figure:: images/MtIsa_3D_Model_Plan.png
+    :align: center
+    :figwidth: 90%
+    :name: MtIsa_3D_Model_Plan
+
+    : Sections through the recovered 3D conductivity (left) and chargeability (right) models. Interpreted geological units (black) are shown for reference.
 
 
 .. .. figure:: images/MIMrec.png
