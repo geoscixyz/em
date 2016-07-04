@@ -43,7 +43,7 @@ Overall we expect any mineralization unit in this area to be **conductive and ch
 +---------------------------+-------------------+------------------------------------------+--------------------------+
 | Surprise Creek Formation  |  Low              | High (~1000)                             |  None                    |
 +---------------------------+-------------------+------------------------------------------+--------------------------+
-| Eastern Creek Volcanics   |  Low              | High (~1000)                             |  High                    |
+| Eastern Creek Volcanics   |  Low              | High (~1000)                             |  Low                     |
 +---------------------------+-------------------+------------------------------------------+--------------------------+
 
 Table of the physical properties for the geologic units in the Cluny survey area.
