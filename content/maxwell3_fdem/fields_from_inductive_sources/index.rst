@@ -8,5 +8,5 @@ Fields from inductive sources
 
     halfspace
     layered_earth
-    sphere
+    Sphere/index
     plate
