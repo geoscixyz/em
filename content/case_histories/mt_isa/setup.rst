@@ -6,7 +6,7 @@ Setup
 The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queenland, Australia. Within this region, ten lines of :ref:`direct current <dcr_index>` (DCR) and induced polarization (IP) data were acquired over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa. Two primary questions that motivated the initial study were:
 
 - Can geophysical data and 3D inversion delineate the various units shown in the geologic section?
-- Can conductive and chargeable units, which would be potential targets, within the siltstones be identified?
+- Can conductive and chargeable units, which would be potential targets within the siltstones, be identified?
 
 In addition, we have an opportunity to re-invert the same data as Rutley et al :cite:`rutley2001`, but use improved algorithms and higher performance computers. Thus, a secondary set of questions is introduced as further motivation:
 
