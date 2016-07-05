@@ -56,7 +56,7 @@ these curves are stacked to reduce the noise.
    :align: center
    :name: IP_waveform
 
-   A typical transmitter `waveform <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm>`_
+   A typical transmitter `waveform <http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html>`_
 
 The primary voltage, or DC component of the measured voltage is taken before
 any IP effect has taken place, as noted by :math:`\mathrm{V}_{\sigma}` in
@@ -69,4 +69,4 @@ The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
    :align: center
    :name: IP_waveform2
 
-   `Location of DC and IP measurements along the receiver voltage curve <http://www.eos.ubc.ca/ubcgif/iag/methods/meth_2/3measurements.htm>`_
+   `Location of DC and IP measurements along the receiver voltage curve <http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html>`_
