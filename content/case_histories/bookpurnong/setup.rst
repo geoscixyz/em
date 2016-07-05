@@ -14,37 +14,39 @@ experiment the water management methods that use pumping and flooding, with a
 hope of replacing the saline water with fresh water.
 
 
-.. .. figure:: images/booky-location.jpg
-..     :align: center
-..     :scale: 30%
-..     :name: booky-location
+.. figure:: images/booky-location.jpg
+ :align: center
+ :width: 30%
+ :name: booky-location
 
+Location of the research area
 
-.. .. figure:: images/booky-hydro.jpg
-..     :align: center
-..     :scale: 30%
-..     :name: booky-hydro
+.. figure:: images/booky-hydro.jpg
+ :align: center
+ :width: 30%
+ :name: booky-hydro
 
+Hydrological model at Bookpurnong
 
 In hydrology, the interaction between the river water and ground water can be
 in two modes. If the groundwater table is lower, the river water recharges the
 groundwater aquifer, causing the river to "lose" water. If the groundwater
-table is higher, the groundwater recharges the river, casuing the river to
+table is higher, the groundwater recharges the river, causing the river to
 "gain" water. At Bookpurnong, the Murray River
-floodplain salinization is asscoiated with "gaining" saline water from the
+floodplain salinization is associated with "gaining" saline water from the
 irrigated highland. So the geological question here is where Murray River
 loses or gains water, and whether the SIS improves the salinization. These
 questions can be partially answered by hydrological drilling and sampling, but
-those data are spacitally confined. Fortunately, geophysical remote sensing is
+those data are spatially confined. Fortunately, geophysical remote sensing is
 able to provide an overall understanding of salinization over the entire area,
 because their is direct correlation between the salinity and electrical
 conductivity (see next page on Property).
 
 
-.. .. figure:: images/booky-losegain.jpg
-..     :align: center
-..     :scale: 80%
-..     :name: lose-gain
+.. figure:: images/booky-losegain.png
+ :align: center
+ :width: 80%
+ :name: lose-gain
 
-
+Concept of losing and gaining stream
 
