@@ -1,1 +1,1 @@
-from sphereElectrostatic import *
+from sphereElectrostatic_example import *

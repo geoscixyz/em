@@ -2,3 +2,4 @@ numpy
 scipy
 matplotlib
 sphinxcontrib-bibtex
+sphinx_bootstrap_theme

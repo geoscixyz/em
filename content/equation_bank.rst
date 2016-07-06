@@ -32,18 +32,6 @@ Equation Bank
 
         
 
- - faraday_lenz_time
-
-    .. include:: equation_bank/faraday_lenz_time.rst
-
-        
-
- - faraday_time
-
-    .. include:: equation_bank/faraday_time.rst
-
-        
-
  - faradays_law_diff_freq
 
     .. include:: equation_bank/faradays_law_diff_freq.rst
@@ -65,6 +53,18 @@ Equation Bank
  - faradays_law_int_time
 
     .. include:: equation_bank/faradays_law_int_time.rst
+
+        
+
+ - faraday_lenz_time
+
+    .. include:: equation_bank/faraday_lenz_time.rst
+
+        
+
+ - faraday_time
+
+    .. include:: equation_bank/faraday_time.rst
 
         
 

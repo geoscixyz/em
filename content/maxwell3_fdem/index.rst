@@ -3,12 +3,20 @@
 Maxwell III: FDEM
 =================
 
-**Purpose:**
+.. topic:: Purpose
+
+    Purpose here
 
 Contents:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
-    emi_tutorial/index
+    governing_equations
     theory_3loops
+    sphere_freespace/index
+    fields_from_grounded_sources/index
+    fields_from_inductive_sources/index
+    fields_from_plane_wave_sources/index
+    footprint_and_depth_of_investigation
+    MT/index
