@@ -30,7 +30,13 @@ Mt. Isa
     synthesis
     lessons
 
-.. figure:: images/MtIsa_Cover.png
+    
+
+.. raw:: html
+     :file: images/MIM3Dscene.html
+
+    
+..    .. figure:: images/MtIsa_Cover.png
     :align: left
     :figwidth: 100%
 
