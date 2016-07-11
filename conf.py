@@ -61,8 +61,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """UBCGIF 2015-2016"""
-author = u'UBCGIF'
+copyright = """GeoSci 2015-2016"""
+author = u'GeoSci Developers'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -153,7 +153,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ("Why", "content/introduction/introduction_about"),
+          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          ('Why', 'content/introduction/introduction_about'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
@@ -463,7 +464,7 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
+# intersphinx_mapping = {'https://simpeg.readthedocs.org/en/latest/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())

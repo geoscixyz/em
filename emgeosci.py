@@ -29,12 +29,15 @@ import jinja2
 import urllib, hashlib
 import json
 
+from webapp2 import Route, RedirectHandler
+
 TEMPLATEFOLDER = '_build/html/'
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__).split('/')[:-1])),
     extensions=['jinja2.ext.autoescape'],
     autoescape=False)
+
 
 def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOLDER):
     # add Defaults
@@ -47,31 +50,46 @@ def setTemplate(self, template_values, templateFile, _templateFolder=TEMPLATEFOL
     if resp is None:
         self.redirect('/error.html', permanent=True)
 
+
 class Images(webapp2.RequestHandler):
     def get(self):
         self.redirect('/'+self.request.path)
 
+
 class Redirect(webapp2.RequestHandler):
     def get(self):
         path = str(self.request.path).split(os.path.sep)[3:]
-        self.redirect(('/%s'%os.path.sep.join(path)), permanent=True)
+        self.redirect(('/%s' % os.path.sep.join(path)), permanent=True)
+
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        logging.debug('This is a debug message')
-        setTemplate(self, {"indexPage":True}, 'index.html')
+        setTemplate(self, {"indexPage": True}, 'index.html')
 
-class Error(webapp2.RequestHandler):
-    def get(self):
-        setTemplate(self, {}, 'error.html')
-        # self.redirect('/error.html', permanent=True)
+# class Error(webapp2.RequestHandler):
+#     def get(self):
+#         setTemplate(self, {}, 'error.html', _templateFolder='_templates/')
+#         # self.redirect('/error.html', permanent=True)
+
+# pointers = [
+#             Route('/en/latest/.*', RedirectHandler, defaults={'_uri': '/.*'}),
+#             # Route('/en/latest', RedirectHandler, defaults={'_uri': '/en/latest/'}),
+#             Route('/en/latest/', RedirectHandler, defaults={'_uri': '/'}),
+#
+#             ('/.*', MainPage),
+#             ('/', MainPage),
+#             ('', MainPage),
+#             ('/_images/.*', Images),
+#             ]
 
 app = webapp2.WSGIApplication([
     ('/_images/.*', Images),
-    ('/en/latest/.*', Redirect),
+    ('/en/latest/.*',Redirect),
+    # Route('/en/latest/', RedirectHandler, defaults={'_uri': '/'}),
     ('/', MainPage),
-    ('/.*', Error),
+    # ('/.*', Error),
 ], debug=True)
+
 
 # app.error_handlers[404] = Error
 

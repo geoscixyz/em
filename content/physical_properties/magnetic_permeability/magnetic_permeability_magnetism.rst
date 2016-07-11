@@ -18,7 +18,7 @@ The total magnetic moment for the material :math:`{\bf m}`, is equal to the vect
 .. math::
 	{\bf m} = \sum_i {\bf m_i}
 	:label: Sum_Dipoles
-	
+
 Magnetization :math:`{\bf M}` is defined as the magnetic moment per unit volume:
 
 .. math::
@@ -33,10 +33,10 @@ This torque attempts to align individual magnetic moments along the direction of
 As a result, the rock experiences a net magnetization parallel to the applied field.
 This process is illustrated in Figure (needs reference).
 
-.. figure:: ./figures/figMagDipoles.png
+.. figure:: ./images/figMagDipoles.png
 	:align: center
         :scale: 70%
-        
+
         Magnetization :math:`{\bf M}` in matter, as represented by the partial alignment of magnetic dipole moments :math:`{\bf m_i}` in response to an applied magnetic field :math:`{\bf H}`.
 
 Magnetic susceptibility is defined as the ratio between induced magnetization and the strength of an applied magnetic field.
