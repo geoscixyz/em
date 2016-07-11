@@ -17,7 +17,7 @@ Additional questions were asked with the opportunity to re-invert the same data,
 
 - Are improved results obtained by using updated algorithms and higher performance computers?
 
-  The answer to this question is summarized using :numref:`MtIsa_DC3D_Old_vs_New` and :numref:`MtIsa_IP3D_Old_vs_New`. These compare the recovered conductivity (:numref:`MtIsa_DC3D_Old_vs_New`) and chargeability (:numref:`MtIsa_IP3D_Old_vs_New`) models presented in :cite:`rutley2001` with the updated model presented in this study. Both studies used identical datasets and inversion parameter, at the exception of the finer horizontal cell-size discretization: from 40 x 100 m to 25 x 50 m.
+  The answer to this question is summarized using :numref:`MtIsa_DC3D_Old_vs_New` and :numref:`MtIsa_IP3D_Old_vs_New`. These compare the recovered conductivity (:numref:`MtIsa_DC3D_Old_vs_New`) and chargeability (:numref:`MtIsa_IP3D_Old_vs_New`) models presented in :cite:`rutley2001` with the updated model presented in this study. Both studies used identical datasets and inversion parameters, but finer horizontal cell-size discretization was 25 x 50 m compared to 40 x 100 m in the original study. 
 
 
 - Are there any lessons worth highlighting that arose within this case history that were not delineated in the initial case history paper?
