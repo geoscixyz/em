@@ -30,6 +30,7 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
 
+.. _Mt_Isa_Survey_Design:
 
 Survey Design
 -------------
