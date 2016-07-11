@@ -135,7 +135,7 @@ As presented in the :ref:`previous<mt_isa_data>` section, the MIMDAS system coll
     : Stacked 2-D models recovered from 10 independent 2-D inversions.
 
 
-As a final step of data quality control, the P-DP and DP-P configurations are re-merged and :ref:`re-inverted<MIM_DC2D_Inv_FULL>` in 2D to attempt to recover a single subsurface distribution of chargeability. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_IP2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, the sections vary smoothly from line to line.
+As a final step of data quality control, the P-DP and DP-P configurations are re-merged and :ref:`re-inverted<MIM_IP2D_Inv_FULL>` in 2D to attempt to recover a single subsurface distribution of chargeability. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_IP2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, the sections vary smoothly from line to line.
 
 
 .. _MIM_IP2D_Inv_FULL:
