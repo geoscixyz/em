@@ -5,11 +5,11 @@ Effects of Topography
 
 For this derivation, we will examine the effects of negative
 topography by considering a hemispherical depression in the Earth’s
-surface. 
+surface.
 
 This builds upon the solution for :ref:`point_current_source_and_sphere`. By setting the resistivity of the sphere to infinity, and by exploiting the
-symmetry, the solution for a 
-hemispherical depression within a halfspace is presented.  
+symmetry, the solution for a
+hemispherical depression within a halfspace is presented.
 
 .. _effects_of_topography_electric_potential_hemispherical_depression:
 
@@ -19,14 +19,14 @@ Electric Potential Across a Hemispherical Depression in a Conducting Half-Space
 Here, we consider the electric scalar potential at :math:`P`, which
 results from the injection of current near a hemispherical depression of
 radius :math:`a`, centered at (:math:`0,0,0`). According to Telford, so
-long as current is being injected along the axis of symmetry shown in :numref:`SphericalDepression_PoleDipole`, 
+long as current is being injected along the axis of symmetry shown in :numref:`SphericalDepression_PoleDipole`,
 and :math:`x_0>a`, we can obtain our solution from Eq. :eq:`Potential_Sphere_Pole_HemisphereDepression_Halfspace` by
 replacing :math:`4\pi` with :math:`2\pi`; replacement of the constant is
 done because all current flows entirely through the ground. By setting
 :math:`\rho_1 = \infty`, the potential created by the injection of
 current :math:`I` at (:math:`x_0,0,0`) is:
 
-.. math:: 
+.. math::
    \phi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]
    :label: Potential_Sphere_Pole_HemisphereDepression_Halfspace
 
@@ -39,12 +39,12 @@ current :math:`I` at (:math:`x_0,0,0`) is:
 
 Recall that at this point, :math:`x_0` is the radial distance from the
 origin, within a spherical coordinate system relative to the axis of
-symmetry. Using Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+symmetry. Using Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace`
 however, we can solve the problem in :numref:`SphericalDepression_DipoleDipole`,
 where a current of :math:`I` is being injected at :math:`(x_1,\pi,0`)
 and a current of :math:`-I` is being injected at (:math:`x_2,0,0`):
 
-.. math:: 
+.. math::
    \begin{split}
    \phi (r , \theta, \phi) &= \phi_{+} + \phi_{\, -}\\
    &= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
@@ -59,7 +59,7 @@ and
 
 .. math:: R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}
 
-It is important to note that Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace` 
+It is important to note that Eq. :eq:`Potential_Sphere_Dipole_HemisphereDepression_Halfspace`
 is only possible if current is being
 injected along the axis of symmetry. In addition, :math:`\theta` refers
 an azimuthal angle relative the axis of symmetry, whereas
@@ -81,7 +81,7 @@ Examples
 Using the depressed hemi-sphere solution for DC problem, we want to identify effects of topography in terms of two aspects:
 
 - Numerical accuracy of 3D DC forward modelling algorithm (UBC DCIP3D)
-- Understanding charge-build up and corresponding electrical fields 
+- Understanding charge-build up and corresponding electrical fields
 
 First item is important since we use this forward modelleing algorithm for the
 inversion of DC data. If this topographic effect is not accurately computed,
@@ -108,7 +108,7 @@ By taking the gradient, then the electric field :math:`\bf{e}` and total
 charge density (:math:`\rho_T`) can be computed using equations below:
 
 .. math::
-   \bf{e}=-\nabla \phi    
+   \bf{e}=-\nabla \phi
    :label: elec
 
 .. math::
@@ -129,7 +129,7 @@ Numerical validations
    :align: center
    :name: resismodel
 
-   Section view of 3D resistivity model for depressed hemi-sphere. 
+   Section view of 3D resistivity model for depressed hemi-sphere.
 
 The above resistivity model shows a depressed hemisphere model. The
 resistivity of the depressed hemi-sphere is set to :math:`10^8` ohm-m (close
@@ -137,10 +137,11 @@ to infinity) to simulate air, and the half-space is set to and :math:`10^3`
 ohm-m.  To compute potentials from the above depressed hemi-sphere model, we
 first use numerical solutions using DCIP3D code :cite:`oldenburg1994`. Then to check the
 accuracy of our numerical algorithm we use analytic solution of a sphere
-problem that we derived in Section :ref:`effects_of_topography_electric_potential_hemispherical_depression`. For the numerical
-evaluation of that an analytic solution we use :ref:`effects_of_topography_code`. To
+problem that we derived in Section :ref:`effects_of_topography_electric_potential_hemispherical_depression`. If you want to see  the numerical code used for evaluating the analytic solution See `DC sphere code`_. To
 proceed with this validation, we consider a pole transmitter injected in the
 ground. In the above figure, injected current source location is shown.
+
+.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/util_codes/DCsphere.py
 
 For numerical computations, a 3D mesh with 5 m core cells is used. We compute
 potentials in every cells in the 3D domain. Top and middle panels of the below
@@ -199,7 +200,7 @@ A rule of thumb for understanding electric fields from charges is:
 
 .. note::
 
-   The electric field is coming out from a positive charge and coming into negative charge. 
+   The electric field is coming out from a positive charge and coming into negative charge.
 
 Based on the above principle, first imagine how electric fields are going to
 be distributed in 3D, then check your conjecture with the figure below, which
@@ -216,4 +217,5 @@ straight from the positive to negative charges.
    :align: center
    :name: ComparisonSecFineEfield
 
-   Section views of total (top panel), primary (middle panel), and secondary (bottom panel) electric fields. 
+   Section views of total (top panel), primary (middle panel), and secondary (bottom panel) electric fields.
+
