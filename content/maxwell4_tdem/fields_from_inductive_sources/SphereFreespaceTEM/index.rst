@@ -1,4 +1,4 @@
-.. _sphere_freespace:
+.. _SphereTEM_index:
 
 Response from a Conducting and Permeable Sphere in Free-Space
 -------------------------------------------------------------
