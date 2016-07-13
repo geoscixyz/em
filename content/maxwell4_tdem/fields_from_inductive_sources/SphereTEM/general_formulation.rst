@@ -39,27 +39,35 @@ The induced magnetic dipole moment characterizing the sphere's excitation is giv
 	{\bf m}(t) = \frac{4\pi}{3}R^3 \chi (t) \otimes {\bf h_0} (t)
 	:label: eqDipoleMomentGenDef
 
-where :math:`\chi (t)` is the inverse Fourier transform of the sphere's excitation factor :math:`\chi (i\omega )` (link).
-Thus:
+where :math:`\chi (t)` represents an impulse response for the sphere's induced dipole moment.
+Here, the impulse response is defined as the inversion Fourier transform of the sphere's frequency-dependent excitation factor :math:`\chi (i \omega)` (link).
+An explicit expression for :math:`\chi (t)` can be obtained from Becker??:
 
 .. math::
-	\chi (t) = \frac{1}{2 \pi} \int_{-\infty}^\infty \chi (i\omega) e^{i\omega t} d\omega
-	:label: eqImpulseResponseDef
+	\chi (t) = - \frac{3}{2} \delta (t) + \frac{3}{2} \Bigg ( \frac{6 \mu_r}{\beta^2} \sum_{n=1}^\infty \frac{\xi_n^2 e^{-\xi_n^2 \, t/\beta^2}}{(\mu_r + 2)(\mu_r - 1) + \xi_n^2} \Bigg ) u(t)
+	:label: eqImpulseResponseGenDef
+
+where :math:`u(t)` is the unit-step function, :math:`\delta (t)` is the Dirac delta function, :math:`\mu_r = \mu/\mu_0` is the relative permeability of the sphere and:
+
+.. math::
+	\beta = \big ( \mu_0 \sigma \big )^{1/2} R
+	:label: eqBetaGenDef
 	
-An explicit expression for :math:`\chi (i\omega)` may be found in Wait (1951):
+Coefficients :math:`\xi_n` within the sum are defined by:
 
 .. math::
-	\chi (i \omega ) = \frac{3}{2} \Bigg [ \frac{2\mu [tanh (\alpha) - \alpha] + \mu_0 [\alpha^2 tanh(\alpha) - \alpha + tanh(\alpha)]}{\mu [tanh(\alpha) - \alpha] - \mu_0 [\alpha^2 tanh(\alpha) - \alpha tanh(\alpha)]} \Bigg ]
-	:label: eqExcitationFactorTEM
+	\textrm{tan}\xi_n = \frac{(\mu_r - 1)\xi_n}{\mu_r - 1 + \xi_n^2}
+
+From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
+
+.. math::
+	n\pi \leq \xi_n \leq (n+1/2) \pi
 	
-where:
+	
+The value of each coefficient may be found iteratively using very few iterations (< 10) according to:
 
 .. math::
-	\alpha = \Big [ i\omega \mu \sigma \Big ]^{1/2} R
-	:label: eqAlphaDef
-
-
-
+	\xi_n^{(k+1)} = n\pi + \textrm{tan}^{-1}\Bigg ( \frac{(\mu_r - 1) \xi_n^{(k)}}{\mu_r - 1 + (\xi_n^{(k)} )^2} \Bigg )
 
 
 
