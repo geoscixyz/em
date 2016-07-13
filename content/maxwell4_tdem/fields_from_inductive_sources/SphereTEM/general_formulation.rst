@@ -10,6 +10,7 @@ These expressions can be used to predict the time-dependent dipole response from
 	:align: right
         :scale: 35%
         :name: SphereTEMfreespace2
+
         
 
 **Problem Geometry**: Consider the illustration in Figure :numref:`SphereTEMfreespace2`.

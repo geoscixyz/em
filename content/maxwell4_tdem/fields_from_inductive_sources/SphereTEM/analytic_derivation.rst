@@ -1,4 +1,4 @@
-.. _SphereTEM_transient_response:
+.. _SphereTEM_analytic_derivation:
 
 Analytic Derivation
 -------------------
