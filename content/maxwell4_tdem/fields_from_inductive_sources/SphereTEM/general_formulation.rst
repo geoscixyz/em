@@ -56,7 +56,7 @@ where :math:`u(t)` is the unit-step function, :math:`\delta (t)` is the Dirac de
 Coefficients :math:`\xi_n` within the sum are defined by:
 
 .. math::
-	\textrm{tan}\xi_n = \frac{(\mu_r - 1)\xi_n}{\mu_r - 1 + \xi_n^2}
+	\textrm{tan} \, \xi_n = \frac{(\mu_r - 1)\xi_n}{\mu_r - 1 + \xi_n^2}
 
 From Wait and Spies (1969), coefficients :math:`\xi_n` are spaced roughly :math:`\pi` apart with:
 

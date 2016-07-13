@@ -1,7 +1,7 @@
 .. _SphereTEM_transient_response:
 
-Transient Response
-------------------
+Analytic Derivation
+-------------------
 
 **Purpose** 
  
