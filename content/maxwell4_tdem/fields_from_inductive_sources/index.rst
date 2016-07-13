@@ -8,5 +8,6 @@ Fields from inductive sources
 
     halfspace
     layered_earth
-    SphereFreespaceTEM/index
+    SphereTEMold/oldindex
+    SphereTEM/index
     plate

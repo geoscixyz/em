@@ -1,4 +1,4 @@
-.. _SphereTEM_index:
+.. _SphereTEMold_index:
 
 Response from a Conducting and Permeable Sphere in Free-Space
 -------------------------------------------------------------
