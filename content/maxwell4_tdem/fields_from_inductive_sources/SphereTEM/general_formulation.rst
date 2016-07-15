@@ -46,7 +46,7 @@ The induced magnetic dipole moment for the sphere's excitation is given by the f
 	:label: eqDipoleMomentGenDef
 
 where :math:`\chi (t)` represents an impulse response for the sphere's induced dipole moment.
-The impulse response can be defined as the inverse Fourier transform of the sphere's frequency-dependent excitation factor :math:`\chi (i \omega)` (link).
+The impulse response is defined as the inverse Fourier transform of the sphere's frequency-dependent excitation factor :math:`\chi (i \omega)` (link).
 An explicit expression for :math:`\chi (t)` can be obtained from Wait and Spies (1969):
 
 .. math::
@@ -71,14 +71,34 @@ These coefficients are spaced roughly :math:`\pi` apart with:
 	n\pi \leq \xi_n \leq (n+1/2) \pi
 	:label: eqCoefSeparation
 	
-The value of each coefficient may be found iteratively using very few iterations (< 10) according to:
+In practice, the value of each coefficient may be found iteratively using very few iterations (< 10) according to:
 
 .. math::
 	\xi_n^{(k+1)} = n\pi + \textrm{tan}^{-1}\Bigg ( \frac{(\mu_r - 1) \xi_n^{(k)}}{\mu_r - 1 + (\xi_n^{(k)} )^2} \Bigg )
         :label: eqCoefIteration
 
+
+.. figure:: ./images/figMagnetizationTEMexample.png
+    :align: right
+    :scale: 40%
+    :name: SphereTEMexample
+    
+    
+
 Therefore, we can predict the sphere's dipole response by performing the following operations.
 First, the impulse response defined in Eq. :eq:`eqImpulseResponseGenDef` is determined for a particular sphere.
 Although it is expressed as an infinite sum, only a finite number of terms are needed; as the contribution of each term decays with respect to :math:`n`.
-Next, the convolution in Eq. :eq:`eqDipoleMomentGenDef` is evaluated numerically for a set of times.
-Once the induced dipole moment is obtained, the time-dependent response at a particular location may be obtain from Eq. :eq:`eqDipoleResponseGen`.
+The :math:`\xi_n` coefficients used to approximate the sum are determined individually using Eq. :eq:`eqCoefIteration`, with an initial value according to :eq:`eqCoefSeparation`.
+For a particular inducing field :math:`h_0(t)`, the convolution in Eq. :eq:`eqDipoleMomentGenDef` is evaluated numerically for a set of times.
+After a numerical approximation for the magnetic dipole moment is obtained, the time-dependent response at a particular location is predicted according to Eq. :eq:`eqDipoleResponseGen`.
+
+As an example, let us consider a sphere of radius :math:`R=10` m, conductivity :math:`\sigma = 10` S/m and relative permeability :math:`\mu_r=6`.
+The sphere has been subjected to a static inducing field with magnitude :math:`h_0=1` A/m since :math:`t = -\infty`.
+At :math:`t=0` s, the field is removed; which induces a time-dependent excitation within the sphere.
+This particular excitation defines the sphere's transient or "step-off" response.
+The magnetic dipole moment which characterizes the sphere at :math:`t>0` is shown in :numref:`SphereTEMexample`.
+
+The sphere's step-off response depends on the dimensions and physical properties of the sphere.
+These dependencies are discussed in the :ref:`following section<SphereTEM_transient_response>` for permeable and non-permeable spheres.
+
+
