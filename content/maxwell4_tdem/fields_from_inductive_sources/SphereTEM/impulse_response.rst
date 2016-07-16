@@ -5,10 +5,14 @@ Impulse Response
 
 **Purpose**: The sphere's time-dependent response to an arbitrary excitation is represented by its impulse response.
 Here, analytic expressions for the sphere's impulse response are presented for a permeable and a non-permeable sphere.
-Some aspects regarding the sphere's response to an arbitrary excitation are discussed.
 
 Introduction
 ============
+
+.. figure:: ./images/figImpulseResponse.png
+        :scale: 55%
+        :align: right
+        :name: ImpulseResponse
 
 According to our :ref:`general formulation<SphereTEM_general_formulation>`, the induced dipole moment :math:`m(t)` characterizing the sphere is defined by a convolution:
 
@@ -17,20 +21,30 @@ According to our :ref:`general formulation<SphereTEM_general_formulation>`, the 
 	:label: eqDipoleMomentConvStepOff
 	
 where :math:`R` is the sphere's radius, :math:`\chi (t)` represents the sphere's impulse response and :math:`h_0 (t)` represents the inducing field.
-By definition, :math:`\chi (t)` is defined as the inverse Fourier transform of the sphere's frequency-dependent excitation factor (link) (Wait, 1951):
+By definition, :math:`\chi (t)` is the inverse Fourier transform of the sphere's frequency-dependent excitation factor (link) (Wait, 1951):
 
 .. math::
 	\chi (t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \chi (i \omega) e^{i\omega t} d\omega
         :label: eqInverseFourierGenDef
 
-Wait and Spies (1969) derived the impulse response according to Eq. :eq:`eqInverseFourierGenDef`.
-In this section, only analytic results are presented.
-However, we do provide derivations of the sphere's impulse response in the :ref:`following section<SphereTEM_analytic_derivation>`.
+
+The general shape of the impulse response for a conductive and magnetically permeable sphere is shown in :numref:`ImpulseResponse`.
+At :math:`t<0`, the impulse response is zero.
+This indicates that the sphere's TEM response is causal.
+As a result, an convolution with the sphere's impulse response can be expressed as an integral from 0 to :math:`\infty`:
+
+.. math::
+	\chi (t) \otimes g (t) = \int_0^\infty \chi (\tau) g (t-\tau) d\tau
+
+
+Ultimately, the sphere's TEM response depends on the scaling of the delta function which occurs at :math:`t=0` and the decay which is observed for :math:`t>0`.
+Below, analytic expressions for the impulse response for permeable and non-permeable sphere's are presented.
+Derivations used to obtain these expressions are found in the :ref:`following section<SphereTEM_analytic_derivation>`.
 
 
 
 Conductive Sphere
-=================
++++++++++++++++++
 
 For a conductive and non-permeable (:math:`\mu = \mu_0`) sphere, the impulse response is given by (Wait and Spies, 1969):
 
@@ -42,18 +56,17 @@ where :math:`\delta (t)` is the Dirac delta function, :math:`u(t)` is the unit-s
 
 .. math::
 	\beta = (\mu_0 \sigma )^{1/2} R
-	
+	:label: eqBetaGenDef
 
 
 
 Conductive and Permeable Sphere
-===============================
++++++++++++++++++++++++++++++++
 
-Here, we present the impulse response for a conductive and  magnetically permeable sphere.
-
+For a conductive and permeable sphere, the impulse response is given by (Wait and Spies, 1969):
 
 .. math::
-	\chi_\delta (t) = - \, \frac{3}{2} \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu_r}{\beta^2} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) u(t)
+	\chi (t) = - \, \frac{3}{2} \delta (t) + \, \frac{3}{2} \Bigg ( \frac{6 \mu_r}{\beta^2} \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{-\xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} \Bigg ) u(t)
 	:label: eqImpulseConductivePermeable
 
 where:
@@ -77,6 +90,20 @@ The value of each coefficient may be found iteratively using very few iterations
 
 .. math::
 	\xi_n^{(k+1)} = n\pi + \textrm{tan}^{-1}\Bigg ( \frac{(\mu_r - 1) \xi_n^{(k)}}{\mu_r - 1 + (\xi_n^{(k)} )^2} \Bigg )
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
 
 
 

@@ -3,39 +3,61 @@
 Analytic Derivation
 -------------------
 
-**Purpose**: 
+**Purpose**: Here, analytic expressions for the impulse response and step-off excitation for a conductive and magnetically permeable sphere are derived.
+These derivations follow the ones found in Wait and Spies (1969).
  
-
-
 
 Introduction
 ============
 
+According to Wait and Spies (1969), the induced dipole moment :math:`m(t)` characterizing a sphere's time-dependent electromagnetic excitation is defined by a convolution:
+
+.. math::
+	m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \int_{-\infty}^\infty \chi (\tau) h_0 (t-\tau )d\tau
+	:label: eqDipoleMomentConvStepOff
+	
+where :math:`R` is the sphere's radius, :math:`\chi (t)` represents the sphere's impulse response and :math:`h_0 (t)` represents the inducing field.
+By definition, :math:`\chi (t)` is the inverse Fourier transform of the sphere's frequency-dependent excitation factor (link) (Wait, 1951):
+
+.. math::
+	\chi (t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \chi (i \omega) e^{i\omega t} d\omega
+        :label: eqInverseFourierGenDef
+        
+However, if a change of variables is used (:math:`s = i\omega`), then Eq. :eq:`eqInverseFourierGenDef` can be more generally expressed as an inverse Laplace transform:
+
+.. math::
+	\chi (t) = \frac{1}{2 \pi i} \int_{c - i\infty}^{c + i\infty} \chi (s) e^{st} ds = \mathcal{L}^{-1} \big [ \chi (s) \big ]
+	:label: LaplaceIFT
+
+where :math:`\chi (s)` is the sphere's excitation factor parameterized in terms of a variable :math:`s`.
+A small positive constant :math:`c` is chosen so that the contour path of integration lies within the convergence region of :math:`\chi (s)`.
+Here, our derivations begin with frequency-domain expressions for the sphere's excitation factor according to Wait (1951).
+Next, solutions using the inverse Laplace transform are derived according to Wait and Spies (1969). 
 
 
-Response from a Conducting Sphere in a Resistive Medium
-=======================================================
+Purely Conductive Sphere
+========================
 
-Here we consider the time-dependent magnetization of a purely conductive sphere (:math:`\mu = \mu_0`) within a resistive medium (:math:`\sigma_b \ll \sigma`).
-In this case, the frequency-dependent excitation of the sphere is defined by:
+Here, we derive the unit-step excitation and the impulse response for a conductive and non-permeable (:math:`\mu = \mu_0`) sphere.
+In this case, the frequency-dependent excitation factor :math:`\chi (i\omega)` for the sphere is defined by (Wait, 1951):
 
 .. math::
 	\chi (i\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth} (\alpha)}{\alpha} \Bigg ]
 	:label: ChiConductive
 
-where, if electric displacement is neglected (i.e. :math:`\omega \varepsilon \ll \sigma`):
+where:
 
 .. math::
-	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R
+	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R \; ,
 	:label: alpha
 
-From Eq. :eq:`alpha`, we can see that the sphere's excitation factor is dependent on the product of :math:`\sqrt{\sigma}R`.
+:math:`R` is the radius of the sphere, :math:`\sigma` is the conductivity of the sphere and :math:`\mu_0 = 4 \times 10^{-7}` H/m is the permeability of free-space.
 
 Impulse Response
 ++++++++++++++++
 
-To obtain the excitation factor's impulse response, Wait and Spies (1969) employed a change of variables on Eq. :eq:`ChiConductive` by replacing :math:`s=i\omega` and :math:`\beta=(\mu_0 \sigma)^{1/2} R`.
-The hyperbolic cotanjent term was then re-expressed as an infinit series, thus:
+To obtain the excitation factor's impulse response, Wait and Spies (1969) employed a change of variables on Eq. :eq:`ChiConductive`.
+By replacing :math:`s=i\omega`, letting :math:`\beta=(\mu_0 \sigma)^{1/2} R` and re-expressing the hyperbolic cotanjent as an infinite series, Eq. :eq:`ChiConductive` becomes:
 
 .. math::
 	\begin{align}
@@ -45,25 +67,20 @@ The hyperbolic cotanjent term was then re-expressed as an infinit series, thus:
 	\end{align}
 	:label: ChiChangeVar
 
-This allowed them to obtain the excitation's impulse response using the inverse Laplace transform:
+For each of the terms within Eq :eq:`ChiChangeVar`, the inverse Laplace transform is now trivial and can be looked up in tables.
+As a result, the solution to Eq. :eq:`LaplaceIFT` is given by:
+
 
 .. math::
-	\chi_\delta (t) = \frac{1}{2 \pi i} \int_{c - i\infty}^{c + i\infty} \chi (s) e^{st} ds = \mathcal{L}^{-1} \big [ \chi (s) \big ]
-	:label: LaplaceIFT
-
-where :math:`c` is a small positive constant, chosen so that the contour path of integration lies within the convergence region of :math:`\chi (s)`.
-By substituting Eq. :eq:`ChiChangeVar` into Eq. :eq:`LaplaceIFT`, a conductive sphere's impulse response can be expressed as:
-
-.. math::
-	\chi_\delta (t) = - \; \frac{3}{2} \delta (t) - \frac{9}{2} \Bigg [ \frac{1}{\beta^2} - \frac{1}{\beta \sqrt{\pi t}} \Bigg ( 1 + 2 \sum_{n = 1}^\infty e^{-(n\beta)^2/t} \Bigg ) \Bigg ] u(t)
+	\chi (t) = - \; \frac{3}{2} \delta (t) - \frac{9}{2} \Bigg [ \frac{1}{\beta^2} - \frac{1}{\beta \sqrt{\pi t}} \Bigg ( 1 + 2 \sum_{n = 1}^\infty e^{-(n\beta)^2/t} \Bigg ) \Bigg ] u(t)
 	:label: ImpulseConductive
 
 where :math:`\delta(t)` is the Dirac delta function.
 We can see that Eq. :eq:`ImpulseConductive` is zero for :math:`t<0`, implying it is causal.
-It should be noted that our expression for :math:`\chi_\delta (t)` differs from the one in Wait and Spies (1969) by a factor of :math:`-3/2`.
+It should be noted that our expression for :math:`\chi (t)` differs from the one in Wait and Spies (1969) by a factor of :math:`-3/2`.
 This is because of how we chose to define :math:`\chi (i\omega)`.
 Although the impulse response is written as an infinite series, exponential terms become negligible when the product of :math:`(n\beta)^2t` is sufficiently large.
-As a result, only a finite portion of the sum is required to approximate the response to a reasonable degree of accuracy, with more terms being required at early times.
+As a result, only a finite portion of the sum is required to approximate the response to a reasonable degree of accuracy; with more terms being required at early times.
 
 
 Step Response
