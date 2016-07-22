@@ -23,4 +23,14 @@
         "url":"http://gif.eos.ubc.ca/people/sdevriese",
         "ORCID":"0000-0003-4305-8416"
     }
+
+    "thast":{
+        "name":"Thibaut Astic",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"thast@eos.ubc.ca",
+        "urlhttps://www.linkedin.com/in/thibautastic?trk=hp-identity-name",
+        "tooltip":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
+        "ORCID":"0000-0003-1237-6315"
+    },
 }
