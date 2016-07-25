@@ -42,13 +42,20 @@ Either numerically, or through instrumentation, it is possible to remove the pri
   :label: l2
 
 where :math:`C` is coupling coefficient.
-In Eq. :eq:`l2` :math:`M_{ij}` is the mutual inductance between loops i and j, L is the self inductance of the target loop, Q is the inductive response function. :math:`\alpha = wL/R`  is a dimensionless induction number.
+In Eq. :eq:`l2`, :math:`M_{ij}` is the mutual inductance between loops :math:`i` and :math:`j`, :math:`L` is the self inductance of the target loop, :math:`Q` is the inductive response function. :math:`\alpha = \omega L/R`  is a dimensionless induction number.
 
-The Response Function is a complex quantity and the real and imaginary parts (or in-phase and quadrature phase) look like XXXX(Figure of Re/Im). The horizontal axis is the induction number.
+The Response Function is a complex quantity and the real and imaginary parts (or in-phase and quadrature phase) look like :numref:`CmplxResp`. The horizontal axis is the induction number.
 
-Eq. :eq:`l2` has two main components. C is determined by geometry. Q relates to the target body.
+.. figure:: ./images/CmplxResp.png
+   :align: center
+   :scale: 80%
+   :name: CmplxResp
 
-In the following pages we
+   Complex response function.
+
+Eq. :eq:`l2` has two main components. :math:`C` is determined by geometry. :math:`Q` relates to the target body.
+
+In the following pages we illustrate
 
 .. - Derive the expression for the response function
 .. - Explain self and mutual inductance
@@ -78,7 +85,7 @@ In the following pages we
 .. toctree::
     :maxdepth: 1
 
-    induced_currents_body
+    derive_response_function
     amplitudeandphase
     mutualinductance
 
