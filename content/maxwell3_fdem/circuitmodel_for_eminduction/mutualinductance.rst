@@ -13,7 +13,7 @@ When an EMF (:math:`\mathcal{E}`) is produced in a loop because of the change in
    :scale: 60%
    :name: Concepts_3loops_only_M
 
-   Conceptual diagram for 3-loops system.
+   Conceptual diagram for circuit model.
 
 A sinusoidal current in the Loop1 (Tx) generates a primary magnetic field. This induces a EMF in the Loop2 (body), which can be written as
 
