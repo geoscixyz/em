@@ -101,8 +101,6 @@ In the following pages we illustrate
     derive_response_function
     understanding_EMresponse
     understanding_response_widget
-    amplitudeandphase
-
 
 
 

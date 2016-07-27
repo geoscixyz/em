@@ -242,8 +242,8 @@ The component of :math:`H^s_3` 180 :math:`^\circ` out of phase with :math:`H^p` 
 
 In frequency domain EM survey:
 
-    - the 180 :math:`^\circ` out-of-phase fraction of :math:`H^s_3` is called the **Real** or **In-phase** component.
+- the 180 :math:`^\circ` out-of-phase fraction of :math:`H^s_3` is called the **Real** or **In-phase** component.
 
-    - the 90 :math:`^\circ` out-of-phase fraction of :math:`H^s_3` is called the **Imaginary**, **Out-of-phase**, or **Quadrature** component.
+- the 90 :math:`^\circ` out-of-phase fraction of :math:`H^s_3` is called the **Imaginary**, **Out-of-phase**, or **Quadrature** component.
 
 

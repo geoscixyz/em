@@ -13,7 +13,6 @@ Contents:
     :maxdepth: 3
 
     governing_equations
-    theory_3loops
     circuitmodel_for_eminduction/index
     sphere_freespace/index
     fields_from_grounded_sources/index
