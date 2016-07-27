@@ -70,7 +70,7 @@ where :math:`A = \frac{K_{23}M}{K_{13}L}` and response function, :math:`Q = \fra
 
 .. note::
 
-    Because the ratio :math:`\frac{K_{23}M}{K_{13}L}` is generally very small, the ratio :math:`\frac{H^s}{H^{p}_3}` is small, regardless of the value of :math:`\alpha`. Often part per million (ppm) is used for the unit of this ratio.
+    Because the coupling coefficient is generally very small, the EM response, :math:`\frac{H^s_3}{H^{p}_3}` is small, regardless of the value of :math:`\alpha`. Often part per million (ppm) is used for the unit of this ratio.
 
 
 The phase of :math:`\frac{H^s}{H^p}`, :math:`\theta_s` will be same as that of :math:`I(\omega)`, hence

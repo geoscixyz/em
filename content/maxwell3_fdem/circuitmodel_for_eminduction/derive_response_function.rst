@@ -92,26 +92,29 @@ We can redefine this using time constant :math:`\tau = L/R`
 or by using induction number :math:`\alpha = \omega \tau`
 
 .. math::
-  Q = \frac{\imath \alpha}{1+\imath\alpha}
+  Q = \frac{\imath \alpha}{1+\imath\alpha} = \frac{\alpha^2 + \imath \alpha}{1+\alpha^2}
 
-Consider complex response function, :math:`Q` as
+Below figure shows real and imaginary component of :math:`Q`.
 
-.. math::
-    Q = \frac{\imath \alpha}{1+\imath\alpha}
-    = \frac{\imath \alpha(1-\imath\alpha)}{1+\alpha^2}
-    = \frac{\alpha^2 + \imath \alpha}{1+\alpha^2}
+.. plot::
 
-- for :math:`\alpha \ll 1\rightarrow` :math:`Q\simeq\imath\alpha` so :math:`I(\omega) \approx -\imath \alpha` (in the resitive limit)
-- for :math:`\alpha \gg 1\rightarrow` :math:`Q\simeq\imath\alpha` so :math:`I(\omega) \approx -1` (in the inductive limit)
-
-:numref:`CmplxResp` shows real and imaginary component of :math:`Q`.
-
-.. figure:: ./images/CmplxResp.png
-   :align: center
-   :scale: 80%
-   :name: CmplxResp
-
-   Complex response function.
+    from SimPEG.EM.Analytics import Qfun
+    import numpy as np
+    import matplotlib.pyplot as plt
+    L = 1.
+    R = 2000.
+    alpha = np.logspace(-3, 3, 100)
+    alpha, Q = Qfun(R, L, None, alpha=alpha)
+    fig = plt.figure(figsize=(5, 3))
+    ax1 = plt.subplot(111)
+    ax1.semilogx(alpha, Q.real, 'k', lw=3)
+    ax1.semilogx(alpha, Q.imag, 'r', lw=3)
+    ax1.grid(True)
+    ax1.legend(("Real","Imaginary"), loc=2)
+    ax1.set_xlabel("Induction number ($\\alpha$)")
+    ax1.set_ylabel("Response function (Q)")
+    plt.tight_layout()
+    plt.show()
 
 From similar derivation we could obtain
 
@@ -124,7 +127,6 @@ where :math:`H` stands for the magnetic field. Therefore, the equality:
   \frac{\mathcal{E}_3^s }{\mathcal{E}_3^p} = \frac{H_3^s }{H_3^p}
 
 holds hence fields and voltages can be used interchangeably when measuring with a coil.
-
 
 .. \alpha: induction number
 .. \alpha = \omega \tau
