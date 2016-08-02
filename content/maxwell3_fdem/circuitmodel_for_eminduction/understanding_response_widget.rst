@@ -22,7 +22,7 @@ Let I=0 :math:`^\circ` and D=90 :math:`^\circ` of the Loop2 shown in :numref:`Co
     :align: center
     :name: EMdataI0D90
 
-    Frequency domain EM response from loop-loop EM survey when I=0 and D=90
+    Frequency domain EM response from loop-loop EM survey when I=0 :math:`^\circ` and D=90 :math:`^\circ`.
 
 :numref:`EMdataI_90D0` shows same figures, but with different I and D of body (Loop2): I=-90 :math:`^\circ` and D=0 :math:`^\circ`. Shape anomalous response is significantly different due to the different coupling among three loop system. Especially, the peak anomaly at the center has positive sign. :numref:`EMdataI0D0` shows the case when I=0 :math:`^\circ` and D=0 :math:`^\circ`. This is null-coupled case where there is no primary flux passing the area of Loop2, hence measured reponse is zero everywhere.
 
