@@ -4,6 +4,7 @@ Circuit Model for EM Induction
 ==============================
 
 .. topic:: Purpose
+
   The basic principles for EM induction were outlined in CITExxx. Here we use an equivalent electric circuit model consisting of three loops to represent that process. We derive the  inductive response function in terms of circuits, mutual and self-inductance, and coupling. Widgets are developed to help physical understanding. The response functions for many  practical geophysical surveys resemble that from the circuit model and  hence much intuition about EM signals can be obtained using this analysis.
 
 The basic EM  survey is shown in :numref:`Concepts_3loops`. The time varying magnetic field (referred to as the primary field) in the Tx induces currents in the conductor. Those currents produce a secondary field that can be recorded at the receiver.
