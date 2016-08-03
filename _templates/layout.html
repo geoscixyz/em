@@ -30,13 +30,21 @@
 <footer class="footer">
     <div class="container">
 
+      <div class ="row">
+        <div class="col-md-12" align="center">
+          <br>
+          <i class="fa fa-wrench" aria-hidden="true" font-size="14px"></i> <a href="/"> em.geosci</a> is under construction. If you are interested in contributing, join the development on
+          <a href="http://github.com/ubcgif/em"> github</a>!
+        </div>
+      </div>
+      <hr>
       <div class="row">
           <div class="col-md-1" align="left">
               <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
                   <img alt="Creative Commons License" width=60 style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
               </a>
           </div>
-          <div class="col-md-7" align="left">
+          <div class="col-md-8" align="left">
             <div class="row">
               <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
               <a href="http://em.geosci.xyz"> EM.geosci</a>
@@ -46,17 +54,17 @@
               is licensed under a
               <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
             <!-- </p> -->
-            </div>
+            <!-- </div> -->
             {%- if show_sphinx %}
             {% trans sphinx_version=sphinx_version|e %}
-            <div class="row">
+            <!-- <div class="row"> -->
              Pages created using <a
                 href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{%endtrans %}
             {%- endif %}
             </div>
           </div>
 
-          <div class="col-md-4" align="right">
+          <div class="col-md-3" align="right">
               <!-- <p class="muted credit" font-size=11> -->
                 <div id="sourcelink">
                   <a href="_sources/index.txt" rel="nofollow">Page Source</a> | <a href="http://geosci.xyz" rel="nofollow">GeoSci Home</a>
