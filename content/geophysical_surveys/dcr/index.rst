@@ -42,37 +42,8 @@ spheres in a uniform half-space.
 
 
 .. raw:: html
+    :file: dcr_contents.html
 
-    <div class="row">
-        <div class="col-md-1" align="left"></div>
-
-        <div class="col-md-5" align="left">
-            <strong>Contents</strong>
-            <div class="row" align="left">
-                <ul>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/physics.html">Physics</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey.html">Survey</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/data.html">Data</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/interpretation.html">Interpretation</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey_design.html">Survey Design</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/practical_considerations.html">Practical Considerations</a></li>
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-5" align="left">
-            <strong>Case Histories</strong>
-            <div class="row" align="left">
-                <ul>
-                    <li><a class="reference internal" href="content/case_histories/mt_isa/index.html">Mt. Isa</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-1" align="left"></div>
-    </div>
-    <br>
 
 .. toctree::
     :hidden:
@@ -84,3 +55,4 @@ spheres in a uniform half-space.
     interpretation
     survey_design
     practical_considerations
+
