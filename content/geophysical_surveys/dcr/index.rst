@@ -50,14 +50,11 @@ spheres in a uniform half-space.
             <strong>Contents</strong>
             <div class="row" align="left">
                 <ul>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/governing_equations.html">Governing Equations</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/example.html">Example</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/transmitters.html">Transmitters</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/receivers.html">Receivers</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/systems.html">Systems</a></li>
-                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey_design.html">Survey Design</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/physics.html">Physics</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey.html">Survey</a></li>
                     <li><a class="reference internal" href="content/geophysical_surveys/dcr/data.html">Data</a></li>
                     <li><a class="reference internal" href="content/geophysical_surveys/dcr/interpretation.html">Interpretation</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey_design.html">Survey Design</a></li>
                     <li><a class="reference internal" href="content/geophysical_surveys/dcr/practical_considerations.html">Practical Considerations</a></li>
 
                 </ul>
@@ -81,12 +78,9 @@ spheres in a uniform half-space.
     :hidden:
     :maxdepth: 2
 
-    governing_equations
-    example
-    transmitters
-    receivers
-    systems
-    survey_design
+    physics
+    survey
     data
     interpretation
+    survey_design
     practical_considerations

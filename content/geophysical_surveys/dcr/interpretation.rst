@@ -3,7 +3,7 @@
 Interpretation
 ==============
 
-**Goal:** Interpret the data generated from the :ref:`two-sphere problem<dcr_example>`.
+**Goal:** Interpret the data generated from the :ref:`two-sphere problem<dcr_physics>`.
 
  .. figure:: images/TwoSphere_AppRes.png
     :align: right

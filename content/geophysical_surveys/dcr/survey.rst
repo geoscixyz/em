@@ -1,7 +1,66 @@
+.. _dcr_survey:
+
+Survey
+======
+
+
+Common survey layouts
+---------------------
+
+**Pole-dipole**: A DC/IP survey using a single current electrode (the second current electrode
+is at "infinity" or many kilometers away from the nearest receiver electrode)
+and two potential electrodes. Conventionally, for a 2D survey the receiver
+electrodes are placed in a linear fashion away from the transmitter electrode
+as shown in the figure below.
+
+.. figure:: ./images/poledipole.png
+   :scale: 80%
+   :align: center
+
+   `A pole-dipole survey <http://en.openei.org/wiki/DC_Resistivity_Survey_(Pole-Dipole_Array)>`_
+
+**Dipole-dipole**: Similar to a pole-dipole survey except that both current electrodes are
+located close to the receiver area. An example of a typical 2D dipole-dipole
+survey layout with the plotting convention for a pseudo-section is shown
+below.  A pseudo-section is a method for plotting the data using the geometry
+of the survey to place the data points. The plotting point is located half-way
+between the nearest current electrode and the receiver electrode at a depth of
+one-half the horizontal transmitter-receiver separation.
+
+.. figure:: images/pole-dipole_pseudo.jpg
+   :scale: 100%
+   :align: center
+
+   `A dipole-dipole survey and psuedo-section <http://gpg.geosci.xyz/en/latest/content/DC_resistivity/DC_measurements_and_data.html>`_
+
+**Distributed array** : A distributed array is composed of receiver electrodes that are deployed and
+connected in conventional 2D lines or as a 3D grid network. For any current
+electrode position, data is acquired simultaneusly at all receiver locations,
+commonly as a time-series. With post-processing and use of the super-position
+principle, voltage potentials can be calculated between any of the connected
+receiver electrodes. This can create a vast amount of useful data for an
+ensuing 3D inversion. An example of a distributed array is the MIMDAS system
+shown in :numref:`MIMDAS_layout`.
+
+**MIMDAS** :
+
+.. figure:: images/MIMDASlayout.jpg
+   :scale: 90%
+   :align: center
+   :name: MIMDAS_layout
+
+   Overview of the `MIMDAS layout <http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf>`_
+
+
+.. _dcr_instrumentation:
+
+Instrumentation
+---------------
+
 .. _dcr_transmitters:
 
 Transmitters
-============
+************
 
 A generator or battery provides a source of power for the transmitter in
 geophysical surveys. A typical example of a generator used for a Direct
@@ -70,3 +129,28 @@ The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
    :name: IP_waveform2
 
    `Location of DC and IP measurements along the receiver voltage curve <http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html>`_
+
+.. _dcr_receivers:
+
+Receivers
+*********
+
+**DC resistivity**: Two receiver electrodes are used to measure the voltage difference in a DC/IP
+survey. Non-polarizing electrodes are commonly porous pots composed of a solid
+metal wire in a salt solution. It is also common to use lead wire in a lead-
+chloride mix or copper wire in a copper-sulphate solution. This eliminates
+self potential between the wire and the ground, and it improves the quality of
+the data. The voltage potential is measured between any combination of
+receiver electrodes due to super-position theory, as long as the data was
+collected simultaneously. An example of a porous pot receiver electrode for a
+DC/IP survey with a copper sulphate solution is shown in
+:numref:`porous_pot_receiver`.
+
+.. figure:: images/receiver_electrode_porous_pots_receiver.jpg
+   :scale: 70%
+   :align: center
+   :name: porous_pot_receiver
+
+   A single porous pot electrode in the ground connected to a receiver.
+
+
