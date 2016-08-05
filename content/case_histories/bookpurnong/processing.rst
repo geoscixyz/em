@@ -37,6 +37,8 @@ For quality control, the SkyTEM data are also viewed for individual time channel
 1D layered earth inversion
 ==========================
 
+The two data sets in this case history have been previously inverted using spatially constrained inversion by :cite:`viezzoli2009`. Here we present the inversion results obtained using UBC-GIF programs.
+
 Layered model
 -------------
 
@@ -44,16 +46,15 @@ A layered model treats the earth below the surface as a stack of horizontally in
 
 For consistency, both the FDEM and TDEM inversion share the same layer thicknesses. Because the smallest skin depth or diffusion distance is about a couple of meters, we design the top layer to be 1 m thick. The thickness increases geometrically from the surface to the depth of 225 m. There are 21 layers in total.
 
-Data selection
---------------
-
 Inversion result
 ----------------
+
+Inversions of the TDEM and FDEM data sets are carried out on a sounding-by-sounding basis. Most soundings achieve the desired misfit except that some soundings fail to converge due to excessive noise or coherent bias in the data. :numref:`booky-models` shows the depth slices of the stitched volume of conductivity from the FDEM and TDEM inversions. Although the data maps of the two data sets are in different units and have different apparence, the reconstructed conductivity models are highly consistent. This demonstrates the necessity of inversion-based processing and interpretation.
 
 .. figure:: ./images/booky-models.png
     :align: left
     :width: 100%
     :name: booky-models
     
-    Inversion models of the TDEM and FDEM data sets at Bookpurnong.
+    Inversion models of the TDEM and FDEM data sets at Bookpurnong. The shaded area indicates the highland where irrigation takes place.
 
