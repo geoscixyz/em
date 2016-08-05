@@ -49,7 +49,7 @@ Survey Design
 *************
 Using the background conductivity of about 1 S/m, the diffusion distances of the :ref:`skytem` time channels range 4 to 120 m. At Bookpurnong, the SkyTEM was flown at a 100 m line spacing, so any single location can be at least sensed by two flight lines. :numref:`booky-coverage` shows the flight lines of RESOLVE and SkyTEM. The two surveys covered almost the same area, providing us with an opportunity to cross validate the resulting models.
 
-.. figure:: ./images/booky-coverage.jpg
+.. figure:: ./images/booky-coverage.png
  :align: left
  :width: 80%
  :name: booky-coverage
