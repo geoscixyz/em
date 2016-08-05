@@ -3,6 +3,13 @@
 Direct Current Resistivity
 ==========================
 
+.. topic:: Purpose
+
+    to illustrate the fundamentals of a DC resistivity survey, provide a
+    vision for how it is applied in the field, and demonstrate potential uses
+
+.. todo:: motivational examples to show where it has been useful (these contain links to case histories)
+
  .. figure:: images/DCR_Intro.png
     :align: right
     :scale: 80%
@@ -33,7 +40,45 @@ involving two current and two potential electrodes is shown in
 charge build-ups are illustrated for (a) conductive and (b) resistive
 spheres in a uniform half-space.
 
+
+.. raw:: html
+
+    <div class="row">
+        <div class="col-md-1" align="left"></div>
+
+        <div class="col-md-5" align="left">
+            <strong>Contents</strong>
+            <div class="row" align="left">
+                <ul>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/governing_equations.html">Governing Equations</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/example.html">Example</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/transmitters.html">Transmitters</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/receivers.html">Receivers</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/systems.html">Systems</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/survey_design.html">Survey Design</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/data.html">Data</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/interpretation.html">Interpretation</a></li>
+                    <li><a class="reference internal" href="content/geophysical_surveys/dcr/practical_considerations.html">Practical Considerations</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-5" align="left">
+            <strong>Case Histories</strong>
+            <div class="row" align="left">
+                <ul>
+                    <li><a class="reference internal" href="content/case_histories/mt_isa/index.html">Mt. Isa</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-1" align="left"></div>
+    </div>
+    <br>
+
 .. toctree::
+    :hidden:
     :maxdepth: 2
 
     governing_equations
