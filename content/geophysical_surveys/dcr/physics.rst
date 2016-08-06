@@ -5,8 +5,7 @@ Physics
 
 .. topic:: Purpose
 
-    Demonstrate the fundamental physical principles governing the DC
-    resistivity experiment
+    Demonstrate the fundamental physical principles governing the DC resistivity experiment
 
 
  .. figure:: images/TwoSphere_model.png

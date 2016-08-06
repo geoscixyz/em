@@ -3,6 +3,10 @@
 Survey
 ======
 
+.. topic:: Purpose
+
+   provide an overview of common survey set-ups nd instrumentation used in DC resistivity experiments
+
 
 Common survey layouts
 ---------------------

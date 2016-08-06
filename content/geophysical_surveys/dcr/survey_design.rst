@@ -2,3 +2,7 @@
 
 Survey Design
 =============
+
+.. topic:: Purpose
+
+    todo
