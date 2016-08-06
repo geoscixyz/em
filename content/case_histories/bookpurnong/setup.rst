@@ -32,8 +32,9 @@ In hydrology, the interaction between the riverwater and groundwater can be in t
 
 .. figure:: images/booky-losegain.png
  :align: right
- :figwidth: 10%
+ :figwidth: 100%
  :name: lose-gain
 
  Losing and gaining stream of a river.
 
+.. Source: https://commons.wikimedia.org/wiki/File:Stream_underground_water.png
