@@ -3,6 +3,13 @@
 Direct Current Resistivity
 ==========================
 
+.. topic:: Purpose
+
+    to illustrate the fundamentals of a DC resistivity survey, provide a
+    vision for how it is applied in the field, and demonstrate potential uses
+
+.. todo:: motivational examples to show where it has been useful (these contain links to case histories)
+
  .. figure:: images/DCR_Intro.png
     :align: right
     :scale: 80%
@@ -33,15 +40,19 @@ involving two current and two potential electrodes is shown in
 charge build-ups are illustrated for (a) conductive and (b) resistive
 spheres in a uniform half-space.
 
+
+.. raw:: html
+    :file: dcr_contents.html
+
+
 .. toctree::
+    :hidden:
     :maxdepth: 2
 
-    governing_equations
-    example
-    transmitters
-    receivers
-    systems
-    survey_design
+    physics
+    survey
     data
     interpretation
+    survey_design
     practical_considerations
+
