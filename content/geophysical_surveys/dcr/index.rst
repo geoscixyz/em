@@ -3,6 +3,16 @@
 Direct Current Resistivity
 ==========================
 
+.. toctree::
+    :hidden:
+
+    physics
+    survey
+    data
+    interpretation
+    survey_design
+    practical_considerations
+
 .. topic:: Purpose
 
     to illustrate the fundamentals of a DC resistivity survey, provide a
@@ -45,14 +55,5 @@ spheres in a uniform half-space.
     :file: dcr_contents.html
 
 
-.. toctree::
-    :hidden:
-    :maxdepth: 2
 
-    physics
-    survey
-    data
-    interpretation
-    survey_design
-    practical_considerations
 
