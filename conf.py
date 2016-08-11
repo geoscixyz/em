@@ -157,7 +157,7 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
           ('Why', 'content/introduction/introduction_about'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
@@ -232,7 +232,7 @@ html_short_title = 'EM'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'em.ico'
+html_favicon = 'favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -341,7 +341,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = 'em.ico'
+latex_logo = 'favicon.ico'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
