@@ -31,7 +31,7 @@ Thibaut Astic
 
 **email:** thast@eos.ubc.ca 
 
-**url:** https://www.linkedin.com/in/thibautastic 
+**url:** https://linkedin.com/in/thibautastic 
 
 **ORCID:** `0000-0003-1237-6315 <http://orcid.org/0000-0003-1237-6315>`_ 
 
