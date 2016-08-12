@@ -12,7 +12,7 @@ The recovered model from :ref:`pseudo-3D inversion <aspen_processing>` is interp
 
         The figure shows a planview section from the interpolated 3D model at an elevation of 465 m (or roughly 100 m below the surface in the east and 40 m below the surface in the west). The model shows a channel-like resistive unit in the center, with more conductive regions to the northwest and southeast. Solid line shows location of focus for SAGD; dashed line shows location of cross-sections in :numref:`asp10`.
 
-.. figure:: ./images/CrossSectionsAllThree.png
+.. figure:: ./images/CrossSectionsAllThree.PNG
         :align: right
         :figwidth: 45%
         :name: asp10
