@@ -159,6 +159,7 @@ html_theme_options = {
     'navbar_links': [
           # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
           ('Why', 'content/introduction/introduction_about'),
+          ('Who', 'contributors'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
@@ -473,7 +474,8 @@ epub_exclude_files = ['search.html']
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+from _ext import make_contributorslist, make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+make_contributorslist()
 make_formula_sheet()
 checkDependencies()
 supress_nonlocal_image_warn()
