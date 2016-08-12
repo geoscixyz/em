@@ -78,7 +78,9 @@ def make_contributorslist(fpath='contributors.json',
         last_names.append(val['name'].split(' ')[-1])
 
     last_names = zip(last_names, contribs.keys())
-    sorted_names = dict(sorted(last_names))
+    sorted_names = sorted(last_names)
+
+    print sorted_names
 
     out = """.. _contibutors:
 
@@ -94,7 +96,7 @@ Contributors
     f = open(fout, 'w')
     f.write(out)
 
-    for key in sorted_names.values():
+    for _, key in sorted_names:
 
         print('   writing contributor {}').format(key)
         contrib = contribs[key]

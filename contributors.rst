@@ -31,9 +31,28 @@ Thibaut Astic
 
 **email:** thast@eos.ubc.ca 
 
-**url:** https://www.linkedin.com/in/thibautastic?trk=hp-identity-name 
+**url:** https://www.linkedin.com/in/thibautastic 
 
 **ORCID:** `0000-0003-1237-6315 <http://orcid.org/0000-0003-1237-6315>`_ 
+
+
+        
+.. _sdevriese:
+
+Sarah G. R. Devriese
+--------------------
+
+
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** sdevries@eos.ubc.ca 
+
+**url:** http://gif.eos.ubc.ca/people/sdevriese 
+
+**ORCID:** `0000-0003-4305-8416 <http://orcid.org/0000-0003-4305-8416>`_ 
 
 
         
@@ -57,25 +76,6 @@ Lindsey J. Heagy
 **url:** http://lindseyjh.ca 
 
 **ORCID:** `0000-0002-1551-5926 <http://orcid.org/0000-0002-1551-5926>`_ 
-
-
-        
-.. _sdevriese:
-
-Sarah G. R. Devriese
---------------------
-
-
-
-**affiliation:** University of British Columbia 
-
-**location:** Vancouver, BC 
-
-**email:** sdevries@eos.ubc.ca 
-
-**url:** http://gif.eos.ubc.ca/people/sdevriese 
-
-**ORCID:** `0000-0003-4305-8416 <http://orcid.org/0000-0003-4305-8416>`_ 
 
 
         
