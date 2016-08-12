@@ -3,7 +3,7 @@
 Basic Electromagnetic Experiments
 =================================
 
-In :ref:`Case Histories<case_histories_index>` we list a number of problems of
+In :ref:`Case Histories <case_histories_index>` we list a number of problems of
 relevance to today's society. In most of those problems there is a requirement
 to determine what is beneath the surface without direct sampling. This is the
 realm of geophysics. In a generic geophysical survey, energy is input to the
@@ -13,9 +13,9 @@ recorded. We briefly discuss each of the elements involved in a generic geophysi
 :ref:`Physical properties<physical_properties_index>` : Earth materials can be characterized in terms of their physical properties.
 The properties of relevance to electromagnetics are:
 
-- :ref:`electrical conductivity<electrical_conductivity_index>`
-- :ref:`magnetic permeability<magnetic_permeability_index>`
-- :ref:`electrical permittivity<electrical_permittivity_index>`
+- :ref:`electrical conductivity <electrical_conductivity_index>`
+- :ref:`magnetic permeability <magnetic_permeability_index>`
+- :ref:`electrical permittivity <electrical_permittivity_index>`
 
 The success of a geophysical survey depends upon how the physical properties
 of a sought target or geologic structure differ from the background host
@@ -49,7 +49,7 @@ which they travelled.
     :align: center
     :name: basic_geophysics
 
-    Sources provide energy to excite the earth. Responses depend upon the physical properties and contrasts in the subsurface. We measure responses at the surface to generate data. 
+    Sources provide energy to excite the earth. Responses depend upon the physical properties and contrasts in the subsurface. We measure responses at the surface to generate data.
 
 Although the data contain information about the subsurface, subsequent
 processing and inversion are required to extract meaningful information. This
@@ -63,8 +63,8 @@ property distribution that explains the observations.
     :scale: 40%
     :align: center
     :name: basic_inversion
-    
 
-    Forward problems predict data given a model, and inverse problems aim to find a model given data. 
+
+    Forward problems predict data given a model, and inverse problems aim to find a model given data.
 
 
