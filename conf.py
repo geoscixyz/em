@@ -98,6 +98,7 @@ linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
                     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
                     'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
                     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
+                    'https://linkedin.com/in/*'
                     ]
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -159,6 +160,7 @@ html_theme_options = {
     'navbar_links': [
           # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
           ('Why', 'content/introduction/introduction_about'),
+          ('Who', 'contributors'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
@@ -473,7 +475,8 @@ epub_exclude_files = ['search.html']
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+from _ext import make_contributorslist, make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+make_contributorslist()
 make_formula_sheet()
 checkDependencies()
 supress_nonlocal_image_warn()
