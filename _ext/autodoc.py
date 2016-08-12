@@ -45,6 +45,7 @@ Equation Bank
     f.write(out)
 
     for name in files:
+        print '   writing {}'.format(name.rstrip('.rst'))
         out = """
 
  - {}
