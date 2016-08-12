@@ -3,6 +3,9 @@
 Systems
 =======
 
+.. raw:: html
+    :file: ../../../underconstruction.html
+
 .. _skytem:
 
 SkyTEM
@@ -25,7 +28,7 @@ The multi-turned transmitter loop is winded on a rigid horizontal hexagonal fram
 Waveform
 ********
 
-SkyTEM is capable of operate in a dual mode, using high moment (HM) and low moment (LM) alternatively in a flight. HM uses all the transmitter loop turns on the frame, a peak current of 90 A, and a lower base frequency at 25 Hz. LM uses only one turn of the loop, a peak current of 40 A, and a higher base frequency at 222.22 Hz. HM and LM have different shapes of waveform. LM can turn off the transmitter current rapidly, so it allows reliable measurement of data as early as 12 us, while the HM mode can measure as late as 8800 us. 
+SkyTEM is capable of operate in a dual mode, using high moment (HM) and low moment (LM) alternatively in a flight. HM uses all the transmitter loop turns on the frame, a peak current of 90 A, and a lower base frequency at 25 Hz. LM uses only one turn of the loop, a peak current of 40 A, and a higher base frequency at 222.22 Hz. HM and LM have different shapes of waveform. LM can turn off the transmitter current rapidly, so it allows reliable measurement of data as early as 12 us, while the HM mode can measure as late as 8800 us.
 
 
 .. figure:: ./images/skytem_config.jpg
@@ -38,7 +41,7 @@ Configuration of SkyTEM system and its transmitter waveform.
 Corrections
 ***********
 
-The received voltage is averaged over the time windows, and then normalised by the receiver effective area and the transmitter moment (product of current, area and number of turns) to yield delivered data in the unit of V/(A.turns.m^4). The inclination of the frame is monitoered during flight, but the data are not corrected for the inclination. 
+The received voltage is averaged over the time windows, and then normalised by the receiver effective area and the transmitter moment (product of current, area and number of turns) to yield delivered data in the unit of V/(A.turns.m^4). The inclination of the frame is monitoered during flight, but the data are not corrected for the inclination.
 
 
 
