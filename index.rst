@@ -85,6 +85,10 @@ Contents
    content/equation_bank
    content/references
 
+.. toctree::
+   :hidden:
+
+   sitemap
 
 
 
