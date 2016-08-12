@@ -20,24 +20,25 @@ The titles, and EM systems used are provided below.
 
 **Content**
 
-.. toctree:: 
+.. toctree::
     :maxdepth: 2
 
     mt_isa/index
-    bookpurnong/index
-    aspen/index
+
+
+.. bookpurnong/index
 
 - MIM: Mineral Exploration; DCR and IP; (2D and 3D inversions)
 - Bukpurnong: Environmental (ground water) FDEM (Resolve), TDEM (SkyTEM)
 - TKC: Kimberlite (diamond exploration) FDEM (Dighem); TDEM (AeroTEM, nanoTEM, VTEM)
 - Lalore Lake: Volcanic massive sulfide; HeliTEM, VTEM, HeliSAM, ....
 - Mt. Milligan; Cu-porphyry: (DCIP, ZTEM, FDEM (Dighem))
-- San Nicolas: Massive Sulfide: FDEM (CSAMT); TDEM (UTEM); DCIP;  plus Mag, Grav  
+- San Nicolas: Massive Sulfide: FDEM (CSAMT); TDEM (UTEM); DCIP;  plus Mag, Grav
 - Pebble: Porphyry (ZTEM, TDEM (VTEM))
 - Yanachocha:  Gold deposit (DCIP; VTEM)
 - Athabasca Oil Sands:  TDEM (VTEM): ground FDEM and TDEM:  time lapse
 - CO2 injection: GMI
-- Iceland: geothermal:   MT and ground TDEM; 
+- Iceland: geothermal:   MT and ground TDEM;
 - UXO: various TDEM systems (with and without magnetic soils)
 - Bathurst (ZTEM; Dighem)
 - Australia mineral exploration (MMR)

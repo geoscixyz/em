@@ -9,6 +9,7 @@
 .. --------------------------------- ..
 
 
+
 Equation Bank
 =============
 
@@ -29,6 +30,18 @@ Equation Bank
  - electromotive_force_time
 
     .. include:: equation_bank/electromotive_force_time.rst
+
+        
+
+ - faraday_lenz_time
+
+    .. include:: equation_bank/faraday_lenz_time.rst
+
+        
+
+ - faraday_time
+
+    .. include:: equation_bank/faraday_time.rst
 
         
 
@@ -53,18 +66,6 @@ Equation Bank
  - faradays_law_int_time
 
     .. include:: equation_bank/faradays_law_int_time.rst
-
-        
-
- - faraday_lenz_time
-
-    .. include:: equation_bank/faraday_lenz_time.rst
-
-        
-
- - faraday_time
-
-    .. include:: equation_bank/faraday_time.rst
 
         
 

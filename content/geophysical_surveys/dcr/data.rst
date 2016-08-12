@@ -3,7 +3,9 @@
 Data
 ====
 
- - Data as apparent resistivity
+.. topic:: Purpose
+
+    todo
 
 .. _dcr_pseudosection:
 

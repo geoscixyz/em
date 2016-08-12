@@ -3,16 +3,14 @@
 Direct Current Resistivity
 ==========================
 
- .. figure:: images/DCR_Intro.png
-    :align: right
-    :scale: 80%
-    :figwidth: 50%
-    :name: DCR_intro
+.. topic:: Purpose
 
-    Direct-Current Resisitivity (DCR)
-    experiment showing current path and
-    charge built up near a (a) conductive
-    and (b) resitive anomaly.
+    to illustrate the fundamentals of a DC resistivity survey, provide a
+    vision for how it is applied in the field, and demonstrate potential uses
+
+    .. image:: http://gpg.geosci.xyz/en/latest/_images/icon_dc.gif
+        :align: right
+
 
 In a Direct Current Resistivity (DCR) experiment a generator is used to inject
 current into the earth. The current path depends upon the variation of
@@ -33,15 +31,30 @@ involving two current and two potential electrodes is shown in
 charge build-ups are illustrated for (a) conductive and (b) resistive
 spheres in a uniform half-space.
 
-.. toctree::
-    :maxdepth: 2
+ .. figure:: images/DCR_Intro.png
+    :align: right
+    :scale: 80%
+    :figwidth: 50%
+    :name: DCR_intro
 
-    governing_equations
-    example
-    transmitters
-    receivers
-    systems
-    survey_design
+    Direct-Current Resisitivity (DCR)
+    experiment showing current path and
+    charge built up near a (a) conductive
+    and (b) resitive anomaly.
+
+
+.. raw:: html
+    :file: dcr_contents.html
+
+
+.. toctree::
+    :hidden:
+
+    physics
+    survey
     data
     interpretation
+    survey_design
     practical_considerations
+
+

@@ -38,7 +38,7 @@ The electric field has units of volts per meter [:math:`V/m`]. The units of curr
 
   .. math::
      \mathbf{J} = \left [ \frac{A}{V m} \frac{V}{m}\right ] = \left [ \frac{A}{m^2} \right ]
-        
+
 These units agree with the definition of current density.
 
 Further reading...

@@ -1,9 +1,12 @@
-.. _dcr_example:
+.. _dcr_physics:
 
-Example
+Physics
 =======
 
-**Goal:** Simulate numerically a DCR experiment.
+.. topic:: Purpose
+
+    Demonstrate the fundamental physical principles governing the DC resistivity experiment
+
 
  .. figure:: images/TwoSphere_model.png
     :align: right
@@ -37,3 +40,4 @@ the conductive and resistive anomaly as predicted by the :ref:`theory<bound_char
 
  .. raw:: html
     :file: images/TwoSphere_Current_Anim.html
+

@@ -3,6 +3,11 @@
 Discretization
 ==============
 
+.. raw:: html
+    :file: ../../../../underconstruction.html
+
+
+
 .. todo:: Parse this material throughout the numeric section as applicable
 
 **aka: A (very) brief introduction to solving Maxwell's equations on a computer**
