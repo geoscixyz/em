@@ -88,17 +88,22 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'AUTHORS.rst', 'README.md',
-                    'content/equation_bank/*',
-                    'content/maxwell1_fundamentals/maxwell_variables.rst',
-                    'error.rst',
-                    'content/case_histories/bookpurnong/*']
+exclude_patterns = [
+    '_build', 'AUTHORS.rst', 'README.md',
+    'content/equation_bank/*',
+    'content/maxwell1_fundamentals/maxwell_variables.rst',
+    'error.rst',
+    'content/case_histories/bookpurnong/*',
+    'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
+    'content/geophysical_surveys/airborne_fdem/systems.rst',
+                    ]
 
-linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
-                    'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
-                    'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
-                    'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
-                    'https://linkedin.com/in/*'
+linkcheck_ignore = [
+    'http://mybinder.org/repo/ubcgif/em_examples',
+    'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
+    'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
+    'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
+    'https://linkedin.com/in/*'
                     ]
 
 # The reST default role (used for this markup: `text`) to use for all

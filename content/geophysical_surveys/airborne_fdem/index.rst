@@ -7,7 +7,7 @@ Airborne FDEM
    :align: center
    :width: 40%
    :name: afem_cover
-   
+
 .. Source: Jean M. Legault, 2015, Airborne Electromagnetic Systems – State of the Art and Future Directions, CSEG RECORDER, VOL. 40, No. 06.
 
 Motivation
@@ -59,13 +59,23 @@ airborne EM in this website, please refer to:
 .. toctree::
    :maxdepth: 1
 
-   governing_equations
-   example
-   transmitters_and_receivers
-   systems
-   survey_design
+   physics
+   survey
    data
    interpretation
+   survey_design
    practical_considerations
+
+
+
+
+.. governing_equations
+.. example
+.. transmitters_and_receivers
+.. systems
+.. survey_design
+.. data
+.. interpretation
+.. practical_considerations
 
 
