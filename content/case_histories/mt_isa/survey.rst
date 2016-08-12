@@ -66,7 +66,7 @@ problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
    *  - .. raw:: html
             :file: ./images/Mt_Isa_Current_Anim.html
-   *  - Conductivity model (color) and current flow (arrows) for a range of source locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
+   *  - Conductivity model (color) and current flow (arrows) for a range of source locations (Powered by: `SimPEG <http://simpeg.xyz/>`_).
 
 
 
