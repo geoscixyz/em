@@ -18,7 +18,7 @@ Theory for three-loop systems
     The orientation of the loops can be changed by adjusting the inclination `I` and the declination `D`.
 
 A lot can be gleaned from considering a three-loop system, as shown in :numref:`loops`. The system consists of a transmitter loop (TX), a receiver loop (RX), and a target. The target resembles a conductive anomaly and its response depends on its inductance and its resistance as well as the frequency used by the TX-RX.
-    
+
 A current in the transmitter generates a primary magnetic field. This induces a current in the target loop, which in turn generates a secondary magnetic field in opposing direction as per :ref:`Lenz's law <lenz>`. The primary and secondary magnetic field are measured at the receiver. If the primary and secondary field are in opposing directions at the receiver, we consider this to be a negative datum. If they are in the same direction, the datum is positive.
 
 The description of electromagnetic induction can be expressed mathematically as follow:
@@ -29,7 +29,7 @@ The description of electromagnetic induction can be expressed mathematically as 
 
 where `A` is a coupling term that described the locations and orientations of the loops while :math:`f(\alpha)` is the induction term that depends on the properties of the target loop. In full, Equation :eq:`l1` can be expressed as:
 
-.. math:: 
+.. math::
         \frac{\mathbf{H}^s}{\mathbf{H}^p} = - \frac{M_{12} M_{23}}{L M_{13}} \frac{\alpha^2 + i \alpha}{1 + \alpha^2},
         :label: l2
 
@@ -57,7 +57,7 @@ The mutual inductance can be derived from the :ref:`Biot-Savart law <biot_savart
 .. math::
         \Phi_2 = \int \mathbf{B}_1 \cdot da_2 = M_{12} I_1.
         :label: phi2
-    
+
 This flux is then equal the mutual inductance times the current. We can solve for the mutual induction in a few more steps. Using Stokes' Theorem and the vector potential of :math:`\mathbf{B}_1 `, Equation :eq:`phi2` becomes a line integral:
 
 .. math::
@@ -69,7 +69,7 @@ where :math:`\mathbf{A}_1` is derived using the Biot-Savart law:
 .. math::
         \mathbf{A}_1 = \frac{\mu_0 I_1}{4\pi} \oint \frac{dl_1}{\lvert \mathbf{r} - \mathbf{r'}\rvert^2}.
         :label: A1
-     
+
 By subbing Equation :eq:`A1` into :eq:`phi22`, we get the following integral expression for the flux:
 
 .. math::

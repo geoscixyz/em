@@ -2,3 +2,6 @@
 
 Footprint and depth of investigation
 ====================================
+
+.. raw:: html
+    :file: ../../underconstruction.html

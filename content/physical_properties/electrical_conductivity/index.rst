@@ -55,7 +55,6 @@ Contents
     electrical_conductivity_tables
     relevanttopics/index
     electrical_conductivity_mathematical_relationships
-    electrical_conductivity_references
 
 
 
