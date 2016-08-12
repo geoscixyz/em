@@ -3,6 +3,11 @@
 Fundamentals
 ============
 
+.. raw:: html
+    :file: ../../../underconstruction.html
+
+
+
 this covers the fundamentals common to the geophysical methods we will discuss
 
 .. toctree::

@@ -25,7 +25,7 @@ body {
 .footer
     {
         height: 80px;
-        bottom: 0;
+        bottom: 10px;
     }
 
 footer,
@@ -37,7 +37,7 @@ footer,
         background-color: #fff;
         font-size: 12px;
         text-align: right;
-        margin-bottom:10px;
+        padding-bottom:12px;
     }
 
 
@@ -61,5 +61,5 @@ margin: 20px 0;
 }
 
 code {
-font-size: 80%;
+font-size: 100%;
 }

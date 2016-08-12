@@ -31,12 +31,3 @@ Maxwell's Equations
     time_domain_equations
     frequency_domain_equations
     maxwells_equations_in_homogeneous_media/index
-
-
-**Old Contents**
-
-.. toctree::
-    :maxdepth: 2
-
-    ../maxwells_equations_OLD/wave_number
-    ../maxwells_equations_OLD/wave_propagation_in_free_space

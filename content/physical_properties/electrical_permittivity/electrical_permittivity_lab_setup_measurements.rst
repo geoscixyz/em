@@ -3,5 +3,5 @@
 Lab Setup and Measurements
 ==========================
 
-.. todo:: write this page :)
-
+.. raw:: html
+    :file: ../../../underconstruction.html
