@@ -25,6 +25,7 @@ The titles, and EM systems used are provided below.
 
     mt_isa/index
     aspen/index
+    emc/index
 
 
 .. bookpurnong/index
