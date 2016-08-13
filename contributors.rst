@@ -43,6 +43,10 @@ Sarah G. R. Devriese
 --------------------
 
 
+.. image:: https://avatars3.githubusercontent.com/u/13733333?v=3&s=460
+    :width: 150
+    :align: left
+            
 
 **affiliation:** University of British Columbia 
 

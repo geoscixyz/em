@@ -8,8 +8,8 @@ Survey
    provide an overview of common survey set-ups nd instrumentation used in DC resistivity experiments
 
 
-Common survey layouts
----------------------
+Basic Survey Setup
+------------------
 
 **Pole-dipole**: A DC/IP survey using a single current electrode (the second current electrode
 is at "infinity" or many kilometers away from the nearest receiver electrode)

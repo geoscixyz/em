@@ -5,17 +5,17 @@ Physics
 
 .. topic:: Purpose
 
-    Demonstrate the fundamental physical principles governing the DC resistivity experiment
+    Demonstrate the fundamental physical principles governing the DC
+    resistivity experiment
 
+In a DC resistivity survey, a generator is used to inject current into the
+subsurface. Currents flow, and the path they follow depends on the
+conductivity structure of the subsurface. Charges build up on conductivity
+interfaces, which change the electric potentials that are measured on the
+surface.
 
- .. figure:: images/TwoSphere_model.png
-    :align: right
-    :figwidth: 50%
-    :name: DCR_TwoSpheres
-
-    Pole-dipole DCR experiment over a synthetic model made up of a conductive
-    (:math:`10^{-1}` S/m) and a resistive (:math:`10^{-3}` S/m) sphere
-    embedded  in a uniform half-space (:math:`10^{-2}` S/m).
+.. raw:: html
+    :file: figure2.html
 
 We illustrate the DCR experiment on a synthetic pole-dipole survey as
 illustrated in :numref:`DCR_TwoSpheres`. This simple
@@ -29,9 +29,18 @@ density<current_density_J>`, while the color indicates the strength and sign
 of :ref:`accumulated charges<bound_charge_Q>`. The source location is marked
 by a triangle.
 
+ .. figure:: images/TwoSphere_model.png
+    :align: right
+    :figwidth: 50%
+    :name: DCR_TwoSpheres
+
+    Pole-dipole DCR experiment over a synthetic model made up of a conductive
+    (:math:`10^{-1}` S/m) and a resistive (:math:`10^{-3}` S/m) sphere
+    embedded  in a uniform half-space (:math:`10^{-2}` S/m).
+
 `[Press play]` Note the behaviour of the current lines as the point source passes over the
 conductor. The current density increases inside the sphere but
-decreases around it, which is often refered to as :ref:`current channeling<dc_e_field>`.
+decreases around it, which is often referred to as :ref:`current channeling<dc_e_field>`.
 Conversely, current lines get deflected around the resistor.
 
 `[Pause]` The accumulation of charges occurs at the interface between
