@@ -11,20 +11,20 @@ and due dilligence at each step is important to achieve a final outcome.
 
 .. figure:: http://gpg.geosci.xyz/en/latest/_images/seven_steps.jpg
     :align: center
-    :scale: 90 %
+    :width: 80 %
 
 1. **Setup:** *What is the Problem?*
 
    Establish the geoscience objectives, consider conventional practice, and
    identify how geophysics might contribute.  This could include:
 
-    - Mapping geology
-    - Locating buried objects
-    - Obtaining 3D images of the subsurface
+   - Mapping geology
+   - Locating buried objects
+   - Obtaining 3D images of the subsurface
 
-    Assemble prior information that might be relevant. Details for using the
-    seven-step procedure will depend upon what information is being sought and
-    what is available.
+   Assemble prior information that might be relevant. Details for using the
+   seven-step procedure will depend upon what information is being sought and
+   what is available.
 
 2. **Properties:**  Understand how geologic and man-made materials of
    relevance to the problem can be characterized by physical properties. The key
@@ -33,12 +33,12 @@ and due dilligence at each step is important to achieve a final outcome.
    link geophysics with the geoscience problem being investigated. Important
    physical properties are:
 
-    - Density
-    - Compressional wave and shear wave velocities
-    - Magnetic susceptibility
-    - Electrical conductivity (or resistivity)
-    - Electrical chargeability
-    - Dielectric permittivity
+   - Density
+   - Compressional wave and shear wave velocities
+   - Magnetic susceptibility
+   - Electrical conductivity (or resistivity)
+   - Electrical chargeability
+   - Dielectric permittivity
 
 
 3. **Surveys:** Select a geophysical survey that is sensitive to the physical
@@ -99,10 +99,32 @@ applied geoscience problems.
 Summary for the seven-step framework
 ====================================
 
- 1. **Setup:** Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.
- 2. **Properties:** Characterize materials that can be expected and establish the likely physical property contrasts.
- 3. **Surveys:** Determine a suitable geophysical survey, and design an effective and efficient field survey. Identify possible sources of error, noise and mis-interpretation.
- 4. **Data:** Carry out the field survey, taking all necessary actions to ensure complete, high quality, and cost effective data sets.
- 5. **Processing:** Plot the data, and apply appropriate processing and analysis.
- 6. **Interpretation:** Interpret results in terms of physical property distribution, and then in terms of the original geoscience objectives.
- 7. **Synthesis:** Combine interpretations with prior knowledge about the problem, and with other relevant information. Decide if your results are adequate for the particular problem. Iteration is usually necessary.
+1. **Setup:**
+   Establish the geoscience objectives, consider conventional practice, and
+   identify how geophysics might contribute.
+
+2. **Properties:**
+   Characterize materials that can be expected and establish the likely physical
+   property contrasts.
+
+3. **Surveys:**
+   Determine a suitable geophysical survey, and design an effective and efficient
+   field survey. Identify possible sources of error, noise and mis-
+   interpretation.
+
+4. **Data:**
+   Carry out the field survey, taking all necessary actions to ensure complete,
+   high quality, and cost effective data sets.
+
+5. **Processing:**
+   Plot the data, and apply appropriate processing and analysis.
+
+6. **Interpretation:**
+   Interpret results in terms of physical property distribution, and then in
+   terms of the original geoscience objectives.
+
+7. **Synthesis:**
+   Combine interpretations with prior knowledge about the problem, and with other
+   relevant information. Decide if your results are adequate for the particular
+   problem. Iteration is usually necessary.
+
