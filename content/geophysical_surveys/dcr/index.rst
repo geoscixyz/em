@@ -36,6 +36,7 @@ different conductivity and these charges generate an electric potential.
     charge built up near a (a) conductive
     and (b) resitive anomaly.
 
+
 :ref:`Data<dcr_data>` are acquired at the surface by measuring the potential
 difference between two electrodes. The measured voltage depends upon the
 positions of the current and potential electrodes with respect to the target
