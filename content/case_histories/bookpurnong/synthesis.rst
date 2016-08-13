@@ -22,6 +22,14 @@ Back to the motivating questions in Setup:
 
  Yes. By examing the inverted models, we concludes that the upstream section of the river loses water, flushing the surrounding floodplain; the downstream section gains saline water rfom the highland, casuing the increase of conductivity and salinity.
 
+.. figure:: ./images/booky-synthesis.png
+    :align: left
+    :width: 80%
+    :name: booky-synthesis
+    
+    Hydrological model and electrical conductivity model at Bookpurnong. 
+
+
 Follow up
 ---------
 
