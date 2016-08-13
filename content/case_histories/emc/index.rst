@@ -7,7 +7,7 @@ Elevenmile Canyon
 
         This case history is based upon the paper: "Three-Dimensional Inversion of ZTEM Data at the Elevenmile Canyon Geothermal System, Nevada" :cite:`DevrieseEtAl2012`. The research was presented at the Geothermal Resources Council conference in Reno, Nevada in 2012.
 
-Compared to the case histories on :ref:`Bookpurnong <bookpurnong_index>` and :ref:`Aspen <aspen_index>`, which use controlled-source airborne EM methods, this case history uses a natural source airborne EM method called ZTEM. The goal of the research is to characterize a geothermal system.
+Compared to other case histories (i.e., :ref:`Aspen <aspen_index>`), which use controlled-source airborne EM methods, this case history uses a natural source airborne EM method called ZTEM. The goal of the research is to characterize a geothermal system.
 
 The following papers and reading material provide good background information on the ZTEM method and geothermal systems in Nevada.
 
