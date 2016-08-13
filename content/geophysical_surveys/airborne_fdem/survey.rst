@@ -91,7 +91,7 @@ gyroscopes.
 
 
 Field Notes
-***********
+^^^^^^^^^^^
 
 .. Due dilegence
 

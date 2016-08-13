@@ -56,6 +56,8 @@ airborne EM in this website, please refer to:
 - Tli Kwi Cho: kimberlite exploration
 
 
+**Contents**
+
 .. toctree::
    :maxdepth: 1
 

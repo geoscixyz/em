@@ -1,7 +1,7 @@
 .. _airborne_fdem_bird:
 
 Transmitters and Receivers
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo::
 
@@ -19,7 +19,7 @@ Transmitters and Receivers
 
 
 Transmitter
------------
+***********
 
 A transmitter loop in a FEM system is usually some kind of coil, connected to
 a generator that outputs a regulated sinusoidal signal at a certain frequency.
@@ -41,7 +41,7 @@ a generator that outputs a regulated sinusoidal signal at a certain frequency.
 
 
 Receiver
---------
+********
 
 - Coil. The current in the transmitter loop and the induced current in the
   earth can both generated time-varying magnetic field. At the receiver coil,
@@ -66,7 +66,7 @@ Receiver
 
 
 Configurations
---------------
+**************
 
 - Orientation. A transmitter-receiver pair can be oriented to two commonly-
   used geometries: horizontal co-planar (HCP) or virtical co-axial (VCA). They

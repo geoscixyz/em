@@ -2,7 +2,7 @@
 .. _resolve:
 
 RESOLVE
-*******
+^^^^^^^
 
 .. figure:: ./images/resolve_view.jpg
     :align: center
@@ -38,7 +38,7 @@ per million (ppm).
 
 
 Flight
-^^^^^^
+******
 
 A nominal terrain clearance is 30 m. A nominal aircraft speed is 30 m/s. The
 aircraft is positioned using post-processed differential GPS in processing,
@@ -46,7 +46,7 @@ and real-time satellite differential GPS in flight. A typical sampling rate is
 10 Hz (approximately 3 m sounding spacing).
 
 Corrections
-^^^^^^^^^^^
+***********
 
 The service provider usually carry out corrections after the raw data are
 downloaded from the instruments. Those can include: base level correction,
@@ -61,4 +61,4 @@ the delivery of the data to clients.
 .. _dighem:
 
 DIGHEM
-******
+^^^^^^

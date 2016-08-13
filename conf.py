@@ -96,6 +96,7 @@ exclude_patterns = [
     'content/case_histories/bookpurnong/*',
     'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
     'content/geophysical_surveys/airborne_fdem/systems.rst',
+    'content/geophysical_surveys/airborne_tdem/systems.rst',
                     ]
 
 linkcheck_ignore = [
