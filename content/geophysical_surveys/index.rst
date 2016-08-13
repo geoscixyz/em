@@ -32,12 +32,13 @@ be more suitable for detecting and characterizing that target.
 In the :ref:`Direct Current Resistivity <dcr_index>`, :ref:`Airborne FDEM
 <airborne_fdem_index>`, and :ref:`Airborne TDEM <airborne_fdem_index>`
 sections, we discuss:
- - the physical responses expected in each experiment,
- - the setup of a typical survey,
- - the type of data collected,
- - how those data are interpreted,
- - strategies for designing a survey to characterize a target
- - practical considerations and commonly encountered challenges
+
+- the physical responses expected in each experiment,
+- the setup of a typical survey,
+- the type of data collected,
+- how those data are interpreted,
+- strategies for designing a survey to characterize a target
+- practical considerations and commonly encountered challenges
 
 **Contents:**
 

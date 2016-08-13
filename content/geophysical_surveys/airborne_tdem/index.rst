@@ -49,7 +49,6 @@ variety of geoscientific applications from environmetal to deep exploration.
 On this website, we use ATEM in two case histories:
 
 - Bookpurnong: groundwater salinization evaluation
-
 - Tli Kwi Cho: kimberlite exploration
 
 

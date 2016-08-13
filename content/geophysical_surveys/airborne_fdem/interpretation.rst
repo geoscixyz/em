@@ -133,6 +133,5 @@ whether the data are sensitive to that part of the earth.
     **Here are some notes to build from**
     - Time constant (decay constant) analysis. For a time domain system, the voltage measured off time at the receiver is roughly an exponentially decaying function of time. The decay rate is an indicator of the overall conductivity of the ground: good conductors have slower decays (greater time constant) and poor conductors have faster decays (smaller time constant). Time constant method offers a first-order interpretation of the overall conductivity of the ground.
     - Apparent conductivity and conductivity-depth imaging/transform (CDI or CDT).
-    -
 
 
