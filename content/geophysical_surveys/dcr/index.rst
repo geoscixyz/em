@@ -41,7 +41,7 @@ different conductivity and these charges generate an electric potential.
 difference between two electrodes. The measured voltage depends upon the
 positions of the current and potential electrodes with respect to the target
 as well as on the earth’s conductivity.  Obtaining information about the
-spatial distribution of conductivity requires many measurement at different
+spatial distribution of conductivity requires many measurements at different
 locations and electrode configurations. A generic :ref:`dipole-dipole<dcr_survey_design>` survey
 involving two current and two potential electrodes is shown in
 :numref:`DCR_intro`. Artistic representation of the current density and
