@@ -74,6 +74,7 @@ Contents
    :maxdepth: 1
    :name: `EM GeoSci`
 
+   contributors
    content/introduction/index
    content/physical_properties/index
    content/maxwell1_fundamentals/index
@@ -84,6 +85,11 @@ Contents
    content/case_histories/index
    content/equation_bank
    content/references
+
+.. toctree::
+   :hidden:
+
+   sitemap
 
 
 
