@@ -7,6 +7,8 @@ Aspen
     :file: ../../../underconstruction.html
 
 
+- **Authors**: :ref:`Sarah G. R. Devriese <sdevriese>`
+
 .. topic :: Prelude
 
         Electromagnetic surveys can be collected in the air, on the surface,
