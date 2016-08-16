@@ -9,8 +9,18 @@ Data
 
 .. _dcr_pseudosection:
 
+Soundings
+---------
+
+.. raw:: html
+    :file: images/sounding_radio_buttons.html
+
+
 Pseudo-section
 --------------
+
+.. raw:: html
+    :file: images/pseudosection_radio_buttons.html
 
 The layout shown in {figure} indicates
 a current electrode at postion 1 with potentials measured across all other
@@ -32,3 +42,4 @@ pole on the right as seen in :numref:`Pseudo_PDP_West`.
     :name: Pseudo_PDP_West
 
     Data for pole moving west to east.
+
