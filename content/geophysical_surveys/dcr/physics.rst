@@ -15,14 +15,14 @@ interfaces, which change the electric potentials that are measured on the
 surface.
 
 .. raw:: html
-    :file: figure2.html
+    :file: images/physics_radio_buttons.html
 
 We illustrate the DCR experiment with a synthetic pole-dipole survey as
 illustrated in :numref:`DCR_TwoSpheres`. This simple
 :ref:`conductivity<electrical_conductivity_index>` model is made up of two
 spheres in a uniform half-space Earth. Currents are injected into the ground
 from the source, and potentials are measured at different locations. Using
-:ref:`numerical methods<solving_maxwells_equations>`, we can model the currents 
+:ref:`numerical methods<solving_maxwells_equations>`, we can model the currents
 and accumulation of charges due to conductivity contrasts as shown in the
 animation below. The arrows denote the :ref:`current
 density<current_density_J>`, while the color indicates the strength and sign
@@ -47,7 +47,7 @@ Conversely, current lines get deflected around the resistor.
 conductivity contrasts. Note the difference in polarity between
 the conductive and resistive anomaly as predicted by the :ref:`theory<bound_charge_Q>`.
 Also note how the spatial distribution of charges on the spheres changes
-as the current source is moved. 
+as the current source is moved.
 
  .. raw:: html
     :file: images/TwoSphere_Current_Anim.html
