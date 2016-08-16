@@ -38,9 +38,9 @@ Bookpurnong
 .. figure:: images/booky-hydro.jpg
     :align: left
     :width: 500
-    :name: booky-hydro
+    :name: booky-hydroindex
 
-    Hydrological model at Bookpurnong (Viezzoli et al. 2009).
+    Hydrological model at Bookpurnong :cite:`viezzoli2009`.
 
 .. todo::
 
