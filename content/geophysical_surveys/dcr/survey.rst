@@ -11,6 +11,10 @@ Survey
 Basic Survey Setup
 ------------------
 
+.. raw:: html
+   :file: images/survey_radio_buttons.html
+
+
 **Pole-dipole**: A DC/IP survey using a single current electrode (the second current electrode
 is at "infinity" or many kilometers away from the nearest receiver electrode)
 and two potential electrodes. Conventionally, for a 2D survey the receiver
@@ -156,5 +160,4 @@ DC/IP survey with a copper sulphate solution is shown in
    :name: porous_pot_receiver
 
    A single porous pot electrode in the ground connected to a receiver.
-
 
