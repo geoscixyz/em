@@ -3,50 +3,58 @@
 Processing
 ==========
 
+In this step, we process the field data for the preparation of interpretation. Many different processing methods exist for airborne EM, but the-state-of-art is quantiative inversion that converts the measurements of EM fields to a conductivity model. In hydrological studies where the strata are almost horizontal, 1D layered earth modeling is usually the standard practice. In the following, we describe our processing in two steps: (1) data quality control and (2) 1D inversion.
 
-Processing of Frequency domain data
------------------------------------
+Quality control of frequency domain data
+----------------------------------------
 
-The RESOLVE data, viewed along the profiles, is mostly smooth, so the high-
-frequency random noise is likely to be suppressed at the contractor's end. But
-we are still able to identify some outliers with suspecious negative values.
-We have therefore removed them.
+Although the contractors have preliminarily processed the raw data to suppress the noise, there is still unwanted interference in the deliverables that can potentially harm the inversion. So our quality control precedure is supposed to prepare the data for inversion. 
 
 .. figure:: ./images/booky-resolveqc.jpg
     :align: left
-    :scale: 80%
+    :width: 60%
     :name: booky-resolveqc
+    
+    Quality control of the FDEM data.
 
-Other considerations:
-
-(1) The real part of the two highest frequencies are really close. This suggests the system is in the inductive limit, and the data at the highest frequency may be just a measure of sensor height, instead of the ground conductivity. See how the high frequency data can be used to correct the flight height on a separate page.
-
-(2) The uncertainty assigned to this data set is 5% plus 10 ppm.
+Viewing the plot of data for each frequqncy :numref:`booky-resolveqc`, we identify some unrealistically small outlies, and we decide to remove them from the data set. The uncertainty assigned to this data set is 5% plus 10 ppm as a floor.
 
 
-Processing of Time domain data
-------------------------------
+Quality control of time domain data
+-----------------------------------
 
-The SkyTEM data are in reasonable quality. There are noticeable irregular data
-called "channel jumping", and noise that contaminates the late time channels.
+For quality control, the SkyTEM data are also viewed for individual time channels along the flight lines :numref:`booky-skytemqc`. There are noticeable irregular data called "channel jumping", and noise that contaminates the late time channels. The unrealistic decays and outlies can be automatically detected by the analysis of first or second derivative, and be removed. The noise present in the late times provides an estimate of a noise floor. The assigned uncertainty to the data is 10% plus 1E-13.
 
 .. figure:: ./images/booky-skytemqc.jpg
     :align: left
-    :scale: 80%
+    :width: 60%
     :name: booky-skytemqc
+    
+    Quality control of the TDEM data.
 
-Some automated procedures can be used to screen the data:
 
-(1) Use the first and second order derivative of a decay curve to detect unrealistic decay.
 
-(2) Identify outliers using the first order derivative.
+1D layered earth inversion
+==========================
 
-(3) Remove the data outside of the feasible range.
+The two data sets in this case history have been previously inverted using spatially constrained inversion by :cite:`viezzoli2009`. Here we present the inversion results obtained using UBC-GIF programs.
 
-Other considerations:
+Layered model
+-------------
 
-(1) Bookpurnong is conductive, so induction takes longer time to dissipate. If the base frequency is not low enough (i.e. off time not long enough) the measured data may be affected by the previous cycle. See discussion on a separation page.
+A layered model treats the earth below the surface as a stack of horizontally infinite layers, each of which has a constant conductivity value. In our precedure, every sounding is given a layered model, and the conductivity values of the layers are sought by the inversion with the observed data at that sounding. The output of each sounding inversion is a series of conductivity values as a function of depth. Finally, all the 1D functions of conductivity at different locations are stitched together to form a 3D volume. 
 
-(2) Like the frequency domain system, the earliest time channel may be used to correct the bird's flight height.
+For consistency, both the FDEM and TDEM inversion share the same layer thicknesses. Because the smallest skin depth or diffusion distance is about a couple of meters, we design the top layer to be 1 m thick. The thickness increases geometrically from the surface to the depth of 225 m. There are 21 layers in total.
 
-(3) Uncertainty = 10% + 1E-13.
+Inversion result
+----------------
+
+Inversions of the TDEM and FDEM data sets are carried out on a sounding-by-sounding basis. Most soundings achieve the desired misfit except that some soundings fail to converge due to excessive noise or coherent bias in the data. :numref:`booky-models` shows the depth slices of the stitched volume of conductivity from the FDEM and TDEM inversions. Although the data maps of the two data sets are in different units and have different apparence, the reconstructed conductivity models are highly consistent. This demonstrates the necessity of inversion-based processing and interpretation.
+
+.. figure:: ./images/booky-models.png
+    :align: left
+    :width: 100%
+    :name: booky-models
+    
+    Inversion models of the TDEM and FDEM data sets at Bookpurnong. The shaded area indicates the highland where irrigation takes place.
+

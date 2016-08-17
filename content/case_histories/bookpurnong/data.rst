@@ -3,8 +3,7 @@
 Data
 ====
 
-.. todo::
-    intro & Purpose!
+Airborne EM data are acquired as full time series during the flight. Then the raw data are processed (e.g. filtering, stacking, lagging, leveling, etc.) by the contractors. The final deliverable is a collection of discrete soundings, each of which has some measurements associated with the operating frequencies or time channels (gates), along with other necessary information (e.g. flight height, orientation, powerline monitoring, etc.). The data are viewed prior to quality control measures and interpretation.
 
 
 .. _bookpurnong_data_frequency_domain:
@@ -12,38 +11,18 @@ Data
 Frequency Domain Data
 ---------------------
 
-.. todo::
-    - link and shorten discussion :ref:`Airborne FDEM Data <airborne_fdem_data>`
-    - comments on data: important things for estimating uncertainties
-
-The figure below is a map view of the :ref:`resolve` data in ppm. The real and
-imaginary parts of 382 and 7970 Hz are shown. We can identify the area with
-relatively high responses (warm color) that are potentially associated with
-the saline water and low responses (cold color) for the fresher water. The
-strips are from the variation of flight height.
-
-.. figure:: ./images/booky-resolve1.jpg
+.. figure:: ./images/booky-resolvedata.png
     :align: left
-    :scale: 80%
-    :name: booky-resolve1
+    :width: 100%
+    :name: booky-resolvedata
+    
+    RESOLVE 2008 data at Bookpurnong. Two frequencies are shown.
 
-One of the flight lines is chosen for the profile view below. We identify the
-location where high conductivity may exist. We note the 35920 and 130100 Hz
-data are very close, indicating the inductive limit was achieved.
+The measured :ref:`Airborne FDEM Data <airborne_fdem_data>` at two frequencies are shown in map view in :numref:`booky-resolvedata`. Note the colors are in log-scale and different frequencies/components have different dynamic ranges. At low frequencies, the in-phase and quadrature are close in amplitude; but at high frequencies, the in-phase is greater than the quadrature, implying an appproach to the inductive limit. Although high frequencies have higher resolving power, they are more sensitive to the noise from other sources. The shortwavelength variation at 35920 Hz on the data map confirms this.
 
-.. figure:: ./images/booky-resolve2.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-resolve2
+By viewing the data maps, we can roughly identify the area with relatively high responses (warm color) that are potentially associated with the saline water and low responses (cold color) for the fresher water. The stripping pattern on the maps are mostly from the inconsistency of flight height, which adds difficulties to interpretation using data only. As a result, we need to invert the observed EM data to a conductivity model that, first unifies the field data at multiple frequencies/components, and second provides a physical connection to the groundwater salinity.
 
-The sounding below is taken from a location on the floodplain. As the
-frequency increases, the imaginary part decreases and the real part increase.
-This is consistent with the typical response curve in the 3-loop tutorial.
 
-.. figure:: ./images/booky-resolve3.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-resolve3
 
 
 .. _bookpurnong_data_time_domain:
@@ -51,38 +30,16 @@ This is consistent with the typical response curve in the 3-loop tutorial.
 Time Domain Data
 ----------------
 
-.. todo::
-    - link and shorten discussion :ref:`Airborne FDEM Data <airborne_tdem_data>`
-    - a statement that LM data were collected.
-
-
-In a similar manner, we show the data on a map from four time channels. The
-high responses are likely to be associated with the salinization, compatible
-with the :ref:`resolve` data map. The last time channel is very noisy, but we are
-still able to see a long-wavelength trend.
-
-.. figure:: ./images/booky-skytem1.jpg
+.. figure:: ./images/booky-skytemdata.png
     :align: left
-    :scale: 80%
-    :name: booky-skytem1
+    :width: 80%
+    :name: booky-skytemdata
+    
+    SkyTEM 2006 data at Bookpurnong. Two time channels of dBz/dt for the low and high moments are shown.
+    
+The measured :ref:`Airborne FDEM Data <airborne_tdem_data>` at two time channels for the low moment (LM) and the high moment (HM) are shown in map view in :numref:`booky-skytemdata`. Note the colors are in log-scale and different time channels have different dynamic ranges. During the off-time of a time-domain EM survey, the dB/dt response decays exponentially, so late time data are much smaller than the early time data.
 
-We also present multiple time channels along a flight line. The data set has
-relatively high overall quality, except some late times are a bit noisy. This
-plot help us find the appropriate noise floor.
-
-.. figure:: ./images/booky-skytem2.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-skytem2
-
-A clean time transient decay is provided below. The variation of the decay
-rate in time indicates the Earth may contain a more conductive layer under the
-surface layer.
-
-.. figure:: ./images/booky-skytem3.jpg
-    :align: left
-    :scale: 80%
-    :name: booky-skytem3
+Like the FDEM, the high responses in TDEM are likely to be associated with the salinization, compatible with the FDEM data map in :numref:`booky-resolvedata`. But this inference is only qualitative. And again, the consistency of data across lines is heavily affected by the flight height. We will also invert the TDEM data to a conductivity model in the next step.
 
 
 
