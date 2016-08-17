@@ -11,7 +11,7 @@ The `MIMDAS`_ system collects both a pole-dipole (P-DP) and a dipole-pole (DP-P)
 DCR
 ---
 
-In preparation for the inversion, a first-pass assessment of data quality is completed through visualization. While sensing the same Earth, these two configurations can yield different responses and consequently be subject to different noise levels. The :ref:`DC data <MtISa_DCR_data>` were first seperated by line and then by survey configuration.
+In preparation for the inversion, a first-pass assessment of data quality is completed through visualization. While sensing the same Earth, these two configurations can yield different responses and consequently be subject to different noise levels. The :ref:`DC data <MtISa_DCR_data>` were first separated by line and then by survey configuration.
 
 Note that a large portion of the DP-P shows higher apparent conductivity data than observed on the P-DP configuration. This may be explained by the presence of conductive units on the eastern edge of the survey. As demonstrated with the :ref:`numerical simulation<Mt_Isa_Simulation>`, current channeling through the Breakaway Shale unit and the mineralization at depth may considerably reduce the measured potentials west of these anomalies.
 

@@ -30,6 +30,7 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
 
 
+.. _Mt_Isa_Survey_Design:
 
 Survey Design
 -------------
@@ -65,7 +66,7 @@ problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
    *  - .. raw:: html
             :file: ./images/Mt_Isa_Current_Anim.html
-   *  - Current density (arrows) and charge density (color) for a range of source locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
+   *  - Conductivity model (color) and current flow (arrows) for a range of source locations (Powered by: `SimPEG <http://simpeg.xyz/>`_).
 
 
 
