@@ -24,6 +24,7 @@ The titles, and EM systems used are provided below.
     :maxdepth: 1
 
     mt_isa/index
+    bookpurnong/index
     aspen/index
     emc/index
 
