@@ -25,16 +25,16 @@ The current waveform provided by the generator can be harmonic (for a frequency-
 Survey configurations
 ---------------------
 
-.. figure:: images/MIMDASlayout.jpg
+.. .. figure:: images/MIMDASlayout.jpg
    :figwidth: 40%
    :align: right
    :name: MIMDAS_layout
 
-   Overview of the `MIMDAS layout <http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf>`_
+..   Overview of the `MIMDAS layout <http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf>`_
 
 There are many geometries of electrodes that can be used in the field. The electrodes can be co-linear or they can be in an arbitrary configuration. Current and potential electrodes can be on the surface or in boreholes. The choice of which survey geometry to use is governed by (1) what conductivity structure is sought, (2) field constraints for laying out electrodes, and (3) which equipment is used.
 
-Modern acquisition systems will populate an area with electrodes and use different pairs as currents and potential electrodes. Figure :numref:`MIMDAS_layout` shows a general schematic showing electrode positions on a grid. This type of survey allows for a large set of current electrodes and potential electrodes by cycling through the different locations.
+Modern acquisition systems will populate an area with electrodes and use different pairs as currents and potential electrodes. Figure ?? shows a general schematic showing electrode positions on a grid. This type of survey allows for a large set of current electrodes and potential electrodes by cycling through the different locations.
 
 Traditionally, however, data have been collected using co-linear electrodes. Depending upon the relative placement, the geometries have been given specific names. The interactive figure below shows how electrodes are placed for various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
 
@@ -51,7 +51,7 @@ Traditionally, however, data have been collected using co-linear electrodes. Dep
 
 - Equatorial dipole-dipole array, which is used primarily for very shallow work such as archaeological investigations.
 
-- Twin Probe configuration (basically a Wenner Gamma in Figure ?? but with spacing more like dipole-dipole) is also used mainly for very shallow investigations such as archaeological work.
+- Twin Probe configuration (basically a Wenner sounding but with spacing more like dipole-dipole) is also used mainly for very shallow investigations such as archaeological work.
 
 - The so-called E-Scan technique is a pole-pole configuration. However, it is organized by planting a largen number of electrodes all over the area of interest, without trying to stay on grid or on lines. Potentials are recorded at all electrodes and one is used as a current electrode. The survey cycles through each electrode to become a current electrode. This large data set must be inverted in order to obtain interpretable information. The E-Scan technique is expensive and it has been used in the exploration for geothermal energy and minerals.
 
@@ -69,8 +69,7 @@ electrode position, data is acquired simultaneusly at all receiver locations,
 commonly as a time-series. With post-processing and use of the super-position
 principle, voltage potentials can be calculated between any of the connected
 receiver electrodes. This can create a vast amount of useful data for an
-ensuing 3D inversion. An example of a distributed array is the MIMDAS system
-shown in :numref:`MIMDAS_layout`.
+ensuing 3D inversion. An example of a distributed array is the `MIMDAS system <http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf>`_.
 
 .. _dcr_instrumentation:
 
@@ -105,13 +104,12 @@ that the current waveform has a two second positive on-time followed by a two-
 second off-time, followed by a two-second negative on-time before a final two
 second off-time. 
 
+This pattern for the current source is necessary because a voltage measurement when the current is off will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground. From the point of view of DC resistivity surveys, SP voltages are noise because measured voltages must be caused by the source current only. A 50% duty cycle reversing square wave aids to remove the (poorly known) SP signals.
+
 When no chargeable material is present in the ground, the
-corresponding voltage curve will mirror that of the current curve. The
-positive and negative on-times are done so that any self-potential in the
-ground due to natural telluric currents, or currents induced by changing
-mangetic fields in the atmosphere, will be cancelled out.  Generally many
-cycles of the current waveform are transmitted into the ground in order to
-stack many receiver voltage curves to reduce noise in the data. 
+corresponding voltage curve will mirror that of the current curve. 
+.. The positive and negative on-times are done so that any self-potential in the ground due to natural telluric currents, or currents induced by changing mangetic fields in the atmosphere, will be cancelled out. 
+Generally many cycles of the current waveform are transmitted into the ground in order to stack many receiver voltage curves to reduce noise in the data. 
 
 .. figure:: images/txwave.gif
         :figwidth: 40%
@@ -131,12 +129,12 @@ stack many receiver voltage curves to reduce noise in the data.
 
 .. The primary voltage, or DC component of the measured voltage is taken before any IP effect has taken place, as noted by :math:`\mathrm{V}_{\sigma}` in :numref:`IP_waveform2`, whereas the IP measurement is taken as an integral beneath the voltage curve between two user defined time points (t1 and t2). The Newmont standard is to take t1 = 450 ms and t2 = 1100 ms.
 
-.. figure:: images/IP_waveform2.jpg
+.. .. figure:: images/IP_waveform2.jpg
    :figwidth: 40%
    :align: right
    :name: IP_waveform2
 
-   `Location of DC and IP measurements along the receiver voltage curve <http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html>`_
+..   `Location of DC and IP measurements along the receiver voltage curve <http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html>`_
 
 .. _dcr_receivers:
 
@@ -144,6 +142,13 @@ stack many receiver voltage curves to reduce noise in the data.
 survey. For DC resisitivity sounding, a simple digital volt meter can be adequate. A more complex system may involve amplifiers, filters, transmitter synchronizing circuits, display, storage, many inputs for simultaneous recording of many potentials, and other features. 
 
 .. Synchronization with the transmitter is essential if IP data are to be gathered, but it is not critical if resistivity information only is to be obtained. IP receivers also must be capable of recording several signal strengths covering several orders of magnitude because signals while the transmitter is on may be several volts, while decay voltages during the transmitter's "off" time may be only a few micro or millivolts. 
+
+.. figure:: images/receiver_electrode_porous_pots_receiver.jpg
+   :figwidth: 40%
+   :align: right
+   :name: porous_pot_receiver
+
+   A single porous pot electrode in the ground connected to a receiver. (Photo: Mike McMillan)
 
 .. figure:: images/current_receiver_wire.png
    :figwidth: 40%
@@ -156,7 +161,7 @@ The voltage potential can be measured between any combination of
 receiver electrodes due to super-position theory, as long as the data was
 collected simultaneously.
 
-**Electrodes:** In general, current injection and potential measurement electrodes are not interchangeable. However, automated acquisition systems using smaller source currents do employ the same stainless steel electrodes, both for sourcing current and measuring potentials. This becomes more and more difficult as source curretns increase because the ground can become altered by high current densities.
+**Electrodes:** In general, current injection and potential measurement electrodes are not interchangeable. However, automated acquisition systems using smaller source currents do employ the same stainless steel electrodes, both for sourcing current and measuring potentials. This becomes more and more difficult as source currents increase because the ground can become altered by high current densities.
 
 Current electrodes transmit electricity into the ground, and as such they need
 good contact with the ground, i.e., low impedance or good contact resistance. 
@@ -171,12 +176,7 @@ the data. An example of a porous pot receiver electrode for a
 DC survey with a copper sulphate solution is shown in
 :numref:`porous_pot_receiver`.
 
-.. figure:: images/receiver_electrode_porous_pots_receiver.jpg
-   :figwidth: 40%
-   :align: right
-   :name: porous_pot_receiver
-
-   A single porous pot electrode in the ground connected to a receiver. (Photo: Mike McMillan)
-
+**Capacitive sensors** are different from electrodes in that they don't require a galvanic contact with the earth. `These sensors <https://www.onepetro.org/download/conference-paper/SEG-2012-1478?id=conference-paper%2FSEG-2012-1478>`_  allow measurement of the electric field by placing a unit on the surface but is not limited to measuring data in locations of good contact with the ground. This allows for reliable data collection in regions with dry soils or icy conditions and other areas where the use of electrodes is difficult.
+   
 **Cables:** For small scale work, some systems are available that use multi-conductor cable, and possible "smart" electrodes that can be switched between input and measurement functions by computer. For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multi-conductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, wich commonly involve profile lines several kilometers long. However, there are some systems that use mult-conductor seismic cables for the potentials while requiring the normal single, heavy gauge wire for the current source. A typical 12-gauge current wire (red) used for a DC survey is shown in :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires (orange).
 
