@@ -4,27 +4,42 @@ Interpretation
 ==============
 
 .. topic:: Purpose
+    To show how DCR data are processed and inverted to reveal meaningful information about the earth structure.
+    This is demonstrated on the data generated from the :ref:`two-sphere
+    problem<two_sphere_setup>`.
 
-    Interpret the data generated from the :ref:`two-sphere
-    problem<dcr_physics>`.
 
- .. figure:: images/TwoSphere_AppRes.png
+ .. figure:: images/TwoSphere_Simple.png
     :align: right
     :figwidth: 50%
-    :name: DCR_AppRes
+    :name: DCR_TwoSphere_Simple
 
-    Pseudo-section of apparent conductivity (log10) as predicted by the forward
+    (Top) Two-sphere model buried in a uniform half-space.
+    (Bottom) Pseudo-section of apparent conductivity as predicted by the forward
     simulation. Outlines for the location of the sphere anomalies are shown for
     reference.
 
+Demonstrate...
 As a convention, the observed voltages are usually converted to apparent
 conductivity {link} and plotted in a pseudosection format. As illustrated in
-:numref:`DCR_AppRes`, the pseudosection is useful as a presentation and
-quality-control tool, especially if the data have been acquired along a single
-line. Spurious measurements can generally identified when compared to
-neighbouring source-receiver observations. While the pseudosection can
-provide some idea of lateral changes in conductivity, little can be said about
-the shape and location of the anomalies.
+:numref:`DCR_TwoSphere_Simple`, the pseudosection is useful as a presentation
+and quality-control tool, especially if the data have been acquired along a
+single line. Spurious measurements can generally identified when compared to
+neighbouring source-receiver observations. While the pseudosection can provide
+some idea of lateral changes in conductivity, little can be said about the
+shape and location of the anomalies.
+
+
+ .. figure:: images/TwoSphere_wJunk.png
+    :align: right
+    :figwidth: 50%
+    :name: DCR_TwoSphere_wJunk
+
+    (Top) Similar two-sphere model as presented in :numref:`DCR_TwoSphere_Simple` but with near surface anomalies added.
+    (Bottom) Pseudo-section of apparent conductivity (log10), showing high frequency content propagating down the pantleg.
+
+Direct interpretation of a pseudo-section becomes even more challenging when dealing with complicated conductivity structures, as exemplified by the scenario presented in :numref:`DCR_TwoSphere_wJunk`. The model contains the same two-sphere anomalies buried at depth, but this time also include near surface anomalies. The resulting pseudosection shows high frequency variations that seems to be propagating at depth, yet they are the result of small shallow conductors. Extracting information about the conductivity structure requires the data to
+be inverted.
 
  .. figure:: images/TwoSphere_Inv2D_DOI.png
     :align: right
@@ -33,8 +48,8 @@ the shape and location of the anomalies.
 
     Inverted 2D conductivity model with DOI mask.
 
-Extracting information about the conductivity structure requires the data to
-be inverted {link}. :numref:`DCR_Inv2D` shows the recovered 2D conductivity
+
+:numref:`DCR_Inv2D` shows the recovered 2D conductivity
 model obtained after convergence of the algorithm. Both spheres are imaged at
 the right depth and approximate conductivity values. Regions of low confidence
 are set to transparent using a :ref:`Depth of

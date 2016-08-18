@@ -17,6 +17,11 @@ surface.
 .. raw:: html
     :file: images/physics_radio_buttons.html
 
+.. _two_sphere_setup:
+
+Two-sphere problem
+******************
+
 We illustrate the DCR experiment with a synthetic pole-dipole survey as
 illustrated in :numref:`DCR_TwoSpheres`. This simple
 :ref:`conductivity<electrical_conductivity_index>` model is made up of two
