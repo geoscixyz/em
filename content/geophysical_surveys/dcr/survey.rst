@@ -55,8 +55,15 @@ Traditionally, however, data have been collected using co-linear electrodes. Dep
 
 - Combination surveys can provide information from both profiling and soundings.
 
-.. raw:: html
-   :file: images/survey_radio_buttons.html
+.. _dcr_survradiobuttons:
+
+ .. list-table:: : Common DC resistivity arrays
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/survey_radio_buttons.html
 
 .. _dcr_survey_3d:
 
