@@ -12,7 +12,7 @@ Survey
 Basic Survey Setup
 ------------------
 
-.. figure:: images/figure5.gif
+.. figure:: images/DCR_Gradient-Schlumberger_Array.svg
         :name: dcr_surv_5
         :align: right
         :figwidth: 40%
