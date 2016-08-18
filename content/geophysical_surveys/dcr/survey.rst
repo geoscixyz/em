@@ -7,6 +7,8 @@ Survey
 
    To provide an overview of common survey set-ups and instrumentation used in DC resistivity surveys.
 
+.. _dcr_survey_basic:
+
 Basic Survey Setup
 ------------------
 
@@ -28,6 +30,8 @@ Basic Survey Setup
 The basic DC resistivity (DCR) survey requires a generator that inputs electrical current into the ground and a voltmeter to measure the potential difference between two locations. Some key areas to pay attention to with DC surveys are the various configurations, each of which delivers a particular focus on different subsurface information. The basic 4-electrode array is shown in :numref:`dcr_surv_5`.
 
 The current waveform provided by the generator can be harmonic (for a frequency-domain survey) or it can have a duty cycle composed of an "on-time" and "off-time".
+
+.. _dcr_survey_config:
 
 Survey configurations
 ---------------------
@@ -54,6 +58,8 @@ Traditionally, however, data have been collected using co-linear electrodes. Dep
 .. raw:: html
    :file: images/survey_radio_buttons.html
 
+.. _dcr_survey_3d:
+
 **Three dimensional configurations** of several types exist, in which electrodes are not in line. Example include:
 
 - Equatorial dipole-dipole array, which is used primarily for very shallow work such as archaeological investigations.
@@ -66,9 +72,15 @@ Traditionally, however, data have been collected using co-linear electrodes. Dep
 
 - There are also numerous other proprietary or experimental electrode configurations designed for 3D interpretation.
 
+.. _dcr_survey_azi:
+
 **Azimuthal arrays** are used to investigate the horizontal electrocal anisotropy near the surface. Electrode configurations are usually one of the linear arrays (Wenner, dipole-dipole, etc). However, instead of moving the array along a line (profiling), or expanding it about a central point (sounding), the array is rotated about a central point so that resistivity as function of azimuthal direction can be plotted.
 
+.. _dcr_survey_bh:
+
 **Borehole work** often involves conceptually similar arrays with sources and receivers in various combinations of surface and down-hole locations.
+
+.. _dcr_survey_dist:
 
 **Distributed arrays** are composed of receiver electrodes that are deployed and
 connected in conventional 2D lines or as a 3D grid network. For any current
@@ -168,6 +180,8 @@ The voltage potential can be measured between any combination of
 receiver electrodes due to super-position theory, as long as the data was
 collected simultaneously.
 
+.. _dcr_electrodes:
+
 **Electrodes:** In general, current injection and potential measurement electrodes are not interchangeable. However, automated acquisition systems using smaller source currents do employ the same stainless steel electrodes, both for sourcing current and measuring potentials. This becomes more and more difficult as source currents increase because the ground can become altered by high current densities.
 
 Current electrodes transmit electricity into the ground, and as such they need
@@ -183,7 +197,11 @@ the data. An example of a porous pot receiver electrode for a
 DC survey with a copper sulphate solution is shown in
 :numref:`porous_pot_receiver`.
 
+.. _dcr_capasensors:
+
 **Capacitive sensors** are different from electrodes in that they don't require a galvanic contact with the earth. `These sensors <https://www.onepetro.org/download/conference-paper/SEG-2012-1478?id=conference-paper%2FSEG-2012-1478>`_  allow measurement of the electric field by placing a unit on the surface but is not limited to measuring data in locations of good contact with the ground. This allows for reliable data collection in regions with dry soils or icy conditions and other areas where the use of electrodes is difficult.
-   
+
+.. _dcr_cables:
+
 **Cables:** For small scale work, some systems are available that use multi-conductor cable, and possible "smart" electrodes that can be switched between input and measurement functions by computer. For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multi-conductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, wich commonly involve profile lines several kilometers long. However, there are some systems that use mult-conductor seismic cables for the potentials while requiring the normal single, heavy gauge wire for the current source. A typical 12-gauge current wire (red) used for a DC survey is shown in :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires (orange).
 
