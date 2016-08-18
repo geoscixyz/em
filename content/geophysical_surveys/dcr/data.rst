@@ -7,13 +7,16 @@ Data
 
    To show how measured voltages are converted to apparent resistivity and plotted as a sounding curve or as a pseudo-section 
 
-In a general DC resistivity survey (figure below), one electrode, :math:`A`, is the 
+In a general DC resistivity survey (:numref:`dcr_Schlumberger_array`), one electrode, :math:`A`, is the 
 positive side of a current source, and the other electrode, :math:`B`, is the negative 
 side. The current into each electrode is equal, but of opposite sign. 
 
 .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
-	:align: center
-	:width: 400px
+	:name: dcr_Schlumberger_array
+	:align: right
+	:figwidth: 50%
+
+	A general 4 electrode DC resistivity array. A and B are the current electrodes while M and N are the potential electrodes. Distances between the electrodes are used to calculate the geometry factor and apparent resistivity discussed below.	
 
 Measured potential differences
 ------------------------------
