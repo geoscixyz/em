@@ -15,10 +15,17 @@ Basic Survey Setup
         :align: right
         :figwidth: 40%
 
-        The basic DC resistivity array using 4 electrodes. A and B are the current electrodes while M and N are the potential electrodes. Distances between the electrodes are used to calculate the geometry factor and apparent resistivity.
+        The basic DC resistivity array using 4 electrodes. A and B are the current electrodes while M and N are the potential electrodes. Distances between the electrodes are used to calculate :ref:`the geometry factor and apparent resistivity <dcr_data>`.
 
        
-The basic DC resistivity (DCR) survey requires a generator that inputs electrical current into the ground and a voltmeter to measure the potential difference between two locations. Some key areas to pay attention to with DC surveys are the various configuarions, each of which delivers a particular focus on different subsurface information. The basic 4-electrode array is shown in Figure :numref:`dcr_surv_5`.
+.. figure:: images/dcrsurvey.png
+        :name: dcr_surv_grid
+        :align: right
+        :figwidth: 40%
+
+        Schematic showing a general electrode layout in a grid. Each of the electrodes can be the current electrodes or the potential electrodes.
+        
+The basic DC resistivity (DCR) survey requires a generator that inputs electrical current into the ground and a voltmeter to measure the potential difference between two locations. Some key areas to pay attention to with DC surveys are the various configurations, each of which delivers a particular focus on different subsurface information. The basic 4-electrode array is shown in :numref:`dcr_surv_5`.
 
 The current waveform provided by the generator can be harmonic (for a frequency-domain survey) or it can have a duty cycle composed of an "on-time" and "off-time".
 
@@ -34,7 +41,7 @@ Survey configurations
 
 There are many geometries of electrodes that can be used in the field. The electrodes can be co-linear or they can be in an arbitrary configuration. Current and potential electrodes can be on the surface or in boreholes. The choice of which survey geometry to use is governed by (1) what conductivity structure is sought, (2) field constraints for laying out electrodes, and (3) which equipment is used.
 
-Modern acquisition systems will populate an area with electrodes and use different pairs as currents and potential electrodes. Figure ?? shows a general schematic showing electrode positions on a grid. This type of survey allows for a large set of current electrodes and potential electrodes by cycling through the different locations.
+Modern acquisition systems will populate an area with electrodes and use different pairs as currents and potential electrodes. :numref:`dcr_surv_grid` shows a general schematic showing electrode positions on a grid. This type of survey allows for a large set of current electrodes and potential electrodes by cycling through the different locations.
 
 Traditionally, however, data have been collected using co-linear electrodes. Depending upon the relative placement, the geometries have been given specific names. The interactive figure below shows how electrodes are placed for various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
 
