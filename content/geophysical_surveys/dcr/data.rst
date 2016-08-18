@@ -20,8 +20,8 @@ side. The current into each electrode is equal, but of opposite sign.
 
 Measured potential differences
 ------------------------------
-Given these 2 current (source) electrodes, the measured voltage, which is the 
-**difference** in potential at the two receiver electrodes M and N, is the superposition 
+Given these 2 current (source) electrodes, the measured voltage, which is the difference 
+in potential at the two receiver electrodes M and N, is the superposition 
 of the effects from the current source and current sink. The flow of currents between the 
 current electrodes causes charges to build up on interfaces between regions of differing conductivity, 
 as discussed on the :ref:`DC Resistivity: Physics page <dcr_physics>`. The total potential difference 
@@ -63,10 +63,15 @@ Visualizing data
 For DC resistivity soundings, plots of the apparent resistivity versus current electrode 
 separation distance are often created. For simple horizontally layered 
 environments these sounding curves can to provide incite into the relative thickness and 
-resistivity of layers (See Figure below).  
+resistivity of layers (See Table below).  
 
-.. raw:: html
-    :file: images/sounding_radio_buttons.html
+ .. list-table:: : DC resistivity sounding curve
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: images/sounding_radio_buttons.html
 
 Pseudo-sections are often used to visualize data from 2D profiles. To account for the fact 
 that measurements with larger electrode separations sample deeper portions of the earth, 45 
@@ -74,10 +79,15 @@ degree angles are drawn from the mid-points of the current and potential electro
 the datum is plotted at the intersection of these lines. In cases where a pole transmitter 
 or receiver is used the 45 degree angles are drawn directly from the electrode location. 
 The figure below shows how an apparent resistivity pseudo-section is built up for a simple 
-dipole-dipole profile.  
+dipole-dipole profile. 
 
-.. raw:: html
-    :file: images/pseudosection_radio_buttons.html
+ .. list-table:: : Apparent resistivity pseudo-section
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: images/pseudosection_radio_buttons.html
 
 On the following :ref:`DC Resistivity: Interpretation page <dcr_interpretation>` page we show how 
 these plots can be utilized to improve our understanding of the subsurface and discuss some of 
