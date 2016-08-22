@@ -20,12 +20,12 @@ Interpretation
     reference.
 
 Demonstrate...
-As a convention, the observed voltages are usually converted to apparent
-conductivity {link} and plotted in a pseudosection format. As illustrated in
-:numref:`DCR_TwoSphere_Simple`, the pseudosection is useful as a presentation
+As a convention, the observed voltages are usually converted to :ref:`apparent
+conductivity<dcr_apparent_res>` and plotted in a pseudo-section format. As illustrated in
+:numref:`DCR_TwoSphere_Simple`, the :ref:`pseudo-section<dcr_speudo_section>` is useful as a presentation
 and quality-control tool, especially if the data have been acquired along a
 single line. Spurious measurements can generally identified when compared to
-neighbouring source-receiver observations. While the pseudosection can provide
+neighbouring source-receiver observations. While the pseudo-section can provide
 some idea of lateral changes in conductivity, little can be said about the
 shape and location of the anomalies.
 
@@ -38,7 +38,7 @@ shape and location of the anomalies.
     (Top) Similar two-sphere model as presented in :numref:`DCR_TwoSphere_Simple` but with near surface anomalies added.
     (Bottom) Pseudo-section of apparent conductivity (log10), showing high frequency content propagating down the pantleg.
 
-Direct interpretation of a pseudo-section becomes even more challenging when dealing with complicated conductivity structures, as exemplified by the scenario presented in :numref:`DCR_TwoSphere_wJunk`. The model contains the same two-sphere anomalies buried at depth, but this time also include near surface anomalies. The resulting pseudosection shows high frequency variations that seems to be propagating at depth, yet they are the result of small shallow conductors. Extracting information about the conductivity structure requires the data to
+Direct interpretation of a pseudo-section becomes even more challenging when dealing with complicated conductivity structures, as exemplified by the scenario presented in :numref:`DCR_TwoSphere_wJunk`. The model contains the same two-sphere anomalies buried at depth, but this time also include near surface anomalies. The resulting pseudo-section shows high frequency variations that seems to be propagating at depth, yet they are the result of small shallow conductors. Extracting information about the conductivity structure requires the data to
 be inverted.
 
  .. figure:: images/TwoSphere_Inv2D_DOI.png

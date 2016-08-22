@@ -40,6 +40,8 @@ difference is given by the following expression:
 where :math:`G` is a geometric factor which depends upon the geometry of all four electrodes, 
 :math:`I` is the magnitude of the injection current,  and :math:`\rho` is the halfspace resistivity.
 
+.. _dcr_apparent_res:
+
 Calculating apparent resistivity
 --------------------------------
 Rearranging the expression above, we define *apparent resistivity* as the resistivity 
@@ -60,6 +62,11 @@ apparent resistivity will lie between the maximum and the minimum of the true re
 Visualizing data
 ----------------
 
+.. _dcr_sounding:
+
+Sounding
+********
+
 For DC resistivity soundings, plots of the apparent resistivity versus current electrode 
 separation distance are often created. For simple horizontally layered 
 environments these sounding curves can to provide incite into the relative thickness and 
@@ -73,6 +80,11 @@ resistivity of layers (See Table below).
    *  - .. raw:: html
             :file: images/sounding_radio_buttons.html
 
+
+.. _dcr_Pseudo_section:
+
+Pseudo-section
+**************
 Pseudo-sections are often used to visualize data from 2D profiles. To account for the fact 
 that measurements with larger electrode separations sample deeper portions of the earth, 45 
 degree angles are drawn from the mid-points of the current and potential electrode pairs and 
