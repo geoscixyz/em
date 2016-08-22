@@ -16,6 +16,7 @@ For fields which are very close to the electric dipole source, or at sufficientl
 
 .. math::
 	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \ll 1
+	:label: theta_nearfield_latetime
 
 
 In this case, the exponential and complimentary error function can be approximated as follows:
@@ -42,7 +43,7 @@ According to Eq. :eq:`e_nearfield_latetime`, the near-field/late-time electric f
 For the magnetic field, the near-field/late-time approximation is given by:
 
 .. math::
-	{\bf h_r}(t) \approx \frac{Ids}{4\pi r^3} \Bigg ( 1 - \frac{5}{3 \sqrt{\pi}} \theta^3 r^3 \Bigg ) \big ( -z \, \hat y -  y \, \hat z \big )
+	{\bf h_e}(t) \approx \frac{Ids}{4\pi r^3} \Bigg ( 1 - \frac{5}{3 \sqrt{\pi}} \theta^3 r^3 \Bigg ) \big ( -z \, \hat y -  y \, \hat z \big )
 	:label: h_nearfield_latetime
 
 Similarly to the electric field, the near-field/late-time magnetic field is a sum of the DC magnetic field (link) and a time-dependent part which decays proportional to :math:`t^{-3/2}`.
@@ -57,3 +58,41 @@ According to Eq. :eq:`dhdt_nearfield_latetime`, the time-derivative of the magne
 
 Far-Field
 ---------
+
+**Everything goes to zero so there is no asymptotic for this**
+
+
+
+For fields which are far from the electric dipole source, or at sufficiently early times:
+
+.. math::
+	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \gg 1
+	:label: theta_nearfield_latetime
+
+In this case, the exponential and complimentary error function can be approximated as follows:
+
+.. math::
+	e^{-\theta^2 r^2} \approx 0
+	:label: exp_approximation
+	
+and
+
+.. math::
+	\textrm{erfc}(\theta r) \approx 0
+	:label: erfc_approximation_2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
