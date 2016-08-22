@@ -26,7 +26,7 @@ Provided the source term is represented by a time-dependent magnetic dipole sour
 For a magnetic dipole defined by current :math:`I (t)` and area :math:`a`:
 
 .. math::
-	m(t) = a, I(t)
+	m(t) = a \, I(t)
 
 
 We are interested in the time-dependent electric and magnetic fields which arise due to a step-off excitation, also known as the transient response.
@@ -35,7 +35,7 @@ For a step-off excitation, the current describing the magnetic dipole is given b
 .. math::
 	I(t) = I u(-t) = I \big [ 1 - u(t) \big ]
 
-Here, we will avoid the unnecessary difficulty of deriving final expressions directly from Maxwell's equations by using the approach shown in Ward and Hohmann.
+Here, we will avoid the unnecessary difficulty of deriving final expressions directly from Maxwell's equations. Instead, we will be using the approach shown in Ward and Hohmann.
 For this approach, frequency-domain solutions previously derived for the harmonic magnetic dipole (link) are transformed into the time-domain via inverse Laplace transform.
 The strategy for obtaining the step-off response is identical to that which was used in the case of the electric dipole (link).
 
