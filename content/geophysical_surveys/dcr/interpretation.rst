@@ -19,7 +19,23 @@ Interpretation
     simulation. Outlines for the location of the sphere anomalies are shown for
     reference.
 
-Demonstrate...
+
+ .. figure:: images/DCR_Grad_Simple.png
+    :align: center
+    :figwidth: 100%
+    :name: DCR_TwoSphere_Grad
+
+    (a) (top) Bird-eye view of gradient array survey over a simple two-sphere model buried in a uniform half-space and (bottom) apparent conductivity map. By simple inspection of the data map, it is easy to distinguish the presence of a conductive and a resistive anomaly.
+    (b) Similar experiment but with near surface conductors added. Direct interpretation of the resulting apparent resistivity map becomes difficult.
+
+ .. figure:: images/DCR_DpDp_Simple.png
+    :align: center
+    :figwidth: 100%
+    :name: DCR_TwoSphere_Grad
+
+    (a) (top) Bird-eye view of gradient array survey over a simple two-sphere model buried in a uniform half-space and (bottom) apparent conductivity map. By simple inspection of the data map, it is easy to distinguish the presence of a conductive and a resistive anomaly.
+    (b) Similar experiment but with near surface conductors added. Direct interpretation of the resulting apparent resistivity map becomes difficult.
+
 As a convention, the observed voltages are usually converted to :ref:`apparent
 conductivity<dcr_apparent_res>` and plotted in a pseudo-section format. As illustrated in
 :numref:`DCR_TwoSphere_Simple`, the :ref:`pseudo-section<dcr_speudo_section>` is useful as a presentation
