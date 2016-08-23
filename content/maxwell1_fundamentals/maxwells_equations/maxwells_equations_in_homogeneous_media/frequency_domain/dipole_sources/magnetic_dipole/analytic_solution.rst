@@ -31,7 +31,7 @@ After some manipulation of :eq:`Faraday_m` using Lorentz conditions, we obtain t
 
 The equation with boundary conditions , is solved to generate :math:`\mathbf{F}`. For infinite media, the boundary condition is that :math:`\mathbf{F} \rightarrow 0` as :math:`r \rightarrow \infty`.
 
-If :math:`\mathbf{J_m^s}` has only a single component, the :math:`\mathbf{F}` only has a component in that direction. The scalar Green's function for :eq:`Helmholtz_F` is
+If :math:`\mathbf{J_m^s}` has only a single component, the field :math:`\mathbf{F}` only has a component in that direction. The scalar Green's function for :eq:`Helmholtz_F` is
 
 .. math::
 	G(r) = \frac{e^{-ikr}}{4\pi r}.
@@ -46,7 +46,7 @@ and hence the vector potential for an arbitrary magnetic current source is
 For an magnetic current dipole oriented in the :math:`\hat{x}` direction
 
 .. math::
-	\mathbf{J}_m(\mathbf{r}) = i \omega \mu \hat{x} I S \delta(x) \delta(y) \delta(z)
+	\mathbf{J}_m(\mathbf{r}) = i \omega \mu I S \delta(x) \delta(y) \delta(z) \hat{x}
 	:label: Jm_x
 
 and 
@@ -73,6 +73,6 @@ In component form the magnetic field is given by
 While the electric field is equal to
 
 .. math::
-	\mathbf{E}_m = \frac{i \omege \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
+	\mathbf{E}_m = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
 	:label: Em_Cartesian
 
