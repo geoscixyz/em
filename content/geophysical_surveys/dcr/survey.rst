@@ -78,28 +78,6 @@ The interactive figure below shows some specific array configurations that are u
         Electrodes can be placed at the surface or along boreholes.
 
 
-.. figure:: images/dcr_colinear.png
-        :name: dcr_colinear
-        :align: right
-        :figwidth: 50%
-
-        An example of a co-linear survey with multiple lines.
-
-
-.. figure:: images/dcr_offset.png
-        :name: dcr_offset
-        :align: right
-        :figwidth: 50%
-
-        An example of an offset acquisition survey in 3D. The potential electrodes are on a different line than the current electrodes, as shown for two sets of MN electrodes.
-
-.. figure:: images/dcr_escan.png
-        :name: dcr_escan
-        :align: right
-        :figwidth: 50%
-
-        An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
-
 .. _dcr_survey_3d:
 
 **Three dimensional data acquisition**
@@ -135,19 +113,39 @@ Some common 3D acquistion geometries are outlined below:
 
 Underground survey: (Mike: figure)
 
-.. figure:: images/dcr_crosswell.png
-        :name: dcr_crosswell
-        :align: right
-        :figwidth: 50%
+.. list-table::
+   :header-rows: 0
+   :widths: 10 10
+   :stub-columns: 0
 
-        A cross-well survey has electrodes in boreholes and each electrode can be either a current or potential electrode. The figure shows an example of an along-well transmitter, where A and B are in the same well, and a cross-well transmitter, where A and B are in different wells.
+   *  - .. figure:: images/dcr_colinear.png
+          :name: dcr_colinear
+          :figwidth: 100%
 
-.. figure:: images/dcr_tunnel.png
-        :name: dcr_tunnel
-        :align: right
-        :figwidth: 50%
+          An example of a co-linear survey with multiple lines.
+      - .. figure:: images/dcr_offset.png
+          :name: dcr_offset
+          :figwidth: 100%
 
-        DC resistivity surveys can also be conducted underground, in a tunnel environment. The tunnel restricts where the electrodes can be placed but any of the above mentioned surveys can be collected. The figure shows an example where the current electrode and potential electrodes are in different tunnels.
+          An example of an offset acquisition survey in 3D. The potential electrodes are on a different line than the current electrodes, as shown for two sets of MN electrodes.
+
+   *  - .. figure:: images/dcr_escan.png
+          :name: dcr_escan
+          :figwidth: 100%
+
+          An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
+      - .. figure:: images/dcr_crosswell.png
+          :name: dcr_crosswell
+          :figwidth: 100%
+
+          A cross-well survey has electrodes in boreholes and each electrode can be either a current or potential electrode. The figure shows an example of an along-well transmitter, where A and B are in the same well, and a cross-well transmitter, where A and B are in different wells.
+
+   *  - .. figure:: images/dcr_tunnel.png
+          :name: dcr_tunnel
+          :figwidth: 100%
+
+          DC resistivity surveys can also be conducted underground, in a tunnel environment. The tunnel restricts where the electrodes can be placed but any of the above mentioned surveys can be collected. The figure shows an example where the current electrode and potential electrodes are in different tunnels.
+      -
 
 
 .. _dcr_instrumentation:
