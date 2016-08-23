@@ -100,6 +100,7 @@ The interactive figure below shows some specific array configurations that are u
 
         An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
 
+       
 .. _dcr_survey_3d:
 
 **Three dimensional data acquisition**
@@ -137,15 +138,15 @@ Some common 3D acquistion geometries are outlined below:
 
 .. figure:: images/dcr_crosswell.png
         :name: dcr_crosswell
-        :align: right
-        :figwidth: 50%
+        :align: left
+        :figwidth: 45%
 
         A cross-well survey has electrodes in boreholes and each electrode can be either a current or potential electrode. The figure shows an example of an along-well transmitter, where A and B are in the same well, and a cross-well transmitter, where A and B are in different wells.
 
 .. figure:: images/dcr_tunnel.png
         :name: dcr_tunnel
         :align: right
-        :figwidth: 50%
+        :figwidth: 45%
 
         DC resistivity surveys can also be conducted underground, in a tunnel environment. The tunnel restricts where the electrodes can be placed but any of the above mentioned surveys can be collected. The figure shows an example where the current electrode and potential electrodes are in different tunnels.
 
