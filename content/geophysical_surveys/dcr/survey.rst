@@ -77,29 +77,6 @@ The interactive figure below shows some specific array configurations that are u
 
         Electrodes can be placed at the surface or along boreholes.
 
-
-.. figure:: images/dcr_colinear.png
-        :name: dcr_colinear
-        :align: right
-        :figwidth: 50%
-
-        An example of a co-linear survey with multiple lines.
-
-
-.. figure:: images/dcr_offset.png
-        :name: dcr_offset
-        :align: right
-        :figwidth: 50%
-
-        An example of an offset acquisition survey in 3D. The potential electrodes are on a different line than the current electrodes, as shown for two sets of MN electrodes.
-
-.. figure:: images/dcr_escan.png
-        :name: dcr_escan
-        :align: right
-        :figwidth: 50%
-
-        An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
-
        
 .. _dcr_survey_3d:
 
@@ -123,6 +100,28 @@ A target at depth can be excited only when the current electrodes are significan
 Since a datum is a potential difference, and since deeper targets are associated with smaller electrical charges (there's only small currents going through), detecting meaningful signal requires that the potential electrodes have significant separation.
 
 Assembling the above information leads to a general statement that depth of penetration progressively decreases as one proceeds from pole-pole, pole-dipole, to dipole-dipole. This is a reasonable rule of thumb and is applicable for surface arrays or for colinear arrays in borehole measurements. 
+
+.. figure:: images/dcr_colinear.png
+        :name: dcr_colinear
+        :align: left
+        :figwidth: 45%
+
+        An example of a co-linear survey with multiple lines.
+
+
+.. figure:: images/dcr_offset.png
+        :name: dcr_offset
+        :align: right
+        :figwidth: 45%
+
+        An example of an offset acquisition survey in 3D. The potential electrodes are on a different line than the current electrodes, as shown for two sets of MN electrodes.
+
+.. figure:: images/dcr_escan.png
+        :name: dcr_escan
+        :align: right
+        :figwidth: 50%
+
+        An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
 
 **Some 3D Designs**
 
