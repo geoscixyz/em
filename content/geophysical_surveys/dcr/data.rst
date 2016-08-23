@@ -5,29 +5,23 @@ Data
 
 .. topic:: Purpose 
 
-   To show how measured voltages are converted to apparent resistivity and plotted as a sounding curve or as a pseudo-section 
+   To show how measured voltages are converted to apparent resistivity and plotted as a sounding curve or as a pseudo-section. 
 
-In a general DC resistivity survey (:numref:`dcr_Schlumberger_array`), one electrode, :math:`A`, is the 
-positive side of a current source, and the other electrode, :math:`B`, is the negative 
-side. The current into each electrode is equal, but of opposite sign. 
+A general DC resistivity survey setup is outlined in (:numref:`dcr_Schlumberger_array`). A current generator is attached to the :math:`A`, (positive) and :math: `B` (negative)electrodes and a current of magnitude :math:`I` is injected. M and N are the potential electrodes. The nominclature for referring to the distance between any two electrodes is denoted by r with appropriate subscripts. The electrodes can be deployed anywhere on the surface of the earth or inside and they do not have to be co-linear. 
 
 .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
 	:name: dcr_Schlumberger_array
 	:align: right
 	:figwidth: 50%
 
-	A general 4 electrode DC resistivity array. A and B are the current electrodes while M and N are the potential electrodes. Distances between the electrodes are used to calculate the geometry factor and apparent resistivity discussed below.	
+	The measured voltages constitute the data. Distances between the electrodes are used to calculate the geometry factor and apparent resistivity discussed below.	
 
 Measured potential differences
 ------------------------------
-Given these 2 current (source) electrodes, the measured voltage, which is the difference 
-in potential at the two receiver electrodes M and N, is the superposition 
-of the effects from the current source and current sink. The flow of currents between the 
-current electrodes causes charges to build up on interfaces between regions of differing conductivity, 
-as discussed on the :ref:`DC Resistivity: Physics page <dcr_physics>`. The total potential difference 
-that we measure is the sum of the potentials due to all of the accumulated charges.
+The flow of currents in the ground cause charges to be built up on  interfaces between regions of differing conductivity 
+Link :ref:`DC Resistivity: Physics page <dcr_physics>`. These charges contribute to the measured potential differences. 
 
-In a uniform halfspace, where the only interface is between the air and the earth, the measured potential 
+In a uniform halfspace, the measured potential 
 difference is given by the following expression:
 
 .. math::
@@ -44,20 +38,29 @@ where :math:`G` is a geometric factor which depends upon the geometry of all fou
 
 Calculating apparent resistivity
 --------------------------------
-Rearranging the expression above, we define *apparent resistivity* as the resistivity 
-of a halfspace which produces the observed potential from a particular electrode geometry:
+The measured voltages are numbers that can vary greatly in amplitude and they provide no direct insight about the structures at depth. As shown above, the potential difference is primarily dependent upon the geometry of the electrodes. By rearranging that formula we can recover the true resistivity
 
 .. math::
 		\rho_a = \frac{\Delta V}{IG}
 
-Similarly, the apparent conductivity is
+When the earth is really a halfspace any DCR datum is sufficient to evaluate the halfspace resistivity. 
+
+
+In general the earth structure is complicated but we can still eliminate the geometrical factor and define 
+
+.. math::
+		\rho_a = \frac{\Delta V}{IG}
+
+We refer :math:`\rho_a` as the *apparent resistivity* and it is understood to be the resistivity of a halfspace which produces the observed potential measured by a particular electrode geometry. Apparent resistivity is equal the earth’s true resistivity *only* when 
+the earth is a uniform halfspace. When the earth is more complicated, the measured 
+apparent resistivity will lie between the maximum and the minimum of the true resistivities. This conversion is extremely valuable for plotting data and making first pass assessments about the subsurface.
+ 
+
+If apparent conductivity is preferred,  
 
 .. math::
 		\sigma_a = \frac{1}{\rho_a} = \frac{IG}{\Delta V}
 
-Apparent resistivity is equal the earth’s true resistivity *only* when 
-the earth is a uniform halfspace. When the earth is more complicated, the measured 
-apparent resistivity will lie between the maximum and the minimum of the true resistivities.
 
 Visualizing data
 ----------------
@@ -69,7 +72,7 @@ Sounding
 
 For DC resistivity soundings, plots of the apparent resistivity versus current electrode 
 separation distance are often created. For simple horizontally layered 
-environments these sounding curves can to provide incite into the relative thickness and 
+environments these sounding curves can provide insight into the relative thickness and 
 resistivity of layers (See Table below).  
 
  .. list-table:: : DC resistivity sounding curve
