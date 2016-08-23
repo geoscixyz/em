@@ -111,7 +111,7 @@ Some common 3D acquistion geometries are outlined below:
  
 - Cross-well survey: A cross-well survey is deployed in boreholes, usually using a minimum of 2 wells. Electrodes are positioned along the well and each one can be a current of potential electrode. Current electrodes can be in the same well (along-well survey) or in different wells (cross-well survey). An example of different cross-well surveys used in industry is shown in :numref:`dcr_crosswell`
 
-Underground survey: (Mike: figure)
+- Underground survey: DC resistivity surveys can also be conducted underground, such as in tunnels (:numref:`dcr_tunnel`). This restricts the survey configurations to along the tunnel walls and ceilings but can provide information about deep targets that may not be detectable from the surface.
 
 .. list-table::
    :header-rows: 0
