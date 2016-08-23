@@ -67,7 +67,7 @@ For fields which are far from the electric dipole source, or at sufficiently ear
 
 .. math::
 	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \gg 1
-	:label: theta_nearfield_latetime
+	:label: theta_farfield
 
 In this case, the exponential and complimentary error function can be approximated as follows:
 
