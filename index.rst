@@ -82,6 +82,7 @@ Contents
    content/maxwell3_fdem/index
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
+   content/inversion/index
    content/case_histories/index
    content/equation_bank
    content/references
