@@ -1,4 +1,4 @@
-.. _frequency_domain_magnetic_dipole_fields:
+.. _frequency_domain_electric_dipole_fields:
 
 Fields
 ======
@@ -6,3 +6,5 @@ Fields
 .. topic:: Purpose
 
     Purpose here
+
+
