@@ -15,15 +15,15 @@ Basic Survey Setup
 .. figure:: images/DCR_Gradient-Schlumberger_Array.svg
         :name: dcr_surv_5
         :align: right
-        :figwidth: 40%
+        :figwidth: 50%
 
         The basic DC resistivity array using 4 electrodes. A and B are the current electrodes while M and N are the potential electrodes. Distances between the electrodes are used to calculate :ref:`the geometry factor and apparent resistivity <dcr_data>`.
 
        
-.. figure:: images/dcrsurvey.png
-        :name: dcr_surv_grid
+.. figure:: images/dcr_2dgeneral.png
+        :name: dcr_2dgeneral
         :align: right
-        :figwidth: 40%
+        :figwidth: 50%
 
         Schematic showing a general electrode layout in a grid. Each of the electrodes can be the current electrodes or the potential electrodes.
         
@@ -45,24 +45,19 @@ Survey configurations
 
 There are many geometries of electrodes that can be used in the field. The electrodes can be co-linear or they can be in an arbitrary configuration. Current and potential electrodes can be on the surface or in boreholes. The choice of which survey geometry to use is governed by (1) what conductivity structure is sought, (2) field constraints for laying out electrodes, and (3) which equipment is used.
 
-** move figure 66 to later;   replace this with a grid of uniform electrodes and label 4 as A,B,M,N**
-
-Modern acquisition systems populate an area with electrodes and use different pairs as currents and potential electrodes. :numref:`dcr_surv_grid` shows a general schematic showing electrode positions on a grid. Since each electrode can be a current or potential electrode, this type of survey allows for a large set of measurements. It's generally not feasible, nor desireable, to collect all possible data. 
+Modern acquisition systems populate an area with electrodes and use different pairs as currents and potential electrodes. :numref:`dcr_2dgeneral` shows a general schematic showing electrode positions on a grid. Since each electrode can be a current or potential electrode, this type of survey allows for a large set of measurements. It's generally not feasible, nor desireable, to collect all possible data. 
 
 Traditionally, data have been collected using co-linear electrodes. Depending upon the relative placement, the geometries have been given specific names. The interactive figure below shows how electrodes are placed for various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
 
 - Profiling: a fixed array is moved along a line. The data  provide information about lateral variations to a depth that is determined by the length of the array. 
 
-- Sounding: a fixed geometry of electrodes is expanded symetrically about a central point of the array. The data provide information about how the electrical structure varies with depth. The data curve is often called a "sounding" and a single sounding can be inverted to produce a 1D conductivity. If multiple soundings are available they can be inverted in 2D or 3D. The most common sounding configurations are the Wenner and Schlumberger arrays.
+- Sounding: a fixed geometry of electrodes is expanded symetrically about a central point of the array. The data provide information about how the electrical structure varies with depth. The data curve is often called a "sounding" and a single sounding can be inverted to produce a 1D conductivity model. If multiple soundings are available they can be inverted in 2D or 3D. The most common sounding configurations are the Wenner and Schlumberger arrays.
 
 - General configuration: These are combinations of profiling and sounding arrays. They are often obtained by defining an electrode array and expanding and translating it along a line. In practise this is achieved by laying out a line of electrodes, each of which can be used as a current or potential electrode. The most common acquistion arrays are dipole-dipole, pole-dipole, or pole-pole arrays.  
 
-- Gradient array: This is a reconnaissance array that uses a fixed location for the A,B electrodes that are far apart. Measurements are taken in an area between the currents. Potential differences in orthogonal directions can be acquired but usually only potential differences between electrodes alligned in the same direction as the A,B electrodes are obtained.
+- Gradient array: This is a reconnaissance array that uses a fixed location for the A and B electrodes which are far apart. Measurements are taken in an area between the current electrodes. Potential differences in orthogonal directions can be acquired but usually only potential differences between electrodes aligned in the same direction as the A and B electrodes are obtained.
 
-*** gradient array image from data section ****
-
-
-Figure 7 shows some specific array configurations that are used in practise. 
+The interactive figure below shows some specific array configurations that are used in practise. 
 
 
 .. _dcr_survradiobuttons:
@@ -75,17 +70,43 @@ Figure 7 shows some specific array configurations that are used in practise.
    *  - .. raw:: html
             :file: ./images/survey_radio_buttons.html
 
+.. figure:: images/dcr_3dgeneral.png
+        :name: dcr_3dgeneral
+        :align: right
+        :figwidth: 50%
+
+        Electrodes can be placed at the surface or along boreholes.
 
 
+.. figure:: images/dcr_colinear.png
+        :name: dcr_colinear
+        :align: right
+        :figwidth: 50%
+
+        An example of a co-linear survey with multiple lines.
+
+
+.. figure:: images/dcr_offset.png
+        :name: dcr_offset
+        :align: right
+        :figwidth: 50%
+
+        An example of an offset acquisition survey in 3D. The potential electrodes are on a different line than the current electrodes, as shown for two sets of MN electrodes.
+
+.. figure:: images/dcr_escan.png
+        :name: dcr_escan
+        :align: right
+        :figwidth: 50%
+
+        An example of an E-Scan survey, which uses a pole-pole configuration in a non-grid format.
 
 .. _dcr_survey_3d:
 
 **Three dimensional data acquisition**
 
-The general DCR problem can be stated as follows: Given a specific volume of a 3D earth, collect DCR data that can be inverted to generate the distribution of electrical conductivity within the volume. Any datum from a specific electrode placement produces some information but, as aquistion continues, some electrode placements may not provide new independent information. The choice of what data to collect is addressed in the section `Survey Design`. Here we outline some basic principles and then provide some acquistion strategies that are currently used. 
+The general DCR problem can be stated as follows: Given a specific volume of a 3D earth, DCR data are collected that can be inverted to generate the distribution of electrical conductivity within the volume. With modern technologies, data can be collected in three-dimensions, using electrodes on the surface and in boreholes (:numref:`dcr_3dgeneral`). Any datum from a specific electrode placement produces some information but, as aquistion continues, some electrode placements may not provide new independent information. The choice of what data to collect is addressed in the section :ref:`Survey Design <dcr_survey_design>`. 
 
-?? sketch: 3D earth and showing electrodes on the surface, and along two vertical lines (for boreholes)  Sarah
-
+Here we outline some basic principles about survey design and provide some acquistion strategies that are currently used. 
 
 **Some basic principles for designing DCR Surveys**
 
@@ -95,26 +116,38 @@ The general DCR problem can be stated as follows: Given a specific volume of a 3
 
 **Some general rules**
 
-for co-linear arrays, the depth of penetration depends upon the size of the array. 
-the depth to which significant current flows depends upon the distance between the source electrodes. A target at depth can be excited only when the current electrodes are significantly farther apart than the depth of the target.
-Since a datum is a potential difference, and since deeper targets are associated with smaller electrical charges (there's only small currents going through) detecting meaningful signal requires that the potential electrodes have significant separation.
-
+For co-linear arrays, the depth of penetration depends upon the size of the array. 
+The depth to which significant current flows depends upon the distance between the source electrodes. 
+A target at depth can be excited only when the current electrodes are significantly farther apart than the depth of the target.
+Since a datum is a potential difference, and since deeper targets are associated with smaller electrical charges (there's only small currents going through), detecting meaningful signal requires that the potential electrodes have significant separation.
 
 Assembling the above information leads to a general statement that depth of penetration progressively decreases as one proceeds from pole-pole, pole-dipole, to dipole-dipole. This is a reasonable rule of thumb and is applicable for surface arrays or for colinear arrays in borehole measurements. 
 
-
 **Some 3D Designs**
 
-Some common 3D acquistion geometries are sketched below:
+Some common 3D acquistion geometries are outlined below:
 
-Multiple lines of co-linear acquisition, or offset acquistion  (fig 66; also fig 66 modified to have off-set currents ) Off-line profiling involves moving the current electrodes along one survey line and recording potentials using electrodes planted along a different (usually parallel) line.  
+- Multiple lines of co-linear acquisition, or offset acquistion: An example of a multiple line co-linear survey is shown in :numref:`dcr_colinear`. Off-line profiling involves moving the current electrodes along one survey line and recording potentials using electrodes planted along a different (usually parallel) line, as shown in :numref:`dcr_offset`
 
-
-E-Scan type technique.  The so-called E-Scan technique is a pole-pole configuration. However, it is organized by planting a large number of electrodes all over the area of interest, without trying to stay on grid lines. A potential and a current electrode are placed at "infinity". When one electrode in the array is used as a current electrode, potentials at all other electrodes are measured. Each electrode, in turn, is used as a current. 
+- E-Scan type technique: The so-called E-Scan technique (:numref:`dcr_escan`) is a pole-pole configuration. However, it is organized by planting a large number of electrodes all over the area of interest, without trying to stay on grid lines. A potential and a current electrode are placed at "infinity". When one electrode in the array is used as a current electrode, potentials at all other electrodes are measured. Each electrode, in turn, is used as a current. 
  
-Surface and borehole data (Sarah: figure)
-Cross-well survey (Sarah: figure)
+- Cross-well survey: A cross-well survey is deployed in boreholes, usually using a minimum of 2 wells. Electrodes are positioned along the well and each one can be a current of potential electrode. Current electrodes can be in the same well (along-well survey) or in different wells (cross-well survey). An example of different cross-well surveys used in industry is shown in :numref:`dcr_crosswell`
+
 Underground survey: (Mike: figure)
+
+.. figure:: images/dcr_crosswell.png
+        :name: dcr_crosswell
+        :align: right
+        :figwidth: 50%
+
+        A cross-well survey has electrodes in boreholes and each electrode can be either a current or potential electrode. The figure shows an example of an along-well transmitter, where A and B are in the same well, and a cross-well transmitter, where A and B are in different wells.
+
+.. figure:: images/dcr_tunnel.png
+        :name: dcr_tunnel
+        :align: right
+        :figwidth: 50%
+
+        DC resistivity surveys can also be conducted underground, in a tunnel environment. The tunnel restricts where the electrodes can be placed but any of the above mentioned surveys can be collected. The figure shows an example where the current electrode and potential electrodes are in different tunnels.
 
 
 .. _dcr_instrumentation:
