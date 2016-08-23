@@ -9,10 +9,10 @@ Analytic Solution
 
 **General Formulation**
 
-For an electrical current source (:math:`{\bf \, j_e^s} \,`), Maxwell's equations in the time-domain can be written as follows:
+For an electrical current source (:math:`{\bf \, j_e^s} \,`) within a homogeneous media, Maxwell's equations in the time-domain can be written as follows:
 
 .. math::
-	\nabla \times {\bf e_e} + \frac{\partial}{\partial t} (\mu {\bf h_e}) = 0
+	\nabla \times {\bf e_e} + \mu \frac{\partial}{\partial t} ({\bf h_e}) = 0
 	:label: Faraday_m
 
 .. math::
