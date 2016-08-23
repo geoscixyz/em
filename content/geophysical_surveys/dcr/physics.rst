@@ -11,7 +11,7 @@ Physics
 In a DC resistivity survey, a generator is used to inject current into the
 subsurface. Currents flow, and the path they follow depends on the
 conductivity structure of the subsurface. Charges build up on conductivity
-interfaces, which change the electric potentials that are measured on the
+interfaces, which change the electric potentials that are measured on the
 surface.
 
 .. raw:: html
