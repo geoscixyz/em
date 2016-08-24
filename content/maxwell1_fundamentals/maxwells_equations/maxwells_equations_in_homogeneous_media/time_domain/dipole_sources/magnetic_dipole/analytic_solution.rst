@@ -136,7 +136,7 @@ Using the above identities, the step-response for the electric and magnetic fiel
 For the electric field, the step-response is given by:
 
 .. math::
-	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \hat y + y \, \hat z \big )
+	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( z \, \hat y - y \, \hat z \big )
 	:label: e_step_response
 
 

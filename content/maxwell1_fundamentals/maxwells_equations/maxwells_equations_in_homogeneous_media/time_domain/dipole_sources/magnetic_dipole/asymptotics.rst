@@ -32,7 +32,7 @@ and
 	:label: erfc_approximation
 
 
-By substituting the above expressions into the full analytic solutions for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
+By substituting the above Taylor series into full analytic solutions for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
 In the case of the electric field:
 
 .. math::
@@ -43,17 +43,21 @@ According to Eq. :eq:`e_nearfield_latetime`, the near-field/late-time electric f
 For the magnetic field, the near-field/late-time approximation is given by:
 
 .. math::
-	{\bf h_e}(t) \approx \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( 3 - \frac{1}{\sqrt{\pi}}\theta^3 r^3 \Bigg ) - \Bigg ( 1 + \frac{7}{3\sqrt{\pi}} \theta^3 r^3 \Bigg ) \hat x \Bigg ]
+	{\bf h_e}(t) \approx \frac{2 m}{15 \pi^{3/2} r^3} \Bigg [ 3\, \theta^5 r^5 \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg )  + \bigg ( 5\, \theta^3 r^3 - 6\, \theta^5 r^5 \bigg ) \hat x \Bigg ]
 	:label: h_nearfield_latetime
 
-According to Eq. :eq:`h_nearfield_latetime`, the near-field/late-time magnetic field is a sum of the DC magnetic field (link) and a time-dependent part which decays proportional to :math:`t^{-3/2}`.
+According to Eq. :eq:`h_nearfield_latetime`, :math:`\hat y` and :math:`\hat z` component of the field decay proportional to :math:`t^{-5/2}`.
+In the :math:`\hat x` however, :math:`\theta^3 r^3` terms did not cancel.
+As a result, the :math:`\hat x` component of the field decays proportional to :math:`t^{-3/2}` after sufficient time.
 The near-field/late-time approximation for the time-derivative of the magnetic field is given by:
 
 .. math::
-	\frac{\partial {\bf h_e}}{\partial t} \approx 
+	\frac{\partial {\bf h_e}}{\partial t} \approx - \frac{4m \theta^5}{\pi^{3/2} \mu \sigma} \Bigg [ \theta^2 r^2 \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) + \bigg ( 1 - 2\, \theta^2 r^2 \bigg ) \hat x  \Bigg ]
 	:label: dhdt_nearfield_latetime
 
-According to Eq. :eq:`dhdt_nearfield_latetime`, the time-derivative of the magnetic field has a single term which decays proportional to :math:`t^{-5/2}`.
+According to Eq. :eq:`dhdt_nearfield_latetime`, :math:`\hat y` and :math:`\hat z` component of the field decay proportional to :math:`t^{-7/2}`.
+In the :math:`\hat x` however, :math:`\theta^5 r^5` terms did not cancel.
+As a result, the :math:`\hat x` component of the field decays proportional to :math:`t^{-5/2}` after sufficient time.
 
 
 Far-Field
