@@ -28,7 +28,7 @@ Despite the above success, the situation worsens if the earth is more complex. T
     (b) Pseudosection of apparent conductivity calculated from the synthetic DCR survey.
     (c) Vertical section through a more complicated conductivity model with near-surface inhomogeneities added and (d) resulting pseudosection of apparent resistivity. 
 
-This example can be download :ref:`here<dcr_synthetics>`.
+This example can be downloaded :ref:`here<dcr_synthetics>`.
 
 :ref:`Gradient array surveys<dcr_survradiobuttons>` are often used in reconnaissance modes and it is insightful to repeat the above analysis with a representative example. A plan view of the resistivity model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The survey consists of a grid of 13 x 13 receivers located between a 450 meter dipole current source. Each receiver is a 20 meter dipole. The corresponding apparent conductivity map is shown in :numref:`DCR_Grad_Simple` (b). 
 An estimate of the horizontal location of the center of the prism can be obtained, but again there is no quantitative information about the depth.
