@@ -41,12 +41,12 @@ An explicit expression for the inverse Laplace transform can be obtained using t
 	:label: Laplace_identity_4
 	
 
-As a result, the transient vector potential for an electric dipole is given by:
+Using this identity, the step response for the vector potential is given by:
 
 
 .. math::
-	{\bf a}(t) = \frac{Ids}{4 \pi r} \textrm{erfc} (\theta r) \hat x
-	:label: vector_potential
+	L^{-1} \Bigg [ \frac{{\bf A}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r} \textrm{erfc} (\theta r) \hat x
+	:label: vector_potential_step
 
 
 where
@@ -56,8 +56,11 @@ where
 	:label: theta_vector_potential
 
 
+By the same method as before, the transient vector potential is given by:
 
-
+.. math::
+	{\bf a}(t) = \frac{Ids}{4 \pi r} \textrm{erf} (\theta r) \hat x
+	:label: vector_potential_step_off
  
 
 

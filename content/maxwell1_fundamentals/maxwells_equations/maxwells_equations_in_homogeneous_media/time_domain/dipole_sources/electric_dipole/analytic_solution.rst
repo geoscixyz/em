@@ -126,15 +126,21 @@ To obtain the inverse Laplace transform of the previous two expressions, and thu
 	:label: Laplace_identity_3
 
 where erfc(x) is the complimentary error function.
-By using these identities to solve for the step-response according to Eq. :eq:`step_Laplace_transform`, the step-off response for the electric and magnetic fields can be obtained according to Eq. :eq:`causal_step_off`.
-For the electric field, the step-off response is given by:
+By using these identities to solve for the step-response according to Eq. :eq:`step_Laplace_transform`:
 
 .. math::
 	\begin{split}
-	{\bf e_e}(t) = \frac{Ids}{4\pi \sigma r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + & \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + 3 \, \textrm{erfc}(\theta r) \Bigg ) ... \\
+	L^{-1}\Bigg [ \frac{{\bf E_e}(s)}{s} \Bigg ] = \frac{Ids}{4\pi \sigma r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + & \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + 3 \, \textrm{erfc}(\theta r) \Bigg ) ... \\
 	&- \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \Bigg ) \hat x \Bigg ]
 	\end{split}
-	:label: e_transient
+	:label: e_step_response
+
+and
+
+.. math::
+	L^{-1}\Bigg [ \frac{{\bf H_e}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r^3} \bigg ( \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \bigg ) \big ( - z \, \hat y + y \, \hat z  \big )
+	:label: h_step_response
+
 
 where
 
@@ -143,17 +149,28 @@ where
 	:label: theta
 
 
-For the magnetic field, the resulting step-off response is given by:
+Using the previous two expressions, we can determine the transient electric and magnetic fields according to Eq. :eq:`causal_step_off`.
+For the electric field, the transient response is given by:
 
 .. math::
-	{\bf h_e}(t) = \frac{Ids}{4 \pi r^3} \bigg ( \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \bigg ) \big ( - z \, \hat y - y \, \hat z  \big )
+	\begin{split}
+	{\bf e_e}(t) = \frac{Ids}{4\pi \sigma r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + & \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \Bigg ) ... \\
+	&- \Bigg ( \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x \Bigg ]
+	\end{split}
+	:label: e_transient
+
+where erf(:math:`x`) is the error function.
+For the magnetic field, the transient response is given by:
+
+.. math::
+	{\bf h_e}(t) = \frac{Ids}{4 \pi r^3} \bigg ( \textrm{erf}(\theta r) - \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2}  \bigg ) \big ( - z \, \hat y + y \, \hat z  \big )
 	:label: h_transient
-	
+
 
 For geophysical applications, we generally measure the electromotive force induced within a receiver coil.
 As a result, we are interested in the time-rate of decay of the magnetic field.
-Taking the derivative of Eq. :eq:`e_transient`, this is given by:
+Taking the derivative of Eq. :eq:`h_transient`, this is given by:
 
 .. math::
-	\frac{\partial{ \bf h_e}}{\partial t} = \frac{2 \, \theta^5 Ids}{\pi^{3/2} \mu \sigma} e^{-\theta^2 r^2} \big ( - z \, \hat y - y \, \hat z  \big )
+	\frac{\partial{ \bf h_e}}{\partial t} = - \frac{2 \, \theta^5 Ids}{\pi^{3/2} \mu \sigma} e^{-\theta^2 r^2} \big ( - z \, \hat y + y \, \hat z  \big )
 	:label: dhdt_transient
