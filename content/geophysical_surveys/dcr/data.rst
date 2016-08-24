@@ -7,7 +7,7 @@ Data
 
    To show how measured voltages are converted to apparent resistivity and plotted as a sounding curve or as a pseudo-section. 
 
-A general DC resistivity survey setup is outlined in (:numref:`dcr_Schlumberger_array`). A current generator is attached to the :math:`A`, (positive) and :math: `B` (negative)electrodes and a current of magnitude :math:`I` is injected. M and N are the potential electrodes. The nominclature for referring to the distance between any two electrodes is denoted by r with appropriate subscripts. The electrodes can be deployed anywhere on the surface of the earth or inside and they do not have to be co-linear. 
+A general DC resistivity survey setup is outlined in (:numref:`dcr_Schlumberger_array`). A current generator is attached to the :math:`A`, (positive) and :math:`B` (negative)electrodes and a current of magnitude :math:`I` is injected. M and N are the potential electrodes. The nominclature for referring to the distance between any two electrodes is denoted by r with appropriate subscripts. The electrodes can be deployed anywhere on the surface, or inside, the earth and they do not have to be co-linear. 
 
 .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
 	:name: dcr_Schlumberger_array
@@ -18,8 +18,8 @@ A general DC resistivity survey setup is outlined in (:numref:`dcr_Schlumberger_
 
 Measured potential differences
 ------------------------------
-The flow of currents in the ground cause charges to be built up on  interfaces between regions of differing conductivity 
-Link :ref:`DC Resistivity: Physics page <dcr_physics>`. These charges contribute to the measured potential differences. 
+The flow of currents in the ground causes charges to be built up on  interfaces between regions of differing conductivity. 
+These charges contribute to the measured potential difference. 
 
 In a uniform halfspace, the measured potential 
 difference is given by the following expression:
@@ -41,22 +41,17 @@ Calculating apparent resistivity
 The measured voltages are numbers that can vary greatly in amplitude and they provide no direct insight about the structures at depth. As shown above, the potential difference is primarily dependent upon the geometry of the electrodes. By rearranging that formula we can recover the true resistivity
 
 .. math::
-		\rho_a = \frac{\Delta V}{IG}
+		\rho = \frac{\Delta V}{IG}
 
-When the earth is really a halfspace any DCR datum is sufficient to evaluate the halfspace resistivity. 
-
-
-In general the earth structure is complicated but we can still eliminate the geometrical factor and define 
+When the earth is a halfspace any DCR datum is sufficient to evaluate the halfspace resistivity. 
+For field data, it is still useful to eliminate the geometrical factor and define
 
 .. math::
 		\rho_a = \frac{\Delta V}{IG}
 
 We refer :math:`\rho_a` as the *apparent resistivity* and it is understood to be the resistivity of a halfspace which produces the observed potential measured by a particular electrode geometry. Apparent resistivity is equal the earth’s true resistivity *only* when 
 the earth is a uniform halfspace. When the earth is more complicated, the measured 
-apparent resistivity will lie between the maximum and the minimum of the true resistivities. This conversion is extremely valuable for plotting data and making first pass assessments about the subsurface.
- 
-
-If apparent conductivity is preferred,  
+apparent resistivity will lie between the maximum and the minimum of the true resistivities. This conversion is extremely valuable for plotting data and making first pass assessments about the subsurface. If apparent conductivity is preferred,  
 
 .. math::
 		\sigma_a = \frac{1}{\rho_a} = \frac{IG}{\Delta V}
@@ -89,10 +84,10 @@ resistivity of layers (See Table below).
 Pseudo-section
 **************
 Pseudo-sections are often used to visualize data from 2D profiles. To account for the fact 
-that measurements with larger electrode separations sample deeper portions of the earth, 45 
+that measurements with larger electrode separations sample deeper portions of the earth, lines at :math:`45^\circ` 
 degree angles are drawn from the mid-points of the current and potential electrode pairs and 
 the datum is plotted at the intersection of these lines. In cases where a pole transmitter 
-or receiver is used the 45 degree angles are drawn directly from the electrode location. 
+or receiver is used the 45 lines are drawn directly from the electrode location. 
 The figure below shows how an apparent resistivity pseudo-section is built up for a simple 
 dipole-dipole profile. 
 

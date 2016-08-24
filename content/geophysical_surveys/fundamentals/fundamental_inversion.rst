@@ -1,4 +1,4 @@
-.. _inversion:
+.. _fundamental_inversion:
 
 Inversion
 =========
