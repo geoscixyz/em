@@ -154,9 +154,8 @@ Units
 Consider the units of quantities on the left and right-hand sides of Eq.
 :eq:`faradays_law_int_time`. Using dimensional analysis, we obtain:
 
-	.. math::
-
-		V = \frac{Wb}{s}
+.. math::
+	V = \frac{Wb}{s}
 
 .. TODO: parapharase this (I copy and paste wiki)
 
@@ -165,9 +164,8 @@ Therefore the above expression states that a change in magnetic flux, equal to
 closed path. Using the aforementionned expression, the Weber (:math:`Wb`) can
 be expressed as:
 
-	.. math::
-
-		Wb = V \cdot s = \frac{J}{A}, 
+.. math::
+	Wb = V \cdot s = \frac{J}{A}, 
 
 where :math:`J` is the Joule, and :math:`A` is Ampere.
 Joules are used to represent a unit of energy, or work.
