@@ -73,7 +73,6 @@ At the large scale we have the following items.
 - `Examples`_: These notebooks or script-codes are provided so that the user can experiment with parameters and ask "what if" questions. For instance, in DCR, with a grounded source, it is of interest to see how the earth currents flow in the presence of a conductive or resistive body. To keep material organized, most of the code in the examples, is stored on `SimPEG`_.
 
 .. _Examples: http://mybinder.org/repo/ubcgif/em_examples
-.. _SimPEG: http://simpeg.xyz/
 
 How to contribute?
 ------------------
