@@ -30,7 +30,7 @@ Despite the above success, the situation worsens if the earth is more complex. T
 
 This example can be download :ref:`here<dcr_synthetics>`.
 
-:ref:`Gradient array surveys<dcr_survradiobuttons>` are often used in reconnaissance modes and it is insightful to repeat the above analysis with a representative example. A plan view of the resistivity of the model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The survey consists of a 13 x 13 receivers grid, 20 meters dipole, located in the center of a large 450 meters dipole source. The corresponding apparent resistivity map is shown in :numref:`DCR_Grad_Simple` (b). 
+:ref:`Gradient array surveys<dcr_survradiobuttons>` are often used in reconnaissance modes and it is insightful to repeat the above analysis with a representative example. A plan view of the resistivity model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The survey consists of a grid of 13 x 13 receivers located between a 450 meter dipole current source. Each receiver is a 20 meter dipole. The corresponding apparent conductivity map is shown in :numref:`DCR_Grad_Simple` (b). 
 An estimate of the horizontal location of the center of the prism can be obtained, but again there is no quantitative information about the depth.
 
 .. figure:: images/DCR_Grad_Simple.png
