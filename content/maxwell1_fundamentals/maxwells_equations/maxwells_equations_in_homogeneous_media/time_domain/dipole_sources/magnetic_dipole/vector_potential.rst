@@ -5,11 +5,12 @@ Vector Potential
 
 .. topic:: Purpose
 
-    purpose here
+    Here, we present an analytic expression for the transient vector potential corresponding to a magnetic dipole within a homogeneous media.
+    Once again, expressions are derived for the quasi-static regime.
 
 
 The vector potential for a time-dependent magnetic dipole has a simple mathematical representation yet it contains complete information about the electric and magnetic fields.
-In order to obtain an explicit expression for the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`) vector potential, we apply the same method as the previous page.
+In order to obtain an explicit expression for the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`) vector potential, we apply the approach from the previous page.
 
 For a harmonic magnetic dipole in the :math:`\hat x` direction, and with moment amplitude :math:`m`, the harmonic vector potential (link) is given by:
 
@@ -36,7 +37,7 @@ An explicit expression for the inverse Laplace transform can be obtained using t
 
 
 .. math::
-	L^{-1} \Big [ e^{-\alpha \sqrt{s}} \Big ] = \frac{\alpha}{2\sqrt{\pi t^3}} e^{-\alpha^2/4t} \; \; \; \textrm{for} \; \; \; > \geq 0
+	L^{-1} \Big [ e^{-\alpha \sqrt{s}} \Big ] = \frac{\alpha}{2\sqrt{\pi t^3}} e^{-\alpha^2/4t} \; \; \; \textrm{for} \; \; \; t > 0
 	:label: Laplace_identity_4
 
 
@@ -47,15 +48,15 @@ Using this identity, the step-response for the vector potential is given by:
 	:label: vector_potential_step
 
 
-where
+where:
 
 .. math::
 	\theta = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2}
 	:label: theta_vector_potential
 
 
-As we already showed on the previous page, the step-response for a causal system can be used directly to obtain the transient or step-off response at :math:`t>0`.
-Using this approach, the transient vector potential for an electric dipole is given by:
+As we already showed on the previous page, the step-response for a causal system can be used directly to obtain the transient or step-off response.
+Thus, the transient vector potential for a magnetic dipole within a homogeneous media is given by:
 
 
 .. math::
