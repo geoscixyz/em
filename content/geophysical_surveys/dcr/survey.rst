@@ -181,7 +181,7 @@ that the current waveform has a two second positive on-time followed by a two-
 second off-time, followed by a two-second negative on-time before a final two
 second off-time. 
 
-This pattern for the current source is necessary because a voltage measurement, when the current is off, will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground or fields that arise from natural atmospheric or ionospheric sources.  From the point of view of DC resistivity surveys, SP voltages are noise.  The SP signals can be removed by using a bipolar waveform with a  50% duty cycle. Subtracting the responses of the two half-periods removes the SP provided that the SP signal doesn't vary significantly during one period of the waveform.  
+This waveform for the current source is necessary because a voltage measurement, when the current is off, will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground or fields that arise from natural atmospheric or ionospheric sources.  From the point of view of DC resistivity surveys, SP voltages are noise.  The SP signals can be removed by using a bipolar waveform with a  50% duty cycle. Subtracting the responses of the two half-periods removes the SP provided that the SP signal doesn't vary significantly during one period of the waveform.  
 
 .. figure:: images/txwave.gif
         :figwidth: 40%
@@ -232,12 +232,12 @@ survey. For DC resisitivity sounding, a simple digital volt meter can be adequat
 
 .. _dcr_electrodes:
 
-**Electrodes:** In general, current injection and potential measurement electrodes are not interchangeable. However, automated acquisition systems using smaller source currents do employ the same stainless steel electrodes, both for sourcing current and measuring potentials. This becomes more and more difficult as source currents increase because the ground can become altered by high current densities.
+**Electrodes:** In general, current injection and potential measurement electrodes are not interchangeable. However, automated acquisition systems using smaller source currents often employ the same stainless steel electrodes for a current electrode and a potential electrode. This becomes more difficult as the source current increases in strength because the ground can become altered by high current densities and the electrode can become polarized. 
 
 Current electrodes transmit electricity into the ground, and as such they need
-good contact with the ground, i.e., low impedance or good contact resistance. 
-Stainless steel stakes, shets of foil, wetted (and perhaps salted) ground are all possible approaches to improving contact resistance.  Pouring salty water on the electrodes can help
-to improve the contact with the ground, or wrapping the electrode with a
+good contact with the ground, i.e., low impedance or small contact resistance. 
+Stainless steel stakes, sheets of foil, and wetted ground are all possible approaches to improving contact resistance.  Pouring salty water on the electrodes can help
+to improve the contact, or the electrode can be wrapped with a
 soaked cloth. 
 
 For measuring potentials, low noise, non-polarizing (not necessarily low impedance) electrodes are sought after. Small lead plates buried in the soil will often help achieve this. In more difficult situations, wet electrodes made from porous ceramic jars containing salt solutions are required. It is also common to use lead wire in a lead-
@@ -249,9 +249,9 @@ DC survey with a copper sulphate solution is shown in
 
 .. _dcr_capasensors:
 
-**Capacitive sensors** are different from electrodes in that they don't require a galvanic contact with the earth. `These sensors <https://www.onepetro.org/download/conference-paper/SEG-2012-1478?id=conference-paper%2FSEG-2012-1478>`_  allow measurement of the electric field by placing a unit on the surface but is not limited to measuring data in locations of good contact with the ground. This allows for reliable data collection in regions with dry soils or icy conditions and other areas where the use of electrodes is difficult.
+**Capacitive sensors** are different from electrodes in that they don't require a galvanic contact with the earth. `These sensors <https://www.onepetro.org/download/conference-paper/SEG-2012-1478?id=conference-paper%2FSEG-2012-1478>`_  allow measurement of the electric field by placing a unit on the surface. Good contact with the ground is not required and this allows reliable data to be collected in regions with dry soils or icy conditions and other areas where electrode emplacement is difficult.
 
 .. _dcr_cables:
 
-**Cables:** For small scale work, some systems are available that use multi-conductor cable, and possible "smart" electrodes that can be switched between input and measurement functions by computer. For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multi-conductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, wich commonly involve profile lines several kilometers long. However, there are some systems that use mult-conductor seismic cables for the potentials while requiring the normal single, heavy gauge wire for the current source. A typical 12-gauge current wire (red) used for a DC survey is shown in :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires (orange).
+**Cables:** For small scale work, some systems are available that use multi-conductor cable, and possible "smart" electrodes that can be switched between input and measurement functions by computer. For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multi-conductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, which commonly involve profile lines several kilometers long. However, there are some systems that use multi-conductor seismic cables for the potentials while requiring the normal single, heavy gauge wire for the current source. A typical 12-gauge current wire (red) used for a DC survey is shown in :numref:`current_receiver_wire_DC` along with 16-gauge receiver wires (orange).
 
