@@ -3,6 +3,9 @@
 Survey Design
 =============
 
+.. raw:: html
+    :file: ../../../underconstruction.html
+
 One of the most important aspects of a geophysical survey is the design of the
 survey. How the survey is layed out will impact the coupling with the target,
 the detectability of the target, and the resolution. Therefore, it is
