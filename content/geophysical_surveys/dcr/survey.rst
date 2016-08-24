@@ -106,8 +106,6 @@ Assembling the above information leads to a general statement that depth of pene
 Some common 3D acquistion geometries are outlined below:
 
 - Multiple lines of co-linear acquisition, or offset acquistion: An example of a multiple line co-linear survey is shown in :numref:`dcr_colinear`. Off-line profiling involves moving the current electrodes along one survey line and recording potentials using electrodes planted along a different (usually parallel) line, as shown in :numref:`dcr_offset`
-.. add faint lines on 68
-.. move lower M and N to adjacent line
 
 - E-Scan type technique: The E-Scan technique (:numref:`dcr_escan`) is a pole-pole configuration. However, it is organized by planting a large number of electrodes over the area of interest, without trying to stay on grid lines. One potential and one current electrode are placed at "infinity". When any electrode in the array is used as a current electrode, potentials at all other electrodes are measured. Each electrode, in turn, is used as a current. 
  
