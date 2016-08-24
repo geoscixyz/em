@@ -25,7 +25,7 @@ Despite the above success, the situation worsens if the earth is more complex. T
     :name: DCR_DpDp_Simple
 
     : (a) Vertical section through a simple conductive prism (:math:`\sigma=0.1` S/m) buried in a homogeneous halfspace :math:`\sigma=0.01` S/m. Source and receiver locations for a dipole-dipole survey are shown for reference.
-    (b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
+    (b) Pseudosection of apparent conductivity calculated from the synthetic DCR survey.
     (c) Vertical section through a more complicated conductivity model with near-surface inhomogeneities added and (d) resulting pseudosection of apparent resistivity. 
 
 This example can be download :ref:`here<dcr_synthetics>`.
