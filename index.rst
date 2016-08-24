@@ -27,7 +27,7 @@ application in making an impact upon the problem at hand.
 .. _Case Histories: http://case-histories.geosci.xyz
 
 Examples are available through `Jupyter Notebooks`_ and can be run through Binders_
-
+temp
 .. image:: http://mybinder.org/badge.svg
    :target: http://mybinder.org/repo/ubcgif/em_examples
    :align: center
