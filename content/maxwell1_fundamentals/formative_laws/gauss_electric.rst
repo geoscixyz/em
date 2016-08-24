@@ -96,5 +96,5 @@ Units
 
 **Conversions**
 
-  .. math:: 
-      \varepsilon_0 = \frac{\text{F}}{\text{m}} = \frac{\text{C}}{\text{V} \cdot \text{m}}.
+.. math:: 
+    \varepsilon_0 = \frac{\text{F}}{\text{m}} = \frac{\text{C}}{\text{V} \cdot \text{m}}.
