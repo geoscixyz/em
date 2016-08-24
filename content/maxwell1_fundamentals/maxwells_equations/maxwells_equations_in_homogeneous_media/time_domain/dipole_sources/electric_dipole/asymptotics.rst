@@ -5,7 +5,7 @@ Asymptotics
 
 .. topic:: Purpose
 
-    Purpose here
+    Here, we present near-field/late-time approximations for the transient electric and magnetic fields.
     
     
 
@@ -19,28 +19,29 @@ For fields which are very close to the electric dipole source, or at sufficientl
 	:label: theta_nearfield_latetime
 
 
-In this case, the exponential and complimentary error function can be approximated as follows:
+In this case, the exponential and error functions can be approximated using Taylor expansion. Thus:
 
 .. math::
-	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + O (\theta^6 r^6)
+	e^{-\theta^2 r^2} = 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...
 	:label: Taylor_expansion_exp
 	
 and
 
 .. math::
-	\textrm{erf}(\theta r) \approx  \frac{2}{\sqrt{\pi}} \theta r - \frac{2}{3 \sqrt{\pi}}\theta^3 r^3 + \frac{1}{5\sqrt{\pi}} \theta^5 r^5 + O (\theta^7 r^7)
+	\textrm{erf}(\theta r) =  \frac{2}{\sqrt{\pi}} \theta r - \frac{2}{3 \sqrt{\pi}}\theta^3 r^3 + \frac{1}{5\sqrt{\pi}} \theta^5 r^5 + \;...
 	:label: erfc_approximation
 
 
-By substituting the above expressions into the full analytic solutions for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
+By substituting the above Taylor expansions into the full analytic solutions for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
 In the case of the electric field:
 
 .. math::
 	{\bf e_e}(t) \approx \frac{ Ids}{15 \pi^{3/2} \sigma r^3} \Bigg [ 6 \,\theta^5 r^5 \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg )   + \Big ( 10 \,\theta^3 r^3 + 3 \,\theta^5 r^5 \Big ) \hat x \Bigg ]
 	:label: e_nearfield_latetime
 
-According to Eq. :eq:`e_nearfield_latetime`, the near-field/late-time electric field in :math:`\hat y` and :math:`\hat z` decay proportional to :math:`t^{-5/2}`.
-However, the :math:`\theta^3 r^3` terms for the :math:`\hat x` component do not cancel and the electric field decays proportional to :math:`t^{-3/2}` at sufficiently late times.
+According to Eq. :eq:`e_nearfield_latetime`, :math:`\hat y` and :math:`\hat z` components of the near-field/late-time electric field decay proportional to :math:`t^{-5/2}`.
+However, :math:`\theta^3 r^3` terms for the :math:`\hat x` component do not cancel.
+Therefore, the :math:`\hat x` component of the electric field decays proportional to :math:`t^{-3/2}` at sufficiently late times.
 For the magnetic field, the near-field/late-time approximation is given by:
 
 .. math::
@@ -48,13 +49,13 @@ For the magnetic field, the near-field/late-time approximation is given by:
 	:label: h_nearfield_latetime
 
 According to Eq. :eq:`h_nearfield_latetime`, the near-field/late-time electric field decays proportional to :math:`t^{-3/2}`.
-The near-field/late-time approximation for the time-derivative of the magnetic field is given by:
+Taking the derivative of Eq. :eq:`h_nearfield_latetime`, near-field/late-time approximation for the time-derivative of the magnetic field is given by:
 
 .. math::
 	\frac{\partial {\bf h_e}}{\partial t} \approx \frac{2 \theta^5 Ids}{\mu \sigma \pi^{3/2}} \big ( z \, \hat y - y \, \hat  z \big )
 	:label: dhdt_nearfield_latetime
 
-According to Eq. :eq:`dhdt_nearfield_latetime`, the time-derivative of the magnetic field has a single term which decays proportional to :math:`t^{-5/2}`.
+According to Eq. :eq:`dhdt_nearfield_latetime`, the time-derivative of the magnetic field decays proportional to :math:`t^{-5/2}`.
 
 
 Far-Field
