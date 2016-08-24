@@ -27,9 +27,9 @@ Basic Survey Setup
 
         Schematic showing a general electrode layout in a grid. Each of the electrodes can be the current electrodes or the potential electrodes.
         
-The basic DC resistivity (DCR) survey requires a generator that inputs electrical current into the ground and a voltmeter to measure the potential difference between two locations. Some key areas to pay attention to with DC surveys are the various configurations, each of which delivers a particular focus on different subsurface information. The basic 4-electrode array is shown in :numref:`dcr_surv_5`.
+The basic DC resistivity (DCR) survey requires a generator that inputs electrical current into the ground and a voltmeter to measure the potential difference between two locations. The basic 4-electrode array is shown in :numref:`dcr_surv_5`. Various configurations of electrodes are possible. 
 
-The current waveform provided by the generator can be harmonic (for a frequency-domain survey) or it can have a duty cycle composed of an "on-time" and "off-time".
+The current waveform provided by the generator can be harmonic (for a frequency-domain survey), a full-duty bipolar pulse,  or a waveform composed of an "on-time" and "off-time".
 
 .. _dcr_survey_config:
 
@@ -45,9 +45,8 @@ Survey configurations
 
 There are many geometries of electrodes that can be used in the field. The electrodes can be co-linear or they can be in an arbitrary configuration. Current and potential electrodes can be on the surface or in boreholes. The choice of which survey geometry to use is governed by: (1) what conductivity structure is sought, (2) field constraints for laying out electrodes, and (3) which equipment is used.
 
-Modern acquisition systems populate an area with electrodes and use different pairs as currents and potential electrodes. :numref:`dcr_2dgeneral` shows a general schematic showing electrode positions on a grid. Since each electrode can be a current or potential electrode, this electrode layout allows for a large set of measurements. It's generally not feasible, nor desirable, to collect all possible data. 
+Modern acquisition systems populate an area with electrodes and use different pairs as currents and potential electrodes. :numref:`dcr_2dgeneral` shows a general schematic showing electrode positions on a grid. Since each electrode can be a current or potential electrode, this electrode layout allows for a large set of measurements. It's generally not feasible, nor desirable, to collect all possible data. Arrays are selected to achieve specific goals. For instance:
 
-Traditionally, data have been collected using co-linear electrodes. Depending upon the relative placement, the geometries have been given specific names. The interactive figure below shows how electrodes are placed for various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
 
 - Profiling: a fixed array is moved along a line. The data  provide information about lateral variations to a depth that is determined by the length of the array. 
 
@@ -57,7 +56,8 @@ Traditionally, data have been collected using co-linear electrodes. Depending up
 
 - Gradient array: This is a reconnaissance array that uses a fixed location for the A and B electrodes which are far apart. Measurements are taken in an area between the current electrodes. Potential differences in orthogonal directions can be acquired but usually only potential differences between electrodes aligned in the same direction as the A and B electrodes are obtained.
 
-The interactive figure below shows some specific array configurations that are used in practise. 
+Traditionally, data have been collected using co-linear electrodes. Depending upon the relative placement, the geometries have been given specific names. The interactive figure below shows how electrodes are placed for various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
+ 
 
 
 .. _dcr_survradiobuttons:
@@ -107,7 +107,7 @@ Some common 3D acquistion geometries are outlined below:
 
 - Multiple lines of co-linear acquisition, or offset acquistion: An example of a multiple line co-linear survey is shown in :numref:`dcr_colinear`. Off-line profiling involves moving the current electrodes along one survey line and recording potentials using electrodes planted along a different (usually parallel) line, as shown in :numref:`dcr_offset`
 
-- E-Scan type technique: The E-Scan technique (:numref:`dcr_escan`) is a pole-pole configuration. However, it is organized by planting a large number of electrodes over the area of interest, without trying to stay on grid lines. One potential and one current electrode are placed at "infinity". When any electrode in the array is used as a current electrode, potentials at all other electrodes are measured. Each electrode, in turn, is used as a current. 
+- E-Scan: The E-Scan technique (:numref:`dcr_escan`) is a pole-pole configuration. However, it is organized by planting a large number of electrodes over the area of interest, without trying to stay on grid lines. One potential and one current electrode are placed at "infinity". When any electrode in the array is used as a current electrode, potentials at all other electrodes are measured. Each electrode, in turn, is used as a current. 
  
 - Cross-well survey: A cross-well survey is deployed in boreholes, usually using a minimum of 2 wells. Electrodes are positioned along the well and each can be a current or potential electrode. Current electrodes can be in the same well (along-well survey) or in different wells (cross-well survey). An example is shown in :numref:`dcr_crosswell`. For either current configuration, potentials can be measured in the same well or across wells.
 
@@ -160,7 +160,7 @@ Instrumentation
 
    A typical generator hooked up to a transmitter in the field. (Photo: Mike McMillan)
 
-The following section provides some information about the instrumentation used in DC resistivity surveys and what's required for successful data collection. The instrumentation consists of transmitters, receivers, electrodes, and cables.
+The following section provides some information about the instrumentation used in DC resistivity surveys and what's required for successful data collection. The instrumentation consists of transmitters, receivers, electrodes, and cables. The specific capabilities of these elements will vary depending upon intended use. In the material below we provide specifications that are relevant for a mid-sized mineral exploration project. 
 
 .. _dcr_transmitters:
 
@@ -181,12 +181,7 @@ that the current waveform has a two second positive on-time followed by a two-
 second off-time, followed by a two-second negative on-time before a final two
 second off-time. 
 
-This pattern for the current source is necessary because a voltage measurement when the current is off will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground. From the point of view of DC resistivity surveys, SP voltages are noise because measured voltages must be caused by the source current only. A 50% duty cycle reversing square wave aids to remove the (poorly known) SP signals.
-
-When no chargeable material is present in the ground, the
-corresponding voltage curve will mirror that of the current curve. 
-.. The positive and negative on-times are done so that any self-potential in the ground due to natural telluric currents, or currents induced by changing mangetic fields in the atmosphere, will be cancelled out. 
-Generally many cycles of the current waveform are transmitted into the ground in order to stack many receiver voltage curves to reduce noise in the data. 
+This pattern for the current source is necessary because a voltage measurement, when the current is off, will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground or fields that arise from natural atmospheric or ionospheric sources.  From the point of view of DC resistivity surveys, SP voltages are noise.  The SP signals can be removed by using a bipolar waveform with a  50% duty cycle. Subtracting the responses of the two half-periods removes the SP provided that the SP signal doesn't vary significantly during one period of the waveform.  
 
 .. figure:: images/txwave.gif
         :figwidth: 40%
@@ -234,9 +229,6 @@ survey. For DC resisitivity sounding, a simple digital volt meter can be adequat
 
    Red current wire (12-gauge) with multiple receiver wires (16-gauge) in orange. (Photo: Mike McMillan)
 
-The voltage potential can be measured between any combination of
-receiver electrodes due to super-position theory, as long as the data was
-collected simultaneously.
 
 .. _dcr_electrodes:
 
