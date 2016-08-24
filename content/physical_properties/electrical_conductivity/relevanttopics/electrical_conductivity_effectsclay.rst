@@ -16,30 +16,28 @@ The cations are required to balance the charge due to substitution within the cr
 The impact of a disseminated clay on rock conductivity becomes increasingly important as the conductance through the pore decreases. Hydrothermal alteration changes feldspars to kaolinite, montmorillonite, and other clay minerals, particularly for siliceous rocks. In basics rocks, chlorite and serpentine may be produced. All of these alteration products exhibit high conductivity. As the concentration of of the electrolyte increases the relative contribution of the electrolyte conduction path to the clay conduction path increases.
 The total conductivity :math:`\sigma` of a rock can be expressed as
 
-	.. math::
-		\sigma = \sigma_n + \sigma_s,
+.. math::
+	\sigma = \sigma_n + \sigma_s,
 
 where :math:`\sigma_n` is the normal rock conductivity and :math:`\sigma_s` is the surficial conductivity  of the clay. Assuming fully saturated rock (:math:`S_w=1`) and with Archie's law (:math:`\sigma = \frac{\sigma_e}{F}S_w^{n}`), we obtain :math:`\sigma_n = \frac{\sigma_e}{F}`. Then, we rewrite above equation as
 
-	.. math::
-		\sigma = \frac{\sigma_e}{F} + \sigma_s.
+.. math::
+	\sigma = \frac{\sigma_e}{F} + \sigma_s.
 
 This clearly shows that as the concentration of the electrolyte increases the relative contribution of the electrolyte conduction path (:math:`\sigma_n`) to the clay conduction path (:math:`\sigma_s`) increases.
 
 :cite:`waxman1968` give the expression for the resistivity of a clay-bearing rock
 
-	.. math::
-		\rho = \frac{\rho_w F_t}{1+ \rho_w BQ},
-		:label: Waxman&Smits
+.. math::
+	\rho = \frac{\rho_w F_t}{1+ \rho_w BQ},
+	:label: Waxman&Smits
 
 and effectively in conductivity form
 
-	.. math::
-
-		\sigma = \frac{\sigma_w+BQ}{F_t},
+.. math::
+	\sigma = \frac{\sigma_w+BQ}{F_t},
 
 where B is the factor related to the mobility of exchange cations on the pore water concentration, Q is the clay cation exchange capacity per unit volume, and :math:`F_t` is the formation factor at very high concentrations where the effects of clays can be neglected (the true formation factor). From Eq. :eq:`Waxman&Smits` an apparent formation factor can be written as
 
-	.. math::
-
-		F_a = \frac{\rho_r}{\rho_w} = \frac{F_t}{1+\rho_w BQ}.
+.. math::
+	F_a = \frac{\rho_r}{\rho_w} = \frac{F_t}{1+\rho_w BQ}.
