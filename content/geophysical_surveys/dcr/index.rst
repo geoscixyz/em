@@ -34,10 +34,10 @@ different conductivity and these charges generate an electric potential.
     Direct Current Resisitivity (DCR)
     experiment showing current path and
     charge built up near a (a) conductive
-    and (b) resitive anomaly.
+    and (b) resistive anomaly.
 
 
-:ref:`Data<dcr_data>` are acquired at the surface by measuring the potential
+:ref:`Data<dcr_data>` are acquired at the surface or in boreholes by measuring the potential
 difference between two electrodes. The measured voltage depends upon the
 positions of the current and potential electrodes with respect to the target
 as well as the earth's conductivity.  Obtaining information about the
