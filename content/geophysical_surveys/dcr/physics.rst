@@ -37,7 +37,7 @@ spheres in a uniform half-space Earth. Currents are injected into the ground
 from the source, and potentials are measured at different locations. Using
 :ref:`numerical methods<solving_maxwells_equations>`, we can model the currents
 and accumulation of charges due to conductivity contrasts as shown in the
-animation below. The arrows denote the :ref:`current
+animation below. The arrows denote the direction of the :ref:`current
 density<current_density_J>`, while the color indicates the strength and sign
 of :ref:`accumulated charges<bound_charge_Q>`. The source location is marked
 by a triangle.
@@ -47,9 +47,10 @@ conductor. The current density increases inside the sphere but
 decreases around it; this is often referred to as :ref:`current channeling<dc_e_field>`.
 Conversely, current lines get deflected around the resistor.
 
-`[Pause]` The accumulation of charges occurs at the interface between
-conductivity contrasts. Note that the difference in polarity between
-the conductive and resistive anomaly is as predicted by the :ref:`theory<bound_charge_Q>`.
+`[Pause]` Charges accumulate at the interface between
+conductivity contrasts. Note the difference in charge polarity as the current flows
+into the conductive and resistive spheres. The polarities
+agree with those predicted by theory :ref:`theory<bound_charge_Q>`.
 Also note how the spatial distribution of charges on the spheres changes
 as the current source is moved.
 
