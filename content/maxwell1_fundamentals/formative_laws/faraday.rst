@@ -23,10 +23,10 @@ Faraday's law in integral form can be expressed using the following equation:
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
 where:
- - :math:`\mathbf{e}` is the electric field defined around a closed path :math:`C`
- - :math:`\mathbf{b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
- - :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da`
- - :math:`\ d\mathbf{l}` is a vector element of length along contour :math:`C`
+- :math:`\mathbf{e}` is the electric field defined around a closed path :math:`C`
+- :math:`\mathbf{b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
+- :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da`
+- :math:`\ d\mathbf{l}` is a vector element of length along contour :math:`C`
  
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
 
