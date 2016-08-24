@@ -101,8 +101,14 @@ chargeability within the moderate conductivity of the siltstones.
 Summary
 -------
 
-The inversion has imaged, in 3D, the highly conductive Breakaway Shale unit, the western boundary of the siltstones that host the mineralization, a linear moderately conductive and chargeable feature identified as the Mt Novit Horizon, and chargeable regions of moderate conductivity between the Mt Novit Horizon and the Breakaway shales.
+In this section, inversion results are interpreted to bring the final recovered physical property models back into the realm of geology. :numref:`MIM_x_section` shows a cross-section view through both the recovered conductivity model (left) and chargeability model (right) along with the final interpretatation of the units. The units line up well with the geo-rectified geologic cross-section (:numref:`Geology_Section`) and allow a high-level of confidence of the interpretation to the north. The Breakaway shale unit has very large conductivities (higher than expected); the Novit Horizon appears as a low to moderate conductor. The Moondarra Siltsone breaks around line N14700, most likely due to faulting. The 3D inversion shows more detail than the 2D inversions and attempts to connect features from line to line. Yet, the results confirm the presence of a "2D" geology in general. 
 
-In this section, inversion results are interpreted to bring the final recovered physical property models back into the realm of geology. :numref:`MtIsa_3D_Model_Plan` shows a plan-view slice of the recovered conductivity model (left) and chargeability model (right). The Breakaway shale unit has very large conductivities (higher than expected); the Novit Horizon appears as a low to moderate conductor. The Moondarra Siltsone breaks around line N14700, most likely due to faulting. The 3D inversion shows more detail than the 2D inversions and attempts to connect features from line to line. Yet, the results confirm the presence of a "2D" geology in general.
+
+.. figure:: images/mimxsec.png
+    :align: center
+    :figwidth: 90%
+    :name: MIM_x_section
+
+    : Coincident cross-section through the conductivity (left) and chargeability (right) models with the interpreted units and super-imposed. The units line up well with the geo-rectified geologic cross-section.
 
 

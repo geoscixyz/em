@@ -5,15 +5,8 @@
         "location":"Vancouver, BC",
         "email":"lheagy@eos.ubc.ca",
         "url":"http://lindseyjh.ca",
-        "tooltip":"https://avatars.githubusercontent.com/u/6361812?v=3",
+        "avatar":"https://avatars.githubusercontent.com/u/6361812?v=3",
         "ORCID":"0000-0002-1551-5926"
-    },
-    "simpegbot":{
-        "name":"SimPEG bot",
-        "affiliation":"SimPEG",
-        "location":"The Web",
-        "url":"http://simpeg.xyz",
-        "tooltip":"./img/simpegbot.png"
     },
     "sdevriese":{
         "name":"Sarah G. R. Devriese",
@@ -21,6 +14,17 @@
         "location":"Vancouver, BC",
         "email":"sdevries@eos.ubc.ca",
         "url":"http://gif.eos.ubc.ca/people/sdevriese",
+	"avatar":"https://avatars3.githubusercontent.com/u/13733333?v=3&s=460",
         "ORCID":"0000-0003-4305-8416"
+    },
+
+    "thast":{
+        "name":"Thibaut Astic",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"thast@eos.ubc.ca",
+        "url":"https://linkedin.com/in/thibautastic",
+        "avatar":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
+        "ORCID":"0000-0003-1237-6315"
     }
 }
