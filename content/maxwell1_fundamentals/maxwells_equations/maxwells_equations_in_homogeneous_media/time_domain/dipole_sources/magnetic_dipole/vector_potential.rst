@@ -32,21 +32,19 @@ By substituting :math:`s = i\omega` and dividing by :math:`s`:
 
 
 Because the signal is causal, the step-response at :math:`t>0` can be derived by taking the inverse Laplace transform of the previous expression.
-As we already showed on the previous page, the step-response for a causal system can be used directly to obtain the transient or step-off response at :math:`t>0` .
 An explicit expression for the inverse Laplace transform can be obtained using the following identity (Abramowitz and Stegun, 1964):
 
 
 .. math::
 	L^{-1} \Big [ e^{-\alpha \sqrt{s}} \Big ] = \frac{\alpha}{2\sqrt{\pi t^3}} e^{-\alpha^2/4t} \; \; \; \textrm{for} \; \; \; > \geq 0
 	:label: Laplace_identity_4
-	
 
-As a result, the transient vector potential for an electric dipole is given by:
 
+Using this identity, the step-response for the vector potential is given by:
 
 .. math::
-	{\bf f}(t) = \frac{m \theta^3}{\pi^{3/2} \sigma r} e^{-\theta^2 r^2} \hat x
-	:label: vector_potential
+	L^{-1} \Bigg [ \frac{{\bf F}(s)}{s} \Bigg ] = \frac{m\theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \hat x
+	:label: vector_potential_step
 
 
 where
@@ -54,6 +52,18 @@ where
 .. math::
 	\theta = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2}
 	:label: theta_vector_potential
+
+
+As we already showed on the previous page, the step-response for a causal system can be used directly to obtain the transient or step-off response at :math:`t>0`.
+Using this approach, the transient vector potential for an electric dipole is given by:
+
+
+.. math::
+	{\bf f}(t) = -\frac{m \theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \hat x
+	:label: vector_potential_step_off
+
+
+
 
 
 

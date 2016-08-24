@@ -132,12 +132,22 @@ To obtain the inverse Laplace transform of the previous two expressions, and thu
 
 
 where erfc(x) is the complimentary error function.
-By using these identities to obtain the step-response according to Eq. :eq:`step_inverse_Laplace`, we can obtain the step-off response according to Eq. :eq:`causal_step_off`.
-For the electric field, the step-off response is given by:
+Using the above identities, the step-response for the electric and magnetic fields can be determined according to Eq. :eq:`step_inverse_Laplace`.
+For the electric field, the step-response is given by:
 
 .. math::
-	{\bf e_e}(t) = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \hat y + y \, \hat z \big )
-	:label: e_step_off_quasi_static
+	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \hat y + y \, \hat z \big )
+	:label: e_step_response
+
+
+And for the magnetic field:
+
+.. math::
+	\begin{split}
+	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 +& \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + 3\, \textrm{erfc} (\theta r) \Bigg ) \, ...  \\
+	& - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \hat x \Bigg ]
+	\end{split}
+	:label: h_step_response
 
 where
 
@@ -146,19 +156,27 @@ where
 	:label: theta_quasi_static
 
 
-For the magnetic field, the resulting step-off response is given by:
+Using the step-response, we can obtain the transient response according to Eq. :eq:`causal_step_off`.
+For the electric field, the transient response is given by:
+
+.. math::
+	{\bf e_m}(t) = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \hat y + y \, \hat z \big )
+	:label: e_step_off_response
+
+And for the magnetic field
 
 .. math::
 	\begin{split}
-	{\bf h_e}(t) = \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 +& \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + 3\, \textrm{erfc} (\theta r) \Bigg ) \, ...  \\
-	& - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \hat x \Bigg ]
+	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2} \hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + &\frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \; ... \\
+	&-  \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x  \Bigg ]
 	\end{split}
-	:label: h_step_off_quasi_static
+	:label: h_step_off_response
+
 
 For geophysical applications, we generally measure the electromotive force induced within a receiver coil.
 As a result, we are interested in the time-rate of decay of the magnetic field.
-Taking the derivative of Eq. :eq:`h_step_off_quasi_static`, this is given by:
+Taking the derivative of Eq. :eq:`h_step_off_response`, this is given by:
 
 .. math::
-	\frac{\partial{ \bf h_e}}{\partial t} = \frac{4m \theta^5}{\pi^{3/2} \mu\sigma} e^{-\theta^2 r^2} \Bigg [ \theta^2 r^2 \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2} \hat y + \frac{xz}{r^2} \hat z \Bigg ) + \big (1 -\theta^2 r^2 \big ) \hat x \Bigg ]
+	\frac{\partial{ \bf h_m}}{\partial t} = - \frac{4m \theta^5}{\pi^{3/2} \mu\sigma} e^{-\theta^2 r^2} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2} \hat y + \frac{xz}{r^2} \hat z \Bigg ) \theta^2 r^2  + \big (1 -\theta^2 r^2 \big ) \hat x \Bigg ]
 	:label: dhdt_step_off_quasi_static

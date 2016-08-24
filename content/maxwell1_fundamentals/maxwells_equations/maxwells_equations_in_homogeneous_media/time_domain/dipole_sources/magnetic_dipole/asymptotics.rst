@@ -19,16 +19,16 @@ For fields which are very close to the electric dipole source, or at sufficientl
 	:label: theta_nearfield_latetime
 
 
-In this case, the exponential and complimentary error function can be approximated as follows:
+In this case, the exponential and error function can be approximated as follows:
 
 .. math::
-	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + O (\theta^4 r^4)
+	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + O (\theta^6 r^6)
 	:label: Taylor_expansion_exp
 	
 and
 
 .. math::
-	\textrm{erfc}(\theta r) \approx 1 - \frac{2}{\sqrt{\pi}} \theta r + \frac{1}{3 \sqrt{\pi}}\theta^3 r^3 + O (\theta^5 r^5)
+	\textrm{erf}(\theta r) = \frac{2}{\sqrt{\pi}} \theta r - \frac{2}{3 \sqrt{\pi}}\theta^3 r^3 + \frac{1}{5\sqrt{\pi}}\theta^5 r^5 + O (\theta^7 r^7)
 	:label: erfc_approximation
 
 
