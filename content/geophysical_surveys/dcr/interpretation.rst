@@ -98,7 +98,7 @@ Similar to the prism model (:numref:`DCR_DpDp_Simple`), we repeat the experiment
 
 (b) The inversion recovers the contaminating surface conductors. It also recovers the two spheres with about the same fidelity as in the simple case. 
 
-This example can be download :ref:`here<dcr_synthetics>`.
+This example can be downloaded :ref:`here<dcr_synthetics>`.
 
 .. _depth_of_investigation:
 
