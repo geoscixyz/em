@@ -10,9 +10,9 @@ Vector Potential
 
 
 The vector potential for a time-dependent electric dipole has a simple mathematical representation yet it contains complete information about the electric and magnetic fields.
-In order to obtain an analytic expression for vector potential in the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`), we apply the method shown on the previous page.
+In order to obtain an analytic expression for vector potential in the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`), we apply the method shown on the :ref:`previous page<time_domain_electric_dipole_analytic_solution>`.
 
-For an electric current dipole in the :math:`\hat x` direction, and with moment :math:`Ids`, the harmonic vector potential (link) is given by:
+For an electric current dipole in the :math:`\hat x` direction, and with moment :math:`Ids`, the :ref:`harmonic vector potential<frequency_domain_electric_dipole_vector_potential>` is given by:
 
 .. math::
 	{\bf A} = \frac{Ids}{4\pi r}e^{-ikr} \hat x
@@ -33,7 +33,7 @@ By substituting :math:`s = i\omega` and dividing by :math:`s`:
 
 
 Because the signal is causal, the step-response at :math:`t \geq 0` can be derived by taking the inverse Laplace transform of the previous expression.
-As we already showed on the previous page, the step-response for a causal system can be used to determine the transient or step-off response at :math:`t \geq 0` .
+As we already showed on the :ref:`previous page<time_domain_electric_dipole_analytic_solution>`, the step-response for a causal system can be used to determine the transient or step-off response at :math:`t \geq 0` .
 The inverse Laplace transform can be obtained trivially by using the following identity (Abramowitz and Stegun, 1964):
 
 

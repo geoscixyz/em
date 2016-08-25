@@ -32,7 +32,7 @@ and
 	:label: erfc_approximation
 
 
-By substituting the above Taylor expansions into the full analytic solutions for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
+By substituting the above Taylor expansions into the :ref:`full analytic solutions<time_domain_electric_dipole_analytic_solution>` for :math:`{\bf e_e}` and :math:`{\bf h_e}`, we can obtain near-field/late-time approximations.
 In the case of the electric field:
 
 .. math::
