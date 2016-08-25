@@ -11,7 +11,7 @@ Physical Properties
 
 Overview
 --------
-In geophysics we characterize materials by their physical properties. The
+In geophysics, we characterize materials by their physical properties. The
 relevant  properties for electromagnetics are:
 
 - :ref:`electrical_conductivity_index`: :math:`\sigma` (or its reciprocal, resistivity, :math:`\rho`)
@@ -36,12 +36,12 @@ needed then application of the Fourier transform yields
 - :math:`\mathbf{b}(t)=\mu(t) \ast \mathbf{h}(t)`
 - :math:`\mathbf{d}(t)=\varepsilon(t) \ast \mathbf{e}(t)`
 
-The constitutive relations, along with Maxwell's equations,  form a complete set of equations for electromagnetics.
+The constitutive relations, along with :ref:`Maxwell's equations <quick_guide_maxwell>`,  form a complete set of equations for electromagnetics.
 
-In this section we present basic material regarding the various physical properties. For each property we provide:
+In this section, we present basic material regarding the various physical properties. For each property, we provide:
 
-- examples {links} to applications
-- constitutive relationship and laboratory experiment
+- Examples to applications
+- Constitutive relationship and laboratory experiment
 - Useful tables
 - Additional information
 - References
@@ -59,10 +59,6 @@ In this section we present basic material regarding the various physical propert
     magnetic_permeability/index
     electrical_permittivity/index
     constitutive_relations/index
-
-
-Overview
---------
 
 
 
