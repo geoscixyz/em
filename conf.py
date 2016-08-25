@@ -93,7 +93,6 @@ exclude_patterns = [
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
-    'content/case_histories/bookpurnong/*',
     'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
     'content/geophysical_surveys/airborne_fdem/systems.rst',
     'content/geophysical_surveys/airborne_tdem/systems.rst',
