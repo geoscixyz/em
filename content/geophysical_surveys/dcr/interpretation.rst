@@ -15,7 +15,7 @@ Apparent Resistivities
 
 Plotting apparent resistivities, as pseudosections or in plan-view maps, is informative. The images are useful for  recognizing data `outliers`, bad electrodes, and validating normalizations that might have been applied to the data. In addition, they sometimes provide valuable information about earth structure. 
 
-As an illustration, :numref:`DCR_DpDp_Simple` (a) shows an earth model consisting of a single prism (:math:`\rho=10 \Omega \cdot m`) buried in a uniform halfspace (:math:`\rho= 100\; \Omega \cdot m`). A dipole-dipole survey is carried out along a line that passes directly above the conductive prism. The resulting pseudosection is shown in :numref:`DCR_DpDp_Simple` (b). The prism is manifested as a region of lower apparent resistivity in the center of the image and there are `wings` extending outwards and downward. The apex of the image can be used to estimate the horizontal location of the prism but the depth to the body is less evident since the vertical scale of the pseudosection is in `n-values` and not in meters.
+As an illustration, :numref:`DCR_DpDp_Simple` (a) shows an earth model consisting of a single prism (:math:`\rho=10\; \Omega \cdot m`) buried in a uniform halfspace (:math:`\rho= 100\; \Omega \cdot m`). A dipole-dipole survey is carried out along a line that passes directly above the conductive prism. The resulting pseudosection is shown in :numref:`DCR_DpDp_Simple` (b). The prism is manifested as a region of lower apparent resistivity in the center of the image and there are `wings` extending outwards and downward. The apex of the image can be used to estimate the horizontal location of the prism but the depth to the body is less evident since the vertical scale of the pseudosection is in `n-values` and not in meters.
 
 Despite the above success, the situation worsens if the earth is more complex. This is illustrated in :numref:`DCR_DpDp_Simple` (c) where some near-surface inhomogeneities are added. The same dipole-dipole survey is carried out and resultant pseudosection is shown in :numref:`DCR_DpDp_Simple` (d). The response of the prism is masked and attempting to infer existence and location of the prism is extremely challenging. 
 
@@ -121,8 +121,7 @@ proposed by :cite:`LiDWO1999`.
     :name: DCR_TwoSpheres_DOI
 
     : (a) Resistivity model obtained using a different reference halfspace (:math:`\rho= 10\; \Omega \cdot m`) and (b) the 
-    calculated DOI index. The DOI value of 0.8 
-    is chosen as a cut-off value.
+    calculated DOI index.
     (c) Preferred resistivity model presented in :numref:`DCR_TwoSpheres_Simple` (c) after applying the DOI mask.
 
 In its simplest form, the DOI analysis requires the data to be inverted twice
@@ -148,9 +147,7 @@ both inversions regardless of the chosen reference models
 where the recovered models return to their respective reference conductivities.
 :numref:`DCR_TwoSpheres_DOI` (b) presents the calculated DOI index for the two-
 sphere problem, showing a lower confidence over the bottom half of the domain.
-The choice for a cut-off is subjective but here we use a value of 0.8. 
 The DOI mask is applied to our preferred 2D model, presented in :numref:`DCR_TwoSpheres_DOI` (c), with transparency applied proportionally to the DOI index.
-
 
 
 .. _dcr_synthetics:
