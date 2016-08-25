@@ -17,7 +17,7 @@ We are also able to extract information about the dynamics of the water flow :nu
 
 .. figure:: ./images/booky-interp.png
     :align: left
-    :width: 80%
+    :width: 100%
     :name: booky-interp
     
     Interpretation of the conductivity models from the TDEM and FDEM inversions at Bookpurnong. Black arrows indicate the direction of water flow in the river and its floodplain.
