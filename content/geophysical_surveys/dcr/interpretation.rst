@@ -5,7 +5,7 @@ Interpretation
 
 .. topic:: Purpose
   
-   To show how DCR data are processed and inverted to reveal meaningful information about the earth structure. This is demonstrated on the data generated from the :ref:`two-sphere problem<two_sphere_setup>`. The synthetic models and data presented in this page can download :ref:`here<dcr_synthetics>`
+   To show how DCR data are processed and inverted to reveal meaningful information about the earth structure. This is demonstrated on the data generated from the :ref:`two-sphere problem<two_sphere_setup>`. The synthetic models and data presented in this page can be downloaded :ref:`here<dcr_synthetics>`.
 
 
 .. _dcr_interpretation_appRes:
@@ -15,9 +15,11 @@ Apparent Conductivities
 
 Plotting apparent conductivities, as pseudosections or in plan-view maps, is informative. The images are useful for  recognizing data `outliers`, bad electrodes, and validating normalizations that might have been applied to the data. In addition, they sometimes provide valuable information about possible structure. 
 
-As an illustration, :numref:`DCR_DpDp_Simple` (a) shows an earth model consisting of a single prism (:math:`\sigma=0.1` S/m) buried in a uniform halfspace (:math:`\sigma=0.01` S/m). A dipole-dipole survey is carried out directly above the conductive prism. The resulting pseudosection is shown in :numref:`DCR_DpDp_Simple` (b). The prism is manifested as a region of lower resistivity in the center of the image and has `wings` extending outwards and downward. The apex of the image can be used to estimate the horizontal location of the prism but the depth to the body is less evident since the vertical scale of the pseudosection is in `n-values` and not in meters. This example can be download :ref:`here<dcr_synthetics>`
+As an illustration, :numref:`DCR_DpDp_Simple` (a) shows an earth model consisting of a single prism (:math:`\sigma=0.1` S/m) buried in a uniform halfspace (:math:`\sigma=0.01` S/m). A dipole-dipole survey is carried out directly above the conductive prism. The resulting pseudosection is shown in :numref:`DCR_DpDp_Simple` (b). The prism is manifested as a region of lower resistivity in the center of the image and has `wings` extending outwards and downward. The apex of the image can be used to estimate the horizontal location of the prism but the depth to the body is less evident since the vertical scale of the pseudosection is in `n-values` and not in meters. This example can be downloaded :ref:`here<dcr_synthetics>`.
 
 Despite the above success, the situation worsens if the earth is more complex. This is illustrated in :numref:`DCR_DpDp_Simple` (c) where some near-surface inhomogeneities are added. The same dipole-dipole survey is carried out and resultant pseudosection is shown in :numref:`DCR_DpDp_Simple` (d). The response of the prism is masked and attempting to infer existence and location of the prism is extremely challenging. 
+
+This example can be downloaded :ref:`here<dcr_synthetics>`.
 
 .. figure:: images/DCR_DpDp_Simple.png
     :align: center
@@ -25,12 +27,11 @@ Despite the above success, the situation worsens if the earth is more complex. T
     :name: DCR_DpDp_Simple
 
     : (a) Vertical section through a simple conductive prism (:math:`\sigma=0.1` S/m) buried in a homogeneous halfspace :math:`\sigma=0.01` S/m. Source and receiver locations for a dipole-dipole survey are shown for reference.
-    (b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
+    (b) Pseudosection of apparent conductivity calculated from the synthetic DCR survey.
     (c) Vertical section through a more complicated conductivity model with near-surface inhomogeneities added and (d) resulting pseudosection of apparent resistivity. 
 
-This example can be download :ref:`here<dcr_synthetics>`.
 
-:ref:`Gradient array surveys<dcr_survradiobuttons>` are often used in reconnaissance modes and it is insightful to repeat the above analysis with a representative example. A plan view of the resistivity of the model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The survey consists on a 13 x 13 receivers grid, 20 meters dipole, located in the center of a large 450 meters dipole source. The corresponding apparent resistivity map is shown in :numref:`DCR_Grad_Simple` (b). 
+:ref:`Gradient array surveys<dcr_survradiobuttons>` are often used in reconnaissance modes and it is insightful to repeat the above analysis with a representative example. A plan view of the resistivity model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The survey consists of a grid of 13 x 13 receivers located between a 450 meter dipole current source. Each receiver is a 20 meter dipole. The corresponding apparent conductivity map is shown in :numref:`DCR_Grad_Simple` (b). 
 An estimate of the horizontal location of the center of the prism can be obtained, but again there is no quantitative information about the depth.
 
 .. figure:: images/DCR_Grad_Simple.png
@@ -41,7 +42,7 @@ An estimate of the horizontal location of the center of the prism can be obtaine
     : (a) Bird-eye view of gradient array survey over a simple conductive prism model (:math:`\sigma=0.1` S/m) buried in a uniform halfspace (:math:`\sigma=0.01` S/m) and (b) corresponding apparent conductivity map. By simple inspection of the data map, it is easy to locate the center of the conductive anomaly.
     (c) The experiment is replicated with a more complicated conductivity model with near-surface inhomogeneities added. Direct interpretation of the resulting apparent resistivity map (d) is challenging.
 
-Contaminating the model by adding some conductive and resistive features (:numref:`DCR_Grad_Simple` c) leads to an apparent resistivity map that is very complicated and in which the signal of the prism is masked (:numref:`DCR_Grad_Simple` d). 
+Contaminating the model by adding some conductive and resistive features (:numref:`DCR_Grad_Simple` (c)) leads to an apparent resistivity map that is very complicated and in which the signal of the prism is masked (:numref:`DCR_Grad_Simple` (d)). 
 To obtain information about the electrical conductivity we need to invert the data. 
 
 .. _dcr_interp_inversion:
@@ -51,8 +52,8 @@ Inversion of DCR data
 
 The DCR data are inverted using a standard Gauss-Newton framework. This is outlined in :ref:`Inversion<inversion>`. The data are the measured voltages and the goal is to find an electrical conductivity that satisfactorily reproduces these data and agrees with a priori geologic structure and petrophysical constraints. 
     
-To illustrate the importance of inverting the data we return to the thematic :ref:`2-sphere problem<two_sphere_setup>`. Although the geology is 3D, we first invert the data using a 2D inversion algorithm.
-Parameters used for the inversion of the dipole-dipole data (:numref:`DCR_TwoSpheres_Simple` b) are provided in :numref:`twospheres_inv_table`. 
+To illustrate the importance of inverting the data, we return to the thematic :ref:`2-sphere problem<two_sphere_setup>`. Although the geology is 3D, we first invert the data using a 2D inversion algorithm.
+Parameters used for the inversion of the dipole-dipole data (:numref:`DCR_TwoSpheres_Simple` (b)) are provided in :numref:`twospheres_inv_table`. 
 
 .. list-table:: : 2D Inversion parameters
    :header-rows: 0
@@ -80,7 +81,7 @@ Parameters used for the inversion of the dipole-dipole data (:numref:`DCR_TwoSph
 (a) Eventhough we do not have contaminating near-surface conductivity blocks the pseudosection do not clearly indicate two bodies. This is in contrast to :numref:`DCR_DpDp_Simple` (a) where a single prism was clearly identified in the pseudosection.
 
 
-(b) The two spheres are recovered but they have lower conductivity contrasts with respect to the halfspace than do the true spheres. This occurs for three reasons: (i) the inversion generates smooth models and this extends structures and reduces amplitudes. (ii)the spherical structures are extending into the limits of depth of investigation; (iii) the 2D inversion is assumes that the structures are cylindrical.
+(b) The two spheres are recovered but they have lower conductivity contrasts with respect to the halfspace than do the true spheres. This occurs for three reasons: (i) the inversion generates smooth models and this extends structures and reduces amplitudes; (ii) the spherical structures are extending into the limits of depth of investigation; and (iii) the 2D inversion is assumes that the structures are cylindrical.
 
 .. figure:: images/DCR_TwoSpheres_Simple.png
     :align: center
@@ -89,7 +90,7 @@ Parameters used for the inversion of the dipole-dipole data (:numref:`DCR_TwoSph
 
     : (a) Vertical section through a two-sphere model (:math:`\sigma_1=0.1` S/m ; :math:`\sigma_2=0.001` S/m) buried in a homogeneous halfspace (:math:`\sigma_0=0.01` S/m). (b) Corresponding pseudosection of apparent conductivity acquired from a dipole-dipole survey layout, 20 meter dipole spacing. (c) Recovered conductivity model from a 2D inversion. (d) A similar experiment is carried out on a more complicated conductivity model with near-surface inhomogeneities added. While the interpretation of the corresponding (e)pseudosection  is challenging, the (f) 2D inversion result  recovers both the spheres and near surface anomalies.   
 
-Similar to the prism model (:numref:`DCR_DpDp_Simple`), we repeat the experiment with the same survey setup but using a more complicated conductivity model with near surface inhomogeneities added (:numref:`DCR_TwoSpheres_Simple` d). The resulting pseudosection (:numref:`DCR_TwoSpheres_Simple` e) is challenging to interpret due to the combined signal coming from the two spheres and near surface anomalies. Using the same inversion method, we recover a 2D conductivity model presented in :numref:`DCR_TwoSpheres_Simple` (f).
+Similar to the prism model (:numref:`DCR_DpDp_Simple`), we repeat the experiment with the same survey setup but using a more complicated conductivity model with near surface inhomogeneities added (:numref:`DCR_TwoSpheres_Simple` (d)). The resulting pseudosection (:numref:`DCR_TwoSpheres_Simple` (e)) is challenging to interpret due to the combined signal coming from the two spheres and near surface anomalies. Using the same inversion method, we recover a 2D conductivity model presented in :numref:`DCR_TwoSpheres_Simple` (f).
 
 **Important comments:**
 
@@ -97,7 +98,7 @@ Similar to the prism model (:numref:`DCR_DpDp_Simple`), we repeat the experiment
 
 (b) The inversion recovers the contaminating surface conductors. It also recovers the two spheres with about the same fidelity as in the simple case. 
 
-This example can be download :ref:`here<dcr_synthetics>`.
+This example can be downloaded :ref:`here<dcr_synthetics>`.
 
 .. _depth_of_investigation:
 
