@@ -3,6 +3,11 @@
 Introduction
 =============
 
+.. raw:: html
+    :file: ../../underconstruction.html
+
+
+
 **Contents:**
 
 .. toctree::
@@ -11,7 +16,7 @@ Introduction
     introduction_about
     introduction_basic_electromagnetic_experiments
     introduction_notation
-    
+
 
 How to use this resource
 ------------------------
@@ -22,10 +27,10 @@ There are multiple ways to use em.geosci:
 
     - what is :ref:`Faraday's law<faraday>`?
     - how does an electromagnetic wave decay as it propagates?
-    - ... 
+    - ...
 
 - to obtain information about a geophysical survey (instrumentation, data acquisition, processing)
-- to find :ref:`Case Histories<case_histories_index>` about the use of geophysics in solving applied problems. 
+- to find :ref:`Case Histories<case_histories_index>` about the use of geophysics in solving applied problems.
 
 These objectives are interconnected and the sequence in which the questions
 are asked will depend upon the problem. The advantage of a digital resource is

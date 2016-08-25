@@ -25,7 +25,7 @@ knowledge that has been acquired by practising geoscientists and, when made
 available, can elevate the learning and responsible use of electromagnetics
 throughout the communinity.
 
-.. _Github: http://github.com/ubcgif/em 
+.. _Github: http://github.com/ubcgif/em
 
 What is em.geosci?
 ------------------
@@ -64,13 +64,13 @@ At the large scale we have the following items.
 
 - Maxwell4_TDEM: This section pertains to understanding Maxwell's equations in the time domain.
 
-- Surveys: Self-contained folders for individual geophysical surveys are provided. For example DCR provides a comprehensive overview about the DC resistivity survey as well as links to case histories. Each Survey is linked to relevant sections in other portions of em.geosci so that comprehensive knowledge can be accessed. 
+- Surveys: Self-contained folders for individual geophysical surveys are provided. For example DCR provides a comprehensive overview about the DC resistivity survey as well as links to case histories. Each Survey is linked to relevant sections in other portions of em.geosci so that comprehensive knowledge can be accessed.
 
 - Inversion: This provides basic tutorial information about inversion that is applicable to all em surveys.
 
 - Case Histories: These form the cornerstones of our site. They motivate the use of EM geophysics and they also dictate what material needs to be developed in the background sections. Each case history is presented with a Seven-Step Framework.
 
-- Examples: These notebooks or script-codes are provided so that the user can experiment with parameters and ask "what if" questions. For instance, in DCR, with a grounded source, it is of interest to see how the earth currents flow in the presence of a conductive or resistive body. To keep material organized, most of the code in the examples, is stored on SimPEG. 
+- Examples: These notebooks or script-codes are provided so that the user can experiment with parameters and ask "what if" questions. For instance, in DCR, with a grounded source, it is of interest to see how the earth currents flow in the presence of a conductive or resistive body. To keep material organized, most of the code in the examples, is stored on SimPEG.
 
 SimPEG: talk about it here?  Links?
 
@@ -79,6 +79,6 @@ How to contribute?
 ------------------
 
 We are still developing the site and are making it available on an "as-is" basis. You are free to download and use anything on the site subject to .....
-We welcome feedback about the useability of the site and the technical details. ...how to contribute...
+We welcome feedback about the useability of the site and the technical details.
 
 
