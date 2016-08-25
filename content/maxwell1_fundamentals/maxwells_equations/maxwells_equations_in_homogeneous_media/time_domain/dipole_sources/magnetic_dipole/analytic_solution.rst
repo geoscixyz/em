@@ -36,8 +36,8 @@ For a step-off excitation, the magnetic dipole moment is given by:
 	:label: step_off_moment
 
 
-Instead of solving the problem beginning with Maxwell's equations, we will used the approach found in Ward and Hohmann (1988).
-For this approach, frequency-domain solutions previously derived for the harmonic magnetic dipole (link) are transformed into the time-domain via inverse Laplace transform.
+Instead of solving the problem beginning with Maxwell's equations, we will used the approach found in Ward and Hohmann :cite:`ward1988`.
+For this approach, frequency-domain solutions previously derived for the :ref:`harmonic magnetic dipole<frequency_domain_magnetic_dipole_analytic_solution>` are transformed into the time-domain via inverse Laplace transform.
 
 
 **Frequency Domain to Time Domain**
@@ -59,14 +59,14 @@ The step-off response for a causal system may be given by:
 where :math:`g_+ (\infty )` represents the step-response at :math:`t = \infty`.
 Therefore, if the step-response is known for :math:`t \geq 0`, it can be used to obtain the step-off response at :math:`t \geq 0`.
 
-According to Ward and Hohmann, the step-response for a causal system is equivalent to the following inverse Laplace transform:
+From Ward and Hohmann :cite:`ward1988`, the step-response for a causal system is equivalent to the following inverse Laplace transform:
 
 .. math::
 	g_+(t) = L^{-1} \Bigg [ \frac{F(s)}{s} \Bigg ]
 	:label: step_inverse_Laplace
 
 where :math:`F(s)` is obtained by replacing :math:`s=i\omega` in the system's harmonic response function.
-For the electric and magnetic fields arising from a harmonic magnetic dipole, these have already been derived (link).
+For the electric and magnetic fields arising from a harmonic magnetic dipole, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
 For the electric field:
 
 .. math::

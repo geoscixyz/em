@@ -10,9 +10,9 @@ Vector Potential
 
 
 The vector potential for a time-dependent magnetic dipole has a simple mathematical representation yet it contains complete information about the electric and magnetic fields.
-In order to obtain an explicit expression for the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`) vector potential, we apply the approach from the previous page.
+In order to obtain an explicit expression for the quasi-static (:math:`|\omega \varepsilon | \ll \sigma`) vector potential, we apply the approach from the :ref:`previous page<frequency_domain_magnetic_dipole_analytic_solution>`.
 
-For a harmonic magnetic dipole in the :math:`\hat x` direction, and with moment amplitude :math:`m`, the harmonic vector potential (link) is given by:
+For a harmonic magnetic dipole in the :math:`\hat x` direction, and with moment amplitude :math:`m`, the :ref:`harmonic vector potential<frequency_domain_magnetic_dipole_vector_potential>` is given by:
 
 .. math::
 	{\bf F} = \frac{i\omega \mu m}{4\pi r} e^{-ikr} \hat x
@@ -55,7 +55,7 @@ where:
 	:label: theta_vector_potential
 
 
-As we already showed on the previous page, the step-response for a causal system can be used directly to obtain the transient or step-off response.
+As we already showed on the :ref:`previous page<frequency_domain_magnetic_dipole_analytic_solution>`, the step-response for a causal system can be used directly to obtain the transient or step-off response.
 Thus, the transient vector potential for a magnetic dipole within a homogeneous media is given by:
 
 
