@@ -89,7 +89,7 @@ sets and compare the recovered models.
   model without a conductor (top image) and with a conductor (bottom image).
 
 
-The synthetic data are inverted with a 2.5D algorithm. A mesh
+The synthetic data are inverted with a 2D algorithm. A mesh
 of 20-m by 20-m cells discretized the subsurface. A reference and initial
 model of 0.05 S/m was used. The recovered models without, and with, the deep
 conductor are show in Figure :numref:`MIM_PDP_Simulation_Model`.  The results
