@@ -13,7 +13,7 @@ Direct Current Resistivity
     :align: right
 
 Variations in :ref:`conductivity <electrical_conductivity_index>` can be
-diagnostic, for example, when aiming to characterize a mineral deposit (eg.
+diagnostic, for example, when aiming to characterize a mineral deposit (e.g.
 :ref:`Mt. Isa <mt_isa_index>`), where the conductivity of the mineralized zone
 is often higher than the host rock.
 
