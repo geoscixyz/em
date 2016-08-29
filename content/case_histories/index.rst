@@ -21,9 +21,12 @@ The titles, and EM systems used are provided below.
 **Content**
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     mt_isa/index
+    bookpurnong/index
+    aspen/index
+    emc/index
 
 
 .. bookpurnong/index

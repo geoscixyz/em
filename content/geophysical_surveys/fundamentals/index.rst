@@ -3,6 +3,11 @@
 Fundamentals
 ============
 
+.. raw:: html
+    :file: ../../../underconstruction.html
+
+
+
 this covers the fundamentals common to the geophysical methods we will discuss
 
 .. toctree::
@@ -11,5 +16,5 @@ this covers the fundamentals common to the geophysical methods we will discuss
     seven_steps
     survey_design
     forward_modelling
-    inversion
+    fundamental_inversion
 
