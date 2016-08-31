@@ -9,11 +9,11 @@ The survey area under investigation is along Murray River in the Bookpurnong Irr
 - Can the conductivity model, a proxy of the severity of salinization, reveal the dynamics of groundwater flow?
 
 .. figure:: images/booky-location.jpg
- :align: center
+ :align: left
  :figwidth: 100%
  :name: booky-location
 
- Location of the research area (Viezzoli et al., 2010).
+ Location of the research area :cite:`viezzoli2010`.
  
  
 Hydrological Background
@@ -22,16 +22,16 @@ Hydrological Background
 The hydrological system concerning groundwater salinization at Bookpurnong involves a highland and a floodplain as shown in :numref:`booky-hydro`. The irrigation on the river bank (highland) has recharged the groundwater and formed a hydraulic gradient towards the floodplain. The groundwater flow from the high land to the the floodplain brings in substantial amount of natural saline water to the river, causing tree health problems. In order to reduce salt accumulation, Bookpurnong Salt Interception Scheme (SIS) is implemented to experiment the water management methods that use pumping and flooding, with a hope of replacing the saline water with fresh water.
 
 .. figure:: images/booky-hydro.jpg
- :align: center
+ :align: left
  :width: 100%
  :name: booky-hydro
 
- Hydrological model at Bookpurnong (Viezzoli et al., 2009).
+ Hydrological model at Bookpurnong :cite:`viezzoli2010`.
 
 In hydrology, the interaction between the riverwater and groundwater can be in two modes (:numref:`lose-gain`). If the groundwater table is lower, the riverwater recharges the groundwater aquifer, causing the river to "lose" water. If the groundwater table is higher, the groundwater can recharge the river, causing the river to "gain" water. Normally the former is the case if the river is healthy. However, at Bookpurnong, the Murray River floodplain salinization is associated with "gaining" saline water from the irrigated highland. So the hydrological question here is where Murray River loses or gains water, and whether the SIS improves the salinization. These questions can be partially answered by hydrological drilling and sampling, but those data are spatially confined. In this study, we will use EM methods to identify the losing and gaining streams of Muaary River at Bookpurnong.
 
 .. figure:: images/booky-losegain.png
- :align: right
+ :align: left
  :figwidth: 100%
  :name: lose-gain
 
