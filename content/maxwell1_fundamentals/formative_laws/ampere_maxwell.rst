@@ -21,12 +21,12 @@ The Ampere-Maxwell equation in integral form is given below:
 
 where:
 
- - :math:`\mathbf{b}` is the magnetic flux
- - :math:`\mathbf{e}` is the electric field
- - :math:`I_{enc}` is the enclosed current
- - :math:`\mu_0` is the magnetic permeability of free space
- - :math:`\varepsilon_0` is the electric permittivity of free space
- - :math:`\hat{\mathbf{n}}` is the outward pointing unit-normal
+- :math:`\mathbf{b}` is the magnetic flux
+- :math:`\mathbf{e}` is the electric field
+- :math:`I_{enc}` is the enclosed current
+- :math:`\mu_0` is the magnetic permeability of free space
+- :math:`\varepsilon_0` is the electric permittivity of free space
+- :math:`\hat{\mathbf{n}}` is the outward pointing unit-normal
 
 
  .. figure:: images/Ienc.png
@@ -263,14 +263,15 @@ Units
 
 **Conversions**
 
- - One Tesla equals one weber (the SI unit of magnetic flux) per square meter:
+- One Tesla equals one weber (the SI unit of magnetic flux) per square meter:
 
-    .. math:: 
-        1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}.
+.. math:: 
+    1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}.
 
- - One ampere equals one coulomb (the SI unit of electric charge) per second: 
-    .. math:: 
-        1 \text{A} = 1 \frac{\text{C}}{\text{s}}.
+- One ampere equals one coulomb (the SI unit of electric charge) per second: 
+
+.. math:: 
+    1 \text{A} = 1 \frac{\text{C}}{\text{s}}.
 
 
 .. Magnetization :math:`\mathbf{m}`:  ampere per meter :math:`[\frac{\text{A}}{\text{m}}]`

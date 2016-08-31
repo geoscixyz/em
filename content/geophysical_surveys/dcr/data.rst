@@ -7,10 +7,10 @@ Data
 
    To show how measured voltages are converted to apparent resistivity and plotted as a sounding curve or as a pseudo-section. 
 
-A general DC resistivity survey setup is outlined in :numref:`dcr_Schlumberger_array`. A current generator is attached to the :math:`A` (positive) and :math:`B` (negative) electrodes and a current of magnitude :math:`I` is injected. :math:`M` and :math:`N` are the potential electrodes. The nomenclature for referring to the distance between any two electrodes is denoted by :math:`r` with appropriate subscripts. The electrodes can be deployed anywhere on the surface or in boreholes and they do not have to be co-linear. 
+A general DC resistivity survey setup is outlined in :numref:`dcr_DipoleDipole_array`. A current generator is attached to the :math:`A` (positive) and :math:`B` (negative) electrodes and a current of magnitude :math:`I` is injected. :math:`M` and :math:`N` are the potential electrodes. The nomenclature for referring to the distance between any two electrodes is denoted by :math:`r` with appropriate subscripts. The electrodes can be deployed anywhere on the surface or in boreholes and they do not have to be co-linear. 
 
-.. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
-	:name: dcr_Schlumberger_array
+.. figure:: ./images/DCR_DipoleDipole_Array.svg
+	:name: dcr_DipoleDipole_array
 	:align: right
 	:figwidth: 50%
 
@@ -18,11 +18,9 @@ A general DC resistivity survey setup is outlined in :numref:`dcr_Schlumberger_a
 
 Measured potential differences
 ------------------------------
-The flow of currents in the ground causes charges to be built up on  interfaces between regions of differing conductivity. 
-These charges contribute to the measured potential difference. 
+The flow of currents in the ground causes charges to be built up on interfaces between regions of differing conductivity. These charges contribute to the measured potential difference. 
 
-In a uniform halfspace, the measured potential 
-difference is given by the following expression:
+In a uniform halfspace, the measured potential difference is given by the following expression:
 
 .. math::
 	\Delta V &= V_M - V_N \textrm{, with} \\[0.8em]

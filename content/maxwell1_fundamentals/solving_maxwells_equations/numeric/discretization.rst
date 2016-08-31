@@ -119,12 +119,12 @@ magnetic flux at cell faces. The discrete versions of equations are
 
 where:
 
- - :math:`\mathbf{C}` is the discrete curl operator (all discrete operators are sparse matrices)
- - :math:`\mathbf{M}_{\sigma}^e` contains information on the discrete conductivity
- - :math:`\mathbf{M}_{\mu}^f` contains information on the discrete magnetic permeability
- - :math:`\tilde{\mathbf{E}}` is a vector containing the approximate electric field at each cell edge
- - :math:`\tilde{\mathbf{B}}` is a vector containing the approximate magnetic flux at each cell face.
- - :math:`\tilde{\mathbf{s}}` is a vector containing an approximation of the source discretized onto the cell edges.
+- :math:`\mathbf{C}` is the discrete curl operator (all discrete operators are sparse matrices)
+- :math:`\mathbf{M}_{\sigma}^e` contains information on the discrete conductivity
+- :math:`\mathbf{M}_{\mu}^f` contains information on the discrete magnetic permeability
+- :math:`\tilde{\mathbf{E}}` is a vector containing the approximate electric field at each cell edge
+- :math:`\tilde{\mathbf{B}}` is a vector containing the approximate magnetic flux at each cell face.
+- :math:`\tilde{\mathbf{s}}` is a vector containing an approximation of the source discretized onto the cell edges.
 
 We can now combine equations :eq:`FarDiscrete` and :eq:`AmpDiscrete` and use
 the methods of sparse linear algebra to solve a large system of equations to

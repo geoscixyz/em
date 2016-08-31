@@ -44,7 +44,8 @@ electric potential :math:`\phi` can be obtained by integrating the
 electric field from :math:`R` to :math:`\infty`. By substituting Ohm’s
 law (:math:`\vec E = \rho \vec J`) into the path integral:
 
-.. math:: \phi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}
+.. math:: 
+   \phi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}
 
 For reasons which will becomes apparent in the next section, we would
 like to re-express :math:`\phi` in terms of a radial coordinate system
@@ -52,15 +53,16 @@ like to re-express :math:`\phi` in terms of a radial coordinate system
 the points which represent the problem geometry do not necessarily form
 a right-triangle, :math:`R` must be expressed using the cosine law:
 
-.. math:: R = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta \;}
+.. math:: 
+   R = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta \;}
 
 For solutions where :math:`r<x_0`, :math:`1/R` can be split into a sum
 of spherical harmonic modes using the binomial theorem:
 
 .. math::
-   \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \
-   &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \
-   &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big)
+   \frac{1}{R} &= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \\
+               &= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+               &= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big)
    :label: RSol1
 
 where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
@@ -70,9 +72,9 @@ unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
 similar approach for :math:`r < x_0` can be expressed as follows:
 
 .. math::
-   \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \
-   &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \
-   &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
+   \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
+               &= \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+               &= \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
    :label: RSol2
 
 Similar to Eq. :eq:`RSol1`, since :math:`x_0<r`, the infinite series in
