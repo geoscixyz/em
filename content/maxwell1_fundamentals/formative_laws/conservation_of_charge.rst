@@ -22,11 +22,11 @@ The integral formulation of conservation of charge is
 
 where:
 
- - :math:`\mathbf{j}` is the current density
- - :math:`\rho` is the volumetric charge density
- - :math:`Q` is the total charge inside the volume
- - :math:`A` is the surface area of the volume 
- - :math:`V` is the volume
+- :math:`\mathbf{j}` is the current density
+- :math:`\rho` is the volumetric charge density
+- :math:`Q` is the total charge inside the volume
+- :math:`A` is the surface area of the volume 
+- :math:`V` is the volume
 
 
 DWO: Check applicability for total or free charges.

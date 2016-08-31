@@ -23,9 +23,8 @@ Conduction in surface rocks is mostly electrolytic, taking place in the connecte
 
 Ionic conductivity is resulting from the ordered movement of ions in an electrolyte under the application of an external electric field. Without an external electric field, the ions move randomly as a result of thermal agitation and collisions with other ions and atoms. Because both cations (+) and anions (-) are present in an electrolyte, the conductivity can be expressed as
 
-	.. math::
-
-		\sigma = e(n^+\mu_m^+ + n^-\mu_m^-),
+.. math::
+	\sigma = e(n^+\mu_m^+ + n^-\mu_m^-),
 
 where :math:`n` is the number of charge carriers, :math:`e` is the charge carried, and :math:`\mu_m` is the mobility of the carriers. Here superscripts + and - stand for cation and anion.
 
