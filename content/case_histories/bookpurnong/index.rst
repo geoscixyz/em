@@ -44,9 +44,6 @@ Bookpurnong
 
     Hydrological model at Bookpurnong :cite:`viezzoli2009`.
 
-.. todo::
-
-    Request permission of figure: CSIRO publishing and Viezzoli. 
 
 
 

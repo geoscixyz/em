@@ -15,7 +15,7 @@ Frequency domain system
     
     :ref:`RESOLVE <resolve>` airborne frequency domain system.
 
-The airborne frequency-domain system used at Bookpurnong was RESOLVE :numref:`booky-resolve`, operated by Fugro
+The airborne frequency-domain system used at Bookpurnong was RESOLVE (:numref:`booky-resolve`), operated by Fugro
 Airborne (now CGG). It operates five pairs of horizontal co-planar (HCP) loop-
 loop configurations at 382, 1822, 7970, 35920 and 130100 Hz, and one pair of
 vertical co-axial loop-loop configuration at 3258 Hz. The measured secondary
@@ -36,12 +36,12 @@ Time domain system
 
 .. figure:: ./images/booky-skytem.jpg
     :align: left
-    :scale: 60%
+    :width: 80%
     :name: booky-skytem
 
     :ref:`SkyTEM <skytem>` airborne time domain system.
 
-The airborne time-domain system used at Bookpurnong was SkyTEM :numref:`booky-skytem`, operated by SkyTEM Surveys Aps. Its transmitter is a large loop and its two receiver loops are mounted at the rear of the frame, in orthogonal orientations measuring dB/dt in z (vertical) and x (in-line horizontal) directions. The final data are normalized as if the dipole moments of the transmitter and the receiver are both unity. One special feature of SkyTEM is its capability of operating in dual-mode - transmitting a high moment pulse and a low moment pulse sequentially. A high moment pulse has greater penetrating depth, but is difficult to cut off clearly in electronics, causing unaccepted bias in the early times. A low moment does not see very deep, but has cleaner early time channels. The high moment is 113000 NIA at 25 Hz and the low moment is 12560 NIA at 222.22 Hz at Bookpurnong.
+The airborne time-domain system used at Bookpurnong was SkyTEM (:numref:`booky-skytem`), operated by SkyTEM Surveys Aps. Its transmitter is a large loop and its two receiver loops are mounted at the rear of the frame, in orthogonal orientations measuring dB/dt in z (vertical) and x (in-line horizontal) directions. The final data are normalized as if the dipole moments of the transmitter and the receiver are both unity. One special feature of SkyTEM is its capability of operating in dual-mode - transmitting a high moment pulse and a low moment pulse sequentially. A high moment pulse has greater penetrating depth, but is difficult to cut off clearly in electronics, causing unaccepted bias in the early times. A low moment does not see very deep, but has cleaner early time channels. The high moment is 113000 NIA at 25 Hz and the low moment is 12560 NIA at 222.22 Hz at Bookpurnong.
 
 
 
