@@ -30,29 +30,29 @@ In Magnetotelluric problems, the key diagnostic physical property is :ref:`elect
 Setup
 -----
 
- .. figure:: images/MT_N_layered_Earth-1.hires.png
-    :align: center
-    :scale: 50%
-    :name: MTlayeredEarth
+.. figure:: images/MT_N_layered_Earth-1.hires.png
+   :align: center
+   :scale: 50%
+   :name: MTlayeredEarth
 
-    1D layered Earth Model
+   1D layered Earth Model
 
 In the movie above, we show an example of plane wave electromagnetic fields propagating in a 2-layered earth with:
 
- - a layered Earth, each layer with its own physical properties :math:`\sigma_j, \varepsilon_j, \mu_j`
+- a layered Earth, each layer with its own physical properties :math:`\sigma_j, \varepsilon_j, \mu_j`
 
- - a plane wave traveling along the axis :math:`\mathbf{\hat{z}}` coming from air, composed of an electric field :math:`\mathbf{E_x}` and a orthogonal magnetic field :math:`\mathbf{H_y}`. These are the fields we will be measuring with our geophysical instruments at the surface to obtain information from the underground
+- a plane wave traveling along the axis :math:`\mathbf{\hat{z}}` coming from air, composed of an electric field :math:`\mathbf{E_x}` and a orthogonal magnetic field :math:`\mathbf{H_y}`. These are the fields we will be measuring with our geophysical instruments at the surface to obtain information from the underground
 
 
 We can see that several phenomenons are occuring. Just to mention few of them:
 
- - the incoming wave (down component) is reflected at the surface
+- the incoming wave (down component) is reflected at the surface
 
- - once in the ground we observe a diffusive effect of the Earth on the wave
+- once in the ground we observe a diffusive effect of the Earth on the wave
 
- - the depth of investigation is regulate by the damping effect on the amplitudes, which is characterized by the skin depth. We notice the decay is more important in the second layer with a higher conductivity
+- the depth of investigation is regulate by the damping effect on the amplitudes, which is characterized by the skin depth. We notice the decay is more important in the second layer with a higher conductivity
 
- - :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are continuous. There is a phase shift between the two.
+- :math:`\mathbf{E_x}` and  :math:`\mathbf{H_y}` are continuous. There is a phase shift between the two.
 
 Governing Equations
 -------------------
@@ -129,12 +129,12 @@ which can be re-written in matrix form as:
 
 The transfert of the Up and Down components inside a layer can then be write as such
 
- .. figure:: images/InsideLayer.png
-    :align: center
-    :scale: 100%
-    :name: InsideLayer
+.. figure:: images/InsideLayer.png
+   :align: center
+   :scale: 100%
+   :name: InsideLayer
 
-    Transfert of Up and Down components inside a layer, variables definition.
+   Transfert of Up and Down components inside a layer, variables definition.
 
 
 .. math::
@@ -161,12 +161,12 @@ Building Intuition for MT problems
 Skin Depth and Depth of investigation
 *************************************
 
- .. figure:: images/SkinDepth_MT.png
-    :align: right
-    :scale: 50%
-    :name: SkinDepth_MT
-
-    Depth of investigation in MT
+.. figure:: images/SkinDepth_MT.png
+   :align: right
+   :scale: 50%
+   :name: SkinDepth_MT
+   
+   Depth of investigation in MT
 
 Take the amplitude of the incident component of the electric wave, :math:`E_{x} (z) =  D e^{Im(k) z}`.
 
@@ -189,20 +189,20 @@ Reflection and Transmission Coefficients
 ****************************************
 
 .. figure:: images/Reflection_MT_annotated.png
- :align: right
- :scale: 50%
- :name: Reflection_MT
+   :align: right
+   :scale: 40%
+   :name: Reflection_MT
 
- Reflection at
- interface
+   Reflection at
+   interface
 
 .. figure :: images/Reflection_Efield.png
- :align: right
- :scale: 50%
- :name: Reflection_Efield
+   :align: right
+   :scale: 50%
+   :name: Reflection_Efield
 
- Notations for
- reflection
+   Notations for
+   reflection
 
 
 
@@ -242,11 +242,11 @@ Refraction angle
 ****************
 
 .. figure:: images/RefractionAngle.png
- :align: right
- :scale: 50%
- :name: Refraction_MT
+   :align: right
+   :scale: 50%
+   :name: Refraction_MT
 
- Refraction and Reflection angles
+   Refraction and Reflection angles
 
 
 In reality, the incident wave is coming from all the possible directions in the air. So how valid is our assumption of an incident vertical wave?
@@ -336,12 +336,12 @@ Note: for a pure 2D Earth, the impedance matrix is also purely off-diagonal (wit
 
 Data
 ----
- .. figure:: images/MTdata.png
-    :align: right
-    :scale: 70%
-    :name: MTdata
+.. figure:: images/MTdata.png
+   :align: right
+   :scale: 70%
+   :name: MTdata
 
-    MT data for a 2 layers Earth
+   MT data for a 2 layers Earth
 
 
 Apparent Resistivity
