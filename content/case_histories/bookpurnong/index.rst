@@ -3,6 +3,8 @@
 Bookpurnong
 ===========
 
+- **Authors**: :ref:`Dikun Yang <dyang>`
+
 .. topic :: Prelude
 
     This Case History is based upon two articles:
