@@ -6,6 +6,8 @@ Elevenmile Canyon
 .. raw:: html
     :file: ../../../underconstruction.html
 
+- **Authors**: :ref:`Sarah G. R. Devriese <sdevriese>`
+
 .. topic :: Prelude
 
     This case history is based upon the paper: "Three-Dimensional
