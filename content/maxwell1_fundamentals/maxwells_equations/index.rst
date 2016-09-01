@@ -31,3 +31,4 @@ Maxwell's Equations
     time_domain_equations
     frequency_domain_equations
     maxwells_equations_in_homogeneous_media/index
+    details
