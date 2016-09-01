@@ -1,4 +1,4 @@
-.. _emi_tuotorial_index:
+.. _emi_tuotorial_index_FD:
 
 Circuit Model for EM Induction
 ==============================
