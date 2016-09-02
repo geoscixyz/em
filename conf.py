@@ -105,6 +105,7 @@ linkcheck_ignore = [
     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
     'https://linkedin.com/in/*',
     'http://dx.doi.org/10.1071/EG08027',
+    'http://www.publish.csiro.au/paper/PVv2010n149p23',
                     ]
 
 # The reST default role (used for this markup: `text`) to use for all
