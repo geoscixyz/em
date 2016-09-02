@@ -26,10 +26,10 @@ good conductors and flow around resistors. Electrical charges are :ref:`built
 up<charge_buildup_at_boundaries>` on interfaces that separate units of
 different conductivity and these charges generate an electric potential.
 
-.. figure:: images/DCR_intro.png
+.. figure:: images/DCR_Intro.png
     :align: right
     :figwidth: 40%
-    :name: DCR_Intro
+    :name: DCR_intro
 
     Direct Current Resisitivity (DCR)
     experiment showing current path and
