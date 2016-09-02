@@ -26,7 +26,7 @@ good conductors and flow around resistors. Electrical charges are :ref:`built
 up<charge_buildup_at_boundaries>` on interfaces that separate units of
 different conductivity and these charges generate an electric potential.
 
-.. figure:: images/DCR_DipoleDipole_Array.png
+.. figure:: images/DCR_intro.png
     :align: right
     :figwidth: 40%
     :name: DCR_intro
@@ -42,7 +42,7 @@ difference between two electrodes. The measured voltage depends upon the
 positions of the current and potential electrodes with respect to the target
 as well as the earth's conductivity.  Obtaining information about the
 spatial distribution of conductivity requires many measurements at different
-locations and electrode configurations. A generic :ref:`dipole-dipole<dcr_survey_design>` survey
+locations and electrode configurations. A :ref:`Schlumberger<dcr_survey_design>` survey
 involving two current and two potential electrodes is shown in
 :numref:`DCR_intro`. Artistic representation of the current density and
 charge build-ups are illustrated for (a) conductive and (b) resistive
