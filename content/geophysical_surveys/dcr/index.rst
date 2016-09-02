@@ -29,7 +29,7 @@ different conductivity and these charges generate an electric potential.
 .. figure:: images/DCR_intro.png
     :align: right
     :figwidth: 40%
-    :name: DCR_intro
+    :name: DCR_Intro
 
     Direct Current Resisitivity (DCR)
     experiment showing current path and
