@@ -100,7 +100,7 @@ In the following pages we illustrate
     :maxdepth: 1
 
     derive_response_function
-    understanding_EMresponse
+    understanding_harmonicEMresponse
     understanding_response_widget
 
 

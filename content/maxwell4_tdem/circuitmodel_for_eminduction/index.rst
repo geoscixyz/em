@@ -83,14 +83,16 @@ Below shows secondary voltage with variable :math:`\tau` in Log-Log and Lin-Log 
 
 In the following pages we illustrate
 
-- How to transform frequency domain response to time domain
-- Convert frequency domain response to time domain
-- Provide widgets to explore concepts
+.. - How to transform frequency domain response to time domain
+.. - Convert frequency domain response to time domain
+.. - Provide widgets to explore concepts
 
 .. toctree::
     :maxdepth: 1
 
     transientresponse
+    understanding_trasientEMresponse
+    synthesis_FDEMandTDEMresponse
 
 
 

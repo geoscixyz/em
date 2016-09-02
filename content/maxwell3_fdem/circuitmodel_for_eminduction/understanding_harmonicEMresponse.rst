@@ -1,7 +1,7 @@
-.. _understanding_EMresponse:
+.. _understanding_harmonicEMresponse:
 
-Understanding the EM response
-=============================
+Understanding the Harmonic EM response
+======================================
 
 The EM response from a buried loop
 
