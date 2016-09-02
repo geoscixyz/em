@@ -1,4 +1,4 @@
-.. _emi_tuotorial_index:
+.. _emi_tuotorial_index_FD:
 
 Circuit Model for EM Induction
 ==============================
@@ -100,7 +100,7 @@ In the following pages we illustrate
     :maxdepth: 1
 
     derive_response_function
-    understanding_EMresponse
+    understanding_harmonicEMresponse
     understanding_response_widget
 
 
