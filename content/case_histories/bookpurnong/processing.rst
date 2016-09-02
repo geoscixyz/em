@@ -12,7 +12,7 @@ Although the contractors have preliminarily processed the raw data to suppress t
 
 .. figure:: ./images/booky-resolveqc.jpg
     :align: left
-    :width: 60%
+    :width: 80%
     :name: booky-resolveqc
     
     Quality control of the FDEM data.
@@ -27,7 +27,7 @@ For quality control, the SkyTEM data are also viewed for individual time channel
 
 .. figure:: ./images/booky-skytemqc.jpg
     :align: left
-    :width: 60%
+    :width: 80%
     :name: booky-skytemqc
     
     Quality control of the TDEM data.
