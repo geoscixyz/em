@@ -50,7 +50,7 @@ Conversely, current lines get deflected around the resistor.
 `[Pause]` Charges accumulate at the interface between
 conductivity contrasts. Note the difference in charge polarity as the current flows
 into the conductive and resistive spheres. The polarities
-agree with those predicted by theory :ref:`theory<bound_charge_Q>`.
+agree with those predicted by :ref:`theory<bound_charge_Q>`.
 Also note how the spatial distribution of charges on the spheres changes
 as the current source is moved.
 

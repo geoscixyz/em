@@ -23,10 +23,11 @@ Faraday's law in integral form can be expressed using the following equation:
 .. include:: ../../equation_bank/faradays_law_int_time.rst
 
 where:
- - :math:`\mathbf{e}` is the electric field defined around a closed path :math:`C`
- - :math:`\mathbf{b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
- - :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da`
- - :math:`\ d\mathbf{l}` is a vector element of length along contour :math:`C`
+
+- :math:`\mathbf{e}` is the electric field defined around a closed path :math:`C`
+- :math:`\mathbf{b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
+- :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da`
+- :math:`\ d\mathbf{l}` is a vector element of length along contour :math:`C`
  
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
 
@@ -153,9 +154,8 @@ Units
 Consider the units of quantities on the left and right-hand sides of Eq.
 :eq:`faradays_law_int_time`. Using dimensional analysis, we obtain:
 
-	.. math::
-
-		V = \frac{Wb}{s}
+.. math::
+	V = \frac{Wb}{s}
 
 .. TODO: parapharase this (I copy and paste wiki)
 
@@ -164,9 +164,8 @@ Therefore the above expression states that a change in magnetic flux, equal to
 closed path. Using the aforementionned expression, the Weber (:math:`Wb`) can
 be expressed as:
 
-	.. math::
-
-		Wb = V \cdot s = \frac{J}{A}, 
+.. math::
+	Wb = V \cdot s = \frac{J}{A}, 
 
 where :math:`J` is the Joule, and :math:`A` is Ampere.
 Joules are used to represent a unit of energy, or work.

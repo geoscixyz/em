@@ -19,7 +19,7 @@ is time dependent.
 Definition
 **********
 
- .. math::
+.. math::
 	\mathbf{b}= \frac{\mu_{0}}{4 \pi} \int_{C} \frac{I_{enc} \mathbf{dl} \times \mathbf{\hat{r}}} {r^2}
 
 
@@ -39,7 +39,7 @@ value of generated magnetic flux at every point in space at a distance :math:`r`
 (with direction indicated by the  unit vector :math:`\mathbf{\hat{r}}`) from
 the wire is:
 
- .. math::
+.. math::
  	\mathbf{b(r)}= \frac{\mu_{0} I_{enc}}{2 \pi r } ({\mathbf{\hat{z}} \times \mathbf{\hat{r}}})
 
  .. figure::
@@ -53,7 +53,7 @@ Given a loop of radius :math:`R`, which is infinitesimally thin, carrying a elec
 intensity :math:`i`, the generated magnetic flux along the central axis of the loop
 :math:`\mathbf{z}`, at a distance :math:`r`, is:
 
- .. math::
+.. math::
 	\mathbf{b}= \frac{\mu_{0} I_{enc}}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \mathbf{\hat{z}}
  
  .. figure::

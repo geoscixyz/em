@@ -16,6 +16,7 @@ Contents:
     :maxdepth: 2
 
     governing_equations
+    circuitmodel_for_eminduction/index
     fields_from_grounded_sources/index
     fields_from_inductive_sources/index
     footprint_and_depth_of_investigation

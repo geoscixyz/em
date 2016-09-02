@@ -1,6 +1,6 @@
 .. _eq_faradays_law_int_freq:
 
- .. math::
+.. math::
     \oint_C {\bf E} \cdot d{\bf l} = - \, i \omega \int_A {\bf B} \cdot \hat n \, da 
     :label: faradays_law_int_freq
 
