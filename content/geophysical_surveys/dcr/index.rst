@@ -26,7 +26,7 @@ good conductors and flow around resistors. Electrical charges are :ref:`built
 up<charge_buildup_at_boundaries>` on interfaces that separate units of
 different conductivity and these charges generate an electric potential.
 
-.. figure:: images/DCR_Intro.png
+.. figure:: images/DCR_DipoleDipole_Array.png
     :align: right
     :figwidth: 40%
     :name: DCR_intro
