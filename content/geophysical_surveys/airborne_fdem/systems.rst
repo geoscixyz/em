@@ -10,7 +10,7 @@ RESOLVE
     :name: resolve_view
 
     A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer. 
-    Source: :ref:`USGS <http://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf>`.
+    Source: `USGS <http://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf>`_.
 
 RESOLVE is a frequency-domain loop-loop system operated by CGG (previously
 Fugro Airborne). The system has evolved over years, we describe RESOLVE III
