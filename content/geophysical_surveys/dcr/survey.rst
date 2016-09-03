@@ -158,7 +158,7 @@ Instrumentation
    :align: right
    :name: generator_DC
 
-   A typical generator hooked up to a transmitter in the field. (Photo: Mike McMillan)
+   A typical generator hooked up to a transmitter in the field. (Photo: Micahel McMillan)
 
 The following section provides some information about the instrumentation used in DC resistivity surveys and what's required for successful data collection. The instrumentation consists of transmitters, receivers, electrodes, and cables. The specific capabilities of these elements will vary depending upon intended use. In the material below we provide specifications that are relevant for a mid-sized mineral exploration project. 
 
@@ -179,7 +179,7 @@ half-duty waveform as shown in :numref:`dcr_txwave`. The name comes from the
 fact that the current is only running for half of the time. The figure shows
 that the current waveform has a two second positive on-time followed by a two-
 second off-time, followed by a two-second negative on-time before a final two
-second off-time. 
+second off-time (0.125 Hz). 
 
 This waveform for the current source is necessary because a voltage measurement, when the current is off, will be non-zero in many situations. Naturally occuring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground or fields that arise from natural atmospheric or ionospheric sources.  From the point of view of DC resistivity surveys, SP voltages are noise.  The SP signals can be removed by using a bipolar waveform with a  50% duty cycle. Subtracting the responses of the two half-periods removes the SP provided that the SP signal doesn't vary significantly during one period of the waveform.  
 
@@ -220,14 +220,14 @@ survey. For DC resisitivity sounding, a simple digital volt meter can be adequat
    :align: right
    :name: porous_pot_receiver
 
-   A single porous pot electrode in the ground connected to a receiver. (Photo: Mike McMillan)
+   A single porous pot electrode in the ground connected to a receiver. (Photo: Michael McMillan)
 
 .. figure:: images/current_receiver_wire.png
    :figwidth: 40%
    :align: right
    :name: current_receiver_wire_DC
 
-   Red current wire (12-gauge) with multiple receiver wires (16-gauge) in orange. (Photo: Mike McMillan)
+   Red current wire (12-gauge) with multiple receiver wires (16-gauge) in orange. (Photo: Michael McMillan)
 
 
 .. _dcr_electrodes:
@@ -240,8 +240,7 @@ Stainless steel stakes, sheets of foil, and wetted ground are all possible appro
 to improve the contact, or the electrode can be wrapped with a
 soaked cloth. 
 
-For measuring potentials, low noise, non-polarizing (not necessarily low impedance) electrodes are sought after. Small lead plates buried in the soil will often help achieve this. In more difficult situations, wet electrodes made from porous ceramic jars containing salt solutions are required. It is also common to use lead wire in a lead-
-chloride mix or copper wire in a copper-sulphate solution. This eliminates
+For measuring potentials, low noise, non-polarizing (not necessarily low impedance) electrodes are sought after. Small lead plates buried in the soil will often help achieve this. In more difficult situations, wet electrodes made from porous ceramic jars containing salt solutions are required. It is also common to use lead wire in a lead-chloride mix or copper wire in a copper-sulphate solution. This eliminates
 self potential between the wire and the ground and improves the quality of
 the data. An example of a porous pot receiver electrode for a
 DC survey with a copper sulphate solution is shown in

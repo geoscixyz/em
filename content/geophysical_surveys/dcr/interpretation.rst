@@ -66,7 +66,7 @@ Parameters used for the inversion of the dipole-dipole data (:numref:`DCR_TwoSph
    *  - Number of data
       - 540
    *  - Data uncertainties
-      - :math:`2\%\times|d| + 2 \times 10^{-5} V` floor
+      - :math:`2\%|d| (percentage) + 2 \times 10^{-5} V` (floor)
    *  - Mesh Size
       - :math:`10 \times 10 \times 10` meters
    *  - Reference conductivity
