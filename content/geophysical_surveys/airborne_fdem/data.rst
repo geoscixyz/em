@@ -3,6 +3,13 @@
 Data
 ====
 
+.. topic:: Purpose 
+
+   To show how an airborne FDEM system measure the induced secondary field as data and the ways of visualizing them.
+
+Definition
+----------
+
 A harmonic current in the transmitter loop is used to generate a primary time-
 harmonic magnetic field. This induces secondary currents in the subsurface,
 which in turn produce secondary magnetic fields. Both the primary and
@@ -13,8 +20,8 @@ act to oppose the change in flux. The voltage in the receiver loop is what we
 use to define a datum.
 
 .. figure:: ./images/3loops.jpg
-    :align: center
-    :width: 80%
+    :align: left
+    :figwidth: 60%
     :name: 3loops
 
     A time varying current ( :math:`I_0 \cos \omega t`) generates a primary
@@ -65,7 +72,7 @@ there are three ways of plotting data for airbrone EM survey:
     :width: 80%
     :name: afem_visual_map
 
-    Map view of data
+    Map view of airborne FDEM data
 
 - Profile or transverse: plotting all or select time/freq along a flight line
   as a function of one horizontal dimension. Slice the data volume vertically
@@ -77,7 +84,7 @@ there are three ways of plotting data for airbrone EM survey:
     :width: 80%
     :name: afem_visual_profile
 
-    Profile view of data
+    Profile view of airborne FDEM data
 
 - Sounding: plotting data at a particular horizontal location as a function of
   time/freq. Drill the data volume vertically and examine the responses as
@@ -88,7 +95,7 @@ there are three ways of plotting data for airbrone EM survey:
     :width: 80%
     :name: afem_visual_sounding
 
-    Sounding view of data
+    Sounding view of airborne FDEM data
 
 By visualizing the data, we can answer the following questions:
 
