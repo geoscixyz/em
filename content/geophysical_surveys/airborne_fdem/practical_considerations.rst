@@ -21,7 +21,7 @@ negative effect, but sometimes they can still be significant in the data. In a
 packaged airborne data set, there is usually a channel called 
 "power line monioring" that can indicate the existence of power line in proximity.
 Advanced modeling may be necessary to take them into account for
-interpretation if they are difficult to supress.
+interpretation if they are difficult to suppress.
 
 
 Recovery of true flight height
