@@ -3,6 +3,10 @@
 Interpretation
 ==============
 
+.. topic:: Purpose
+  
+  To show how airborne FDEM data are processed and inverted to reveal meaningful information about the earth structure. 
+   
 Interpretation is the process that extracts information in the delivered data
 to make decisions or to derive geologic knowledge. Depending on the specific
 geologic questions asked, and the resources available, geophysicists can
@@ -13,10 +17,10 @@ Preliminary interpretation
 --------------------------
 
 Preliminary interpretation include a range of procedures and approaches that
-deal with the data before numerical modeling or inversion. It can achieve the
+deal with the data before sophisticated numerical modeling or inversion. It can achieve the
 following goals:
 
-(1) Quality control QC). Data without quality or uncertainty assessment mean
+(1) Quality control (QC). Data without quality or uncertainty assessment mean
     nothing. So it is important to know the overall quality of a data set. A data
     set may be deemed not suitable for interpretation if the noise level is too
     high. For most data sets, preliminary QC is carried out during acquisition.
@@ -38,7 +42,7 @@ following goals:
 
 (4) Model parameterization. Any interpretation is based on models. By
     processing the data, we may choose more proper models. For example, negative
-    transients in a central loop TEM survey indicate the existance of induced
+    transients in a central loop TEM survey indicate the existence of induced
     polarization. So we know at some places a real and time-independent
     conductivity model is not enough to explain the data. Another example is the
     variation of data in space may indicate the dimensionality of the model and
@@ -56,10 +60,7 @@ conductivity transform, empirical template method, etc. Those simple methods
 were once the mainstream, but have shown drawbacks in complex geological
 setting and lack the ability to decode the conductivity values from the data.
 However, it still has its value in data quality control and preliminary
-interpretation. For example, we can infer whether the system is in the
-resistive or the inductive limit. If the real part stops increasing and the
-imaginary part vanishes as the frequency increase, the system is saturated in
-the inductive limit.
+interpretation. 
 
 Apparent conductivity
 *********************
@@ -70,11 +71,18 @@ uniform half-space that would generate the same data at a particular time or
 frequency. It can be considered as a lumping averaging of the conductivities
 around the measurement location. Despite its blending effect, it provides
 qualitative insight about how the conductivity varies from shallow (high
-frequency) to deep (low frequency).
+frequency) to deep (low frequency). In combination with a depth estimation 
+using skin depth, apparent conductivity forms the basis of a host of imaging
+methods, referred to as conductivity-depth transform (CDT) or imaging (CDI).
+
+Time constant
+*************
+
+For a time domain system, the voltage measured off time at the receiver is roughly an exponentially decaying function of time. The decay rate is an indicator of the overall conductivity of the ground: good conductors have slower decays (greater time constant) and poor conductors have faster decays (smaller time constant). Time constant (or decay constant, tau) method offers a first-order interpretation of the overall conductivity of the ground.
 
 
-Inversion
----------
+Quantitative Inversion
+----------------------
 
 Plate modeling
 **************
@@ -87,8 +95,8 @@ anomalous data. It has the advantages of being able to handle the 3D coupling
 effect efficiently, but may have trouble dealing with too many plates in more
 complex situations.
 
-1D layered earth model inversion
-********************************
+1D layered earth inversion
+**************************
 
 This approach assume the earth's conductivity only varies as a function of
 depth. At each measurement location, the inversion find a layered model that
@@ -121,17 +129,13 @@ another inversion to test the "what if" hypothesis. One important application
 is to estimate the depth of investigation. In order to quantify the
 credibility of the deep structure in a model, another inversion can be run
 using a very different reference model, effectively asking what if the
-background is another value. The two inversion would have similar values at
+background is another value. The two inversions would have similar values at
 shallow depth as that portion is constrained by the data, but may differ at
 depth. The discrepancy between the two models at different depths indicate
 whether the data are sensitive to that part of the earth.
 
 
 
-.. todo::
 
-    **Here are some notes to build from**
-    - Time constant (decay constant) analysis. For a time domain system, the voltage measured off time at the receiver is roughly an exponentially decaying function of time. The decay rate is an indicator of the overall conductivity of the ground: good conductors have slower decays (greater time constant) and poor conductors have faster decays (smaller time constant). Time constant method offers a first-order interpretation of the overall conductivity of the ground.
-    - Apparent conductivity and conductivity-depth imaging/transform (CDI or CDT).
 
 
