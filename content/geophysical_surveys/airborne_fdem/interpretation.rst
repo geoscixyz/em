@@ -42,7 +42,7 @@ following goals:
 
 (4) Model parameterization. Any interpretation is based on models. By
     processing the data, we may choose more proper models. For example, negative
-    transients in a central loop TEM survey indicate the existance of induced
+    transients in a central loop TEM survey indicate the existence of induced
     polarization. So we know at some places a real and time-independent
     conductivity model is not enough to explain the data. Another example is the
     variation of data in space may indicate the dimensionality of the model and
@@ -129,7 +129,7 @@ another inversion to test the "what if" hypothesis. One important application
 is to estimate the depth of investigation. In order to quantify the
 credibility of the deep structure in a model, another inversion can be run
 using a very different reference model, effectively asking what if the
-background is another value. The two inversion would have similar values at
+background is another value. The two inversions would have similar values at
 shallow depth as that portion is constrained by the data, but may differ at
 depth. The discrepancy between the two models at different depths indicate
 whether the data are sensitive to that part of the earth.
