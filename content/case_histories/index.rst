@@ -9,7 +9,7 @@ particular problem to be solved and provides the motivation for working with
 particular surveys and shows the effectiveness of electromagnetics in
 answering the posed questions. For many people, a case history will be the
 entry point to this site. To facilitate transfer of knowledge we have
-developed a common framework ( Seven Step Process) in which each case history
+developed a common framework (Seven Step Process) in which each case history
 is presented. Links are provided so that a reader can investigate fundamental
 aspects of EM, the survey, or interpretation. In some cases we are able to
 provide data sets and analysis/inversion software to enhance the user
