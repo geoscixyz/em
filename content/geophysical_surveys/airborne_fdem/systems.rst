@@ -9,8 +9,8 @@ RESOLVE
     :width: 80%
     :name: resolve_view
 
-    A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer.
-.. Source: http://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf
+    A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer. 
+    Source: :ref:`USGS <http://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf>`.
 
 RESOLVE is a frequency-domain loop-loop system operated by CGG (previously
 Fugro Airborne). The system has evolved over years, we describe RESOLVE III
@@ -30,7 +30,7 @@ per million (ppm).
 
 .. figure:: ./images/resolve_bird.jpg
     :align: center
-    :width: 80%
+    :figwidth: 80%
     :name: resolve_bird
 
     A RESOLVE bird and the coils.
