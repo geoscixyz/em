@@ -3,20 +3,6 @@
 Transmitters and Receivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo::
-
-    **Here is some content, some of this may go in data**
-
-    If the current waveform in the transmitter loop is sinusoidal at a certain
-    frequency, this system is said to operate in frequency domain. For this case,
-    the received waveform is also sinusoidal at the same frequency, but likely
-    with altered magnitude and a phase shift. It is convenient to decompose the
-    receiver waveform to two orthogonal sinusoidal components: one entirely in-
-    phase (real) and the other entirely out-of-phase (imaginary or quadrature). A
-    loop-loop system in frequency domain can be understood with a demonstrative
-    3-loop model, please read the tutorial (link). You may find the following
-    concepts useful. Click the links to learn more in Geophysical Surveys.
-
 
 Transmitter
 ***********
@@ -31,12 +17,12 @@ a generator that outputs a regulated sinusoidal signal at a certain frequency.
   centimetres in radius. The product of current, number of turns and the area
   makes the magnetic dipole moment of the transmitter. This moment is used as
   a scalar in the calculation of the primary field. Because a FEM system
-  measures the secondary field in terms of primary-seconday ratio, the actual
-  moment of a transmitter coil is usually not very imporatnt to know.
+  measures the secondary field in terms of primary-secondary ratio, the actual
+  moment of a transmitter coil is usually not very important to know.
 
 - Multi-frequency. Because one transmitter coil carries a sine wave at a fixed
   frequency, in order to gain depth resolution through frequency, an airborne
-  FEM system often uses multiple pairs of transmitter-recevier operating at
+  FEM system often uses multiple pairs of transmitter-receiver operating at
   multiple frequencies.
 
 
@@ -69,7 +55,7 @@ Configurations
 **************
 
 - Orientation. A transmitter-receiver pair can be oriented to two commonly-
-  used geometries: horizontal co-planar (HCP) or virtical co-axial (VCA). They
+  used geometries: horizontal co-planar (HCP) or vertical co-axial (VCA). They
   provides different ways of coupling with the ground.
 
 - Separation. In a transmitter-receiver pair, the two coils are separated a
@@ -79,7 +65,7 @@ Configurations
 
 .. figure:: ./images/hcp_vca.jpg
    :align: center
-   :scale: 80%
+   :figwidth: 80%
    :name: hcp_vca
 
    A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
