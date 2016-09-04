@@ -26,5 +26,15 @@
         "url":"https://linkedin.com/in/thibautastic",
         "avatar":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
         "ORCID":"0000-0003-1237-6315"
+    },
+    
+    "dyang":{
+        "name":"Dikun Yang",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"yangdikun@gmail.com",
+        "url":"https://www.eoas.ubc.ca/~dyang/",
+	"avatar":"https://avatars3.githubusercontent.com/u/13733333?v=3&s=460",
+        "ORCID":"0000-0002-2807-9537"
     }
 }

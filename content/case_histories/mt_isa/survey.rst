@@ -72,7 +72,7 @@ problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
 We generate synthetic data for the pole-dipole configuration from the numeric
 simulation above in order to test the resolving power of our DCR experiment.
-To asses if this configuration is sensitive to the mineralization at depth, we
+To assess if this configuration is sensitive to the mineralization at depth, we
 examine two scenarios; one without, and one with, the deep conductor. These two
 pole-dipole pseudosections using 15 electrodes spaced 100 meters apart are
 shown in :numref:`MIM_PDP_Simulation`. The pseudosections
