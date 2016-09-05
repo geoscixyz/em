@@ -83,3 +83,26 @@ Lindsey J. Heagy
 
 
         
+.. _dyang:
+
+Dikun Yang
+----------
+
+
+.. image:: https://avatars3.githubusercontent.com/u/13733333?v=3&s=460
+    :width: 150
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** yangdikun@gmail.com 
+
+**url:** https://www.eoas.ubc.ca/~dyang/ 
+
+**ORCID:** `0000-0002-2807-9537 <http://orcid.org/0000-0002-2807-9537>`_ 
+
+
+        
