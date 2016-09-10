@@ -1,6 +1,5 @@
 numpy
 scipy
-cython
 ipython
 sphinx
 matplotlib
