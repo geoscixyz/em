@@ -49,7 +49,7 @@ The Response Function is a complex quantity and the real and imaginary parts (or
 
 .. plot::
 
-    from SimPEG.EM.Analytics import Qfun
+    from SimPEG.EM.Analytics.EMcircuit import Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.
