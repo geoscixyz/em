@@ -1,5 +1,8 @@
 numpy
 scipy
+cython
+ipython
+sphinx
 matplotlib
 sphinxcontrib-bibtex
 sphinx_bootstrap_theme
