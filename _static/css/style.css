@@ -12,6 +12,11 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 80px;
 }
+
+.bs-sidenav{
+  background-color: #F4F4F4!important;
+}
+
 #wrap, .wrap
     {
         min-height: 100%;
@@ -63,3 +68,6 @@ margin: 20px 0;
 code {
 font-size: 100%;
 }
+
+
+background-color: #919191;
