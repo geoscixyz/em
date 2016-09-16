@@ -35,12 +35,12 @@ after_success:
       GAE_PYTHONPATH=${HOME}/.cache/google_appengine ;
       export PATH=$PATH:${HOME}/google-cloud-sdk/bin ;
       export PYTHONPATH=${PYTHONPATH}:${GAE_PYTHONPATH} ;
-      python _ext/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}"); ;
+      python _ext/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}") ;
       if [ ! -d ${HOME}/google-cloud-sdk ]; then
          curl https://sdk.cloud.google.com | bash;
-      fi
-      gcloud config set project emgeosci
-      gcloud -q components update gae-python
+      fi ;
+      gcloud config set project emgeosci ;
+      gcloud -q components update gae-python ;
       gcloud auth activate-service-account --key-file client-secret.json ;
       gcloud -q preview app deploy ./app.yaml --version ${TRAVIS_COMMIT} --promote;
     fi
