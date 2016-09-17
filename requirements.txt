@@ -1,6 +1,9 @@
 numpy
 scipy
+ipython
+sphinx
 matplotlib
 sphinxcontrib-bibtex
 sphinx_bootstrap_theme
 git+git://github.com/ubcgif/em_examples
+git+git://github.com/simpeg/simpeg.git@analytics

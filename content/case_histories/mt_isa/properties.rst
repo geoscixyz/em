@@ -9,15 +9,14 @@ The main physical properties for this case history are electrical conductivity a
 Conductivity
 ------------
 
- .. figure:: ./images/Cond_Section.png
-    :align: right
-    :figwidth: 50%
+Figure :numref:`Cond_Section` is a synthetic model generated on the geologic cross-section shown in :numref:`Geology_Section`. Generally, the zone of mineralisation (dark red) has a higher conductivity than its host stratigraphy (green). The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit (orange) which is quite conductive. The volcanics to the east (blue to right) have low conductivity as does the Surprise Creek Formation (dark blue, left). The Moondarra Siltstone (left-most green) is moderately conductive.
+
+.. figure:: ./images/Cond_Section.png
+    :align: center
+    :figwidth: 75%
     :name: Cond_Section
 
     Simplified (log) conductivity distribution expected at Mount Isa (N:12200m).
-
-Generally, the zone of mineralisation has a higher conductivity than the host stratigraphy. The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit which is quite conductive as shown in :numref:`Cond_Section`. The volcanics to the west have low conductivity as does the Surprise Creek Formation. The Moondarra Siltstone is moderately conductive.
-
 
 Chargeability
 -------------
