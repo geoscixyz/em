@@ -3,3 +3,4 @@ scipy
 matplotlib
 sphinxcontrib-bibtex
 sphinx_bootstrap_theme
+git+git://github.com/ubcgif/em_examples
