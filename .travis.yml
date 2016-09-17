@@ -39,7 +39,7 @@ after_success:
       if [ ! -d ${HOME}/google-cloud-sdk ]; then
          curl https://sdk.cloud.google.com | bash;
       fi ;
-      gcloud auth activate-service-account --key-file credentials/client-secret.json ;
+      gcloud auth activate-service-account --key-file client-secret.json ;
       gcloud config set project emgeosci ;
       gcloud -q components update gae-python ;
       gcloud -q preview app deploy ./app.yaml --version ${TRAVIS_COMMIT} --promote;
