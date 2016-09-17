@@ -151,13 +151,13 @@ and inside the sphere :math:`(r < R)`
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = electrostatic_sphere.mkvc(ax)
     ax[0] = electrostatic_sphere.Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Potential',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Potential',fontsize=electrostatic_sphere.ftsize_title)
     ax[1] = electrostatic_sphere.Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Potential',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Potential',fontsize=electrostatic_sphere.ftsize_title)
     ax[2] = electrostatic_sphere.Plot_Total_Potential(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Potential',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Potential',fontsize=electrostatic_sphere.ftsize_title)
     ax[3] = electrostatic_sphere.Plot_Secondary_Potential(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=electrostatic_sphere.ftsize_title)
 
     plt.tight_layout()
     plt.show()
@@ -197,18 +197,18 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     dy = yr[1]-yr[0]       # mesh spacing
     zr = np.r_[0]          # identical to saying `zr = np.array([0])`
     XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
-    ftsize_title = 18      #font size for titles
+    electrostatic_sphere.ftsize_title = 18      #font size for titles
 
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = electrostatic_sphere.mkvc(ax)
     ax[0] = electrostatic_sphere.Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Electric Field',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Electric Field',fontsize=electrostatic_sphere.ftsize_title)
     ax[1] = electrostatic_sphere.Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Electric Field',fontsize=electrostatic_sphere.ftsize_title)
     ax[2] = electrostatic_sphere.Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Electric Field',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Electric Field',fontsize=electrostatic_sphere.ftsize_title)
     ax[3] = electrostatic_sphere.Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=electrostatic_sphere.ftsize_title)
 
     plt.tight_layout()
     plt.show()
@@ -283,13 +283,13 @@ the charges and not the reverse.
     fig, ax = plt.subplots(2,2,figsize=(18,12))
     ax = electrostatic_sphere.mkvc(ax)
     ax[0] = electrostatic_sphere.Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Current Density',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Total Current Density',fontsize=electrostatic_sphere.ftsize_title)
     ax[1] = electrostatic_sphere.Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
+    ax[1].set_title('Conductive Sphere: \n Secondary Current Density',fontsize=electrostatic_sphere.ftsize_title)
     ax[2] = electrostatic_sphere.Plot_Total_Currents(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Current Density',fontsize=ftsize_title)
+    ax[2].set_title('Resistive Sphere: \n Total Current Density',fontsize=electrostatic_sphere.ftsize_title)
     ax[3] = electrostatic_sphere.Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=ftsize_title)
+    ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=electrostatic_sphere.ftsize_title)
 
     plt.tight_layout()
     plt.show()
@@ -342,9 +342,9 @@ The figure below shows surface charge density at the surface of sphere.
     fig, ax = plt.subplots(1,2,figsize=(18,6))
     ax = electrostatic_sphere.mkvc(ax)
     ax[0] = electrostatic_sphere.Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Charge Accumulation',fontsize=ftsize_title)
+    ax[0].set_title('Conductive Sphere: \n Charge Accumulation',fontsize=electrostatic_sphere.ftsize_title)
     ax[1] = electrostatic_sphere.Plot_ChargesDensity(XYZ,sig0,sig2,R,E0,ax[1])
-    ax[1].set_title('Resistive Sphere: \n Charge Accumulation',fontsize=ftsize_title)
+    ax[1].set_title('Resistive Sphere: \n Charge Accumulation',fontsize=electrostatic_sphere.ftsize_title)
 
     plt.tight_layout()
     plt.show()
@@ -393,23 +393,7 @@ The reverse is observed for a resistive sphere.
     nb_dipole=31
     electrode_spacing=10
 
-    #Initializing the figure
-    fig = plt.figure(figsize=(20,20))
-    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6)
-    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6)
-    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4)
-    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6)
-    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6)
-    ax = [ax0,ax1,ax2,ax3,ax4]
-
-    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R,R,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt,ax)
-
-    #Set Title
-    ax[0].set_title('Conductive Sphere',fontsize=ftsize_title)
-    ax[1].set_title('Resistive Sphere',fontsize=ftsize_title)
-    ax[3].set_title('Conductive Sphere: \n Total Potential',fontsize=ftsize_title)
-    ax[4].set_title('Resistive Sphere: \n Total Potential',fontsize=ftsize_title)
-    ax[2].legend(('Conductive Sphere Response','Resistive Sphere Response'),loc=4 )
+    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R,R,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
 
     plt.tight_layout()
     plt.show()
@@ -451,17 +435,8 @@ The only parameters that have changed are the radius and the conductivity of the
     electrode_spacing = 20.
     PlotOpt = 'Total'
 
-    #Initializing the figure
-    fig = plt.figure(figsize=(20,20))
-    ax0 = plt.subplot2grid((20,12), (0, 0),colspan=6,rowspan=6) #Configuration Conductive Sphere
-    ax1 = plt.subplot2grid((20,12), (0, 6),colspan=6,rowspan=6) #Configuration Resistive Sphere
-    ax2 = plt.subplot2grid((20,12), (16, 2), colspan=9,rowspan=4) # Data
-    ax3 = plt.subplot2grid((20,12), (8, 0),colspan=6,rowspan=6) #Potential Conductive Sphere
-    ax4 = plt.subplot2grid((20,12), (8, 6),colspan=6,rowspan=6) #Potential Resistive Potential
-    ax = [ax0,ax1,ax2,ax3,ax4]
-
     #Plot Configuration, Potential and Data
-    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt,ax)
+    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
 
     plt.tight_layout()
     plt.show()
