@@ -83,13 +83,36 @@ Lindsey J. Heagy
 
 
         
+.. _micmitch:
+
+Michael Mitchell
+----------------
+
+
+.. image:: http://www.simpeg.xyz/s/img/people/mike.jpg
+    :width: 150
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** mmitchel@eos.ubc.ca 
+
+**url:** https://www.researchgate.net/profile/Michael_Mitchell34 
+
+**ORCID:** `0000-0001-5070-8793 <http://orcid.org/0000-0001-5070-8793>`_ 
+
+
+        
 .. _dyang:
 
 Dikun Yang
 ----------
 
 
-.. image:: https://avatars3.githubusercontent.com/u/13733333?v=3&s=460
+.. image:: https://avatars3.githubusercontent.com/u/5066933?v=3&s=460
     :width: 150
     :align: left
             
