@@ -53,7 +53,7 @@ Fourier Transform Convention
 
 We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t}` time dependence. 
 
- .. math::
+.. math::
     F(\omega) = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} dt
     :name: fourier_transform_convention
 
