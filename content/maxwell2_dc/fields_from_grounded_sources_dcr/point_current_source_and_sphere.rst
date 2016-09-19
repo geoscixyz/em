@@ -44,7 +44,7 @@ electric potential :math:`\phi` can be obtained by integrating the
 electric field from :math:`R` to :math:`\infty`. By substituting Ohm’s
 law (:math:`\vec E = \rho \vec J`) into the path integral:
 
-.. math:: 
+.. math::
    \phi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}
 
 For reasons which will becomes apparent in the next section, we would
@@ -53,7 +53,7 @@ like to re-express :math:`\phi` in terms of a radial coordinate system
 the points which represent the problem geometry do not necessarily form
 a right-triangle, :math:`R` must be expressed using the cosine law:
 
-.. math:: 
+.. math::
    R = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta \;}
 
 For solutions where :math:`r<x_0`, :math:`1/R` can be split into a sum
@@ -162,7 +162,7 @@ Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential
 Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exstence of a
 conducting sphere. Python code functions which evaluate above solution is given at `DC sphere code`_.
 
-.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/util_codes/DCsphere.py
+.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/em_examples/DCsphere.py
 
 .. figure:: ../images/SphericalDepression_Sphere.png
    :align: center
