@@ -9,7 +9,7 @@ Direct Current Resistivity
     vision for how it is applied in the field, and demonstrate potential uses.
 
 
-.. image:: http://gpg.geosci.xyz/en/latest/_images/icon_dc.gif
+.. image:: http://gpg.geosci.xyz/_images/icon_dc.gif
     :align: right
 
 Variations in :ref:`conductivity <electrical_conductivity_index>` can be
