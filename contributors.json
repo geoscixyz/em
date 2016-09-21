@@ -38,6 +38,16 @@
         "ORCID":"0000-0002-2807-9537"
     },
 
+    "fourndo":{
+        "name":"Dom Fournier",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"fourndo@gmail.com",
+        "url":"http://gif.eos.ubc.ca/people/foundo",
+    "avatar":"http://simpeg.xyz/s/img/people/dom.jpg",
+        "ORCID":"0000-0003-3285-3465"
+    },
+
     "micmitch":{
         "name":"Michael Mitchell",
         "affiliation":"University of British Columbia",
