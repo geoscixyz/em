@@ -60,6 +60,29 @@ Sarah G. R. Devriese
 
 
         
+.. _fourndo:
+
+Dom Fournier
+------------
+
+
+.. image:: http://simpeg.xyz/s/img/people/dom.jpg
+    :width: 150
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** fourndo@gmail.com 
+
+**url:** http://gif.eos.ubc.ca/people/foundo 
+
+**ORCID:** `0000-0003-3285-3465 <http://orcid.org/0000-0003-3285-3465>`_ 
+
+
+        
 .. _lheagy:
 
 Lindsey J. Heagy
