@@ -98,7 +98,7 @@ Below figure shows real and imaginary component of :math:`Q`.
 
 .. plot::
 
-    from SimPEG.EM.Analytics import Qfun
+    from SimPEG.EM.Analytics.EMcircuit import Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.

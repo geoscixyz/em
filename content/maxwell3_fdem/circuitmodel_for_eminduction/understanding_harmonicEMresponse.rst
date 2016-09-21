@@ -89,7 +89,7 @@ Computed coupling coefficient along the line is shown below:
 
 .. plot::
 
-    from SimPEG.EM.Analytics import Mijfun, Cfun, Qfun
+    from SimPEG.EM.Analytics.EMcircuit import Mijfun, Cfun, Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.
@@ -137,7 +137,7 @@ Since :math:`Q` is complex-valued, we can express them as either real and imagin
 
 .. plot::
 
-    from SimPEG.EM.Analytics import Qfun
+    from SimPEG.EM.Analytics.EMcircuit  import Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.
