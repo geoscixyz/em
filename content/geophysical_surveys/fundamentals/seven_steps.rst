@@ -9,7 +9,7 @@ effectively carried out by following a seven-step framework. Careful thought
 and due dilligence at each step is important to achieve a final outcome.
 
 
-.. figure:: http://gpg.geosci.xyz/en/latest/_images/seven_steps.jpg
+.. figure:: http://gpg.geosci.xyz/_images/seven_steps.jpg
     :align: center
     :width: 80 %
 
