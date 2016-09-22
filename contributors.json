@@ -56,5 +56,14 @@
         "url":"https://www.researchgate.net/profile/Michael_Mitchell34",
         "avatar":"http://www.simpeg.xyz/s/img/people/mike.jpg",
         "ORCID":"0000-0001-5070-8793"
+    },
+    
+        "pbellive":{
+        "name":"Patrick Belliveau",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"pbellive@eoas.ubc.ca",
+        "url":"https://github.com/Pbellive",
+        "avatar":"https://avatars0.githubusercontent.com/u/6206759?v=3&s=466"
     }
 }
