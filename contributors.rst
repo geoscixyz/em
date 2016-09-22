@@ -37,6 +37,27 @@ Thibaut Astic
 
 
         
+.. _pbellive:
+
+Patrick Belliveau
+-----------------
+
+
+.. image:: https://avatars0.githubusercontent.com/u/6206759?v=3&s=466
+    :width: 150
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** pbellive@eoas.ubc.ca 
+
+**url:** https://github.com/Pbellive 
+
+
+        
 .. _sdevriese:
 
 Sarah G. R. Devriese
