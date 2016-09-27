@@ -17,7 +17,6 @@
         "avatar":"https://avatars3.githubusercontent.com/u/13733333?v=3&s=460",
         "ORCID":"0000-0003-4305-8416"
     },
-
     "thast":{
         "name":"Thibaut Astic",
         "affiliation":"University of British Columbia",
@@ -27,7 +26,6 @@
         "avatar":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
         "ORCID":"0000-0003-1237-6315"
     },
-
     "dyang":{
         "name":"Dikun Yang",
         "affiliation":"University of British Columbia",
@@ -37,17 +35,15 @@
         "avatar":"https://avatars3.githubusercontent.com/u/5066933?v=3&s=460",
         "ORCID":"0000-0002-2807-9537"
     },
-
     "fourndo":{
         "name":"Dom Fournier",
         "affiliation":"University of British Columbia",
         "location":"Vancouver, BC",
         "email":"fourndo@gmail.com",
         "url":"http://gif.eos.ubc.ca/people/foundo",
-    "avatar":"http://simpeg.xyz/s/img/people/dom.jpg",
+        "avatar":"http://simpeg.xyz/s/img/people/dom.jpg",
         "ORCID":"0000-0003-3285-3465"
     },
-
     "micmitch":{
         "name":"Michael Mitchell",
         "affiliation":"University of British Columbia",
@@ -56,5 +52,13 @@
         "url":"https://www.researchgate.net/profile/Michael_Mitchell34",
         "avatar":"http://www.simpeg.xyz/s/img/people/mike.jpg",
         "ORCID":"0000-0001-5070-8793"
+    },
+    "pbellive":{
+        "name":"Patrick Belliveau",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"pbellive@eoas.ubc.ca",
+        "url":"https://github.com/Pbellive",
+        "avatar":"https://avatars0.githubusercontent.com/u/6206759?v=3&s=466"
     }
 }
