@@ -25,7 +25,7 @@ knowledge that has been acquired by practising geoscientists and, when made
 available, can elevate the learning and responsible use of electromagnetics
 throughout the communinity.
 
-.. _Github: http://github.com/ubcgif/em 
+.. _Github: http://github.com/ubcgif/em
 
 What is em.geosci?
 ------------------
@@ -52,33 +52,35 @@ The motivation for the structure of em.geosci follows from
 topics that are logically self-contained and then use links to connect them.
 At the large scale we have the following items.
 
-- Introduction: Provides motivational examples, outlines the site, takes care of housekeeping items like notation
+-:ref:`introduction_index`: Provides motivational examples, outlines the site, takes care of housekeeping items like notation
 
-- Physical properties: Is the "go-to" location for information about what the properties are, how they are measured, typical values etc.
+-:ref:`physical_properties_index`: Is the "go-to" location for information about what the properties are, how they are measured, typical values etc.
 
-- Maxwell1_fundamentals: This contains items that relate to the general understanding of Maxwell's equations and how they are solved. Topics are general and not survey specific. (eg  the basic equations, interface conditions, concepts of fields and fluxes, plane waves in homogeous media, fields from electric and magnetic dipoles etc. )
+-:ref:`maxwell1_fundamentals_index`: This contains items that relate to the general understanding of Maxwell's equations and how they are solved. Topics are general and not survey specific. (eg  the basic equations, interface conditions, concepts of fields and fluxes, plane waves in homogeous media, fields from electric and magnetic dipoles etc. )
 
-- Maxwell2_DC: This section pertains to the understanding the steady-state Maxwell's and its applications. Foundations for DC resistivity (DCR); Magnetometric resistivity (MMR), and magnetic surveys are found here.
+-:ref:`maxwell2_dc_index`: This section pertains to the understanding the steady-state Maxwell's and its applications. Foundations for DC resistivity (DCR); Magnetometric resistivity (MMR), and magnetic surveys are found here.
 
-- Maxwell3_FDEM: This section pertains to understanding Maxwell's equations in the frequency domain. Foundations for galvanic, inductive and natural source surveys in frequency are presented.
+-:ref:`maxwell3_fdem_index`: This section pertains to understanding Maxwell's equations in the frequency domain. Foundations for galvanic, inductive and natural source surveys in frequency are presented.
 
-- Maxwell4_TDEM: This section pertains to understanding Maxwell's equations in the time domain.
+-:ref:`maxwell4_tdem_index`: This section pertains to understanding Maxwell's equations in the time domain.
 
-- Surveys: Self-contained folders for individual geophysical surveys are provided. For example DCR provides a comprehensive overview about the DC resistivity survey as well as links to case histories. Each Survey is linked to relevant sections in other portions of em.geosci so that comprehensive knowledge can be accessed. 
+-:ref:`geophysical_surveys_index`: Self-contained folders for individual geophysical surveys are provided. For example DCR provides a comprehensive overview about the DC resistivity survey as well as links to case histories. Each Survey is linked to relevant sections in other portions of em.geosci so that comprehensive knowledge can be accessed.
 
-- Inversion: This provides basic tutorial information about inversion that is applicable to all em surveys.
+-:ref:`inversion`: This provides basic tutorial information about inversion that is applicable to all em surveys.
 
 - Case Histories: These form the cornerstones of our site. They motivate the use of EM geophysics and they also dictate what material needs to be developed in the background sections. Each case history is presented with a Seven-Step Framework.
 
-- Examples: These notebooks or script-codes are provided so that the user can experiment with parameters and ask "what if" questions. For instance, in DCR, with a grounded source, it is of interest to see how the earth currents flow in the presence of a conductive or resistive body. To keep material organized, most of the code in the examples, is stored on SimPEG. 
+-`Examples`_: These notebooks or script-codes are provided so that the user can experiment with parameters and ask "what if" questions. For instance, in DCR, with a grounded source, it is of interest to see how the earth currents flow in the presence of a conductive or resistive body. To keep material organized, most of the code in the examples, is stored on SimPEG_.
 
-SimPEG: talk about it here?  Links?
+.. _Examples: http://mybinder.org/repo/ubcgif/em_examples
 
 
 How to contribute?
 ------------------
 
-We are still developing the site and are making it available on an "as-is" basis. You are free to download and use anything on the site subject to .....
-We welcome feedback about the useability of the site and the technical details. ...how to contribute...
+We are still developing the site and are making it available on an "as-is" basis. You are free to download and use anything on the site subject to appropriate attributions. Everything is developed  under `Creative Commons Attribution 4.0 International License`_. 
+We welcome feedback about the useability of the site and the technical details.
+
+.. _Creative Commons Attribution 4.0 International License: https://creativecommons.org/licenses/by/4.0/
 
 

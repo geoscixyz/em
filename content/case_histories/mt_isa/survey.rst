@@ -14,7 +14,7 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
 
 (b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two-fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
 
-(c) The choice of a pole-dipole was motivated by past experience that that showed this was an effective survey for deep targets. A typical pseudo-section is shown in  :ref:`pseudo-section<dcr_pseudosection>`. Furthermore, with the MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>` could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
+(c) The choice of a pole-dipole was motivated by past experience that that showed this was an effective survey for deep targets. A typical pseudosection is shown in  :ref:`pseudosection<dcr_Pseudo_section>`. Furthermore, with the MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>` could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
 
 .. Second sentence: The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles.
 
@@ -66,16 +66,16 @@ problem arise in the :ref:`next chapter <mt_isa_data_ip>`.
 
    *  - .. raw:: html
             :file: ./images/Mt_Isa_Current_Anim.html
-   *  - Current density (arrows) and charge density (color) for a range of source locations (Powered by: `SimPEG <http://www.simpeg.xyz/>`_).
+   *  - Conductivity model (color) and current flow (arrows) for a range of source locations (Powered by: `SimPEG <http://simpeg.xyz/>`_).
 
 
 
 We generate synthetic data for the pole-dipole configuration from the numeric
 simulation above in order to test the resolving power of our DCR experiment.
-To asses if this configuration is sensitive to the mineralization at depth, we
+To assess if this configuration is sensitive to the mineralization at depth, we
 examine two scenarios; one without, and one with, the deep conductor. These two
-pole-dipole pseudo-sections using 15 electrodes spaced 100 meters apart are
-shown in :numref:`MIM_PDP_Simulation`. The pseudo-sections
+pole-dipole pseudosections using 15 electrodes spaced 100 meters apart are
+shown in :numref:`MIM_PDP_Simulation`. The pseudosections
 look almost identical near the surface but the data differ substantially
 at lower elevations. To add more insight we invert the two data
 sets and compare the recovered models.

@@ -1,0 +1,74 @@
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+</script>
+
+
+        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+          <tbody>
+<!--             <tr valign="top">
+              <td colspan="2" valign="top"> <div class="caption">
+                Figure 8.
+
+                Therefore, data must be plotted as a function of electrode
+                spacing rather than as a function of location. The resulting
+                plot is called a sounding curve, and it arises as shown in
+                this interactive figure (Figure 8). Only current electrodes
+                are shown. Potentials would be measured inside current
+                electrodes using either the Wenner or Schulmberger
+                configurations.
+
+              </div></td>
+            </tr> -->
+            <tr>
+              <td valign="top" style="width:65%;">
+                  <table align="center" border="1" cellpadding="2" cellspacing="0" width="100%">
+                      <tbody>
+                        <tr valign="top">
+                          <td>
+                            <br>
+                            <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('sounding','','http://gpg.geosci.xyz/_images/surv1.gif',1)" type="radio">
+                              &nbsp At small electrode spacings current flows only in near-surface regions. Apparent resistivities look similar to the true resistivity of overburden.
+                              <br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','http://gpg.geosci.xyz/_images/surv2.gif',1)" type="radio">
+                              &nbsp As current flows deeper, apparent resistivities are influenced by the true resistivities of deeper materials.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','http://gpg.geosci.xyz/_images/surv3.gif',1)" type="radio">
+                              &nbsp The sounding curve begins to indicate that there are at least 2 layers under this location.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','http://gpg.geosci.xyz/_images/surv4.gif',1)" type="radio">
+                              &nbsp At very large electrode spacings most of the information reflects deeper ground because that is where most of the current is flowing.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','http://gpg.geosci.xyz/_images/surv5.gif',1)" type="radio">
+                              &nbsp The completed sounding curve. <br><br>
+                          </td>
+
+                          <td style="width:35%;"><img src="http://gpg.geosci.xyz/_images/surv1.gif" name="sounding" width="100%">
+                          <br>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table><br>
+                </td>
+              </tr>
+            </tbody>
+        </table>

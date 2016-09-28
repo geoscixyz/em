@@ -5,21 +5,21 @@ Archie's Law
 
 Archie defined an empirical relationship which considers above factors defining the conductivity of a sedimentary rock. Archie’s law can be written as
 
-	.. math::
-		\sigma = F^{-1} \sigma_w S_w^{n},
-		:label: Archies_cond
+.. math::
+	\sigma = F^{-1} \sigma_w S_w^{n},
+	:label: Archies_cond
 
 where :math:`S_w` is the water saturation, :math:`\sigma_w` is the conductivity of the brine, and :math:`F` is the formation factor. In resistivity form, this can be written as
 
-	.. math::
-		\rho = F \rho_w S_w^{-n},
-		:label: Archies_resis
+.. math::
+	\rho = F \rho_w S_w^{-n},
+	:label: Archies_resis
 
 where :math:`\rho_w` is the resistivity of the brine. The formation factor is defined as
 
-	.. math::
-		F = \frac{a}{\phi^m} = \frac{\sigma_w}{\sigma_o} = \frac{\rho_o}{\rho_w},
-		:label: Archies_formationfactor
+.. math::
+	F = \frac{a}{\phi^m} = \frac{\sigma_w}{\sigma_o} = \frac{\rho_o}{\rho_w},
+	:label: Archies_formationfactor
 
 
 where :math:`\sigma_o` and :math:`\rho_o` are the conductivity and resistivity of the rock filled with only brine (:math:`S_w=1`), respectively. Here m is the cementation factor (usually in the range of 1.3<m<2.3), n is the saturation exponent (usually close to 2), and a is tortuosity factor.
@@ -32,9 +32,9 @@ Tortuosity factor describes the excess length of the equivalent electrolyte path
 
 The resistivity index can be written as
 
-	.. math::
-		RI = \frac{\rho}{\rho_w} = S_w^{-n},
-		:label: Archies_RI
+.. math::
+	RI = \frac{\rho}{\rho_w} = S_w^{-n},
+	:label: Archies_RI
 
 .. note::
 	Archie’s law is purely empirical law intending to describe ion flow in clean and consolidated sands. Electrical conduction is assumed not to be present within the rock grains. Hence it may not work for a rock includes considerable amount of clay minerals because a clay or shale particle acts as a separate conducting path.

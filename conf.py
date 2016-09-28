@@ -88,13 +88,27 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','AUTHORS.rst','README.md','content/equation_bank/*', 'content/maxwell1_fundamentals/maxwell_variables.rst', 'error.rst']
-
-linkcheck_ignore = ['http://mybinder.org/repo/ubcgif/em_examples',
-                    'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
-                    'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
-                    'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
+exclude_patterns = [
+    '_build', 'AUTHORS.rst', 'README.md',
+    'content/equation_bank/*',
+    'content/maxwell1_fundamentals/maxwell_variables.rst',
+    'error.rst',
+    'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
+    'content/geophysical_surveys/airborne_fdem/systems.rst',
+    'content/geophysical_surveys/airborne_tdem/systems.rst',
                     ]
+
+linkcheck_ignore = [
+    'http://mybinder.org/repo/ubcgif/em_examples',
+    'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
+    'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
+    'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
+    'https://linkedin.com/in/*',
+    'http://dx.doi.org/10.1071/EG08027',
+    'http://www.publish.csiro.au/paper/PVv2010n149p23',
+                    ]
+linkcheck_retries = 3
+linkcheck_timeout = 500
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -153,8 +167,9 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-          ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+          # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
           ('Why', 'content/introduction/introduction_about'),
+          ('Who', 'contributors'),
           # ("Maxwell", "maxwell1_fundamentals/index"),
           # ("Static", "maxwell2_dc"),
           # ("FDEM", "maxwell3_fdem"),
@@ -228,7 +243,7 @@ html_short_title = 'EM'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'em.ico'
+html_favicon = 'favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -337,7 +352,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = 'em.ico'
+latex_logo = 'favicon.ico'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -469,7 +484,8 @@ epub_exclude_files = ['search.html']
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from _ext import make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+from _ext import make_contributorslist, make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+make_contributorslist()
 make_formula_sheet()
-checkDependencies()
+# checkDependencies()
 supress_nonlocal_image_warn()

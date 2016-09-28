@@ -10,9 +10,9 @@ Electrical Conductivity
 
 Electrical conductivity is a physical property that quantifies how well electrical charges move in a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to refer to its reciprocal, resistivity.
 
-Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called "chargeability" is so important in geophysics that it is often considered as another physical property. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable.  See :ref:`electrical_conductivity_tables` for conductivity and chargeabiltiy tables of various rocks.
+Conductivity is often frequency-dependent.  Effectively the material can act like a capacitor and build up a charge when an electric field is applied, that is, the material is "chargeable". The ability to accumulate charge,  called "chargeability" is so important in geophysics that it is often considered as another physical property. In this section we connect electrical conductivity with some of its applications through case histories, investigate the constitutive relationship and its laboratory foundation, compile useful tables and provide additional levels of information that are valuable.  See :ref:`these tables <electrical_conductivity_tables>` for conductivity and chargeabiltiy of various rocks.
 
-As shown in :numref:`Chargeflow` positive charges in a rock flow in the same direction as the electric field. In a circuit that involves a battery the charges move from the positive to negative potential. The electric current is how much charges move within a unit of time, a high conductivity means a material that readily allows the flow of electric current. This constitutive relationship between electric currents and fields can be written as
+As shown in :numref:`Chargeflow`, positive charges in a rock flow in the same direction as the electric field. In a circuit that involves a battery, the charges move from the positive to negative potential. The electric current is how much charges move within a unit of time. A high conductivity means a material that readily allows the flow of electric current. This constitutive relationship between electric currents and fields can be written as
 
 .. math::
   \mathbf{J} = \sigma \mathbf{E},
@@ -55,7 +55,6 @@ Contents
     electrical_conductivity_tables
     relevanttopics/index
     electrical_conductivity_mathematical_relationships
-    electrical_conductivity_references
 
 
 

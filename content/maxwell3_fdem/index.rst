@@ -3,6 +3,11 @@
 Maxwell III: FDEM
 =================
 
+.. raw:: html
+    :file: ../../underconstruction.html
+
+
+
 .. topic:: Purpose
 
     Purpose here
@@ -14,6 +19,7 @@ Contents:
 
     governing_equations
     theory_3loops
+    circuitmodel_for_eminduction/index
     fields_from_grounded_sources/index
     fields_from_inductive_sources/index
     fields_from_plane_wave_sources/index

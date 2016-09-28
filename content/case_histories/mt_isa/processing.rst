@@ -3,7 +3,7 @@
 Processing
 ==========
 
-This section provides an overview of the data quality control measures and inversions completed on the Mt. Isa data sets. The DC data is first discussed. The results from those inversions are then used for IP inversions.
+This section provides an overview of the data quality control measures and inversions completed on the Mt. Isa data sets. The DC data is first discussed. The conductivity from those inversions are then used for IP inversions.
 
 DCR Data
 --------
@@ -33,7 +33,7 @@ differences in the conductivities obtained from the P-DP and DP-P
 configurations.  Some of this might be attributable to the fact that the two
 surveys illuminate buried conductors quite differently due to :ref:`current channeling<Mt_Isa_Survey_Design>`.
 Overall, however the inversion results have the same general distribution of
-conductivity and there doesn't appear to be major issues with normalizations
+conductivity and there doesn not appear to be major issues with normalizations
 or bad electrodes.
 
 .. _MIM_DC2D_Inv_QC:
@@ -60,7 +60,7 @@ or bad electrodes.
     :figwidth: 60%
     :name: MtIsa_2D_2_3DMesh
 
-    : 3D conductivity recovered from 10 independent 2D inversions.
+    : 3D conductivity obtained from 10 independent 2D inversions.
 
 
 As a final step of data quality control, the P-DP and DP-P configurations are merged (:numref:`MtIsa_Data_Merge`) and :ref:`re-inverted<MIM_DC2D_Inv_FULL>` in 2D to attempt to recover a single distribution of conductivity. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, several features are recovered on all 10 lines, supporting the idea of a strongly north-south oriented "2D" earth. The two main anomalies consistent throughout the inversions are:

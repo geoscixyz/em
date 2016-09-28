@@ -42,20 +42,39 @@ experts, worldwide, contribute. Join the development on github_.
 .. _github: https://github.com/ubcgif/em
 
 
+
+EM GeoSci is under construction
+-------------------------------
+
+.. raw:: html
+
+   <div class="col-md-2" align="center">
+      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+   </div>
+
+EM GeoSci is under active construction. We are working to fill in blank
+pages and address todo's. Our  goal is to have a mature version available by the
+beginning of 2017. In the meantime, we are making this resource available and
+`inviting contributions for case histories <http://disc2017.geosci.xyz/#contribute>`_.
+
+
+
+
+
 Contributors
 ------------
 
 .. include:: AUTHORS.rst
 
 
-.. Contents
-.. --------
+Contents
+--------
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 1
    :name: `EM GeoSci`
-   :hidden:
 
+   contributors
    content/introduction/index
    content/physical_properties/index
    content/maxwell1_fundamentals/index
@@ -63,9 +82,15 @@ Contributors
    content/maxwell3_fdem/index
    content/maxwell4_tdem/index
    content/geophysical_surveys/index
+   content/inversion/index
    content/case_histories/index
    content/equation_bank
    content/references
+
+.. toctree::
+   :hidden:
+
+   sitemap
 
 
 

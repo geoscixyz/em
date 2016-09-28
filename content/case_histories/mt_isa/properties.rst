@@ -9,15 +9,14 @@ The main physical properties for this case history are electrical conductivity a
 Conductivity
 ------------
 
- .. figure:: ./images/Cond_Section.png
-    :align: right
-    :figwidth: 50%
+Figure :numref:`Cond_Section` is a synthetic model generated on the geologic cross-section shown in :numref:`Geology_Section`. Generally, the zone of mineralisation (dark red) has a higher conductivity than its host stratigraphy (green). The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit (orange) which is quite conductive. The volcanics to the east (blue to right) have low conductivity as does the Surprise Creek Formation (dark blue, left). The Moondarra Siltstone (left-most green) is moderately conductive.
+
+.. figure:: ./images/Cond_Section.png
+    :align: center
+    :figwidth: 75%
     :name: Cond_Section
 
     Simplified (log) conductivity distribution expected at Mount Isa (N:12200m).
-
-Generally, the zone of mineralisation has a higher conductivity than the host stratigraphy. The exception to this is the graphitic and weakly pyrrhotitic Breakaway Shale unit which is quite conductive as shown in :numref:`Cond_Section`. The volcanics to the west have low conductivity as does the Surprise Creek Formation. The Moondarra Siltstone is moderately conductive.
-
 
 Chargeability
 -------------
@@ -30,21 +29,21 @@ Overall we expect any mineralization unit in this area to be **conductive and ch
 
 .. _MIMgeoTable:
 
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-|       **Rock Unit**       | **Conductivity**  | **Resistivity** (:math:`\Omega \cdot m`) | **Induced polarization** |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Native Bee Siltstone      |  Moderate         | Moderate  (~10)                          |  Low                     |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Moondarra Siltstone       |  Moderate         | Moderate  (~10)                          |  Low                     |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Breakaway Shale           |  High             | Low (~1)                                 |  Low-None                |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Mt Novit Horizon          |  High             | Low (~1)                                 |  High                    |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Surprise Creek Formation  |  Low              | High (~1000)                             |  None                    |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
-| Eastern Creek Volcanics   |  Low              | High (~1000)                             |  None                    |
-+---------------------------+-------------------+------------------------------------------+--------------------------+
++---------------------------+-------------------+------------------------------------------+-------------------+
+|       **Rock Unit**       | **Conductivity**  | **Resistivity** (:math:`\Omega \cdot m`) | **Chargeability** |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Native Bee Siltstone      |  Moderate         | Moderate  (~10)                          |  Low              |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Moondarra Siltstone       |  Moderate         | Moderate  (~10)                          |  Low              |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Breakaway Shale           |  High             | Low (~1)                                 |  Low-None         |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Mt Novit Horizon          |  High             | Low (~1)                                 |  High             |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Surprise Creek Formation  |  Low              | High (~1000)                             |  None             |
++---------------------------+-------------------+------------------------------------------+-------------------+
+| Eastern Creek Volcanics   |  Low              | High (~1000)                             |  None             |
++---------------------------+-------------------+------------------------------------------+-------------------+
 
 Table of the physical properties for the geologic units in the Cluny survey area.
 

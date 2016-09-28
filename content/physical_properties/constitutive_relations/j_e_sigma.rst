@@ -31,14 +31,14 @@ where :math:`\mathbf{j}` is the current density and :math:`\mathbf{e}` is the el
 
 Conductivity is expressed in units of siemens per meter [:math:`S/m`] and 1 siemens [:math:`S`] equates to the reciprocal of 1 ohm [:math:`\Omega^{-1}`], which in turn is equal to 1 amperes per volt [:math:`A/V`]:
 
-  .. math::
-     \left [ \frac{S}{m} \right ] = [\Omega^{-1}] = \left [ \frac{A}{V m} \right ]
+.. math::
+    \left [ \frac{S}{m} \right ] = [\Omega^{-1}] = \left [ \frac{A}{V m} \right ]
 
 The electric field has units of volts per meter [:math:`V/m`]. The units of current density then become:
 
-  .. math::
-     \mathbf{J} = \left [ \frac{A}{V m} \frac{V}{m}\right ] = \left [ \frac{A}{m^2} \right ]
-        
+.. math::
+    \mathbf{J} = \left [ \frac{A}{V m} \frac{V}{m}\right ] = \left [ \frac{A}{m^2} \right ]
+
 These units agree with the definition of current density.
 
 Further reading...
