@@ -108,6 +108,8 @@ Contributors
                     val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
                 info_block.append('**{key}:** {val} \n'.format(key=info_key,
                                                                val=val))
+            else:
+                info_block.append('|')
 
         info_block = '\n'.join(info_block)
 
