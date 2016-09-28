@@ -1,9 +1,12 @@
-.. _maxwell2_dc_index:
+.. _maxwell2_static_index:
 
-Maxwell II: DC
-==============
+Maxwell II: Static
+==================
 
-**Purpose:** Provide background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.
+.. topic:: Purpose
+
+    Provide background and physical understanding for steady state Maxwell
+    equations as they apply to geoscience problems.
 
 When electromagnetic fields no longer change with time then Maxwell's
 equations are in a "steady state". Here we examine these equations and present

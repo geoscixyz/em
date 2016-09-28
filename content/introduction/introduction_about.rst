@@ -58,7 +58,7 @@ At the large scale we have the following items.
 
 -:ref:`maxwell1_fundamentals_index`: This contains items that relate to the general understanding of Maxwell's equations and how they are solved. Topics are general and not survey specific. (eg  the basic equations, interface conditions, concepts of fields and fluxes, plane waves in homogeous media, fields from electric and magnetic dipoles etc. )
 
--:ref:`maxwell2_dc_index`: This section pertains to the understanding the steady-state Maxwell's and its applications. Foundations for DC resistivity (DCR); Magnetometric resistivity (MMR), and magnetic surveys are found here.
+-:ref:`maxwell2_static_index`: This section pertains to the understanding the steady-state Maxwell's and its applications. Foundations for DC resistivity (DCR); Magnetometric resistivity (MMR), and magnetic surveys are found here.
 
 -:ref:`maxwell3_fdem_index`: This section pertains to understanding Maxwell's equations in the frequency domain. Foundations for galvanic, inductive and natural source surveys in frequency are presented.
 
@@ -78,7 +78,7 @@ At the large scale we have the following items.
 How to contribute?
 ------------------
 
-We are still developing the site and are making it available on an "as-is" basis. You are free to download and use anything on the site subject to appropriate attributions. Everything is developed  under `Creative Commons Attribution 4.0 International License`_. 
+We are still developing the site and are making it available on an "as-is" basis. You are free to download and use anything on the site subject to appropriate attributions. Everything is developed  under `Creative Commons Attribution 4.0 International License`_.
 We welcome feedback about the useability of the site and the technical details.
 
 .. _Creative Commons Attribution 4.0 International License: https://creativecommons.org/licenses/by/4.0/
