@@ -14,7 +14,6 @@ Magnetic Dipole
 .. toctree::
     :maxdepth: 2
 
-    what_is_it
     analytic_solution
     vector_potential
     fields
