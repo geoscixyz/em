@@ -15,9 +15,7 @@
 import sys
 import os
 import shlex
-import sphinx_bootstrap_theme
 
-sys.path.append(os.path.abspath('./examples'))
 sys.path.append(os.path.abspath('./_ext'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -144,86 +142,93 @@ numfig = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# on_rtd is whether we are on readthedocs.org
+import os
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 # Theme options are theme-specific and customize the look and feel of a
 # theme further.
-html_theme_options = {
-    # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "EM.geosci",
+# html_theme_options = {
+#     # Navigation bar title. (Default: ``project`` value)
+#     'navbar_title': "EM.geosci",
 
-    # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Contents",
+#     # Tab name for entire site. (Default: "Site")
+#     'navbar_site_name': "Contents",
 
-    # A list of tuples containing pages or urls to link to.
-    # Valid tuples should be in the following forms:
-    #    (name, page)                 # a link to a page
-    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
-    #    (name, "http://example.com", True) # arbitrary absolute url
-    # Note the "1" or "True" value above as the third argument to indicate
-    # an arbitrary url.
-    'navbar_links': [
-          # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
-          ('Why', 'content/introduction/introduction_about'),
-          ('Who', 'contributors'),
-          # ("Maxwell", "maxwell1_fundamentals/index"),
-          # ("Static", "maxwell2_dc"),
-          # ("FDEM", "maxwell3_fdem"),
-          # ("TDEM", "maxwell4_tdem"),
-          # ("Surveys", "geophysical_surveys"),
-    ],
+#     # A list of tuples containing pages or urls to link to.
+#     # Valid tuples should be in the following forms:
+#     #    (name, page)                 # a link to a page
+#     #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+#     #    (name, "http://example.com", True) # arbitrary absolute url
+#     # Note the "1" or "True" value above as the third argument to indicate
+#     # an arbitrary url.
+#     'navbar_links': [
+#           # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+#           ('Why', 'content/introduction/introduction_about'),
+#           ('Who', 'contributors'),
+#           # ("Maxwell", "maxwell1_fundamentals/index"),
+#           # ("Static", "maxwell2_dc"),
+#           # ("FDEM", "maxwell3_fdem"),
+#           # ("TDEM", "maxwell4_tdem"),
+#           # ("Surveys", "geophysical_surveys"),
+#     ],
 
-    # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': True,
+#     # Render the next and previous page links in navbar. (Default: true)
+#     'navbar_sidebarrel': True,
 
-    # Render the current pages TOC in the navbar. (Default: true)
-    'navbar_pagenav': False,
+#     # Render the current pages TOC in the navbar. (Default: true)
+#     'navbar_pagenav': False,
 
-    # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Page",
+#     # Tab name for the current pages TOC. (Default: "Page")
+#     'navbar_pagenav_name': "Page",
 
-    # Global TOC depth for "site" navbar tab. (Default: 1)
-    # Switching to -1 shows all levels.
-    'globaltoc_depth': -1,
+#     # Global TOC depth for "site" navbar tab. (Default: 1)
+#     # Switching to -1 shows all levels.
+#     'globaltoc_depth': -1,
 
 
-    # Include hidden TOCs in Site navbar?
-    #
-    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
-    # non-hidden ``toctree`` directives in the same page, or else the build
-    # will break.
-    #
-    # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+#     # Include hidden TOCs in Site navbar?
+#     #
+#     # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+#     # non-hidden ``toctree`` directives in the same page, or else the build
+#     # will break.
+#     #
+#     # Values: "true" (default) or "false"
+#     'globaltoc_includehidden': "true",
 
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar navbar-inverse",
+#     # HTML navbar class (Default: "navbar") to attach to <div> element.
+#     # For black navbar, do "navbar navbar-inverse"
+#     'navbar_class': "navbar navbar-inverse",
 
-    # Fix navigation bar to top of page?
-    # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+#     # Fix navigation bar to top of page?
+#     # Values: "true" (default) or "false"
+#     'navbar_fixed_top': "true",
 
-    # Location of link to source.
-    # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "footer",
+#     # Location of link to source.
+#     # Options are "nav" (default), "footer" or anything else to exclude.
+#     'source_link_position': "footer",
 
-    # Bootswatch (http://bootswatch.com/) theme.
-    #
-    # Options are nothing (default) or the name of a valid theme
-    # such as "amelia" or "cosmo".
-    'bootswatch_theme': "yeti",
+#     # Bootswatch (http://bootswatch.com/) theme.
+#     #
+#     # Options are nothing (default) or the name of a valid theme
+#     # such as "amelia" or "cosmo".
+#     'bootswatch_theme': "yeti",
 
-    # Choose Bootstrap version.
-    # Values: "3" (default) or "2" (in quotes)
-    'bootstrap_version': "3",
-}
+#     # Choose Bootstrap version.
+#     # Values: "3" (default) or "2" (in quotes)
+#     'bootstrap_version': "3",
+# }
 
-html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
+# html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
 
 
 # Add any paths that contain custom themes here, relative to this directory.
