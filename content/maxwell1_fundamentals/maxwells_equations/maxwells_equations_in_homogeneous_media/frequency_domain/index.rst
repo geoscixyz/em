@@ -14,7 +14,7 @@ Frequency Domain
 **Contents**
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
-    plane_wave_sources
+    plane_wave_sources/index
     dipole_sources/index
