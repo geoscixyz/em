@@ -4,81 +4,39 @@ Harmonic Electric Dipole
 ========================
 
 
+The harmonic electric dipole source can be thought of as an infinitesimally short length of wire which carries a harmonic current.
+This should not be confused with the more classic definition of an electric dipole which describes the polarization of opposing electrical charges.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-There are two commonly used definitions for electric dipole, each of which describes a different physical process.
-Here, the relevent physics pertaining to each definition are presented.
-
-
-
-**Electric Charge Dipole**
-
-The electric charge dipole represents the most classic definition of an electric dipole.
-The electric charge dipole describes the separation of two opposing charges (:math:`q_+` and :math:`q_-`) by a vector distance :math:`d`.
-Letting :math:`q` be the absolute value of the charges denoted by :math:`q_+` and :math:`q_-`.
-And letting :math:`\mathbf{d}` define the maximum vector distance between :math:`q_+` and :math:`q_-`.
-Using the electrical charge model, the electric dipole moment (:math:`\mathbf{p_q}`) is given by:
-
+The strength of the electric dipole source is defined by its dipole moment (:math:`\mathbf{p}`).
+Where :math:`\mathbf{I}` is the vector amplitude of the current within a length of wire :math:`ds`, the dipole moment for a harmonic electric dipole source is given by:
 
 .. math::
-	\mathbf{p_q} = q \, \mathbf{d}
+	\mathbf{p} = \mathbf{I} \, ds
 
 
-
-
-
-
-
-The strength of this polarization is referred to as the electric dipole moment (:math:`\mathbf{p_q}`).
-Letting :math:`q` represent 
-
-
-
-
-
-**Electric Current Dipole**
-
-
-When considering dipole sources as they apply to geophysical problems, the term electric dipole generally refers to an electric current dipole.
-
-
-
-
-Using a current model, the harmonic electric dipole can be thought of as an infinitesimal length of wire (:math:`ds`) which carries a harmonic current :math:`I (\omega)`.
-The strength of the electric dipole is known as the electric dipole moment (:math:`\mathbf{p_c}`).
-Where :math:`\mathbf{I}` is the vector amplitude of the current, the electric dipole moment is given by:
+Let us now examine the source current which results from a harmonic electric dipole source.
+For a source current of magnitude :math:`I` which lies in the :math:`\hat x` direction along a wire segment of length :math:`\Delta s`, the source current density is given by:
 
 .. math::
-	\mathbf{p_c} = \mathbf{I} \, ds
+	\mathbf{J (r)} = \hat x I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
 
 
-**Needs Image**
+where :math:`u(x)` is the unit step function and :math:`\delta (x)` is the Dirac delta function.
+By letting :math:`\Delta s \rightarrow ds`, the source current density for a harmonic electric dipole in the :math:`\hat x` direction is given by:
+
+.. math::
+	\mathbf{J(r)} = \hat x I ds \delta (x) \delta (y) \delta (z)
+
+
+By analogy of the previous equation, the source current density for a harmonic electric dipole in any direction can be expressed as:
+
+.. math::
+	\mathbf{J(r)} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z) = \mathbf{p} \, \delta (x) \delta (y) \delta (z)
 
 
 
+**Needs Image** with some description.
 
-
-**Needs Image**
 
 
 
