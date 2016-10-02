@@ -128,6 +128,29 @@ Lindsey J. Heagy
 
 
         
+.. _sgkang:
+
+Seogi Kang
+----------
+
+
+.. image:: https://avatars3.githubusercontent.com/u/6054371?v=3&s=88
+    :width: 150
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** skang@eoas.ubc.ca 
+
+**url:** https://github.com/sgkang 
+
+**ORCID:** `0000-0002-9963-936X <http://orcid.org/0000-0002-9963-936X>`_ 
+
+
+        
 .. _micmitch:
 
 Michael Mitchell
