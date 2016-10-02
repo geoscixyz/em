@@ -3,7 +3,7 @@
 Survey
 ======
 
-Helicopter-borne geophysical surveys were carried out over the Cobre Panama Project from August 26th to September 8th, 2010, on behalf of Minera Panama SA and Inmet Mining Ltd., now owned by First Quantum Minerals since 2013. Principal geophysical sensors included a Z-Axis Tipper electromagnetic (ZTEM) system, and a caesium magnetometer (:numref:`XXX3`). A total of 831 line-kilometres were flown along 300m spaced, north-south oriented flight lines, with nominal EM bird terrain clearance of 85 metres and a magnetic sensor clearance of 102 metres. The 246 km2 survey block features moderate relief, with elevations ranging from 42 to 415 metres above sea level (:numref:`XXX3`a). Flown early in the Cobre Panama mine development, the survey area had minimal culture, such as roads, trails and few buildings.
+Helicopter-borne geophysical surveys were carried out over the Cobre Panama Project from August 26th to September 8th, 2010, on behalf of Minera Panama SA and Inmet Mining Ltd., now owned by First Quantum Minerals since 2013. Principal geophysical sensors included a Z-Axis Tipper electromagnetic (ZTEM) system, and a caesium magnetometer (:numref:`XXX3`). A total of 831 line-kilometres were flown along 300m spaced, north-south oriented flight lines, with nominal EM bird terrain clearance of 85 metres and a magnetic sensor clearance of 102 metres. The 246 km :math:`^2` survey block features moderate relief, with elevations ranging from 42 to 415 metres above sea level (:numref:`XXX3`a). Flown early in the Cobre Panama mine development, the survey area had minimal culture, such as roads, trails and few buildings.
 
 .. figure:: images/XXX3.png
     :align: center
