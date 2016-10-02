@@ -7,7 +7,7 @@ Data
 
 .. figure:: images/XXX4.png
     :align: center
-    :figwidth: 80%
+    :figwidth: 100%
     :name: XXX4
 
     ZTEM survey results over Cobre Panama deposit area: a) Digital Elevation Model (DEM), and b) Total magnetic intensity (reduced to pole), showing porphyry deposit locations and drill-hole coverage prior to Balboa discovery (after Burge, 2014).

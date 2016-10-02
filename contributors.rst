@@ -134,7 +134,7 @@ Seogi Kang
 ----------
 
 
-.. image:: https://avatars3.githubusercontent.com/u/6054371?v=3&s=88
+.. image:: https://avatars1.githubusercontent.com/u/6054371?v=3&s=466
     :width: 150
     :align: left
             

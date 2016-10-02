@@ -3,13 +3,17 @@
 The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
 ===========================================================
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
+.. .. raw:: html
+..     :file: ../../../underconstruction.html
 
 - **Authors**: Jean M. Legault, Chris Wijns, Carlos Izarra, and Geoffrey Plastow
 - **Reviewer**: :ref:`Seogi Kang <sgkang>`, Douglas Oldenburg, and :ref:`Lindsey Heagy <lheagy>`
 
+.. figure:: images/bboa_thumbnail.png
+    :align: right
+    :figwidth: 45%
+
+    3D ZTEM inversion for L1170 over Balboa, and for L1170, both showing outline of ore grade shells.
 
 .. topic :: Prelude
 
@@ -27,9 +31,3 @@ The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
     processing
     interpretation
     synthesis
-
-.. figure:: images/bboa_thumbnail.png
-    :align: center
-    :figwidth: 50%
-
-    3D ZTEM inversion for L1170 over Balboa, and for L1170, both showing outline of ore grade shells.

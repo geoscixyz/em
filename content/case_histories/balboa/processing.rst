@@ -7,7 +7,7 @@ Processing
 
 .. figure:: images/XXX5.png
     :align: center
-    :figwidth: 80%
+    :figwidth: 100%
     :name: XXX5
 
     ZTEM survey results over Cobre Panama deposit area: a) Total phase rotated (TPR) In-phase tipper at 360Hz, and b) In-phase TPR at 30Hz, highlighting EM anomalies that extend to lower frequencies over the Botija, Brazo and Botija Abajo porphyry deposits, as well as the Balboa discovery.
@@ -19,7 +19,7 @@ The images in :numref:`XXX6` a and b resemble quite closely the high and low fre
 
 .. figure:: images/XXX6.png
     :align: center
-    :figwidth: 80%
+    :figwidth: 100%
     :name: XXX6
 
     ZTEM 2D-3D inversion results over Cobre Panama deposit area: a) 2D resistivity depth slice at 0m depth, showing 3D inversion region (red polygon) and b) Close-up of 2D & 3D resistivity (red polygon) at -500m depth, showing  Balboa (red symbols) and pre-2011 (yellow)  drillholes, and location of L1170 profile presented in Figure XXX7b and c.
