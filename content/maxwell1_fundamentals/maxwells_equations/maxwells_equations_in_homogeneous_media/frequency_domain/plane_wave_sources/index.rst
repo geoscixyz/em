@@ -11,12 +11,9 @@ Plane Wave Sources
     phase velocity and wavelength of the EM waves. Our content parallels that
     offered in many EM resources :cite:`ward1988,griffiths1999,stratton1941`
 
+
 **Contents**
 
 .. toctree::
     :maxdepth: 2
-
-    analytic_solution
-    asymptotics
-    fields
 

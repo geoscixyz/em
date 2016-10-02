@@ -8,7 +8,7 @@ The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
 
 
 - **Authors**: Jean M. Legault, Chris Wijns, Carlos Izarra, and Geoffrey Plastow
-- **Reviewer**: Seogi Kang, Douglas Oldenburg, and Lindsey Heagy
+- **Reviewer**: :ref:`Seogi Kang <sgkang>`, Douglas Oldenburg, and :ref:`Lindsey Heagy <lheagy>`
 
 
 .. topic :: Prelude
