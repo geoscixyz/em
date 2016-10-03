@@ -69,5 +69,33 @@
         "url":"https://github.com/sgkang",
         "avatar":"https://avatars1.githubusercontent.com/u/6054371?v=3&s=466",
         "ORCID":"0000-0002-9963-936X"
-    }
+    },
+    "jlegault":{
+        "name":"Jean Legault",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"jean@geotech.ca",
+        "url":"https://github.com/sgkang",
+    },
+    "cizarra":{
+        "name":"Carlos Izarra",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"carlos.izarra@geotech.ca",
+        "url":"https://github.com/sgkang",
+    },
+    "gplastow":{
+        "name":"Geoffrey Plastow",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"geoffrey.plastow@geotech.ca",
+        "url":"https://github.com/sgkang",
+    },
+    "cwijins":{
+        "name":"Chris Wijns",
+        "affiliation":"First Quantum Minerals Ltd.",
+        "location":"Perth, WA, AUS",
+        "email":"geoffrey.plastow@geotech.ca",
+        "url":"https://github.com/sgkang",
+    },
 }
