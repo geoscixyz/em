@@ -1,4 +1,12 @@
 {
+    "doug":{
+        "name":"Douglas W. Oldenburg",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"doug@eos.ubc.ca",
+        "url":"http://gif.eos.ubc.ca/",
+        "avatar":"http://www.simpeg.xyz/s/img/people/doug.png",
+    },
     "lheagy":{
         "name":"Lindsey J. Heagy",
         "affiliation":"University of British Columbia",
@@ -61,7 +69,7 @@
         "url":"https://github.com/Pbellive",
         "avatar":"https://avatars0.githubusercontent.com/u/6206759?v=3&s=466"
     },
-    "sgkang":{
+    "seogi":{
         "name":"Seogi Kang",
         "affiliation":"University of British Columbia",
         "location":"Vancouver, BC",
