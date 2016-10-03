@@ -58,3 +58,5 @@ This can be simplified using quais-static or wave approximation:
 .. math::
     Z_{xy} = \frac{\omega \sqrt{\mu\epsilon}}{\imath \omega \epsilon}
     = -\imath\sqrt{\frac{\mu}{\epsilon}}
+
+When the earth medium is not homogeneous (e.g. :math:`\sigma(x, y, z)`), :math:`Z_{xy}`
