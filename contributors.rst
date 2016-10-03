@@ -128,6 +128,24 @@ Lindsey J. Heagy
 
 
         
+.. _cizarra:
+
+Carlos Izarra
+-------------
+
+
+
+**affiliation:** Geotech Ltd. 
+
+**location:** Aurora, ON 
+
+**email:** carlos.izarra@geotech.ca 
+
+**url:** www.geotech.ca 
+
+|
+
+        
 .. _sgkang:
 
 Seogi Kang
@@ -151,6 +169,24 @@ Seogi Kang
 
 
         
+.. _jlegault:
+
+Jean Legault
+------------
+
+
+
+**affiliation:** Geotech Ltd. 
+
+**location:** Aurora, ON 
+
+**email:** jean@geotech.ca 
+
+**url:** www.geotech.ca 
+
+|
+
+        
 .. _micmitch:
 
 Michael Mitchell
@@ -172,6 +208,41 @@ Michael Mitchell
 
 **ORCID:** `0000-0001-5070-8793 <http://orcid.org/0000-0001-5070-8793>`_ 
 
+
+        
+.. _gplastow:
+
+Geoffrey Plastow
+----------------
+
+
+
+**affiliation:** Geotech Ltd. 
+
+**location:** Aurora, ON 
+
+**email:** geoffrey.plastow@geotech.ca 
+
+**url:** www.geotech.ca 
+
+|
+
+        
+.. _cwijins:
+
+Chris Wijns
+-----------
+
+
+
+**affiliation:** First Quantum Minerals Ltd. 
+
+**location:** Perth, WA, AUS 
+
+**email:** chris.wijns@fqml.com 
+
+|
+|
 
         
 .. _dyang:

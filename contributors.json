@@ -75,27 +75,26 @@
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"jean@geotech.ca",
-        "url":"https://github.com/sgkang",
+        "url":"www.geotech.ca"
     },
     "cizarra":{
         "name":"Carlos Izarra",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"carlos.izarra@geotech.ca",
-        "url":"https://github.com/sgkang",
+        "url":"www.geotech.ca"
     },
     "gplastow":{
         "name":"Geoffrey Plastow",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"geoffrey.plastow@geotech.ca",
-        "url":"https://github.com/sgkang",
+        "url":"www.geotech.ca"
     },
     "cwijins":{
         "name":"Chris Wijns",
         "affiliation":"First Quantum Minerals Ltd.",
         "location":"Perth, WA, AUS",
-        "email":"geoffrey.plastow@geotech.ca",
-        "url":"https://github.com/sgkang",
-    },
+        "email":"chris.wijns@fqml.com"
+    }
 }
