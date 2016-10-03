@@ -47,7 +47,7 @@ We have chosen to keep this notation for :math:`k` since it corresponds to that 
 
 We begin by considering the first part of this equation. The term :math:`e^{-i(\alpha z - \omega t)}` represents a wave travelling in the positive z-direction. The phase velocity of the wave is :math:`v_{phase} = \omega/\alpha`. The initial amplitude of the wave is :math:`\mathbf{e}_0^+` and the term :math:`e^{-\beta z}` indicates that the amplitude decreases exponentially with :math:`z`. Thus in homogeneous media, the electromagnetic fields can propagate as plane waves in which their amplitude exponentially decreases with distance. The second part in Equation :eq:`fd4` is understood in the same manner except that the wave is travelling in the opposite direction (negative z-direction) and the initial amplitude is :math:`\mathbf{e}_0^-`.
 
-General solutions of the 1D Helmholtz equations generally require waves travelling in the positive and negative z-directions. 
+General solutions of the 1D Helmholtz equations generally require waves travelling in the positive and negative z-directions.
 
 The magnetic field will also travel in the (x,y) plane but is perpendiculat to :math:`\mathbf{e}`.
 
@@ -117,7 +117,7 @@ Assuming permeability of free space, :math:`\mu_0 = 4\pi \times 10^{-7}` H/m, an
 
 For problems involving high frequencies, for example GPR surveys, or very early time transient EM problems, the displacement current may be important. Then Equation :eq:`wn1` needs to be invoked.
 
-To see how physical properties and frequencies affect skin depth, check out 
+To see how physical properties and frequencies affect skin depth, check out
 
 .. todo:: NEED Seogi's APP LINK
 
@@ -134,7 +134,7 @@ The following table shows skin depths for some representative rocks and frequenc
 +---------------------+----------------+------------------+----------+------------+--------------+
 | Sediments           | 100            | 0.01             | 5,000 m  | 500 m      | 158 m        |
 +---------------------+----------------+------------------+----------+------------+--------------+
-| Sea water           | 0.3            | 3.3              | 274 m    | 27 m       | 9 m          | 
+| Sea water           | 0.3            | 3.3              | 274 m    | 27 m       | 9 m          |
 +---------------------+----------------+------------------+----------+------------+--------------+
 | Suphides, graphite  | 0.01           | 100              | 50 m     | 5 m        | 2 m          |
 +---------------------+----------------+------------------+----------+------------+--------------+
@@ -172,7 +172,7 @@ Wavelength
         :figwidth: 20%
         :align: right
         :name: pwp
-        
+
         A plane harmonic wave propagates into the earth.
 
 Finally, the wavelength of the waves is given by:
