@@ -44,6 +44,7 @@ In the time domain, Maxwell's equations simplify to a wave equation with a lossy
 
 
 
+**Lead into plane wave and diple sources**
 
 
 
@@ -52,5 +53,5 @@ In the time domain, Maxwell's equations simplify to a wave equation with a lossy
 .. toctree::
     :maxdepth: 2
 
-    frequency_domain/index
-    time_domain/index
+    plane_wave/index
+    dipole_sources/index
