@@ -198,7 +198,7 @@ Finally, the wavelength of the waves is given by:
 
 .. math:: \lambda = \frac{v}{f} = \frac{\omega}{\alpha f} = \frac{2\pi}{\alpha}.
 
-In quasi-static regime, wavelength is dispersive, that is wavelength varies with frequency, but in wave regime it is independent on frequency. For instance, in free space, :math:`\lambda = \frac{3\times10^8}{f}`. In a conducting medium, if the quasistatice approximation is valid, then :math:`\alpha = \beta = 1/\delta` and so :math:`\lambda = 2\pi \delta`.
+In quasi-static regime, wavelength is dispersive, that is wavelength varies with frequency, but in wave regime it is independent on frequency. For instance, in free space, :math:`\lambda = \frac{3\times10^8}{f}`. In a conducting medium, if the quasi-static approximation is valid, then :math:`\alpha = \beta = 1/\delta` and so :math:`\lambda = 2\pi \delta`.
 
 Thus even though the waves have a sinusoidal description inside the earth, they have lost most of their amplitude by the time they have propagated one wavelength into the earth. The above elements are illustrated in :numref:`pwp` where a plane harmonic wave in free space propagates into the earth.
 
