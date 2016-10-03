@@ -17,6 +17,5 @@ Plane Wave Sources
     :maxdepth: 2
 
     analytic_solution
-    asymptotics
     fields
 
