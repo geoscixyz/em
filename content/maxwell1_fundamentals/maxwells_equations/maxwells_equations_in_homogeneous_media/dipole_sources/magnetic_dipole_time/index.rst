@@ -1,11 +1,12 @@
 .. _time_domain_magnetic_dipole_index:
 
-Magnetic Dipole
-===============
+Transient Magnetic Dipole
+=========================
 
 .. topic:: Purpose
 
-    Purpose here
+    Here, we provide a physical description for the transient magnetic dipole.
+    
 
 
 
@@ -15,7 +16,5 @@ Magnetic Dipole
     :maxdepth: 2
 
     analytic_solution
-    vector_potential
-    fields
     asymptotics
-    field_transformations
+    fields

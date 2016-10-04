@@ -1,11 +1,13 @@
 .. _frequency_domain_magnetic_dipole_index:
 
-Magnetic Dipole
-===============
+Harmonic Magnetic Dipole
+========================
 
 .. topic:: Purpose
 
-    Purpose here
+    Here, we provide a physical description for the harmonic magnetic dipole.
+    This is used to develop a mathematical expression which can be used to replace the magnetic source term in Maxwell's equations. 
+
 
 
 
@@ -38,7 +40,5 @@ The magnetizaton vector is given by, for a loop laying in the yz plane:
     :maxdepth: 2
 
     analytic_solution
-    vector_potential
-    fields
     asymptotics
-    field_transformations
+    fields
