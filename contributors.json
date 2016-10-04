@@ -1,4 +1,12 @@
 {
+    "doldenburg":{
+        "name":"Douglas Oldenburg",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"doug@eos.ubc.ca",
+        "url":"http://gif.eos.ubc.ca",
+        "avatar":"http://www.simpeg.xyz/s/img/people/doug.png"
+    },
     "lheagy":{
         "name":"Lindsey J. Heagy",
         "affiliation":"University of British Columbia",
@@ -61,7 +69,7 @@
         "url":"https://github.com/Pbellive",
         "avatar":"https://avatars0.githubusercontent.com/u/6206759?v=3&s=466"
     },
-    "sgkang":{
+    "skang":{
         "name":"Seogi Kang",
         "affiliation":"University of British Columbia",
         "location":"Vancouver, BC",
@@ -91,7 +99,7 @@
         "email":"geoffrey.plastow@geotech.ca",
         "url":"www.geotech.ca"
     },
-    "cwijins":{
+    "cwijns":{
         "name":"Chris Wijns",
         "affiliation":"First Quantum Minerals Ltd.",
         "location":"Perth, WA, AUS",
