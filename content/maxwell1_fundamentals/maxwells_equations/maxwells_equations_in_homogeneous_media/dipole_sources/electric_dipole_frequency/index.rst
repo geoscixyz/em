@@ -1,10 +1,16 @@
 .. _frequency_domain_electric_dipole_index:
 
-Harmonic Electric Dipole
-========================
+Harmonic Electrical Current Dipole
+==================================
 
 
-The harmonic electric dipole source can be thought of as an infinitesimally short length of wire which carries a harmonic current.
+.. topic:: Purpose
+
+    Here, we provide a physical description for the harmonic electrical current dipole.
+    This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations. 
+
+
+The harmonic electrical current dipole source can be thought of as an infinitesimally short length of wire which carries a harmonic current.
 This should not be confused with the more classic definition of an electric dipole which describes the polarization of opposing electrical charges.
 
 The strength of the electric dipole source is defined by its dipole moment (:math:`\mathbf{p}`).
@@ -46,8 +52,6 @@ By analogy of the previous equation, the source current density for a harmonic e
     :maxdepth: 2
 
     analytic_solution
-    vector_potential
-    fields
     asymptotics
-    field_transformations
+    fields
 

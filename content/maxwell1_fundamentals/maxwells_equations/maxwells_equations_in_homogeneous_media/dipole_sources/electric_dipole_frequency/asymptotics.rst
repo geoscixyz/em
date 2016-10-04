@@ -1,11 +1,12 @@
 .. _frequency_domain_electric_dipole_asymptotics:
 
-Asymptotics
-===========
+Asymptotic Approximations
+=========================
 
 .. topic:: Purpose
 
-    Purpose here
+    Here, simplified expressions for the electric and magnetic fields are presented for several cases.
+    By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
 
 
 DC-Field Approximation

@@ -1,12 +1,14 @@
 .. _time_domain_magnetic_dipole_asymptotics:
 
-Asymptotics
-===========
+Asymptotic Approximations
+=========================
 
 .. topic:: Purpose
 
-    Here, we present near-field/late-time approximations for the transient electric and magnetic fields.
-
+    Here, simplified expressions for the electric and magnetic fields are presented for several cases.
+    By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
+    As the full analytic solution for the vector potential is rather simple, asymptotic approximations are not presented here.
+    
 
 
 Near-Field/Late-Times

@@ -5,7 +5,8 @@ Transient Electric Dipole
 
 .. topic:: Purpose
 
-    Purpose here
+    Here, we provide a physical description for the transient electrical current dipole.
+    
 
 
 **Contents**
@@ -14,8 +15,7 @@ Transient Electric Dipole
     :maxdepth: 2
 
     analytic_solution
-    vector_potential
-    fields
     asymptotics
-    field_transformations
+    fields
+
 

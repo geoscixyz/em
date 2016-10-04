@@ -1,7 +1,7 @@
 .. _time_domain_magnetic_dipole_fields:
 
-Fields
-======
+Visualization of the Electromagnetic Fields
+===========================================
 
 .. topic:: Purpose
 
