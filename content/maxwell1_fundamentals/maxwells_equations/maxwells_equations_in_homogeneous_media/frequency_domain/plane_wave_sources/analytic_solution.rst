@@ -39,7 +39,7 @@ To add clarity, and keep with notation that is typically used, we do the followi
 
 We have chosen to keep this notation for :math:`k` since it corresponds to that used in :cite:`ward1988`. The propagating harmonic wave in time is then written as
 
-.. math:: \mathbf{e} (z,t) \equiv \mathbf{e} = \mathbf{e}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{e}_0^- e^{-\beta z} e^{-i(\alpha z + \omega t)}.
+.. math:: \mathbf{e} (z,t) \equiv \mathbf{e} = \mathbf{e}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{e}_0^- e^{\beta z} e^{i(\alpha z + \omega t)}.
     :name: fd4
 
 We begin by considering the first part of this equation. The term :math:`e^{-i(\alpha z - \omega t)}` represents a wave travelling in the positive z-direction. The phase velocity of the wave is :math:`v_{phase} = \omega/\alpha`. The initial amplitude of the wave is :math:`\mathbf{e}_0^+` and the term :math:`e^{-\beta z}` indicates that the amplitude decreases exponentially with :math:`z`. Thus in homogeneous media, the electromagnetic fields can propagate as plane waves in which their amplitude exponentially decreases with distance. The second part in Equation :eq:`fd4` is understood in the same manner except that the wave is travelling in the opposite direction (negative z-direction) and the initial amplitude is :math:`\mathbf{e}_0^-`.
@@ -48,7 +48,7 @@ General solutions of the 1D Helmholtz equations generally require waves travelli
 
 The magnetic field will also travel in the x-y plane but is perpendiculat to :math:`\mathbf{e}`. Similarly, solution of the magnetic field can be written as
 
-.. math:: \mathbf{h} (z,t) \equiv \mathbf{h} = \mathbf{h}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{h}_0^- e^{-\beta z} e^{-i(\alpha z + \omega t)}.
+.. math:: \mathbf{h} (z,t) \equiv \mathbf{h} = \mathbf{h}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{h}_0^- e^{\beta z} e^{i(\alpha z + \omega t)}.
     :name: fd5
 
 .. We can investigate the plane wave propagation more fully by looking more closely at the mathematics and using an interactive app.
@@ -68,6 +68,8 @@ EM wave propagation can be described by some parameters including: wavenumber, s
 - :math:`\epsilon \omega \gg \sigma` : "Wave" approximation
 
 Those two regimes are fundamental bases of geophysical applications using EM. EM induction, and GPR are correspondingly based upon "Quasi-static", and "Wave" approximation. In each regime, EM wave propagtaion shows distinctively different physical behavior. Thus, by working through imporant concepts on EM wave propagation: wave number, skin depth, phase velocity, and wave length, we understand different features of the EM wave propagation in each regime.
+
+.. _frequency_domain_plane_wave_sources_wavenumber:
 
 Wavenumber
 ^^^^^^^^^^
@@ -115,6 +117,7 @@ Similarly, :math:`\alpha` and :math:`\beta` in each regime can be:
 
 In wave regime, :math:`\beta` is zero hence the wave does not decay with :math:`z`.
 
+.. _frequency_domain_plane_wave_sources_skindepth:
 
 Skin Depth
 ^^^^^^^^^^
@@ -164,6 +167,8 @@ The following table shows skin depths for some representative rocks and frequenc
 | Suphides, graphite  | 0.01           | 100              | 50 m     | 5 m        | 2 m          |
 +---------------------+----------------+------------------+----------+------------+--------------+
 
+.. _frequency_domain_plane_wave_sources_phasevelocity:
+
 Phase Velocity
 ^^^^^^^^^^^^^^
 
@@ -183,6 +188,8 @@ Alternatively, in wave regime (:math: `\epsilon \omega \gg \sigma` ), from :eq:`
         :name: wn3
 
 In free space, Equation :eq:`wn3` equates to :math:`3\times 10^8` m/s, which is the speed of light. Different from quasi-static case, the phase velocity is independent on frequency.
+
+.. _frequency_domain_plane_wave_sources_wavelength:
 
 Wavelength
 ^^^^^^^^^^

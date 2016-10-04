@@ -16,5 +16,5 @@ Time Domain
 .. toctree::
     :maxdepth: 2
 
-    plane_wave_sources
+    plane_wave_sources/index
     dipole_sources/index
