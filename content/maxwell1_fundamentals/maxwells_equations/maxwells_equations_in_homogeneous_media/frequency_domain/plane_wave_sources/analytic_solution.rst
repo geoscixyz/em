@@ -182,7 +182,7 @@ In quasi-static regime, :math:`\alpha` is given by Equation :eq:`wn4` and the pl
 
 so velocity increases with frequency but they travel more slowly in conductive permeable media. The velocity of the EM wave will be different at different frequency, and this often called "dispersive".
 
-Alternatively, in wave regime (:math: `\epsilon \omega \gg \sigma` ), from :eq:`wn5`, we obtain
+Alternatively, in wave regime ( :math:`\epsilon \omega \gg \sigma` ), from :eq:`wn5`, we obtain
 
 .. math:: v_{phase} = \frac{1}{\sqrt{\mu \epsilon}}.
         :name: wn3

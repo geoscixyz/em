@@ -5,7 +5,7 @@ Analytic Solution
 
 .. topic:: Purpose
 
-    We provide solutions of Plane wave equations in time domain for the homogeneous medium with intial impulse EM fields. And from the solutions, we extract meaningful physical principles: peak time, peak distance, and peak velocity.
+    We provide solutions of Plane wave equations in time domain for the homogeneous medium with intial impulse electric fields. And from the solutions, we extract meaningful physical principles: peak time, peak distance, and peak velocity.
 
 
 :ref:`Maxwell's equations in the time domain <time_domain_equations>`, without source terms, are:
@@ -53,15 +53,15 @@ where
 The first and second term indicates wave and diffusion term, respectively.
 Note that the sign of :math:`z` is negative, hence even the wave term decays exponentially (:math:`\sim e^{a(z/c)}`).
 
-Similarly, solution of the magnetic field can be
+.. Similarly, solution of the magnetic field can be
 
-.. math::
-    \mathbf{h}(t) = \mathbf{h}_0^- \Bigg( e^{a(z/c)} \delta(t+\frac{z}{c})
-    -\frac{a\frac{z}{c}e^{-at}}{(t^2-\frac{z^2}{c^2})^{1/2}}
-    I_1\Big[a(t^2-\frac{z^2}{c^2})^{1/2}\Big] u(t+\frac{z}{c}) \Bigg),
-    :label: e_impulse_full
+.. .. math::
+..     \mathbf{h}(t) = \mathbf{h}_0^- \Bigg( e^{a(z/c)} \delta(t+\frac{z}{c})
+..     -\frac{a\frac{z}{c}e^{-at}}{(t^2-\frac{z^2}{c^2})^{1/2}}
+..     I_1\Big[a(t^2-\frac{z^2}{c^2})^{1/2}\Big] u(t+\frac{z}{c}) \Bigg),
+..     :label: e_impulse_full
 
-which is exactly same with an assumption that both :math:`\mathbf{E}_0` and :math:`\mathbf{H}_0` are real-valued and independent on frequency. Considering they are exactly same, we only limit our attention to electric field from now.
+.. which is exactly same with an assumption that both :math:`\mathbf{e}_0^-` and :math:`\mathbf{h}_0^-` are given. Considering they are exactly same, we only limit our attention to electric field from now.
 
 .. _time_domain_plane_wave_sources_fundamental_physics:
 

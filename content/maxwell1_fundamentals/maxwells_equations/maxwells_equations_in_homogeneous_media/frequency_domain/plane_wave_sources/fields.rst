@@ -21,37 +21,37 @@ EM fields
 
 By solving plane EM wave equations in frequency domain, we obtain solution for the magnetic field as
 
-.. math:: \mathbf{H} (z,\omega) = \mathbf{H}_0^+ e^{-ikz} + \mathbf{H}_0^-  e^{ikz}.
+.. math:: \mathbf{E} (z,\omega) = \mathbf{E}_0^+ e^{-ikz} + \mathbf{E}_0^-  e^{ikz}.
 
 Here superscript :math:`+` and :math:`-` represents up- and down-going waves. In this section we focus our attentiont to down-going wave, hence
 
-.. math:: \mathbf{H} (z,t) = \mathbf{H}_0^- e^{ikz}.
+.. math:: \mathbf{E} (z,t) = \mathbf{E}_0^- e^{ikz}.
 
-Since magnetic field only exists in :math:`y`-direction (:math:`\mathbf{H} = H_y \mathbf{u}_y`), then we obtain
+Since magnetic field only exists in :math:`y`-direction (:math:`\mathbf{E} = E_x \mathbf{u}_y`), then we obtain
 
-.. math:: H_y = H_{y \ 0}^{-} e^{ikz}
+.. math:: E_x = E_{x \ 0}^{-} e^{ikz}
 
-From Ampere's law with the knowledge that we only have two components of EM fields :math:`E_x` and :math:`H_y`, we obtain
+From Ampere's law with the knowledge that we only have two components of EM fields :math:`E_x` and :math:`E_x`, we obtain
 
 .. math::
-	\frac{\partial H_y}{\partial z} + (\sigma+i \omega \epsilon) E_x = 0
+  \frac{\partial E_x}{\partial z} + i \omega \mu H_y = 0
 
 By evaluating differentiation, and rearranging the equation yields
 
 .. math::
-	E_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} = E_{x \ 0} ^{-} e^{ikz},
+  H_y = - \frac{k}{\omega \mu} H_{y \ 0}^{-} e^{ikz} = E_{x \ 0} ^{-} e^{ikz},
 
-where :math:`E_{x \ 0}^{-} = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-}`.
+where :math:`E_{x \ 0}^{-} = - \frac{\omega \mu}{k} H_{y \ 0}^{-}`.
 
-Therefore, we have otained full expressions of electric and magnetic fields for the plane wave equations assuming :math:`H_{y \ 0}^{-}` is known.
-
-.. math::
-	\mathbf{H} = H_y \mathbf{u}_y = H_{y \ 0}^{-} e^{ikz} \mathbf{u}_y
-	:label: FDplaneHy
+Therefore, we have otained full expressions of electric and magnetic fields for the plane wave equations assuming :math:`E_{x \ 0}^{-}` is known.
 
 .. math::
-	\mathbf{E} = E_x \mathbf{u}_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} \mathbf{u}_x
+	\mathbf{E} = E_x \mathbf{u}_x = E_{x \ 0}^{-} e^{ikz} \mathbf{u}_x
 	:label: FDplaneEx
+
+.. math::
+	\mathbf{H} = H_y \mathbf{u}_y = -\frac{k}{\omega \mu} E_{x \ 0}^{-} e^{ikz} \mathbf{u}_y
+	:label: FDplaneHy
 
 Impedance
 ^^^^^^^^^
@@ -59,7 +59,7 @@ Impedance
 We define impedance between :math:`E_x` and :math:`H_y` as
 
 .. math::
-	Z_{xy} = -\frac{E_x}{H_y} = \frac{i k}{(\sigma+i \omega \epsilon)} = \frac{\omega \mu}{k}
+	Z_{xy} = -\frac{E_x}{H_y} = \frac{\omega \mu}{k}
 
 This can be simplified using quais-static or wave approximation:
 
@@ -102,3 +102,18 @@ Note that within the quasi-static approximation for homogeneous medium, the phas
 
 .. todo::
     Add description for polarization ellipse
+
+.. Dummy
+.. .. math::
+..  \frac{\partial H_y}{\partial z} + (\sigma+i \omega \epsilon) E_x = 0
+
+.. .. math::
+..   E_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} = H_{y \ 0} ^{-} e^{ikz},
+
+.. .. math::
+..   \mathbf{H} = H_y \mathbf{u}_y = E_{x \ 0}^{-} e^{ikz} \mathbf{u}_y
+..   :label: FDplaneHy
+
+.. .. math::
+..   \mathbf{E} = E_x \mathbf{u}_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} \mathbf{u}_x
+..   :label: FDplaneEx
