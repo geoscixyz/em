@@ -14,7 +14,6 @@
 
 import sys
 import os
-import shlex
 
 sys.path.append(os.path.abspath('./_ext'))
 
@@ -137,6 +136,12 @@ todo_include_todos = True
 
 # number figures
 numfig = True
+
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/em'
+edit_on_github_branch = 'master'
+check_meta = False
 
 # -- Options for HTML output ----------------------------------------------
 
