@@ -7,7 +7,7 @@ Fields
 
     Within the quasi-static approximation, we provide explicit expressions for both eletric and magnetic fields for plane EM wave equations with an impulse electric field, and understands different features of electric and magnetic fields propagation in time.
 
-.. figure:: images/planewavedown.png
+.. figure:: ../images/planewavedown.png
    :align: center
    :scale: 60%
    :name: planewavedown
@@ -58,7 +58,7 @@ which can be rewritttenas
 
 :numref:`Ward1988Fig1_2withhy` a and b shows both :math:`e_x` and :math:`h_y` as a function of time and depth, respectively.
 
-.. figure:: images/Ward1988Fig1_2withhy.png
+.. figure:: ../images/Ward1988Fig1_2withhy.png
    :align: center
    :scale: 40%
    :name: Ward1988Fig1_2withhy
