@@ -14,4 +14,3 @@ Time domain
 
     analytic_solution
     fields
-

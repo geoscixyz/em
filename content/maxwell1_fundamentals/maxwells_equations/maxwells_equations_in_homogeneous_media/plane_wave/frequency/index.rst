@@ -7,8 +7,7 @@ Frequency domain
 
     By exploring the plane wave solution, we can understand the
     role of the complex wavenumber and see how it is related to skin depth,
-    phase velocity and wavelength of the EM waves. Our content parallels that
-    offered in many EM resources :cite:`ward1988,griffiths1999,stratton1941`
+    phase velocity and wavelength of the EM waves.
 
 **Contents**
 

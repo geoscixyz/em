@@ -13,7 +13,7 @@ Maxwell's Equations for Dipole Sources
     The intent of this material is to provide a fundamental understanding of the sources used in many geophysical applications.
     For each dipole source, analytic expressions for the electric and magnetic fields are provided in both the frequency and time domains.
     Numerical modeling tools are also made available for investigating the dependency of the magnetic and electric fields on various parameters.
-    
+
 
 Dipole sources are fundamental electromagnetic sources which exist at a single point in space.
 In geophysics, there are generally two types of dipole sources: electrical current dipole sources and magnetic dipole sources.

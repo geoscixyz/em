@@ -90,7 +90,7 @@ This is a simplified form of the diffusion term shown in Eq. :eq:`e_impulse_full
 
 From the approximate form show in Eq. :eq:`e_impulse_quasistatic`, we derive peak time, depth, and velocity describing trasient plane EM wave propagation.
 
-.. figure:: images/Ward1988Fig1_2.png
+.. figure:: ../images/Ward1988Fig1_2.png
    :align: center
    :scale: 40%
    :name: Ward1988Fig1_2
