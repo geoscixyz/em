@@ -58,7 +58,16 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """GeoSci 2015-2016"""
+# copyright = """
+# <div>
+# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+# <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+# </a>
+# 2015-2016, <a href="http://em.geosci.xyz/contributors">em.geosci.xyz Developers.</a><br />
+# Except where noted, this work is licensed under a <br />
+# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+# """
 author = u'GeoSci Developers'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -301,10 +310,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
