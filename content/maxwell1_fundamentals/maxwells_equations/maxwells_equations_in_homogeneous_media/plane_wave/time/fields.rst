@@ -10,7 +10,6 @@ Fields
 .. figure:: ../images/planewavedown.png
    :align: center
    :scale: 60%
-   :name: planewavedown
 
    Setup diagram of plane EM wave propagation heading downward (negaitve :math:`z`).
 

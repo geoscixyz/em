@@ -6,7 +6,7 @@ Harmonic Magnetic Dipole
 .. topic:: Purpose
 
     Here, we provide a physical description for the harmonic magnetic dipole.
-    This is used to develop a mathematical expression which can be used to replace the magnetic source term in Maxwell's equations. 
+    This is used to develop a mathematical expression which can be used to replace the magnetic source term in Maxwell's equations.
 
 
 
@@ -21,16 +21,6 @@ The magnetizaton vector is given by, for a loop laying in the yz plane:
 
 .. math::
 	\mathbf{M} = m \mathbf{u_x} \delta(x) \delta(y) \delta(z)
-
-
-
-
-
-
-.. figure:: ../../../../../images/MagDipoleWholeSpace.png
-    :scale: 80%
-
-    This example is available in a notebook_
 
 .. _notebook: https://github.com/ubcgif/em_examples/blob/master/notebooks/maxwell1_fundamentals/DipoleWidget_MD.ipynb
 
