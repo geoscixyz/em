@@ -146,14 +146,14 @@ Carlos Izarra
 |
 
         
-.. _sgkang:
+.. _skang:
 
 Seogi Kang
 ----------
 
 
 .. image:: https://avatars1.githubusercontent.com/u/6054371?v=3&s=466
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -210,6 +210,28 @@ Michael Mitchell
 
 
         
+.. _doldenburg:
+
+Douglas Oldenburg
+-----------------
+
+
+.. image:: http://www.simpeg.xyz/s/img/people/doug.png
+    :width: 210
+    :align: left
+            
+
+**affiliation:** University of British Columbia 
+
+**location:** Vancouver, BC 
+
+**email:** doug@eos.ubc.ca 
+
+**url:** http://gif.eos.ubc.ca 
+
+|
+
+        
 .. _gplastow:
 
 Geoffrey Plastow
@@ -228,7 +250,7 @@ Geoffrey Plastow
 |
 
         
-.. _cwijins:
+.. _cwijns:
 
 Chris Wijns
 -----------
