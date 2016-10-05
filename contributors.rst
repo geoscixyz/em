@@ -21,7 +21,7 @@ Thibaut Astic
 
 
 .. image:: https://avatars1.githubusercontent.com/u/13682747?v=3&s=460
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -44,7 +44,7 @@ Patrick Belliveau
 
 
 .. image:: https://avatars0.githubusercontent.com/u/6206759?v=3&s=466
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -66,7 +66,7 @@ Sarah G. R. Devriese
 
 
 .. image:: https://avatars3.githubusercontent.com/u/13733333?v=3&s=460
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -89,7 +89,7 @@ Dom Fournier
 
 
 .. image:: http://simpeg.xyz/s/img/people/dom.jpg
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -112,7 +112,7 @@ Lindsey J. Heagy
 
 
 .. image:: https://avatars.githubusercontent.com/u/6361812?v=3
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -135,7 +135,7 @@ Michael Mitchell
 
 
 .. image:: http://www.simpeg.xyz/s/img/people/mike.jpg
-    :width: 150
+    :width: 210
     :align: left
             
 
@@ -158,7 +158,7 @@ Dikun Yang
 
 
 .. image:: https://avatars3.githubusercontent.com/u/5066933?v=3&s=460
-    :width: 150
+    :width: 210
     :align: left
             
 
