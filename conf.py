@@ -430,10 +430,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
+# epub_title = project
+# epub_author = author
+# epub_publisher = author
+# epub_copyright = copyright
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = project
