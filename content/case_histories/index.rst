@@ -27,6 +27,7 @@ The titles, and EM systems used are provided below.
     bookpurnong/index
     aspen/index
     emc/index
+    balboa/index
 
 
 .. bookpurnong/index
