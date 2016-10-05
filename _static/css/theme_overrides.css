@@ -1,0 +1,9 @@
+/* changed side navigation bg color */
+
+.wy-side-nav-search {
+    background-color: #0a898a !important;
+}
+
+.wy-nav-top {
+    background-color: #0a898a !important;
+}

@@ -5,6 +5,6 @@ ipywidgets
 sphinx
 matplotlib
 sphinxcontrib-bibtex
-sphinx_bootstrap_theme
+sphinx_rtd_theme
 git+git://github.com/ubcgif/em_examples.git
 git+git://github.com/simpeg/simpeg.git@analytics

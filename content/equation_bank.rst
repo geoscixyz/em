@@ -15,27 +15,37 @@ Equation Bank
 
 
 
- - ampere_maxwell_time
-
-    .. include:: equation_bank/ampere_maxwell_time.rst
-
-        
-
- - dcr_fwd
-
-    .. include:: equation_bank/dcr_fwd.rst
-
-        
-
  - electromotive_force_time
 
     .. include:: equation_bank/electromotive_force_time.rst
 
         
 
+<<<<<<< HEAD
  - faradays_law_diff_freq
+=======
+ - gauss_electric_frequency
 
-    .. include:: equation_bank/faradays_law_diff_freq.rst
+    .. include:: equation_bank/gauss_electric_frequency.rst
+
+        
+
+ - faraday_time
+
+    .. include:: equation_bank/faraday_time.rst
+
+        
+
+ - gauss_magnetic_time
+>>>>>>> b1ed3fe4de48dd6b008bfe7788d35230841cf0f9
+
+    .. include:: equation_bank/gauss_magnetic_time.rst
+
+        
+
+ - ampere_maxwell_time
+
+    .. include:: equation_bank/ampere_maxwell_time.rst
 
         
 
@@ -45,9 +55,9 @@ Equation Bank
 
         
 
- - faradays_law_int_freq
+ - ohms_law_freq
 
-    .. include:: equation_bank/faradays_law_int_freq.rst
+    .. include:: equation_bank/ohms_law_freq.rst
 
         
 
@@ -58,6 +68,7 @@ Equation Bank
         
 
  - faraday_lenz_time
+<<<<<<< HEAD
 
     .. include:: equation_bank/faraday_lenz_time.rst
 
@@ -70,32 +81,16 @@ Equation Bank
         
 
  - gauss_electric_frequency
+=======
+>>>>>>> b1ed3fe4de48dd6b008bfe7788d35230841cf0f9
 
-    .. include:: equation_bank/gauss_electric_frequency.rst
-
-        
-
- - gauss_electric_time
-
-    .. include:: equation_bank/gauss_electric_time.rst
+    .. include:: equation_bank/faraday_lenz_time.rst
 
         
 
- - gauss_magnetic_frequency
+ - faradays_law_int_freq
 
-    .. include:: equation_bank/gauss_magnetic_frequency.rst
-
-        
-
- - gauss_magnetic_int_time
-
-    .. include:: equation_bank/gauss_magnetic_int_time.rst
-
-        
-
- - gauss_magnetic_time
-
-    .. include:: equation_bank/gauss_magnetic_time.rst
+    .. include:: equation_bank/faradays_law_int_freq.rst
 
         
 
@@ -105,20 +100,44 @@ Equation Bank
 
         
 
+ - gauss_magnetic_int_time
+
+    .. include:: equation_bank/gauss_magnetic_int_time.rst
+
+        
+
  - magnetic_flux_time
 
     .. include:: equation_bank/magnetic_flux_time.rst
 
         
 
- - ohms_law_freq
-
-    .. include:: equation_bank/ohms_law_freq.rst
-
-        
-
  - ohms_law_time
 
     .. include:: equation_bank/ohms_law_time.rst
+
+        
+
+ - gauss_electric_time
+
+    .. include:: equation_bank/gauss_electric_time.rst
+
+        
+
+ - faradays_law_diff_freq
+
+    .. include:: equation_bank/faradays_law_diff_freq.rst
+
+        
+
+ - gauss_magnetic_frequency
+
+    .. include:: equation_bank/gauss_magnetic_frequency.rst
+
+        
+
+ - dcr_fwd
+
+    .. include:: equation_bank/dcr_fwd.rst
 
         
