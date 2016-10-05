@@ -28,6 +28,7 @@ The titles, and EM systems used are provided below.
     aspen/index
     emc/index
     balboa/index
+    westplains/index
 
 
 .. bookpurnong/index
