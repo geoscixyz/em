@@ -9,9 +9,6 @@ import os
 import warnings
 
 
-__licence__ = 'BSD (3 clause)'
-
-
 def get_github_url(app, view, path):
     return 'https://github.com/{project}/{view}/{branch}/{path}'.format(
         project=app.config.edit_on_github_project,
