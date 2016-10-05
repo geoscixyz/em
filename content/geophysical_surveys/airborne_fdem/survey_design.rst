@@ -32,7 +32,7 @@ size of the underground volume that a system is sensitive to. Footprint can be
 evaluated using different formulations, but it mostly depends on the frequency
 and the conductivity. Higher frequency and higher conductivity can result in a
 smaller footprint. A lower flight height may also reduce the footprint. A
-first-order estimate of footprint can be from :ref:`skin depth <frequency_domain_plane_wave_sources>`, which is a function of
+first-order estimate of footprint can be from :ref:`skin depth <frequency_domain_plane_wave_sources_skindepth>`, which is a function of
 the frequency and the conductivity.
 
 
