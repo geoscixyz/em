@@ -33,14 +33,14 @@ By using the `Plane wave widget <http://mybinder.org/repo/ubcgif/em_examples/not
 
 Electric field will be on x-z plane, and by using the app, we can visualize real part of the electric field.
 
-.. figure:: ../images/simulation_ex.png
+.. figure:: ../images/simulation_Ex.png
    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
    :align: center
    :scale: 60%
 
 Depth profiles of real and imaginary parts can be visualized.
 
-.. figure:: ../images/simulation_ex_profile.png
+.. figure:: ../images/simulation_Ex_profile.png
    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
    :align: center
    :scale: 60%
