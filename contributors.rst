@@ -161,7 +161,7 @@ Seogi Kang
 
 **location:** Vancouver, BC 
 
-**email:** skang@eoas.ubc.ca 
+**email:** skang@eos.ubc.ca 
 
 **url:** https://github.com/sgkang 
 
