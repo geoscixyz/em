@@ -19,9 +19,9 @@ The Cobre Panama cluster of six copper-molybdenum-gold deposits is distributed o
 
 Alteration is mostly chlorite and chlorite-sericite. This overprints potassic alteration, but there are only rare patches of biotite and potassium feldspar alteration preserved. Quartz sulphide ± magnetite A and B veinlets provide widespread evidence of former potassic alteration. Disseminated chalcopyrite, pyrite and magnetite are abundant and often replace mafic phenocrysts with chlorite. Early mineral assemblages are overprinted by phyllic alteration that includes white and green sericite and ubiquitous pyrite with variable silicification or quartz veining.
 
-.. figure:: images/bboa_geomap.png
+.. figure:: images/AEM_WestPlains_overlap_core_geology.pdf
     :align: center
     :figwidth: 80%
-    :name: bboa_geomap
+    :name: wp_geomap
 
     Mine lease geology at Cobre Panama from recent compilations and new mapping by First Quantum Minerals. The ultimate pit outlines include Balboa on the western end.

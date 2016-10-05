@@ -217,11 +217,7 @@ Douglas Oldenburg
 
 
 .. image:: http://www.simpeg.xyz/s/img/people/doug.png
-<<<<<<< HEAD
-    :width: 150
-=======
     :width: 210
->>>>>>> b1ed3fe4de48dd6b008bfe7788d35230841cf0f9
     :align: left
             
 
