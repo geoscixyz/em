@@ -1,4 +1,12 @@
 {
+    "doldenburg":{
+        "name":"Douglas Oldenburg",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"doug@eos.ubc.ca",
+        "url":"http://gif.eos.ubc.ca",
+        "avatar":"http://www.simpeg.xyz/s/img/people/doug.png"
+    },
     "lheagy":{
         "name":"Lindsey J. Heagy",
         "affiliation":"University of British Columbia",
@@ -60,5 +68,41 @@
         "email":"pbellive@eoas.ubc.ca",
         "url":"https://github.com/Pbellive",
         "avatar":"https://avatars0.githubusercontent.com/u/6206759?v=3&s=466"
+    },
+    "skang":{
+        "name":"Seogi Kang",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC",
+        "email":"skang@eoas.ubc.ca",
+        "url":"https://github.com/sgkang",
+        "avatar":"https://avatars1.githubusercontent.com/u/6054371?v=3&s=466",
+        "ORCID":"0000-0002-9963-936X"
+    },
+    "jlegault":{
+        "name":"Jean Legault",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"jean@geotech.ca",
+        "url":"www.geotech.ca"
+    },
+    "cizarra":{
+        "name":"Carlos Izarra",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"carlos.izarra@geotech.ca",
+        "url":"www.geotech.ca"
+    },
+    "gplastow":{
+        "name":"Geoffrey Plastow",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"geoffrey.plastow@geotech.ca",
+        "url":"www.geotech.ca"
+    },
+    "cwijns":{
+        "name":"Chris Wijns",
+        "affiliation":"First Quantum Minerals Ltd.",
+        "location":"Perth, WA, AUS",
+        "email":"chris.wijns@fqml.com"
     }
 }
