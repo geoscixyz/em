@@ -1,0 +1,80 @@
+{
+"case_histories":{
+    "aspen":{
+        "title": "Aspen",
+        "source":"./aspen/",
+        "thumbnail":"./aspen/images/FormationMM.png",
+        "citations":["DevrieseOldenburg2016"],
+        "contributors":[
+            {"uid":"sdevriese", "role":"author"},
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"geophysical survey"},
+            {"uid":"Hydrocarbons", "as":"application"},
+            {"uid":"Oil Sands", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ],
+    },
+    "balboa":{
+        "title": "The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "source":"./balboa/",
+        "thumbnail":"./balboa/images/bboa_thumbnail.png",
+        "contributors":[
+            {"uid":"jlegault", "role":"author"},
+            {"uid":"cwijns", "role":"author"},
+            {"uid":"cizarra", "role":"author"},
+            {"uid":"gplastow", "role":"author"},
+            {"uid":"skang", "role":"reviewer"},
+            {"uid":"doldenburg", "role":"reviewer"},
+            {"uid":"lheagy", "role":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne NSEM", "as":"geophysical survey"},
+            {"uid":"Mining", "as":"application"},
+            {"uid":"ZTEM", "as":"keyword"},
+            {"uid":"porphyry", "as":"keyword"},
+            {"uid":"copper", "as":"keyword"},
+            {"uid":"gold", "as":"keyword"},
+            {"uid":"Panama", "as":"location"}
+        ]
+    },
+    "bookpurnong":{
+        "title":"Bookpurnong",
+        "source":"./bookpurnong/",
+        "thumbnail":"./bookpurnong/images/booky-hydro.jpg",
+        "citations":["viezzoli2009","viezzoli2010"],
+        "contributors":[
+            {"uid":"dyang", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Airborne FDEM", "as":"geophysical survey"},
+            {"uid":"Airborne TDEM", "as":"geophysical survey"},
+            {"uid":"Groundwater", "as":"application"},
+            {"uid":"Australia", "as":"location"}
+        ]
+    },
+    "emc":{
+        "title":"Elevenmile Canyon",
+        "source":"./emc/",
+        "thumbnail":"./emc/images/geothermal.png",
+        "citations":["devrieseetal2012"],
+        "tags":[
+            {"uid":"Airborne NSEM", "as":"geophysical survey"},
+            {"uid":"Geothermal", "as":"application"},
+            {"uid":"United States of America", "as":"location"},
+            {"uid":"ZTEM", "as":"keyword"}
+        ]
+    },
+    "mt_isa":{
+        "title":"Mt. Isa",
+        "source":"./mt_isa/",
+        "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
+        "citations":["rutley2001"],
+        "tags":[
+            {"uid":"DC", "as":"geophysical survey"},
+            {"uid":"IP", "as":"geophysical survey"},
+            {"uid":"Mining", "as":"application"},
+            {"uid":"Australia", "as":"location"}
+        ]
+    }
+}
