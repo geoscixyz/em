@@ -20,7 +20,7 @@ Thibaut Astic
 -------------
 
 
-.. image:: https://avatars1.githubusercontent.com/u/13682747?v=3&s=460
+.. image:: http://simpeg.xyz/s/img/people/thibaut.jpg
     :width: 210
     :align: left
             
@@ -141,7 +141,7 @@ Carlos Izarra
 
 **email:** carlos.izarra@geotech.ca 
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca 
 
 |
 
@@ -161,7 +161,7 @@ Seogi Kang
 
 **location:** Vancouver, BC 
 
-**email:** skang@eos.ubc.ca 
+**email:** skang@eoas.ubc.ca 
 
 **url:** https://github.com/sgkang 
 
@@ -182,7 +182,7 @@ Jean Legault
 
 **email:** jean@geotech.ca 
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca 
 
 |
 
@@ -245,7 +245,7 @@ Geoffrey Plastow
 
 **email:** geoffrey.plastow@geotech.ca 
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca 
 
 |
 

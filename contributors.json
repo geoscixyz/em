@@ -31,7 +31,7 @@
         "location":"Vancouver, BC",
         "email":"thast@eos.ubc.ca",
         "url":"https://linkedin.com/in/thibautastic",
-        "avatar":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
+        "avatar":"http://simpeg.xyz/s/img/people/thibaut.jpg",
         "ORCID":"0000-0003-1237-6315"
     },
     "dyang":{
@@ -83,21 +83,21 @@
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"jean@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "cizarra":{
         "name":"Carlos Izarra",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"carlos.izarra@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "gplastow":{
         "name":"Geoffrey Plastow",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"geoffrey.plastow@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "cwijns":{
         "name":"Chris Wijns",
