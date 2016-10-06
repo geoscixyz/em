@@ -4,7 +4,7 @@ import json
 
 fName = os.path.realpath(__file__)
 
-CONTRIB_INFO = info_list = ['affiliation', 'location', 'email', 'url', 'ORCID']
+CONTRIB_INFO = ['affiliation', 'location', 'email', 'url', 'ORCID']
 
 ORCID_URL = 'http://orcid.org/'
 
