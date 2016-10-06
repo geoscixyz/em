@@ -9,7 +9,7 @@
             {"uid":"sdevriese", "as":"author"},
         ],
         "tags":[
-            {"uid":"Airborne TDEM", "as":"geophysical survey"},
+            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
             {"uid":"Hydrocarbons", "as":"application"},
             {"uid":"Oil Sands", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
@@ -29,7 +29,7 @@
             {"uid":"lheagy", "as":"reviewer"}
         ],
         "tags":[
-            {"uid":"Airborne NSEM", "as":"geophysical survey"},
+            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
             {"uid":"Mining", "as":"application"},
             {"uid":"ZTEM", "as":"keyword"},
             {"uid":"porphyry", "as":"keyword"},
@@ -47,8 +47,8 @@
             {"uid":"dyang", "as":"author"}
         ],
         "tags":[
-            {"uid":"Airborne FDEM", "as":"geophysical survey"},
-            {"uid":"Airborne TDEM", "as":"geophysical survey"},
+            {"uid":"Airborne FDEM", "as":"geophysical_survey"},
+            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
             {"uid":"Groundwater", "as":"application"},
             {"uid":"Australia", "as":"location"}
         ]
@@ -58,8 +58,11 @@
         "source":"./emc/",
         "thumbnail":"./emc/images/geothermal.png",
         "citations":["devrieseetal2012"],
+        "contributors":[
+            {"uid":"sdevriese", "as":"author"}
+        ],
         "tags":[
-            {"uid":"Airborne NSEM", "as":"geophysical survey"},
+            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
             {"uid":"Geothermal", "as":"application"},
             {"uid":"United States of America", "as":"location"},
             {"uid":"ZTEM", "as":"keyword"}
@@ -71,8 +74,8 @@
         "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
         "citations":["rutley2001"],
         "tags":[
-            {"uid":"DC", "as":"geophysical survey"},
-            {"uid":"IP", "as":"geophysical survey"},
+            {"uid":"DC", "as":"geophysical_survey"},
+            {"uid":"IP", "as":"geophysical_survey"},
             {"uid":"Mining", "as":"application"},
             {"uid":"Australia", "as":"location"}
         ]
