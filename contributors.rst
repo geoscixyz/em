@@ -21,19 +21,21 @@ Thibaut Astic
 
 
 .. image:: https://avatars1.githubusercontent.com/u/13682747?v=3&s=460
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** thast@eos.ubc.ca 
+**email:** thast@eos.ubc.ca
 
-**url:** https://linkedin.com/in/thibautastic 
+**url:** https://linkedin.com/in/thibautastic
 
-**ORCID:** `0000-0003-1237-6315 <http://orcid.org/0000-0003-1237-6315>`_ 
+**ORCID:** `0000-0003-1237-6315 <http://orcid.org/0000-0003-1237-6315>`_
+
+|
 
 
         
@@ -44,19 +46,22 @@ Patrick Belliveau
 
 
 .. image:: https://avatars0.githubusercontent.com/u/6206759?v=3&s=466
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** pbellive@eoas.ubc.ca 
+**email:** pbellive@eoas.ubc.ca
 
-**url:** https://github.com/Pbellive 
+**url:** https://github.com/Pbellive
 
 |
+
+|
+
 
         
 .. _sdevriese:
@@ -66,19 +71,21 @@ Sarah G. R. Devriese
 
 
 .. image:: https://avatars3.githubusercontent.com/u/13733333?v=3&s=460
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** sdevries@eos.ubc.ca 
+**email:** sdevries@eos.ubc.ca
 
-**url:** http://gif.eos.ubc.ca/people/sdevriese 
+**url:** http://gif.eos.ubc.ca/people/sdevriese
 
-**ORCID:** `0000-0003-4305-8416 <http://orcid.org/0000-0003-4305-8416>`_ 
+**ORCID:** `0000-0003-4305-8416 <http://orcid.org/0000-0003-4305-8416>`_
+
+|
 
 
         
@@ -89,19 +96,21 @@ Dom Fournier
 
 
 .. image:: http://simpeg.xyz/s/img/people/dom.jpg
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** fourndo@gmail.com 
+**email:** fourndo@gmail.com
 
-**url:** http://gif.eos.ubc.ca/people/foundo 
+**url:** http://gif.eos.ubc.ca/people/foundo
 
-**ORCID:** `0000-0003-3285-3465 <http://orcid.org/0000-0003-3285-3465>`_ 
+**ORCID:** `0000-0003-3285-3465 <http://orcid.org/0000-0003-3285-3465>`_
+
+|
 
 
         
@@ -112,19 +121,21 @@ Lindsey J. Heagy
 
 
 .. image:: https://avatars.githubusercontent.com/u/6361812?v=3
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** lheagy@eos.ubc.ca 
+**email:** lheagy@eos.ubc.ca
 
-**url:** http://lindseyjh.ca 
+**url:** http://lindseyjh.ca
 
-**ORCID:** `0000-0002-1551-5926 <http://orcid.org/0000-0002-1551-5926>`_ 
+**ORCID:** `0000-0002-1551-5926 <http://orcid.org/0000-0002-1551-5926>`_
+
+|
 
 
         
@@ -135,15 +146,18 @@ Carlos Izarra
 
 
 
-**affiliation:** Geotech Ltd. 
+**affiliation:** Geotech Ltd.
 
-**location:** Aurora, ON 
+**location:** Aurora, ON
 
-**email:** carlos.izarra@geotech.ca 
+**email:** carlos.izarra@geotech.ca
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca
 
 |
+
+|
+
 
         
 .. _skang:
@@ -153,19 +167,21 @@ Seogi Kang
 
 
 .. image:: https://avatars1.githubusercontent.com/u/6054371?v=3&s=466
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** skang@eoas.ubc.ca 
+**email:** skang@eoas.ubc.ca
 
-**url:** https://github.com/sgkang 
+**url:** https://github.com/sgkang
 
-**ORCID:** `0000-0002-9963-936X <http://orcid.org/0000-0002-9963-936X>`_ 
+**ORCID:** `0000-0002-9963-936X <http://orcid.org/0000-0002-9963-936X>`_
+
+|
 
 
         
@@ -176,15 +192,18 @@ Jean Legault
 
 
 
-**affiliation:** Geotech Ltd. 
+**affiliation:** Geotech Ltd.
 
-**location:** Aurora, ON 
+**location:** Aurora, ON
 
-**email:** jean@geotech.ca 
+**email:** jean@geotech.ca
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca
 
 |
+
+|
+
 
         
 .. _micmitch:
@@ -194,19 +213,21 @@ Michael Mitchell
 
 
 .. image:: http://www.simpeg.xyz/s/img/people/mike.jpg
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** mmitchel@eos.ubc.ca 
+**email:** mmitchel@eos.ubc.ca
 
-**url:** https://www.researchgate.net/profile/Michael_Mitchell34 
+**url:** https://www.researchgate.net/profile/Michael_Mitchell34
 
-**ORCID:** `0000-0001-5070-8793 <http://orcid.org/0000-0001-5070-8793>`_ 
+**ORCID:** `0000-0001-5070-8793 <http://orcid.org/0000-0001-5070-8793>`_
+
+|
 
 
         
@@ -217,19 +238,22 @@ Douglas Oldenburg
 
 
 .. image:: http://www.simpeg.xyz/s/img/people/doug.png
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** doug@eos.ubc.ca 
+**email:** doug@eos.ubc.ca
 
-**url:** http://gif.eos.ubc.ca 
+**url:** http://gif.eos.ubc.ca
 
 |
+
+|
+
 
         
 .. _gplastow:
@@ -239,15 +263,18 @@ Geoffrey Plastow
 
 
 
-**affiliation:** Geotech Ltd. 
+**affiliation:** Geotech Ltd.
 
-**location:** Aurora, ON 
+**location:** Aurora, ON
 
-**email:** geoffrey.plastow@geotech.ca 
+**email:** geoffrey.plastow@geotech.ca
 
-**url:** www.geotech.ca 
+**url:** http://www.geotech.ca
 
 |
+
+|
+
 
         
 .. _cwijns:
@@ -257,14 +284,18 @@ Chris Wijns
 
 
 
-**affiliation:** First Quantum Minerals Ltd. 
+**affiliation:** First Quantum Minerals Ltd.
 
-**location:** Perth, WA, AUS 
+**location:** Perth, WA, AUS
 
-**email:** chris.wijns@fqml.com 
+**email:** chris.wijns@fqml.com
 
 |
+
 |
+
+|
+
 
         
 .. _dyang:
@@ -274,19 +305,21 @@ Dikun Yang
 
 
 .. image:: https://avatars3.githubusercontent.com/u/5066933?v=3&s=460
-    :width: 210
+    :width: 200
     :align: left
             
 
-**affiliation:** University of British Columbia 
+**affiliation:** University of British Columbia
 
-**location:** Vancouver, BC 
+**location:** Vancouver, BC
 
-**email:** yangdikun@gmail.com 
+**email:** yangdikun@gmail.com
 
-**url:** https://www.eoas.ubc.ca/~dyang/ 
+**url:** https://www.eoas.ubc.ca/~dyang/
 
-**ORCID:** `0000-0002-2807-9537 <http://orcid.org/0000-0002-2807-9537>`_ 
+**ORCID:** `0000-0002-2807-9537 <http://orcid.org/0000-0002-2807-9537>`_
+
+|
 
 
         
