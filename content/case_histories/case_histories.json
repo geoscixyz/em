@@ -6,7 +6,7 @@
         "thumbnail":"./aspen/images/FormationMM.png",
         "citations":["DevrieseOldenburg2016"],
         "contributors":[
-            {"uid":"sdevriese", "role":"author"},
+            {"uid":"sdevriese", "as":"author"},
         ],
         "tags":[
             {"uid":"Airborne TDEM", "as":"geophysical survey"},
@@ -20,13 +20,13 @@
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
-            {"uid":"jlegault", "role":"author"},
-            {"uid":"cwijns", "role":"author"},
-            {"uid":"cizarra", "role":"author"},
-            {"uid":"gplastow", "role":"author"},
-            {"uid":"skang", "role":"reviewer"},
-            {"uid":"doldenburg", "role":"reviewer"},
-            {"uid":"lheagy", "role":"reviewer"}
+            {"uid":"jlegault", "as":"author"},
+            {"uid":"cwijns", "as":"author"},
+            {"uid":"cizarra", "as":"author"},
+            {"uid":"gplastow", "as":"author"},
+            {"uid":"skang", "as":"reviewer"},
+            {"uid":"doldenburg", "as":"reviewer"},
+            {"uid":"lheagy", "as":"reviewer"}
         ],
         "tags":[
             {"uid":"Airborne NSEM", "as":"geophysical survey"},
