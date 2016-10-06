@@ -106,17 +106,18 @@ Contributors
                 val = contrib[info_key]
                 if info_key == 'ORCID':
                     val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
-                info_block.append('**{key}:** {val} \n'.format(key=info_key,
-                                                               val=val))
+                info_block.append('**{key}:** {val}\n'.format(key=info_key,
+                                                              val=val))
             else:
-                info_block.append('|')
+                info_block.append('|\n')
 
+        info_block.append('|\n')
         info_block = '\n'.join(info_block)
 
         if contrib.has_key('avatar') is True:
             avatar_block = """
 .. image:: {avatar}
-    :width: 210
+    :width: 200
     :align: left
             """.format(avatar=contrib['avatar'])
         else:
