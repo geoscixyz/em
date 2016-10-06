@@ -14,10 +14,7 @@
 
 import sys
 import os
-import shlex
-import sphinx_bootstrap_theme
 
-sys.path.append(os.path.abspath('./examples'))
 sys.path.append(os.path.abspath('./_ext'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -61,7 +58,16 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'em'
-copyright = """GeoSci 2015-2016"""
+# copyright = """
+# <div>
+# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+# <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+# </a>
+# 2015-2016, <a href="http://em.geosci.xyz/contributors">em.geosci.xyz Developers.</a><br />
+# Except where noted, this work is licensed under a <br />
+# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+# """
 author = u'GeoSci Developers'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -140,90 +146,103 @@ todo_include_todos = True
 # number figures
 numfig = True
 
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/em'
+edit_on_github_branch = 'master'
+check_meta = False
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# on_rtd is whether we are on readthedocs.org
+import os
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 # Theme options are theme-specific and customize the look and feel of a
 # theme further.
-html_theme_options = {
-    # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "EM.geosci",
+# html_theme_options = {
+#     # Navigation bar title. (Default: ``project`` value)
+#     'navbar_title': "EM.geosci",
 
-    # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Contents",
+#     # Tab name for entire site. (Default: "Site")
+#     'navbar_site_name': "Contents",
 
-    # A list of tuples containing pages or urls to link to.
-    # Valid tuples should be in the following forms:
-    #    (name, page)                 # a link to a page
-    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
-    #    (name, "http://example.com", True) # arbitrary absolute url
-    # Note the "1" or "True" value above as the third argument to indicate
-    # an arbitrary url.
-    'navbar_links': [
-          # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
-          ('Why', 'content/introduction/introduction_about'),
-          ('Who', 'contributors'),
-          # ("Maxwell", "maxwell1_fundamentals/index"),
-          # ("Static", "maxwell2_dc"),
-          # ("FDEM", "maxwell3_fdem"),
-          # ("TDEM", "maxwell4_tdem"),
-          # ("Surveys", "geophysical_surveys"),
-    ],
+#     # A list of tuples containing pages or urls to link to.
+#     # Valid tuples should be in the following forms:
+#     #    (name, page)                 # a link to a page
+#     #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+#     #    (name, "http://example.com", True) # arbitrary absolute url
+#     # Note the "1" or "True" value above as the third argument to indicate
+#     # an arbitrary url.
+#     'navbar_links': [
+#           # ('<i class="fa fa-home" aria-hidden="true"></i>', "http://geosci.xyz", '1'),
+#           ('Why', 'content/introduction/introduction_about'),
+#           ('Who', 'contributors'),
+#           # ("Maxwell", "maxwell1_fundamentals/index"),
+#           # ("Static", "maxwell2_dc"),
+#           # ("FDEM", "maxwell3_fdem"),
+#           # ("TDEM", "maxwell4_tdem"),
+#           # ("Surveys", "geophysical_surveys"),
+#     ],
 
-    # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': True,
+#     # Render the next and previous page links in navbar. (Default: true)
+#     'navbar_sidebarrel': True,
 
-    # Render the current pages TOC in the navbar. (Default: true)
-    'navbar_pagenav': False,
+#     # Render the current pages TOC in the navbar. (Default: true)
+#     'navbar_pagenav': False,
 
-    # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Page",
+#     # Tab name for the current pages TOC. (Default: "Page")
+#     'navbar_pagenav_name': "Page",
 
-    # Global TOC depth for "site" navbar tab. (Default: 1)
-    # Switching to -1 shows all levels.
-    'globaltoc_depth': -1,
+#     # Global TOC depth for "site" navbar tab. (Default: 1)
+#     # Switching to -1 shows all levels.
+#     'globaltoc_depth': -1,
 
 
-    # Include hidden TOCs in Site navbar?
-    #
-    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
-    # non-hidden ``toctree`` directives in the same page, or else the build
-    # will break.
-    #
-    # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+#     # Include hidden TOCs in Site navbar?
+#     #
+#     # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+#     # non-hidden ``toctree`` directives in the same page, or else the build
+#     # will break.
+#     #
+#     # Values: "true" (default) or "false"
+#     'globaltoc_includehidden': "true",
 
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar navbar-inverse",
+#     # HTML navbar class (Default: "navbar") to attach to <div> element.
+#     # For black navbar, do "navbar navbar-inverse"
+#     'navbar_class': "navbar navbar-inverse",
 
-    # Fix navigation bar to top of page?
-    # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+#     # Fix navigation bar to top of page?
+#     # Values: "true" (default) or "false"
+#     'navbar_fixed_top': "true",
 
-    # Location of link to source.
-    # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "footer",
+#     # Location of link to source.
+#     # Options are "nav" (default), "footer" or anything else to exclude.
+#     'source_link_position': "footer",
 
-    # Bootswatch (http://bootswatch.com/) theme.
-    #
-    # Options are nothing (default) or the name of a valid theme
-    # such as "amelia" or "cosmo".
-    'bootswatch_theme': "yeti",
+#     # Bootswatch (http://bootswatch.com/) theme.
+#     #
+#     # Options are nothing (default) or the name of a valid theme
+#     # such as "amelia" or "cosmo".
+#     'bootswatch_theme': "yeti",
 
-    # Choose Bootstrap version.
-    # Values: "3" (default) or "2" (in quotes)
-    'bootstrap_version': "3",
-}
+#     # Choose Bootstrap version.
+#     # Values: "3" (default) or "2" (in quotes)
+#     'bootstrap_version': "3",
+# }
 
-html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
+# html_sidebars = {'**': ['localtoc.html', 'github_sourcelink.html']} #, 'sourcelink.html']} #, 'searchbox.html']}
 
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -291,10 +310,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -411,10 +430,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
+# epub_title = project
+# epub_author = author
+# epub_publisher = author
+# epub_copyright = copyright
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = project

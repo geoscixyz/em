@@ -116,7 +116,7 @@ Contributors
         if contrib.has_key('avatar') is True:
             avatar_block = """
 .. image:: {avatar}
-    :width: 150
+    :width: 210
     :align: left
             """.format(avatar=contrib['avatar'])
         else:
