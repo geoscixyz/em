@@ -102,7 +102,7 @@ exclude_patterns = [
     'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
     'content/geophysical_surveys/airborne_fdem/systems.rst',
     'content/geophysical_surveys/airborne_tdem/systems.rst',
-    'content/case_histories/case_histories.rst'
+    '*/content/case_histories/case_histories.rst'
                     ]
 
 linkcheck_ignore = [
