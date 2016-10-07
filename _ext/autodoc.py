@@ -5,7 +5,7 @@ import html
 
 fName = os.path.realpath(__file__)
 
-# CONTRIB_INFO = ['affiliation', 'location', 'email', 'url', 'ORCID']
+CONTRIB_INFO = ['affiliation', 'location', 'email', 'url', 'ORCID']
 # CASEHISTORY_INFO = ['title', 'source', 'thumbnail', 'citations', 'contributors']
 
 ORCID_URL = 'http://orcid.org/'
@@ -63,7 +63,8 @@ Equation Bank
 
 
 def make_contributorslist(fpath='contributors.json',
-                          fout='contributors.rst'):
+                          fout='contributors.rst',
+                          contrib_info=CONTRIB_INFO):
 
     fpath = os.path.sep.join(fName.split(os.path.sep)[:-2] + [fpath])
     fout = os.path.sep.join(fName.split(os.path.sep)[:-2] + [fout])
@@ -79,11 +80,11 @@ def make_contributorslist(fpath='contributors.json',
             raise Exception('{} has no name!?'.format(keys))
         last_names.append(val['name'].split(' ')[-1])
 
-    # get relavent info
-    contrib_info = list(
-        set([item for entries in contribs.itervalues() for item in entries]
-            ).difference(set(['avatar']))
-        )
+    # # get relavent info
+    # contrib_info = list(
+    #     set([item for entries in contribs.itervalues() for item in entries]
+    #         ).difference(set(['avatar']))
+    #     )
 
     last_names = zip(last_names, contribs.keys())
     sorted_names = sorted(last_names)
@@ -119,7 +120,9 @@ Contributors
                 #     val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
                 val = contrib[info_key]
                 if info_key == 'ORCID':
-                    val = ORCID_URL + val
+                    htmlval = """
+    <a class="reference external" href="{url}">{orcid}</a>
+                    """.format(url=html.escape(ORCID_URL + val), orcid=val)
                 # a website
                 elif 'http' in val or 'www' in val:
                     htmlval = """
@@ -135,91 +138,53 @@ Contributors
                     htmlval = html.escape(val)
 
                 htmlval = """
-    <strong>{key}:</strong>{htmlval}
+    <strong>{key}:</strong> {htmlval}
                           """.format(key=info_key, htmlval=htmlval)
 
                 html_block.append(htmlval)
 
         # join the block
-        html_block = '\n    '.join(html_block)
+        html_block = '<br>'.join(html_block)
 
-        if 'avatar' in contrib_info:
-            avatar= """
-    <a class="reference internal image-reference" href="{avatar}">
-        <img alt="{avatar}" class="align-left" src="{avatar}" style="width: 210px; border-radius: 240px;"  />
-    </a>
+        if 'avatar' in contrib:
+            avatar = """
+    <a class="reference internal image-reference" href="{avatar}"><img alt="{avatar}" class="align-left" src="{avatar}" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             """.format(avatar=contrib['avatar'])
 
         else:
             avatar = ""
 
-        print avatar
         out = """
-.. _{contrib_id}:
 
-{name}
-{underline}
+.. raw:: html
 
-.. raw::
-
-    <div class="col-md-3">
+    <div class="row">
+    <div class="section" id="{namepermalink}">
+    <span id="{id}">
+    </span>
+    <div class="row">
+    <h2>{name}<a class="headerlink" href="#{namepermalink}" title="Permalink to this headline">{par}</a>
+    </h2>
+    </div>
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
         {avatar}
     </div>
-    <div class="col-md-9>
+    <div class="col-md-6" style="line-height: 1.5">
         {html_block}
     </div>
     <br>
-        """.format(contrib_id=key,
+    </div>
+    </div>
+
+
+        """.format(id=key,
                    name=contrib['name'],
-                   underline=len(contrib['name'])*'-',
-                   avatar_block=avatar,
+                   namepermalink=key,
+                   par=html.escape('&para;'),
+                   avatar=avatar,
                    html_block=html_block
                    )
-
-
-
-        #         info_block.append('**{key}:** {val}'.format(key=info_key,
-        #                                                     val=val))
-
-        # info_block.append('\n|'*(len(contrib_info) - len(info_block)))
-
-        # info_block.append('\n|')
-        # info_block = '\n'.join(info_block)
-
-
-
-
-
-
-
-
-
-#         if 'avatar' in contrib:
-#             avatar_block = """
-# .. image:: {avatar}
-#     :width: 140
-#     :align: left
-#             """.format(avatar=contrib['avatar'])
-#         else:
-#             avatar_block = ""
-
-#         out = """
-# .. _{contrib_id}:
-
-# {name}
-# {underline}
-
-# {avatar_block}
-
-# {info_block}
-
-#         """.format(contrib_id=key,
-#                    name=contrib['name'],
-#                    underline=len(contrib['name'])*'-',
-#                    avatar_block=avatar_block,
-#                    info_block=info_block,
-#                    )
-
 
         f.write(out)
 
