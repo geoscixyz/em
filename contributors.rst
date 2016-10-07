@@ -15,16 +15,13 @@ Contributors
 
 
 
+.. _thast:
+
+Thibaut Astic
+-------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="thast">
-    <span id="thast">
-    </span>
-    <div class="row">
-    <h2>Thibaut Astic<a class="headerlink" href="#thast" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -52,21 +49,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _pbellive:
+
+Patrick Belliveau
+-----------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="pbellive">
-    <span id="pbellive">
-    </span>
-    <div class="row">
-    <h2>Patrick Belliveau<a class="headerlink" href="#pbellive" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -90,21 +83,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _sdevriese:
+
+Sarah G. R. Devriese
+--------------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="sdevriese">
-    <span id="sdevriese">
-    </span>
-    <div class="row">
-    <h2>Sarah G. R. Devriese<a class="headerlink" href="#sdevriese" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -132,21 +121,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _fourndo:
+
+Dom Fournier
+------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="fourndo">
-    <span id="fourndo">
-    </span>
-    <div class="row">
-    <h2>Dom Fournier<a class="headerlink" href="#fourndo" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -174,21 +159,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _lheagy:
+
+Lindsey J. Heagy
+----------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="lheagy">
-    <span id="lheagy">
-    </span>
-    <div class="row">
-    <h2>Lindsey J. Heagy<a class="headerlink" href="#lheagy" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -216,21 +197,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _cizarra:
+
+Carlos Izarra
+-------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="cizarra">
-    <span id="cizarra">
-    </span>
-    <div class="row">
-    <h2>Carlos Izarra<a class="headerlink" href="#cizarra" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -252,21 +229,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _skang:
+
+Seogi Kang
+----------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="skang">
-    <span id="skang">
-    </span>
-    <div class="row">
-    <h2>Seogi Kang<a class="headerlink" href="#skang" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -294,21 +267,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _jlegault:
+
+Jean Legault
+------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="jlegault">
-    <span id="jlegault">
-    </span>
-    <div class="row">
-    <h2>Jean Legault<a class="headerlink" href="#jlegault" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -330,21 +299,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _micmitch:
+
+Michael Mitchell
+----------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="micmitch">
-    <span id="micmitch">
-    </span>
-    <div class="row">
-    <h2>Michael Mitchell<a class="headerlink" href="#micmitch" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -372,21 +337,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _doldenburg:
+
+Douglas Oldenburg
+-----------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="doldenburg">
-    <span id="doldenburg">
-    </span>
-    <div class="row">
-    <h2>Douglas Oldenburg<a class="headerlink" href="#doldenburg" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -410,21 +371,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _gplastow:
+
+Geoffrey Plastow
+----------------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="gplastow">
-    <span id="gplastow">
-    </span>
-    <div class="row">
-    <h2>Geoffrey Plastow<a class="headerlink" href="#gplastow" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -446,21 +403,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _cwijns:
+
+Chris Wijns
+-----------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="cwijns">
-    <span id="cwijns">
-    </span>
-    <div class="row">
-    <h2>Chris Wijns<a class="headerlink" href="#cwijns" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -478,21 +431,17 @@ Contributors
     </div>
     <br>
     </div>
-    </div>
 
 
         
 
+.. _dyang:
+
+Dikun Yang
+----------
+
 .. raw:: html
 
-    <div class="row">
-    <div class="section" id="dyang">
-    <span id="dyang">
-    </span>
-    <div class="row">
-    <h2>Dikun Yang<a class="headerlink" href="#dyang" title="Permalink to this headline">&amp;para;</a>
-    </h2>
-    </div>
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
@@ -519,7 +468,6 @@ Contributors
                           
     </div>
     <br>
-    </div>
     </div>
 
 

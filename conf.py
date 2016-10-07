@@ -503,7 +503,11 @@ epub_exclude_files = ['search.html']
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from _ext import make_contributorslist, make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+from _ext import (
+    make_contributorslist, make_formula_sheet, make_case_histories,
+    checkDependencies, supress_nonlocal_image_warn
+    )
+
 make_contributorslist()
 make_formula_sheet()
 # checkDependencies()

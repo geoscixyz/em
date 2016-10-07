@@ -73,6 +73,9 @@
         "source":"./mt_isa/",
         "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
         "citations":["rutley2001"],
+        "contributors":[
+            {"uid":"user:fourndo", "as":"author"}
+        ],
         "tags":[
             {"uid":"DC", "as":"geophysical_survey"},
             {"uid":"IP", "as":"geophysical_survey"},
