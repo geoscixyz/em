@@ -246,7 +246,7 @@ Contributors
                     
                           <br>
     <strong>url:</strong> 
-    <a class="reference external" href="www.geotech.ca">www.geotech.ca</a>
+    <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
                     
                           
     </div>
@@ -324,7 +324,7 @@ Contributors
                     
                           <br>
     <strong>url:</strong> 
-    <a class="reference external" href="www.geotech.ca">www.geotech.ca</a>
+    <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
                     
                           
     </div>
@@ -440,7 +440,7 @@ Contributors
                     
                           <br>
     <strong>url:</strong> 
-    <a class="reference external" href="www.geotech.ca">www.geotech.ca</a>
+    <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
                     
                           
     </div>

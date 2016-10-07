@@ -125,6 +125,8 @@ Contributors
                     """.format(url=html.escape(ORCID_URL + val), orcid=val)
                 # a website
                 elif 'http' in val or 'www' in val:
+                    if 'www' in val and 'http' not in val:
+                        val = 'http://' + val
                     htmlval = """
     <a class="reference external" href="{url}">{url}</a>
                     """.format(url=html.escape(val))
