@@ -1,6 +1,7 @@
 import shutil
 import os
 import json
+import html
 
 fName = os.path.realpath(__file__)
 
@@ -106,45 +107,120 @@ Contributors
         print('   writing contributor {}').format(key)
         contrib = contribs[key]
 
-        info_block = []
+        html_block = []
         for info_key in contrib_info:
             if info_key in contrib:
+                # if info_key == 'ORCID':
+                #     html = """
+                #         <strong>ORCID:</strong><a class="reference external" href="http://orcid.org/{val}">{val}</a><br>
+                #     """.format(val=contrib[info_key])
+                # val = contrib[info_key]
+                # if info_key == 'ORCID':
+                #     val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
                 val = contrib[info_key]
                 if info_key == 'ORCID':
-                    val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
-                info_block.append('- **{key}:** {val}'.format(key=info_key,
-                                                              val=val))
+                    val = ORCID_URL + val
+                # a website
+                elif 'http' in val or 'www' in val:
+                    htmlval = """
+    <a class="reference external" href="{url}">{url}</a>
+                    """.format(url=html.escape(val))
+                # an email
+                elif '@' in val:
+                    htmlval = """
+    <a class="reference external" href="mailto:{email}">{email}</a>
+                    """.format(email=html.escape(val))
+                # otherwise assume it is text
+                else:
+                    htmlval = html.escape(val)
 
-        info_block.append('\n|'*(len(contrib_info) - len(info_block)))
+                htmlval = """
+    <strong>{key}:</strong>{htmlval}
+                          """.format(key=info_key, htmlval=htmlval)
 
-        info_block.append('\n|')
-        info_block = '\n'.join(info_block)
+                html_block.append(htmlval)
 
-        if 'avatar' in contrib:
-            avatar_block = """
-.. image:: {avatar}
-    :width: 140
-    :align: left
+        # join the block
+        html_block = '\n    '.join(html_block)
+
+        if 'avatar' in contrib_info:
+            avatar= """
+    <a class="reference internal image-reference" href="{avatar}">
+        <img alt="{avatar}" class="align-left" src="{avatar}" style="width: 210px; border-radius: 240px;"  />
+    </a>
             """.format(avatar=contrib['avatar'])
-        else:
-            avatar_block = ""
 
+        else:
+            avatar = ""
+
+        print avatar
         out = """
 .. _{contrib_id}:
 
 {name}
 {underline}
 
-{avatar_block}
+.. raw::
 
-{info_block}
-
+    <div class="col-md-3">
+        {avatar}
+    </div>
+    <div class="col-md-9>
+        {html_block}
+    </div>
+    <br>
         """.format(contrib_id=key,
                    name=contrib['name'],
                    underline=len(contrib['name'])*'-',
-                   avatar_block=avatar_block,
-                   info_block=info_block,
+                   avatar_block=avatar,
+                   html_block=html_block
                    )
+
+
+
+        #         info_block.append('**{key}:** {val}'.format(key=info_key,
+        #                                                     val=val))
+
+        # info_block.append('\n|'*(len(contrib_info) - len(info_block)))
+
+        # info_block.append('\n|')
+        # info_block = '\n'.join(info_block)
+
+
+
+
+
+
+
+
+
+#         if 'avatar' in contrib:
+#             avatar_block = """
+# .. image:: {avatar}
+#     :width: 140
+#     :align: left
+#             """.format(avatar=contrib['avatar'])
+#         else:
+#             avatar_block = ""
+
+#         out = """
+# .. _{contrib_id}:
+
+# {name}
+# {underline}
+
+# {avatar_block}
+
+# {info_block}
+
+#         """.format(contrib_id=key,
+#                    name=contrib['name'],
+#                    underline=len(contrib['name'])*'-',
+#                    avatar_block=avatar_block,
+#                    info_block=info_block,
+#                    )
+
+
         f.write(out)
 
     f.close()
