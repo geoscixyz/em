@@ -18,7 +18,7 @@ histories for our initial launch of em.geosci are those that have been
 developed by past and present students at the Geophysical Inversion Facility.
 The titles, and EM systems used are provided below.
 
-.. **Content**
+
 
 .. toctree::
     :maxdepth: 1
@@ -30,6 +30,10 @@ The titles, and EM systems used are provided below.
     emc/index
     balboa/index
 
+.. _case_history_gallery:
+
+Gallery
+-------
 
 .. include:: case_histories.rst
 

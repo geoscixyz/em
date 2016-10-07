@@ -222,7 +222,11 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
             reference_block=""
 
         if 'contributors' in casehistory:
-            contrib_dict = {}
+            contrib_dict = {
+                'authors': [],
+                'editors': [],
+                'reviewers': []}
+
             for contrib in casehistory['contributors']:
                 contrib_style = contrib['as']
 
@@ -236,7 +240,7 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
 
             contributions = ['    - {contrib_style}: {contribs}'.format(
                 contrib_style=contrib_style, contribs=val
-                ) for contrib_style, val in contrib_dict.iteritems()]
+                ) for contrib_style, val in contrib_dict.iteritems() if val]
 
             contributions = '\n'.join(contributions)
 
@@ -270,7 +274,8 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
 
         out="""
 
-**{title}**
+{title}
+{underline}
 
 .. image:: {thumbnail}
     :alt: {uid}
@@ -284,13 +289,13 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
 |
 |
 |
-|
-|
+
 
 
         """.format(
             uid=key,
             title=casehistory['title'],
+            underline='^'*len(casehistory['title']),
             source=casehistory['source'],
             thumbnail=casehistory['thumbnail'],
             references_block=reference_block,

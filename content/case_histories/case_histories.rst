@@ -12,7 +12,8 @@
 
 
 
-**Mt. Isa**
+Mt. Isa
+^^^^^^^
 
 .. image:: ./mt_isa/images/MtIsa_Cover.png
     :alt: mt_isa
@@ -34,13 +35,13 @@
 |
 |
 |
-|
-|
+
 
 
         
 
-**The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama**
+The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ./balboa/images/bboa_thumbnail.png
     :alt: balboa
@@ -51,8 +52,8 @@
 
 
 - Contributors
-    - reviewer: :ref:`skang`, :ref:`doldenburg`, :ref:`lheagy`
     - author: :ref:`jlegault`, :ref:`cwijns`, :ref:`cizarra`, :ref:`gplastow`
+    - reviewer: :ref:`skang`, :ref:`doldenburg`, :ref:`lheagy`
 
 
 - Tags
@@ -64,13 +65,13 @@
 |
 |
 |
-|
-|
+
 
 
         
 
-**Aspen**
+Aspen
+^^^^^
 
 .. image:: ./aspen/images/FormationMM.png
     :alt: aspen
@@ -93,13 +94,13 @@
 |
 |
 |
-|
-|
+
 
 
         
 
-**Bookpurnong**
+Bookpurnong
+^^^^^^^^^^^
 
 .. image:: ./bookpurnong/images/booky-hydro.jpg
     :alt: bookpurnong
@@ -121,13 +122,13 @@
 |
 |
 |
-|
-|
+
 
 
         
 
-**Elevenmile Canyon**
+Elevenmile Canyon
+^^^^^^^^^^^^^^^^^
 
 .. image:: ./emc/images/geothermal.png
     :alt: emc
@@ -150,8 +151,7 @@
 |
 |
 |
-|
-|
+
 
 
         
