@@ -28,9 +28,9 @@ Mt. Isa
 
 
 - Tags
-    - application: Mining, Mining
-    - location: Australia, Australia
-    - geophysical_survey: IP, IP
+    - geophysical survey: DC, IP
+    - application: Mining
+    - location: Australia
 
 |
 |
@@ -57,10 +57,10 @@ The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
 
 
 - Tags
-    - application: Mining, Mining
-    - location: Panama, Panama
-    - keyword: gold, gold
-    - geophysical_survey: Airborne NSEM, Airborne NSEM
+    - geophysical survey: Airborne NSEM
+    - application: Mining
+    - location: Panama
+    - keyword: ZTEM, porphyry, copper, gold
 
 |
 |
@@ -86,10 +86,10 @@ Aspen
 
 
 - Tags
-    - application: Hydrocarbons, Hydrocarbons
-    - location: Canada, Canada
-    - keyword: Oil Sands, Oil Sands
-    - geophysical_survey: Airborne TDEM, Airborne TDEM
+    - geophysical survey: Airborne TDEM
+    - application: Hydrocarbons
+    - location: Canada
+    - keyword: Oil Sands
 
 |
 |
@@ -115,9 +115,9 @@ Bookpurnong
 
 
 - Tags
-    - application: Groundwater, Groundwater
-    - location: Australia, Australia
-    - geophysical_survey: Airborne TDEM, Airborne TDEM
+    - geophysical survey: Airborne FDEM, Airborne TDEM
+    - application: Groundwater
+    - location: Australia
 
 |
 |
@@ -143,10 +143,10 @@ Elevenmile Canyon
 
 
 - Tags
-    - application: Geothermal, Geothermal
-    - location: United States of America, United States of America
-    - keyword: ZTEM, ZTEM
-    - geophysical_survey: Airborne NSEM, Airborne NSEM
+    - geophysical survey: Airborne NSEM
+    - application: Geothermal
+    - location: United States of America
+    - keyword: ZTEM
 
 |
 |

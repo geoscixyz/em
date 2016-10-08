@@ -252,14 +252,12 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
         if 'tags' in casehistory:
             tags_dict = {}
             for tags in casehistory['tags']:
-                tags_style = tags['as']
-                tags_dict[tags_style] = '{}'.format(
-                        tags['uid']
-                        )
+                tags_style = tags['as'].replace('_', ' ')
+
                 if tags_style in tags_dict:
-                    tags_dict[tags_style] += ', ' + tags['uid']
+                    tags_dict[tags_style] += ', '+tags['uid'].replace('_', ' ')
                 else:
-                    tags_dict[tags_style] = tag
+                    tags_dict[tags_style] = tags['uid'].replace('_', ' ')
 
             tags_list = ['    - {tags_style}: {tag}'.format(
                 tags_style=tag_style, tag=val
