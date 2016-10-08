@@ -7,7 +7,7 @@ Aspen
     :file: ../../../underconstruction.html
 
 
-- **Authors**: :ref:`Sarah G. R. Devriese <sdevriese>`
+- **Authors**: :ref:`sdevriese`
 
 .. topic :: Prelude
 
