@@ -3,15 +3,26 @@
 Setup
 =====
 
-The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead, Zinc, Silver, Copper, and Gold) within an area under continuous exploration. This region is found in west Queensland, Australia. Within this region, ten lines of :ref:`direct current resistivity <dcr_index>` (DCR) and induced polarization (IP) data were acquired over what is now referred to as the Cluny Mine (Copper), 22 km south of the city of Mt Isa. Two primary questions that motivated the initial study were:
+The Mount Isa region (:numref:`Location_map`) hosts numerous deposits (Lead,
+Zinc, Silver, Copper, and Gold) within an area under continuous exploration.
+This region is found in west Queensland, Australia. Within this region, ten
+lines of :ref:`direct current resistivity <dcr_index>` (DCR) and induced
+polarization (IP) data were acquired over what is now referred to as the Cluny
+Mine (Copper), 22 km south of the city of Mt Isa. Two primary questions that
+motivated the initial study were:
 
 - Can geophysical data and 3D inversion delineate the various units shown in the geologic section?
-- Can conductive and chargeable units, which would be potential targets within the siltstones, be identified?
+- Can conductive and chargeable units, which would be potential targets within
+  the siltstones, be identified?
 
-In addition, we have an opportunity to re-invert the same data as Rutley et al :cite:`rutley2001`, but use improved algorithms and higher performance computers. Thus, a secondary set of questions is introduced as further motivation:
+In addition, we have an opportunity to re-invert the same data as Rutley et al
+:cite:`rutley2001`, but use improved algorithms and higher performance
+computers. Thus, a secondary set of questions is introduced as further
+motivation:
 
 - Are improved results obtained by using updated algorithms and higher performance computers?
-- Are there any lessons worth highlighting that arose within this case history that were not delineated in the initial case history paper?
+- Are there any lessons worth highlighting that arose within this case history
+  that were not delineated in the initial case history paper?
 
 
 .. figure:: images/Location_Map_KDF.png
@@ -19,7 +30,8 @@ In addition, we have an opportunity to re-invert the same data as Rutley et al :
     :figwidth: 100%
     :name: Location_map
 
-    Location map of the Mount Isa area and (a) inset over the Cluny Prospect study area. Neighboring mineral deposits are shown for reference.
+    Location map of the Mount Isa area and (a) inset over the Cluny Prospect
+    study area. Neighboring mineral deposits are shown for reference.
 
 
 
@@ -31,7 +43,8 @@ Geological Background
     :figwidth: 50%
     :name: Geology_Section
 
-    Vertical cross section of geology from Mount Isa. The mineralisation occurs within the Native Bee Siltstone as shown by the circle.
+    Vertical cross section of geology from Mount Isa. The mineralisation
+    occurs within the Native Bee Siltstone as shown by the circle.
 
 The geology of the Cluny region and the southern extent of the Mt Isa lease is
 dominated by fault-repeated, steeply dipping stratigraphy of Native Bee
@@ -52,10 +65,3 @@ exploration target in this area is a unit that is  conductive and chargeable.
 In the geologic section :numref:`Geology_Section`  the exploration target is
 denoted by the circle within the Native Bee Siltstone.
 
-
-.. **References:**
-
-..  .. bibliography:: ../../references.bib
-..     :style: alpha
-..     :encoding: latex+latin
-..     :filter: docname in docnames

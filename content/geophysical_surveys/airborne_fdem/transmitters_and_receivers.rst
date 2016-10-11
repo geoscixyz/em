@@ -64,9 +64,9 @@ Configurations
   considered when interpreting the data.
 
 .. figure:: ./images/hcp_vca.jpg
-   :align: center
-   :figwidth: 80%
-   :name: hcp_vca
+    :align: center
+    :figwidth: 80%
+    :name: hcp_vca
 
-   A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
+    A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
 

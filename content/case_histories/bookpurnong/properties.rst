@@ -22,25 +22,26 @@ measured conductivity from several wells along Transect 3 is plotted as cross
 sections from the river bed to the bank both before and after SIS :numref:`booky-salinity`.
 
 .. figure:: ./images/booky-drills.jpg
- :align: left
- :width: 80%
- :name: booky-drills
+    :align: left
+    :width: 80%
+    :name: booky-drills
 
- Locations of the drills where groundwater samples were taken for the salinity measurement :cite:`holland2008`.
+    Locations of the drills where groundwater samples were taken for the
+    salinity measurement :cite:`holland2008`.
 
 .. figure:: ./images/booky-salinity.jpg
- :align: left
- :width: 80%
- :name: booky-salinity
+    :align: left
+    :width: 80%
+    :name: booky-salinity
 
- Groundwater salinity measured by electric conductivity :cite:`holland2008`.
+    Groundwater salinity measured by electric conductivity :cite:`holland2008`.
 
 Those field physical property measurements confirmed that the water
 conductivity at Bookpurnong is at the order of 1 S/m. The actual conductivity
 of the ground may be lower if taking into account the porosity, but it is
 still much higher than the usual earth media. Also, the overall conductivity
 is higher towards the bank than in the flush zone; and higher near the surface
-than at depth. 
+than at depth.
 
 
 

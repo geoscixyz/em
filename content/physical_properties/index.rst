@@ -5,12 +5,15 @@ Physical Properties
 
 .. topic:: Purpose
 
-    Generate a resource that has a commpilation of values for physical properties as a function of rock type, mineral composition and saturating fluids. Background about how the laboratory measurements are made and the connection with constitutive relationships are presented. Each section will begin with examples for where the particular physical property has been diagnostic.
+    Generate a resource that has a commpilation of values for physical
+    properties as a function of rock type, mineral composition and saturating
+    fluids. Background about how the laboratory measurements are made and the
+    connection with constitutive relationships are presented. Each section
+    will begin with examples for where the particular physical property has
+    been diagnostic.
 
 
 
-Overview
---------
 In geophysics, we characterize materials by their physical properties. The
 relevant  properties for electromagnetics are:
 

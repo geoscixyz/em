@@ -12,14 +12,20 @@ line N12200.
 General
 -------
 
-The animations for :ref:`conductivity <MIMconMovie>` and :ref:`chargeabilty <MIMchgMovie>` were presented in the previous section and iso-surface images are provided in :numref:`MtIsa_3D_Model_Interp`. We use the two iso-surface images for our "general" or "first-order" interpretation. Labels A through G have been added to the figures and these are explained below. 
+The animations for :ref:`conductivity <MIMconMovie>` and :ref:`chargeabilty
+<MIMchgMovie>` were presented in the previous section and iso-surface images
+are provided in :numref:`MtIsa_3D_Model_Interp`. We use the two iso-surface
+images for our "general" or "first-order" interpretation. Labels A through G
+have been added to the figures and these are explained below.
 
 .. figure:: images/MtIsa_3D_Model_Interp.png
     :align: center
     :figwidth: 90%
     :name: MtIsa_3D_Model_Interp
 
-    : Perspective view of the recovered 3D conductivity (left) and chargeability (right) models. Interpreted geological units (black) are shown for reference.
+    Perspective view of the recovered 3D conductivity (left) and chargeability
+    (right) models. Interpreted geological units (black) are shown for
+    reference.
 
 
 A: Surprise Creek Formation: A volcanic unit that is highly resistive
@@ -28,7 +34,7 @@ and non-chargeable. It has a steeply dipping contact with the Moondarra Siltston
 B: The predominant rocks in this region are the Moondarra and Native Bee
 siltstones. They cannot be distinguished on the basis of conductivity and
 chargeability. These rocks may contain an Eastern Creek Volcanics Quartzite unit
-that is resistive and non-chargeable and appears as a vertical contact 
+that is resistive and non-chargeable and appears as a vertical contact
 between the Moondarra and Native Bee siltstones. We address this in more
 detail in the "enhanced" portion of this interpretation.
 
@@ -101,7 +107,18 @@ chargeability within the moderate conductivity of the siltstones.
 Summary
 -------
 
-In this section, inversion results are interpreted to bring the final recovered physical property models back into the realm of geology. :numref:`MIM_x_section` shows a cross-section view through both the recovered conductivity model (left) and chargeability model (right) along with the final interpretatation of the units. The units line up well with the geo-rectified geologic cross-section (:numref:`Geology_Section`) and allow a high-level of confidence of the interpretation to the north. The Breakaway shale unit has very large conductivities (higher than expected); the Novit Horizon appears as a low to moderate conductor. The Moondarra Siltsone breaks around line N14700, most likely due to faulting. The 3D inversion shows more detail than the 2D inversions and attempts to connect features from line to line. Yet, the results confirm the presence of a "2D" geology in general. 
+In this section, inversion results are interpreted to bring the final
+recovered physical property models back into the realm of geology.
+:numref:`MIM_x_section` shows a cross-section view through both the recovered
+conductivity model (left) and chargeability model (right) along with the final
+interpretatation of the units. The units line up well with the geo-rectified
+geologic cross-section (:numref:`Geology_Section`) and allow a high-level of
+confidence of the interpretation to the north. The Breakaway shale unit has
+very large conductivities (higher than expected); the Novit Horizon appears as
+a low to moderate conductor. The Moondarra Siltsone breaks around line N14700,
+most likely due to faulting. The 3D inversion shows more detail than the 2D
+inversions and attempts to connect features from line to line. Yet, the
+results confirm the presence of a "2D" geology in general.
 
 
 .. figure:: images/mimxsec.png
@@ -109,6 +126,8 @@ In this section, inversion results are interpreted to bring the final recovered 
     :figwidth: 90%
     :name: MIM_x_section
 
-    : Coincident cross-section through the conductivity (left) and chargeability (right) models with the interpreted units and super-imposed. The units line up well with the geo-rectified geologic cross-section.
+    Coincident cross-section through the conductivity (left) and chargeability
+    (right) models with the interpreted units and super-imposed. The units
+    line up well with the geo-rectified geologic cross-section.
 
 
