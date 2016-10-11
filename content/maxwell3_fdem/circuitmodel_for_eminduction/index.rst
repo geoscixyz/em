@@ -5,29 +5,49 @@ Circuit Model for EM Induction
 
 .. topic:: Purpose
 
-  The basic principles for EM induction were outlined in CITExxx. Here we use an equivalent electric circuit model consisting of three loops to represent that process. We derive the  inductive response function in terms of circuits, mutual and self-inductance, and coupling. Widgets are developed to help physical understanding. The response functions for many  practical geophysical surveys resemble that from the circuit model and  hence much intuition about EM signals can be obtained using this analysis.
+  The basic principles for EM induction were outlined in CITExxx. Here we use
+  an equivalent electric circuit model consisting of three loops to represent
+  that process. We derive theinductive response function in terms of circuits,
+  mutual and self-inductance, and coupling. Widgets are developed to help
+  physical understanding. The response functions for manypractical geophysical
+  surveys resemble that from the circuit model andhence much intuition about
+  EM signals can be obtained using this analysis.
 
-The basic EM  survey is shown in :numref:`Concepts_3loops`. The time varying magnetic field (referred to as the primary field) in the Tx induces currents in the conductor. Those currents produce a secondary field that can be recorded at the receiver.
+The basic EM  survey is shown in :numref:`Concepts_3loops`. The time varying
+magnetic field (referred to as the primary field) in the Tx induces currents
+in the conductor. Those currents produce a secondary field that can be
+recorded at the receiver.
 
 .. figure:: ./images/Concepts_3loops.png
-   :align: center
-   :scale: 60%
-   :name: Concepts_3loops
+    :align: center
+    :scale: 60%
+    :name: Concepts_3loops
 
-   Conceptual diagrams for EM inductions. Top panel shows excitation of the conductor using induction, and botton panel shows corresponding 3-loops system.
+    Conceptual diagrams for EM inductions. Top panel shows excitation of the
+    conductor using induction, and botton panel shows corresponding 3-loops
+    system.
 
-From :ref:`faraday`, we establish the link between EMF (:math:`\mathcal{E}`, voltage), and time varying flux (:math:`\Phi_b`). Below diagram illustrates how EMF could be generated from time-varying flux (:math:`\mathcal{E}= - \frac{d \Phi_b}{dt}  = \imath \omega \Phi_b`). The EMF (voltage) produces a current in the loop.
+From :ref:`faraday`, we establish the link between EMF (:math:`\mathcal{E}`,
+voltage), and time varying flux (:math:`\Phi_b`). Below diagram illustrates
+how EMF could be generated from time-varying flux (:math:`\mathcal{E}= -
+\frac{d \Phi_b}{dt}  = \imath \omega \Phi_b`). The EMF (voltage) produces a
+current in the loop.
 
 .. figure:: ./images/EMF.png
-  :align: center
-  :scale: 60%
-  :name: EMF
+    :align: center
+    :scale: 60%
+    :name: EMF
 
 The circuit model is now understood as follows:
 
-- Loop 1: is the transmitter (Tx) . It has a time varying current (I1 e^iwt) and hence produces a time varying field everywhere in space.
+- Loop 1: is the transmitter (Tx).
+  It has a time varying current (I1 e^iwt) and hence produces a time varying
+  field everywhere in space.
 
-- Loop 2: represents the conductive body. The time varying flux generates currents in the conductor (:math:`I_2 e^{\imath \omega t}`). These time varying currents produce a time varying field everywhere in space.
+- Loop 2: represents the conductive body.
+  The time varying flux generates currents in the conductor (:math:`I_2
+  e^{\imath \omega t}`). These time varying currents produce a time varying
+  field everywhere in space.
 
 - Loop 3: is the receiver (Rx). The measured EMF, :math:`\mathcal{E}^t` is
 
@@ -36,7 +56,8 @@ The circuit model is now understood as follows:
 
   where superscripts refer respectively  to the total, primary, and  secondary fields.
 
-Either numerically, or through instrumentation, it is possible to remove the primary field from the measurements. The important geophysical response is
+Either numerically, or through instrumentation, it is possible to remove the
+primary field from the measurements. The important geophysical response is
 
 .. math::
   \frac{\mathcal{E}^s}{\mathcal{E}^p} =  \frac{H^s}{H^p}  =   - \frac{M_{12} M_{23}}{M_{13}L_2} \frac{\alpha^2 + i \alpha}{1 + \alpha^2} \\ = CQ(\alpha),
@@ -45,7 +66,9 @@ Either numerically, or through instrumentation, it is possible to remove the pri
 where :math:`C` is coupling coefficient.
 In Eq. :eq:`l2`, :math:`M_{ij}` is the mutual inductance between loops :math:`i` and :math:`j`, :math:`L` is the self inductance of the target loop, :math:`Q` is the inductive response function. :math:`\alpha = \omega L/R`  is a dimensionless induction number.
 
-The Response Function is a complex quantity and the real and imaginary parts (or in-phase and quadrature phase) look like below figure. The horizontal axis is the induction number.
+The Response Function is a complex quantity and the real and imaginary parts
+(or in-phase and quadrature phase) look like below figure. The horizontal axis
+is the induction number.
 
 .. plot::
 
@@ -67,7 +90,8 @@ The Response Function is a complex quantity and the real and imaginary parts (or
     plt.tight_layout()
     plt.show()
 
-Eq. :eq:`l2` has two main components. :math:`C` is determined by geometry. :math:`Q` relates to the target body.
+Eq. :eq:`l2` has two main components. :math:`C` is determined by geometry.
+:math:`Q` relates to the target body.
 
 In the following pages we illustrate
 

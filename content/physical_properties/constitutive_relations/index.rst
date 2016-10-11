@@ -10,7 +10,10 @@ Summary
 -------
 
 
-The constitutive equations provide the connections between the fields and fluxes in Maxwell's equations. The coefficient that links these entities is a physical property. For each constitutive relation we provide:
+The constitutive equations provide the connections between the fields and
+fluxes in Maxwell's equations. The coefficient that links these entities is a
+physical property. For each constitutive relation we provide:
+
 - constitutive equation and its physical understanding
 - a laboratory setup
 - some history (if available)

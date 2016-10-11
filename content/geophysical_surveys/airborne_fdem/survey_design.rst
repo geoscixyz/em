@@ -5,7 +5,8 @@ Survey Design
 
 .. topic:: Purpose
 
-    To discuss the principles and parameters that need to be chosen for an airborne FDEM survey.
+    To discuss the principles and parameters that need to be chosen for an
+    airborne FDEM survey.
 
 Applicability of AFEM
 ---------------------

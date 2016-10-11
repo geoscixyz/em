@@ -5,7 +5,8 @@ Survey
 
 .. topic:: Purpose
 
-    To provide an overview of the basic airborne FDEM system configuration and commonly used instrumentation.
+    To provide an overview of the basic airborne FDEM system configuration and
+    commonly used instrumentation.
 
 Basic Survey Setup
 ------------------

@@ -4,7 +4,7 @@ Gauss's Law for Electric Fields
 ===============================
  .. figure:: images/GaussElec.png
     :align: right
-    :scale: 60% 
+    :scale: 60%
     :name: GaussElec
 
     Charge enclosed
@@ -15,7 +15,7 @@ flux through any closed surface is proportional to the total electric charge
 enclosed by this surface. By convention, a positive electric charge generates
 a positive electric field. The law was published posthumously in 1867 as part
 of a collection of work by the famous German mathematician Carl Friedrich
-Gauss. 
+Gauss.
 
 .. _gauss_electric_integral:
 
@@ -44,7 +44,7 @@ Electric flux is defined in general as
 
 We can think of electric field as flux density. Gauss’s law tells us that the
 net electric flux through any closed surface is zero unless the volume bounded
-by that surface contains a net charge. 
+by that surface contains a net charge.
 
 
 .. _gauss_electric_differential:
@@ -66,7 +66,7 @@ side of Gauss's law :eq:`Gauss_e_int`, we can rewrite the law as:
 
 .. math::
 	\int_V \boldsymbol{\nabla} \cdot \mathbf{e} \; \mathrm{d}v = \int_V \frac{\rho}{\varepsilon_0} \; \mathrm{d}v \;.
-	:label: 
+	:label:
 
 Since this equation must hold for any volume :math:`V` , we can equate the
 integrands, giving the differential form of Gauss's law:
@@ -75,7 +75,8 @@ integrands, giving the differential form of Gauss's law:
 	\boldsymbol{\nabla} \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0}.
 	:label: Gauss_e_diff
 
-It can be shown that Gauss' law for electric fields is equivalent to Coulomb's law (see :ref:`gauss_electric_equivalence_to_coulombs_law`) 
+It can be shown that Gauss' law for electric fields is equivalent to Coulomb's
+law (see :ref:`gauss_electric_equivalence_to_coulombs_law`)
 
 Units
 -----
@@ -96,5 +97,5 @@ Units
 
 **Conversions**
 
-.. math:: 
+.. math::
     \varepsilon_0 = \frac{\text{F}}{\text{m}} = \frac{\text{C}}{\text{V} \cdot \text{m}}.

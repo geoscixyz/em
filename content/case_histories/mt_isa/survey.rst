@@ -3,18 +3,38 @@
 Survey
 ======
 
-It is expected that the mineralization is both  :ref:`conductive and chargeable <mt_isa_properties>`. A DC/IP survey is therefore an appropriate (and desired) choice for geophysical exploration. In this section, we explore the survey design used at the Cluny property.
+It is expected that the mineralization is both  :ref:`conductive and
+chargeable <mt_isa_properties>`. A DC/IP survey is therefore an appropriate
+(and desired) choice for geophysical exploration. In this section, we explore
+the survey design used at the Cluny property.
 
 DC Resistivity (DCR)
 --------------------
 
-The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys <DCR_index>` section. Many choices are possible for electrode layouts, but the final choice at Cluny was motivated by the following factors:
+The fundamentals for a DCR survey can be found in the :ref:`Geophysical
+Surveys <DCR_index>` section. Many choices are possible for electrode layouts,
+but the final choice at Cluny was motivated by the following factors:
 
-(a) MIM, the company who was exploring the property, had developed their own data acquisition system `MIMDAS`_. The system had a 100-channel capacity distributed acquisition system and each electrode could serve as a current or potential electrode. Both DCR and IP data can be acquired.
+(a) MIM, the company who was exploring the property, had developed their own data
+    acquisition system `MIMDAS`_. The system had a 100-channel capacity
+    distributed acquisition system and each electrode could serve as a current or
+    potential electrode. Both DCR and IP data can be acquired.
 
-(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage was desirable, the field acquisition was limited to 10 east-west lines. The reason for this was two-fold. Firstly, the 2D lines could be laid out across the East-West boundaries of Cluny region. Secondly, the fault structures were known to strike north-south, so it is natural to have the survey perpendicular to strike in order to generate the most physical property contrast along line. Most lines consisted of 21 current electrode locations (the three to the north had 19) with each current electrode having a maximum of 20 potential readings.
+(b) The area of interest is approximately 2 km by 5 km. Although full 3D coverage
+    was desirable, the field acquisition was limited to 10 east-west lines. The
+    reason for this was two-fold. Firstly, the 2D lines could be laid out across
+    the East-West boundaries of Cluny region. Secondly, the fault structures were
+    known to strike north-south, so it is natural to have the survey perpendicular
+    to strike in order to generate the most physical property contrast along line.
+    Most lines consisted of 21 current electrode locations (the three to the north
+    had 19) with each current electrode having a maximum of 20 potential readings.
 
-(c) The choice of a pole-dipole was motivated by past experience that that showed this was an effective survey for deep targets. A typical pseudosection is shown in  :ref:`pseudosection<dcr_Pseudo_section>`. Furthermore, with the MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>` could be acquired along each line at no additional cost. The system spaced each potential electrode 100-m apart.
+(c) The choice of a pole-dipole was motivated by past experience that that showed
+    this was an effective survey for deep targets. A typical pseudosection is
+    shown in  :ref:`pseudosection<dcr_Pseudo_section>`. Furthermore, with the
+    MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>`
+    could be acquired along each line at no additional cost. The system spaced
+    each potential electrode 100-m apart.
 
 .. Second sentence: The layout shown in Figure :numref:`MIM_PDP_EX` indicates a current electrode (red) at position 1 with potentials (black) measured across all other dipoles.
 
@@ -24,7 +44,8 @@ The fundamentals for a DCR survey can be found in the :ref:`Geophysical Surveys 
     :figwidth: 80%
     :name: MIM_PDP_EX
 
-    (Left) Pole-dipole survey configuration with remote source electrode at "infinity. (Right) Dipole-pole survey configuration.
+    (Left) Pole-dipole survey configuration with remote source electrode at "infinity.
+    (Right) Dipole-pole survey configuration.
 
 
 .. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
@@ -85,8 +106,9 @@ sets and compare the recovered models.
   :figwidth: 50%
   :name: MIM_PDP_Simulation
 
-  : Pseudo-conductivity section of apparent conductivity for a simulated pole-dipole survey over a geological
-  model without a conductor (top image) and with a conductor (bottom image).
+  Pseudo-conductivity section of apparent conductivity for a simulated pole-
+  dipole survey over a geological model without a conductor (top image) and
+  with a conductor (bottom image).
 
 
 The synthetic data are inverted with a 2D algorithm. A mesh
@@ -105,7 +127,10 @@ This is consistent with the images of current density :ref:`current density
   :figwidth: 50%
   :name: MIM_PDP_Simulation_Model
 
-  : The recovered 2D conductivity models from the inversion of the pole-dipole data shown in :numref:`MIM_PDP_Simulation`. The middle figure contains the deep conductor and the top lacks a deep conductor. In both figures, the true conductivity model is shown in grey scale for reference.
+  The recovered 2D conductivity models from the inversion of the pole-dipole
+  data shown in :numref:`MIM_PDP_Simulation`. The middle figure contains the
+  deep conductor and the top lacks a deep conductor. In both figures, the true
+  conductivity model is shown in grey scale for reference.
 
 
 

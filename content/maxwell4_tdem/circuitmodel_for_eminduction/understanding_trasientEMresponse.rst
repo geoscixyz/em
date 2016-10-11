@@ -5,7 +5,8 @@ Understanding the Transient EM response
 
 .. topic:: Purpose
 
-    We provide expressions for trasient responses of the circuit model, compare them with harmonic responses, and understand their decay features.
+    We provide expressions for trasient responses of the circuit model,
+    compare them with harmonic responses, and understand their decay features.
 
 For the harmonic response, we used normalized EMF or magnetic field:
 
@@ -18,9 +19,13 @@ which was reduced to
 .. math::
       \frac{H_3^s }{H_3^p} = \frac{\mathcal{E}_3^s }{\mathcal{E}_3^p} = C Q (\alpha)
 
-where :math:`C` and :math:`Q` are coupling coefficient and response function, respectively. We did not consider effect of :math:`C`, but focus on :math:`Q` because it determines time behaviour in trasient response.
+where :math:`C` and :math:`Q` are coupling coefficient and response function,
+respectively. We did not consider effect of :math:`C`, but focus on :math:`Q`
+because it determines time behaviour in trasient response.
 
-However, for the transient response this neat normalziation does not work, because of some complicated time function in :math:`\mathcal{E}_3^s` and :math:`\mathcal{E}_3^p` (assuming step-on current waveform):
+However, for the transient response this neat normalziation does not work,
+because of some complicated time function in :math:`\mathcal{E}_3^s` and
+:math:`\mathcal{E}_3^p` (assuming step-on current waveform):
 
 .. math::
   \mathcal{E}^p_{on} = - M_{13} I_1 \delta(t)
@@ -44,14 +49,16 @@ Corresponding step-on resposne, :math:`i_{2 \ on}` will be
 .. math::
     i_{2 \ on} = \mathcal{F}^{-1}[\frac{I_2(\omega)}{\imath \omega}] = - \frac{M_{12}I_1}{L} e^{- t/\tau}, \ t>0
 
-Using the relationship shown in :ref:`Transient response <transientresponse>`, we can obtain step-off response, :math:`i_{2 \ off}`:
+Using the relationship shown in :ref:`Transient response <transientresponse>`,
+we can obtain step-off response, :math:`i_{2 \ off}`:
 
 .. math::
     i_{2 \ off} = i_{2 \ on}(\infty) - i_{2 \ on}(t) = \frac{M_{12}I_1}{L} e^{- t/\tau}, \ t>0
 
 Only sign is different between :math:`i_{2 \ on}` and :math:`i_{2 \ off}`.
 
-Impulse response, :math:`i_2(t)` can be simply obtained by taking time derivative to :math:`i_{2 \ on}`:
+Impulse response, :math:`i_2(t)` can be simply obtained by taking time
+derivative to :math:`i_{2 \ on}`:
 
 .. math::
     i_2(t) = \frac{\partial i_{2 \ on}} {\partial t} =  \frac{M_{12}I_1}{L} \frac{1}{\tau} e^{- t/\tau}, \ t>0

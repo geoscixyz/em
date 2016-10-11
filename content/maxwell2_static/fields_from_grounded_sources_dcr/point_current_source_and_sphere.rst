@@ -3,7 +3,8 @@
 Point current source and a conducting sphere
 ============================================
 
-In this section, we build up an analytical solution for a conducting sphere in the presence of a point current source. This is accomplished in two steps:
+In this section, we build up an analytical solution for a conducting sphere in
+the presence of a point current source. This is accomplished in two steps:
 
 1. A solution for the electric scalar potential, due to a point current source
 within a wholespace of resistivity :math:`\rho`, is solved. This solution is then

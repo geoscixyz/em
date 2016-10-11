@@ -78,7 +78,8 @@ trigonometry of the problem.
 Examples
 --------
 
-Using the depressed hemi-sphere solution for DC problem, we want to identify effects of topography in terms of two aspects:
+Using the depressed hemi-sphere solution for DC problem, we want to identify
+effects of topography in terms of two aspects:
 
 - Numerical accuracy of 3D DC forward modelling algorithm (UBC DCIP3D)
 - Understanding charge-build up and corresponding electrical fields
@@ -158,7 +159,8 @@ effects, although our choice of discretization is clearly important.
    :align: center
    :name: ComparisonTotFine
 
-   Comparisons of numerical and analytic total potentials with topography. White line depicts the boundary of the depressed hemisphere.
+   Comparisons of numerical and analytic total potentials with topography.
+   White line depicts the boundary of the depressed hemisphere.
 
 For a more careful observation, we provide a similar comparison for the
 secondary potential in 3D space. The top, middle and bottom panels of the
@@ -170,7 +172,8 @@ close to the current source, but it is less than 20 percent.
    :align: center
    :name: ComparisonSecFine
 
-   Comparisons of numerical and analytic secondary potentials with topography. White line depicts the boundary of the depressed hemisphere.
+   Comparisons of numerical and analytic secondary potentials with topography.
+   White line depicts the boundary of the depressed hemisphere.
 
 Interpretations
 ***************
@@ -194,13 +197,15 @@ Coulomb's law (See Section :ref:`gauss_electric_equivalence_to_coulombs_law`).
    :align: center
    :name: ComparisonSecFineChargs
 
-   Section views of total (top panel), primary (middle panel), and secondary (bottom panel) charge densities.
+   Section views of total (top panel), primary (middle panel), and secondary
+   (bottom panel) charge densities.
 
 A rule of thumb for understanding electric fields from charges is:
 
 .. note::
 
-   The electric field is coming out from a positive charge and coming into negative charge.
+   The electric field is coming out from a positive charge and coming into
+   negative charge.
 
 Based on the above principle, first imagine how electric fields are going to
 be distributed in 3D, then check your conjecture with the figure below, which
@@ -217,5 +222,6 @@ straight from the positive to negative charges.
    :align: center
    :name: ComparisonSecFineEfield
 
-   Section views of total (top panel), primary (middle panel), and secondary (bottom panel) electric fields.
+   Section views of total (top panel), primary (middle panel), and secondary
+   (bottom panel) electric fields.
 
