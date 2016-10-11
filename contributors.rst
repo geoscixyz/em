@@ -25,7 +25,7 @@ Thibaut Astic
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="https://avatars1.githubusercontent.com/u/13682747?v=3&s=460"><img alt="https://avatars1.githubusercontent.com/u/13682747?v=3&s=460" class="align-left" src="https://avatars1.githubusercontent.com/u/13682747?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="http://simpeg.xyz/s/img/people/thibaut.jpg"><img alt="http://simpeg.xyz/s/img/people/thibaut.jpg" class="align-left" src="http://simpeg.xyz/s/img/people/thibaut.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
