@@ -3,7 +3,7 @@
 Circuit Model for EM Induction
 ==============================
 
-.. topic:: Purpose
+.. purpose::
 
   The basic principles for EM induction were outlined in CITExxx. Here we use
   an equivalent electric circuit model consisting of three loops to represent

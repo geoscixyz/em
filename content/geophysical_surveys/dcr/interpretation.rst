@@ -3,7 +3,7 @@
 Interpretation
 ==============
 
-.. topic:: Purpose
+.. purpose::
 
     To show how DCR data are processed and inverted to reveal meaningful
     information about the earth structure. This is demonstrated on data

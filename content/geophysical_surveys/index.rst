@@ -3,7 +3,7 @@
 Geophysical Surveys
 ===================
 
-.. topic:: Purpose
+.. purpose::
 
     In this section, we cover the basic principals of using electromagnetic
     geophysical surveys to address geologic, environmental or geotechnical

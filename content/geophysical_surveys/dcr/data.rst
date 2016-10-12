@@ -3,7 +3,7 @@
 Data
 ====
 
-.. topic:: Purpose
+.. purpose::
 
    To show how measured voltages are converted to apparent resistivity and
    plotted as a sounding curve or as a pseudo-section.

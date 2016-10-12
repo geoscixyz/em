@@ -8,6 +8,6 @@ Vector Potentials
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here

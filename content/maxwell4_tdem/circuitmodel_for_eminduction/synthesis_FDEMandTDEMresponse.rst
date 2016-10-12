@@ -3,7 +3,7 @@
 Synthesis: Harmonic and Trasient responses
 ==========================================
 
-.. topic:: Purpose
+.. purpose::
 
     Provide integrated understanding of harmonic and trasient EM responses
     using the simple circuit model.

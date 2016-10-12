@@ -3,7 +3,7 @@
 Circuit Model for EM Induction
 ==============================
 
-.. topic:: Purpose
+.. purpose::
 
     We expand EM reponse derived from the circution model in :ref:`frequency
     domain <emi_tuotorial_index_FD>` to time domain.

@@ -8,6 +8,6 @@ Scalar Potentials
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here

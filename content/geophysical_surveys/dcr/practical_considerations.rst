@@ -8,7 +8,7 @@ Practical Considerations
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     todo
 

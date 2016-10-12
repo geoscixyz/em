@@ -8,7 +8,7 @@ Defining the Problem
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

@@ -3,10 +3,10 @@
 Vector Potential
 ================
 
-.. topic:: Purpose
+.. purpose::
 
     Here, we present an analytic expression for the transient vector potential corresponding to an electric dipole within a homogeneous media.
-    Final expressions are derived in the quasi-static regime. 
+    Final expressions are derived in the quasi-static regime.
 
 
 The vector potential for a time-dependent electric dipole has a simple mathematical representation yet it contains complete information about the electric and magnetic fields.
@@ -40,7 +40,7 @@ The inverse Laplace transform can be obtained trivially by using the following i
 .. math::
 	L^{-1} \Bigg [ \frac{e^{-\alpha \sqrt{s}}}{s} \Bigg ] = \textrm{erfc} \Bigg ( \frac{\alpha}{2 \sqrt{t}} \Bigg ) \; \; \; \textrm{for} \; \; \; \alpha \geq 0
 	:label: Laplace_identity_4
-	
+
 
 Thus, the step response for the vector potential at :math:`t \geq 0` is given by:
 
@@ -62,7 +62,7 @@ Ultimately by the same method as before, the transient vector potential is given
 .. math::
 	{\bf a}(t) = \frac{Ids}{4 \pi r} \textrm{erf} (\theta r) \hat x
 	:label: vector_potential_step_off
- 
+
 
 
 

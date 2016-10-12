@@ -3,7 +3,7 @@
 Direct Current Resistivity
 ==========================
 
-.. topic:: Purpose
+.. purpose::
 
     To illustrate the fundamentals of a DC resistivity survey, provide a
     vision for how it is applied in the field, and demonstrate potential uses.
