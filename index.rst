@@ -3,11 +3,18 @@
 Electromagnetic Geophysics
 ==========================
 
+.. image:: disc_dipole.png
+   :alt: dipole
+   :width: 30%
+   :align: right
+
+
 .. topic:: Purpose
 
    To facilitate the understanding and use of
    electromagnetics in solving exploration, geotechnical and environmental
    problems.
+
 
 The emphasis is on  physical principles of electromagnetic methods and their
 application in solving problems. Rigorous analytic solutions of the EM
