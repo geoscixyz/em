@@ -6,7 +6,7 @@ Time Domain
 .. raw:: html
     :file: ../../../../../underconstruction.html
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

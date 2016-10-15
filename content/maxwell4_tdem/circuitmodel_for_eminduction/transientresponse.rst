@@ -3,7 +3,7 @@
 Transient responses
 ===================
 
-.. topic:: Purpose
+.. purpose::
 
     Understand relationship between transient (TDEM) and harmonic (FDEM)
     responses. Differentiate standard types of trasient responses: a) step-on,

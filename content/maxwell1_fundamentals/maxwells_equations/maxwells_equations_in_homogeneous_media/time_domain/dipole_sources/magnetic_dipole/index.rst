@@ -3,7 +3,7 @@
 Magnetic Dipole
 ===============
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

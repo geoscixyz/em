@@ -3,7 +3,7 @@
 What is it
 ==========
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

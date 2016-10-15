@@ -3,6 +3,6 @@
 Field Transformations
 =====================
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here

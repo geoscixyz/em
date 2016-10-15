@@ -40,6 +40,7 @@ extensions = [
     'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
     'edit_on_github',
+    'purpose'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

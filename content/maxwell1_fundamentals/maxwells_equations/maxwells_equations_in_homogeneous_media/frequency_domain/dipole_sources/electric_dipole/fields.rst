@@ -3,7 +3,7 @@
 Fields
 ======
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

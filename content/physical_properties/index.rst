@@ -3,7 +3,7 @@
 Physical Properties
 ===================
 
-.. topic:: Purpose
+.. purpose::
 
     Generate a resource that has a commpilation of values for physical
     properties as a function of rock type, mineral composition and saturating

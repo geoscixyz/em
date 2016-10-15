@@ -13,7 +13,6 @@ Introduction
 .. toctree::
     :maxdepth: 2
 
-    introduction_about
     introduction_basic_electromagnetic_experiments
     introduction_notation
 

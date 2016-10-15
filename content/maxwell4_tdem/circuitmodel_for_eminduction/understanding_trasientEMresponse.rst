@@ -3,7 +3,7 @@
 Understanding the Transient EM response
 =======================================
 
-.. topic:: Purpose
+.. purpose::
 
     We provide expressions for trasient responses of the circuit model,
     compare them with harmonic responses, and understand their decay features.

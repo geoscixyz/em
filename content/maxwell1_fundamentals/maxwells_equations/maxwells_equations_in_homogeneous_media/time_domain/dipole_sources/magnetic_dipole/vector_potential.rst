@@ -3,7 +3,7 @@
 Vector Potential
 ================
 
-.. topic:: Purpose
+.. purpose::
 
     Here, we present an analytic expression for the transient vector potential corresponding to a magnetic dipole within a homogeneous media.
     Once again, expressions are derived for the quasi-static regime.
@@ -69,5 +69,5 @@ Thus, the transient vector potential for a magnetic dipole within a homogeneous 
 
 
 
- 
+
 

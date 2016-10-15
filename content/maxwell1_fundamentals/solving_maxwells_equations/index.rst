@@ -8,7 +8,7 @@ Solving Maxwell's Equations
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Equip a choice from among the arsenal of tools we have for investigating,
     simulating and visualizing electromagnetic fields and fluxes.

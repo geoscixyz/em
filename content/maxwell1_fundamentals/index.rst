@@ -3,7 +3,7 @@
 Maxwell I: Fundamentals
 =======================
 
-.. topic:: Purpose
+.. purpose::
 
     We provide the mathematical and physical framework  for equations,
     ultimately formulated by Maxwell, that form the basis for EM surveys.

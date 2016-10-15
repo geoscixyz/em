@@ -3,7 +3,7 @@
 Vector Potential
 ================
 
-.. topic:: Purpose
+.. purpose::
 
     purpose here
 
@@ -15,4 +15,4 @@ For an electric current dipole in the :math:`\hat{x}` direction, and with moment
 	\mathbf{A}(\mathbf{r}) = \frac{I ds}{4\pi r} e^{-ikr} \hat{x}
 	:label: A_Potential_for_Je_x
 
-where :math:`k = (\omega^2\mu\epsilon -i\omega\mu\sigma)^{1/2}` 
+where :math:`k = (\omega^2\mu\epsilon -i\omega\mu\sigma)^{1/2}`

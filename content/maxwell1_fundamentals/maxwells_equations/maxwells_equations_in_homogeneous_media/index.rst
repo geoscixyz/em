@@ -6,7 +6,7 @@ Maxwell's Equations in Homogeneous Media
 .. raw:: html
     :file: ../../../../underconstruction.html
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 
