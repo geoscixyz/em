@@ -3,11 +3,11 @@
 Asymptotics
 ===========
 
-.. topic:: Purpose
+.. purpose::
 
     Here, we present near-field/late-time approximations for the transient electric and magnetic fields.
-    
-    
+
+
 
 Near-Field/Late-Times
 ---------------------
@@ -24,7 +24,7 @@ In this case, the exponential and error functions can be approximated using Tayl
 .. math::
 	e^{-\theta^2 r^2} = 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...
 	:label: Taylor_expansion_exp
-	
+
 and
 
 .. math::
@@ -45,7 +45,7 @@ Therefore, the :math:`\hat x` component of the electric field decays proportiona
 For the magnetic field, the near-field/late-time approximation is given by:
 
 .. math::
-	{\bf h_e}(t) \approx \frac{\theta^3 Ids}{3\pi^{3/2}} \big (-z \, \hat y + y \, \hat z \big ) 
+	{\bf h_e}(t) \approx \frac{\theta^3 Ids}{3\pi^{3/2}} \big (-z \, \hat y + y \, \hat z \big )
 	:label: h_nearfield_latetime
 
 According to Eq. :eq:`h_nearfield_latetime`, the near-field/late-time electric field decays proportional to :math:`t^{-3/2}`.
@@ -76,7 +76,7 @@ In this case, the exponential and complimentary error function can be approximat
 .. math::
 	e^{-\theta^2 r^2} \approx 0
 	:label: exp_approximation
-	
+
 and
 
 .. math::

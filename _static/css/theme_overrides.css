@@ -22,3 +22,15 @@
     padding-left: 20px;
     padding-right: 20px
 }
+
+div.admonition-purpose.admonition {
+    background-color: #f0f0f0 !important;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 1px 12px;
+    margin-bottom: 12px;
+}
+
+#purpose.admonition-purpose.admonition .admonition-title {
+    background-color: #175f59 !important;
+}

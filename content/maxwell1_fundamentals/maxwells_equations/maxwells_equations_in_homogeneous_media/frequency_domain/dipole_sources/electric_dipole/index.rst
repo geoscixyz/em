@@ -3,7 +3,7 @@
 Electric Dipole
 ===============
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

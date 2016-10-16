@@ -3,7 +3,7 @@
 Electrical Conductivity
 =======================
 
-.. topic:: Purpose
+.. purpose::
 
     Using any electromagnetic geophysical survey we excite the earth, and
     measure signals from the earth. Measured EM signals is mostly depending

@@ -8,7 +8,7 @@ Maxwell's equations in time
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     We combine the first-order partial :ref:`differential equations
     <differential_equations_time>` into second-order equations for :math:`\mathbf{e}`

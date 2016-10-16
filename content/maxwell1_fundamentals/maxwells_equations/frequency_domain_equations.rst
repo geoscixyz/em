@@ -8,7 +8,7 @@ Maxwell's equations in frequency
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     By taking the Fourier transform of Maxwell's wave equation in the time
     domain, we obtain the vector Helmholtz equation for the :math:`\mathbf{e}`

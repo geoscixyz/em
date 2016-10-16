@@ -3,7 +3,7 @@
 Survey Design
 =============
 
-.. topic:: Purpose
+.. purpose::
 
     To discuss the principles and parameters that need to be chosen for an
     airborne FDEM survey.

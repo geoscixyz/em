@@ -3,7 +3,7 @@
 Plane Wave Sources
 ==================
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

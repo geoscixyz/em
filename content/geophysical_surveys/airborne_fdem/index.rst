@@ -3,7 +3,7 @@
 Airborne FDEM
 =============
 
-.. topic:: Purpose
+.. purpose::
 
    To illustrate the fundamentals of an airborne frequency domain EM survey,
    provide a vision for how it is applied in the field, and demonstrate

@@ -3,7 +3,7 @@
 Asymptotics
 ===========
 
-.. topic:: Purpose
+.. purpose::
 
     Here, we present near-field/late-time approximations for the transient electric and magnetic fields.
 
@@ -24,7 +24,7 @@ As a result, the exponential and error functions can be approximated using Taylo
 .. math::
 	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...
 	:label: Taylor_expansion_exp
-	
+
 and
 
 .. math::
@@ -78,7 +78,7 @@ In this case, the exponential and complimentary error function can be approximat
 .. math::
 	e^{-\theta^2 r^2} \approx 0
 	:label: exp_approximation
-	
+
 and
 
 .. math::

@@ -3,7 +3,7 @@
 Response of a layered Earth to a plane wave
 ===========================================
 
-.. topic:: Purpose
+.. purpose::
 
     Plane wave propagation through the earth is at the core of the
     Magnetotelluric problem. Here, we investigate the physics of plane wave
