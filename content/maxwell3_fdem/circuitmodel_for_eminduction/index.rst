@@ -5,12 +5,12 @@ Circuit Model for EM Induction
 
 .. purpose::
 
-  The basic principles for EM induction were outlined in CITExxx. Here we use
+  The basic principles for EM induction were outlined in Link. Here we use
   an equivalent electric circuit model consisting of three loops to represent
-  that process. We derive theinductive response function in terms of circuits,
+  that process. We derive the inductive response function in terms of circuits,
   mutual and self-inductance, and coupling. Widgets are developed to help
-  physical understanding. The response functions for manypractical geophysical
-  surveys resemble that from the circuit model andhence much intuition about
+  physical understanding. The response functions for many practical geophysical
+  surveys resemble that from the circuit model and hence much intuition about
   EM signals can be obtained using this analysis.
 
 The basic EM  survey is shown in :numref:`Concepts_3loops`. The time varying

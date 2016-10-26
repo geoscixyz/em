@@ -107,7 +107,7 @@ This process can be explained by mutual inductance: :math:`M_{13}` will have
 (-) because the primary field lines mostly goes up at Rx. Similarly
 :math:`M_{12}` and :math:`M_{23}` have (+) and (-) signs, respectively.
 Therefore, the sign of coupling coefficient will be positive. Note that not
-only sign but also geometric decay is considered in the mutual inductnace so
+only sign but also geometric decay is considered in the mutual inductance so
 as in the coupling coefficient. The coupling coefficient among three loops
 will change as Tx and Rx loow is moving along the surface.
 

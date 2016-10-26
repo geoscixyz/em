@@ -6,8 +6,8 @@ Transient responses
 .. purpose::
 
     Understand relationship between transient (TDEM) and harmonic (FDEM)
-    responses. Differentiate standard types of trasient responses: a) step-on,
-    b) imupulse, and c) step-off.
+    responses. Differentiate standard types of transient responses: a) step-on,
+    b) impulse, and c) step-off.
 
 .. plot::
 
@@ -79,7 +79,7 @@ a damping facttor :math:`e^{-pt} \ (p>0)` and taking limit:
 If the Fourier transform of :math:`u(t)` is :math:`\frac{1}{\imath \omega}`
 then it is clear that the transformation of the secondary field
 :math:`h^s_{on}` produced by a step-on current: :math:`I u(t)` is related to
-the respones :math:`H^s (\omega) e^{\imath \omega t}` due to a sinusoidal
+the response :math:`H^s (\omega) e^{\imath \omega t}` due to a sinusoidal
 current: :math:`I e^{\imath \omega t}` as follows:
 
 .. math::
@@ -98,7 +98,7 @@ and thus
 .. math::
     H^s(\omega) = \imath \omega \int_{0}^{\infty} h^s_{on}(t) e^{-\imath \omega t} d t
 
-Therfore, the harmonic response is computable if the transient response
+Therefore, the harmonic response is computable if the transient response
 :math:`h^s_{on}(t)` is known for :math:`t>0`.
 
 Impulse response
@@ -106,7 +106,7 @@ Impulse response
 
 Impulse response indicates that we put Dirac-Delta function as a current,
 which corresponds steady-state source in frequency domain (:math:`Ie^{\imath
-\omega t}`). Note that Fourier transfrom of :math:`Ie^{\imath \omega t}` is
+\omega t}`). Note that Fourier transform of :math:`Ie^{\imath \omega t}` is
 :math:`I\delta(t)`, where :math:`\delta(t)` is Dirac-Delta function.
 
 From step-on response :math:`h^s_{on}(t)`, we can simply obtain impulse
@@ -140,6 +140,6 @@ Then step-off response :math:`h^s_{off}(t)` can be
     h^s_{off}(t) = \int_{0}^{\infty} h^s(\tau) d \tau - \int_{0}^t h^s(\tau) d \tau \\
                  = h^s_{on}(\infty) - h^s_{on}(t), \ \ t > 0
 
-Thust he derivativeo :math:`h^s_{off}(t)` with respectt to time is
+Thus the derivative of :math:`h^s_{off}(t)` with respect to time is
 :math:`-h^s(t)`, which is the negative of the impulse response. In the
-following section, we discuss trasient responses from the circuit model.
+following section, we discuss transient responses from the circuit model.

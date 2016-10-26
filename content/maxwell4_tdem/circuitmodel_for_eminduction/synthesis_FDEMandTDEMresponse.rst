@@ -1,11 +1,11 @@
 .. _synthesis_FDEMandTDEMresponse:
 
-Synthesis: Harmonic and Trasient responses
+Synthesis: Harmonic and Transient responses
 ==========================================
 
 .. purpose::
 
-    Provide integrated understanding of harmonic and trasient EM responses
+    Provide integrated understanding of harmonic and transient EM responses
     using the simple circuit model.
 
 .. plot::
@@ -46,11 +46,11 @@ time, and they are due to sinusoidal and step (either on or off) current. If
 we have full band of frequency or time, then we can obtain one from the other.
 However, in practice our measured band is limited hence each response can
 sense different information of the earth. Often, harmonic one is called
-freqeuncy domain EM and trasient one is called time domain EM.
+frequency domain EM and transient one is called time domain EM.
 
 An important feature in the harmonic case was the normalization of secondary
 EMF with the primary EMF, and this is same has the ratio between secondary and
-primary magnetic field. In constrast, for the trasient response, this
+primary magnetic field. In contrast, for the transient response, this
 normalization was not available because the primary EMF is zero when
 :math:`t>0`, and this feature emphasized the importance of **scale** in
 transient response.
@@ -115,8 +115,8 @@ Resistive Limit
 At this limit the induced currents have penetrated the body fully, and
 conductivity information can be extracted as well as geometry.
 
-The resitive limit is defined in the frequency domain as the slope of the
-response function as freuqency approaches to zero:
+The restive limit is defined in the frequency domain as the slope of the
+response function as frequency approaches to zero:
 
 .. math::
     \lim_{\omega \rightarrow 0} \frac{1}{\imath}\frac{\partial Q(\omega)}{\partial \omega} = \tau,
@@ -126,7 +126,7 @@ which has the exact time-domain equivalent
 .. math::
     \int_{0}^{\infty}q_{on}(t) = \tau
 
-Effectively, harmonic and trasient response at the resistive limit can be writte as
+Effectively, harmonic and transient response at the resistive limit can be written as
 
 .. math::
     \text{Resistive limit:}\ \frac{H^s}{H^p} = \imath \omega \tau C

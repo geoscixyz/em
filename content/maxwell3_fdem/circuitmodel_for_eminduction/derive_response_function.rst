@@ -79,7 +79,7 @@ In most cases the apparatus measures this anomalous voltage by comparing it with
     = - \frac{M_{12}M_{23}}{M_{13}L} \Big[\frac{\imath \omega L/R}{ 1 + \imath \omega L/R} \Big] \\
     = C Q (\alpha)
 
-The EM response is composed of two parts: coupling coefficent, C and reponse function, Q, whcih can be written as
+The EM response is composed of two parts: coupling coefficient, C and response function, Q, which can be written as
 
 .. math::
     C = - \frac{M_{12}M_{23}}{M_{13}L}

@@ -5,7 +5,7 @@ Circuit Model for EM Induction
 
 .. purpose::
 
-    We expand EM reponse derived from the circution model in :ref:`frequency
+    We expand EM response derived from the circuit model in :ref:`frequency
     domain <emi_tuotorial_index_FD>` to time domain.
 
 The basic EM  survey is shown in :numref:`Concepts_3loops_TD`. The time
