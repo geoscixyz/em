@@ -3,7 +3,7 @@
 Analytic Solution
 =================
 
-.. topic:: Purpose
+.. purpose::
 
     We provide solutions of Plane wave equations in frquency domain for the homogeneous medium. And from the solutions, we extract meaningful physical principles: wavenumber, skin depth, phase velocity, and wave legnth of EM waves.
 

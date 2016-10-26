@@ -4,7 +4,7 @@ Formative Laws
 ==============
 
 
-.. topic:: Purpose
+.. purpose::
 
     We provide an overview of selected scientists and their laws that
     ultimately form the physical basis for Maxwell’s equations

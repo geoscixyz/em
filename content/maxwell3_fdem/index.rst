@@ -8,7 +8,7 @@ Maxwell III: FDEM
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

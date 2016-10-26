@@ -40,6 +40,7 @@ extensions = [
     'sphinxcontrib.bibtex',
     'matplotlib.sphinxext.plot_directive',
     'edit_on_github',
+    'purpose'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -102,6 +103,7 @@ exclude_patterns = [
     'content/geophysical_surveys/airborne_fdem/transmitters_and_receivers.rst',
     'content/geophysical_surveys/airborne_fdem/systems.rst',
     'content/geophysical_surveys/airborne_tdem/systems.rst',
+    '*/content/case_histories/case_histories.rst'
                     ]
 
 linkcheck_ignore = [
@@ -503,8 +505,13 @@ epub_exclude_files = ['search.html']
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
 
-from _ext import make_contributorslist, make_formula_sheet, checkDependencies, supress_nonlocal_image_warn
+from _ext import (
+    make_contributorslist, make_formula_sheet, make_case_histories,
+    checkDependencies, supress_nonlocal_image_warn
+    )
+
 make_contributorslist()
 make_formula_sheet()
+make_case_histories()
 # checkDependencies()
 supress_nonlocal_image_warn()

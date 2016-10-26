@@ -3,10 +3,11 @@
 Interpretation
 ==============
 
-.. topic:: Purpose
-  
-  To show how airborne FDEM data are processed and inverted to reveal meaningful information about the earth structure. 
-   
+.. purpose::
+
+    To show how airborne FDEM data are processed and inverted to reveal
+    meaningful information about the earth structure.
+
 Interpretation is the process that extracts information in the delivered data
 to make decisions or to derive geologic knowledge. Depending on the specific
 geologic questions asked, and the resources available, geophysicists can
@@ -60,7 +61,7 @@ conductivity transform, empirical template method, etc. Those simple methods
 were once the mainstream, but have shown drawbacks in complex geological
 setting and lack the ability to decode the conductivity values from the data.
 However, it still has its value in data quality control and preliminary
-interpretation. 
+interpretation.
 
 Apparent conductivity
 *********************
@@ -71,14 +72,19 @@ uniform half-space that would generate the same data at a particular time or
 frequency. It can be considered as a lumping averaging of the conductivities
 around the measurement location. Despite its blending effect, it provides
 qualitative insight about how the conductivity varies from shallow (high
-frequency) to deep (low frequency). In combination with a depth estimation 
+frequency) to deep (low frequency). In combination with a depth estimation
 using skin depth, apparent conductivity forms the basis of a host of imaging
 methods, referred to as conductivity-depth transform (CDT) or imaging (CDI).
 
 Time constant
 *************
 
-For a time domain system, the voltage measured off time at the receiver is roughly an exponentially decaying function of time. The decay rate is an indicator of the overall conductivity of the ground: good conductors have slower decays (greater time constant) and poor conductors have faster decays (smaller time constant). Time constant (or decay constant, tau) method offers a first-order interpretation of the overall conductivity of the ground.
+For a time domain system, the voltage measured off time at the receiver is
+roughly an exponentially decaying function of time. The decay rate is an
+indicator of the overall conductivity of the ground: good conductors have
+slower decays (greater time constant) and poor conductors have faster decays
+(smaller time constant). Time constant (or decay constant, tau) method offers
+a first-order interpretation of the overall conductivity of the ground.
 
 
 Quantitative Inversion

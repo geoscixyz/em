@@ -3,7 +3,7 @@
 Asymptotic Approximations
 =========================
 
-.. topic:: Purpose
+.. purpose::
 
     Here, simplified expressions for the electric and magnetic fields are presented for several cases.
     By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
@@ -49,7 +49,7 @@ Thus:
 	\mathbf{H}_m \approx \frac{m}{4 \pi r^3} \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right]
 	:label: eq_Mdip_Hnear1
 
-Eq. :eq:`eq_Mdip_Hnear1` can be simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher. 
+Eq. :eq:`eq_Mdip_Hnear1` can be simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 
 .. math::
 	\mathbf{H}_m \approx \frac{m}{4 \pi r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right] + O(k^2 r^2 )
@@ -62,10 +62,10 @@ The near-field approximation for :math:`\mathbf{E}_m` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{E}_m \approx \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right ) \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) 
+	\mathbf{E}_m \approx \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right ) \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
 	:label: eq_Mdip_Enear1
 
-Eq. :eq:`eq_Mdip_Enear1` can be further simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher. 
+Eq. :eq:`eq_Mdip_Enear1` can be further simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 Therefore, the electric field in close proximity to magnetic dipole moment :math:`\hat x I S` is approximately equal to:
 
 .. math::
@@ -80,7 +80,7 @@ Far-Field Approximation
 
 For fields which are sufficient far away from the electric dipole source, we may assume that :math:`1 \ll | kr |`.
 In this case, Taylor expansion may not be used to simplify exponential terms in full analytic solutions for the fields.
-Expressions may still be simplified, however, by considering the largest order terms in each equation. 
+Expressions may still be simplified, however, by considering the largest order terms in each equation.
 
 Let us first consider the far-field approximation of :math:`\mathbf{H}_m` within a uniform medium.
 For off-axis locations (:math:`y,z \not \ll x`), only :math:`O (k^2r^2)` terms are needed to accurately approximate the electric field from an electric dipole source.

@@ -3,7 +3,7 @@
 Asymptotic Approximations
 =========================
 
-.. topic:: Purpose
+.. purpose::
 
     Here, simplified expressions for the electric and magnetic fields are presented for several cases.
     By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
@@ -26,7 +26,7 @@ As a result, the exponential and error functions can be approximated using Taylo
 .. math::
 	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...
 	:label: Taylor_expansion_exp
-	
+
 and
 
 .. math::
@@ -80,7 +80,7 @@ In this case, the exponential and complimentary error function can be approximat
 .. math::
 	e^{-\theta^2 r^2} \approx 0
 	:label: exp_approximation
-	
+
 and
 
 .. math::

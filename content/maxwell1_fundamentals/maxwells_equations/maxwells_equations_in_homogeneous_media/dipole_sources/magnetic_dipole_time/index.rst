@@ -3,7 +3,7 @@
 Transient Magnetic Dipole
 =========================
 
-.. topic:: Purpose
+.. purpose::
 
     Here, we provide a physical description for the transient magnetic dipole.
     

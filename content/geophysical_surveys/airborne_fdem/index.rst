@@ -3,9 +3,11 @@
 Airborne FDEM
 =============
 
-.. topic:: Purpose
+.. purpose::
 
-   To illustrate the fundamentals of an airborne frequency domain EM survey, provide a vision for how it is applied in the field, and demonstrate potential uses.
+   To illustrate the fundamentals of an airborne frequency domain EM survey,
+   provide a vision for how it is applied in the field, and demonstrate
+   potential uses.
 
 .. figure:: ./images/afem_cover.jpg
    :align: right
@@ -30,14 +32,14 @@ magnetic field. Then this secondary current can generate a time harmonic
 secondary magnetic field that induced an electromotive force in the receiver
 loop. The capability of generating the induced current is determined by the
 ground conductivity, and possibly the magnetic permeability. Generally
-speaking, more conductive ground tends to be more responsive. 
+speaking, more conductive ground tends to be more responsive.
 
 Mounting transmitter and receiver on an aircraft, an airborne system can quickly probe the
 earth's conductivity over large areas, so it has been used in
 geological mapping and regional assessment for groundwater, mineral/petroleum
 exploration and geothermal resource. Compared to ground-based surveys,
 airborne EM may have higher level of noise due to the instability of the
-platform, which limits its depth penetration. 
+platform, which limits its depth penetration.
 
 
 **Contents**

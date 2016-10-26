@@ -93,6 +93,7 @@ skip_files:
   - ^\.git/.*
   - \.*\.lint$
   - ^(.*/)?.*\.doctree$
+  - ^(.*/)?doctrees/.*
 
 libraries:
 - name: webapp2

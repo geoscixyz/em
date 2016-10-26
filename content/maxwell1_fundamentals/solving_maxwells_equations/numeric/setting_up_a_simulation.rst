@@ -8,7 +8,7 @@ Setting up a simulation
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

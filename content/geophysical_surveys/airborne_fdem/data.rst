@@ -3,9 +3,10 @@
 Data
 ====
 
-.. topic:: Purpose 
+.. purpose::
 
-   To show how an airborne FDEM system measure the induced secondary field as data and the ways of visualizing them.
+   To show how an airborne FDEM system measure the induced secondary field as
+   data and the ways of visualizing them.
 
 Definition
 ----------
