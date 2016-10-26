@@ -3,7 +3,7 @@
 Fields
 ======
 
-.. topic:: Purpose
+.. purpose::
 
     Provide explicit expressions for both eletric and magnetic fields for plane EM wave equations, and understand the concept of the impedance, apparent resistivity, and phase.
 
