@@ -1,7 +1,7 @@
 .. _synthesis_FDEMandTDEMresponse:
 
 Synthesis: Harmonic and Transient responses
-==========================================
+===========================================
 
 .. purpose::
 
