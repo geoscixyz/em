@@ -40,27 +40,25 @@ Mt. Isa
 
         
 
-The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bookpurnong
+^^^^^^^^^^^
 
-.. image:: ./balboa/images/bboa_thumbnail.png
-    :alt: balboa
+.. image:: ./bookpurnong/images/booky-hydro.jpg
+    :alt: bookpurnong
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama Case History <balboa_index>`
+- :ref:`Bookpurnong Case History <bookpurnong_index>`
 
 
 - Contributors
-    - author: :ref:`jlegault`, :ref:`cwijns`, :ref:`cizarra`, :ref:`gplastow`
-    - reviewer: :ref:`skang`, :ref:`doldenburg`, :ref:`lheagy`
+    - author: :ref:`dyang`
 
 
 - Tags
-    - geophysical survey: Airborne NSEM
-    - application: Mining
-    - location: Panama
-    - keyword: ZTEM, porphyry, copper, gold
+    - geophysical survey: Airborne FDEM, Airborne TDEM
+    - application: Groundwater
+    - location: Australia
 
 |
 |
@@ -99,34 +97,6 @@ Aspen
 
         
 
-Bookpurnong
-^^^^^^^^^^^
-
-.. image:: ./bookpurnong/images/booky-hydro.jpg
-    :alt: bookpurnong
-    :width: 260
-    :align: right
-
-- :ref:`Bookpurnong Case History <bookpurnong_index>`
-
-
-- Contributors
-    - author: :ref:`dyang`
-
-
-- Tags
-    - geophysical survey: Airborne FDEM, Airborne TDEM
-    - application: Groundwater
-    - location: Australia
-
-|
-|
-|
-
-
-
-        
-
 Elevenmile Canyon
 ^^^^^^^^^^^^^^^^^
 
@@ -147,6 +117,64 @@ Elevenmile Canyon
     - application: Geothermal
     - location: United States of America
     - keyword: ZTEM
+
+|
+|
+|
+
+
+
+        
+
+3D Helicopter GPR surveying a rock glacier
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: ./rockglacier/images/furggwanghorn_heligpr.png
+    :alt: rockglacier
+    :width: 260
+    :align: right
+
+- :ref:`3D Helicopter GPR surveying a rock glacier Case History <rockglacier_index>`
+
+
+- Contributors
+    - reviewer: :ref:`skang`
+
+
+- Tags
+    - geophysical survey: GPR
+    - application: Geotechnical
+    - location: Switzerland
+
+|
+|
+|
+
+
+
+        
+
+The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: ./balboa/images/bboa_thumbnail.png
+    :alt: balboa
+    :width: 260
+    :align: right
+
+- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama Case History <balboa_index>`
+
+
+- Contributors
+    - author: :ref:`jlegault`, :ref:`cwijns`, :ref:`cizarra`, :ref:`gplastow`
+    - reviewer: :ref:`skang`, :ref:`doldenburg`, :ref:`lheagy`
+
+
+- Tags
+    - geophysical survey: Airborne NSEM
+    - application: Mining
+    - location: Panama
+    - keyword: ZTEM, porphyry, copper, gold
 
 |
 |

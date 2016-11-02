@@ -9,7 +9,7 @@ The general consistency of the H-GPR sections and some of the large scale featur
 
 .. raw:: html
 
-    <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://youtu.be/embed/NFAUUG78HJY" frameborder="0" allowfullscreen></iframe></div>
+    <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/NFAUUG78HJY?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 Animation 1. 3D representation of the H-GPR images.
 
@@ -64,6 +64,6 @@ Marked increases in reflectivity below the low reflectivity region are interpret
 
 .. raw:: html
 
-    <div style="margin: 0px auto; text-align: center;"><iframe src="https://youtu.be/embed/GU2n6C0iKjM" frameborder="0" allowfullscreen></iframe></div>
+    <div style="margin: 0px auto; text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/GU2n6C0iKjM?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 Animation 2. Images of bedrock, major shear zone and rock glacier lobes.

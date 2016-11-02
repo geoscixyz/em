@@ -3,14 +3,15 @@
 Lessons worth highlighting
 ==========================
 
-1. Members of our group were amongst the first to publish positive results of employing the surface-based GPR method for investigating a rock glacier (Lehmann and Green, 2000) and were probably the first to report poor results (Musil et al., 2006). The study of the Furggwanghorn rock glacier is a second example that reveals potential limitations of the method as applied to rock glaciers. For the practitioners of geophysical techniques, we suggest that case studies that include negative results are as useful as those that describe only positive results.
+- Members of our group were amongst the first to publish positive results of employing the surface-based GPR method for investigating a rock glacier (Lehmann and Green, 2000) and were probably the first to report poor results (Musil et al., 2006). The study of the Furggwanghorn rock glacier is a second example that reveals potential limitations of the method as applied to rock glaciers. For the practitioners of geophysical techniques, we suggest that case studies that include negative results are as useful as those that describe only positive results.
 
-2. In addition to supplying dependable images of the subsurface, the H-GPR method has three noteworthy advantages:
-i.	It does not require the snow cover required for efficient surface-based geophysical surveying a rock glacier.
-ii. It can be applied in many areas that are challenging or hazardous to explore using surface-based techniques; as well as rock glaciers, such areas include many mountain slopes, debris avalanches, scree slopes and rockfalls.
-iii. For large regions, it is much faster and less expensive than the surface-based GPR method; areas requiring several weeks to survey on the ground could be surveyed by a helicopter mounted system in a single day.
+- In addition to supplying dependable images of the subsurface, the H-GPR method has three noteworthy advantages:
 
-3. Recent rapid developments of unmanned aircraft may soon make it possible to conduct 3D surveys using a drone mounted GPR system.
+    i.	It does not require the snow cover required for efficient surface-based geophysical surveying a rock glacier.
+    ii. It can be applied in many areas that are challenging or hazardous to explore using surface-based techniques; as well as rock glaciers, such areas include many mountain slopes, debris avalanches, scree slopes and rockfalls.
+    iii. For large regions, it is much faster and less expensive than the surface-based GPR method; areas requiring several weeks to survey on the ground could be surveyed by a helicopter mounted system in a single day.
+
+- Recent rapid developments of unmanned aircraft may soon make it possible to conduct 3D surveys using a drone mounted GPR system.
 
 
 Acknowledgments
