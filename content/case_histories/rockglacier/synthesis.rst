@@ -3,7 +3,7 @@
 New Thin Skinned Rock Glacier Model
 ===================================
 
-The well established thin-skinned tectonic model in which nappes are transported along one or more décollements (Cook et al., 1979) of a continental mountain system is an analogue for our structural and kinematic model of the Furggwanghorn rock glacier (:numref:`gprsyn`) At our study site, the major shear zone is a décollement and the rock glacier lobes are equivalent to the nappes. All lobes are presently moving downslope. As for the mountain belt example, the fault zones bounding the rock glacier lobes sole into the décollement and there is little or no displacements at greater depths. The new thin skinned rock glacier model may be applicable to many other rock glaciers.
+The well established thin-skinned tectonic model in which nappes are transported along one or more décollements :cite:`cook1979` of a continental mountain system is an analogue for our structural and kinematic model of the Furggwanghorn rock glacier (:numref:`gprsyn`) At our study site, the major shear zone is a décollement and the rock glacier lobes are equivalent to the nappes. All lobes are presently moving downslope. As for the mountain belt example, the fault zones bounding the rock glacier lobes sole into the décollement and there is little or no displacements at greater depths. The new thin skinned rock glacier model may be applicable to many other rock glaciers.
 
 .. figure:: images/gprsyn.png
     :align: center
@@ -25,9 +25,3 @@ Synthesis
 - Can H-GPR data acquired along closely spaced lines and limited intersecting lines be used to construct a dependable 3D image of the entire Furggwanghorn rock glacier? Images on adjacent and crossing lines revealed a segmented rock glacier within which the upper region comprised four reflective lobes separated by fault zones that soled into a major shear zone. The region of rock glacier underlying the major shear zone was largely nonreflective. Reflective basement was detected below the nonreflective part of the rock glacier. Borehole observations demonstrated the ice rich and ice poor nature of the upper highly reflective and low reflective regions, respectively, and determined the current movement rates across the major shear zone.
 
 - Does such a 3D GPR image provide new insights into the rock glacier's evolution and continuing development? A combined interpretation of the H-GPR data images with information supplied by geological and geotechnical borehole observations led to a new thin skinned rock glacier model.
-
-.. Refs:
-.. Barsch, 1996 -> barch1996
-.. Buchli et al., 2013 -> buchil2013
-.. Merz et al., 2015a -> merz2015a
-.. Cook et al., 1979 -> cook1979

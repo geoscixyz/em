@@ -7,7 +7,7 @@ Nonmigrated GPR images of geological structures comprise reflections and diffrac
 
 .. _PermiCondTable:
 
-**Table 1:** 1 Relative electrical permittivities and electrical conductivities of materials within rock glaciers (Annan, 2007).
+**Table 1:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
 
 +---------------------------+---------------------------+--------------------------------------+
 | **Material**              | **Relative Permittivity** | **Electrical Conductivity (mS/m)**   |
@@ -32,7 +32,7 @@ Nonmigrated GPR images of geological structures comprise reflections and diffrac
 +---------------------------+---------------------------+--------------------------------------+
 
 
-GPR velocities of a small part of the Furggwanghorn rock glacier have been determined from crosshole experiments (:numref:`furggwanghorn_gprvel` ; Merz et al., 2016). We have interpreted the type of rock glacier material at locations a to e in :numref:`furggwanghorn_gprvel`  based on borehole information and nearly coincident seismic velocity and electrical resistivity models (:ref:`Table 2<GPRvelTable>`; Merz et al. 2016).
+GPR velocities of a small part of the Furggwanghorn rock glacier have been determined from crosshole experiments (Fig. 4; Merz et al., 2016). We have interpreted the type of rock glacier material at locations a to e in Fig. 4 based on borehole information and nearly coincident seismic velocity and electrical resistivity models (:ref:`Table 2<GPRvelTable>`; Merz et al. 2016).
 
 Since the tomographic experiment sampled only a limited range of the geological and pore filling material at the Furggwanghorn site (Merz et al., 2016), we have added to :ref:`Table 2<GPRvelTable>` GPR velocities and attenuations of rock glacier material determined at a similar rock glacier in eastern Switzerland (Musil et al., 2006). The various rock glacier units and bedrock have a sufficient range of physical properties, in particular the velocities (80 to >140 m/μs), to generate significant reflections between the units and between the rock glacier and bedrock.
 
@@ -44,12 +44,12 @@ Since the tomographic experiment sampled only a limited range of the geological 
     :name: furggwanghorn_gprvel
 
 
-    GPR velocity tomogram derived from traveltime data acquired between boreholes F1, F2, F3 and F4 (locations are shown in :numref:`furggwanghorn_map` c and :numref:`furggwanghorn_gprsurvey`).
+    GPR velocity tomogram derived from traveltime data acquired between boreholes F1, F2, F3 and F4 (locations are shown in :numref:`furggwanghorn_map` c and :numref:`furggwanghorn_geo`).
 
 
 .. _GPRvelTable:
 
-**Table 2:** 2 GPR velocities of rock glacier material at the Furggwanghorn rock glacier in the western Swiss Alps1 (Merz et al., 2016) and GPR velocities and attenuations of rock glacier material at the Muragl rock glacier in the eastern Swiss Alps2 (Musil et al., 2006).
+**Table 2:** GPR velocities of rock glacier material at the Furggwanghorn rock glacier in the western Swiss Alps1 (Merz et al., 2016) and GPR velocities and attenuations of rock glacier material at the Muragl rock glacier in the eastern Swiss Alps2 (Musil et al., 2006).
 
 +------------------------------------------------------+------------------------------------+------------------------+
 | **Material**                                         | **Velocity (m/μs)**                | **Attenuation (1/m)**  |
@@ -71,12 +71,5 @@ Since the tomographic experiment sampled only a limited range of the geological 
 +------------------------------------------------------+------------------------------------+------------------------+
 
 
-.. Refs:
-.. Barsch, 1996
-.. Buchli et al., 2013
-.. Buchli et al., 2013
-.. Merz et al., 2015a
-.. Merz et al., 2016
-.. Musil et al., 2006
 
 

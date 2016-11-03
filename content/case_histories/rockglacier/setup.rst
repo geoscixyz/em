@@ -3,7 +3,7 @@
 Setup
 =====
 
-Rock glaciers are large lobate shaped bodies that vary from masses of ice overlain by boulders and debris to accumulations of boulders and debris glued together by ice (Burger et al., 1999). They are ubiquitous in the mountains of most continents, with tens of thousands worldwide (Barsch, 1996). Our study site on the Furggwanghorn rock glacier is located in the western Swiss Alps (:numref:`furggwanghorn_map` a and b). This boulder dominated rock glacier is ~360 m long and ~180 m wide at an altitude of 2750 ‑ 2900 m asl (Buchli et al., 2013). Various studies show that its downslope movement has recently accelerated from 1.5 m/yr to as much as 4.0 m/yr in some places (Buchli et al., 2013; Merz et al., 2015a).
+Rock glaciers are large lobate shaped bodies that vary from masses of ice overlain by boulders and debris to accumulations of boulders and debris glued together by ice (Burger et al., 1999). They are ubiquitous in the mountains of most continents, with tens of thousands worldwide (Barsch, 1996). Our study site on the Furggwanghorn rock glacier is located in the western Swiss Alps (:numref:`furggwanghorn_map` a and b). This boulder dominated rock glacier is ~360 m long and ~180 m wide at an altitude of 2750 ‑ 2900 m asl :cite:`buchli2013`. Various studies show that its downslope movement has recently accelerated from 1.5 m/yr to as much as 4.0 m/yr in some places (:cite:`buchli2013`; :cite:`merz2015a`).
 
 The primary questions addressed in this Case History are:
 
@@ -24,7 +24,7 @@ The primary questions addressed in this Case History are:
 Geology
 -------
 
-Bedrock underlying and surrounding the Furggwanghorn rock glacier comprises schists and gneisses (Buchli et al., 2013). Erosion of these rocks produces the talus that is the source of the rock glacier material, which ranges from large jagged boulders to gravel, sand and silt (:numref:`furggwanghorn_map` c and d). A combined interpretation of air photographs and ground observations has demonstrated the presence of four distinct lobes L1 - L4 at the rock glacier surface (:numref:`furggwanghorn_geo`). Movement of the rock glacier has been controlled by the movements of these lobes.
+Bedrock underlying and surrounding the Furggwanghorn rock glacier comprises schists and gneisses :cite:`buchli2013`. Erosion of these rocks produces the talus that is the source of the rock glacier material, which ranges from large jagged boulders to gravel, sand and silt (:numref:`furggwanghorn_map` c and d). A combined interpretation of air photographs and ground observations has demonstrated the presence of four distinct lobes L1 - L4 at the rock glacier surface (:numref:`furggwanghorn_geo`). Movement of the rock glacier has been controlled by the movements of these lobes.
 
 
 The rock glacier is close to the lower thermal permafrost boundary, such that the permafrost temperatures are close to 0°C. As a result of the downslope movements, deep surface depressions have formed near the root zone of the rock glacier (:numref:`furggwanghorn_map` c).
@@ -38,8 +38,4 @@ The rock glacier is close to the lower thermal permafrost boundary, such that th
 
 
 
-.. Refs:
-.. Barsch, 1996 -> barch1996
-.. Buchli et al., 2013 -> buchil2013
-.. Merz et al., 2015a -> merz2015a
 
