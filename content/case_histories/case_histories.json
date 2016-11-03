@@ -87,7 +87,7 @@
         "title":"3D Helicopter GPR surveying a rock glacier",
         "source":"./rockglacier/",
         "thumbnail":"./rockglacier/images/furggwanghorn_heligpr.png",
-        "citations":[" "],
+        "citations":["merz2015a", "merz2015b"],
         "contributors":[
             {"uid":"user:agreen", "as":"author"},
             {"uid":"user:kmerz", "as":"author"},
