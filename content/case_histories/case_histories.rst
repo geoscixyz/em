@@ -138,7 +138,8 @@ Elevenmile Canyon
 
 
 - Contributors
-    - reviewer: :ref:`skang`
+    - author: :ref:`agreen`, :ref:`kmerz`, :ref:`hmaurer`
+    - reviewer: :ref:`skang`, :ref:`doldenburg`
 
 
 - Tags

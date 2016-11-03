@@ -6,8 +6,8 @@
 .. raw:: html
     :file: ../../../underconstruction.html
 
-- **Authors**: XXX
-- **Reviewer**: :ref:`skang`, :ref:`doldenburg`, and :ref:`lheagy`
+- **Authors**: :ref:`agreen`, :ref:`kmerz`, and :ref:`hmaurer`
+- **Reviewer**: :ref:`skang` and :ref:`doldenburg`
 
 .. topic :: Prelude
 

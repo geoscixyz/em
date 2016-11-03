@@ -89,7 +89,11 @@
         "thumbnail":"./rockglacier/images/furggwanghorn_heligpr.png",
         "citations":[" "],
         "contributors":[
-            {"uid":"user:skang", "as":"reviewer"}
+            {"uid":"user:agreen", "as":"author"},
+            {"uid":"user:kmerz", "as":"author"},
+            {"uid":"user:hmaurer", "as":"author"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
         ],
         "tags":[
             {"uid":"GPR", "as":"geophysical_survey"},
