@@ -187,6 +187,7 @@ and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive re
 
 .. _ampere_maxwell_differential_frequency:
 
+
 Differential equations in the frequency domain
 ---------------------------------------------- 
 
