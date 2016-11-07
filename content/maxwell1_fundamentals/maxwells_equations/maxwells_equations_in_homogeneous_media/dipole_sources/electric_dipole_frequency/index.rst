@@ -11,38 +11,71 @@ Harmonic Electrical Current Dipole
 
 
 The harmonic electrical current dipole source can be thought of as an infinitesimally short length of wire which carries a harmonic current.
-This should not be confused with the more classic definition of an electric dipole which describes the polarization of opposing electrical charges.
+In many cases, this type of source is referred to as the 'electric dipole source'; however a true electric dipole represents the polarization of electrical charges of opposite sign.
+
+**Primary Current Density from a Finite Wire**
 
 
-**Needs image a current wire and the primary current, then the dipole and the primary current using streamplot**
-
-
-
-Consider the source current which results from a harmonic electric dipole source.
-For a source current of magnitude :math:`I` which lies in the :math:`\hat x` direction along a wire segment of length :math:`\Delta s`, the source current density (:math:`\mathbf{J (r)}`) is given by:
+In order to develop a proper definition for the electrical current dipole, let us first consider the source current from a wire of finite length.
+Assume the wire has length :math:`\Delta s` and carries a current :math:`I` which flows in the :math:`\hat x` direction along the wire.
+Thus the source current density :math:`\mathbf{J (r)}` for the wire is given by:
 
 .. math::
 	\mathbf{J (r)} = \hat x I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
 
 
+.. figure:: images/E_source_finte_wire.png
+		:align: right
+		:figwidth: 50%
+		:name: FiniteWire
+
+        	Primary electrical current density due to a finite current-carrying wire.
+
+
 where :math:`u(x)` is the unit step function and :math:`\delta (x)` is the Dirac delta function.
-By letting :math:`\Delta s \rightarrow ds`, the source current density for a harmonic electric dipole in the :math:`\hat x` direction is given by:
+In Maxwell's equations, :math:`\mathbf{J (r)}` could be used to define an electrical source term.
+
+As we can see from :numref:`FiniteWire`, the source generates a primary current density in the surrounding region.
+Notice how the primary current density flows out one end of the wire and into the other.
+Additionally, the current density is much larger near either end of the wire and decreases exponentially with distance.
+
+
+**Defining the Electrical Current Dipole**
+
+The electrical current dipole is defined by letting :math:`\Delta s \rightarrow ds`; making it a wire of infinitessimal length.
+From the previous equation, the source current density for a harmonic electrical current dipole in the :math:`\hat x` direction is given by:
+
+.. figure:: images/E_source_current_dipole.png
+		:align: right
+		:figwidth: 50%
+		:name: CurrentDipole
+
+        	Primary electrical current density due to an electrical current dipole.
+
 
 .. math::
 	\mathbf{J(r)} = \hat x I ds \delta (x) \delta (y) \delta (z)
 
 
-The strength of the electric dipole source is defined by its dipole moment (:math:`\mathbf{p}`).
-Where :math:`\mathbf{I}` is a current vector (i.e. current flowing in a particular direction) within a length of wire :math:`ds`, the dipole moment for a harmonic electric dipole source is given by:
+By examining :numref:`CurrentDipole`, we see that the primary current density converges to a single point.
+However, the primary current density still flows outwards from one side and into the other.
+
+
+The strength of the electrical current dipole source is defined by a **dipole moment** (:math:`p`).
+By definition from the previous equation, the dipole moment for an electrical current dipole has magnitude:
 
 .. math::
-	\mathbf{p} = \mathbf{I} \, ds
-By analogy of the previous equation, the source current density for a harmonic electric dipole in any direction can be expressed as:
+	p = I ds
+	
+
+By considering an electrical current dipole oriented in an arbitrary direction, the source current becomes a vector (:math:`\mathbf{I}`).
+Thus, the source current density for an electrical current dipole is given by:
 
 .. math::
 	\mathbf{J(r)} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z) = \mathbf{p} \, \delta (x) \delta (y) \delta (z)
 
 
+where the dipole moment :math:`\mathbf{p}` has both magnitude and direction.
 
 
 
