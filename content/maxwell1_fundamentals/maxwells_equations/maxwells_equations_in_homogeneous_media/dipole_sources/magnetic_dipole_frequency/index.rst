@@ -18,13 +18,11 @@ Harmonic Magnetic Dipole
 		Physical representation of the magnetic dipole source.
 
 
-There are two commonly used physical descriptions of the magnetic dipole.
-The first describes the magnetic dipole as an infinitessimally small volume of magnetized material; or a very small bar magnet.
-The second describes the magnetic dipole using an infinitessimally small current loop.
+There are two commonly used models for the magnetic dipole.
+The first model describes the magnetic dipole as an infinitessimally small volume of magnetized material (i.e. a very small bar magnet).
+The second model describes the magnetic dipole using an infinitessimally small current loop.
 In both cases, the strength of the magnetic dipole source is defined by its dipole moment (:math:`\mathbf{m}`).
-
-
-
+A physical representation of the magnetic dipole moment and the primary magnetic field it creates is shown in :numref:`MagDipole`.
 
 
 
@@ -32,24 +30,24 @@ In both cases, the strength of the magnetic dipole source is defined by its dipo
 
 
 This model derives the magnetic dipole source by considering a volume of uniformly magnetized material; in other words, a bar magnet.
-Let us assume the bar magnetic has uniform magnetization :math:`M` in the :math:`\hat y` direction.
-The dimensions of the bar magnetic are :math:`\Delta x`, :math:`\Delta y` and :math:`\Delta z`, giving it a volume of :math:`\Delta V`.
-For this bar magnet, the magnetic source term is given by:
+Let us assume the volume has uniform magnetization :math:`\mathbf{M}` and has dimensions :math:`\Delta x`, :math:`\Delta y` and :math:`\Delta z`; giving it a volume of :math:`\Delta V`.
+The resulting magnetic source term is given by:
 
 .. math::
-	\mathbf{J_m (r)}\! =\!\hat y i \omega \mu M \Delta V \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] \! 
-	\! \Bigg [ \! \frac{u \big ( y \! +\!\frac{\Delta y}{2} \big ) \! - \! u \big ( y \! -\!\frac{\Delta y}{2} \big )}{\Delta y} \! \Bigg ] \! 
+	\begin{split}
+	\mathbf{J_m (r)}\! =\! i \omega \mu \mathbf{M} \Delta V & \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] ... \\ 
+	& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \! \Bigg [ \! \frac{u \big ( y \! +\!\frac{\Delta y}{2} \big ) \! - \! u \big ( y \! -\!\frac{\Delta y}{2} \big )}{\Delta y} \! \Bigg ] \! 
 	\! \Bigg [ \! \frac{u \big ( z \! +\!\frac{\Delta z}{2} \big ) \! - \! u \big ( z \! -\!\frac{\Delta z}{2} \big )}{\Delta z} \! \Bigg ]
+	\end{split}
 
 
-where :math:`u(x)` is the unit step function.
-Thus, :math:`\mathbf{J_m (r)}` can be used to define the magnetic source term in Maxwell's equations.
+where :math:`u(x)` is the unit step function and :math:`\mathbf{J_m(r)}` defines a magnetic current density (link).
+Thus :math:`\mathbf{J_m (r)}` can be used to replace the magnetic source term in Maxwell's equations for a uniformly magnetized block.
 
-As we see can see from :numref:`BarMagnet`, the magnetization contained within the volume generates magnetic fields in the surrounding region.
-Notice how the field lines seem to begin at one end of the bar magnet and terminate at the other :numref:`BarMagnet` (left).
+In :numref:`BarMagnet`, we consider the fields from a uniformly magnetized volume with :math:`\mathbf{M} = M\hat y`.
+As we see can see from :numref:`BarMagnet`, the magnetization contained within the volume generate a primary magnetic field in the surrounding region.
+Notice how the field lines seem to begin at the north end of the magnetized volume and terminate at the south :numref:`BarMagnet` (left).
 When the volume is much smaller than the scale of observation, then it appears as though the magnetic field lines converge at a single point; which we see in :numref:`BarMagnet` (right).
-Using this model, we use the magnetic dipole to approximate a very small magnetized volume when the scale of observation is sufficiently large.
-This is accomplished by defining a source term which exists at a single point in space.
 
 
 
@@ -61,40 +59,61 @@ This is accomplished by defining a source term which exists at a single point in
         	Magnetic field due to a uniformly magnetized volume. Large volume (left). Small volume (right).
 
 
+Magnetic dipoles can be used to approximate fields due to very small magnetized volumes when the scale of observation is sufficiently large.
+This accomplished by defining a source term which exists at a single point in space.
+From the previous expression, the magnetic dipole source is obtained by letting :math:`\Delta x , \, \Delta y , \, \Delta z \rightarrow dx, \, dy , \, dz` ; in other words by letting :math:`\Delta V \rightarrow dV`.
+Thus the source term for a harmonic magnetic dipole is given by:
 
-For this model, the magnetic dipole source is obtained by letting :math:`\Delta x , \, \Delta y , \, \Delta z \rightarrow dx, \, dy , \, dz` ; in other words letting :math:`\Delta V \rightarrow dV`.
-As a result, the source term for a harmonic magnetic dipole in the :math:`\hat y` direction is given by:
-
-
-.. math::
-	\mathbf{J_m (r)} = - \hat y \, i \omega \mu MdV \delta (x) \delta (y) \delta (z)
-	
-
-where :math:`\delta (x)` is the Dirac delta function.
-The strength of the magnetic dipole source is defined by its **dipole moment** (:math:`m`).
-As we can see from the previous equation, the source term depends on the product :math:`MdV`.
-If we generalize our expression for the source term for uniform magnetization in any direction, then:
 
 .. math::
 	\mathbf{J_m (r)} = - i \omega \mu \mathbf{M} dV \delta (x) \delta (y) \delta (z)
 	
 
-where the magnetization :math:`\mathbf{M}` has both magnitude and direction, and the dipole moment is given by:
+where :math:`\delta (x)` is the Dirac delta function.
+The strength of the magnetic dipole source is defined by its **dipole moment** (:math:`\mathbf{m}`).
+As we can see from the previous expression, the source term depends on the product :math:`\mathbf{M} dV`.
+Thus the dipole moment which defines the magnetic dipole source is given by:
 
 .. math::
 	\mathbf{m} = \mathbf{M} dV
 
 
-A physical representation of the magnetic dipole moment and resulting magnetic field are shown in :numref:`MagDipole`.
+For a finite magnetized rectangular block (:numref:`BarMagnet` left), the magnetic field outside the source region can be calculated according to Sharma (1966); a better example can be found in Varga.
+By taking the limit as :math:`\Delta x , \, \Delta y , \, \Delta z \rightarrow dx, \, dy , \, dz`, the general expression for a block reduces to (:numref:`BarMagnet` right):
+
+.. math::
+	\mathbf{H_{dip}(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r (m \cdot r)} }{r^5} - \frac{\mathbf{m}}{r^3} \Bigg ]
+
+
 
 
 
 **Current Loop Model**
 
 
-The magnetic dipole source term can also be obtained by considering an infinitessimally small loop of current.
-For this model, let us consider a circular wire of radius :math:`a` which carried a current :math:`I`.
+Magnetic fields are generated by the movement of electric charges (i.e. electric current).
+Because of this, a magnetized volume in itself does not represent a physical source.
+We will show that the magnetic dipole source term can be obtained by considering an infinitessimally small loop of current.
+Although our derivation of the dipole moment will be done in free-space, the resulting source term can be used for any problem.
 
+In free-space, the primary magnetic field due to a current carrying wire is given by the Biot-Savart law (link):
+
+.. math::
+	\mathbf{H}
+
+
+
+
+
+
+
+
+
+For this model, let us consider a circular wire of radius :math:`a` which carries a current :math:`I`.
+Within a homogeneous media, this current loop should have a vector potential:
+
+.. math::
+	\mathbf{A (r)} = \frac{\mu I}{4\pi} \oint \frac{1}{\mathbf{r}^\prime} d\mathbf{l}^\prime
 
 
 
