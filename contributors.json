@@ -110,20 +110,20 @@
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"alan.green@erdw.ethz.ch",
-        "avatar":"XXX"
+        "avatar":"images_contributors/agreen"
     },
     "kmerz":{
         "name":"Kaspar Merz",
         "affiliation":"Geo2X (formerly ETH Zurich)",
         "location":"Baar, Switzerland",
         "email":"Kaspar.merz@gmail.com",
-        "avatar":"XXX"
+        "avatar":"images_contributors/kmerz"
     },
     "hmaurer":{
         "name":"Hansruedi Maurer",
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
-        "avatar":"XXX"
+        "avatar":"images_contributors/hmaurer"
     }
 }

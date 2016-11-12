@@ -1,9 +1,9 @@
 .. _rockglacier_survey:
 
-Survey
-======
+Surveys
+=======
 
-Our first attempts to image the Furggwanghorn rock glacier involved acquiring surfaced-based GPR data using two different acquisition systems and three different antennae (second to fourth columns in :ref:`Table 3<GPRspecTable>` and :numref:`pulseEKKO_gprsys` a - c). GPR data were recorded "along multiple lines during the Winter / Spring of 2010"," 2011 and 2012 and during the Summer of 2012. See the caption to :numref:`furggwanghorn_gprsurvey` for the locations of three of these lines (G1 - G3).
+Our first attempts to image the Furggwanghorn rock glacier involved acquiring surfaced-based GPR data using two different acquisition systems and three different antennae (second to fourth columns in :ref:`Table 3<GPRspecTable>` and :numref:`pulseEKKO_gprsys` a - c). GPR data were recorded along multiple lines during the Winter / Spring of 2010, 2011 and 2012 and during the Summer of 2012. See the caption to :numref:`furggwanghorn_gprsurvey` for the locations of three of these lines (G1 - G3).
 
 .. figure:: images/pulseEKKO_gprsys.png
     :align: center
@@ -22,7 +22,7 @@ Our first attempts to image the Furggwanghorn rock glacier involved acquiring su
     "| System","pulseEKKO PRO","pulseEKKO PRO","Mala RTA","GSSI SIR-3000"
     "| Nominal Antennae frequency (MHz)","50­­­­","25","50","60"
     "| Antenna separation (m)","2","4","4","2"
-    "| Antenna configuration","Parallelz-broadside","Perpendicular-broadside ","Parallel-endfire","Parallel-broadside"
+    "| Antenna configuration","Parallel-broadside","Perpendicular-broadside ","Parallel-endfire","Parallel-broadside"
     "| Sampling rate (ns)","1.6","3.2","1.46","1.46"
     "| Trace length (ns)","2000","5040","1547","3000"
     "| Antenna transportation","Sled","Rigid frame","Snake antennae","Helicopter"
@@ -37,6 +37,6 @@ After obtaining disappointing results from the surface-based GPR surveys, a few 
     :figwidth: 80%
     :name: furggwanghorn_gprsurvey
 
-    Locations of H-GPR lines (green lines) acquired during the Winter / Spring of 2012 and 2013 and boreholes (yellow dots). The surface-based GPR sections G1 - G3 presented in Fig. 8 were recorded in the vicinity of boreholes F4 ‑ F7 close to and subparallel to H-GPR profiles H1 and H5.
+    Locations of H-GPR lines (green lines) acquired during the Winter / Spring of 2012 and 2013 and boreholes (yellow dots). The surface-based GPR sections G1 - G3 presented in :numref:`Ground_dataprocB` were recorded in the vicinity of boreholes F4 ‑ F7 close to and subparallel to H-GPR profiles H1 and H5.
 
 
