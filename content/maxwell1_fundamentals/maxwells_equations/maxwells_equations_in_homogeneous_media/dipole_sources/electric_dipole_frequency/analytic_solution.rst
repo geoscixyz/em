@@ -3,7 +3,7 @@
 Analytic Solution
 =================
 
-.. topic:: Purpose
+.. Purpose::
 
     Here, Maxwell's equations are solved for a harmonic electrical current dipole source.
     This is accomplished by using the method of Schelkunoff potentials, as shown in Ward and Hohmann (:cite:`ward1988`).

@@ -13,106 +13,51 @@ Harmonic Electrical Current Dipole
 **General Description**
 
 
+
+The harmonic electrical current dipole can be thought of as an infinitesimally short length of wire which carries a harmonic current.
+The strength of the source is therefore defined by a harmonic dipole moment :math:`\mathbf{p}(\omega)`.
+For a harmonic current dipole defined by length :math:`ds` and harmonic current :math:`\mathbf{I} (\omega) = \mathbf{I}e^{i\omega t}`, the dipole moment is given by:
+
+
 .. figure:: images/E_source_current_dipole.png
 		:align: right
 		:figwidth: 50%
+		:name: CurrentWire
 
         	Physical representation of the harmonic electrical current dipole source where :math:`\mathbf{p}` = 1 Am.
 
 
 
-If we treat the electrical current dipole source as an infinitesimally short length of wire, then it must carry a harmonic current.
+.. math::
+	\mathbf{p}(\omega) = \mathbf{p} \, e^{i\omega t} = \mathbf{I} ds \, e^{i\omega t}
 
 
-The electrical current dipole can be thought of as an infinitesimally short length of wire which carries a current.
-For a harmonic electrical current dipole, 
+where :math:`\mathbf{p} = \mathbf{I}ds` is the vector amplitude of the dipole moment.
+When formulating Maxwell's equations in the frequency domain, :math:`e^{i\omega t}` is generally suppressed.
+As a result, the source term for the harmonic electrical current dipole is given by:
 
 
 .. math::
-	\mathbf{p}(\omega) = \mathbf{I} ds \, e^{i\omega t}
-
-
-The strength of the source is defined by its dipole moment (:math:`\mathbf{p}`).
-This leads to an electrical source term of the form:
-
-.. math::
-	\mathbf{J_e } = \mathbf{p} \delta (x) \delta (y) \delta (z)
+	\mathbf{J_e (r)} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
 
 
 where :math:`\delta (x)` is the Dirac delta function.
-The source current is responsible for generating a primary current density in the surrounding region; secondary electric and magnetic fields are discussed later.
-This is illustrated in :numref:`ElecDipole`.
-In many cases, the term 'electric dipole source' is used instead.
-However, a true electric dipole represents the polarization of electrical charges of opposite sign.
-
-
-**Primary Current Density from a Finite Wire**
-
-
-In order to develop a proper definition for the electrical current dipole, let us first consider the source current from a wire of finite length.
-Assume the wire has length :math:`\Delta s` and carries a current :math:`I` which flows in the :math:`\hat x` direction along the wire.
-The source current density :math:`\mathbf{J_e (r)}` for the wire segment is given by:
-
-.. math::
-	\mathbf{J_e (r)} = \hat x I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
-
-
-
-where :math:`u(x)` is the unit step function and :math:`\delta (x)` is the Dirac delta function.
-In Maxwell's equations, :math:`\mathbf{J_e (r)}` defines the electrical source term.
-
-As we can see from :numref:`FiniteWire`, the source generates a current density (:math:`\mathbf{J}`) in the surrounding region.
-Notice how the current flows out one end of the wire and into the other :numref:`FiniteWire` (left).
-When the wire segment is much smaller than the scale of observation, then it appears as though the current density converges at a single point; which we see in :numref:`FiniteWire` (right).
-The purpose of the electrical current dipole is to approximate a finite wire segment when observation scales are much larger than the wire's length. 
-The electrical current dipole accomplishes this by defining a source term which exists at a single point in space.
-
-
-
-
-
-**Defining the Electrical Current Dipole**
-
-The electrical current dipole source is defined by letting :math:`\Delta s \rightarrow ds` in the previous equation; making it a wire of infinitessimal length.
-As a result, the source current density for a harmonic electrical current dipole in the :math:`\hat x` direction is given by:
-
-
-
+By including the source term, Maxwell's equations in the frequency domain are given by:
 
 
 .. math::
-	\mathbf{J_e(r)} = \hat x I ds \delta (x) \delta (y) \delta (z)
-
-
-By examining :numref:`CurrentDipole`, we see that the current density in the surrounding region converges to a single point; just like in :numref:`FiniteWire` (right).
-However like a wire segment, current still flows outwards from one side of the source and into the other.
-
-
-If we consider an electrical current dipole oriented in an arbitrary direction, the source current becomes a vector (:math:`\mathbf{I}`).
-Thus, the source current density for an electrical current dipole is given by:
-
-.. math::
-	\mathbf{J_e (r)} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z) 
-
-
-
-The strength of the electrical current dipole source is defined by its **dipole moment** (:math:`p`).
-As we can see from the previous equation, the source term depends on the product :math:`\mathbf{I} ds`.
-Thus the dipole moment for an electrical current dipole source is given by:
-
-.. math::
-	\mathbf{p} = \mathbf{I}ds
-	
-
-and
-
-
-.. math::
-	\mathbf{J_e (r)} = \mathbf{p} \, \delta (x) \delta (y) \delta (z) 
+	\begin{split}
+	&\nabla \times \mathbf{E} + i \omega \mu \mathbf{H} = 0  \\
+	\nabla \times \mathbf{H} &- \sigma \mathbf{E} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
+	\end{split}
 
 
 
 
+The source current is responsible for generating a primary current density (and electric field) in the surrounding region (:numref:`ElecDipole`).
+However, the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_frequency>` states that time-varying electric fields and the movement of free current generates magnetic fields.
+In addition, the harmonic nature of the magnetic fields should produce secondary electric fields according to :ref:`Faraday's law<faraday_differential_frequency>`.
+In the following section, we solve Maxwell's equations for a harmonic electrical current dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
 
 
 
