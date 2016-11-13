@@ -10,20 +10,40 @@ Harmonic Electrical Current Dipole
     This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations. 
 
 
+**General Description**
+
 
 .. figure:: images/E_source_current_dipole.png
 		:align: right
 		:figwidth: 50%
 
-        	Physical representation of the electrical current dipole source.
+        	Physical representation of the harmonic electrical current dipole source where :math:`\mathbf{p}` = 1 Am.
 
 
 
-The harmonic electrical current dipole source can be thought of as an infinitesimally short length of wire which carries a harmonic current.
-This source current is responsible for generating a current density in the surrounding region; secondary electric and magnetic fields are discussed later.
+If we treat the electrical current dipole source as an infinitesimally short length of wire, then it must carry a harmonic current.
+
+
+The electrical current dipole can be thought of as an infinitesimally short length of wire which carries a current.
+For a harmonic electrical current dipole, 
+
+
+.. math::
+	\mathbf{p}(\omega) = \mathbf{I} ds \, e^{i\omega t}
+
+
 The strength of the source is defined by its dipole moment (:math:`\mathbf{p}`).
-In many cases, this type of source is referred to as the 'electric dipole source'.
-However a true electric dipole represents the polarization of electrical charges of opposite sign.
+This leads to an electrical source term of the form:
+
+.. math::
+	\mathbf{J_e } = \mathbf{p} \delta (x) \delta (y) \delta (z)
+
+
+where :math:`\delta (x)` is the Dirac delta function.
+The source current is responsible for generating a primary current density in the surrounding region; secondary electric and magnetic fields are discussed later.
+This is illustrated in :numref:`ElecDipole`.
+In many cases, the term 'electric dipole source' is used instead.
+However, a true electric dipole represents the polarization of electrical charges of opposite sign.
 
 
 **Primary Current Density from a Finite Wire**
@@ -49,14 +69,6 @@ The electrical current dipole accomplishes this by defining a source term which 
 
 
 
-.. figure:: images/E_source_finte_wire.png
-		:align: center
-		:figwidth: 100%
-		:name: FiniteWire
-
-        	Electrical current density due to a finite current-carrying wire. Near the wire (left). Far away from the wire (right).
-
-
 
 
 **Defining the Electrical Current Dipole**
@@ -64,12 +76,8 @@ The electrical current dipole accomplishes this by defining a source term which 
 The electrical current dipole source is defined by letting :math:`\Delta s \rightarrow ds` in the previous equation; making it a wire of infinitessimal length.
 As a result, the source current density for a harmonic electrical current dipole in the :math:`\hat x` direction is given by:
 
-.. figure:: images/E_source_current_dipole.png
-		:align: right
-		:figwidth: 50%
-		:name: CurrentDipole
 
-        	Primary electrical current density due to an electrical current dipole.
+
 
 
 .. math::
