@@ -44,7 +44,7 @@ the wire is:
 
 .. figure::
    images/infinitewire_biotsavart.jpg
-   :scale: 5 %
+   :scale: 15 %
 
 Magnetic flux along the central axis of a loop
 ----------------------------------------------
@@ -58,7 +58,7 @@ intensity :math:`i`, the generated magnetic flux along the central axis of the l
  
 .. figure::
    images/loop_biotsavart.jpg
-   :scale: 5 %
+   :scale: 15 %
 
 
 Note: Considering :math:`\mathbf{dl}` and :math:`\mathbf{\hat{z}}` form a direct
