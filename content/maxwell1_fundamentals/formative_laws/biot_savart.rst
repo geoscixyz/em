@@ -42,9 +42,9 @@ the wire is:
 .. math::
  	\mathbf{b(r)}= \frac{\mu_{0} I_{enc}}{2 \pi r } ({\mathbf{\hat{z}} \times \mathbf{\hat{r}}})
 
- .. figure::
- 	images/infinitewire_biotsavart.jpg
- 	:scale: 15%
+.. figure::
+   images/infinitewire_biotsavart.jpg
+   :scale: 15 %
 
 Magnetic flux along the central axis of a loop
 ----------------------------------------------
@@ -56,9 +56,9 @@ intensity :math:`i`, the generated magnetic flux along the central axis of the l
 .. math::
 	\mathbf{b}= \frac{\mu_{0} I_{enc}}{2} \frac{R^2}{(r^2+R^2)^{\frac{3}{2}}} \mathbf{\hat{z}}
  
- .. figure::
- 	images/loop_biotsavart.jpg
- 	:scale: 15%
+.. figure::
+   images/loop_biotsavart.jpg
+   :scale: 15 %
 
 
 Note: Considering :math:`\mathbf{dl}` and :math:`\mathbf{\hat{z}}` form a direct
