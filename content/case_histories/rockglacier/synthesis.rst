@@ -10,7 +10,7 @@ The well established thin-skinned tectonic model in which nappes are transported
     :figwidth: 100%
     :name: gprsyn
 
-    Proposed thin-skinned rock glacier model. Labels are defined in the legend to Fig. 3. Green and magenta lines are the interpreted bedrock and décollement. Arrows: inferred displacements. The (a) and (b) diagrams represent models for the H4 and H5 H-GPR images (Figs. 12 and 13).
+    Proposed thin-skinned rock glacier model. Labels are defined in the legend to :numref:`furggwanghorn_geo`. Green and magenta lines are the interpreted bedrock and décollement. Arrows: inferred displacements. The (a) and (b) diagrams represent models for the H4 and H5 H-GPR images (:numref:`gprinterpH4` and :numref:`gprinterpH5`).
 
 
 Synthesis

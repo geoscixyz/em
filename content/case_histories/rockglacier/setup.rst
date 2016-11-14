@@ -3,7 +3,7 @@
 Setup
 =====
 
-Rock glaciers are large lobate shaped bodies that vary from masses of ice overlain by boulders and debris to accumulations of boulders and debris glued together by ice (Burger et al., 1999). They are ubiquitous in the mountains of most continents, with tens of thousands worldwide (Barsch, 1996). Our study site on the Furggwanghorn rock glacier is located in the western Swiss Alps (:numref:`furggwanghorn_map` a and b). This boulder dominated rock glacier is ~360 m long and ~180 m wide at an altitude of 2750 ‑ 2900 m asl :cite:`buchli2013`. Various studies show that its downslope movement has recently accelerated from 1.5 m/yr to as much as 4.0 m/yr in some places (:cite:`buchli2013`; :cite:`merz2015a`).
+Rock glaciers are large lobate shaped bodies that vary from masses of ice overlain by boulders and debris to accumulations of boulders and debris glued together by ice :cite:`burger1999`. They are ubiquitous in the mountains of most continents, with tens of thousands worldwide :cite:`barch1996`. Our study site on the Furggwanghorn rock glacier is located in the western Swiss Alps (:numref:`furggwanghorn_map` a and b). This boulder dominated rock glacier is ~360 m long and ~180 m wide at an altitude of 2750 ‑ 2900 m asl :cite:`buchli2013`. Various studies show that its downslope movement has recently accelerated from 1.5 m/yr to as much as 4.0 m/yr in some places (:cite:`buchli2013`; :cite:`merz2015a`).
 
 The primary questions addressed in this Case History are:
 
