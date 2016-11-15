@@ -37,8 +37,8 @@ div.admonition-purpose.admonition {
 
 div.admonition-question.admonition {
     background-color: #f0f0f0 !important;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 1px 12px;
     margin-bottom: 12px;
 }

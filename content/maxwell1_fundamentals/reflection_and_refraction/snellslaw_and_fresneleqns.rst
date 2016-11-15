@@ -4,7 +4,7 @@ Snell's law and Fresnel equatoins
 
 .. purpose::
 
-    EM waves are reflected and refracted at a plane interface. Two essential items to understand them are: a) angular relationship and b) amplitude of plane waves at each media. a) Snell's Law and b) Fresnel equations respectively provide those information hence we introduce them, and understand. 
+    EM waves are reflected and refracted at a plane interface. Two essential items to understand them are: a) angular relationship and b) amplitude of plane waves at each media. a) Snell's Law and b) Fresnel equations respectively provide those information hence we introduce them, and understand.
 
 Set up
 ------
@@ -21,13 +21,13 @@ For a uniform, homogenous, plane wave, :math:`\mathbf{E}`, :math:`\mathbf{H}`, a
 
    Incident :math:`\mathbf{k}_i`, reflected :math:`\mathbf{k}_r`, and transmitted :math:`\mathbf{k}_t` wave vectors at a plane interface S. the angles of incidence, relfection, and trasnmission are :math:`\theta_i`, :math:`\theta_r`, and :math:`\theta_t`, respectively. The unit normal to the surface :math:`S`, separating medium from the medium is denoted by :math:`\hat{\mathbf{n}}`. Modified from citeWH Figure 3.1.
 
-The unit vector :math:`\hat{\mathbf{n}}` in :numref:`snellslaw_setup` is normal to the plane :math:`S`. If :math:`\mathbf{r}` is a position vector drawn from the origin :math:`O` to anyh point in either medium 1 and 2, then for any point in the plane S, 
+The unit vector :math:`\hat{\mathbf{n}}` in :numref:`snellslaw_setup` is normal to the plane :math:`S`. If :math:`\mathbf{r}` is a position vector drawn from the origin :math:`O` to anyh point in either medium 1 and 2, then for any point in the plane S,
 
 .. math::
 
     \hat{\mathbf{n}} \cdot \mathbf{r} = 0.
 
-In followings, rather than developing details of both Snell's law ans Fresnel equations, we provide required items to derive both of them, then directly introduce final form of equations and discuss them. 
+In followings, rather than developing details of both Snell's law ans Fresnel equations, we provide required items to derive both of them, then directly introduce final form of equations and discuss them.
 
 .. _snells_law:
 
@@ -39,7 +39,7 @@ Snell's law determines angular relationship between incident, refelcted, and ref
 - General solution of EM fields for plane wave, for instance for the incident electic field:
 
 .. math::
-    ^i\mathbf{E} = \mathbf{E}_i e^{-\imath \mathbf{k}_i \cdot \mathbf{r}} 
+    ^i\mathbf{E} = \mathbf{E}_i e^{-\imath \mathbf{k}_i \cdot \mathbf{r}}
 
 - Continuity of tangental :math:`\mathbf{E}` and :math:`\mathbf{H}` at the plane, :math:`S`:
 
@@ -62,37 +62,37 @@ Snell's law determines angular relationship between incident, refelcted, and ref
     .. math::
         k_i \text{sin} \ \theta_i = k_t \text{sin} \ \theta_t
 
-    or 
+    or
 
     .. math::
-        k_1 \text{sin} \ \theta_i = k_2 \text{sin} \ \theta_t        
+        k_1 \text{sin} \ \theta_i = k_2 \text{sin} \ \theta_t
         :label: snellslaw_2
 
-where :math:`k_i=k_r=k_1` and  :math:`k_t=k_2` are the complex scalar wave numbers in medium 1 and 2, respectively. 
+where :math:`k_i=k_r=k_1` and  :math:`k_t=k_2` are the complex scalar wave numbers in medium 1 and 2, respectively.
 
-The first equation explain incident and reflection angles are same, and the second equation describe how transmission angle is determined due to different electrical properties merged in :math:`k_1` and :math:`k_2`. 
+The first equation explain incident and reflection angles are same, and the second equation describe how transmission angle is determined due to different electrical properties merged in :math:`k_1` and :math:`k_2`.
 
 .. question::
 
-    At an air-earth interface, consider incident angle :math:`\theta_i` of 45 :math:`^{\circ}` and 5 :math:`^{\circ}`, and compute transmission angle :math:`\theta_t`. Here we let :math:`\epsilon_1=\epsilon_2=\epsilon_0`, :math:`\mu_1=\mu_2=\mu_0`, and :math:`\sigma_1=0` and :math:`\sigma_2=0.01` S/m
+    - At an air-earth interface, consider incident angle :math:`\theta_i` of 45 :math:`^{\circ}` and 5 :math:`^{\circ}`, and compute amplitude of transmission angle :math:`|\theta_t|`. Here we let :math:`\epsilon_1=\epsilon_2=\epsilon_0`, :math:`\mu_1=\mu_2=\mu_0`, and :math:`\sigma_1=0` and :math:`\sigma_2=0.01` S/m
 
-    What did you identify? See XXX for the answers (Hint: :math:`\theta_t` will be complex hence compute its amplitude.)
+    - What can you infer from computed :math:`|\theta_t|`?
 
-    
+
 .. _fresnel_equations:
 
 Fresnel equations
 -----------------
 
-We turn our attention to the Fresnel equations which interrelate the amplitudes of the :math:`\mathbf{E}` and :math:`\mathbf{H}`. As before, we consider reflection and refraction of uniform plane wave at an inteface :math:`S` as described in :numref:`snellslaw_setup`. 
+We turn our attention to the Fresnel equations which interrelate the amplitudes of the :math:`\mathbf{E}` and :math:`\mathbf{H}`. As before, we consider reflection and refraction of uniform plane wave at an inteface :math:`S` as described in :numref:`snellslaw_setup`.
 
-Two different modes will be considered: a) :math:`\mathbf{E}_i` normal to the plane of incidence and b) :math:`\mathbf{E}_i` in the plane of incidence. :numref:`fresnel_setup_TE` and :numref:`fresnel_setup_TM` correspondingly show each mode. 
+Two different modes will be considered: a) :math:`\mathbf{E}_i` normal to the plane of incidence and b) :math:`\mathbf{E}_i` in the plane of incidence. :numref:`fresnel_setup_TE` and :numref:`fresnel_setup_TM` correspondingly show each mode.
 
 .. note::
-    
+
     Each mode is often called a) Transverse Electric (TE or TE :sub:`z`) and b) Tranverse Magnetic (TM or TM  :sub:`z`) because either electric or magnetic field is transverse to :math:`z`-direction.
 
-We exploit either electric or magnetic field transverse to :math:`z` to derive Fresnel equations for each mode. This feature makes a simplified situtuation for instance in the case a), we only have tangential component of electric field. For b), similarly, we only have have tangential component of magnetic field. This principal difference will make different reflection and refraction features for a) and b). 
+We exploit either electric or magnetic field transverse to :math:`z` to derive Fresnel equations for each mode. This feature makes a simplified situtuation for instance in the case a), we only have tangential component of electric field. For b), similarly, we only have have tangential component of magnetic field. This principal difference will make different reflection and refraction features for a) and b).
 
 :math:`\mathbf{E}_i` normal to the plane of incidence (TE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -120,15 +120,15 @@ Required information to derive amplitude relationship between :math:`\mathbf{E}_
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{E}_i = \mathbf{k}_i \cdot \mathbf{E}_i = 0
 
-and 
+and
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{E}_t = \hat{\mathbf{n}} \cdot \mathbf{E}_r = 0
 
 - Tangential electric field is continuous at :math:`S`
-    
+
 - Snell's Law shown in Eqs. :eq:`snellslaw_1` and :eq:`snellslaw_2`
- 
+
 From above relationships, we can derive below equations:
 
 .. math::
@@ -152,12 +152,12 @@ Rearranging Eqs. :eq:`TE_fresnel1` and :eq:`TE_fresnel2` yields
     {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}} \mathbf{E}_t
     :label: TE_EiandEt
 
-where 
+where
 
 .. math::
     \text{cos}^2 \theta_t  = 1 - \text{sin}^2 \theta_t = 1-\Big(\frac{k_1}{k_2}\Big) \text{sin}^2 \theta_i
 
-Reflection and transmission coefficients for TE mode can be written as 
+Reflection and transmission coefficients for TE mode can be written as
 
 .. math::
     r_{TE} = \frac{\mathbf{E}_r}{\mathbf{E}_i}
@@ -168,16 +168,18 @@ Reflection and transmission coefficients for TE mode can be written as
 .. math::
     t_{TE} = \frac{\mathbf{E}_t}{\mathbf{E}_i}
            = \frac{2\mu_2 k_1 \text{cos} \theta_i}
-    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}} \mathbf{E}_t
+    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}}
     :label: tTE_theta
 
-Subsitituting 
+Subsitituting
 
 .. math::
     u_1 = k_1 \text{cos} \theta_i
+    :label: u1
 
 .. math::
     u_2 = (k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}
+    :label: u2
 
 then :math:`r_{TE}` and :math:`t_{TE}` can be written
 
@@ -188,14 +190,14 @@ then :math:`r_{TE}` and :math:`t_{TE}` can be written
 
 .. math::
     t_{TE} = \frac{2\mu_2 u_1}
-    {\mu_2 u_1 + \mu_1 u_2} \mathbf{E}_t
+    {\mu_2 u_1 + \mu_1 u_2}
     :label: tTE_u
 
 .. note::
 
     In the final form of :math:`r_{TE}` and :math:`t_{TE}` shown in Eqs :eq:`rTE_u` and :eq:`tTE_u`, angular information is merged into :math:`u_1` and :math:`u_2`, which are scalar wavenumbers in :math:`z`-direction. Namely, horizontal component of the wavenumber do not make any impact to determine :math:`r_{TE}` and :math:`t_{TE}`, and this is driven by transverse electic field to :math:`z`-direction.
 
-    
+
 :math:`\mathbf{E}_i` is in the plane of incidence (TM)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -209,10 +211,12 @@ then :math:`r_{TE}` and :math:`t_{TE}` can be written
 Similarly, we want to derive relflection and trasnmission coefficents of the electric fields for TM mode (:numref:`fresnel_setup_TM`):
 
 .. math::
-    r_{TE} = \frac{\mathbf{E}_r}{\mathbf{E}_i}
+    r_{TM} = \frac{\hat{\mathbf{n}}\times \mathbf{E}_r}{\hat{\mathbf{n}}\times \mathbf{E}_i}
+    :label: rTM
 
 .. math::
-    t_{TE} = \frac{\mathbf{E}_t}{\mathbf{E}_i}
+    t_{TM} = \frac{\hat{\mathbf{n}}\times \mathbf{E}_t}{\hat{\mathbf{n}}\times \mathbf{E}_i}
+    :label: tTM
 
 
 Required information to derive amplitude relationship between :math:`\mathbf{H}_i`, :math:`\mathbf{H}_r` and :math:`\mathbf{H}_t` are:
@@ -222,15 +226,15 @@ Required information to derive amplitude relationship between :math:`\mathbf{H}_
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{H}_i = \mathbf{k}_i \cdot \mathbf{H}_i = 0
 
-and 
+and
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{H}_t = \hat{\mathbf{n}} \cdot \mathbf{H}_r = 0
 
 - Tangential magnetic field is continuous at :math:`S`
-    
+
 - Snell's Law shown in Eqs. :eq:`snellslaw_1` and :eq:`snellslaw_2`
- 
+
 From above relationships, we can derive below equations:
 
 .. math::
@@ -245,54 +249,56 @@ From above relationships, we can derive below equations:
 Rearranging Eqs :eq:`TE_fresnel1` and :eq:`TE_fresnel2` yields
 
 .. math::
-    \mathbf{E}_r = \frac{\mu_2 k_1 \text{cos} \theta_i - \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}}
-    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}} \mathbf{E}_i
-    :label: TE_EiandEr
+    \mathbf{H}_r = -\frac{\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  - \mu_1k_2^2 \text{cos} \theta_i}
+    {\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  + \mu_1k_2^2 \text{cos} \theta_i} \mathbf{H}_i
+    :label: TM_HiandHr
 
 .. math::
-    \mathbf{E}_t = \frac{2\mu_2 k_1 \text{cos} \theta_i}
-    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}} \mathbf{E}_t
-    :label: TE_EiandEt
+    \mathbf{H}_t = \frac{2 \mu_1k_2^2 \text{cos} \theta_i}
+    {\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  + \mu_1k_2^2 \text{cos} \theta_i} \mathbf{H}_i
+    :label: TM_HiandHt
 
-where 
+where
 
 .. math::
     \text{cos}^2 \theta_t  = 1 - \text{sin}^2 \theta_t = 1-\Big(\frac{k_1}{k_2}\Big) \text{sin}^2 \theta_i
 
-Reflection and transmission coefficients for TE mode can be written as 
+Reflection and transmission coefficients for TM mode can be written as
 
 .. math::
-    r_{TE} = \frac{\mathbf{E}_r}{\mathbf{E}_i}
-           = \frac{\mu_2 k_1 \text{cos} \theta_i - \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}}
-    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}}
-    :label: rTE_theta
+    r_{TM} = \frac{\hat{\mathbf{n}}\times \mathbf{E}_t}{\hat{\mathbf{n}}\times \mathbf{E}_i}
+           = - \frac{\mathbf{H}_r}{\mathbf{H}_i}
+           = \frac{\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  - \mu_1k_2^2 \text{cos} \theta_i}{\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  + \mu_1k_2^2 \text{cos} \theta_i}
+    :label: rTM_theta
 
 .. math::
-    t_{TE} = \frac{\mathbf{E}_t}{\mathbf{E}_i}
-           = \frac{2\mu_2 k_1 \text{cos} \theta_i}
-    {\mu_2 k_1 \text{cos} \theta_i + \mu_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}} \mathbf{E}_t
-    :label: tTE_theta
+    t_{TM} = \frac{\hat{\mathbf{n}}\times \mathbf{E}_t}{\hat{\mathbf{n}}\times \mathbf{E}_i}
+           = \frac{\mathbf{H}_t}{\mathbf{H}_i}
+           = \frac{2 \mu_1k_2^2 \text{cos} \theta_i}{\mu_2 k_1(k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}  + \mu_1k_2^2 \text{cos} \theta_i}
+    :label: tTM_theta
 
-Subsitituting 
-
-.. math::
-    u_1 = k_1 \text{cos} \theta_i
+Subsitituting these with Eqs. :eq:`u1` and :eq:`u2` yields
 
 .. math::
-    u_2 = (k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}
-
-then :math:`r_{TE}` and :math:`t_{TE}` can be written
-
-.. math::
-    r_{TE} = \frac{\mu_2 u_1 - \mu_1 u_2}
-    {\mu_2 u_1 + \mu_1 u_2}
-    :label: rTE_u
+    r_{TM} = \frac{\mu_2 u_2 k_1^2 - \mu_1 u_1 k_2^2}
+    {\mu_2 u_2 k_1^2 + \mu_1 u_1 k_2^2}
+    :label: rTM_u
 
 .. math::
-    t_{TE} = \frac{2\mu_2 u_1}
-    {\mu_2 u_1 + \mu_1 u_2} \mathbf{E}_t
-    :label: tTE_u
+    t_{TM} = \frac{2\mu_1 u_1 k_2^2}
+    {\mu_2 u_2 k_1^2 + \mu_1 u_1 k_2^2}
+    :label: tTM_u
 
-.. note::
+.. question::
 
-    In the final form of :math:`r_{TE}` and :math:`t_{TE}` shown in Eqs. :eq:`rTE_u` and :eq:`tTE_u`, angular information is merged into :math:`u_1` and :math:`u_2`, which are scalar wavenumbers in :math:`z`-direction. Namely, horizontal component of the wavenumber do not make any impact to determine :math:`r_{TE}` and :math:`t_{TE}`, and this is driven by transverse electic field to :math:`z`-direction.
+   -  We defined reflection coefficient of TM mode :math:`r_{TM}` as ratio between tangential electric field of incidence and reflection as shown in Eq. :eq:`rTM`. However, we derived ratio of :math:`\mathbf{H}_i` and :math:`\mathbf{H}_r` then multipy -1 to obtain :math:`r_{TM}`, why is that? (Hint: See direction of :math:`\mathbf{E}` and :math:`\mathbf{H}` in :numref:`fresnel_setup_TM`)
+
+Normal incidence
+^^^^^^^^^^^^^^^^
+
+When incidence is normal (:math:`\theta_i` =0), Eqs. :eq:`rTE_u` and :eq:`rTM_u` can be reduced to
+
+.. math::
+
+    r_{TE} = r_{TM} = \frac{\mu_2 k_1 - \mu_1 k_2} {\mu_2 k_1 + \mu_1 k_2}
+
