@@ -73,11 +73,11 @@ However, when the volume is much smaller than the scale of observation (:math:`\
 
 
 .. figure:: images/H_source_bar_magnet.png
-		:align: center
-		:figwidth: 100%
-		:name: BarMagnet
+	:align: center
+	:name: BarMagnet
+	:figwidth: 100%
 
-        	Magnetic field due to a uniformly magnetized volume. Large volume (left). Small volume (right). For both volumes, the magnetization was adjusted such that :math:`M \Delta V` = 1 Am :math:`\!^2`.
+        Magnetic field due to a uniformly magnetized volume. Large volume (left). Small volume (right). For both volumes, the magnetization was adjusted such that :math:`M \Delta V` = 1 Am :math:`\!^2`.
 
 
 Magnetic dipoles can be used to approximate fields due to very small magnetized volumes when the scale of observation is sufficiently large.
@@ -100,7 +100,7 @@ Thus the dipole moment which defines the magnetic dipole source is given by:
 
 From our definition of the magnetic dipole, :math:`\mathbf{m}` has units Am :math:`\!^2`.
 Each Dirac delta function carries units m :math:`\!^{-1}`, :math:`\omega` has units s :math:`\!^{-1}` and :math:`\mu` has units H/m.
-Where 1 H = 1 V :math:`\!\cdot\!` s/m, the magnetic source term :math:`\mathbf{J_m}` has units V/m.
+Where 1 H = 1 V :math:`\!\cdot\!` s/A, the magnetic source term :math:`\mathbf{J_m}` has units V/m :math:`\!^2`.
 
 
 For a magnetized rectangular block (:numref:`BarMagnet` left), the magnetic field outside the source region can be calculated according to Sharma (1966); a cleaner formulation can be found in Varga.

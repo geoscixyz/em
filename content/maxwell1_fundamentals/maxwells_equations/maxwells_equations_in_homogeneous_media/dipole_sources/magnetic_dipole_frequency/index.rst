@@ -5,10 +5,12 @@ Harmonic Magnetic Dipole
 
 .. Purpose::
 
+    In the frequency domain, we consider harmonic electric and magnetic fields.
     Here, we provide a physical description of the harmonic magnetic dipole.
     This is used to develop a mathematical expression which can be used to replace the magnetic source term in Maxwell's equations.
 
 
+**General Definition**
 
 The harmonic magnetic dipole can be thought of as an infinitessimally small loop which carries a harmonic current.
 The strength of the source is therefore defined by a harmonic dipole moment :math:`\mathbf{m}(\omega)`.
@@ -48,17 +50,17 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 
 
 
-The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`ElecDipole`).
+The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`MagDipole`).
 According to :ref:`Faraday's law<faraday_differential_frequency>`, the harmonic nature of the primary magnetic field generates rotational electric fields.
 In matter, this leads to an induced current density which produces secondary magnetic fields according to the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_frequency>`.
-In the following section, we solve Maxwell's equations for a harmonic magnetic dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
-
-
-
-
 
 
 **Contents**
+
+In the following section, we solve Maxwell's equations for a harmonic magnetic dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
+Asymptotic expressions are then provided for several cases.
+Numerical modeling tools are made available for investigating the dependency of the electric and magnetic fields on various parameters.
+
 
 .. toctree::
     :maxdepth: 2
