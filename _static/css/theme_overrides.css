@@ -34,3 +34,15 @@ div.admonition-purpose.admonition {
 #purpose.admonition-purpose.admonition .admonition-title {
     background-color: #175f59 !important;
 }
+
+div.admonition-question.admonition {
+    background-color: #f0f0f0 !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 1px 12px;
+    margin-bottom: 12px;
+}
+
+#question.admonition-question.admonition .admonition-title {
+    background-color: #DAA520 !important;
+}
