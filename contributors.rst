@@ -173,7 +173,7 @@ Alan G. Green
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="XXX"><img alt="XXX" class="align-left" src="XXX" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="images_contributors/agreen"><img alt="images_contributors/agreen" class="align-left" src="images_contributors/agreen" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -343,7 +343,7 @@ Hansruedi Maurer
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="XXX"><img alt="XXX" class="align-left" src="XXX" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="images_contributors/hmaurer"><img alt="images_contributors/hmaurer" class="align-left" src="images_contributors/hmaurer" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -373,7 +373,7 @@ Kaspar Merz
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="XXX"><img alt="XXX" class="align-left" src="XXX" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="images_contributors/kmerz"><img alt="images_contributors/kmerz" class="align-left" src="images_contributors/kmerz" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
