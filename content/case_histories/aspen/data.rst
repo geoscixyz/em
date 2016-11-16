@@ -30,7 +30,7 @@ apparent when plotting the data as decay curves.
 
         Time channel maps showing :math:`\partial \mathbf{B}/\partial t` for
         (a) 0.02, (b) 0.05, (c) 0.1, (d)0.19, (e) 0.33, (f) 0.77, (g 1.53, (h)
-        3.06, and (i) 9.29 milloseconds.
+        3.06, and (i) 9.29 millaseconds.
 
 A selection of six decay curves are plotted in :numref:`asp5b`. Depending on
 their location in space, the decay curves show different characteristics. This
