@@ -110,20 +110,20 @@
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"alan.green@erdw.ethz.ch",
-        "avatar":"images_contributors/agreen"
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"
     },
     "kmerz":{
         "name":"Kaspar Merz",
         "affiliation":"Geo2X (formerly ETH Zurich)",
         "location":"Baar, Switzerland",
         "email":"Kaspar.merz@gmail.com",
-        "avatar":"images_contributors/kmerz"
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"
     },
     "hmaurer":{
         "name":"Hansruedi Maurer",
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
-        "avatar":"images_contributors/hmaurer"
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
     }
 }
