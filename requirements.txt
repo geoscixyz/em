@@ -4,6 +4,7 @@ ipython
 ipywidgets
 sphinx
 matplotlib
+properties
 sphinxcontrib-bibtex
 sphinx_rtd_theme
 Pillow
