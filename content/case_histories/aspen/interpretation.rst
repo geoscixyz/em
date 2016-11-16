@@ -28,7 +28,7 @@ be obtained using EM data.
         northwest and southeast. Solid line shows location of focus for SAGD;
         dashed line shows location of cross-sections in :numref:`asp10`.
 
-.. figure:: ./images/CrossSectionsAllThree.PNG
+.. figure:: ./images/CrossSections.png
         :align: right
         :figwidth: 45%
         :name: asp10
@@ -134,5 +134,4 @@ and fine pseudo-3D models in :numref:`asp11`, showing small differences in the
 top layers. The Clearwater Formation remains relatively unchanged, as was
 expected. The 3D model is shown in :numref:`asp14`.
 
-.. todo:: create a movie scrolling through the 3D model rather than a single view
 

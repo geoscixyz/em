@@ -104,5 +104,26 @@
         "affiliation":"First Quantum Minerals Ltd.",
         "location":"Perth, WA, AUS",
         "email":"chris.wijns@fqml.com"
+    },
+    "agreen":{
+        "name":"Alan G. Green",
+        "affiliation":"ETH Zurich",
+        "location":"Zurich, Switzerland",
+        "email":"alan.green@erdw.ethz.ch",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"
+    },
+    "kmerz":{
+        "name":"Kaspar Merz",
+        "affiliation":"Geo2X (formerly ETH Zurich)",
+        "location":"Baar, Switzerland",
+        "email":"Kaspar.merz@gmail.com",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"
+    },
+    "hmaurer":{
+        "name":"Hansruedi Maurer",
+        "affiliation":"ETH Zurich",
+        "location":"Zurich, Switzerland",
+        "email":"Hansruedi.maurer@erdw.ethz.ch",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
     }
 }

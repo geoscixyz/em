@@ -163,6 +163,36 @@ Dom Fournier
 
         
 
+.. _agreen:
+
+Alan G. Green
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="images_contributors/agreen"><img alt="images_contributors/agreen" class="align-left" src="images_contributors/agreen" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> ETH Zurich
+                          <br>
+    <strong>location:</strong> Zurich, Switzerland
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:alan.green@erdw.ethz.ch">alan.green@erdw.ethz.ch</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
 .. _lheagy:
 
 Lindsey J. Heagy
@@ -294,6 +324,66 @@ Jean Legault
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _hmaurer:
+
+Hansruedi Maurer
+----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="images_contributors/hmaurer"><img alt="images_contributors/hmaurer" class="align-left" src="images_contributors/hmaurer" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> ETH Zurich
+                          <br>
+    <strong>location:</strong> Zurich, Switzerland
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:Hansruedi.maurer@erdw.ethz.ch">Hansruedi.maurer@erdw.ethz.ch</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _kmerz:
+
+Kaspar Merz
+-----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="images_contributors/kmerz"><img alt="images_contributors/kmerz" class="align-left" src="images_contributors/kmerz" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geo2X (formerly ETH Zurich)
+                          <br>
+    <strong>location:</strong> Baar, Switzerland
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:Kaspar.merz@gmail.com">Kaspar.merz@gmail.com</a>
                     
                           
     </div>

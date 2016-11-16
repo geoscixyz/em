@@ -4,7 +4,9 @@ ipython
 ipywidgets
 sphinx
 matplotlib
+properties
 sphinxcontrib-bibtex
 sphinx_rtd_theme
+Pillow
 git+git://github.com/ubcgif/em_examples.git
 git+git://github.com/simpeg/simpeg.git@analytics

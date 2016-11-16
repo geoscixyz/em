@@ -82,5 +82,23 @@
             {"uid":"Mining", "as":"application"},
             {"uid":"Australia", "as":"location"}
         ]
+    },
+    "rockglacier":{
+        "title":"3D Helicopter GPR surveying a rock glacier",
+        "source":"./rockglacier/",
+        "thumbnail":"./rockglacier/images/furggwanghorn_heligpr.png",
+        "citations":["merz2015a", "merz2015b"],
+        "contributors":[
+            {"uid":"user:agreen", "as":"author"},
+            {"uid":"user:kmerz", "as":"author"},
+            {"uid":"user:hmaurer", "as":"author"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"GPR", "as":"geophysical_survey"},
+            {"uid":"Geotechnical", "as":"application"},
+            {"uid":"Switzerland", "as":"location"}
+        ]
     }
 }
