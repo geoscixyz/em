@@ -40,7 +40,7 @@ As a result, the source term for the harmonic electrical current dipole is given
 
 
 .. math::
-	\mathbf{J_e (r)} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
+	\mathbf{J_e^s} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -50,7 +50,7 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 .. math::
 	\begin{split}
 	&\nabla \times \mathbf{E} + i \omega \mu \mathbf{H} = 0  \\
-	\nabla \times \mathbf{H} - & \sigma \mathbf{E} -i\omega \varepsilon \mathbf{E} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
+	\nabla \times \mathbf{H} - & (\sigma  + i\omega \varepsilon ) \mathbf{E} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
 	\end{split}
 
 

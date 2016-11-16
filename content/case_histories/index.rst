@@ -29,6 +29,7 @@ The titles, and EM systems used are provided below.
     aspen/index
     emc/index
     balboa/index
+    rockglacier/index
 
 .. _case_history_gallery:
 

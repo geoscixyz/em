@@ -38,6 +38,7 @@ topics of general relevance to EM.
 
     formative_laws/index
     maxwells_equations/index
+    reflection_and_refraction/index
     quick_guide_maxwell
     solving_maxwells_equations/index
     looking_for_more

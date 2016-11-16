@@ -18,7 +18,6 @@ Before actually working with the field time-domain data, we use a synthetic
 model is to better understand the data and determine what parameters should be
 used in the inversion.
 
-.. todo:: fix phid phim equation references
 
 1D inversion of synthetic data
 ------------------------------
@@ -50,9 +49,7 @@ resistivity structure at Aspen.
 
 Gaussian noise of 1.5\% is added to the forward modeled data and uncertainties
 are assigned as a percentage of the data and a noise floor: 1.5\% and 1e-12 V.
-The synthetic decay curve is inverted using L2 norms for both the data misfit
-(Equation \ref{intro:phid}) and the model objective function (Equation
-\ref{intro:phim}) using UBC-GIF's EM1DTM code
+The synthetic decay curve is inverted using L2 norms for both the :ref:`data misfit and the model objective function <inversion>` using UBC-GIF's EM1DTM code
 :cite:`FarquharsonOldenburg1993`. Values for :math:`\alpha_s` and
 :math:`\alpha_z` are set to 0.001 and 1, respectively. An initial and
 reference model of 25 :math:`\Omega m` was used. The results are shown in
