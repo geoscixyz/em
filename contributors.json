@@ -125,5 +125,11 @@
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
         "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
+    },
+    "dccowan":{
+        "name":"Devin C. Cowan",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC, Canada",
+        "email":"devinccowan@gmail.com",
     }
 }

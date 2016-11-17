@@ -12,6 +12,35 @@
 
 
 
+Reservoir properties prediction using CSEM, pre-stack seismic and well log data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: ./hoop_region_norway/images/inversion_workflow.png
+    :alt: hoop_region_norway
+    :width: 260
+    :align: right
+
+- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data Case History <hoop_region_norway_index>`
+
+
+- Contributors
+    - author: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: CSEM
+    - application: Hydrocarbons
+    - location: Hoop Fault Complex, Barents Sea, Norway
+    - keyword: Oil Sands
+
+|
+|
+|
+
+
+
+        
+
 Mt. Isa
 ^^^^^^^
 

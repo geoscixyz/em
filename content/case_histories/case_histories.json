@@ -101,4 +101,20 @@
             {"uid":"Switzerland", "as":"location"}
         ]
     }
+    ,
+    "hoop_region_norway":{
+        "title":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data",
+        "source":"./hoop_region_norway/",
+        "thumbnail":"./hoop_region_norway/images/inversion_workflow.png",
+        "citations":["DevrieseOldenburg2016"],
+        "contributors":[
+            {"uid":"user:sdevriese", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"CSEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbons", "as":"application"},
+            {"uid":"Oil Sands", "as":"keyword"},
+            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"location"}
+        ]
+    }
 }
