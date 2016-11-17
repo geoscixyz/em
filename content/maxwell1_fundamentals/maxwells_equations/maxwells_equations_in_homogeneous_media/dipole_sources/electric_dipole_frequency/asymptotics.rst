@@ -17,7 +17,7 @@ In this case, the wave-number :math:`k \rightarrow 0`.
 For an electric dipole source :math:`\hat x I ds`, the DC electric field within a homogenous medium is given by:
 
 .. math::
-	\lim_{\omega \rightarrow 0} \mathbf{E}_e = \frac{I ds}{4 \pi \sigma  r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right]
+	\lim_{\omega \rightarrow 0} \mathbf{E_e (r)} = \frac{I ds}{4 \pi \sigma  r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right]
 	:label: eq_Edip_Edc
 
 According to Eq. :eq:`eq_Edip_Edc`, the DC electric field depends solely on the observation location and the conductivity of the medium.
@@ -25,7 +25,7 @@ The source and the electric field are also completely in-phase.
 Similarly, the corresponding DC magnetic field within the medium is given by:
 
 .. math::
-	\lim_{\omega \rightarrow 0} \mathbf{H}_e = \frac{I ds}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
+	\lim_{\omega \rightarrow 0} \mathbf{H_e (r)} = \frac{I ds}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
 	:label: eq_Edip_Hdc
 
 According to Eq. :eq:`eq_Edip_Hdc`, the DC magnetic field is independent of any physical properties.
@@ -46,14 +46,17 @@ The near-field approximation for :math:`\mathbf{E}_e` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{E}_e \approx \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right]
+	\begin{split}
+	\mathbf{E_e (r)} \approx \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} \bigg ( 1 - ikr + & O \big ( k^2 r^2 \big ) \bigg ) \Bigg [ \Bigg ( \frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \Bigg ) ... \\
+	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 - ikr -1 \big ) \hat{x} \Bigg ]
+	\end{split}
 	:label: eq_Edip_Enear1
 
 Eq. :eq:`eq_Edip_Enear1` can be simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 Assuming we are in the quasi-static regime (:math:`| \omega\varepsilon | \ll \sigma`), the electric field in close proximity to an electric dipole moment :math:`\hat x I ds` is given by:
 
 .. math::
-	\mathbf{E}_e \approx \frac{I ds}{4 \pi \sigma r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right] + O(k^2 r^2 )
+	\mathbf{E_e (r)} \approx \frac{I ds}{4 \pi \sigma r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right] + O(k^2 r^2 )
 	:label: eq_Edip_Enear2
 
 According to Eq. :eq:`eq_Edip_Enear2`, the near electric field depends only on the observation location and the conductivity of the medium.
@@ -63,14 +66,14 @@ The near-field approximation for :math:`\mathbf{H}_e` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{H}_e \approx \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right ) \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
+	\mathbf{H_e (r)} \approx \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right ) \bigg ( 1 - ikr + O \big ( k^2 r^2 \big ) \bigg ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
 	:label: eq_Edip_Hnear1
 
 Eq. :eq:`eq_Edip_Hnear1` can be further simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 Therefore, the magnetic field in close proximity to electric dipole moment :math:`\hat x I ds` is approximately equal to:
 
 .. math::
-	\mathbf{H}_e \approx \frac{I ds}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) + O(k^2 r^2 )
+	\mathbf{H_e (r)} \approx \frac{I ds}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) + O(k^2 r^2 )
 	:label: eq_Edip_Hnear2
 
 According to Eq. :eq:`eq_Edip_Hnear2`, :math:`\mathbf{H}_e` does not depend on the physical properties of the background medium.
@@ -89,7 +92,7 @@ However, in the case where (:math:`y,z \ll x`), second order terms in the :math:
 Assuming we are in the quasi-static regime (:math:`|\omega\varepsilon | \ll \sigma`), and given that :math:`k^2 = - i \omega \mu \sigma`, the far field approximation of :math:`\mathbf{E}_e` is represented by the following two cases:
 
 .. math::
-	\mathbf{E}_e \approx
+	\mathbf{E_e (r)} \approx
 	\begin{cases}
 	\dfrac{i\omega \mu I ds}{4 \pi r} e^{-ikr} \Bigg [ \left ( \dfrac{x^2}{r^2} - 1 \right ) \hat x + \dfrac{xy}{r^2} \, \hat y + \dfrac{xz}{r^2} \, \hat z \Bigg ] \; \; &\textrm{for} \; \; y,z \not \ll x \\
 	\; & \; \\
@@ -100,7 +103,7 @@ Let us now consider the far-field approximation of :math:`\mathbf{H}_e` within a
 Since :math:`1 \ll | kr |`, we can simplify the full analytic expression in the same manner and show that:
 
 .. math::
-	\mathbf{H}_e \approx \frac{ik I ds}{4\pi r} e^{-ikr} \left ( -\frac{z}{r}\hat y + \frac{y}{r}\hat z \right )
+	\mathbf{H_e (r)} \approx \frac{ik I ds}{4\pi r} e^{-ikr} \left ( -\frac{z}{r}\hat y + \frac{y}{r}\hat z \right )
 
 
 

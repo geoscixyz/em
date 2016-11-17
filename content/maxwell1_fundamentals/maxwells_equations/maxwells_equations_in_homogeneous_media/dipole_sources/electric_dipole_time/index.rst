@@ -34,7 +34,7 @@ As a result, the source term for the time-depedent electrical current dipole is 
 
 
 .. math::
-	\mathbf{j_e (r)} = \mathbf{I}(t) ds \, \delta (x) \delta (y) \delta (z)
+	\mathbf{j_e^s} = \mathbf{I}(t) ds \, \delta (x) \delta (y) \delta (z)
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -44,7 +44,7 @@ By including the source term, Maxwell's equations in the time domain are given b
 .. math::
 	\begin{split}
 	&\nabla \times \mathbf{e} + \dfrac{\partial \big [ \mu \mathbf{h} \big ]}{\partial t} = 0  \\
-	\nabla \times \mathbf{h} &- \sigma \mathbf{e} - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = \mathbf{I}(t)ds \, \delta(x) \delta(y) \delta(z)
+	\nabla \times \mathbf{h} - \sigma \mathbf{e} & - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = \mathbf{I}(t)ds \, \delta(x) \delta(y) \delta(z)
 	\end{split}
 
 

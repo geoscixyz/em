@@ -81,21 +81,24 @@ Thus the electric field for an electrical current dipole in the :math:`\hat x` d
 .. math::
 	\mathbf{E_e (r)} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon)} \left[ \left( k^2 + \frac{\partial^2}{\partial x^2} \right) \hat{x} + \frac{\partial^2}{\partial x \partial y} \hat{y} + \frac{\partial^2}{\partial x \partial z} \hat{z} \right] \frac{e^{-ikr}}{r}
 
-which becomes
+which is equal to:
 
 .. math::
-	\mathbf{E_e (r)} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
+	\begin{split}
+	\mathbf{E_e (r)} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} e^{-ikr} \Bigg [ \Bigg ( \frac{x^2}{r^2} \hat{x} + & \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \Bigg ) ... \\
+	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 - ikr -1 \big ) \hat{x} \Bigg ] .
+	\end{split}
 	:label: E_Cartesian
 
-While the magnetic field is:
+The magnetic field is:
 
 .. math::
 	\mathbf{H_e (r)} = \frac{I ds}{4 \pi} \left[ \frac{\partial}{\partial z} \hat{y} - \frac{\partial}{\partial y} \hat{z} \right] \frac{e^{-ikr}}{r}
 
-which becomes
+which is equal to:
 
 .. math::
-	\mathbf{H_e (r)} = \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
+	\mathbf{H_e (r)} = \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) .
 	:label: H_Cartesian
 
 

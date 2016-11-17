@@ -16,13 +16,14 @@ Analytic Solution
 For an electrical current source (:math:`{\bf \, j_e^s} \,`) within a homogeneous media, Maxwell's equations in the time-domain can be written as follows:
 
 .. math::
-	\nabla \times {\bf e_e} + \mu \frac{\partial}{\partial t} ({\bf h_e}) = 0
+	\nabla \times {\bf e_e} + \mu \frac{\partial {\bf h_e}}{\partial t} = 0
 	:label: Faraday_m
 
 .. math::
 	\nabla \times {\bf h_e} - (\sigma + i\omega \varepsilon ) {\bf e_e} = {\bf j_e^s}
 	:label: Ampere_m
 
+where subscripts :math:`_e` remind us that we are considering an electric source.
 For a time-dependent electric dipole source in the :math:`\hat x` direction, with current :math:`I (t)` and length :math:`ds`, :math:`{\bf \, j_e^s \,}` is given by:
 
 .. math::
