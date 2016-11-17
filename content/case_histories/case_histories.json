@@ -100,15 +100,19 @@
             {"uid":"Geotechnical", "as":"application"},
             {"uid":"Switzerland", "as":"location"}
         ]
-    }
-    ,
+    },
     "hoop_region_norway":{
         "title":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data",
         "source":"./hoop_region_norway/",
         "thumbnail":"./hoop_region_norway/images/inversion_workflow.png",
-        "citations":["DevrieseOldenburg2016"],
         "contributors":[
-            {"uid":"user:sdevriese", "as":"author"}
+            {"uid":"user:palvarez", "as":"author"},
+            {"uid":"user:aalvarez", "as":"author"},
+            {"uid":"user:lmacgregor", "as":"author"},
+            {"uid":"user:fbolivar", "as":"author"},
+            {"uid":"user:rkeirstead", "as":"author"},
+            {"uid":"user:tmartin", "as":"author"},
+            {"uid":"user:dccowan", "as":"editor"}
         ],
         "tags":[
             {"uid":"CSEM", "as":"geophysical_survey"},

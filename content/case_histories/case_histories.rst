@@ -24,7 +24,8 @@ Reservoir properties prediction using CSEM, pre-stack seismic and well log data
 
 
 - Contributors
-    - author: :ref:`sdevriese`
+    - editor: :ref:`dccowan`
+    - author: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
 
 
 - Tags
