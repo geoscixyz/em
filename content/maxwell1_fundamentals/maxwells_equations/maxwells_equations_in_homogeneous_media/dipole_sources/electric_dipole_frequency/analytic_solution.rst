@@ -18,7 +18,7 @@ For an electrical current source (:math:`\mathbf{J_e^s}`), Maxwell's equations i
 	\nabla \times \mathbf{E_e} + i\omega \mu \mathbf{H_e} = 0 
 	:label: Faraday_e
 .. math::
-	\nabla \times \mathbf{H_e} - (\sigma + i\omega \epsilon) \mathbf{E_e} = \mathbf{J}_e^s 
+	\nabla \times \mathbf{H_e} - (\sigma + i\omega \varepsilon) \mathbf{E_e} = \mathbf{J}_e^s 
 	:label: Ampere_e
 
 where subscripts :math:`_e` remind us that we are considering an electric source. 
@@ -31,7 +31,7 @@ For an electrical current source (:math:`\mathbf{J_e^s}`), the electric and magn
 and
 
 .. math::
-	\mathbf{E}_e = -i\omega\mu\mathbf{A} + \frac{1}{(\sigma + i\omega\epsilon)} \nabla (\nabla \cdot \mathbf{A})
+	\mathbf{E}_e = -i\omega\mu\mathbf{A} + \frac{1}{(\sigma + i\omega\varepsilon)} \nabla (\nabla \cdot \mathbf{A})
 	:label: E_A_potential
 
 

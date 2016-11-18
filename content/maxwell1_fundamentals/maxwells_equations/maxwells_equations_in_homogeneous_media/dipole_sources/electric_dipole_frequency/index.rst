@@ -32,6 +32,7 @@ For a harmonic current dipole defined by length :math:`ds` and harmonic current 
 
 .. math::
 	\mathbf{p}(\omega) = \mathbf{p} \, e^{i\omega t} = \mathbf{I} ds \, e^{i\omega t}
+	:name: p_harmonic_def
 
 
 where :math:`\mathbf{p} = \mathbf{I}ds` is the vector amplitude of the dipole moment.
@@ -41,6 +42,7 @@ As a result, the source term for the harmonic electrical current dipole is given
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
+	:name: Je_harmonic_def
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -52,6 +54,7 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 	&\nabla \times \mathbf{E} + i \omega \mu \mathbf{H} = 0  \\
 	\nabla \times \mathbf{H} - & (\sigma  + i\omega \varepsilon ) \mathbf{E} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
 	\end{split}
+	:name: p_Maxwells_harmonic
 
 
 

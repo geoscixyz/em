@@ -53,6 +53,7 @@ In the presence of an electromagnetic source, Maxwell's equations in the frequen
 	\nabla \times \mathbf{E} + i \omega & \mu \mathbf{H} = \pm \, \mathbf{J_m^s}  \\
 	\nabla \times \mathbf{H} - (\sigma + & i \omega \varepsilon ) \mathbf{E} = \pm \, \mathbf{J_e^s}
 	\end{split}
+    :name: eq_Maxwells_frequency
 
 
 where :math:`\pm` depends on a choice in sign convention.
@@ -63,6 +64,8 @@ Equivalently, Maxwell's equations in the time domain are given by:
 	\nabla \times \mathbf{e} \, + \, &\dfrac{\partial \big [ \mu \mathbf{h} \big ]}{\partial t} = \pm \mathbf{j_m^s} \\
 	\nabla \times \mathbf{h} - \sigma \mathbf{e} &  - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = \pm \mathbf{j_e^s}
 	\end{split}
+    :name: eq_Maxwells_time
+
 
 where :math:`\mathbf{j_e^s}` and :math:`\mathbf{j_m^s}` are time-dependent electric and magnetic source terms, respectively.
 Ultimately, the right-hand side of :ref:`Faraday's law <faraday_differential_frequency>` becomes non-zero in the presence of a magnetic source.

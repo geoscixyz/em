@@ -27,7 +27,7 @@ For a harmonic magnetic dipole defined by vector surface area :math:`\mathbf{S}`
 
 .. math::
 	\mathbf{m} (\omega) = \mathbf{m} \, e^{i\omega t} = I \mathbf{S} \, e^{i\omega t}
-	
+	:name: m_harmonic_def
 
 where :math:`\mathbf{m} = I \mathbf{S}` is the vector amplitude of the dipole moment.
 When formulating Maxwell's equations in the frequency domain, :math:`e^{i\omega t}` is generally suppressed.
@@ -35,8 +35,8 @@ As a result, the source term for the harmonic magnetic dipole is given by:
 
 
 .. math::
-	\mathbf{J_m (r)} = -i\omega \mu I\mathbf{S} \, \delta (x) \delta (y) \delta (z)
-
+	\mathbf{J_m^s} = -i\omega \mu I\mathbf{S} \, \delta (x) \delta (y) \delta (z)
+	:name: Jm_harmonic_def
 
 where :math:`\delta (x)` is the Dirac delta function.
 By including the source term, Maxwell's equations in the frequency domain are given by:
@@ -47,6 +47,7 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 	\nabla \times \mathbf{E} + i \omega & \mu \mathbf{H} = - i \omega \mu I \mathbf{S} \, \delta(x) \delta(y) \delta(z)  \\
 	&\nabla \times \mathbf{H} - \sigma \mathbf{E} = 0
 	\end{split}
+	:name: Maxwells_harmonic_Jm
 
 
 
