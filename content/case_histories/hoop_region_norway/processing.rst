@@ -1,7 +1,7 @@
-.. _hoop_region_norway_dataprocessing:
+.. _hoop_region_norway_processing:
 
-Data and Processing
-===================
+Processing
+==========
 
 
 A densely sampled dataset consisting of six lines of 2D seismic and towed streamer CSEM data were acquired concurrently in 2015 by PGS in using the system depicted in Figure 3 (Englemark et al., 2014). The survey area lies in water depths of approximately 400m. Two public domain wells in the area provide calibration for the integrated analysis. Oil bearing sands were encountered in the Realgrunnen interval at well 7324/8-1 (Wisting Central), whereas the same interval was dry in nearby well 7324/7-1S (Wisting Alternative). Two additional wells have been drilled in the immediate vicinity: 7324/7-2 (Hanssen) yielded a small oil discovery, and 7324/8-2 (Bjaaland) was dry. The results from these wells were used to validate and corroborate the accuracy of the reservoir property predictions (Figure 2b).

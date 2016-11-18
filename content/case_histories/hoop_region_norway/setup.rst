@@ -19,6 +19,38 @@ The integration process itself can take many forms. The simplest qualitative tec
 This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (Figure 2a). 
 
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    PARAPHRASE: DEVIN
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+.. figure:: images/survey_schematic.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_survey_schematic
+
+    Schematic showing towed CSEM and seismic instruments over the Hoop Fault Complex, Barents Sea, Norway.
+    
+
+The accurate characterization of oil and gas reservoirs represents a primary goal for petroleum geologists, geophysicists and engineers.
+Ultimately, we are interested in the dimensions, porosity, fluid saturation and lithology of the reservoir. 
+Here, we present a case study which uses controlled source electromagnetic (CSEM), 2D seismic, and well-log data to obtain reservoir properties within the Hoop Fault Complex, Barents Sea, Norway. Survey data were collected in 2015 by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ and the supporting literature was provided by `Solid Rock Images <http://www.rocksolidimages.com>`__ .
+
+
+Over the last hundred years, technology and innovation have lead to the progressive use of 2D seismic (early 1920s), gravity, 3D seismic (late 1960s) and CSEM (early 2000s) methods as well as AVO analysis to characterize petroleum reservoirs. Recently developed approaches, which are more sophisticated and robust, work by integrating attributes of pre-stack seismic inversion and CSEM inversion within a rock physics framework. These approaches have been successful, in part, because 2D seismic and CSEM data provide both independent and complementary subsurface physical property models which can be validated by well log measurements.
+
+
+Despite its advantages, the integration of CSEM and seismic data has its challenges. First, electric and elastic properties must be coupled through a single earth model that quantifies both accurately and consistently. Secondly, the sensitivity of the data to the properties for each geophysical method must be adequately balanced. Finally, seismic, CSEM and well log data sample the earth at very different scales. This must be reconciled when applying an integrated interpretation.
+
+
+
+    - Something about how challenges arise when attempting to combine these data.
+    - What is this paper all about
+    - Something about how this case study fixes the problem. 
+    - Finish by expressing how we were successful and what we were able to accomplish.
+
+
+
 
 Geology
 -------
@@ -31,8 +63,9 @@ The study area is significantly uplifted, and characterized by high background r
 
 
 
-
-
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    PARAPHRASE: DEVIN
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 

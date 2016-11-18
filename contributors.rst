@@ -15,6 +15,57 @@ Contributors
 
 
 
+.. _aalvarez:
+
+Amanda Alvarez
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _palvarez:
+
+Pedro Alvarez
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
 
 .. _thast:
 
@@ -79,6 +130,66 @@ Patrick Belliveau
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="https://github.com/Pbellive">https://github.com/Pbellive</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _fbolivar:
+
+Fransisco Bolivar
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _dccowan:
+
+Devin C. Cowan
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460"><img alt="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460" class="align-left" src="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC, Canada
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:devinccowan@gmail.com">devinccowan@gmail.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/dccowan">https://github.com/dccowan</a>
                     
                           
     </div>
@@ -174,7 +285,7 @@ Alan G. Green
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="images_contributors/agreen"><img alt="images_contributors/agreen" class="align-left" src="images_contributors/agreen" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"><img alt="https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png" class="align-left" src="https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -302,6 +413,32 @@ Seogi Kang
 
         
 
+.. _rkeirstead:
+
+Rob Keirstead
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
 .. _jlegault:
 
 Jean Legault
@@ -334,6 +471,62 @@ Jean Legault
 
         
 
+.. _lmacgregor:
+
+Lucy Macgregor
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:lucy.macgregor@rocksolidimages.com">lucy.macgregor@rocksolidimages.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
+.. _tmartin:
+
+Thomas Martin
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 160px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Rock Solid Images
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br>
+    </div>
+
+
+        
+
 .. _hmaurer:
 
 Hansruedi Maurer
@@ -344,7 +537,7 @@ Hansruedi Maurer
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="images_contributors/hmaurer"><img alt="images_contributors/hmaurer" class="align-left" src="images_contributors/hmaurer" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"><img alt="https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png" class="align-left" src="https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -374,7 +567,7 @@ Kaspar Merz
     <div class="row" style="min-height: 160px">
     <div class="col-md-4">
         
-    <a class="reference internal image-reference" href="images_contributors/kmerz"><img alt="images_contributors/kmerz" class="align-left" src="images_contributors/kmerz" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+    <a class="reference internal image-reference" href="https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"><img alt="https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png" class="align-left" src="https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -563,4 +756,3 @@ Dikun Yang
 
 
         
-

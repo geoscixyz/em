@@ -14,13 +14,25 @@ There is significant variation between the resistivity measurements made with di
 
 where Rt is the horizontal resistivity, Sw is the water saturation, m is the cementation exponent, n is the saturation exponent, a is the tortuosity exponent, Rw is the water resistivity at formation temperature, Vsh is the shale content, Rsh is the resistivity of the shale, and  is the effective porosity defined as
  
- 
+
 where  is the total porosity. The parameters used in the Simandoux equation were calibrated to the measured data and are summarized in Table 1.
 
 
 **Add Table**
 
 In the context of a CSEM analysis, the background resistivity and the contrast between background and reservoir is also important to understand. Figure 8a and 8b show the resistivity variation with saturation calculated at the Wisting Central and Alternative wells using the Simandoux parameters from table 1. For each case, the calibrated Simandoux equation is used to calculate the resistivity at log scale for a range of values of Sw (Figure 8c). The log scale values are then up-scaled using an arithmetic average to give the bulk vertical resistivity (as would be measured by a CSEM survey) across the reservoir interval. The shaded area corresponds to the region of the curve where the resistivity is equal to or lower than the observed background vertical resistivity in the area (around 20-30 Wm). Only when the reservoir resistivity lies outside the shaded region is there a contrast between it and the background, allowing it to be detected by a CSEM survey. Figure 8c shows that this condition is met for values of Sw less than 30%. This provides a practical limit on the sensitivity to Sw, i.e. values greater than this will not be resolved. 
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    PARAPHRASE: DEVIN
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
 
 
 
