@@ -162,14 +162,14 @@ Contributors
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         {avatar}
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         {html_block}
     </div>
-    <br>
+    <br><br>
     </div>
 
 
