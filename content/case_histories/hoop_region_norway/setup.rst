@@ -19,56 +19,39 @@ The integration process itself can take many forms. The simplest qualitative tec
 This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (Figure 2a). 
 
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    PARAPHRASE: DEVIN
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-.. figure:: images/survey_schematic.png
-    :align: right
-    :figwidth: 50%
-    :name: fig_survey_schematic
-
-    Schematic showing towed CSEM and seismic instruments over the Hoop Fault Complex, Barents Sea, Norway.
-    
-
-The accurate characterization of oil and gas reservoirs represents a primary goal for petroleum geologists, geophysicists and engineers.
-Ultimately, we are interested in the dimensions, porosity, fluid saturation and lithology of the reservoir. 
-Here, we present a case study which uses controlled source electromagnetic (CSEM), 2D seismic, and well-log data to obtain reservoir properties within the Hoop Fault Complex, Barents Sea, Norway. Survey data were collected in 2015 by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ and the supporting literature was provided by `Solid Rock Images <http://www.rocksolidimages.com>`__ .
-
-
-Over the last hundred years, technology and innovation have lead to the progressive use of 2D seismic (early 1920s), gravity, 3D seismic (late 1960s) and CSEM (early 2000s) methods as well as AVO analysis to characterize petroleum reservoirs. Recently developed approaches, which are more sophisticated and robust, work by integrating attributes of pre-stack seismic inversion and CSEM inversion within a rock physics framework. These approaches have been successful, in part, because 2D seismic and CSEM data provide both independent and complementary subsurface physical property models which can be validated by well log measurements.
-
-
-Despite its advantages, the integration of CSEM and seismic data has its challenges. First, electric and elastic properties must be coupled through a single earth model that quantifies both accurately and consistently. Secondly, the sensitivity of the data to the properties for each geophysical method must be adequately balanced. Finally, seismic, CSEM and well log data sample the earth at very different scales. This must be reconciled when applying an integrated interpretation.
-
-
-
-    - Something about how challenges arise when attempting to combine these data.
-    - What is this paper all about
-    - Something about how this case study fixes the problem. 
-    - Finish by expressing how we were successful and what we were able to accomplish.
-
-
 
 
 Geology
 -------
 
 
-Several sedimentary basins and platform areas make up the Norwegian sector of the Barents Sea. The general structural configuration in the area of interest is to a large extent dominated by the Hoop Fault Complex on the Bjarmeland Platform (see Figure 2a). The area of interest is positioned on the hanging wall of the Hoop Fault Complex to the east and on the footwall of the Maud Basin. Figure 5 shows a seismic cross-section illustrating the general nature and structure of the area. The Realgrunnen Subgroup of the Kapp Toscana Group provides some of the best reservoirs in the Barents Sea. It is subdivided into four formations: Fruholmen, Tubåen, Nordmela and Stø. The Nordmela Formation (Sinemurian-Late Pliensbachian) consists of interbedded siltstones, sandstones, shale and mudstones with minor coals. Sandstones become more common towards the top. The formation represents deposits in a tidal flat to flood-plain environment. Individual sandstones represent estuarine and tidal channels. The Stø Formation (Late Pliensbachian to Bajocian) is defined with the appearance of sandy sequences above the shale-dominated sediments of the Nordmela Formation. The dominant lithology of the Stø Formation is mineralogically mature and well sorted sandstone. The sands in the Stø Formation were deposited in prograding coastal regimes, and a variety of linear clastic coast lithofacies are represented. Marked shale and siltstone intervals represent regional transgressive pulses in the late Toarcian and late Aalenian. Overlying the Stø Formation is the Fuglen Formation, which belongs to the Adventdalen Group. The group is dominated by dark marine mudstones, locally including deltaic and shelf sandstones as well as carbonate. The Fuglen Formation constitutes the cap rocks of the reservoir facies. (Halland et al. 2013)
+Several sedimentary basins and platform areas make up the Norwegian sector of the Barents Sea. The general structural configuration in the area of interest is to a large extent dominated by the Hoop Fault Complex on the Bjarmeland Platform (see Figure 2a). The area of interest is positioned on the hanging wall of the Hoop Fault Complex to the east and on the footwall of the Maud Basin. Figure 5 shows a seismic cross-section illustrating the general nature and structure of the area.
+
+
+.. figure:: images/geology_region_map.png
+    :align: center
+    :figwidth: 100%
+    :name: fig_geology_region_map
+
+
+a) *Structural elements of the Barents Seas showing with a red box the location of the studied area (modified from Halland et al. 2013).*
+b) *Detailed view of the studied area showing the location of the 2D GeoStreamer seismic and towed streamer CSEM data (blue lines), as well as the calibration well (Central and Alternative) and the validation wells (Hanssen and Bjaaland). The green outlines show the location of the proven reservoirs in the area (data courtesy of NPD), which were discovered by the wells Central and Hanssen.*
+
+
+
+
+The Realgrunnen Subgroup of the Kapp Toscana Group provides some of the best reservoirs in the Barents Sea. It is subdivided into four formations: Fruholmen, Tubåen, Nordmela and Stø. The Nordmela Formation (Sinemurian-Late Pliensbachian) consists of interbedded siltstones, sandstones, shale and mudstones with minor coals. Sandstones become more common towards the top. The formation represents deposits in a tidal flat to flood-plain environment. Individual sandstones represent estuarine and tidal channels. The Stø Formation (Late Pliensbachian to Bajocian) is defined with the appearance of sandy sequences above the shale-dominated sediments of the Nordmela Formation. The dominant lithology of the Stø Formation is mineralogically mature and well sorted sandstone. The sands in the Stø Formation were deposited in prograding coastal regimes, and a variety of linear clastic coast lithofacies are represented. Marked shale and siltstone intervals represent regional transgressive pulses in the late Toarcian and late Aalenian. Overlying the Stø Formation is the Fuglen Formation, which belongs to the Adventdalen Group. The group is dominated by dark marine mudstones, locally including deltaic and shelf sandstones as well as carbonate. The Fuglen Formation constitutes the cap rocks of the reservoir facies. (Halland et al. 2013)
 
 
 The study area is significantly uplifted, and characterized by high background resistivity and high electrical anisotropies. Target intervals exist in a wide range of depths, ranging from about 250m below mudline to nearly 2000m below mudline. The reservoir encountered in well 7324/8-1(Wisting Central) consists of the Stø and Nordmela Formations, overlying the Snadd Fm. of upper Triassic age. The Stø Fm. is marked by a sharp contact with the overlying Fuglen Fm., seen both on logs and on drilling parameters. The Stø Fm. consists of 20m clean and homogenous sand, with very good reservoir properties. This is confirmed both by wireline log data and core measurements. 
 
 
+.. figure:: images/cross_section_seismic.png
+    :align: center
+    :figwidth: 100%
+    :name: fig_cross_section_seismic
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    PARAPHRASE: DEVIN
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-
+    *Seismic cross-section through though the wells Alternative and Central. The top Stø horizon marks the top of the reservoir interval encountered in the Wisting Central well (7324/8-1).*
 
 
 
