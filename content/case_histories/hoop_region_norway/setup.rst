@@ -16,7 +16,17 @@ However, there are a number of challenges to be overcome when putting seismic an
 The integration process itself can take many forms. The simplest qualitative techniques, such as co-rendering, are applicable everywhere and provide a first-look approach to data combination. However, they can be misleading since they fail to address the underlying cause of variations observed. Full quantitative joint inversion of seismic and CSEM data is in principle possible (for example Chen & Hoverston, 2012; Du & MacGregor, 2010), but is complex and applicable in a far narrower range of circumstances. An intermediate approach, based on a sequential quantitative integrated interpretation workflow, which seeks to integrate elastic and electric attributes derived from inversion of seismic and CSEM data respectively, provides in many circumstances an effective way of addressing the challenges of data integration. 
 
 
-This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (Figure 2a). 
+This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (:numref:`fig_geology_region_map_setup` a). 
+
+
+.. figure:: images/geology_region_map.png
+    :align: center
+    :figwidth: 100%
+    :name: fig_geology_region_map_setup
+
+a) *Structural elements of the Barents Seas showing with a red box the location of the studied area (modified from Halland et al. 2013).*
+b) *Detailed view of the studied area showing the location of the 2D GeoStreamer seismic and towed streamer CSEM data (blue lines), as well as the calibration well (Central and Alternative) and the validation wells (Hanssen and Bjaaland). The green outlines show the location of the proven reservoirs in the area (data courtesy of NPD), which were discovered by the wells Central and Hanssen.*
+
 
 
 
@@ -25,19 +35,7 @@ Geology
 -------
 
 
-Several sedimentary basins and platform areas make up the Norwegian sector of the Barents Sea. The general structural configuration in the area of interest is to a large extent dominated by the Hoop Fault Complex on the Bjarmeland Platform (see Figure 2a). The area of interest is positioned on the hanging wall of the Hoop Fault Complex to the east and on the footwall of the Maud Basin. Figure 5 shows a seismic cross-section illustrating the general nature and structure of the area.
-
-
-.. figure:: images/geology_region_map.png
-    :align: center
-    :figwidth: 100%
-    :name: fig_geology_region_map
-
-
-a) *Structural elements of the Barents Seas showing with a red box the location of the studied area (modified from Halland et al. 2013).*
-b) *Detailed view of the studied area showing the location of the 2D GeoStreamer seismic and towed streamer CSEM data (blue lines), as well as the calibration well (Central and Alternative) and the validation wells (Hanssen and Bjaaland). The green outlines show the location of the proven reservoirs in the area (data courtesy of NPD), which were discovered by the wells Central and Hanssen.*
-
-
+Several sedimentary basins and platform areas make up the Norwegian sector of the Barents Sea. The general structural configuration in the area of interest is to a large extent dominated by the Hoop Fault Complex on the Bjarmeland Platform (see :numref:`fig_geology_region_map_setup` a). The area of interest is positioned on the hanging wall of the Hoop Fault Complex to the east and on the footwall of the Maud Basin. :numref:`fig_cross_section_seismic` shows a seismic cross-section illustrating the general nature and structure of the area.
 
 
 The Realgrunnen Subgroup of the Kapp Toscana Group provides some of the best reservoirs in the Barents Sea. It is subdivided into four formations: Fruholmen, Tubåen, Nordmela and Stø. The Nordmela Formation (Sinemurian-Late Pliensbachian) consists of interbedded siltstones, sandstones, shale and mudstones with minor coals. Sandstones become more common towards the top. The formation represents deposits in a tidal flat to flood-plain environment. Individual sandstones represent estuarine and tidal channels. The Stø Formation (Late Pliensbachian to Bajocian) is defined with the appearance of sandy sequences above the shale-dominated sediments of the Nordmela Formation. The dominant lithology of the Stø Formation is mineralogically mature and well sorted sandstone. The sands in the Stø Formation were deposited in prograding coastal regimes, and a variety of linear clastic coast lithofacies are represented. Marked shale and siltstone intervals represent regional transgressive pulses in the late Toarcian and late Aalenian. Overlying the Stø Formation is the Fuglen Formation, which belongs to the Adventdalen Group. The group is dominated by dark marine mudstones, locally including deltaic and shelf sandstones as well as carbonate. The Fuglen Formation constitutes the cap rocks of the reservoir facies. (Halland et al. 2013)

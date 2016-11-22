@@ -14,13 +14,15 @@ Predicting Resevoir Properties using CSEM, Pre-Stack Seismic and Well Log Data
 
 This case history has been taken from the paper "*Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway*", which was supplied by `Solid Rock Images <http://www.rocksolidimages.com>`__ . Survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
 
+**Abstract**
+
 We present an example from the Hoop area of the Barents Sea showing a sequential quantitative integration approach to integrate seismic and CSEM attributes using a rock physics framework.  The example  illustrates a workflow to address the challenges of multi-physics and multi-scale data integration for reservoir characterization purposes.
 
 
 .. figure:: images/survey_schematic.png
     :align: right
     :figwidth: 50%
-    :name: fig_survey_schematic
+    :name: fig_survey_schematic_title
 
     Schematic showing towed CSEM and seismic instruments over the Hoop region, Barents Sea, Norway.
     
@@ -38,7 +40,7 @@ In the first stage of the analysis, we invert pre-stack seismic and CSEM data se
 .. figure:: images/inversion_workflow.png
     :align: center
     :figwidth: 100%
-    :name: fig_inversion_workflow
+    :name: fig_inversion_workflow_title
 
     Work-flow for quantitative interpretation of well log, seismic and CSEM data and inversions.
     
