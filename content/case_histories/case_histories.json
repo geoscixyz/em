@@ -106,19 +106,19 @@
         "source":"./hoop_region_norway/",
         "thumbnail":"./hoop_region_norway/images/inversion_workflow.png",
         "contributors":[
-            {"uid":"user:palvarez", "as":"author"},
-            {"uid":"user:aalvarez", "as":"author"},
-            {"uid":"user:lmacgregor", "as":"author"},
-            {"uid":"user:fbolivar", "as":"author"},
-            {"uid":"user:rkeirstead", "as":"author"},
-            {"uid":"user:tmartin", "as":"author"},
-            {"uid":"user:dccowan", "as":"editor"}
+            {"uid":"user:palvarez", "as":"Authors"},
+            {"uid":"user:aalvarez", "as":"Authors"},
+            {"uid":"user:lmacgregor", "as":"Authors"},
+            {"uid":"user:fbolivar", "as":"Authors"},
+            {"uid":"user:rkeirstead", "as":"Authors"},
+            {"uid":"user:tmartin", "as":"Authors"},
+            {"uid":"user:dccowan", "as":"EM GeoSci Contributor"}
         ],
         "tags":[
-            {"uid":"CSEM", "as":"geophysical_survey"},
-            {"uid":"Hydrocarbons", "as":"application"},
-            {"uid":"Oil Sands", "as":"keyword"},
-            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"location"}
+            {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},
+            {"uid":"Reservoir characterization, marine EM", "as":"Applications"},
+            {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
+            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
         ]
     }
 }

@@ -24,15 +24,15 @@ Reservoir properties prediction using CSEM, pre-stack seismic and well log data
 
 
 - Contributors
-    - editor: :ref:`dccowan`
-    - author: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
+    - Authors: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
+    - EM GeoSci Contributor: :ref:`dccowan`
 
 
 - Tags
-    - geophysical survey: CSEM
-    - application: Hydrocarbons
-    - location: Hoop Fault Complex, Barents Sea, Norway
-    - keyword: Oil Sands
+    - Keywords: Hydrocarbon, CSEM, reservoir, oil and gas
+    - Applications: Reservoir characterization, marine EM
+    - Location: Hoop Fault Complex, Barents Sea, Norway
+    - Geophysical Surveys: CSEM, 2D seismic
 
 |
 |
