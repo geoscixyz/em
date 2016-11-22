@@ -11,38 +11,9 @@ Analytic Solution
     Due to the difficulties which arise in deriving the final expressions, we will not include the effects of dielectric permittivity (:math:`\varepsilon`); this is known as the quasi-static approximation.
     
 
-**General Formulation**
 
-For a magnetic source (:math:`{\bf \, j_m^s \,}`) within a homogeneous media, Maxwell's equations in the time-domain can be written as follows:
+**Obtaining the Transient Response from a Harmonic Solution**
 
-.. math::
-	\nabla \times {\bf e_e} + \mu \frac{\partial}{\partial t} ({\bf h_e}) = -i \omega \mu {\bf j_m^s}
-	:label: Faraday_time_homogeneous
-
-.. math::
-	\nabla \times {\bf h_e} - (\sigma + i\omega \varepsilon ) {\bf e_e} = 0
-	:label: Ampere_time_homogeneous
-
-Provided the source term is represented by a time-dependent magnetic dipole source :math:`m(t)` in the :math:`\hat x` direction, :math:`{\bf j_m^s}` is given by:
-
-.. math::
-	{\bf j_m^s} = \hat x  \delta (x) \delta (y) \delta (z) m(t)
-	:label: mag_dipole_source_time
-
-
-We are interested in the time-dependent electric and magnetic fields which arise due to a step-off excitation, also known as the transient response.
-For a step-off excitation, the magnetic dipole moment is given by:
-
-.. math::
-	m(t) = m \, u(-t) = m \big [ 1 - u(t) \big ]
-	:label: step_off_moment
-
-
-Instead of solving the problem beginning with Maxwell's equations, we will used the approach found in Ward and Hohmann :cite:`ward1988`.
-For this approach, frequency-domain solutions previously derived for the :ref:`harmonic magnetic dipole<frequency_domain_magnetic_dipole_analytic_solution>` are transformed into the time-domain via inverse Laplace transform.
-
-
-**Frequency Domain to Time Domain**
 
 For a causal system, the unit step-response (:math:`g_+`) at :math:`t \geq 0` is given by:
 
@@ -55,20 +26,29 @@ For most geophysical problems however, we are interested in the step-off or tran
 The step-off response for a causal system may be given by:
 
 .. math::
-	g_-(t) = \int_{-\infty}^\infty f(\tau) \big [ 1 - u(t - \tau) \big ] d\tau = \int_0^\infty f(\tau) d\tau - \int_0^t f(\tau) d\tau = g_+ (\infty) - g_+(t) \; \; \; \textrm{for} \; \; \; t\geq 0
+	\begin{split}
+	g_-(t) = \int_{-\infty}^\infty f(\tau) \big [ 1 - &u(t - \tau) \big ] d\tau = \; ... \\
+	& \int_0^\infty f(\tau) d\tau - \int_0^t f(\tau) d\tau = g_+ (\infty) - g_+(t) \; \; \; \textrm{for} \; \; \; t\geq 0
+	\end{split}
 	:label: causal_step_off
 
 where :math:`g_+ (\infty )` represents the step-response at :math:`t = \infty`.
 Therefore, if the step-response is known for :math:`t \geq 0`, it can be used to obtain the step-off response at :math:`t \geq 0`.
 
-From Ward and Hohmann :cite:`ward1988`, the step-response for a causal system is equivalent to the following inverse Laplace transform:
+From Ward and Hohmann :cite:`ward1988`, the step-response can be obtained via the following inverse Laplace transform:
 
 .. math::
 	g_+(t) = L^{-1} \Bigg [ \frac{F(s)}{s} \Bigg ]
-	:label: step_inverse_Laplace
+	:label: step_Laplace_transform
 
 where :math:`F(s)` is obtained by replacing :math:`s=i\omega` in the system's harmonic response function.
-For the electric and magnetic fields arising from a harmonic magnetic dipole, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
+For the electric field, magnetic field and vector potential arising from a harmonic magnetic dipole in the :math:`\hat x` direction, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
+
+
+**Harmonic Solutions for a Magnetic Dipole**
+
+As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z)` \hat x. 
+
 
 For the vector potential:
 
@@ -97,17 +77,16 @@ where the wavenumber :math:`k` is given by:
 
 
 
-**Analytic Solution**
+**Analytic Solutions for the Transient Response (Quasi-Static)**
 
 
-Let us consider the quasi-static transient response within the medium (i.e. :math:`|\omega\varepsilon \ll \sigma |`).
-In this case, the wavenumber is given by:
+Due to the difficulties which arise in deriving the final expressions, we will not include the effects of dielectric permittivity (:math:`\varepsilon`); this is known as the quasi-static approximation. In the quasi-static regime (i.e. when :math:`|\omega\varepsilon \ll \sigma |`), the wavenumber is given by:
 
 .. math::
 	k = \big (- i \omega \mu \sigma \big )^{1/2}
 	:label: wave_number_quasi_static
 
-If we substitute :math:`s = i\omega` in Eqs. :eq:`A_harmonic_response`, :eq:`E_harmonic_response` and :eq:`H_harmonic_response` and divide by :math:`s` then:
+If we substitute :math:`s = i\omega` in Eqs. :eq:`F_harmonic_response`, :eq:`E_harmonic_response` and :eq:`H_harmonic_response` and divide by :math:`s` then:
 
 
 .. math::
@@ -120,10 +99,13 @@ If we substitute :math:`s = i\omega` in Eqs. :eq:`A_harmonic_response`, :eq:`E_h
 	\frac{{\bf E_m}(s)}{s} = s \Bigg [ \frac{\mu m}{4\pi r^3} \bigg ( \sqrt{\frac{ \mu \sigma}{s}} r + \frac{1}{s} \bigg ) e^{-\sqrt{s \mu \sigma r^2}} \big ( z \, \hat y - y\, \hat z  \big ) \Bigg ]
 	:label: E_frac_inverse_Laplace
 
-and:
+and
 
 .. math::
-	\frac{{\bf H_e}(s)}{s} = \frac{m}{4\pi r^3} e^{-\sqrt{s\mu \sigma r^2}} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \Bigg ( -\mu\sigma r^2 + 3 \sqrt{\frac{\mu \sigma}{s}}r + \frac{3}{s} \Bigg ) + \Bigg ( -\mu\sigma r^2 - \sqrt{\frac{\mu \sigma}{s}} r - \frac{1}{s} \Bigg ) \hat x \Bigg ]
+	\begin{split}
+	\frac{{\bf H_m}(s)}{s} = \frac{m}{4\pi r^3} & e^{-\sqrt{s\mu \sigma r^2}} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x +  \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \; ... \\
+	& \Bigg ( -\mu\sigma r^2 + 3 \sqrt{\frac{\mu \sigma}{s}}r + \frac{3}{s} \Bigg ) + \Bigg ( -\mu\sigma r^2 - \sqrt{\frac{\mu \sigma}{s}} r - \frac{1}{s} \Bigg ) \hat x \Bigg ]
+	\end{split}
 	:label: H_frac_inverse_Laplace
 
 
@@ -164,8 +146,8 @@ and
 
 .. math::
 	\begin{split}
-	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 +& \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + 3\, \textrm{erfc} (\theta r) \Bigg ) \, ...  \\
-	& - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \hat x \Bigg ]
+	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \, ...  \\
+	& + 3\, \textrm{erfc} (\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \hat x \Bigg ]
 	\end{split}
 	:label: h_step_response
 
@@ -197,8 +179,8 @@ And for the magnetic field, the transient response is given by:
 
 .. math::
 	\begin{split}
-	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ \Bigg ( \frac{x^2}{r^2} \hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + &\frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \; ... \\
-	&-  \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x  \Bigg ]
+	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2} \hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3  \; ... \\ 
+	&+ \frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) - \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x  \Bigg ]
 	\end{split}
 	:label: h_step_off_response
 

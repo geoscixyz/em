@@ -51,14 +51,14 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 
 .. math::
 	\begin{split}
-	&\nabla \times \mathbf{E} + i \omega \mu \mathbf{H} = 0  \\
-	\nabla \times \mathbf{H} - & (\sigma  + i\omega \varepsilon ) \mathbf{E} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
+	&\nabla \times \mathbf{E_e} + i \omega \mu \mathbf{H_e} = 0  \\
+	\nabla \times \mathbf{H_e} - & (\sigma  + i\omega \varepsilon ) \mathbf{E_e} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
 	\end{split}
 	:name: p_Maxwells_harmonic
 
 
 
-
+where subscripts :math:`_e` remind us that we are considering an electric source.
 The source current is responsible for generating a primary current density (and thus an electric field) in the surrounding region (:numref:`ElecDipole`).
 However, the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_frequency>` states that harmonic electric fields as well as free currents generate magnetic fields.
 In addition, the harmonic nature of the magnetic fields should produce secondary electric fields according to :ref:`Faraday's law<faraday_differential_frequency>`.

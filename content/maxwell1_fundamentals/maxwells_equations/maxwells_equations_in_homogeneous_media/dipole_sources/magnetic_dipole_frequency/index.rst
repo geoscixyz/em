@@ -44,13 +44,13 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 
 .. math::
 	\begin{split}
-	\nabla \times \mathbf{E} + i \omega & \mu \mathbf{H} = - i \omega \mu I \mathbf{S} \, \delta(x) \delta(y) \delta(z)  \\
-	&\nabla \times \mathbf{H} - \sigma \mathbf{E} = 0
+	\nabla \times \mathbf{E_m} & + i \omega  \mu \mathbf{H_m} = - i \omega \mu I \mathbf{S} \, \delta(x) \delta(y) \delta(z)  \\
+	&\nabla \times \mathbf{H_m} - ( \sigma + i \omega \varepsilon ) \mathbf{E_m} = 0
 	\end{split}
 	:name: Maxwells_harmonic_Jm
 
 
-
+where subscripts :math:`_m` remind us that we are considering a magnetic source.
 The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`MagDipole`).
 According to :ref:`Faraday's law<faraday_differential_frequency>`, the harmonic nature of the primary magnetic field generates rotational electric fields.
 In matter, this leads to an induced current density which produces secondary magnetic fields according to the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_frequency>`.

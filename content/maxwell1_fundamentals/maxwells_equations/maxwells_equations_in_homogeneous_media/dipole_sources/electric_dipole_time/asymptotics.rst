@@ -62,11 +62,8 @@ According to Eq. :eq:`dhdt_nearfield_latetime`, the time-derivative of the magne
 Far-Field
 ---------
 
-**Everything goes to zero so there is no asymptotic for this**
 
-
-
-For fields which are far from the electric dipole source, or at sufficiently early times:
+For fields which are far from the electrical current dipole source, or at sufficiently early times:
 
 .. math::
 	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \gg 1
@@ -85,7 +82,7 @@ and
 	:label: erfc_approximation_2
 
 
-
+As a result, there are no interesting asymptotic approximations for the far-field.
 
 
 

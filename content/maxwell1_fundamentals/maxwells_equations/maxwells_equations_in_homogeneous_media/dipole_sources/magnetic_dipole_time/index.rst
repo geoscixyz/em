@@ -44,12 +44,12 @@ By including the source term, Maxwell's equations in the time domain are given b
 
 .. math::
 	\begin{split}
-	\nabla \times \mathbf{e} + \dfrac{\partial \big [ \mu \mathbf{h} \big ]}{\partial t} &= - \dfrac{\partial I(t)}{\partial t} \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
-	\nabla \times \mathbf{h} - & \sigma \mathbf{e}  - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = 0
+	\nabla \times \mathbf{e_m} + \mu \dfrac{ \mathbf{h_m} }{\partial t} &= - \dfrac{\partial I(t)}{\partial t} \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
+	\nabla \times \mathbf{_m} - & \sigma \mathbf{e_m}  - \varepsilon \dfrac{\partial  \mathbf{e_m} }{\partial t} = 0
 	\end{split}
 
 
-
+where subscripts :math:`_m` remind us that we are considering a magnetic source.
 The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`MagDipole`).
 According to :ref:`Faraday's law<faraday_differential_time>`, time-varying magnetic fields generate rotational electric fields.
 In matter, this leads to an induced current density which produces secondary magnetic fields according to the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_time>`.
@@ -73,7 +73,7 @@ The source term for the corresponding magnetic dipole is given by:
 
 
 .. math::
-	\mathbf{j_m (r)} = I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)
+	\mathbf{j_m^s} = I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -82,8 +82,8 @@ By including the source term, Maxwell's equations in the time domain are given b
 
 .. math::
 	\begin{split}
-	\nabla \times \mathbf{e} + \dfrac{\partial \big [ \mu \mathbf{h} \big ]}{\partial t} &= I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
-	\nabla \times \mathbf{h} - &\sigma \mathbf{e}  - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = 0
+	\nabla \times \mathbf{e_m} + \mu \dfrac{\partial  \mathbf{h_m} \}{\partial t} &= I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
+	\nabla \times \mathbf{h_m} - &\sigma \mathbf{e_m}  - \varepsilon \dfrac{\partial \mathbf{e_m} }{\partial t} = 0
 	\end{split}
 
 

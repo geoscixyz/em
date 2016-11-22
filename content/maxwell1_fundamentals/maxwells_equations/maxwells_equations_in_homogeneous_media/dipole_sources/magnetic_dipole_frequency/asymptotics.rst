@@ -18,7 +18,7 @@ In this case, the wave-number :math:`k \rightarrow 0`.
 For a magnetic dipole source :math:`M \hat x`, the DC magnetic field within a homogenous medium is given by:
 
 .. math::
-	\lim_{\omega \rightarrow 0} \mathbf{H}_m = \frac{m}{4 \pi r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right]
+	\lim_{\omega \rightarrow 0} \mathbf{H_m} = \frac{m}{4 \pi r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right]
 	:label: eq_Mdip_Hdc
 
 According to Eq. :eq:`eq_Mdip_Hdc`, the DC magnetic field depends solely on the observation location and the dipole moment. It is independent of any physical properties of the medium.
@@ -26,7 +26,7 @@ The source and the magnetic field are also completely in-phase.
 Similarly, the corresponding DC electric field within the medium is given by:
 
 .. math::
-	\lim_{\omega \rightarrow 0} \mathbf{E}_m = 0
+	\lim_{\omega \rightarrow 0} \mathbf{E_m} = 0
 	:label: eq_Mdip_Edc
 
 According to Eq. :eq:`eq_Mdip_Edc`, the DC electric field is null.
@@ -46,13 +46,13 @@ The near-field approximation for :math:`\mathbf{H}_m` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{H}_m \approx \frac{m}{4 \pi r^3} \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right]
+	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right]
 	:label: eq_Mdip_Hnear1
 
 Eq. :eq:`eq_Mdip_Hnear1` can be simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 
 .. math::
-	\mathbf{H}_m \approx \frac{m}{4 \pi r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right] + O(k^2 r^2 )
+	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \left[ \left(\frac{3x^2}{r^2} - 1 \right) \hat{x} + \frac{3xy}{r^2} \hat{y} + \frac{3xz}{r^2} \hat{z} \right] + O(k^2 r^2 )
 	:label: eq_Mdip_Hnear2
 
 According to Eq. :eq:`eq_Mdip_Hnear2`, the near magnetic field depends only on the observation location and the magnetic dipole moment.
@@ -62,14 +62,14 @@ The near-field approximation for :math:`\mathbf{E}_m` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{E}_m \approx \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right ) \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
+	\mathbf{E_m} \approx \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right ) \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right)
 	:label: eq_Mdip_Enear1
 
 Eq. :eq:`eq_Mdip_Enear1` can be further simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.
 Therefore, the electric field in close proximity to magnetic dipole moment :math:`\hat x I S` is approximately equal to:
 
 .. math::
-	\mathbf{E}_m \approx \frac{i \omega \mu m}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) + O(k^2 r^2 )
+	\mathbf{E_m} \approx \frac{i \omega \mu m}{4 \pi r^2} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) + O(k^2 r^2 )
 	:label: eq_Mdip_Enear2
 
 According to Eq. :eq:`eq_Mdip_Enear2`, :math:`\mathbf{E}_m` does depend on the physical properties of the background medium.
@@ -88,7 +88,7 @@ However, in the case where (:math:`y,z \ll x`), second order terms in the :math:
 Assuming we are in the quasi-static regime :math:`k^2 = - i \omega \mu \sigma`, the far field approximation of :math:`\mathbf{H}_m` is represented by the following two cases:
 
 .. math::
-	\mathbf{H}_m \approx
+	\mathbf{H_m} \approx
 	\begin{cases}
 	\dfrac{i \omega \mu \ sigma m}{4 \pi r} e^{-ikr} \Bigg [ \left ( \dfrac{x^2}{r^2} - 1 \right ) \hat x + \dfrac{xy}{r^2} \, \hat y + \dfrac{xz}{r^2} \, \hat z \Bigg ] \; \; &\textrm{for} \; \; y,z \not \ll x \\
 	\; & \; \\
@@ -99,7 +99,7 @@ Let us now consider the far-field approximation of :math:`\mathbf{E}_m` within a
 Since :math:`1 \ll | kr |`, we can simplify the full analytic expression in the same manner and show that:
 
 .. math::
-	\mathbf{H}_e \approx \frac{-k \omega \mu m}{4\pi r} e^{-ikr} \left ( -\frac{z}{r}\hat y + \frac{y}{r}\hat z \right )
+	\mathbf{E_m} \approx \frac{-k \omega \mu m}{4\pi r} e^{-ikr} \left ( -\frac{z}{r}\hat y + \frac{y}{r}\hat z \right )
 
 
 

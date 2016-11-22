@@ -62,7 +62,7 @@ The scalar Green's function for the Helmholtz equation is:
 and hence the vector potential for an arbitrary magnetic source is:
 
 .. math::
-	\mathbf{F}(\mathbf{r}) = \int_v \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J}_m(\mathbf{r}') dv
+	\mathbf{F}(\mathbf{r}) = \int_v \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J}_m^s (\mathbf{r}') dv
 	:label: F_Potential
 
 where :math:`\mathbf{r}` is the observation location and :math:`\mathbf{r^\prime}` refers to locations within the source region.
@@ -70,14 +70,14 @@ For a magnetic dipole oriented in the :math:`\hat{x}` direction, the source term
 
 
 .. math::
-	\mathbf{J}_m(\mathbf{r}) = i \omega \mu I S \delta(x) \delta(y) \delta(z) \hat{x}
+	\mathbf{J}_m^s = i \omega \mu I S \delta(x) \delta(y) \delta(z) \hat{x}
 	:label: Jm_x
 
 
 and the solution to Eq. :eq:`F_Potential` is:
 
 .. math::
-	\mathbf{F}(\mathbf{r}) = \frac{i \omega \mu m}{4\pi r} e^{-ikr} \hat{x}
+	\mathbf{F} = \frac{i \omega \mu m}{4\pi r} e^{-ikr} \hat{x}
 	:label: F_Potential_for_Jm_x
 
 
@@ -85,14 +85,14 @@ Recall the :math:`\mathbf{F}` can be used to obtain the electric and magnetic fi
 Thus the electric field for an electrical current dipole in the :math:`\hat x` direction is:
 
 .. math::
-	\mathbf{E_m (r)} = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
+	\mathbf{E_m} = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
 	:label: Em_Cartesian
 
 
 While the magnetic field is given by:
 
 .. math::
-	\mathbf{H_m (r)} = \frac{m}{4 \pi r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
+	\mathbf{H_m} = \frac{m}{4 \pi r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
 	:label: Hm_Cartesian
 
 On the following page, we show how Eqs. :eq:`Em_Cartesian` and :eq:`Hm_Cartesian` can be simplified for various cases.

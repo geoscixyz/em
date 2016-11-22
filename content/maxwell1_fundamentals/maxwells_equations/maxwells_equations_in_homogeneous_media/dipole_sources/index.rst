@@ -61,8 +61,8 @@ Equivalently, Maxwell's equations in the time domain are given by:
 
 .. math::
 	\begin{split}
-	\nabla \times \mathbf{e} \, + \, &\dfrac{\partial \big [ \mu \mathbf{h} \big ]}{\partial t} = \pm \mathbf{j_m^s} \\
-	\nabla \times \mathbf{h} - \sigma \mathbf{e} &  - \dfrac{\partial \big [ \varepsilon \mathbf{e} \big ]}{\partial t} = \pm \mathbf{j_e^s}
+	\nabla \times \mathbf{e} \, + \, &\mu \dfrac{\partial  \mathbf{h} }{\partial t} = \pm \mathbf{j_m^s} \\
+	\nabla \times \mathbf{h} - \sigma \mathbf{e} &  - \varepsilon \dfrac{\partial \mathbf{e} }{\partial t} = \pm \mathbf{j_e^s}
 	\end{split}
     :name: eq_Maxwells_time
 
