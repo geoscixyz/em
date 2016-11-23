@@ -9,6 +9,8 @@ Asymptotic Approximations
     By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
 
 
+.. _frequency_domain_electric_dipole_asymptotics_DC:
+
 DC-Field Approximation
 ----------------------
 
@@ -31,6 +33,8 @@ Similarly, the corresponding DC magnetic field within the medium is given by:
 According to Eq. :eq:`eq_Edip_Hdc`, the DC magnetic field is independent of any physical properties.
 In addition, the DC electric and magnetic fields are in-phase with one another.
 
+
+.. _frequency_domain_electric_dipole_asymptotics_near:
 
 Near-Field Approximation
 ------------------------
@@ -78,6 +82,9 @@ Therefore, the magnetic field in close proximity to electric dipole moment :math
 
 According to Eq. :eq:`eq_Edip_Hnear2`, :math:`\mathbf{H}_e` does not depend on the physical properties of the background medium.
 Furthermore, Eq. :eq:`eq_Edip_Hnear2` indicates that :math:`\mathbf{E}_e` and :math:`\mathbf{H}_e` are in-phase.
+
+
+.. _frequency_domain_electric_dipole_asymptotics_far:
 
 Far-Field Approximation
 -----------------------
