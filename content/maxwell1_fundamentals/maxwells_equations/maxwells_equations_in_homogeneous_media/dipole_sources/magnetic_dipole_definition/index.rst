@@ -179,7 +179,7 @@ It must also follow that the loop can be represented by a corresponding magnetic
 	:name: Jm_def_loop
 
 Here, we have chosen a very simple treatment of the current loop model for a magnetic dipole source.
-A more thorough derivation of the dipole moment from Maxwell's equations can be found in Griffiths (link).
+A more thorough derivation of the dipole moment from Maxwell's equations can be found in Griffiths (:cite:`griffiths1999`).
 
 
 
