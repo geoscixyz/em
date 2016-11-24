@@ -24,7 +24,7 @@ Rock-property estimation (fluid saturation, porosity, and lithology) is the ulti
 .. figure:: images/survey_schematic.png
     :align: right
     :figwidth: 50%
-    :name: fig_survey_schematic_title
+    :name: fig_survey_schematic_setup
 
     Schematic showing towed CSEM and seismic instruments over the Hoop region, Barents Sea, Norway.
 
