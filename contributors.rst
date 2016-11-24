@@ -22,7 +22,7 @@ Amanda Alvarez
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -35,7 +35,7 @@ Amanda Alvarez
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -48,7 +48,7 @@ Pedro Alvarez
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -61,7 +61,7 @@ Pedro Alvarez
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -146,7 +146,7 @@ Fransisco Bolivar
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -159,7 +159,7 @@ Fransisco Bolivar
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -172,7 +172,7 @@ Devin C. Cowan
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     <a class="reference internal image-reference" href="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460"><img alt="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460" class="align-left" src="https://avatars1.githubusercontent.com/u/12970009?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
@@ -193,7 +193,7 @@ Devin C. Cowan
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -420,7 +420,7 @@ Rob Keirstead
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -433,7 +433,7 @@ Rob Keirstead
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -478,7 +478,7 @@ Lucy Macgregor
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -495,7 +495,7 @@ Lucy Macgregor
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -508,7 +508,7 @@ Thomas Martin
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
     </div>
@@ -521,7 +521,7 @@ Thomas Martin
                     
                           
     </div>
-    <br>
+    <br><br>
     </div>
 
 
