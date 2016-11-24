@@ -12,15 +12,15 @@
 
 
 
-Reservoir properties prediction using CSEM, pre-stack seismic and well log data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ./hoop_region_norway/images/inversion_workflow.png
     :alt: hoop_region_norway
     :width: 260
     :align: right
 
-- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data Case History <hoop_region_norway_index>`
+- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway Case History <hoop_region_norway_index>`
 
 
 - Contributors

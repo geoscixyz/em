@@ -1,7 +1,7 @@
 .. _hoop_region_norway_index:
 
-Predicting Resevoir Properties using CSEM, Pre-Stack Seismic and Well Log Data
-==============================================================================
+Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway
+=================================================================================================================================
 
 .. .. raw:: html
 ..     :file: ../../../underconstruction.html
@@ -12,7 +12,7 @@ Predicting Resevoir Properties using CSEM, Pre-Stack Seismic and Well Log Data
 .. topic :: Prelude
 
 
-This case history has been taken from the paper "*Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway*", which was supplied by `Solid Rock Images <http://www.rocksolidimages.com>`__ . Survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
+This case history has been taken from the paper `"*Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway*" <http://www.rocksolidimages.com/pdf/2016_Case_Study_Multiphysics.pdf>`__ , which was supplied by `Rock Solid Images <http://www.rocksolidimages.com>`__ . Survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
 
 **Abstract**
 
