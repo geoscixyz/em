@@ -1,12 +1,22 @@
 .. _hoop_region_norway_properties:
 
+
+
+.. |lo| unicode:: 0xF8
+   :ltrim:
+.. |o| unicode:: 0xF8
+   :trim:
+.. |ao| unicode:: 0xE5
+   :trim:
+
+
 Properties
 ==========
 
-Detailed petrophysical evaluation and rock physics analysis was carried out for the Wisting Central and Wisting Alternative wells. Lithology and fluid sensitivity of the elastic attributes were addressed in the rock physics analysis and the main results obtained are illustrated in :numref:`fig_poisson_acoustic_impedance`. This figure shows a cross-plot of the elastic attributes Poisson’s ratio versus acoustic impedance, color coded by four different fluid substituted saturations: 100% water, 80% oil, 80% gas, 20% gas (fizz saturation). Also shown is the in-situ saturation for the Stø Fm., which is a clean, blocky shallow-marine shoreface sandstone, as well as for the underlying Nordmela Fm, which is a coarsening upwards shaly sand.
+Detailed petrophysical evaluation and rock physics analysis was carried out for the Wisting Central and Wisting Alternative wells. Lithology and fluid sensitivity of the elastic attributes were addressed in the rock physics analysis and the main results obtained are illustrated in :numref:`fig_poisson_acoustic_impedance`. This figure shows a cross-plot of the elastic attributes Poisson’s ratio versus acoustic impedance, color coded by four different fluid substituted saturations: 100% water, 80% oil, 80% gas, 20% gas (fizz saturation). Also shown is the in-situ saturation for the St |lo| Fm., which is a clean, blocky shallow-marine shoreface sandstone, as well as for the underlying Nordmela Fm, which is a coarsening upwards shaly sand.
 
 
-Two important observations can be extracted from these plots. The first is the well-known inability of the seismic data alone to discriminate between commercial and non-commercial gas saturation: The 20% and 80% gas cases plot on top of each other, which is not the case for the combination of elastic and electric attributes (see :numref:`fig_resistivity_acoustic_impedance`). The second observation is the unexpected high Poisson’s ratio (or higher Vp/Vs) in the Stø Fm. compared to that observed in Nordmela Fm. for the same fluid saturation. It is worthwhile mentioning that the same observation was found in both the Wisting Central and Wisting Alternative wells, which suggests this unusual response is not a measurement problem. Moreover, the fact that the AVO inversion produced a Poisson’s ratio solution that also honors these slightly unusual well log observations of Poisson’s ratio for the Stø and Nordmela Fms. (:numref:`fig_inversion_initial_pwave_poisson`) validates these measurements.
+Two important observations can be extracted from these plots. The first is the well-known inability of the seismic data alone to discriminate between commercial and non-commercial gas saturation: The 20% and 80% gas cases plot on top of each other, which is not the case for the combination of elastic and electric attributes (see :numref:`fig_resistivity_acoustic_impedance`). The second observation is the unexpected high Poisson’s ratio (or higher Vp/Vs) in the St |lo| Fm. compared to that observed in Nordmela Fm. for the same fluid saturation. It is worthwhile mentioning that the same observation was found in both the Wisting Central and Wisting Alternative wells, which suggests this unusual response is not a measurement problem. Moreover, the fact that the AVO inversion produced a Poisson’s ratio solution that also honors these slightly unusual well log observations of Poisson’s ratio for the St |lo| and Nordmela Fms. (:numref:`fig_inversion_initial_pwave_poisson`) validates these measurements.
 
 
 .. figure:: images/poisson_vs_acoustic_impedance.png
@@ -14,7 +24,7 @@ Two important observations can be extracted from these plots. The first is the w
     :figwidth: 80%
     :name: fig_poisson_acoustic_impedance
 
-a) *For the Sto Fm., multi-well cross-plot of Poisson’s ratio versus acoustic impedance color coded by fluid saturation with background colored by volume of clay for the full well.*
+a) *For the St |lo| Fm., multi-well cross-plot of Poisson’s ratio versus acoustic impedance color coded by fluid saturation with background colored by volume of clay for the full well.*
 b) *For the Nordmela Fm., multi-well cross-plot of Poisson’s ratio versus acoustic impedance color coded by fluid saturation with background colored by volume of clay for the full well.*
 
 
@@ -23,11 +33,11 @@ b) *For the Nordmela Fm., multi-well cross-plot of Poisson’s ratio versus acou
     :figwidth: 80%
     :name: fig_resistivity_acoustic_impedance
 
-a) *For the Sto Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well.*
-b) *For the Nordmela Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well. The induction in situ resistivity in Central is clipped at 1,000 Ωm in the Stø sands, for reference the laterolog shows a similar shape in this zone, but is clipped at 100,000 Ωm.*
+a) *For the St |lo| Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well.*
+b) *For the Nordmela Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well. The induction in situ resistivity in Central is clipped at 1,000 Ωm in the St |lo| sands, for reference the laterolog shows a similar shape in this zone, but is clipped at 100,000 Ωm.*
 
 
-There is significant variation between the resistivity measurements made with different tools in the well.  In order to calibrate the saturation model we have chosen to use the LWD P40H curve. This is from a phase shift induction tool, logged while drilling (which has the added benefit of reducing the impact of mud invasion). This tool has returned results that are closer in amplitude to the CSEM derived resistivity values, when compared to the wireline HRLT laterolog results (with resistivities in the tens of thousands Ωm). With the chosen induction curve resistivity values in the Stø Fm. at Wisting Central are in the 700-900 Ωm range. The water saturation was calculated from this using the rock physics model represented by the Simandoux equation (:cite:`Simandoux1963`), Eq. :eq:`eq_Simandoux`, due to the overall simplicity of the model and increased accuracy over Archie in shaly-sand systems. This gives predicted hydrocarbon saturations in excess of 90%.
+There is significant variation between the resistivity measurements made with different tools in the well.  In order to calibrate the saturation model we have chosen to use the LWD P40H curve. This is from a phase shift induction tool, logged while drilling (which has the added benefit of reducing the impact of mud invasion). This tool has returned results that are closer in amplitude to the CSEM derived resistivity values, when compared to the wireline HRLT laterolog results (with resistivities in the tens of thousands Ωm). With the chosen induction curve resistivity values in the St |lo| Fm. at Wisting Central are in the 700-900 Ωm range. The water saturation was calculated from this using the rock physics model represented by the Simandoux equation (:cite:`Simandoux1963`), Eq. :eq:`eq_Simandoux`, due to the overall simplicity of the model and increased accuracy over Archie in shaly-sand systems. This gives predicted hydrocarbon saturations in excess of 90%.
 
 .. (Simandoux, 1963)
 
