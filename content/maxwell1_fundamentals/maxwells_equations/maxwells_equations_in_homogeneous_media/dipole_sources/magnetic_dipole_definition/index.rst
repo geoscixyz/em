@@ -15,7 +15,7 @@ Defining the Magnetic Dipole
 .. figure:: images/H_source_magnetic_dipole.png
 		:align: right
 		:figwidth: 50%
-		:name: MagDipole
+		:name: MagDipoleDef
 		
 		Physical representation of the magnetic dipole source where :math:`\mathbf{m}` = 1 Am :math:`\!^2`.
 
@@ -35,7 +35,7 @@ This leads to a magnetic source term of the form:
 
 where :math:`\delta (x)` is the Dirac delta function.
 The magnetic dipole source is responsible for generating a primary magnetic field in the surrounding region; secondary electric and magnetic fields are discussed later.
-This is illustrated in :numref:`MagDipole`.
+This is illustrated in :numref:`MagDipoleDef`.
 
 
 
