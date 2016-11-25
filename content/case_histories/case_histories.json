@@ -112,7 +112,7 @@
             {"uid":"user:fbolivar", "as":"Authors"},
             {"uid":"user:rkeirstead", "as":"Authors"},
             {"uid":"user:tmartin", "as":"Authors"},
-            {"uid":"user:dccowan", "as":"EM GeoSci Contributor"}
+            {"uid":"user:dccowan", "as":"Reviewer"}
         ],
         "tags":[
             {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},

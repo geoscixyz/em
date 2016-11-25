@@ -10,12 +10,12 @@ Reservoir properties prediction using CSEM, pre-stack seismic and well log data:
 .. .. raw:: html
 ..     :file: ../../../underconstruction.html
 
-.. - **Authors**: :ref:``
-.. - **Reviewer**: :ref:``
+- **Authors**: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead` and :ref:`tmartin`
+- **Reviewer**: :ref:`dccowan`
 
 .. topic :: Prelude
 
-    This case history has been taken from the paper `"*Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway*" <http://www.rocksolidimages.com/pdf/2016_Case_Study_Multiphysics.pdf>`__ , which was supplied by `Rock Solid Images <http://www.rocksolidimages.com>`__ . Survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
+    This case history has been taken from the paper `"Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway" <http://www.rocksolidimages.com/pdf/2016_Case_Study_Multiphysics.pdf>`__ , which was supplied by `Rock Solid Images <http://www.rocksolidimages.com>`__ . Survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
 
 **Abstract**
 
@@ -45,7 +45,7 @@ In the first stage of the analysis, we invert pre-stack seismic and CSEM data se
     :figwidth: 100%
     :name: fig_inversion_workflow_title
 
-    Work-flow for quantitative interpretation of well log, seismic and CSEM data and inversions.
+    Workflow for quantitative interpretation of well log, seismic and CSEM data and inversions.
     
 
 
