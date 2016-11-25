@@ -46,7 +46,7 @@ There is significant variation between the resistivity measurements made with di
     :name: eq_Simandoux
 
 
-where :math:`R_t` is the horizontal resistivity, :math:`Sw` is the water saturation, :math:`m` is the cementation exponent, :math:`n` is the saturation exponent, :math:`a` is the tortuosity exponent, Rw is the water resistivity at formation temperature, :math:`Vsh` is the shale content, :math:`Rsh` is the resistivity of the shale, and :math:`\phi_e` is the effective porosity defined as:
+where :math:`R_t` is the horizontal resistivity, :math:`Sw` is the water saturation, :math:`m` is the cementation exponent, :math:`n` is the saturation exponent, :math:`a` is the tortuosity exponent, Rw is the water resistivity at formation temperature, :math:`V \! sh` is the shale content, :math:`Rsh` is the resistivity of the shale, and :math:`\phi_e` is the effective porosity defined as:
 
 
 .. math::
