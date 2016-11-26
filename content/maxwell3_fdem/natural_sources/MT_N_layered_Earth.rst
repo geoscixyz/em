@@ -11,7 +11,7 @@ Response of a layered Earth to a plane wave
     the physical responses and what we observe in MT data
 
 .. raw:: html
-    :file: ./images/movieMT_time.html
+    :file: images/movieMT_time.html
 
 Introduction
 ------------

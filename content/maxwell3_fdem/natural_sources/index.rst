@@ -1,7 +1,7 @@
-.. _MT_index:
+.. _natural_sources_index:
 
-MagnetoTelluric Method
-======================
+Natural Sources
+===============
 
 Contents:
 
