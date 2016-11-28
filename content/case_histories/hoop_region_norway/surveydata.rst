@@ -16,7 +16,7 @@ A densely sampled dataset consisting of six lines of 2D seismic and towed stream
     :figwidth: 50%
     :name: fig_survey_schematic_2
 
-    CSEM and 2D seismic data used in this project were acquired simultaneously using a towed source and receiver system. Further details of this acquisition approach can be found in Englemark et al, 2014.
+    CSEM and 2D seismic data used in this project were acquired simultaneously using a towed source and receiver system. Further details of this acquisition approach can be found in :cite:`Englemark2014`.
 
 
 In general, the 2D seismic data quality is good but varies significantly in different parts of the survey.  The velocity fields obtained from the fast track migration of the data available at the time of this study were not sufficiently accurate to completely flatten and position events properly. The data were therefore conditioned before use in the workflow described here following the approach described by Singleton :cite:`Singleton2009`).
@@ -33,5 +33,4 @@ For the CSEM data acquisition, a towed streamer consisting of 72 receivers colle
 a) *Structural elements of the Barents Seas showing with a red box the location of the studied area (modified from Halland et al.* :cite:`Halland2013` *).*
 b) *Detailed view of the studied area showing the location of the 2D GeoStreamer* |Res| *seismic and towed streamer CSEM data (blue lines), as well as the calibration well (Central and Alternative) and the validation wells (Hanssen and Bjaaland). The green outlines show the location of the proven reservoirs in the area (data courtesy of NPD), which were discovered by the wells Central and Hanssen.*
 
-.. (modified from Halland et al. 2013)
 
