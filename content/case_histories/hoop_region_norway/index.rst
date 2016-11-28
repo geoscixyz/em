@@ -7,8 +7,6 @@
 Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway
 =================================================================================================================================
 
-.. .. raw:: html
-..     :file: ../../../underconstruction.html
 
 - **Authors**: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead` and :ref:`tmartin`
 - **Reviewer**: :ref:`dccowan`
