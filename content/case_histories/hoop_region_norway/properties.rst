@@ -8,6 +8,8 @@
    :trim:
 .. |ao| unicode:: 0xE5
    :trim:
+.. |O| unicode:: U+03A9
+   :rtrim:
 
 
 Properties
@@ -75,7 +77,7 @@ Table 1. *Parameters used in the Simandoux equation.*
 
 
 
-In the context of a CSEM analysis, the background resistivity and the contrast between background and reservoir is also important to understand. :numref:`fig_well_log_resistivity` a and :numref:`fig_well_log_resistivity` b show the resistivity variation with saturation calculated at the Wisting Central and Alternative wells using the Simandoux parameters from table 1. For each case, the calibrated Simandoux equation is used to calculate the resistivity at log scale for a range of values of :math:`Sw` (:numref:`fig_well_log_resistivity` c). The log scale values are then up-scaled using an arithmetic average to give the bulk vertical resistivity (as would be measured by a CSEM survey) across the reservoir interval. The shaded area corresponds to the region of the curve where the resistivity is equal to or lower than the observed background vertical resistivity in the area (around 20-30 Wm). Only when the reservoir resistivity lies outside the shaded region is there a contrast between it and the background, allowing it to be detected by a CSEM survey. :numref:`fig_well_log_resistivity` c shows that this condition is met for values of :math:`Sw` less than 30%. This provides a practical limit on the sensitivity to :math:`Sw`, i.e. values greater than this will not be resolved. 
+In the context of a CSEM analysis, the background resistivity and the contrast between background and reservoir is also important to understand. :numref:`fig_well_log_resistivity` a and :numref:`fig_well_log_resistivity` b show the resistivity variation with saturation calculated at the Wisting Central and Alternative wells using the Simandoux parameters from table 1. For each case, the calibrated Simandoux equation is used to calculate the resistivity at log scale for a range of values of :math:`Sw` (:numref:`fig_well_log_resistivity` c). The log scale values are then up-scaled using an arithmetic average to give the bulk vertical resistivity (as would be measured by a CSEM survey) across the reservoir interval. The shaded area corresponds to the region of the curve where the resistivity is equal to or lower than the observed background vertical resistivity in the area (around 20-30 |O| m). Only when the reservoir resistivity lies outside the shaded region is there a contrast between it and the background, allowing it to be detected by a CSEM survey. :numref:`fig_well_log_resistivity` c shows that this condition is met for values of :math:`Sw` less than 30%. This provides a practical limit on the sensitivity to :math:`Sw`, i.e. values greater than this will not be resolved. 
 
 
 .. figure:: images/well_log_resistivity.png
