@@ -3,7 +3,7 @@
 Frequency domain
 ================
 
-.. topic:: Purpose
+.. purpose::
 
     By exploring the plane wave solution, we can understand the
     role of the complex wavenumber and see how it is related to skin depth,

@@ -3,7 +3,7 @@
 Maxwell's Equations for Plane Wave Sources
 ==========================================
 
-.. topic:: Purpose
+.. purpose::
 
     Plane wave solutions to Helmholtz’s equations exist when the medium is homogeneous. By exploring the plane wave solution in both frequency and time domain, we understand how the plane EM wave propagates. Our content parallels that offered in many EM resources :cite:`ward1988,griffiths1999,stratton1941`
 
