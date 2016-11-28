@@ -125,5 +125,44 @@
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
         "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
+    },
+    "dccowan":{
+        "name":"Devin C. Cowan",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC, Canada",
+        "email":"devinccowan@gmail.com",
+        "url":"https://github.com/dccowan",
+        "avatar":"https://avatars1.githubusercontent.com/u/12970009?v=3&s=460"
+    },
+    "lmacgregor":{
+        "name":"Lucy Macgregor",
+        "affiliation":"Rock Solid Images",
+        "email":"lucy.macgregor@rocksolidimages.com",
+        "url":"http://rocksolidimages.com"
+    },
+    "palvarez":{
+        "name":"Pedro Alvarez",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "aalvarez":{
+        "name":"Amanda Alvarez",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "fbolivar":{
+        "name":"Fransisco Bolivar",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "rkeirstead":{
+        "name":"Rob Keirstead",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "tmartin":{
+        "name":"Thomas Martin",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
     }
 }

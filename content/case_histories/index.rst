@@ -30,6 +30,7 @@ The titles, and EM systems used are provided below.
     emc/index
     balboa/index
     rockglacier/index
+    hoop_region_norway/index
 
 .. _case_history_gallery:
 
