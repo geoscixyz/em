@@ -100,5 +100,25 @@
             {"uid":"Geotechnical", "as":"application"},
             {"uid":"Switzerland", "as":"location"}
         ]
+    },
+    "hoop_region_norway":{
+        "title":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",
+        "source":"./hoop_region_norway/",
+        "thumbnail":"./hoop_region_norway/images/inversion_workflow.png",
+        "contributors":[
+            {"uid":"user:palvarez", "as":"Authors"},
+            {"uid":"user:aalvarez", "as":"Authors"},
+            {"uid":"user:lmacgregor", "as":"Authors"},
+            {"uid":"user:fbolivar", "as":"Authors"},
+            {"uid":"user:rkeirstead", "as":"Authors"},
+            {"uid":"user:tmartin", "as":"Authors"},
+            {"uid":"user:dccowan", "as":"Reviewer"}
+        ],
+        "tags":[
+            {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},
+            {"uid":"Reservoir characterization, marine EM", "as":"Applications"},
+            {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
+            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
+        ]
     }
 }
