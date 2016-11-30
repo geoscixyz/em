@@ -1,6 +1,6 @@
 .. _rockglacier_index:
 
-3D Helicopter GPR surveying a rock glacier
+3D Helicopter GPR surveying at Furggwanghorn rock glacier
 ==========================================
 
 .. .. raw:: html
