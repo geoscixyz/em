@@ -76,7 +76,7 @@ The study area is significantly uplifted, and characterized by high background r
     :figwidth: 100%
     :name: fig_cross_section_seismic
 
-    *Seismic cross-section through though the wells Alternative and Central. The top St* |lo| *horizon marks the top of the reservoir interval encountered in the Wisting Central well (7324/8-1).*
+    Seismic cross-section through though the wells Alternative and Central. The top St |lo| horizon marks the top of the reservoir interval encountered in the Wisting Central well (7324/8-1).
 
 
 
