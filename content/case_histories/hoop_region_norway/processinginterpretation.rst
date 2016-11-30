@@ -151,7 +151,7 @@ The final stage of the workflow is to combine the seismically derived properties
 Seismically-derived resistivity estimation and transverse resistance (TR) calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to allow direct comparison between seismic and CSEM results, the next step in the methodology (:numref:`fig_inversion_workflow_title`) is the estimation of resistivity models from seismically derived properties for different fluid saturation scenarios. With this goal in mind, we used the seismically-derived litho-fluid facies, clay content and total porosity sections with a calibrated rock physics model to transform these petrophysical properties into the electrical domain. The calibrated rock physics model used was the Simandoux equation (:cite:`Simandoux1963):
+In order to allow direct comparison between seismic and CSEM results, the next step in the methodology (:numref:`fig_inversion_workflow_title`) is the estimation of resistivity models from seismically derived properties for different fluid saturation scenarios. With this goal in mind, we used the seismically-derived litho-fluid facies, clay content and total porosity sections with a calibrated rock physics model to transform these petrophysical properties into the electrical domain. The calibrated rock physics model used was the Simandoux equation (:cite:`Simandoux1963`):
 
 .. math::
     \frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}
