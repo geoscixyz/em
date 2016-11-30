@@ -557,6 +557,40 @@ Hansruedi Maurer
 
         
 
+.. _mikemcm:
+
+Mike McMillan
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"><img alt="https://avatars1.githubusercontent.com/u/5559898?v=3&s=460" class="align-left" src="https://avatars1.githubusercontent.com/u/5559898?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:mmcmilla@eos.ubc.ca">mmcmilla@eos.ubc.ca</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/mikemcm">https://github.com/mikemcm</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _kmerz:
 
 Kaspar Merz
