@@ -26,8 +26,12 @@ Two important observations can be extracted from these plots. The first is the w
     :figwidth: 80%
     :name: fig_poisson_acoustic_impedance
 
-a) *For the St* |lo| *Fm., multi-well cross-plot of Poisson’s ratio versus acoustic impedance color coded by fluid saturation with background colored by volume of clay for the full well.*
-b) *For the Nordmela Fm., multi-well cross-plot of Poisson’s ratio versus acoustic impedance color coded by fluid saturation with background colored by volume of clay for the full well.*
+    (a) For the St |lo| Fm., multi-well cross-plot of Poisson’s ratio versus
+    acoustic impedance color coded by fluid saturation with background
+    colored by volume of clay for the full well. (b) For the Nordmela Fm.,
+    multi-well cross-plot of Poisson’s ratio versus acoustic impedance color
+    coded by fluid saturation with background colored by volume of clay for
+    the full well.
 
 
 .. figure:: images/resistivity_vs_acoustic_impedance.png
@@ -35,11 +39,18 @@ b) *For the Nordmela Fm., multi-well cross-plot of Poisson’s ratio versus acou
     :figwidth: 80%
     :name: fig_resistivity_acoustic_impedance
 
-a) *For the St* |lo| *Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well.*
-b) *For the Nordmela Fm., multi-well cross-plot of acoustic impedance versus resistivity color coded by fluid saturation with background colored by volume of clay for the full well. The induction in situ resistivity in Central is clipped at 1,000 Ωm in the St* |lo| *sands, for reference the laterolog shows a similar shape in this zone, but is clipped at 100,000 Ωm.*
+    (a) For the St |lo| Fm., multi-well cross-plot of acoustic impedance
+    versus resistivity color coded by fluid saturation with background
+    colored by volume of clay for the full well. (b) For the Nordmela Fm.,
+    multi-well cross-plot of acoustic impedance versus resistivity color
+    coded by fluid saturation with background colored by volume of clay for
+    the full well. The induction in situ resistivity in Central is clipped at
+    1,000 :math:`\Omega m` in the St |lo| sands, for reference the
+    laterolog shows a similar shape in this zone, but is clipped at 100,000
+    :math:`\Omega m`.
 
 
-There is significant variation between the resistivity measurements made with different tools in the well.  In order to calibrate the saturation model we have chosen to use the LWD P40H curve. This is from a phase shift induction tool, logged while drilling (which has the added benefit of reducing the impact of mud invasion). This tool has returned results that are closer in amplitude to the CSEM derived resistivity values, when compared to the wireline HRLT laterolog results (with resistivities in the tens of thousands Ωm). With the chosen induction curve resistivity values in the St |lo| Fm. at Wisting Central are in the 700-900 Ωm range. The water saturation was calculated from this using the rock physics model represented by the Simandoux equation (:cite:`Simandoux1963`), Eq. :eq:`eq_Simandoux`, due to the overall simplicity of the model and increased accuracy over Archie in shaly-sand systems. This gives predicted hydrocarbon saturations in excess of 90%.
+There is significant variation between the resistivity measurements made with different tools in the well.  In order to calibrate the saturation model we have chosen to use the LWD P40H curve. This is from a phase shift induction tool, logged while drilling (which has the added benefit of reducing the impact of mud invasion). This tool has returned results that are closer in amplitude to the CSEM derived resistivity values, when compared to the wireline HRLT laterolog results (with resistivities in the tens of thousands :math:`\Omega m`). With the chosen induction curve resistivity values in the St |lo| Fm. at Wisting Central are in the 700-900 :math:`\Omega m` range. The water saturation was calculated from this using the rock physics model represented by the Simandoux equation (:cite:`Simandoux1963`), Eq. :eq:`eq_Simandoux`, due to the overall simplicity of the model and increased accuracy over Archie in shaly-sand systems. This gives predicted hydrocarbon saturations in excess of 90%.
 
 
 .. math::
@@ -53,7 +64,7 @@ where :math:`R_t` is the horizontal resistivity, :math:`Sw` is the water saturat
 .. math::
 	\phi_e = \phi_T \times (1 - Vsh)
     :name: eq_Simandoux_phi
- 
+
 
 where :math:`\phi_T` is the total porosity. The parameters used in the Simandoux equation were calibrated to the measured data and are summarized in the following table.
 
@@ -77,7 +88,7 @@ Table 1. *Parameters used in the Simandoux equation.*
 
 
 
-In the context of a CSEM analysis, the background resistivity and the contrast between background and reservoir is also important to understand. :numref:`fig_well_log_resistivity` a and :numref:`fig_well_log_resistivity` b show the resistivity variation with saturation calculated at the Wisting Central and Alternative wells using the Simandoux parameters from table 1. For each case, the calibrated Simandoux equation is used to calculate the resistivity at log scale for a range of values of :math:`Sw` (:numref:`fig_well_log_resistivity` c). The log scale values are then up-scaled using an arithmetic average to give the bulk vertical resistivity (as would be measured by a CSEM survey) across the reservoir interval. The shaded area corresponds to the region of the curve where the resistivity is equal to or lower than the observed background vertical resistivity in the area (around 20-30 |O| m). Only when the reservoir resistivity lies outside the shaded region is there a contrast between it and the background, allowing it to be detected by a CSEM survey. :numref:`fig_well_log_resistivity` c shows that this condition is met for values of :math:`Sw` less than 30%. This provides a practical limit on the sensitivity to :math:`Sw`, i.e. values greater than this will not be resolved. 
+In the context of a CSEM analysis, the background resistivity and the contrast between background and reservoir is also important to understand. :numref:`fig_well_log_resistivity` a and :numref:`fig_well_log_resistivity` b show the resistivity variation with saturation calculated at the Wisting Central and Alternative wells using the Simandoux parameters from table 1. For each case, the calibrated Simandoux equation is used to calculate the resistivity at log scale for a range of values of :math:`Sw` (:numref:`fig_well_log_resistivity` c). The log scale values are then up-scaled using an arithmetic average to give the bulk vertical resistivity (as would be measured by a CSEM survey) across the reservoir interval. The shaded area corresponds to the region of the curve where the resistivity is equal to or lower than the observed background vertical resistivity in the area (around 20-30 |O| m). Only when the reservoir resistivity lies outside the shaded region is there a contrast between it and the background, allowing it to be detected by a CSEM survey. :numref:`fig_well_log_resistivity` c shows that this condition is met for values of :math:`Sw` less than 30%. This provides a practical limit on the sensitivity to :math:`Sw`, i.e. values greater than this will not be resolved.
 
 
 .. figure:: images/well_log_resistivity.png
@@ -85,17 +96,14 @@ In the context of a CSEM analysis, the background resistivity and the contrast b
     :figwidth: 100%
     :name: fig_well_log_resistivity
 
-a) *Well log suite from the Wisting Alternative well, showing porosity, lithology,* :math:`Sw` *and resistivity.*
-b) *Well log suite from the Wisting Central well, showing porosity, lithology,* :math:`Sw` *and resistivity.*
-c) *The variation of resistivity with water saturation calculated from the Wisting Central and Alternative wells using the Simandoux equation. The shaded region shows the area in which the resistivity of the reservoir is less than the resistivity of the background structure, and will not be detected by a CSEM survey. Water saturations less than about 30% are required for the reservoir to be detected.*
-
-
-
-
-
-
-
-
-
-
+    (a) Well log suite from the Wisting Alternative well, showing porosity,
+    lithology, :math:`Sw` and resistivity. (b) Well log suite from the
+    Wisting Central well, showing porosity, lithology, :math:`Sw` and
+    resistivity. (c) The variation of resistivity with water saturation
+    calculated from the Wisting Central and Alternative wells using the
+    Simandoux equation. The shaded region shows the area in which the
+    resistivity of the reservoir is less than the resistivity of the
+    background structure, and will not be detected by a CSEM survey. Water
+    saturations less than about 30% are required for the reservoir to be
+    detected.
 
