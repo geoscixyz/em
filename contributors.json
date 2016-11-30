@@ -173,6 +173,7 @@
         "url":"https://github.com/mikemcm",
         "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
     },
+
     "lacmajedrez":{
         "name":"Luz Angelica Caudillo Mata",
         "affiliation": "University of British Columbia",
@@ -180,5 +181,14 @@
         "url": "https://lacaudillomata.wordpress.com/",
         "email": "lcaudill@eos.ubc.ca",
         "avatar": "https://avatars0.githubusercontent.com/u/4496159?v=3&s=460"
+    },
+    "rowanc1":{
+        "name":"Rowan Cockett",
+        "affiliation":"3point Science",
+        "url":"http://www.row1.ca/",
+        "location":"Calgary, AB",
+        "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
+        "email":"rowan@row1.ca",
+        "ORCID":"0000-0002-7859-8394"
     }
 }
