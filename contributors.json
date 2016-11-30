@@ -173,15 +173,13 @@
         "url":"https://github.com/mikemcm",
         "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
     },
-<<<<<<< HEAD
     "krisdavis":{
         "name":"Kris Davis",
         "affiliation":"Mira Geoscience",
         "location":"Vancouver, BC",
         "url": "https://github.com/krisdavis",
         "avatar": "https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"
-
-=======
+    },
     "prhjiajie":{
         "name":"Ronghua Peng",
         "affiliation": "University of British Columbia",
@@ -198,6 +196,5 @@
         "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
         "email":"rowan@row1.ca",
         "ORCID":"0000-0002-7859-8394"
->>>>>>> master
     }
 }
