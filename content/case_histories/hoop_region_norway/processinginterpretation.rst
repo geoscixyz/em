@@ -24,7 +24,7 @@ The CSEM analysis was focused on line 5001. A 2.5D inversion approach, in which 
     :figwidth: 100%
     :name: fig_CSEM_amplitude_phase
 
-    CSEM Amplitude (top) and phase (bottom) data collected at 1Hz along line 5001. The effect of the oil accumulation at Wisting Central (around 611km Eastings) is clear, especially in the phase data. 
+    CSEM Amplitude (top) and phase (bottom) data collected at 1Hz along line 5001. The effect of the oil accumulation at Wisting Central (around 611km Eastings) is clear, especially in the phase data.
 
 
 The CSEM data for six frequencies (0.2Hz, 0.8Hz, 1Hz, 1.4Hz, 2.2Hz, 2.6Hz) were inverted using an Occam approach (:cite:`Constable1987,Key2014`) to derive anisotropic resistivity models that are smooth in a first derivative sense, and therefore as close to a uniform halfspace as possible, while honoring the data. A layered seawater conductivity structure based on measurements throughout the water column and 1D modeling was used. Nineteen to twenty-three source-receiver pairs per frequency were included in inversion.
@@ -50,13 +50,13 @@ The inversion was performed in stages. Firstly, an unconstrained inversion was r
 
 
 
-:numref:`fig_inversion_vertical_resistivity` shows the vertical (upper panel) and horizontal (lower panel) resistivity resulting from the final constrained inversion that were carried using depth-converted seismic horizons top St |lo| horizon and Intra-Snadd horizon. 
+:numref:`fig_inversion_vertical_resistivity` shows the vertical (upper panel) and horizontal (lower panel) resistivity resulting from the final constrained inversion that were carried using depth-converted seismic horizons top St |lo| horizon and Intra-Snadd horizon.
 
 
 Background resistivity is extremely high in the area with vertical resistivity of 25-30 |O| m. Background anisotropy is also extremely high with factors of five or more observed. This high overburden resistivity and anisotropy is the result of the significant uplift in the area. A significant increase in vertical resistivity was recovered in the lower Snadd, with localized variations contained within a regional feature. This regional feature also exhibits extremely high electrical anisotropy.
 
 
-A localized resistive feature coincident with the structure penetrated at Wisting Central is clearly recovered in the vertical resistivity. A more subtle increase in resistivity is observed at the Hanssen well location. No localized resistive feature is recovered in the St |lo| at the location of the Wisting Alternative or Bjaaland wells. 
+A localized resistive feature coincident with the structure penetrated at Wisting Central is clearly recovered in the vertical resistivity. A more subtle increase in resistivity is observed at the Hanssen well location. No localized resistive feature is recovered in the St |lo| at the location of the Wisting Alternative or Bjaaland wells.
 
 
 :numref:`fig_hydrocarbon_saturation` shows the CSEM-derived vertical resistivity in the same windows of analysis used in the seismic quantitative interpretation, for the unconstrained and constrained inversions run: The top one corresponding to the unconstrained inversion, and the bottom image shows the results of the constrained inversion previously shown in the :numref:`fig_inversion_vertical_resistivity`.
@@ -164,10 +164,13 @@ An analysis of :numref:`fig_transverse_resistivity_compare` a offers important i
     :figwidth: 100%
     :name: fig_transverse_resistivity_compare
 
-a) Comparison between the seismically- and CSEM-derived transverse resistance estimates.
-b) Cross-section along A-A' (:numref:`fig_geology_region_map_setup`) of seismically-derived resistivity for :math:`Sw` = 0.1.
-c) Same cross-section along A-A' for :math:`Sw` = 0.5.
-d) Same cross-section along A-A' for :math:`Sw` = 1. Note the good match between the measured and modeled resistivity in the Central well at the (b) section.
+    (a) Comparison between the seismically- and CSEM-derived transverse
+    resistance estimates. (b) Cross-section along A-A'
+    (:numref:`fig_geology_region_map_setup`) of seismically-derived
+    resistivity for :math:`Sw` = 0.1. (c) Same cross-section along A-A' for
+    :math:`Sw` = 0.5. (d) Same cross-section along A-A' for :math:`Sw` = 1.
+    Note the good match between the measured and modeled resistivity in the
+    Central well at the (b) section.
 
 
 
