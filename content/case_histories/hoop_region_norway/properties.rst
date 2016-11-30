@@ -45,7 +45,7 @@ Two important observations can be extracted from these plots. The first is the w
     multi-well cross-plot of acoustic impedance versus resistivity color
     coded by fluid saturation with background colored by volume of clay for
     the full well. The induction in situ resistivity in Central is clipped at
-    1,000 :math:`\Omega m` in the St* |lo| *sands, for reference the
+    1,000 :math:`\Omega m` in the St |lo| sands, for reference the
     laterolog shows a similar shape in this zone, but is clipped at 100,000
     :math:`\Omega m`.
 
@@ -97,8 +97,8 @@ In the context of a CSEM analysis, the background resistivity and the contrast b
     :name: fig_well_log_resistivity
 
     (a) Well log suite from the Wisting Alternative well, showing porosity,
-    lithology, :math:`Sw` *and resistivity. (b) Well log suite from the
-    Wisting Central well, showing porosity, lithology, :math:`Sw` *and
+    lithology, :math:`Sw` and resistivity. (b) Well log suite from the
+    Wisting Central well, showing porosity, lithology, :math:`Sw` and
     resistivity. (c) The variation of resistivity with water saturation
     calculated from the Wisting Central and Alternative wells using the
     Simandoux equation. The shaded region shows the area in which the
