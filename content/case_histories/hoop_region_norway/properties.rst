@@ -96,7 +96,14 @@ In the context of a CSEM analysis, the background resistivity and the contrast b
     :figwidth: 100%
     :name: fig_well_log_resistivity
 
-    (a) Well log suite from the Wisting Alternative well, showing porosity, lithology, :math:`Sw` *and resistivity.
-    (b) Well log suite from the Wisting Central well, showing porosity, lithology, :math:`Sw` *and resistivity.
-    (c) The variation of resistivity with water saturation calculated from the Wisting Central and Alternative wells using the Simandoux equation. The shaded region shows the area in which the resistivity of the reservoir is less than the resistivity of the background structure, and will not be detected by a CSEM survey. Water saturations less than about 30% are required for the reservoir to be detected.
+    (a) Well log suite from the Wisting Alternative well, showing porosity,
+    lithology, :math:`Sw` *and resistivity. (b) Well log suite from the
+    Wisting Central well, showing porosity, lithology, :math:`Sw` *and
+    resistivity. (c) The variation of resistivity with water saturation
+    calculated from the Wisting Central and Alternative wells using the
+    Simandoux equation. The shaded region shows the area in which the
+    resistivity of the reservoir is less than the resistivity of the
+    background structure, and will not be detected by a CSEM survey. Water
+    saturations less than about 30% are required for the reservoir to be
+    detected.
 
