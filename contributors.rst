@@ -139,6 +139,36 @@ Patrick Belliveau
 
         
 
+.. _DanielBild-Enkin:
+
+Daniel Bild-Enkin
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:d.bild.enkin@gmail.com">d.bild.enkin@gmail.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/DanielBild-Enkin">https://github.com/DanielBild-Enkin</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _fbolivar:
 
 Fransisco Bolivar

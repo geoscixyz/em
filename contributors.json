@@ -172,5 +172,12 @@
         "location":"Vancouver, BC",
         "url":"https://github.com/mikemcm",
         "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
+    },
+    "DanielBild-Enkin":{
+        "name":"Daniel Bild-Enkin",
+        "email":"d.bild.enkin@gmail.com",
+        "affiliation":"University of British Columbia",
+        "url":"https://github.com/DanielBild-Enkin"
     }
+
 }
