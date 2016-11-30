@@ -725,6 +725,40 @@ Geoffrey Plastow
 
         
 
+.. _grosenkj:
+
+Gudni Karl Rosenkjaer
+---------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400"><img alt="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400" class="align-left" src="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:grosenkj@users.noreply.github.com">grosenkj@users.noreply.github.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/grosenkj">https://github.com/grosenkj</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _cwijns:
 
 Chris Wijns

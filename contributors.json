@@ -172,5 +172,13 @@
         "location":"Vancouver, BC",
         "url":"https://github.com/mikemcm",
         "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
+    },
+    "grosenkj":{
+        "name": "Gudni Karl Rosenkjaer",
+        "affiliation": "University of British Columbia",
+        "email":"grosenkj@users.noreply.github.com",
+        "avatar":"https://avatars0.githubusercontent.com/u/6052367?v=3&s=400",
+        "location":"Vancouver, BC",
+        "url":"https://github.com/grosenkj"
     }
 }
