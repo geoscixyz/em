@@ -29,7 +29,7 @@ electromagnetics.
     :name: ztemsyn2dinv
 
     ZTEM 2D synthetic modeling: a) 2D resistivity model for a porphyry body,
-    resembling Balboa, buried below 30m of conductive saprolite (30 Ω-m), and
+    resembling Balboa, buried below 30m of conductive saprolite (30 :math:`\Omega`-m), and
     b) 2D inversion of synthetic ZTEM data from model in
     :numref:`ztemsyn2dinv` a.
 
