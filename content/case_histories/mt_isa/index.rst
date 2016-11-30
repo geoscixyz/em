@@ -3,7 +3,7 @@
 Mt. Isa
 =======
 
-- **Authors**: :ref:`fourndo`, Dr. Kris Davis
+- **Authors**: :ref:`fourndo`, :ref:`krisdavis`
 - **Editor**: :ref:`doldenburg`
 
 .. topic :: Prelude
