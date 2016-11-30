@@ -172,5 +172,13 @@
         "location":"Vancouver, BC",
         "url":"https://github.com/mikemcm",
         "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
+    },
+    "krisdavis":{
+        "name":"Kris Davis",
+        "affiliation":"Mira Geoscience",
+        "location":"Vancouver, BC",
+        "url": "https://github.com/krisdavis",
+        "avatar": "https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"
+
     }
 }

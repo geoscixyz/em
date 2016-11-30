@@ -199,6 +199,36 @@ Devin C. Cowan
 
         
 
+.. _krisdavis:
+
+Kris Davis
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"><img alt="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460" class="align-left" src="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Mira Geoscience
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/krisdavis">https://github.com/krisdavis</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _sdevriese:
 
 Sarah G. R. Devriese
