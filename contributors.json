@@ -164,5 +164,13 @@
         "name":"Thomas Martin",
         "affiliation":"Rock Solid Images",
         "url":"http://rocksolidimages.com"
+    },
+    "mikemcm":{
+        "name":"Mike McMillan",
+        "affiliation":"University of British Columbia",
+        "email": "mmcmilla@eos.ubc.ca",
+        "location":"Vancouver, BC",
+        "url":"https://github.com/mikemcm",
+        "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
     }
 }
