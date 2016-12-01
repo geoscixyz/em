@@ -24,7 +24,6 @@
     balboa/index
     
 
-.. _case_history_gallery:
 
 Gallery
 -------

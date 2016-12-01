@@ -226,7 +226,6 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
 
     f.write("""
 
-.. _case_history_gallery:
 
 Gallery
 -------

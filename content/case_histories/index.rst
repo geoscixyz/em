@@ -19,7 +19,7 @@ developed by past and present students at the Geophysical Inversion Facility.
 The titles, and EM systems used are provided below.
 
 
-
+.. _case_history_gallery:
 
 .. include:: case_histories.rst
 
