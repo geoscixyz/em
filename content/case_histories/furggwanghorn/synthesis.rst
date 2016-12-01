@@ -3,14 +3,26 @@
 New Thin Skinned Rock Glacier Model
 ===================================
 
-The well established thin-skinned tectonic model in which nappes are transported along one or more décollements :cite:`cook1979` of a continental mountain system is an analogue for our structural and kinematic model of the Furggwanghorn rock glacier (:numref:`gprsyn`) At our study site, the major shear zone is a décollement and the rock glacier lobes are equivalent to the nappes. All lobes are presently moving downslope. As for the mountain belt example, the fault zones bounding the rock glacier lobes sole into the décollement and there is little or no displacements at greater depths. The new thin skinned rock glacier model may be applicable to many other rock glaciers.
+The well established thin-skinned tectonic model in which nappes are
+transported along one or more décollements :cite:`cook1979` of a continental
+mountain system is an analogue for our structural and kinematic model of the
+Furggwanghorn rock glacier (:numref:`gprsyn`) At our study site, the major
+shear zone is a décollement and the rock glacier lobes are equivalent to the
+nappes. All lobes are presently moving downslope. As for the mountain belt
+example, the fault zones bounding the rock glacier lobes sole into the
+décollement and there is little or no displacements at greater depths. The new
+thin skinned rock glacier model may be applicable to many other rock glaciers.
 
 .. figure:: images/gprsyn.png
     :align: center
     :figwidth: 100%
     :name: gprsyn
 
-    Proposed thin-skinned rock glacier model. Labels are defined in the legend to :numref:`furggwanghorn_geo`. Green and magenta lines are the interpreted bedrock and décollement. Arrows: inferred displacements. The (a) and (b) diagrams represent models for the H4 and H5 H-GPR images (:numref:`gprinterpH4` and :numref:`gprinterpH5`).
+    Proposed thin-skinned rock glacier model. Labels are defined in the legend
+    to :numref:`furggwanghorn_geo`. Green and magenta lines are the
+    interpreted bedrock and décollement. Arrows: inferred displacements. The
+    (a) and (b) diagrams represent models for the H4 and H5 H-GPR images
+    (:numref:`gprinterpH4` and :numref:`gprinterpH5`).
 
 
 Synthesis

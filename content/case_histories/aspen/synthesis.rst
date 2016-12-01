@@ -4,13 +4,13 @@ Synthesis
 =========
 
 .. figure:: ./images/FormationMM.png
-        :align: right
-        :figwidth: 70%
-        :name: asp11
+    :align: right
+    :figwidth: 70%
+    :name: asp11
 
-        Comparison between the top of the McMurray from (a) borehole core
-        logging and (b) the recovered model from inversion. Panel (a) is
-        courtesy of Imperial Oil :cite:`Imperial2013`.
+    Comparison between the top of the McMurray from (a) borehole core
+    logging and (b) the recovered model from inversion. Panel (a) is
+    courtesy of Imperial Oil :cite:`Imperial2013`.
 
 Isosurfaces for the tops of the Grand Rapids, Clearwater, and McMurray
 Formation were calculated by choosing transitional resistivity values. These
