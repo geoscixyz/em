@@ -13,7 +13,7 @@ Barents Sea
 - **Authors**: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead` and :ref:`tmartin`
 - **Reviewer**: :ref:`dccowan`
 
-.. topic :: Prelude
+.. topic:: Prelude
 
     This case history has been taken from the paper `"Predicting resevoir
     properties using CSEM, pre-stack seismic and well log data: case study in
@@ -27,9 +27,9 @@ Barents Sea
 
 We present an example from the Hoop area of the Barents Sea showing a
 sequential quantitative integration approach to integrate seismic and CSEM
-attributes using a rock physics framework.  The example illustrates a workflow
-to address the challenges of multi-physics and multi-scale data integration
-for reservoir characterization purposes.
+attributes using a rock physics framework.  The example  illustrates a
+workflow to address the challenges of multi-physics and multi-scale data
+integration for reservoir characterization purposes.
 
 
 .. figure:: images/survey_schematic.png
@@ -67,6 +67,7 @@ predicted at Hanssen (7324/7-2) is related to 3D effects in the CSEM data, but
 the positive outcome of the well is correctly predicted. At Bjaaland
 (7324/8-2), although the seismic indications are good, the integrated
 interpretation result predicts correctly that this well was unsuccessful.
+
 
 
 .. figure:: images/inversion_workflow.png

@@ -33,9 +33,9 @@ Balboa
     layer  The ZTEM survey detected all of the known porphyry systems,
     including Balboa, based on anomalous conductive responses. Our study
     presents the geophysical survey results at Cobre Panama and is supported
-    by 2D-3D ZTEM and magnetic inversions. 2D synthetic modeling appears to
-    confirm the detectability of the weakly conductive Balboa orebody below 30
-    m of saprolite cover.
+    by 2D-3D ZTEM and magnetic inversions that appear to validate the survey
+    evidence. 2D synthetic modeling appears to confirm the detectability of
+    the weakly conductive Balboa orebody below 30 m of saprolite cover.
 
     The primary paper from which this material is derived can be accessed
     `here <http://www.publish.csiro.au/EX/pdf/ASEG2016ab212>`_.

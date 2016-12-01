@@ -42,6 +42,7 @@ thousand |O| m) and at a relatively shallow depth below mudline (about 300m)
 leading to the large response observed.
 
 
+
 .. figure:: images/CSEM_amplitude_phase.png
     :align: center
     :figwidth: 100%
