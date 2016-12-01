@@ -20,19 +20,6 @@ The titles, and EM systems used are provided below.
 
 
 
-.. .. toctree::
-..     :maxdepth: 1
-..     :hidden:
-
-..     mt_isa/index
-..     bookpurnong/index
-..     aspen/index
-..     emc/index
-..     balboa/index
-..     rockglacier/index
-..     hoop_region_norway/index
-
-
 
 .. include:: case_histories.rst
 
