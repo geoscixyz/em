@@ -8,6 +8,9 @@ Physics
     Demonstrate the fundamental physical principles governing the airborne
     FDEM experiment
 
+.. raw:: html
+    :file: images/fdem_physics_radio_buttons.html
+
 
 Most of the physics related to airborne FDEM is available in :ref:`Maxwell I:
 Fundamentals <maxwell1_fundamentals_index>` and :ref:`Maxwell III: FDEM
