@@ -36,10 +36,10 @@ Nowadays the integration of pre-stack seismic inversion attributes with CSEM att
 However, there are a number of challenges to be overcome when putting seismic and CSEM data together. Electric and elastic properties must be coupled through a single earth model that accurately and consistently describes each. There must be overlap in sensitivity of the methods applied to the properties within the intervals of interest. Finally, seismic, CSEM and well log data sample the earth at very different scales, which must be reconciled in an integrated interpretation.
 
 
-The integration process itself can take many forms. The simplest qualitative techniques, such as co-rendering, are applicable everywhere and provide a first-look approach to data combination. However, they can be misleading since they fail to address the underlying cause of variations observed. Full quantitative joint inversion of seismic and CSEM data is in principle possible (for example :cite:`Chen2012,Du2010`), but is complex and applicable in a far narrower range of circumstances. An intermediate approach, based on a sequential quantitative integrated interpretation workflow, which seeks to integrate elastic and electric attributes derived from inversion of seismic and CSEM data respectively, provides in many circumstances an effective way of addressing the challenges of data integration. 
+The integration process itself can take many forms. The simplest qualitative techniques, such as co-rendering, are applicable everywhere and provide a first-look approach to data combination. However, they can be misleading since they fail to address the underlying cause of variations observed. Full quantitative joint inversion of seismic and CSEM data is in principle possible (for example :cite:`Chen2012,Du2010`), but is complex and applicable in a far narrower range of circumstances. An intermediate approach, based on a sequential quantitative integrated interpretation workflow, which seeks to integrate elastic and electric attributes derived from inversion of seismic and CSEM data respectively, provides in many circumstances an effective way of addressing the challenges of data integration.
 
 
-This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (:numref:`fig_geology_region_map_setup` a). 
+This paper presents a case study in which the latter integration approach has been applied to overcome the challenges of the integration of seismic and CSEM data and successfully predicts a seismic-resolution fluid saturation volume that helps characterize the reservoir and diminish the risk related to the exploration and appraisal of the prospects in the study area. The area in question covers a significant oil discovery in the Hoop Fault Complex on the Bjarmeland Platform in the Barents Sea, Norway (:numref:`fig_geology_region_map_setup` a).
 
 
 .. figure:: images/geology_region_map.png
@@ -47,8 +47,14 @@ This paper presents a case study in which the latter integration approach has be
     :figwidth: 100%
     :name: fig_geology_region_map_setup
 
-a) *Structural elements of the Barents Seas showing with a red box the location of the studied area* (:cite:`Halland2013`).
-b) *Detailed view of the studied area showing the location of the 2D GeoStreamer* |Res| *seismic and towed streamer CSEM data (blue lines), as well as the calibration well (Central and Alternative) and the validation wells (Hanssen and Bjaaland). The green outlines show the location of the proven reservoirs in the area (data courtesy of NPD), which were discovered by the wells Central and Hanssen.*
+    Geologic Setting. (a) Structural elements of the Barents Seas showing with
+    a red box the location of the studied area (:cite:`Halland2013`). (b)
+    Detailed view of the studied area showing the location of the 2D
+    GeoStreamer |Res| seismic and towed streamer CSEM data (blue lines), as
+    well as the calibration well (Central and Alternative) and the validation
+    wells (Hanssen and Bjaaland). The green outlines show the location of the
+    proven reservoirs in the area (data courtesy of NPD), which were
+    discovered by the wells Central and Hanssen.
 
 
 
@@ -62,7 +68,7 @@ Several sedimentary basins and platform areas make up the Norwegian sector of th
 The Realgrunnen Subgroup of the Kapp Toscana Group provides some of the best reservoirs in the Barents Sea. It is subdivided into four formations: Fruholmen, Tub |ao| en, Nordmela and St |o|. The Nordmela Formation (Sinemurian-Late Pliensbachian) consists of interbedded siltstones, sandstones, shale and mudstones with minor coals. Sandstones become more common towards the top. The formation represents deposits in a tidal flat to flood-plain environment. Individual sandstones represent estuarine and tidal channels. The St |lo| Formation (Late Pliensbachian to Bajocian) is defined with the appearance of sandy sequences above the shale-dominated sediments of the Nordmela Formation. The dominant lithology of the St |lo| Formation is mineralogically mature and well sorted sandstone. The sands in the St |lo| Formation were deposited in prograding coastal regimes, and a variety of linear clastic coast lithofacies are represented. Marked shale and siltstone intervals represent regional transgressive pulses in the late Toarcian and late Aalenian. Overlying the St |lo| Formation is the Fuglen Formation, which belongs to the Adventdalen Group. The group is dominated by dark marine mudstones, locally including deltaic and shelf sandstones as well as carbonate. The Fuglen Formation constitutes the cap rocks of the reservoir facies (:cite:`Halland2013`).
 
 
-The study area is significantly uplifted, and characterized by high background resistivity and high electrical anisotropies. Target intervals exist in a wide range of depths, ranging from about 250m below mudline to nearly 2000m below mudline. The reservoir encountered in well 7324/8-1(Wisting Central) consists of the St |lo| and Nordmela Formations, overlying the Snadd Fm. of upper Triassic age. The St |lo| Fm. is marked by a sharp contact with the overlying Fuglen Fm., seen both on logs and on drilling parameters. The St |lo| Fm. consists of 20m clean and homogenous sand, with very good reservoir properties. This is confirmed both by wireline log data and core measurements. 
+The study area is significantly uplifted, and characterized by high background resistivity and high electrical anisotropies. Target intervals exist in a wide range of depths, ranging from about 250m below mudline to nearly 2000m below mudline. The reservoir encountered in well 7324/8-1(Wisting Central) consists of the St |lo| and Nordmela Formations, overlying the Snadd Fm. of upper Triassic age. The St |lo| Fm. is marked by a sharp contact with the overlying Fuglen Fm., seen both on logs and on drilling parameters. The St |lo| Fm. consists of 20m clean and homogenous sand, with very good reservoir properties. This is confirmed both by wireline log data and core measurements.
 
 
 .. figure:: images/cross_section_seismic.png
@@ -70,7 +76,7 @@ The study area is significantly uplifted, and characterized by high background r
     :figwidth: 100%
     :name: fig_cross_section_seismic
 
-    *Seismic cross-section through though the wells Alternative and Central. The top St* |lo| *horizon marks the top of the reservoir interval encountered in the Wisting Central well (7324/8-1).*
+    Seismic cross-section through though the wells Alternative and Central. The top St |lo| horizon marks the top of the reservoir interval encountered in the Wisting Central well (7324/8-1).
 
 
 
