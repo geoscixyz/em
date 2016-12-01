@@ -210,6 +210,28 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     f = open(fout, 'w')
     f.write(out)
 
+    toctree = """
+    """.join(
+        ["{}/index".format(key) for key in casehistories.keys()]
+    )
+
+    toctreeblock = """
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    {toctree}
+    """.format(toctree=toctree)
+    f.write(toctreeblock)
+
+    f.write("""
+
+.. _case_history_gallery:
+
+Gallery
+-------
+    """)
+
     for key in casehistories.keys():
         casehistory = casehistories[key]
 
@@ -278,7 +300,7 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     :width: 260
     :align: right
 
-- :ref:`{title} Case History <{uid}_index>`
+- :ref:`{description} <{uid}_index>`
 {references_block}
 {contributors_block}
 {tags_block}
@@ -291,6 +313,11 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
         """.format(
             uid=key,
             title=casehistory['title'],
+            description=(
+                casehistory['description'] if 'description' in
+                casehistory.keys() else
+                casehistory['title']
+            ),
             underline='^'*len(casehistory['title']),
             source=casehistory['source'],
             thumbnail=casehistory['thumbnail'],
