@@ -24,7 +24,7 @@ The CSEM analysis was focused on line 5001. A 2.5D inversion approach, in which 
     :figwidth: 100%
     :name: fig_CSEM_amplitude_phase
 
-    CSEM Amplitude (top) and phase (bottom) data collected at 1Hz along line 5001. The effect of the oil accumulation at Wisting Central (around 611km Eastings) is clear, especially in the phase data.
+    CSEM Amplitude (top) and phase (bottom) data collected at 1Hz along line 5001. The effect of the oil accumulation at Wisting Central (around 611km Eastings) is clear, especially in the phase data. 
 
 
 The CSEM data for six frequencies (0.2Hz, 0.8Hz, 1Hz, 1.4Hz, 2.2Hz, 2.6Hz) were inverted using an Occam approach (:cite:`Constable1987,Key2014`) to derive anisotropic resistivity models that are smooth in a first derivative sense, and therefore as close to a uniform halfspace as possible, while honoring the data. A layered seawater conductivity structure based on measurements throughout the water column and 1D modeling was used. Nineteen to twenty-three source-receiver pairs per frequency were included in inversion.
@@ -50,13 +50,13 @@ The inversion was performed in stages. Firstly, an unconstrained inversion was r
 
 
 
-:numref:`fig_inversion_vertical_resistivity` shows the vertical (upper panel) and horizontal (lower panel) resistivity resulting from the final constrained inversion that were carried using depth-converted seismic horizons top St |lo| horizon and Intra-Snadd horizon.
+:numref:`fig_inversion_vertical_resistivity` shows the vertical (upper panel) and horizontal (lower panel) resistivity resulting from the final constrained inversion that were carried using depth-converted seismic horizons top St |lo| horizon and Intra-Snadd horizon. 
 
 
 Background resistivity is extremely high in the area with vertical resistivity of 25-30 |O| m. Background anisotropy is also extremely high with factors of five or more observed. This high overburden resistivity and anisotropy is the result of the significant uplift in the area. A significant increase in vertical resistivity was recovered in the lower Snadd, with localized variations contained within a regional feature. This regional feature also exhibits extremely high electrical anisotropy.
 
 
-A localized resistive feature coincident with the structure penetrated at Wisting Central is clearly recovered in the vertical resistivity. A more subtle increase in resistivity is observed at the Hanssen well location. No localized resistive feature is recovered in the St |lo| at the location of the Wisting Alternative or Bjaaland wells.
+A localized resistive feature coincident with the structure penetrated at Wisting Central is clearly recovered in the vertical resistivity. A more subtle increase in resistivity is observed at the Hanssen well location. No localized resistive feature is recovered in the St |lo| at the location of the Wisting Alternative or Bjaaland wells. 
 
 
 :numref:`fig_hydrocarbon_saturation` shows the CSEM-derived vertical resistivity in the same windows of analysis used in the seismic quantitative interpretation, for the unconstrained and constrained inversions run: The top one corresponding to the unconstrained inversion, and the bottom image shows the results of the constrained inversion previously shown in the :numref:`fig_inversion_vertical_resistivity`.
@@ -148,22 +148,9 @@ Interpretation
 
 The final stage of the workflow is to combine the seismically derived properties, with the electrical information derived from the CSEM data. The goal of this stage is to reduce the uncertainty in fluid saturation that is observed in the seismic-only results. In order to do this, electric and elastic properties must be combined in a common domain and at a common scale so that direct comparison, and ultimately quantitative integration is possible.
 
-Seismically-derived resistivity estimation and transverse resistance (TR) calibration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Seismically-derived resistivity estimation and transverse resistance (TR) calibration**
 
-In order to allow direct comparison between seismic and CSEM results, the next step in the methodology (:numref:`fig_inversion_workflow_title`) is the estimation of resistivity models from seismically derived properties for different fluid saturation scenarios. With this goal in mind, we used the seismically-derived litho-fluid facies, clay content and total porosity sections with a calibrated rock physics model to transform these petrophysical properties into the electrical domain. The calibrated rock physics model used was the Simandoux equation (:cite:`Simandoux1963`):
-
-.. math::
-    \frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}
-    :name: eq_Simandoux
-
-where
-
-.. math::
-    \phi_e = \phi_T \times (1 - Vsh)
-    :name: eq_Simandoux_phi
-
-Parameters within the Simandoux equation were defined in the :ref:`properties <hoop_region_norway_properties>` section. This rock physics model represents the same one used in the petrophysical evaluation of the Central and Alternative wells to estimate water saturation (:math:`Sw`) from the horizontal resistivity log and was calibrated in the early stage of the study. The procedure used to estimate the seismically-derived resistivity sections at different fluid scenarios consisted of applying directly Eqs. :eq:`eq_Simandoux` and :eq:`eq_Simandoux_phi` to the total porosity and volume of clay sections (:numref:`fig_inversion_seismic_properties_model`) for different values of :math:`Sw` that were modified only in those areas were the seismic indicates the presence of clean hydrocarbon bearing sand, i.e. green facies in the litho-fluid facies section (:numref:`fig_inversion_seismic_properties_model`). The results are shown in :numref:`fig_transverse_resistivity_compare` b, c, and d, for values of :math:`Sw` equal to 0.1, 0.5 and 1 respectively. As a quality control of the results for the case of :math:`Sw` = 0.1 (90% hydrocarbon saturation, which is a saturation close to that obtained from the petrophysical evaluation at the Central well), the measured resistivity curve was overlaid. An excellent match with the modeled resistivity is obtained. One important observation that can be made from the comparison of the three seismically-derived results is the low resistivity contrasts between the reservoir and non-reservoir facies for the case of :math:`Sw` = 0.5. This demonstrates that this level of water saturation (or higher) cannot be identified using CSEM data in this particular geological setting due to the high values of the background resistivity.
+In order to allow direct comparison between seismic and CSEM results, the next step in the methodology (:numref:`fig_inversion_workflow_title`) is the estimation of resistivity models from seismically derived properties for different fluid saturation scenarios. With this goal in mind, we used the seismically-derived litho-fluid facies, clay content and total porosity sections with a calibrated rock physics model to transform these petrophysical properties into the electrical domain. The calibrated rock physics model used was the Simandoux equation (Eq. :eq:`eq_Simandoux` , :cite:`Simandoux1963`). This rock physics model represents the same one used in the petrophysical evaluation of the Central and Alternative wells to estimate water saturation (:math:`Sw`) from the horizontal resistivity log and was calibrated in the early stage of the study. The procedure used to estimate the seismically-derived resistivity sections at different fluid scenarios consisted of applying directly Eqs. :eq:`eq_Simandoux` and :eq:`eq_Simandoux_phi` to the total porosity and volume of clay sections (:numref:`fig_inversion_seismic_properties_model`) for different values of :math:`Sw` that were modified only in those areas were the seismic indicates the presence of clean hydrocarbon bearing sand, i.e. green facies in the litho-fluid facies section (:numref:`fig_inversion_seismic_properties_model`). The results are shown in :numref:`fig_transverse_resistivity_compare` b, c, and d, for values of :math:`Sw` equal to 0.1, 0.5 and 1 respectively. As a quality control of the results for the case of :math:`Sw` = 0.1 (90% hydrocarbon saturation, which is a saturation close to that obtained from the petrophysical evaluation at the Central well), the measured resistivity curve was overlaid. An excellent match with the modeled resistivity is obtained. One important observation that can be made from the comparison of the three seismically-derived results is the low resistivity contrasts between the reservoir and non-reservoir facies for the case of :math:`Sw` = 0.5. This demonstrates that this level of water saturation (or higher) cannot be identified using CSEM data in this particular geological setting due to the high values of the background resistivity.
 
 At this stage in the workflow, results have all been transformed to the electrical domain. However, there is one further step required before a direct comparison can be made. It is noticeable that the seismic results in :numref:`fig_transverse_resistivity_compare` are significantly higher resolution than the CSEM results in :numref:`fig_transverse_resistivity_compare`, even when the CSEM inversion is constrained. This difference must be resolved before the results can be compared or combined in a quantitative fashion.
 
@@ -176,18 +163,14 @@ An analysis of :numref:`fig_transverse_resistivity_compare` a offers important i
     :figwidth: 100%
     :name: fig_transverse_resistivity_compare
 
-    (a) Comparison between the seismically- and CSEM-derived transverse
-    resistance estimates. (b) Cross-section along A-A'
-    (:numref:`fig_geology_region_map_setup`) of seismically-derived
-    resistivity for :math:`Sw` = 0.1. (c) Same cross-section along A-A' for
-    :math:`Sw` = 0.5. (d) Same cross-section along A-A' for :math:`Sw` = 1.
-    Note the good match between the measured and modeled resistivity in the
-    Central well at the (b) section.
+a) Comparison between the seismically- and CSEM-derived transverse resistance estimates.
+b) Cross-section along A-A' (:numref:`fig_geology_region_map_setup`) of seismically-derived resistivity for :math:`Sw` = 0.1.
+c) Same cross-section along A-A' for :math:`Sw` = 0.5.
+d) Same cross-section along A-A' for :math:`Sw` = 1. Note the good match between the measured and modeled resistivity in the Central well at the (b) section.
 
 
 
-Water Saturation Prediction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Water Saturation Prediction**
 
 Although the semi-quantitative comparison of transverse resistance presented above provides valuable information on reservoir properties, it is often desirable to derive a quantitative estimate of rock and fluid properties. The last step in the workflow (:numref:`fig_inversion_workflow_title`), is therefore the quantitative prediction of the :math:`Sw`. The input data for this analysis was the seismically-derived porosity, clay content and litho-fluid facies section shown in :numref:`fig_inversion_seismic_properties_model`, and CSEM-derived transverse resistance along the CSEM line (:numref:`fig_transverse_resistivity_compare` a). These datasets were inverted using the Simandoux equation calibrated at the Central and Alternative wells, and a global search inversion method. This method seeks the value of :math:`Sw` that provides the minimum misfit between seismically and CSEM derived transverse resistance, using a grid search algorithm (see :numref:`fig_Sw_methodology`). It is important to mention that only potential reservoir rocks as indicated by the seismic litho-fluid facies (green facies in :numref:`fig_inversion_seismic_properties_model` to the top), were considered to have variable :math:`Sw` during the inversion process. In this way the quantitative seismic interpretation result not only provides information about the clay content and total porosity of the rocks, necessary for the Simandoux equation, but also about the location and thickness of the potential pay sand, thus maintaining seismic resolution in the final result. However, note that since only :math:`Sw` varies during the inversion, it is implicitly assumed that the porosity and :math:`Vclay` as defined by the seismic data are correct.
 

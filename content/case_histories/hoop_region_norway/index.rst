@@ -17,7 +17,7 @@ Reservoir properties prediction using CSEM, pre-stack seismic and well log data:
 
 **Abstract**
 
-We present an example from the Hoop area of the Barents Sea showing a sequential quantitative integration approach to integrate seismic and CSEM attributes using a rock physics framework.  The example illustrates a workflow to address the challenges of multi-physics and multi-scale data integration for reservoir characterization purposes.
+We present an example from the Hoop area of the Barents Sea showing a sequential quantitative integration approach to integrate seismic and CSEM attributes using a rock physics framework.  The example  illustrates a workflow to address the challenges of multi-physics and multi-scale data integration for reservoir characterization purposes.
 
 
 .. figure:: images/survey_schematic.png
