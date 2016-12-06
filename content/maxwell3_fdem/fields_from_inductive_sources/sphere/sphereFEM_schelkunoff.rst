@@ -1,7 +1,7 @@
 .. _sphereFEM_schelkunoff:
 
 Derivation of the Excitation Factor
------------------------------------
+===================================
 
 **Purpose**: In this section, the excitation factor for a conductive and magnetically permeable sphere in free-space is derived according to Wait (1951).
 
