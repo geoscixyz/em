@@ -84,6 +84,7 @@ This can be shown by taking the inductive and resistive limits of Eq. :eq:`ChiCo
 
 Therefore, a purely conductive sphere will only experience excitations which oppose the inducing field.
 
+.. _sphereFEM_excitation_factor_static:
 
 Low-Frequency Limit for Highly Permeable Spheres
 ------------------------------------------------
