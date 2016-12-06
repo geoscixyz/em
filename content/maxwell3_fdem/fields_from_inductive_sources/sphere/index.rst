@@ -55,10 +55,10 @@ These cases include: a conductive and magnetically permeable sphere, a purely co
 A supporting derivation for the excitation factor can be found :ref:`here<sphereFEM_schelkunoff>`.
 
 
-
+**Contents (Quick Links)**
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     sphereFEM_dipole_response
     sphereFEM_excitation_factor
