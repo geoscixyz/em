@@ -1,17 +1,19 @@
 .. _sphereFEM_excitation_factor:
 
 Excitation Factor for Special Cases
------------------------------------
+===================================
 
-**Purpose**: The characteristic dipole response from a conductive and magnetically permeable sphere is defined by its excitation factor.
-Here, we present analytic expressions and discuss the excitation factors for several specific cases, including: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency response from a highly permeable sphere.
+.. Purpose::
+
+	The characteristic dipole response from a conductive and magnetically permeable sphere is defined by its excitation factor.
+	Here, we present analytic expressions and discuss the excitation factors for several specific cases, including: a conductive and magnetically permeable sphere, a purely conductive sphere, and the zero-frequency response from a highly permeable sphere.
 
 
 Conductive and Magnetically Permeable Sphere
-============================================
+--------------------------------------------
 
 
-According to Wait (1951), the excitation factor for a conductive and magnetically permeable sphere is given by:
+According to Wait (:cite:`Wait1951`), the excitation factor for a conductive and magnetically permeable sphere is given by:
 
 .. math::
 	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu  \big [ tanh(\alpha) - \alpha \big ] - \mu_0 [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
@@ -50,7 +52,7 @@ Thus regardless of the sphere's physical properties, the inductive limit of the 
 
 
 Purely Conductive Sphere
-========================
+------------------------
 
 For a purely conductive object (i.e. :math:`\mu = \mu_0`), Eq. :eq:`ChiApprox` can simplified to the following:
 
@@ -84,7 +86,7 @@ Therefore, a purely conductive sphere will only experience excitations which opp
 
 
 Low-Frequency Limit for Highly Permeable Spheres
-================================================
+------------------------------------------------
 
 The excitation factor for a highly permeable sphere at low frequency can be obtained by examining the resistive limit of Eq. :eq:`ChiApprox`.
 Where :math:`\kappa` is the magnetic susceptibility (link) of the sphere, and :math:`\mu =\mu_0 \big [ 1 + \kappa \big ]`:
@@ -118,11 +120,6 @@ The largest possible magnetic response from a sphere can be obtained by taking t
 	\lim_{\kappa \rightarrow \infty} \, \bar \chi (\kappa) = 3.
 	:label: ChiLimitKappa
 	
-
-
-References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.
-
-
 
 
 

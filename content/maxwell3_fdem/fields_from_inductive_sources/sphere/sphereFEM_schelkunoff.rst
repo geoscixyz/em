@@ -1,9 +1,11 @@
 .. _sphereFEM_schelkunoff:
 
 Derivation of the Excitation Factor
------------------------------------
+===================================
 
-**Purpose**: In this section, the excitation factor for a conductive and magnetically permeable sphere in free-space is derived according to Wait (1951).
+.. Purpose::
+
+	In this section, the excitation factor for a conductive and magnetically permeable sphere in free-space is derived according to Wait (:cite:`Wait1951`).
 
 The geometry of this problem is illustrated in :numref:`SchelkunoffGeometry`, where :math:`{\bf H_0}(i\omega)` represents the inducing field, :math:`{\bf m}(i\omega)` is the induced magnetic dipole moment of the sphere, and :math:`{\bf H}(i\omega)` is the resulting dipole response.
 :math:`\sigma_s`, :math:`\mu_s` and :math:`\varepsilon_s` represent the conductivity, magnetic permeability and electric permittivity of the sphere, respectively.
@@ -50,7 +52,7 @@ The wavenumber :math:`\gamma` depends on the physical properties of the media, a
 	\gamma = \Big [ i \omega \mu \sigma - \omega^2 \mu \varepsilon \Big ]^{1/2}
 	:label: Wave_Number
 
-For his derivation, Wait (1951) considered the induced magnetic dipole moment resulting from an incident plane wave.
+For his derivation, Wait (:cite:`Wait1951`) considered the induced magnetic dipole moment resulting from an incident plane wave.
 If the wavelength of the incident wave is sufficiently larger than the radius of the sphere (i.e. :math:`|\gamma_b |/2\pi \ll R`), then we may assume the magnetic field which excites the sphere is spatially uniform about the sphere.
 For an inducing field of the form :math:`{\bf H_0} (i\omega) = H_0 e^{i\omega t} {\bf \hat z}`, symmetry of the problem implies that :math:`{\bf E}` only has components in :math:`\boldsymbol{\hat \phi}`.
 Therefore by Eq. :eq:`SchelkunoffE`, it follows that our Schelkunoff potential will only have components in :math:`{\bf \hat z}` as well.
@@ -67,7 +69,7 @@ The Schulkunoff potential may be obtained by considering seperate solutions insi
 
 
 For our problem, boundary conditions on the sphere require that tanjential components of the magnetic field and normal components of the flux density must be continuous.
-According to Wait (1951), these conditions are satisfied by the following expressions:
+According to Wait (:cite:`Wait1951`), these conditions are satisfied by the following expressions:
 
 .. math::
 	\textrm{At }r=R: \; \begin{cases}
@@ -77,7 +79,7 @@ According to Wait (1951), these conditions are satisfied by the following expres
 	\end{cases}
 	:label: BoundaryConditions
 
-To solve the boundary value problem, Wait (1951) expressed the solutions, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
+To solve the boundary value problem, Wait (:cite:`Wait1951`) expressed the solutions, both inside and outside of the sphere, as a sum of spherical harmonic modes with coefficients :math:`a_n` and :math:`b_n`, respectively.
 For the boundary conditions to be satisfied however, he found that coefficients :math:`a_n=b_n=0 \; \forall \; n>0`.
 As a result, the solution to the Schelkunoff potentials inside and outside the sphere are defined by:
 
@@ -126,7 +128,7 @@ where
 	\alpha = \Big [ i\omega \mu_s \sigma_s \Big ]^{1/2}R
 	:label: alpha
 
-Wait (1951) simplified the solution outside the sphere by considering the dipole field within a vacuum.
+Wait (:cite:`Wait1951`) simplified the solution outside the sphere by considering the dipole field within a vacuum.
 For a dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by (Griffiths, 1999):
 
 .. math::
@@ -148,4 +150,3 @@ According the Eq. :eq:`DipoleMoment`, :math:`{\bf m} (i\omega)` may also be expr
 	:label: ChiApprox
 
 
-References: Wait, J. R., 1951, "A conductive sphere in a time varying magnetic field," Geophysics, vol. 16, pp. 666-672.
