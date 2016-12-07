@@ -36,11 +36,12 @@ magnetization of zero. When exposed to a magnetic field, the magnetic moments
 within paramagnetic rocks experience a torque. This torque attempts to align
 individual magnetic moments along the direction of the field. As a result, the
 rock experiences a net magnetization parallel to the applied field. This
-process is illustrated in Figure (needs reference).
+process is illustrated in :numref:`figDipoleAlign`.
 
 .. figure:: images/figMagDipoles.png
     :align: center
-    :width: 70%
+    :figwidth: 70%
+    :name: figDipoleAlign
 
     Magnetization :math:`{\bf M}` in matter, as represented by the partial
     alignment of magnetic dipole moments :math:`{\bf m_i}` in response to an
@@ -48,7 +49,7 @@ process is illustrated in Figure (needs reference).
 
 Magnetic susceptibility is defined as the ratio between induced magnetization
 and the strength of an applied magnetic field. Provided the magnetic field is
-not too strong, this relationship is linear:
+not too strong, this relationship is linear (:cite:`griffiths1999`):
 
 .. math::
     {\bf M} = \chi {\bf H}
@@ -65,9 +66,8 @@ susceptibilities less than 0.
 Relationship Between Magnetization and Magnetic Permeability
 ------------------------------------------------------------
 
-According to the magnetic constitutive relationship (link), the relationship
-between magnetic susceptibiliy and magnetic permeability (link), and Eq.
-:eq:`Const_Rel_Mag`:
+According to the :ref:`magnetic constitutive relationship<magnetic_permeability_index>`, the relationship
+between magnetic susceptibiliy and magnetic permeability is given by (:cite:`griffiths1999`):
 
 .. math::
     {\bf B} = \mu {\bf H} = \mu_0 \big [1 +\chi \, ] {\bf H} = \mu_0 \big [ {\bf H + M} \big ]
@@ -78,11 +78,6 @@ space. Eq. :eq:`Rel_BMH` implies that induced magnetization contributes
 towards the net magnetic flux density within the rock. Furthermore, the nature
 of this contribution may be represented by the rock's magnetic permeability.
 
-
-
-References:
-
-Griffiths, David J., "Introduction to Electrodynamics", 3rd Ed., Prentice Hall, 1999.
 
 
 
