@@ -2,4 +2,3 @@
 
 .. math::
     \oint_S \mathbf{b} \cdot \mathbf{da} = 0
-    :label: gauss_magnetic_int_time

@@ -45,14 +45,17 @@ Equation Bank
     f = open(rst, 'w')
     f.write(out)
 
-    for name in files:
+    for fname in files:
         out = """
 
- - {}
+ - {name}
 
-    .. include:: equation_bank/{}
+    .. _eq_bank_{name}:
 
-        """.format(name.rstrip('.rst'), name)
+    .. include:: equation_bank/{fname}
+    :label: eq_bank_{name}
+
+        """.format(name=fname.rstrip('.rst'), fname=fname)
         f.write(out)
 
     f.close()

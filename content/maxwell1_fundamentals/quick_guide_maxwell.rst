@@ -35,6 +35,7 @@ Differential equations in time
 
 - :ref:`Ampere Maxwell Law <ampere_maxwell_differential_time>`
     .. include:: ../equation_bank/ampere_maxwell_time.rst
+    :label: ampere_maxwell_time
 
 
 - :ref:`Gauss's Law for Electric Fields <gauss_electric_differential>`
