@@ -50,6 +50,7 @@ sections, we discuss:
     airborne_fdem/index
     airborne_tdem/index
     mt/index
+    ztem/index
     gpr/index
     marine_csem/index
     uxo/index
