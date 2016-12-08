@@ -165,6 +165,44 @@ Fransisco Bolivar
 
         
 
+.. _rowanc1:
+
+Rowan Cockett
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars0.githubusercontent.com/u/913249?v=3&s=460"><img alt="https://avatars0.githubusercontent.com/u/913249?v=3&s=460" class="align-left" src="https://avatars0.githubusercontent.com/u/913249?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> 3point Science
+                          <br>
+    <strong>location:</strong> Calgary, AB
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:rowan@row1.ca">rowan@row1.ca</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="http://www.row1.ca/">http://www.row1.ca/</a>
+                    
+                          <br>
+    <strong>ORCID:</strong> 
+    <a class="reference external" href="http://orcid.org/0000-0002-7859-8394">0000-0002-7859-8394</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _dccowan:
 
 Devin C. Cowan
@@ -190,6 +228,36 @@ Devin C. Cowan
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="https://github.com/dccowan">https://github.com/dccowan</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _krisdavis:
+
+Kris Davis
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"><img alt="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460" class="align-left" src="https://avatars2.githubusercontent.com/u/10675064?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Mira Geoscience
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/krisdavis">https://github.com/krisdavis</a>
                     
                           
     </div>
@@ -693,6 +761,40 @@ Douglas Oldenburg
 
         
 
+.. _prhjiajie:
+
+Ronghua Peng
+------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars1.githubusercontent.com/u/3736610?v=3&s=460"><img alt="https://avatars1.githubusercontent.com/u/3736610?v=3&s=460" class="align-left" src="https://avatars1.githubusercontent.com/u/3736610?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:prhjiajie@163.com">prhjiajie@163.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/prhjiajie">https://github.com/prhjiajie</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _gplastow:
 
 Geoffrey Plastow
@@ -725,17 +827,28 @@ Geoffrey Plastow
 
         
 
+<<<<<<< HEAD
 .. _sannatti:
 
 Sanna Tyrvainen
 ---------------
+=======
+.. _grosenkj:
+
+Gudni Karl Rosenkjaer
+---------------------
+>>>>>>> master
 
 .. raw:: html
 
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
+<<<<<<< HEAD
     <a class="reference internal image-reference" href="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg"><img alt="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" class="align-left" src="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+=======
+    <a class="reference internal image-reference" href="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400"><img alt="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400" class="align-left" src="https://avatars0.githubusercontent.com/u/6052367?v=3&s=400" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+>>>>>>> master
             
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -745,7 +858,15 @@ Sanna Tyrvainen
     <strong>location:</strong> Vancouver, BC
                           <br>
     <strong>email:</strong> 
+<<<<<<< HEAD
     <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
+=======
+    <a class="reference external" href="mailto:grosenkj@users.noreply.github.com">grosenkj@users.noreply.github.com</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://github.com/grosenkj">https://github.com/grosenkj</a>
+>>>>>>> master
                     
                           
     </div>

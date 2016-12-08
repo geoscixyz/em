@@ -179,5 +179,37 @@
         "email":"sannatyr@math.ubc.ca",
         "location":"Vancouver, BC",
         "affiliation":"University of British Columbia"
+    },
+    "grosenkj":{
+        "name": "Gudni Karl Rosenkjaer",
+        "affiliation": "University of British Columbia",
+        "email":"grosenkj@users.noreply.github.com",
+        "avatar":"https://avatars0.githubusercontent.com/u/6052367?v=3&s=400",
+        "location":"Vancouver, BC",
+        "url":"https://github.com/grosenkj"
+    },
+    "krisdavis":{
+        "name":"Kris Davis",
+        "affiliation":"Mira Geoscience",
+        "location":"Vancouver, BC",
+        "url": "https://github.com/krisdavis",
+        "avatar": "https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"
+    },
+    "prhjiajie":{
+        "name":"Ronghua Peng",
+        "affiliation": "University of British Columbia",
+        "email": "prhjiajie@163.com",
+        "location": "Vancouver, BC",
+        "avatar":"https://avatars1.githubusercontent.com/u/3736610?v=3&s=460",
+        "url":"https://github.com/prhjiajie"
+    },
+    "rowanc1":{
+        "name":"Rowan Cockett",
+        "affiliation":"3point Science",
+        "url":"http://www.row1.ca/",
+        "location":"Calgary, AB",
+        "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
+        "email":"rowan@row1.ca",
+        "ORCID":"0000-0002-7859-8394"
     }
 }
