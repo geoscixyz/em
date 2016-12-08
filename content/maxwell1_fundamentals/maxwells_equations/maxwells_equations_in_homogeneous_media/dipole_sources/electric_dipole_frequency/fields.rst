@@ -61,33 +61,33 @@ The user is encouraged to answer these questions in order, as we begin with simp
 The user is also encouraged to use analytic and asymptotic expressions as a reference when completing the exercise.
  
 
-**DC (static) Case:**
+**DC (Static) Case:**
 
-For the DC case, ensure that the frequency is set to 0 Hz. When answering the following questions, examine the x, y and z components of the electric field, magnetic field and current density.
+For the DC case, ensure that the frequency is set to 0 Hz. When answering the following questions, examine the x, y and z components of the electric field, magnetic field and current density. The vector plot is recommended.
 
-	- Do the electric field, magnetic field or current density have a quadrature (imaginary) components?
+	- Do the electric field, magnetic field or current density have quadrature (imaginary) components?
 	- Does the magnetic field have any components along the orientation of the dipole?
 	- When you alter the conductivity (:math:`\sigma`), does the shape of the electric or magnetic field change? Does the magnitude change?
 	- When you alter the conductivity (:math:`\sigma`), does anything about the current density change? (note that :math:`\mathbf{J = \sigma E}`)
 	- Do your observations make sense when considering the :ref:`DC approximation<frequency_domain_electric_dipole_asymptotics_DC>`?
 
-
-*Could add 1 image each for the DC electric field and magnetic field on a plane*
-
 **Near-Field Approximation:**
 
-Now set the log-conductivity of the background to 0 and leave the frequency at 0 Hz. According to our asymptotic approximations, the :ref:`near-field<frequency_domain_electric_dipole_asymptotics_near>` should behave like the :ref:`DC field<frequency_domain_electric_dipole_asymptotics_DC>`.
+Now set the conductivity of the background to 1 S/m and set the frequency to 1 Hz. According to our asymptotic approximations, the :ref:`near-field<frequency_domain_electric_dipole_asymptotics_near>` (:math:`| kr | \ll 1`) should behave like the :ref:`DC field<frequency_domain_electric_dipole_asymptotics_DC>`.
 
+	- Examine the electric and magnetic fields. Within the domain defined, do these fields behave like DC fields?
 
+Now slowly increase the frequency by factors of 10. When you reach 1000 Hz, notice that at sufficient distance from the dipole, the near-field approximation is no longer valid. However near the dipole source, the fields more or less behave like DC fields.
 
-*Images showing DC field, lower frequency and higher frequency fields (Choose E or H). They should demonstrate the distance at which the near-field is valid.*
-
+	- At what distance is the near-field approximation no longer valid at 1000 Hz? Use this value to confirm that :math:`| kr | \ll 1`.
 
 **The Inductive Response:**
 
+According to `Faraday's law<faraday>`, the effects of EM induction increase as frequency increases. Set the conductivity to 0.1 S/m and choose a point (x,y,z) = (40m, 0m, 0m). Examine the x,y and z components of the electric and magnetic fields.
 
-
-*Show real and imaginary components at low, medium and high frequency. Should contain vector lines to show direction information.*
+	- At what frequency do the effects of EM induction become significant?
+	- Now increase the background conductivity to 1 S/m and examine the same location. At what frequency do the effects of EM induction become significant?
+	- Now choose a location closer to the dipole source (x,y,z) = (10m, 0m, 0m). At what frequency do the effects of EM induction become significant compared to the primary field?
 
 **Magnetic Permeability and Dielectric Permittivity**
 

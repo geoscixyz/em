@@ -9,6 +9,7 @@ Asymptotic Approximations
     By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
 
 
+.. _frequency_domain_magnetic_dipole_asymptotics_DC:
 
 DC-Field Approximation
 ----------------------
@@ -31,6 +32,7 @@ Similarly, the corresponding DC electric field within the medium is given by:
 
 According to Eq. :eq:`eq_Mdip_Edc`, the DC electric field is null.
 
+.. _frequency_domain_magnetic_dipole_asymptotics_near:
 
 Near-Field Approximation
 ------------------------
@@ -46,7 +48,10 @@ The near-field approximation for :math:`\mathbf{H}_m` can be obtained by replaci
 Thus:
 
 .. math::
-	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \left ( 1 - ikr + O \left ( k^2 r^2 \right ) \right ) \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right]
+	\begin{split}
+	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \Big ( 1 - ikr + O ( k^2 r^2 ) \Big ) \Bigg [ \Bigg ( & \frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \Bigg ) ... \\ 
+	& \Big ( -k^2 r^2 + 3ikr +3 \Big ) + \Big ( k^2 r^2 - ikr -1 \Big ) \hat{x} \Bigg ]
+	\end{split}
 	:label: eq_Mdip_Hnear1
 
 Eq. :eq:`eq_Mdip_Hnear1` can be simplified by neglecting polynomial terms which are :math:`O(k^2 r^2)` or higher.

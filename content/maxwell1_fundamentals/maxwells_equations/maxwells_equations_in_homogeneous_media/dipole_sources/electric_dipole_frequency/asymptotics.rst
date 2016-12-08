@@ -38,7 +38,7 @@ In addition, the DC electric and magnetic fields are in-phase with one another.
 
 Near-Field Approximation
 ------------------------
-
+x
 For fields which are sufficiently close to the electric dipole source, we may assume that :math:`| kr | \ll 1`.
 In this case, the exponential term in :math:`\mathbf{E}_e` and :math:`\mathbf{H}_e` can be approximated using Taylor expansion:
 
