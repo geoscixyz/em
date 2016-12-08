@@ -15,7 +15,7 @@ Initial Airborne TDEM-Magnetic Survey
     VTEM survey lines and EM anomalies for the initial airborne EM survey flown in 2010.
 
 
-The Albany Project airborne EM-magnetic survey for Zenyatta consisted of >10,000 km of helicopter time-domain EM (TDEM) and magnetics over multiple (28) blocks from March 17 to May 19, 2010 (Legault, 2010). The survey was performed using a higher power VTEM (versatile time-domain electromagnetic; Witherly et al., 2004) prototype that featured a larger loop diameter (35m) and higher dipole-moment (0.84 M nIA) that would later develop into VTEMMAX (ref. Killeen, 2011). The survey was flown along 150m spaced, north-south oriented lines and east-west tie-lines at 700-1500m spacings. The Albany graphite survey claim block (4F) consisted of 1181 km covering a 206 m2 area (:numref:`PlaneLines_survey`), flown at an average EM sensor height of 53 m and an avg. magnetic sensor clearance of 75 m.
+The Albany Project airborne EM-magnetic survey for Zenyatta consisted of >10,000 km of helicopter time-domain EM (TDEM) and magnetics over multiple (28) blocks from March 17 to May 19, 2010 (:cite:`Legault2010`). The survey was performed using a higher power VTEM (versatile time-domain electromagnetic; :cite:`Witherly2004`) prototype that featured a larger loop diameter (35m) and higher dipole-moment (0.84 M nIA) that would later develop into VTEMMAX (:cite:`Killeen2011`). The survey was flown along 150m spaced, north-south oriented lines and east-west tie-lines at 700-1500m spacings. The Albany graphite survey claim block (4F) consisted of 1181 km covering a 206 m2 area (:numref:`PlaneLines_survey`), flown at an average EM sensor height of 53 m and an avg. magnetic sensor clearance of 75 m.
 
 
 
