@@ -23,16 +23,16 @@ used in the inversion.
 ------------------------------
 
 .. figure:: ./images/FieldvsFwdData.png
-        :name: asp6
-        :figwidth: 40%
-        :align: left
+    :name: asp6
+    :figwidth: 40%
+    :align: left
 
-        The blue line shows a randomly-chosen decay curve from the VTEM field
-        data set. The orange line is the forward modeled data using the
-        synthetic 1D model (shown in :numref:`asp2`) from borehole data
-        :cite:`DevrieseOldenburg2016`. The two decay curves are fairly similar
-        to each other, suggesting that the 1D synthetic model is a decent
-        representation of the resistivity structures at the Aspen property.
+    The blue line shows a randomly-chosen decay curve from the VTEM field
+    data set. The orange line is the forward modeled data using the
+    synthetic 1D model (shown in :numref:`asp2`) from borehole data
+    :cite:`DevrieseOldenburg2016`. The two decay curves are fairly similar
+    to each other, suggesting that the 1D synthetic model is a decent
+    representation of the resistivity structures at the Aspen property.
 
 A one-dimensional model is a fair start to recovering information about the
 bavkground geology in the Athabasca oil sands as the different formations are
@@ -68,20 +68,20 @@ model are set to 500 :math:`\Omega m`. The recovered model is shown in
 :numref:`asp7` (right).
 
 .. figure:: ./images/InvL2L2abc.png
-        :name: asp7
-        :figwidth: 100%
-        :align: left
+    :name: asp7
+    :figwidth: 100%
+    :align: left
 
-        Inversion of the forward modeled data (:numref:`asp6`) using an
-        initial and reference model of (left) 25 :math:`\Omega m`, (centre)
-        100 :math:`\Omega m`, and (right) 500 :math:`\Omega m`. Below the
-        conductive layer, the model pushes towards the reference model,
-        providing an idea of the depth of investigation using the VTEM system
-        for the Athabasca oil sands region. In each panel, (a) compares the
-        observed (blue) and predicted (orange) data while (b) shows the
-        normalized data misfit for each time channel. The recovered model
-        (black) is shown in sub-panel (c) along with the true model (blue) and
-        the initial/reference model (orange).
+    Inversion of the forward modeled data (:numref:`asp6`) using an
+    initial and reference model of (left) 25 :math:`\Omega m`, (centre)
+    100 :math:`\Omega m`, and (right) 500 :math:`\Omega m`. Below the
+    conductive layer, the model pushes towards the reference model,
+    providing an idea of the depth of investigation using the VTEM system
+    for the Athabasca oil sands region. In each panel, (a) compares the
+    observed (blue) and predicted (orange) data while (b) shows the
+    normalized data misfit for each time channel. The recovered model
+    (black) is shown in sub-panel (c) along with the true model (blue) and
+    the initial/reference model (orange).
 
 The synthetic decay curve is also inverted using an L1 norm for the model
 objective function (Equation \ref{intro:phim}) to recover blockier models
@@ -97,17 +97,17 @@ by the model and the normalized data fitting misfit is random. By decreasing
 :math:`\alpha_z`, the model is blockier compared to using the L1 norm alone.
 
 .. figure:: ./images/InvL2L1abc.png
-        :name: asp8
-        :figwidth: 100%
-        :align: left
+    :name: asp8
+    :figwidth: 100%
+    :align: left
 
-        Inversion of the forward modeled data (:numref:`asp6`) using an (left)
-        L2 norm and (centre) L1 norm for $\phi_m$. In (right), an L1 norm is
-        used and :math:`\alpha_z` is reduced from 1 to 0.1. In each panel, (a)
-        compares the observed (blue) and predicted (orange) data while (b)
-        shows the normalized data misfit for each time channel. The recovered
-        model (black) is shown in sub-panel (c) along with the true model
-        (blue) and the initial/reference model (orange).
+    Inversion of the forward modeled data (:numref:`asp6`) using an (left)
+    L2 norm and (centre) L1 norm for $\phi_m$. In (right), an L1 norm is
+    used and :math:`\alpha_z` is reduced from 1 to 0.1. In each panel, (a)
+    compares the observed (blue) and predicted (orange) data while (b)
+    shows the normalized data misfit for each time channel. The recovered
+    model (black) is shown in sub-panel (c) along with the true model
+    (blue) and the initial/reference model (orange).
 
 The 1D inversions of the forward modeled data provide initial information
 about depth of investigation, the influence of inversion parameters, and what
@@ -129,21 +129,4 @@ of nearby soundings. This gives a large-scale regional resistivity model.
 
 The recovered model is interpreted using known geologic information about the
 area on the :ref:`following page <aspen_interpretation>`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

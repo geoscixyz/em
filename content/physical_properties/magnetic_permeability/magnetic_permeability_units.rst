@@ -23,7 +23,7 @@ Magnetic susceptibility is related to the magnetic permeability by the following
     \mu = \mu_0 \big [ 1 + \chi \, \big ]
     :label: susc_to_perm
 
-where :math:`\mu_0 = 4\pi \times 10^{-7}` T :math:`\! \cdot \!` m/A is the permeability of free-space.
+where :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
 The correct SI units for magnetic susceptibility are (A/m)/(A/m).
 However, it is commonly expressed as a unitless quantity.
 Magnetic susceptibilities are occasionally given in CGS units.

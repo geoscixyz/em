@@ -76,7 +76,3 @@ amphibolites, granulites, eclogites and schists.
     :width: 70%
 
 
-
-References:
-
-Clark and Emerson, "Notes on Rock Magnetization Characteristics in Applied Geophysical Studies," Exploration Geophysics, vol. 22, pp. 547-555, 1991.

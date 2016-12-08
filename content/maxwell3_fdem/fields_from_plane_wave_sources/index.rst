@@ -1,7 +1,7 @@
 .. _fdem_fields_from_plane_wave_sources_index:
 
-Fields from inductive sources
-=============================
+Fields from plane wave sources
+==============================
 
 .. raw:: html
     :file: ../../../underconstruction.html

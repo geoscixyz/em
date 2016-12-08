@@ -162,14 +162,14 @@ Contributors
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         {avatar}
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         {html_block}
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -209,6 +209,27 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     print('Creating: case_histories.html')
     f = open(fout, 'w')
     f.write(out)
+
+    toctree = """
+    """.join(
+        ["{}/index".format(key) for key in casehistories.keys()]
+    )
+
+    toctreeblock = """
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    {toctree}
+    """.format(toctree=toctree)
+    f.write(toctreeblock)
+
+    f.write("""
+
+
+Gallery
+-------
+    """)
 
     for key in casehistories.keys():
         casehistory = casehistories[key]
@@ -278,7 +299,7 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     :width: 260
     :align: right
 
-- :ref:`{title} Case History <{uid}_index>`
+- :ref:`{description} <{uid}_index>`
 {references_block}
 {contributors_block}
 {tags_block}
@@ -291,6 +312,11 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
         """.format(
             uid=key,
             title=casehistory['title'],
+            description=(
+                casehistory['description'] if 'description' in
+                casehistory.keys() else
+                casehistory['title']
+            ),
             underline='^'*len(casehistory['title']),
             source=casehistory['source'],
             thumbnail=casehistory['thumbnail'],

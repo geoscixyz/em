@@ -11,6 +11,23 @@
 
 
 
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    mt_isa/index
+    bookpurnong/index
+    aspen/index
+    emc/index
+    furggwanghorn/index
+    barents_sea/index
+    balboa/index
+    
+
+
+Gallery
+-------
+    
 
 Mt. Isa
 ^^^^^^^
@@ -20,7 +37,7 @@ Mt. Isa
     :width: 260
     :align: right
 
-- :ref:`Mt. Isa Case History <mt_isa_index>`
+- :ref:`Mt. Isa <mt_isa_index>`
 
 
 - Contributors
@@ -48,7 +65,7 @@ Bookpurnong
     :width: 260
     :align: right
 
-- :ref:`Bookpurnong Case History <bookpurnong_index>`
+- :ref:`Bookpurnong <bookpurnong_index>`
 
 
 - Contributors
@@ -76,7 +93,7 @@ Aspen
     :width: 260
     :align: right
 
-- :ref:`Aspen Case History <aspen_index>`
+- :ref:`Aspen <aspen_index>`
 
 
 - Contributors
@@ -105,7 +122,7 @@ Elevenmile Canyon
     :width: 260
     :align: right
 
-- :ref:`Elevenmile Canyon Case History <emc_index>`
+- :ref:`Elevenmile Canyon <emc_index>`
 
 
 - Contributors
@@ -126,15 +143,15 @@ Elevenmile Canyon
 
         
 
-3D Helicopter GPR surveying a rock glacier
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Furggwanghorn
+^^^^^^^^^^^^^
 
-.. image:: ./rockglacier/images/furggwanghorn_heligpr.png
-    :alt: rockglacier
+.. image:: ./furggwanghorn/images/furggwanghorn_heligpr.png
+    :alt: furggwanghorn
     :width: 260
     :align: right
 
-- :ref:`3D Helicopter GPR surveying a rock glacier Case History <rockglacier_index>`
+- :ref:`3D Helicopter GPR surveying a rock glacier <furggwanghorn_index>`
 
 
 - Contributors
@@ -155,15 +172,45 @@ Elevenmile Canyon
 
         
 
-The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Barents Sea
+^^^^^^^^^^^
+
+.. image:: ./barents_sea/images/inversion_workflow.png
+    :alt: barents_sea
+    :width: 260
+    :align: right
+
+- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway <barents_sea_index>`
+
+
+- Contributors
+    - author: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Hydrocarbon, CSEM, reservoir, oil and gas
+    - Applications: Reservoir characterization, marine EM
+    - Location: Hoop Fault Complex, Barents Sea, Norway
+    - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Balboa
+^^^^^^
 
 .. image:: ./balboa/images/bboa_thumbnail.png
     :alt: balboa
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama Case History <balboa_index>`
+- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
 
 
 - Contributors
