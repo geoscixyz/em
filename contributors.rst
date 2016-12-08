@@ -735,6 +735,8 @@ Sanna Tyrvainen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
+    <a class="reference internal image-reference" href="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg"><img alt="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" class="align-left" src="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
@@ -743,7 +745,7 @@ Sanna Tyrvainen
     <strong>location:</strong> Vancouver, BC
                           <br>
     <strong>email:</strong> 
-    <a class="reference external" href="mailto:styrvain@eoas.ubc.ca">styrvain@eoas.ubc.ca</a>
+    <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
                     
                           
     </div>

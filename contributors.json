@@ -175,7 +175,8 @@
     },
     "sannatti":{
         "name":"Sanna Tyrvainen",
-        "email":"styrvain@eoas.ubc.ca",
+        "avatar":"https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg",
+        "email":"sannatyr@math.ubc.ca",
         "location":"Vancouver, BC",
         "affiliation":"University of British Columbia"
     }
