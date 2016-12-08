@@ -17,27 +17,27 @@ variations in the geologic structures above the Clearwater Formation that can
 be obtained using EM data.
 
 .. figure:: ./images/fig3.png
-        :align: left
-        :figwidth: 45%
-        :name: asp9
+    :align: left
+    :figwidth: 45%
+    :name: asp9
 
-        The figure shows a planview section from the interpolated 3D model at
-        an elevation of 465 m (or roughly 100 m below the surface in the east
-        and 40 m below the surface in the west). The model shows a channel-
-        like resistive unit in the center, with more conductive regions to the
-        northwest and southeast. Solid line shows location of focus for SAGD;
-        dashed line shows location of cross-sections in :numref:`asp10`.
+    The figure shows a planview section from the interpolated 3D model at
+    an elevation of 465 m (or roughly 100 m below the surface in the east
+    and 40 m below the surface in the west). The model shows a channel-
+    like resistive unit in the center, with more conductive regions to the
+    northwest and southeast. Solid line shows location of focus for SAGD;
+    dashed line shows location of cross-sections in :numref:`asp10`.
 
-.. figure:: ./images/CrossSectionsAllThree.PNG
-        :align: right
-        :figwidth: 45%
-        :name: asp10
+.. figure:: ./images/CrossSections.png
+    :align: right
+    :figwidth: 45%
+    :name: asp10
 
-        The figure shows cross-sections at a northing of 12.6, 8.4, and 3 km.
-        The figures are vertically exaggerated to be able to show variations
-        in the conductivity with depth. Solid black lines indicate the tops of
-        the Grand Rapids, Clearwater, and McMurray Formation determined from
-        the recovered model.
+    The figure shows cross-sections at a northing of 12.6, 8.4, and 3 km.
+    The figures are vertically exaggerated to be able to show variations
+    in the conductivity with depth. Solid black lines indicate the tops of
+    the Grand Rapids, Clearwater, and McMurray Formation determined from
+    the recovered model.
 
 Cross-sectional views of the 3D interpolated model are shown in
 :numref:`asp10`. The recovered model shows that the topography changes from
@@ -58,15 +58,15 @@ Local pseudo-3D and 3D inversion of field data
 ----------------------------------------------
 
 .. figure:: ./images/airbcompare.png
-        :align: left
-        :figwidth: 60%
-        :name: asp12
+    :align: left
+    :figwidth: 60%
+    :name: asp12
 
-        Comparison of (left) plan-view and (right) cross sections for (a) the
-        coarse, (b) the fine pseudo-3D recovered model, and (c) the 3D
-        recovered model. The left-hand figures are at an elevation of 465 m.
-        The right-hand figures, at a northing of 8.4 km, are vertically
-        exaggerated to show variations in the conductivity with depth.
+    Comparison of (left) plan-view and (right) cross sections for (a) the
+    coarse, (b) the fine pseudo-3D recovered model, and (c) the 3D
+    recovered model. The left-hand figures are at an elevation of 465 m.
+    The right-hand figures, at a northing of 8.4 km, are vertically
+    exaggerated to show variations in the conductivity with depth.
 
 One of the goals is to use the airborne data to build a detailed background
 resistivity model that can be used when monitoring SAGD steam chamber growth
@@ -86,15 +86,15 @@ the recovered model. This model can serve as an initial and background model
 in monitoring of SAGD chambers.
 
 .. figure:: ./images/3D1Dcomparison.png
-        :align: right
-        :figwidth: 60%
-        :name: asp13
+    :align: right
+    :figwidth: 60%
+    :name: asp13
 
-        Using the pseudo-3D recovered model, data was forward modeled in 3D
-        (blue line) and compared to observed field data (black circles). The
-        mismatch between the soundings in (a) suggests that the data contain
-        3D effects that cannot be explained by the pseudo-3D model while (b)
-        shows that in some areas, the pseudo-3D model appears valid.
+    Using the pseudo-3D recovered model, data was forward modeled in 3D
+    (blue line) and compared to observed field data (black circles). The
+    mismatch between the soundings in (a) suggests that the data contain
+    3D effects that cannot be explained by the pseudo-3D model while (b)
+    shows that in some areas, the pseudo-3D model appears valid.
 
 Although providing a 3D model, the above results are based on 1D inversions,
 which would not account for 3D effects. If 3D structures are predominant in
@@ -118,12 +118,12 @@ Formations are more one-dimensional. These conclusions are supported by what
 is known about the local geology.
 
 .. figure:: ./images/1AirborneResult.png
-        :align: left
-        :figwidth: 50%
-        :name: asp14
+    :align: left
+    :figwidth: 50%
+    :name: asp14
 
-        3D resistivity model from inverting the VTEM airborne data in three
-        dimensions.
+    3D resistivity model from inverting the VTEM airborne data in three
+    dimensions.
 
 Considering these findings, it is considered worthwhile to invert the airborne
 data in 3D. The pseudo-3D model serves as an initial and reference model,
@@ -134,5 +134,4 @@ and fine pseudo-3D models in :numref:`asp11`, showing small differences in the
 top layers. The Clearwater Formation remains relatively unchanged, as was
 expected. The 3D model is shown in :numref:`asp14`.
 
-.. todo:: create a movie scrolling through the 3D model rather than a single view
 

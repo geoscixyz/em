@@ -3,7 +3,7 @@
 Maxwell II: Static
 ==================
 
-.. topic:: Purpose
+.. purpose::
 
     Provide background and physical understanding for steady state Maxwell
     equations as they apply to geoscience problems.

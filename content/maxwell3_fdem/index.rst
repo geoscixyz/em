@@ -8,7 +8,7 @@ Maxwell III: FDEM
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 
@@ -19,9 +19,8 @@ Contents:
 
     governing_equations
     circuitmodel_for_eminduction/index
-    sphere_freespace/index
     fields_from_grounded_sources/index
     fields_from_inductive_sources/index
     fields_from_plane_wave_sources/index
     footprint_and_depth_of_investigation
-    MT/index
+    natural_sources/index

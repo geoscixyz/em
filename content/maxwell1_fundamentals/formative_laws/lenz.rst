@@ -8,13 +8,14 @@ realization that changing magnetic fields create electric fields.  Two years
 later, Heinrich Lenz formulated Lenz's Law, which characterizes the direction
 of the currents induced in a conductor by  these time varying magnetic fields.
 
-A convenient way to quantify the strength of the magnetic field in a particular region is the magnetic flux (:math:`\Phi_{\mathbf{B}}`),
+A convenient way to quantify the strength of the magnetic field in a
+particular region is the magnetic flux (:math:`\Phi_{\mathbf{B}}`),
 
 .. include:: ../../equation_bank/magnetic_flux_time.rst
 
 which provides a measure of the magnetic flux density over a given area.
 
-Faraday's Law of induction, 
+Faraday's Law of induction,
 
 .. include:: ../../equation_bank/faraday_lenz_time.rst
 
@@ -35,7 +36,7 @@ linked below provide visual illustrations of Lenz's Law.
 
  .. figure:: images/LenzsLawDiagram.png
     :align: center
-    :scale: 25% 
+    :scale: 25%
     :name: Lenzs_Law_Diagram
 
     In panel (a) we see a situation in which the magnetic flux through the
@@ -44,10 +45,10 @@ linked below provide visual illustrations of Lenz's Law.
     shown in panel (b). Similarly, panel (c) shows when the magnetic flux
     through the loop is decreasing as a function of time and panel (d)
     demonstrates the direction of the induced current and secondary magnetic
-    field.  (Figure was created by M. Mitchell using the following Wikimedia 
-    Commons images: `VFPt_dipole <https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg>`_ 
-    and `VFPt ringcurrentNoLoop <https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg>`_ 
-    both of which are licensed under `Creative Commons Attribution-Share Alike 3.0 
+    field.  (Figure was created by M. Mitchell using the following Wikimedia
+    Commons images: `VFPt_dipole <https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg>`_
+    and `VFPt ringcurrentNoLoop <https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg>`_
+    both of which are licensed under `Creative Commons Attribution-Share Alike 3.0
     Unported <https://creativecommons.org/licenses/by-sa/3.0/deed.en>`_.)
 
 Illustrative Demo:
@@ -56,4 +57,5 @@ Illustrative Demo:
 
     <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA" frameborder="0" allowfullscreen></iframe></div>
 
-Thanks to the Technical Services Group (TSG) at MIT's Department of Physics for this great demo!
+Thanks to the Technical Services Group (TSG) at MIT's Department of Physics
+for this great demo!

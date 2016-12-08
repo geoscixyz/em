@@ -8,7 +8,7 @@ Dimensionality and Symmetry
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     purpose here
 

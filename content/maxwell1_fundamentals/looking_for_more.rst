@@ -8,6 +8,6 @@ Looking for more?
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     purpose here

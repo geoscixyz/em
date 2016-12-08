@@ -8,6 +8,6 @@ Survey Design
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     todo

@@ -8,7 +8,7 @@ Analytic
 
 
 
-.. topic:: Purpose
+.. purpose::
 
     Purpose here
 

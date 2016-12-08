@@ -5,7 +5,7 @@
         "location":"Vancouver, BC",
         "email":"doug@eos.ubc.ca",
         "url":"http://gif.eos.ubc.ca",
-        "avatar":"http://www.simpeg.xyz/s/img/people/doug.png"
+        "avatar":"http://disc2017.geosci.xyz/s/images/oldenburg2.jpg"
     },
     "lheagy":{
         "name":"Lindsey J. Heagy",
@@ -31,7 +31,7 @@
         "location":"Vancouver, BC",
         "email":"thast@eos.ubc.ca",
         "url":"https://linkedin.com/in/thibautastic",
-        "avatar":"https://avatars1.githubusercontent.com/u/13682747?v=3&s=460",
+        "avatar":"http://simpeg.xyz/s/img/people/thibaut.jpg",
         "ORCID":"0000-0003-1237-6315"
     },
     "dyang":{
@@ -83,26 +83,126 @@
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"jean@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "cizarra":{
         "name":"Carlos Izarra",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"carlos.izarra@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "gplastow":{
         "name":"Geoffrey Plastow",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"geoffrey.plastow@geotech.ca",
-        "url":"www.geotech.ca"
+        "url":"http://www.geotech.ca"
     },
     "cwijns":{
         "name":"Chris Wijns",
         "affiliation":"First Quantum Minerals Ltd.",
         "location":"Perth, WA, AUS",
         "email":"chris.wijns@fqml.com"
+    },
+    "agreen":{
+        "name":"Alan G. Green",
+        "affiliation":"ETH Zurich",
+        "location":"Zurich, Switzerland",
+        "email":"alan.green@erdw.ethz.ch",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"
+    },
+    "kmerz":{
+        "name":"Kaspar Merz",
+        "affiliation":"Geo2X (formerly ETH Zurich)",
+        "location":"Baar, Switzerland",
+        "email":"Kaspar.merz@gmail.com",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"
+    },
+    "hmaurer":{
+        "name":"Hansruedi Maurer",
+        "affiliation":"ETH Zurich",
+        "location":"Zurich, Switzerland",
+        "email":"Hansruedi.maurer@erdw.ethz.ch",
+        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
+    },
+    "dccowan":{
+        "name":"Devin C. Cowan",
+        "affiliation":"University of British Columbia",
+        "location":"Vancouver, BC, Canada",
+        "email":"devinccowan@gmail.com",
+        "url":"https://github.com/dccowan",
+        "avatar":"https://avatars1.githubusercontent.com/u/12970009?v=3&s=460"
+    },
+    "lmacgregor":{
+        "name":"Lucy Macgregor",
+        "affiliation":"Rock Solid Images",
+        "email":"lucy.macgregor@rocksolidimages.com",
+        "url":"http://rocksolidimages.com"
+    },
+    "palvarez":{
+        "name":"Pedro Alvarez",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "aalvarez":{
+        "name":"Amanda Alvarez",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "fbolivar":{
+        "name":"Fransisco Bolivar",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "rkeirstead":{
+        "name":"Rob Keirstead",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "tmartin":{
+        "name":"Thomas Martin",
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
+    },
+    "mikemcm":{
+        "name":"Mike McMillan",
+        "affiliation":"University of British Columbia",
+        "email": "mmcmilla@eos.ubc.ca",
+        "location":"Vancouver, BC",
+        "url":"https://github.com/mikemcm",
+        "avatar":"https://avatars1.githubusercontent.com/u/5559898?v=3&s=460"
+    },
+    "grosenkj":{
+        "name": "Gudni Karl Rosenkjaer",
+        "affiliation": "University of British Columbia",
+        "email":"grosenkj@users.noreply.github.com",
+        "avatar":"https://avatars0.githubusercontent.com/u/6052367?v=3&s=400",
+        "location":"Vancouver, BC",
+        "url":"https://github.com/grosenkj"
+    },
+    "krisdavis":{
+        "name":"Kris Davis",
+        "affiliation":"Mira Geoscience",
+        "location":"Vancouver, BC",
+        "url": "https://github.com/krisdavis",
+        "avatar": "https://avatars2.githubusercontent.com/u/10675064?v=3&s=460"
+    },
+    "prhjiajie":{
+        "name":"Ronghua Peng",
+        "affiliation": "University of British Columbia",
+        "email": "prhjiajie@163.com",
+        "location": "Vancouver, BC",
+        "avatar":"https://avatars1.githubusercontent.com/u/3736610?v=3&s=460",
+        "url":"https://github.com/prhjiajie"
+    },
+    "rowanc1":{
+        "name":"Rowan Cockett",
+        "affiliation":"3point Science",
+        "url":"http://www.row1.ca/",
+        "location":"Calgary, AB",
+        "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
+        "email":"rowan@row1.ca",
+        "ORCID":"0000-0002-7859-8394"
     }
 }

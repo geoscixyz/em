@@ -3,7 +3,7 @@
 Geophysical Surveys
 ===================
 
-.. topic:: Purpose
+.. purpose::
 
     In this section, we cover the basic principals of using electromagnetic
     geophysical surveys to address geologic, environmental or geotechnical
@@ -49,3 +49,7 @@ sections, we discuss:
     dcr/index
     airborne_fdem/index
     airborne_tdem/index
+    mt/index
+    gpr/index
+    marine_csem/index
+    uxo/index

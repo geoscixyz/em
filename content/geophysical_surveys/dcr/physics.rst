@@ -3,7 +3,7 @@
 Physics
 =======
 
-.. topic:: Purpose
+.. purpose::
 
     Demonstrate the fundamental physical principles governing the DC
     resistivity experiment

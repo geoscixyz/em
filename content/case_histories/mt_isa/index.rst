@@ -3,8 +3,8 @@
 Mt. Isa
 =======
 
-- **Authors**: :ref:`Dom Fournier <fourndo>`, Dr. Kris Davis
-- **Editor**: Prof. Doug Oldenburg
+- **Authors**: :ref:`fourndo`, Dr. Kris Davis
+- **Editor**: :ref:`doldenburg`
 
 .. topic :: Prelude
 

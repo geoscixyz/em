@@ -3,18 +3,25 @@
 Processing
 ==========
 
-This section provides an overview of the data quality control measures and inversions completed on the Mt. Isa data sets. The DC data is first discussed. The conductivity from those inversions are then used for IP inversions.
+This section provides an overview of the data quality control measures and
+inversions completed on the Mt. Isa data sets. The DC data is first discussed.
+The conductivity from those inversions are then used for IP inversions.
 
 DCR Data
 --------
 
-The ultimate goal is to generate a 3D subsurface conductivity model. However, we first carry out 2D inversions. The three main reasons for this are:
+The ultimate goal is to generate a 3D subsurface conductivity model. However,
+we first carry out 2D inversions. The three main reasons for this are:
 
-(a) Data were collected in a 2D geometry, that is, the transmitter and receiver electrodes are along one line.
+(a) Data were collected in a 2D geometry, that is, the transmitter and receiver
+    electrodes are along one line.
 
-(b) The geology is principally 2D so the inversion results will provide an approximate result and/or maybe a starting model for a subsequent 3D inversion.
+(b) The geology is principally 2D so the inversion results will provide an
+    approximate result and/or maybe a starting model for a subsequent 3D
+    inversion.
 
-(c) 2D inversions are quick to perform and can reveal possible issues with data (e.g., bad data points, incorrect normalizations, etc.)
+(c) 2D inversions are quick to perform and can reveal possible issues with data
+    (e.g., bad data points, incorrect normalizations, etc.)
 
 Data Quality Control
 ********************
@@ -53,14 +60,14 @@ or bad electrodes.
     :figwidth: 60%
     :name: MtIsa_Data_Merge
 
-    : The P-DP and DP-P data sets are merged and then jointly inverted.
+    The P-DP and DP-P data sets are merged and then jointly inverted.
 
  .. figure:: images/MtIsa_DC2D_2_3DMesh.png
     :align: right
     :figwidth: 60%
     :name: MtIsa_2D_2_3DMesh
 
-    : 3D conductivity obtained from 10 independent 2D inversions.
+    3D conductivity obtained from 10 independent 2D inversions.
 
 
 As a final step of data quality control, the P-DP and DP-P configurations are merged (:numref:`MtIsa_Data_Merge`) and :ref:`re-inverted<MIM_DC2D_Inv_FULL>` in 2D to attempt to recover a single distribution of conductivity. In preparation for the 3D inversion, the individual 2D models are transferred onto a 3D mesh shown in :numref:`MtIsa_2D_2_3DMesh`. Since each 2D model is the result of an independent inversion, small-scale discrepancies are to be expected. We note, however, several features are recovered on all 10 lines, supporting the idea of a strongly north-south oriented "2D" earth. The two main anomalies consistent throughout the inversions are:
@@ -168,7 +175,24 @@ As a final step of data quality control, the P-DP and DP-P configurations are re
 3D Inversion
 ************
 
-In preparation for the 3D inversion of the IP data, locations were geo-referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The vertical position of the electrodes were re-assigned based on a global DEM provided by `Geoscience Australia`_ to minimize topographic effects. The model mesh constructed for the 3D DCR inversion was used as well as the 3D recovered conductivity model. In total, 3243 P-DP and DP-P observations were inverted. Additional smoothing in the N-S orientation was applied in order to compensate for the 500-m line spacing. The desired data misfit was set to two times the number of data as with the 2D inversions. The 3D model can be viewed through the animation video that slices vertically and then horizontally through the model. The final portion of the animation shows the chargeability as an iso-surface, using a threshold that progressively increases in magnitude. The final image shows only cells that have a chargeability greater than 50 msec. Sections through the recovered 3D chargeability model are presented in :numref:`MtIsa_3D_IPModel`. Overall, the IP inversion shows a complex region of north-south trending chargeability in center of the volume but the linear chargeability feature that coincides with the region of moderate conductivity is of most interest.
+In preparation for the 3D inversion of the IP data, locations were geo-
+referenced in planimetry to the local grid (:numref:`MtIsa_3D_Topo`). The
+vertical position of the electrodes were re-assigned based on a global DEM
+provided by `Geoscience Australia`_ to minimize topographic effects. The model
+mesh constructed for the 3D DCR inversion was used as well as the 3D recovered
+conductivity model. In total, 3243 P-DP and DP-P observations were inverted.
+Additional smoothing in the N-S orientation was applied in order to compensate
+for the 500-m line spacing. The desired data misfit was set to two times the
+number of data as with the 2D inversions. The 3D model can be viewed through
+the animation video that slices vertically and then horizontally through the
+model. The final portion of the animation shows the chargeability as an iso-
+surface, using a threshold that progressively increases in magnitude. The
+final image shows only cells that have a chargeability greater than 50 msec.
+Sections through the recovered 3D chargeability model are presented in
+:numref:`MtIsa_3D_IPModel`. Overall, the IP inversion shows a complex region
+of north-south trending chargeability in center of the volume but the linear
+chargeability feature that coincides with the region of moderate conductivity
+is of most interest.
 
 
 .. _MIMchgMovie:
@@ -185,5 +209,7 @@ Animation of the recovered 3-D chargeability model.
     :figwidth: 100%
     :name: MtIsa_3D_IPModel
 
-    : Sections throughout the recovered chargeability model with a 3D volume rendered image of chargeabilities higher than 50 msec. The topography surface and electrode locations (white dots) are shown for reference.
+    Sections throughout the recovered chargeability model with a 3D volume
+    rendered image of chargeabilities higher than 50 msec. The topography
+    surface and electrode locations (white dots) are shown for reference.
 
