@@ -595,6 +595,40 @@ Thomas Martin
 
         
 
+.. _lacmajedrez:
+
+Luz Angelica Caudillo Mata
+--------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460"><img alt="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460" class="align-left" src="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:lcaudill@eos.ubc.ca">lcaudill@eos.ubc.ca</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://lacaudillomata.wordpress.com/">https://lacaudillomata.wordpress.com/</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _hmaurer:
 
 Hansruedi Maurer
@@ -852,6 +886,36 @@ Gudni Karl Rosenkjaer
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="https://github.com/grosenkj">https://github.com/grosenkj</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _sannatti:
+
+Sanna Tyrvainen
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg"><img alt="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" class="align-left" src="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
                     
                           
     </div>
