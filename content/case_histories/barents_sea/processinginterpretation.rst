@@ -405,13 +405,13 @@ was the Simandoux equation (:cite:`Simandoux1963`):
 
 .. math::
     \frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}
-    :name: eq_Simandoux
+    :name: Simandoux_eq
 
 where
 
 .. math::
     \phi_e = \phi_T \times (1 - Vsh)
-    :name: eq_Simandoux_phi
+    :name: Simandoux_eq_phi
 
 Parameters within the Simandoux equation were defined in the :ref:`properties
 <barents_sea_properties>` section. This rock physics model represents
@@ -420,7 +420,7 @@ Alternative wells to estimate water saturation (:math:`Sw`) from the
 horizontal resistivity log and was calibrated in the early stage of the study.
 The procedure used to estimate the seismically-derived resistivity sections at
 different fluid scenarios consisted of applying directly Eqs.
-:eq:`eq_Simandoux` and :eq:`eq_Simandoux_phi` to the total porosity and volume
+:eq:`Simandoux_eq` and :eq:`Simandoux_eq_phi` to the total porosity and volume
 of clay sections (:numref:`fig_inversion_seismic_properties_model`) for
 different values of :math:`Sw` that were modified only in those areas were the
 seismic indicates the presence of clean hydrocarbon bearing sand, i.e. green
