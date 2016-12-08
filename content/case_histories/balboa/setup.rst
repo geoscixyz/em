@@ -24,9 +24,5 @@ Alteration is mostly chlorite and chlorite-sericite. This overprints potassic al
     :align: center
     :figwidth: 80%
     :name: bboa_geomap
-.. figure:: images/bboa_geomap.png
-    :align: center
-    :figwidth: 80%
-    :name: bboa_geomap
 
     Mine lease geology at Cobre Panama from recent compilations and new mapping by First Quantum Minerals. The ultimate pit outlines include Balboa on the western end.

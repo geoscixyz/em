@@ -3,30 +3,43 @@
 Processing
 ==========
 
-:numref:`ztemtpr` presents the ZTEM tipper data, displayed as the Total Phase Rotation (TPR;
+:numref:`bboa_tipper_tpr` presents the ZTEM tipper data, displayed as the Total Phase Rotation (TPR;
 :cite:`izarra2011`, :cite:`legault2012a`), at both high and low frequencies,
 giving a sense of relative depth of investigation, according to :eq:`eq2`.  In
 spite of possible topographic artefacts :cite:`sattel2012`, the differences in
 the two TPR signatures are noticeable and, as noted by :cite:`burge2014`, the
-higher frequency (shallow depth) ZTEM results (:numref:`ztemtpr` a) appear to
+higher frequency (shallow depth) ZTEM results (:numref:`bboa_tipper_tpr` a) appear to
 map elevated conductivity closely associated with all the known porphyry
 orebodies; whereas the anomalies that persist at low frequencies
-(:numref:`ztemtpr` b) also coincide with known deep sulphides zones at Botija
+(:numref:`bboa_tipper_tpr` b) also coincide with known deep sulphides zones at Botija
 and Brazo-Botija Abajo, as well as the untested anomaly Balboa northwest of
 Cuatra Crestas prospect :cite:`burge2014`. The low frequency ZTEM image in
-:numref:`ztemtpr` b also displays a large/long wavelength negative tipper
+:numref:`bboa_tipper_tpr` b also displays a large/long wavelength negative tipper
 response in the Cobre Panama deposit region that suggests anomalously higher
 resistivities at depth.
 
-.. figure:: images/ztemtpr.png
+
+.. figure:: images/ztem_mag.png
     :align: center
     :figwidth: 100%
-    :name: ztemtpr
+    :name: ztem_mag
+
+    Magnetic data from a ZTEM survey over Cobre Panama deposit area:
+    a) Raw total magnetic intensity (TMI), and b) TMI data after reduced to pole.
+
+
+.. figure:: images/bboa_tipper_tpr.png
+    :align: center
+    :figwidth: 100%
+    :name: bboa_tipper_tpr
 
     ZTEM survey results over Cobre Panama deposit area: a) Total phase rotated
     (TPR) In-phase tipper at 360Hz, and b) In-phase TPR at 30Hz, highlighting
     EM anomalies that extend to lower frequencies over the Botija, Brazo and
     Botija Abajo porphyry deposits, as well as the Balboa discovery.
+
+2D and 3D inversions
+--------------------
 
 The ZTEM data have been converted to equivalent resistivity-depth
 distributions using from 2D and 3D ZTEM inversions using the Geotech Av2dtopo
@@ -40,7 +53,7 @@ at 0m and :numref:`zteminv2d3d` b presents the 3D inversion result at -500m
 depth as an overlay on the 2D depth slice, for comparison.
 
 The images in :numref:`zteminv2d3d` a and b resemble quite closely the high
-and low frequency TPR images shown in :numref:`ztemtpr` a and b; in particular
+and low frequency TPR images shown in :numref:`bboa_tipper_tpr` a and b; in particular
 the shallow conductivity anomalies observed over all the known porphyries, as
 well as higher conductivities associated with the higher grade deposits,
 including Balboa, that are highlighted in the deeper inversion images and were
@@ -57,5 +70,11 @@ results also indicate increasing resistivities extending to depth, as shown in
     ZTEM 2D-3D inversion results over Cobre Panama deposit area: a) 2D
     resistivity depth slice at 0m depth, showing 3D inversion region (red
     polygon) and b) Close-up of 2D & 3D resistivity (red polygon) at -500m
-    depth, showing  Balboa (red symbols) and pre-2011 (yellow)  drillholes,
-    and location of L1170 profile presented in :numref:`bboa_interp` b and c.
+    depth and location of L1170 profile presented in :numref:`bboa_interp` b and c.
+
+.. figure:: images/zteminv2d3d_section.png
+    :align: center
+    :figwidth: 80%
+    :name: zteminv2d3d_section
+
+    ZTEM 2D-3D inversion results over Cobre Panama deposit area: resistivity section at line L1170 from a) 2D and  b) 3D inversions are presented. (c) 3D MVI magnetic susceptibility inversion result at L1170. Black contour indicates outline of Balboa deposit.

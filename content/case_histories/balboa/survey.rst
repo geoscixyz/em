@@ -30,15 +30,16 @@ The EM primary fields used in AFMAG have the unique characteristic of being unif
 
 where :math:`\rho` is the bedrock resistivity (:math:`\Omega m`), :math:`f` is the frequency of measurement (hertz).
 
+.. _balboa_survey_design:
 
-Survey design
--------------
+Can ZTEM see Baloboa deposit below conductive cover?
+----------------------------------------------------
 
 Although it seems likely to relate to hydrothermal alteration, the source of conductivity for Balboa and the other porphyry orebodies has not been determined with certainty, since the sulphide ore is disseminated and non-supergene enriched. Subsequent to the Balboa discovery, a helicopter time-domain EM (HTEM) survey was flown to determine the overburden characteristics for mine-development purposes. The HTEM survey resolved the 10-30m conductive saprolite layer but did not appear to detect the conductive anomalies related to the deeper porphyry bodies. Since ZTEM is relatively insensitive to horizontal layering :cite:`sattel2012`, the 2D-3D inversions do not appear to define the conductive blanket either (see :numref:`zteminv2d3d` b). A synthetic 2D model (:numref:`ztemsyn2dinv` a) that replicates the Balboa deposit, from the 3D inversion result in :numref:`zteminv2d3d` b, was tested using a 30m thick, 30 ohm-m surficial layer, based on the HTEM evidence. As shown in :numref:`ztemsyn2dinv` b, in spite of the presence of the conductive blanket, a dipping conductive anomaly, extending to 750m depth and very similar to the Balboa response, is defined in the 2D ZTEM inversion result, which would appear to confirm its detectability using passive airborne electromagnetics.
 
 .. figure:: images/ztemsyn2dinv.png
     :align: center
-    :figwidth: 80%
+    :figwidth: 100%
     :name: ztemsyn2dinv
 
     ZTEM 2D synthetic modeling: a) 2D resistivity model for a porphyry body, resembling Balboa, buried below 30m of conductive saprolite (30 Ω-m), and b) 2D inversion of synthetic ZTEM data from model in :numref:`ztemsyn2dinv` a.
