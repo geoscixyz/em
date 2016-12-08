@@ -123,6 +123,29 @@
             {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
             {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
         ]
+    },
+    "albany":{
+        "title":"Albany",
+        "description":"Description needed",
+        "source":"./albany/",
+        "thumbnail":"./albany/images/figThumbnail.png",
+        "contributors":[
+            {"uid":"user:jlegault", "as":"author"},
+            {"uid":"user:jlymburner", "as":"author"},
+            {"uid":"user:kralph", "as":"author"},
+            {"uid":"user:pwood", "as":"author"},
+            {"uid":"user:morta", "as":"author"},
+            {"uid":"user:aprikhodko", "as":"author"},
+            {"uid":"user:nbournas", "as":"author"},
+            {"uid":"user:shickey", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM, ground-based TDEM, aeromagnetic", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration, hydrothermal graphite porphyry", "as":"Applications"},
+            {"uid":"Mineral exploration, airborne, ground-based, TDEM, porphyry", "as":"Keywords"},
+            {"uid":"Albany graphite deposit, Ontario, Canada", "as":"Location"}
+        ]
     }
 }
 

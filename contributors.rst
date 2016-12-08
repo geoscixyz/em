@@ -165,6 +165,34 @@ Fransisco Bolivar
 
         
 
+.. _nbournas:
+
+Nasreddine Bournas
+------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:nasreddine.bournass@geotech.ca">nasreddine.bournass@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _rowanc1:
 
 Rowan Cockett
@@ -411,6 +439,34 @@ Lindsey J. Heagy
 
         
 
+.. _shickey:
+
+Stanislawa Hickey
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Mire Geoscience Ltd.
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:stanislawah@miregeoscience.com">stanislawah@miregeoscience.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _cizarra:
 
 Carlos Izarra
@@ -530,6 +586,34 @@ Jean Legault
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _jlymburner:
+
+Josh Lymburner
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Crone Geophysics and Exploration Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:lymbruj@gmail.com">lymbruj@gmail.com</a>
                     
                           
     </div>
@@ -761,6 +845,34 @@ Douglas Oldenburg
 
         
 
+.. _morta:
+
+Marta Orta
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:marta.orta@geotech.ca">marta.orta@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _prhjiajie:
 
 Ronghua Peng
@@ -827,6 +939,58 @@ Geoffrey Plastow
 
         
 
+.. _aprikhodko:
+
+Alexander Prikhodko
+-------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:alexander.prikhodko@geotech.ca">alexander.prikhodko@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _kralph:
+
+Kevin Ralf
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Crone Geophysics and Exploration Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _grosenkj:
 
 Gudni Karl Rosenkjaer
@@ -880,6 +1044,34 @@ Chris Wijns
                           <br>
     <strong>email:</strong> 
     <a class="reference external" href="mailto:chris.wijns@fqml.com">chris.wijns@fqml.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _pwood:
+
+Peter Wood
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Zenyatta Ventures Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:pcwood@zenyatta.ca">pcwood@zenyatta.ca</a>
                     
                           
     </div>
