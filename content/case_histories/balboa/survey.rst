@@ -12,7 +12,7 @@ Helicopter-borne geophysical surveys were carried out over the Cobre Panama Proj
 
     ZTEM EM system during survey at Cobre Panama project, showing: a) Mobile Z-axis receiver measuring HZ, and b) Fixed base-station receiver, measuring :math:`H_x` and :math:`H_y` (after :cite:`burge2014`).
 
-The ZTEM airborne AFMAG (Ward, 1959) electromagnetic system measures the anomalous vertical secondary magnetic fields that are created by the interaction between naturally occurring, plane wave audio frequency EM fields, caused by distant electrical sferic/lightning storm activity, and electrical heterogeneities in the earth.
+The ZTEM airborne AFMAG :cite:`ward1959` electromagnetic system measures the anomalous vertical secondary magnetic fields that are created by the interaction between naturally occurring, plane wave audio frequency EM fields, caused by distant electrical sferic/lightning storm activity, and electrical heterogeneities in the earth.
 In ZTEM surveys, a single vertical-dipole air-core receiver coil measuring the vertical magnetic field :math:`H_z` (:numref:`ztemequip` a) is flown over the survey area in a grid pattern, similar to regional airborne EM surveys. Orthogonal, air-core horizontal axis coils (:numref:`ztemequip` b) are placed close to the survey site to measure the horizontal EM magnetic reference fields (:math:`H_x` and :math:`H_y`). Data from the three coils are used to obtain the Tzx and Tzy Tipper :cite:`labson1985` components at six frequencies in the 30 to 720 Hz (or 25 to 600Hz) band, according to the following equation by :cite:`holtham10`:
 
 .. math::

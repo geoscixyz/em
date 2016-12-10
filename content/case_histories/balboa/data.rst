@@ -3,7 +3,7 @@
 Data
 ====
 
-:numref:`ztem_elevmag` presents the ZTEM survey flight lines over the DEM (digital elevation model) and the aeromagnetic signature of the Cobre Panama region, as well as known porphyry deposit outlines and drill hole locations prior to the discovery of Balboa in 2010. The figure shows a correlation between relatively higher elevations and magnetic high anomalies over deposit area. The magnetic RTP (reduced-to-pole) image in Figure 4b shows a recognizable pattern of magnetic highs from volcanic andesites due to primary magnetite :cite:`burge2014`. However, all the known porphyry deposits are noticeably centred on magnetic lows, possibly representing demagnetized areas due to phyllic alteration :cite:`burge2014`. Exceptionally, Balboa coincides with a positive magnetic anomaly, which, along with the lack of geochemical anomaly due to thick leach- cap (G. Wells, pers. comm., 01-2016), masked it in previous exploration phases :cite:`fiscor2014`.
+:numref:`ztem_elevmag` presents the ZTEM survey flight lines over the DEM (digital elevation model) and the aeromagnetic signature of the Cobre Panama region. The figure shows a correlation between relatively higher elevations and magnetic high anomalies over deposit area. The magnetic data shown in :numref:`ztem_elevmag` b shows a recognizable pattern of magnetic highs from volcanic andesites due to primary magnetite :cite:`burge2014`.
 
 .. figure:: images/ztem_elevmag.png
     :align: center
@@ -11,9 +11,12 @@ Data
     :name: ztem_elevmag
 
     ZTEM survey results over Cobre Panama deposit area: a) Digital Elevation
-    Model (DEM), and b) Total magnetic intensity (reduced to pole), showing
+    Model (DEM), and b) Total magnetic intensity, showing
     porphyry deposit locations and drill-hole coverage prior to Balboa
     discovery (after :cite:`burge2014`).
+
+As mentioned in previous :ref:`balboa_survey` section, measured tipper data have both :math:`T_{zx}` and :math:`T_{zy}`, and each of them has in-phase and quadrature components. :numref:`bboa_tipper_raw` shows ZTEM tipper data at 90 Hz. :math:`T_{zx}` data map shows large scale feature enlongated to :math:`x`-direction, whereas :math:`T_{zy}` shows similar feature but enlongated to :math:`y`-direction. Quadurature component data shows much smoother variation in space compared to in-phase data.
+
 
 .. figure:: images/bboa_tipper_raw.png
     :align: center
