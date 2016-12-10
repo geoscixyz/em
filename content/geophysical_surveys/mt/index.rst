@@ -1,0 +1,24 @@
+.. _mt_index:
+
+Magnetotellurics
+================
+
+.. raw:: html
+    :file: ../../../underconstruction.html
+
+**Contents**
+
+.. toctree::
+    :maxdepth: 1
+
+    physics
+    survey
+    data
+    interpretation
+    survey_design
+    practical_considerations
+
+
+**Related Case Histories**
+
+

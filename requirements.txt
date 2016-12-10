@@ -2,7 +2,7 @@ numpy
 scipy
 ipython
 ipywidgets
-sphinx
+sphinx==1.4.8
 matplotlib
 properties
 sphinxcontrib-bibtex

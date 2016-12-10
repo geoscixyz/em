@@ -1,7 +1,6 @@
 import shutil
 import os
 import json
-import html
 
 fName = os.path.realpath(__file__)
 
@@ -118,24 +117,24 @@ Contributors
                 #     val = "`{val} <{url}>`_".format(val=val, url=ORCID_URL+val)
                 val = contrib[info_key]
                 if info_key == 'ORCID':
-                    htmlval = """
+                                htmlval = """
     <a class="reference external" href="{url}">{orcid}</a>
-                    """.format(url=html.escape(ORCID_URL + val), orcid=val)
+                    """.format(url=ORCID_URL + val, orcid=val)
                 # a website
                 elif 'http' in val or 'www' in val:
                     if 'www' in val and 'http' not in val:
                         val = 'http://' + val
                     htmlval = """
     <a class="reference external" href="{url}">{url}</a>
-                    """.format(url=html.escape(val))
+                    """.format(url=val)
                 # an email
                 elif '@' in val:
                     htmlval = """
     <a class="reference external" href="mailto:{email}">{email}</a>
-                    """.format(email=html.escape(val))
+                    """.format(email=val)
                 # otherwise assume it is text
                 else:
-                    htmlval = html.escape(val)
+                    htmlval = val
 
                 htmlval = """
     <strong>{key}:</strong> {htmlval}
@@ -163,14 +162,14 @@ Contributors
 
 .. raw:: html
 
-    <div class="row" style="min-height: 160px">
+    <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         {avatar}
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         {html_block}
     </div>
-    <br>
+    <br><br>
     </div>
 
 
@@ -178,7 +177,7 @@ Contributors
                    name=contrib['name'],
                    underline='-'*len(contrib['name']),
                    namepermalink=key,
-                   par=html.escape('&para;'),
+                   par='&para;',
                    avatar=avatar,
                    html_block=html_block
                    )
@@ -188,7 +187,6 @@ Contributors
     f.close()
 
     print('Done writing contributors.rst\n')
-
 
 
 def make_case_histories(fpath='content/case_histories/case_histories.json',
@@ -211,6 +209,27 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     print('Creating: case_histories.html')
     f = open(fout, 'w')
     f.write(out)
+
+    toctree = """
+    """.join(
+        ["{}/index".format(key) for key in casehistories.keys()]
+    )
+
+    toctreeblock = """
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    {toctree}
+    """.format(toctree=toctree)
+    f.write(toctreeblock)
+
+    f.write("""
+
+
+Gallery
+-------
+    """)
 
     for key in casehistories.keys():
         casehistory = casehistories[key]
@@ -280,7 +299,7 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
     :width: 260
     :align: right
 
-- :ref:`{title} Case History <{uid}_index>`
+- :ref:`{description} <{uid}_index>`
 {references_block}
 {contributors_block}
 {tags_block}
@@ -293,6 +312,11 @@ def make_case_histories(fpath='content/case_histories/case_histories.json',
         """.format(
             uid=key,
             title=casehistory['title'],
+            description=(
+                casehistory['description'] if 'description' in
+                casehistory.keys() else
+                casehistory['title']
+            ),
             underline='^'*len(casehistory['title']),
             source=casehistory['source'],
             thumbnail=casehistory['thumbnail'],

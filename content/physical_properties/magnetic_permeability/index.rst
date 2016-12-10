@@ -40,8 +40,7 @@ magnetic field :math:`{\bf H}`; provided the fields are sufficiently weak:
     :label: Const_Rel_Flux
 
 In a vacuum, the relationship between :math:`{\bf B}` and :math:`{\bf H}` is
-given by the permeability of free-space :math:`\mu_0 = 4\pi \times 10^{-7}` T
-:math:`\!\cdot\!` m/A. An illustration representing the magnetic flux density
+given by the permeability of free-space :math:`\mu_0 = 4\pi \times 10^{-7}` H/m. An illustration representing the magnetic flux density
 as a function of the applied field strength for various rock classifications
 is shown here.
 
@@ -69,7 +68,7 @@ permeability of :math:`\mu_r = 1` is used to characterize materials which are
 incapable of supporting induced magnetization. In rare cases, a very small
 magnetization can be induced in rocks, which opposes the applied field, and
 reduces the density of magnetic flux. These rocks are characterized by
-magnetic permeabili3810 characters, 495 words, 78 linesties :math:`\mu_r < 1`.
+magnetic permeabilities :math:`\mu_r < 1`.
 The partial alignment of magnetic dipole moments under an applied field, and
 the resulting magnetic flux densities in all three cases, are represented in
 the figure below.
@@ -88,10 +87,11 @@ the figure below.
 
 
 
-**Contents:**
+Contents
+--------
 
  .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     magnetic_permeability_lab_measurements
     magnetic_permeability_units
@@ -101,9 +101,3 @@ the figure below.
     magnetic_permeability_frequency_dependent
 
 
-
-References:
-
-Rock and Mineral Properties: Keller SEG Vol 1 Electromagnetic Methods in Applied Geophysics
-
-Griffiths, David J., "Introduction to Electrodynamics", 3rd Ed., Prentice Hall, 1999.

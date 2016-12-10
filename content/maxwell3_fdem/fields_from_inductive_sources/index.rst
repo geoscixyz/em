@@ -55,5 +55,5 @@ From this, we can infer inductive source will not have any steady-state electric
 
     halfspace
     layered_earth
-    sphere
+    sphere/index
     plate
