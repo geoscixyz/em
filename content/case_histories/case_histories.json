@@ -103,6 +103,22 @@
             {"uid":"Switzerland", "as":"location"}
         ]
     },
+    "expo":{
+        "title":"Expo",
+        "description":"Remediation of the Expo Site",
+        "source":"./expo/",
+        "thumbnail":"./furggwanghorn/images/furggwanghorn_heligpr.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:fourndo", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"EM-31,GPR", "as":"geophysical_survey"},
+            {"uid":"Geotechnical", "as":"application"},
+            {"uid":"Vancouver, BC", "as":"location"}
+        ]
+    },
     "barents_sea":{
         "title":"Barents Sea",
         "description":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",

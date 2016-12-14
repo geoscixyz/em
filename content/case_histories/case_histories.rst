@@ -21,6 +21,7 @@
     emc/index
     furggwanghorn/index
     barents_sea/index
+    expo/index
     balboa/index
     
 
@@ -193,6 +194,35 @@ Barents Sea
     - Applications: Reservoir characterization, marine EM
     - Location: Hoop Fault Complex, Barents Sea, Norway
     - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Expo
+^^^^
+
+.. image:: ./furggwanghorn/images/furggwanghorn_heligpr.png
+    :alt: expo
+    :width: 260
+    :align: right
+
+- :ref:`Remediation of the Expo Site <expo_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`
+    - reviewer: :ref:`dccowan`, :ref:`fourndo`
+
+
+- Tags
+    - geophysical survey: EM-31,GPR
+    - application: Geotechnical
+    - location: Vancouver, BC
 
 |
 |
