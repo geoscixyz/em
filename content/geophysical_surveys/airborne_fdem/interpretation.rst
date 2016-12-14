@@ -5,8 +5,8 @@ Interpretation
 
 .. purpose::
 
-    To show how airborne FDEM data are processed and inverted to reveal
-    meaningful information about the earth structure.
+    To show how airborne FDEM data are processed and inverted to reveal meaningful information about the earth structure.
+
 
 Interpretation is the process that extracts information in the delivered data
 to make decisions or to derive geologic knowledge. Depending on the specific
@@ -90,55 +90,41 @@ a first-order interpretation of the overall conductivity of the ground.
 Quantitative Inversion
 ----------------------
 
-Plate modeling
-**************
-
-Some geologic targets can be characterized as conductive thin plates that give
-rise complicated EM responses due to the geometry and mutual coupling. Plate
-modeling method attempts to find the geometry and conductivity of a few
-conducting plate in a simple background that is responsible for most of the
-anomalous data. It has the advantages of being able to handle the 3D coupling
-effect efficiently, but may have trouble dealing with too many plates in more
-complex situations.
-
 1D layered earth inversion
 **************************
 
-This approach assume the earth's conductivity only varies as a function of
-depth. At each measurement location, the inversion find a layered model that
-explains the entire decay curve in time or the entire spectrum in frequency-
-domain. Many layered models at multiple locations then can be stitched
-together to form a pseudo-3D volume for visualization. Advanced techniques
-also consider the correlation between adjacent locations by imposing lateral
-constraints, etc.
+.. figure:: ./images/FEM_1D_Columns.png
+  :align: right
+  :figwidth: 30%
+  :name: FEM_1D_Colm
+
+
+This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the entire decay curve in time or the entire spectrum in frequency- domain. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_data>`. While each separate inversions can provide information about local changes in conductivity, the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints [REF].
+
+.. figure:: ./images/FEM_1D_Model.png
+  :align: right
+  :figwidth: 40%
+  :name: FEM_Sphere_1D
+
+  (Top) True conductivity model and (bottom) laterally constrained stitched 1D inversion result.
+
+Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into ?? layers from the surface to the basement. The top layer is ?? m thick, and the layers are gradually thickened at a rate of ?? toward the depth. The data are noise-free, but we require the FDEM data to be fit within 5% of the observed magnitude in both in-phase and quadrature. :numref:`FEM_Sphere_1D` compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still got the horizontal location and the depth to the top correct. Figure ??(b) shows the observed data are adequately fit by the inversion.
+
+
 
 2D/3D inversion
 ***************
 
-The previous interpreting methods all assume the earth has a particular
-structure so simplified calculations can be used. Any violation of those
-assumptions would result in failures. A 3D inversion discretizes the entire
-earth to many discrete cells, each of which has a constant conductivity. Then
-the Maxwell's equations are solved on the mesh. The obtained images of the
-subsurface are in 3D voxel format. 3D inversions provides the best resolution
-and works for any complicated models, but it is more computational expensive.
-A 2D inversion is similar to a 3D inversion, except that the physical property
-along the strike direction is constant, so there are fewer variables in the
-model.
+2D/3D inversion
+Although the layered earth assumption in 1D inversion has provided a reasonable inversion model, the artifacts and distortion due to the 2D or 3D lateral variation of conductivity can significantly complicate the interpretation in practice. In the synthetic inversion of the sphere, the object is horizontally stretched on the cross section in Figure ??(a), because the soundings away from the sphere can still sense the high conductivity of the sphere. The underestimated conductivity value is the result of spreading the conductive material belonging to a compact body to an infinite layer in the 1D model.
+
+
+The solution to overcome the drawbacks of 1D inversion is to consider the lateral variation of conductivity by using a 2D or 3D model. A 2D/3D inversion discretizes the entire earth to many discrete cells, each of which has a constant conductivity. Then the Maxwell’s equations are numerical solved on the mesh. The obtained images of the subsurface are then in 3D voxel format. 3D inversions provides the best resolution and works for any complicated models in reality, but it is more computationally expensive. 3D inversion is a very involving topic, so we present it in another part of EM.GeoSci.
 
 Hypothesis testing
 ******************
 
-1D/2D/3D inversion allows advanced interpretation to be carried out. For
-example, if we are in doubt of a particular feature in a model, we can run
-another inversion to test the "what if" hypothesis. One important application
-is to estimate the depth of investigation. In order to quantify the
-credibility of the deep structure in a model, another inversion can be run
-using a very different reference model, effectively asking what if the
-background is another value. The two inversions would have similar values at
-shallow depth as that portion is constrained by the data, but may differ at
-depth. The discrepancy between the two models at different depths indicate
-whether the data are sensitive to that part of the earth.
+In addition to getting a conductivity image, the inversion technique also allows advanced interpretation to be carried out. For example, if we are in doubt of a particular feature in a model, we can run another inversion to test the “what if” hypothesis. One important application is to estimate the depth of investigation. In order to quantify the credibility of the deep structure in a model, another inversion can be run using a very different starting/reference model, effectively asking what if the background is another value. The two inversions would have similar values at shallow depth as that portion is constrained by the data, but may differ at depth. The discrepancy between the two models at different depths indicate whether the data are sensitive to that part of the earth.
 
 
 
