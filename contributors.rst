@@ -105,6 +105,30 @@ Thibaut Astic
 
         
 
+.. _eauken:
+
+Esben Auken
+-----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _pbellive:
 
 Patrick Belliveau
@@ -185,6 +209,30 @@ Nasreddine Bournas
     <strong>email:</strong> 
     <a class="reference external" href="mailto:nasreddine.bournass@geotech.ca">nasreddine.bournass@geotech.ca</a>
                     
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _avchristiansen:
+
+Anders Vest Christiansen
+------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
                           
     </div>
     <br><br>
@@ -333,6 +381,30 @@ Sarah G. R. Devriese
 
         
 
+.. _fefferso:
+
+Flemming Effers|o|
+------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> SkyTEM Surveys ApS
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _fourndo:
 
 Dom Fournier
@@ -452,7 +524,7 @@ Stanislawa Hickey
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
-    <strong>affiliation:</strong> Mire Geoscience Ltd.
+    <strong>affiliation:</strong> Mira Geoscience Ltd.
                           <br>
     <strong>location:</strong> Vancouver, BC
                           <br>
@@ -491,6 +563,30 @@ Carlos Izarra
     <strong>url:</strong> 
     <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
                     
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _fjorgensen:
+
+Flemming J|o|rgensen
+--------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> GEUS - Groundwater Mapping Dept.
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
                           
     </div>
     <br><br>
@@ -907,6 +1003,30 @@ Marta Orta
 
         
 
+.. _jpedersen:
+
+Jesper Pedersen
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _prhjiajie:
 
 Ronghua Peng
@@ -1025,6 +1145,30 @@ Kevin Ralf
 
         
 
+.. _jcrefsgaard:
+
+Jens Christian Refsgaard
+------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> GEUS - Hydrological Dept.
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _grosenkj:
 
 Gudni Karl Rosenkjaer
@@ -1051,6 +1195,30 @@ Gudni Karl Rosenkjaer
     <strong>url:</strong> 
     <a class="reference external" href="https://github.com/grosenkj">https://github.com/grosenkj</a>
                     
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _cschamper:
+
+Cyril Schamper
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Dept. of Geoscience
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
                           
     </div>
     <br><br>
