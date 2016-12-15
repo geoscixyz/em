@@ -219,5 +219,46 @@
         "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
         "email":"rowan@row1.ca",
         "ORCID":"0000-0002-7859-8394"
+    },
+    "jlymburner":{
+        "name":"Josh Lymburner",
+        "affiliation":"Crone Geophysics and Exploration Ltd.",
+        "location":"Toronto, ON",
+        "email":"lymbruj@gmail.com"
+    },
+    "kralph":{
+        "name":"Kevin Ralf",
+        "affiliation":"Crone Geophysics and Exploration Ltd.",
+        "location":"Toronto, ON"
+    },
+    "pwood":{
+        "name":"Peter Wood",
+        "affiliation":"Zenyatta Ventures Ltd.",
+        "location":"Toronto, ON",
+        "email":"pcwood@zenyatta.ca"
+    },
+    "morta":{
+        "name":"Marta Orta",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"marta.orta@geotech.ca"
+    },
+    "aprikhodko":{
+        "name":"Alexander Prikhodko",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"alexander.prikhodko@geotech.ca"
+    },
+    "nbournas":{
+        "name":"Nasreddine Bournas",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"nasreddine.bournass@geotech.ca"
+    },
+    "shickey":{
+        "name":"Stanislawa Hickey",
+        "affiliation":"Mire Geoscience Ltd.",
+        "location":"Vancouver, BC",
+        "email":"stanislawah@miregeoscience.com"
     }
 }

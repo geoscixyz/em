@@ -19,6 +19,7 @@
     bookpurnong/index
     aspen/index
     emc/index
+    albany/index
     furggwanghorn/index
     barents_sea/index
     balboa/index
@@ -134,6 +135,36 @@ Elevenmile Canyon
     - application: Geothermal
     - location: United States of America
     - keyword: ZTEM
+
+|
+|
+|
+
+
+
+        
+
+Albany
+^^^^^^
+
+.. image:: ./albany/images/figThumbnail.png
+    :alt: albany
+    :width: 260
+    :align: right
+
+- :ref:`Description needed <albany_index>`
+
+
+- Contributors
+    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
+    - Applications: Mineral exploration, hydrothermal graphite porphyry
+    - Location: Albany graphite deposit, Ontario, Canada
+    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
 
 |
 |
