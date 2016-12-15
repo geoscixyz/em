@@ -22,6 +22,7 @@
     albany/index
     furggwanghorn/index
     barents_sea/index
+    norseminde/index
     balboa/index
     
 
@@ -224,6 +225,36 @@ Barents Sea
     - Applications: Reservoir characterization, marine EM
     - Location: Hoop Fault Complex, Barents Sea, Norway
     - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Norseminde
+^^^^^^^^^^
+
+.. image:: ./norseminde/images/fig_thumbnail.png
+    :alt: norseminde
+    :width: 260
+    :align: right
+
+- :ref:`Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data <norseminde_index>`
+
+
+- Contributors
+    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Norseminde, Denmark
+    - Geophysical Surveys: Airborne TDEM
 
 |
 |
