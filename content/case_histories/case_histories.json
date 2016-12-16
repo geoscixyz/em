@@ -168,6 +168,28 @@
             {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
             {"uid":"Norseminde, Denmark", "as":"Location"}
         ]
+    },
+    "kasted":{
+        "title":"Kasted",
+        "description":"3D geological modelling of a complex buried-valley network delineated from borehole and AEM data",
+        "source":"./kasted/",
+        "thumbnail":"./kasted/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:jpedersen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:jcrefsgaard", "as":"author"},
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Aarhus, Denmark", "as":"Location"}
+        ]
     }
 }
 
