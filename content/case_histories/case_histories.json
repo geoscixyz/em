@@ -16,7 +16,8 @@
     }
     ,
     "balboa":{
-        "title": "The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "title": "Balboa",
+        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
@@ -83,10 +84,11 @@
             {"uid":"Australia", "as":"location"}
         ]
     },
-    "rockglacier":{
-        "title":"3D Helicopter GPR surveying a rock glacier",
-        "source":"./rockglacier/",
-        "thumbnail":"./rockglacier/images/furggwanghorn_heligpr.png",
+    "furggwanghorn":{
+        "title":"Furggwanghorn",
+        "description":"3D Helicopter GPR surveying a rock glacier",
+        "source":"./furggwanghorn/",
+        "thumbnail":"./furggwanghorn/images/furggwanghorn_heligpr.png",
         "citations":["merz2015a", "merz2015b"],
         "contributors":[
             {"uid":"user:agreen", "as":"author"},
@@ -101,18 +103,19 @@
             {"uid":"Switzerland", "as":"location"}
         ]
     },
-    "hoop_region_norway":{
-        "title":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",
-        "source":"./hoop_region_norway/",
-        "thumbnail":"./hoop_region_norway/images/inversion_workflow.png",
+    "barents_sea":{
+        "title":"Barents Sea",
+        "description":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",
+        "source":"./barents_sea/",
+        "thumbnail":"./barents_sea/images/inversion_workflow.png",
         "contributors":[
-            {"uid":"user:palvarez", "as":"Authors"},
-            {"uid":"user:aalvarez", "as":"Authors"},
-            {"uid":"user:lmacgregor", "as":"Authors"},
-            {"uid":"user:fbolivar", "as":"Authors"},
-            {"uid":"user:rkeirstead", "as":"Authors"},
-            {"uid":"user:tmartin", "as":"Authors"},
-            {"uid":"user:dccowan", "as":"Reviewer"}
+            {"uid":"user:palvarez", "as":"author"},
+            {"uid":"user:aalvarez", "as":"author"},
+            {"uid":"user:lmacgregor", "as":"author"},
+            {"uid":"user:fbolivar", "as":"author"},
+            {"uid":"user:rkeirstead", "as":"author"},
+            {"uid":"user:tmartin", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
         ],
         "tags":[
             {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},
@@ -120,5 +123,73 @@
             {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
             {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
         ]
+    },
+    "albany":{
+        "title":"Albany",
+        "description":"Description needed",
+        "source":"./albany/",
+        "thumbnail":"./albany/images/figThumbnail.png",
+        "contributors":[
+            {"uid":"user:jlegault", "as":"author"},
+            {"uid":"user:jlymburner", "as":"author"},
+            {"uid":"user:kralph", "as":"author"},
+            {"uid":"user:pwood", "as":"author"},
+            {"uid":"user:morta", "as":"author"},
+            {"uid":"user:aprikhodko", "as":"author"},
+            {"uid":"user:nbournas", "as":"author"},
+            {"uid":"user:shickey", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM, ground-based TDEM, aeromagnetic", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration, hydrothermal graphite porphyry", "as":"Applications"},
+            {"uid":"Mineral exploration, airborne, ground-based, TDEM, porphyry", "as":"Keywords"},
+            {"uid":"Albany graphite deposit, Ontario, Canada", "as":"Location"}
+        ]
+    },
+    "norseminde":{
+        "title":"Norseminde",
+        "description":"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data",
+        "source":"./norseminde/",
+        "thumbnail":"./norseminde/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:jpedersen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:jcrefsgaard", "as":"author"},
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Norseminde, Denmark", "as":"Location"}
+        ]
+    },
+    "kasted":{
+        "title":"Kasted",
+        "description":"3D geological modelling of a complex buried-valley network delineated from borehole and AEM data",
+        "source":"./kasted/",
+        "thumbnail":"./kasted/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:jpedersen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:jcrefsgaard", "as":"author"},
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Aarhus, Denmark", "as":"Location"}
+        ]
     }
 }
+

@@ -4,14 +4,14 @@ Setup
 =====
 
 .. figure:: ./images/AspenMap.png
-        :align: right
-        :figwidth: 35%
-        :name: asp1
+    :align: right
+    :figwidth: 35%
+    :name: asp1
 
-        Map showing property boundaries and their respective companies. The
-        Aspen property, owned by Imperial Oil, is located roughtly 45 km NE of
-        Fort McMurray and 25 km SE of Fort McKay in northeastern Alberta.
-        Figure courtesy of Imperial Oil.
+    Map showing property boundaries and their respective companies. The
+    Aspen property, owned by Imperial Oil, is located roughtly 45 km NE of
+    Fort McMurray and 25 km SE of Fort McKay in northeastern Alberta.
+    Figure courtesy of Imperial Oil.
 
 The Athabasca oil sands in Alberta, Canada are one of the largest oil reserves
 in the world :cite:`Humphries2008`. However, 80% of the oil sands are too deep

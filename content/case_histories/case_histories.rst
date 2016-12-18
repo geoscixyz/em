@@ -11,36 +11,26 @@
 
 
 
+.. toctree::
+    :maxdepth: 1
+    :hidden:
 
-Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: ./hoop_region_norway/images/inversion_workflow.png
-    :alt: hoop_region_norway
-    :width: 260
-    :align: right
-
-- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway Case History <hoop_region_norway_index>`
-
-
-- Contributors
-    - Reviewer: :ref:`dccowan`
-    - Authors: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
-
-
-- Tags
-    - Keywords: Hydrocarbon, CSEM, reservoir, oil and gas
-    - Applications: Reservoir characterization, marine EM
-    - Location: Hoop Fault Complex, Barents Sea, Norway
-    - Geophysical Surveys: CSEM, 2D seismic
-
-|
-|
-|
+    mt_isa/index
+    bookpurnong/index
+    aspen/index
+    emc/index
+    albany/index
+    furggwanghorn/index
+    barents_sea/index
+    norseminde/index
+    kasted/index
+    balboa/index
+    
 
 
-
-        
+Gallery
+-------
+    
 
 Mt. Isa
 ^^^^^^^
@@ -50,7 +40,7 @@ Mt. Isa
     :width: 260
     :align: right
 
-- :ref:`Mt. Isa Case History <mt_isa_index>`
+- :ref:`Mt. Isa <mt_isa_index>`
 
 
 - Contributors
@@ -78,7 +68,7 @@ Bookpurnong
     :width: 260
     :align: right
 
-- :ref:`Bookpurnong Case History <bookpurnong_index>`
+- :ref:`Bookpurnong <bookpurnong_index>`
 
 
 - Contributors
@@ -106,7 +96,7 @@ Aspen
     :width: 260
     :align: right
 
-- :ref:`Aspen Case History <aspen_index>`
+- :ref:`Aspen <aspen_index>`
 
 
 - Contributors
@@ -135,7 +125,7 @@ Elevenmile Canyon
     :width: 260
     :align: right
 
-- :ref:`Elevenmile Canyon Case History <emc_index>`
+- :ref:`Elevenmile Canyon <emc_index>`
 
 
 - Contributors
@@ -156,15 +146,45 @@ Elevenmile Canyon
 
         
 
-3D Helicopter GPR surveying a rock glacier
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Albany
+^^^^^^
 
-.. image:: ./rockglacier/images/furggwanghorn_heligpr.png
-    :alt: rockglacier
+.. image:: ./albany/images/figThumbnail.png
+    :alt: albany
     :width: 260
     :align: right
 
-- :ref:`3D Helicopter GPR surveying a rock glacier Case History <rockglacier_index>`
+- :ref:`Description needed <albany_index>`
+
+
+- Contributors
+    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
+    - Applications: Mineral exploration, hydrothermal graphite porphyry
+    - Location: Albany graphite deposit, Ontario, Canada
+    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+
+|
+|
+|
+
+
+
+        
+
+Furggwanghorn
+^^^^^^^^^^^^^
+
+.. image:: ./furggwanghorn/images/furggwanghorn_heligpr.png
+    :alt: furggwanghorn
+    :width: 260
+    :align: right
+
+- :ref:`3D Helicopter GPR surveying a rock glacier <furggwanghorn_index>`
 
 
 - Contributors
@@ -185,15 +205,105 @@ Elevenmile Canyon
 
         
 
-The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Barents Sea
+^^^^^^^^^^^
+
+.. image:: ./barents_sea/images/inversion_workflow.png
+    :alt: barents_sea
+    :width: 260
+    :align: right
+
+- :ref:`Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway <barents_sea_index>`
+
+
+- Contributors
+    - author: :ref:`palvarez`, :ref:`aalvarez`, :ref:`lmacgregor`, :ref:`fbolivar`, :ref:`rkeirstead`, :ref:`tmartin`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Hydrocarbon, CSEM, reservoir, oil and gas
+    - Applications: Reservoir characterization, marine EM
+    - Location: Hoop Fault Complex, Barents Sea, Norway
+    - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Norseminde
+^^^^^^^^^^
+
+.. image:: ./norseminde/images/fig_thumbnail.png
+    :alt: norseminde
+    :width: 260
+    :align: right
+
+- :ref:`Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data <norseminde_index>`
+
+
+- Contributors
+    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Norseminde, Denmark
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
+Kasted
+^^^^^^
+
+.. image:: ./kasted/images/fig_thumbnail.png
+    :alt: kasted
+    :width: 260
+    :align: right
+
+- :ref:`3D geological modelling of a complex buried-valley network delineated from borehole and AEM data <kasted_index>`
+
+
+- Contributors
+    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Aarhus, Denmark
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
+Balboa
+^^^^^^
 
 .. image:: ./balboa/images/bboa_thumbnail.png
     :alt: balboa
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama Case History <balboa_index>`
+- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
 
 
 - Contributors

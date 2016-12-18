@@ -9,12 +9,12 @@ using publicly-available data from eight wells, shown in :numref:`asp2`
 each geologic formation.
 
 .. figure:: ./images/fig2.png
-        :align: right
-        :figwidth: 45%
-        :name: asp2
+    :align: right
+    :figwidth: 45%
+    :name: asp2
 
-        Resistivity logging data from 8 wells at the Aspen property are used
-        to create a simple 1D resistivity model.
+    Resistivity logging data from 8 wells at the Aspen property are used
+    to create a simple 1D resistivity model.
 
 :numref:`asp2` shows that the different geologic formations can be
 distinguished using the resistivity data. Thus, EM data can be sensitive to

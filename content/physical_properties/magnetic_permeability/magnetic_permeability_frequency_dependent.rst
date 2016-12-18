@@ -15,8 +15,7 @@ magnetic permeabilities.
 Here, our description of the magnetic viscosity is limited to providing useful
 expressions for implementation in applied problems. Comprehensive studies of
 magnetic viscosity, and its relevance to geophysical surveying, may be found
-in (Neel, 1949; Buselli, 1982; Lee, 1984; Dabas, 1992; Dunlop and Ozdemir,
-1997; Das, 2006; Pasion, 2007). References may be found at the bottom of the
+in (:cite:`Neel1949,Buselli1982,Lee1984,Dabasetal1992,DunlopOzdemir1997,Das2006,Pasion2007`).
 page.
 
 Mathematical Description
@@ -80,13 +79,13 @@ Cole-Cole model:
 where :math:`\tau_c` represents the center of a distribution of time-
 relaxation constants, and :math:`\alpha` represents the broadness of the
 distribution. The frequency-dependent magnetic susceptibilities for a Debye
-model, log-uniform distribution, and Cole-Cole model are compared in the
-figure below.
+model, log-uniform distribution, and Cole-Cole model are compared in :numref:`figMuFrequency`.
 
 
 .. figure:: ./images/figChiOmegaDistr.png
     :align: center
-    :width: 40%
+    :width: 65%
+    :name: figMuFrequency
 
     Comparison between frequency-dependent magnetic susceptibilities for a
     Debye model (:math:`\chi_0=6\times 10^{-3}, \; \chi_\infty = 10^{-3}`), a
@@ -94,25 +93,6 @@ figure below.
     (:math:`\chi_0=6\times 10^{-3}, \; \chi_\infty = 10^{-3}, \tau_1=10^{-5}
     \; s, \tau_2 =10^{-1} \, s`), and a Cole-Cole model (:math:`\chi_0=6\times
     10^{-3}, \; \chi_\infty = 10^{-3}, \tau_c = 10^{-3} \, s, \alpha = 0.5`).
-
-
-References:
-
-L. Neel, "Theorie du trainage magnetique des ferromagnetiques en grains fins avec application au terres cuites," Ann. Geophys., vol. 5, pp. 99-136, 1949.
-
-G. Buselli, "The effect of near-surface superparamagnetic material on electromagnetic measurements," Geophysics, vol. 47, no. 9, pp. 1315-1324, Sep 1982.
-
-T. Lee, "The Effect of a Superparamagnetic Layer on the Transient Electromagnetic Response of a Ground," Geophysical Prospecting, vol. 32, pp. 480-496, 1984.
-
-M. Dabas, A. Jolivet, A. Tabbagh, "Magnetic susceptibility and viscosity of Soils in a Weak Time Varying Field," Geophys. J. Int., vol. 108, pp. 101-109, 1992.
-
-D. Dunlop, O. Ozdemir, "Rock Magnetism: Fundamentals and Frontiers," Cambridge University Press, 1997.
-
-Y. Das, "Effects of soil electromagnetic properties on metal detectors," IEEE Trans. Geosci. Remote Sensing, vol. 44, pp. 1444-1453, Jun 2006.
-
-L. R. Pasion, "Inversion of Time Domain Electromagnetic Data for the Detection of Unexploded Ordnance," Ph.D. dissertation, Univ. of British Columbia, Geophysics Dept., Vancouver, 2007.
-
-
 
 
 

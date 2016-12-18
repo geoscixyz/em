@@ -105,6 +105,30 @@ Thibaut Astic
 
         
 
+.. _eauken:
+
+Esben Auken
+-----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _pbellive:
 
 Patrick Belliveau
@@ -157,6 +181,58 @@ Fransisco Bolivar
     <strong>url:</strong> 
     <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
                     
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _nbournas:
+
+Nasreddine Bournas
+------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:nasreddine.bournass@geotech.ca">nasreddine.bournass@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _avchristiansen:
+
+Anders Vest Christiansen
+------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
                           
     </div>
     <br><br>
@@ -305,6 +381,30 @@ Sarah G. R. Devriese
 
         
 
+.. _fefferso:
+
+Flemming Effers|o|
+------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> SkyTEM Surveys ApS
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _fourndo:
 
 Dom Fournier
@@ -411,6 +511,34 @@ Lindsey J. Heagy
 
         
 
+.. _shickey:
+
+Stanislawa Hickey
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Mira Geoscience Ltd.
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:stanislawah@miregeoscience.com">stanislawah@miregeoscience.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _cizarra:
 
 Carlos Izarra
@@ -435,6 +563,30 @@ Carlos Izarra
     <strong>url:</strong> 
     <a class="reference external" href="http://www.geotech.ca">http://www.geotech.ca</a>
                     
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _fjorgensen:
+
+Flemming J|o|rgensen
+--------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> GEUS - Groundwater Mapping Dept.
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
                           
     </div>
     <br><br>
@@ -539,6 +691,34 @@ Jean Legault
 
         
 
+.. _jlymburner:
+
+Josh Lymburner
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Crone Geophysics and Exploration Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:lymbruj@gmail.com">lymbruj@gmail.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _lmacgregor:
 
 Lucy Macgregor
@@ -586,6 +766,40 @@ Thomas Martin
                           <br>
     <strong>url:</strong> 
     <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _lacmajedrez:
+
+Luz Angelica Caudillo Mata
+--------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460"><img alt="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460" class="align-left" src="https://avatars0.githubusercontent.com/u/4496159?v=3&s=460" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:lcaudill@eos.ubc.ca">lcaudill@eos.ubc.ca</a>
+                    
+                          <br>
+    <strong>url:</strong> 
+    <a class="reference external" href="https://lacaudillomata.wordpress.com/">https://lacaudillomata.wordpress.com/</a>
                     
                           
     </div>
@@ -761,6 +975,58 @@ Douglas Oldenburg
 
         
 
+.. _morta:
+
+Marta Orta
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:marta.orta@geotech.ca">marta.orta@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _jpedersen:
+
+Jesper Pedersen
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Hydrogeophysics Group
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _prhjiajie:
 
 Ronghua Peng
@@ -827,6 +1093,82 @@ Geoffrey Plastow
 
         
 
+.. _aprikhodko:
+
+Alexander Prikhodko
+-------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Geotech Ltd.
+                          <br>
+    <strong>location:</strong> Aurora, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:alexander.prikhodko@geotech.ca">alexander.prikhodko@geotech.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _kralph:
+
+Kevin Ralf
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Crone Geophysics and Exploration Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _jcrefsgaard:
+
+Jens Christian Refsgaard
+------------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> GEUS - Hydrological Dept.
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _grosenkj:
 
 Gudni Karl Rosenkjaer
@@ -861,6 +1203,60 @@ Gudni Karl Rosenkjaer
 
         
 
+.. _cschamper:
+
+Cyril Schamper
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Aarhus University - Dept. of Geoscience
+                          <br>
+    <strong>location:</strong> Aarhus, Denmark
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _sannatti:
+
+Sanna Tyrvainen
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    <a class="reference internal image-reference" href="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg"><img alt="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" class="align-left" src="https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+            
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> University of British Columbia
+                          <br>
+    <strong>location:</strong> Vancouver, BC
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
 .. _cwijns:
 
 Chris Wijns
@@ -880,6 +1276,34 @@ Chris Wijns
                           <br>
     <strong>email:</strong> 
     <a class="reference external" href="mailto:chris.wijns@fqml.com">chris.wijns@fqml.com</a>
+                    
+                          
+    </div>
+    <br><br>
+    </div>
+
+
+        
+
+.. _pwood:
+
+Peter Wood
+----------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    <strong>affiliation:</strong> Zenyatta Ventures Ltd.
+                          <br>
+    <strong>location:</strong> Toronto, ON
+                          <br>
+    <strong>email:</strong> 
+    <a class="reference external" href="mailto:pcwood@zenyatta.ca">pcwood@zenyatta.ca</a>
                     
                           
     </div>
