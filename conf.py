@@ -115,6 +115,7 @@ linkcheck_ignore = [
     'https://linkedin.com/in/*',
     'http://dx.doi.org/10.1071/EG08027',
     'http://www.publish.csiro.au/paper/PVv2010n149p23',
+    'http://www.zenyatta.ca',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500

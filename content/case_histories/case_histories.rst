@@ -19,8 +19,11 @@
     bookpurnong/index
     aspen/index
     emc/index
+    albany/index
     furggwanghorn/index
     barents_sea/index
+    norseminde/index
+    kasted/index
     balboa/index
     
 
@@ -143,6 +146,36 @@ Elevenmile Canyon
 
         
 
+Albany
+^^^^^^
+
+.. image:: ./albany/images/figThumbnail.png
+    :alt: albany
+    :width: 260
+    :align: right
+
+- :ref:`Description needed <albany_index>`
+
+
+- Contributors
+    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
+    - Applications: Mineral exploration, hydrothermal graphite porphyry
+    - Location: Albany graphite deposit, Ontario, Canada
+    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+
+|
+|
+|
+
+
+
+        
+
 Furggwanghorn
 ^^^^^^^^^^^^^
 
@@ -193,6 +226,66 @@ Barents Sea
     - Applications: Reservoir characterization, marine EM
     - Location: Hoop Fault Complex, Barents Sea, Norway
     - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Norseminde
+^^^^^^^^^^
+
+.. image:: ./norseminde/images/fig_thumbnail.png
+    :alt: norseminde
+    :width: 260
+    :align: right
+
+- :ref:`Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data <norseminde_index>`
+
+
+- Contributors
+    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Norseminde, Denmark
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
+Kasted
+^^^^^^
+
+.. image:: ./kasted/images/fig_thumbnail.png
+    :alt: kasted
+    :width: 260
+    :align: right
+
+- :ref:`3D geological modelling of a complex buried-valley network delineated from borehole and AEM data <kasted_index>`
+
+
+- Contributors
+    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Aarhus, Denmark
+    - Geophysical Surveys: Airborne TDEM
 
 |
 |
