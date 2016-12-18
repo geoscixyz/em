@@ -33,6 +33,7 @@ where cos ωt represents a signal in-phase with the source and the sin ωt repre
 
 Note the normalization provides significant convenience, as it eliminates the need of timing the measured signals and the effect of the transmitter and receiver’s dipole moments. Because the data are relative quantities, they are denoted as :math:`Hs/Hp` and expressed in percent or most often in parts per million (ppm).
 
+.. _FDEM_sphere_data:
 
 Visualizing data
 ----------------
