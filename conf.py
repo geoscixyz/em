@@ -508,7 +508,7 @@ sys.path.append(os.getcwd())
 
 from _ext import (
     make_contributorslist, make_formula_sheet, make_case_histories,
-    checkDependencies, supress_nonlocal_image_warn
+    checkDependencies, supress_nonlocal_image_warn, copyImages
     )
 
 make_contributorslist()
@@ -516,3 +516,4 @@ make_formula_sheet()
 make_case_histories()
 # checkDependencies()
 supress_nonlocal_image_warn()
+copyImages()
