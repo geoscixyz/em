@@ -6,7 +6,10 @@ Physics
 .. purpose::
 
     Demonstrate the fundamental physical principles governing the airborne
-    FDEM experiment
+    FDEM experiment.
+
+.. raw:: html
+    :file: images/fdem_physics_radio_buttons.html
 
 
 Most of the physics related to airborne FDEM is available in :ref:`Maxwell I:
