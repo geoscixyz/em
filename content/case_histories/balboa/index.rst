@@ -6,8 +6,8 @@ The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
 .. .. raw:: html
 ..     :file: ../../../underconstruction.html
 
-- **Authors**: :ref:`Jean M. Legault <jlegault>`, :ref:`Chris Wijns <cwijns>`, :ref:`Carlos Izarra <cizarra>`, and :ref:`Geoffrey Plastow <gplastow>`
-- **Reviewer**: :ref:`Seogi Kang <skang>`, :ref:`Douglas Oldenburg <doldenburg>`, and :ref:`Lindsey Heagy <lheagy>`
+- **Authors**: :ref:`jlegault`, :ref:`cwijns`, :ref:`cizarra`, and :ref:`gplastow`
+- **Reviewer**: :ref:`skang`, :ref:`doldenburg`, and :ref:`lheagy`
 
 .. topic :: Prelude
 
