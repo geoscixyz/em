@@ -6,8 +6,6 @@ Maxwell III: FDEM
 .. raw:: html
     :file: ../../underconstruction.html
 
-
-
 .. purpose::
 
     Purpose here
@@ -19,8 +17,8 @@ Contents:
 
     governing_equations
     circuitmodel_for_eminduction/index
-    fields_from_grounded_sources/index
-    fields_from_inductive_sources/index
-    fields_from_plane_wave_sources/index
+    grounded_sources/index
+    inductive_sources/index
+    plane_wave_sources/index
     footprint_and_depth_of_investigation
     natural_sources/index

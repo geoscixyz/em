@@ -1,12 +1,10 @@
-.. _fdem_fields_from_plane_wave_sources_index:
+.. _fdem_plane_wave_sources_index:
 
-Fields from plane wave sources
-==============================
+Plane wave sources
+==================
 
 .. raw:: html
     :file: ../../../underconstruction.html
-
-
 
 .. toctree::
     :maxdepth: 2

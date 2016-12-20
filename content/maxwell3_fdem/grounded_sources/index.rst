@@ -1,12 +1,10 @@
-.. _fdem_fields_from_grounded_sources_index:
+.. _fdem_grounded_sources_index:
 
-Fields from grounded sources
-============================
+Grounded sources
+================
 
 .. raw:: html
     :file: ../../../underconstruction.html
-
-
 
 .. toctree::
     :maxdepth: 2
