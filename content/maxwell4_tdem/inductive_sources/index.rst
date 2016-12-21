@@ -1,11 +1,10 @@
-.. _fdem_fields_from_grounded_sources_index:
+.. _tdem_inductive_sources_index:
 
-Fields from grounded sources
-============================
+Inductive sources
+=================
 
 .. raw:: html
     :file: ../../../underconstruction.html
-
 
 
 .. toctree::
@@ -13,5 +12,5 @@ Fields from grounded sources
 
     halfspace
     layered_earth
-    sphere
+    sphere/index
     plate

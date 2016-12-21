@@ -1,6 +1,6 @@
-.. _tdem_fields_from_grounded_sources_index:
+.. _tdem_grounded_sources_index:
 
-Fields from grounded sources
+Grounded sources
 ============================
 
 .. raw:: html
