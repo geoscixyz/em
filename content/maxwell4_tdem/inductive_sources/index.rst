@@ -1,7 +1,7 @@
-.. _tdem_fields_from_inductive_sources_index:
+.. _tdem_inductive_sources_index:
 
-Fields from inductive sources
-=============================
+Inductive sources
+=================
 
 .. raw:: html
     :file: ../../../underconstruction.html
