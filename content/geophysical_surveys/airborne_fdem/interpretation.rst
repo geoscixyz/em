@@ -50,6 +50,8 @@ following goals:
     the scale of EM induction, which helps the design of discretization for
     numerical modeling.
 
+.. _FDEM_sphere_example:
+
 Data plotting
 *************
 
@@ -62,6 +64,11 @@ were once the mainstream, but have shown drawbacks in complex geological
 setting and lack the ability to decode the conductivity values from the data.
 However, it still has its value in data quality control and preliminary
 interpretation.
+
+We use a simple sphere in a halfspace model similar to the :ref:`sphere in a resistive halfspace <FDEM_resistive_sphere_example>` example.
+
+ .. raw:: html
+    :file: images/Data_slice.html
 
 Apparent conductivity
 *********************
@@ -87,19 +94,15 @@ Quantitative Inversion
   :align: right
   :figwidth: 30%
   :name: FEM_1D_Colm
-  
+
   1D layered earth inversion of FDEM data.
 
-This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the data at all the observing frequencies. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_data>`. While each separate inversions can provide information about local changes in conductivity, the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints.
+This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the data at all the observing frequencies. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_example>`. While each separate inversions can provide information about local changes in conductivity, the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints.
 
-.. figure:: ./images/FEM_1D_Model.png
-  :align: right
-  :figwidth: 40%
-  :name: FEM_Sphere_1D
+Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into 20 layers from the surface to the basement. The top layer is 0.5 m thick, and the layers are gradually thickened at a rate of 1.2 toward the depth. The data are noise-free, but we require the FDEM data to be fit within 5% of the observed magnitude in both in-phase and quadrature. :numref:`FEM_Sphere_1D` compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still gets the horizontal location and the depth to the top correct.
 
-  (Top) True conductivity model and (bottom) laterally constrained stitched 1D inversion cross section.
-
-Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into 20 layers from the surface to the basement. The top layer is 0.5 m thick, and the layers are gradually thickened at a rate of 1.2 toward the depth. The data are noise-free, but we require the FDEM data to be fit within 5% of the observed magnitude in both in-phase and quadrature. :numref:`FEM_Sphere_1D` compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still gets the horizontal location and the depth to the top correct. 
+ .. raw:: html
+    :file: images/Inv1D_slice.html
 
 
 2D/3D inversion
