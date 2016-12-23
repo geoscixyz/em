@@ -24,7 +24,7 @@ Transmitter
     :align: center
     :figwidth: 75%
     :name: source_moment
-    
+
     Moment of an airborne EM loop source.
 
 - **Multi-frequency**: EM waves at different frequencies penetrate different depths of the earth because of the skin effect :numref:`skin_depth`. Depth resolution is gained by using multiple loop sources operating at multiple frequencies.
@@ -33,9 +33,9 @@ Transmitter
     :align: center
     :figwidth: 75%
     :name: skin_depth
-    
+
     Depth resolution with multiple frequencies.
-    
+
 
 Receiver
 ^^^^^^^^
@@ -46,19 +46,19 @@ Receiver
 
 .. math::
 	\varepsilon = - frac{d \Phi}{~d \mathbf{t}} = ~i \varomega \Phi.
-    
+
 Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver
 
 .. math::
 	\varepsilon = ~i \varomega \Phi = ~i \varomega B A N = ~i \varomega \varmu A N H,
-    
+
 as the frequency, the magnetic permeability and the effective area are known.
 
 .. figure:: ./images/receiver_emf.png
     :align: center
     :figwidth: 75%
     :name: receiver_emf
-    
+
     The EMF measured at the receiver loop is proportional to the magnetic field.
 
 
@@ -126,8 +126,13 @@ Systems
 
 This section presents commercial airborne FEM systems.
 
-- :ref:`RESOLVE<AFEM_survey_RESOLVE>`
-- :ref:`DIGHEM<AFEM_survey_DIGHEM>`
+.. toctree::
+    :maxdepth: 1
+
+    dighem
+    resolve
+.. - :ref:`RESOLVE<AFEM_survey_RESOLVE>`
+.. - :ref:`DIGHEM<AFEM_survey_DIGHEM>`
 
 
 Call for contributors
