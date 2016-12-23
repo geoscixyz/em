@@ -17,7 +17,7 @@ Any time-harmonic signal can be expressed by an amplitude factor times an oscill
    :align: right
    :figwidth: 60%
    :name: 3loops
-   
+
    A time varying current :math:`I_0 cos(\omega t)` generates a primary magnetic field Hpcosωt which induces secondary currents in the subsurface and creates secondary magnetic fields :math:`H_s cos(\omega t- \psi )`. Both the primary and secondary fields reach the receiver.
 
 
@@ -53,7 +53,15 @@ An airborne FDEM data map is produced by contouring data at a particular frequen
 Profile and sounding
 ^^^^^^^^^^^^^^^^^^^^
 
-An airborne FDEM profile is produced by plotting the data of the same frequency from all the soundings along a flight line. In-phase and quadrature are plotted separately. :numref:`afem_Profile_Sounding`(a) shows one profile directly over the sphere. A profile plot can be used to locate the object along the line. Analysis of the profile curves is sometimes used to infer the geometry and orientation of the object. The data can also be plotted as a function of frequency at individual soundings. The sounding plot is particularly useful in indicating whether the system is in resistive limit or inductive limit.
+An airborne FDEM profile is produced by plotting the data of the same
+frequency from all the soundings along a flight line. In-phase and quadrature
+are plotted separately. :numref:`afem_Profile_Sounding` (a) shows one profile
+directly over the sphere. A profile plot can be used to locate the object
+along the line. Analysis of the profile curves is sometimes used to infer the
+geometry and orientation of the object. The data can also be plotted as a
+function of frequency at individual soundings. The sounding plot is
+particularly useful in indicating whether the system is in resistive limit or
+inductive limit.
 
 .. figure:: ./images/FEM_Profile_Sounding.png
     :align: center
@@ -61,8 +69,6 @@ An airborne FDEM profile is produced by plotting the data of the same frequency 
     :name: afem_Profile_Sounding
 
     (top) FEM profile over a conductive sphere (1 S/m) in a halfspace (:math:`10^{-2}` S/m) for a range of frequencies. (bottom) The frequency sounding for a single location.
-
-
 
 Why visualizing
 ^^^^^^^^^^^^^^^
