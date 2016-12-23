@@ -76,16 +76,6 @@ frequency) to deep (low frequency). In combination with a depth estimation
 using skin depth, apparent conductivity forms the basis of a host of imaging
 methods, referred to as conductivity-depth transform (CDT) or imaging (CDI).
 
-Time constant
-*************
-
-For a time domain system, the voltage measured off time at the receiver is
-roughly an exponentially decaying function of time. The decay rate is an
-indicator of the overall conductivity of the ground: good conductors have
-slower decays (greater time constant) and poor conductors have faster decays
-(smaller time constant). Time constant (or decay constant, tau) method offers
-a first-order interpretation of the overall conductivity of the ground.
-
 
 Quantitative Inversion
 ----------------------
@@ -97,26 +87,26 @@ Quantitative Inversion
   :align: right
   :figwidth: 30%
   :name: FEM_1D_Colm
+  
+  1D layered earth inversion of FDEM data.
 
-
-This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the entire decay curve in time or the entire spectrum in frequency- domain. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_data>`. While each separate inversions can provide information about local changes in conductivity, the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints [REF].
+This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the data at all the observing frequencies. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_data>`. While each separate inversions can provide information about local changes in conductivity, the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques also consider the correlation between adjacent locations by imposing lateral constraints.
 
 .. figure:: ./images/FEM_1D_Model.png
   :align: right
   :figwidth: 40%
   :name: FEM_Sphere_1D
 
-  (Top) True conductivity model and (bottom) laterally constrained stitched 1D inversion result.
+  (Top) True conductivity model and (bottom) laterally constrained stitched 1D inversion cross section.
 
-Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into ?? layers from the surface to the basement. The top layer is ?? m thick, and the layers are gradually thickened at a rate of ?? toward the depth. The data are noise-free, but we require the FDEM data to be fit within 5% of the observed magnitude in both in-phase and quadrature. :numref:`FEM_Sphere_1D` compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still got the horizontal location and the depth to the top correct. Figure ??(b) shows the observed data are adequately fit by the inversion.
-
+Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into 20 layers from the surface to the basement. The top layer is 0.5 m thick, and the layers are gradually thickened at a rate of 1.2 toward the depth. The data are noise-free, but we require the FDEM data to be fit within 5% of the observed magnitude in both in-phase and quadrature. :numref:`FEM_Sphere_1D` compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still gets the horizontal location and the depth to the top correct. 
 
 
 2D/3D inversion
 ***************
 
 2D/3D inversion
-Although the layered earth assumption in 1D inversion has provided a reasonable inversion model, the artifacts and distortion due to the 2D or 3D lateral variation of conductivity can significantly complicate the interpretation in practice. In the synthetic inversion of the sphere, the object is horizontally stretched on the cross section in Figure ??(a), because the soundings away from the sphere can still sense the high conductivity of the sphere. The underestimated conductivity value is the result of spreading the conductive material belonging to a compact body to an infinite layer in the 1D model.
+Although the layered earth assumption in 1D inversion has provided a reasonable inversion model, the artifacts and distortion due to the 2D or 3D lateral variation of conductivity can significantly complicate the interpretation in practice. In the synthetic inversion of the sphere, the object is horizontally stretched on the cross section in :numref:`FEM_Sphere_1D`, because the soundings away from the sphere can still sense the high conductivity of the sphere. The underestimated conductivity value is the result of spreading the conductive material belonging to a compact body to an infinite layer in the 1D model.
 
 
 The solution to overcome the drawbacks of 1D inversion is to consider the lateral variation of conductivity by using a 2D or 3D model. A 2D/3D inversion discretizes the entire earth to many discrete cells, each of which has a constant conductivity. Then the Maxwell’s equations are numerical solved on the mesh. The obtained images of the subsurface are then in 3D voxel format. 3D inversions provides the best resolution and works for any complicated models in reality, but it is more computationally expensive. 3D inversion is a very involving topic, so we present it in another part of EM.GeoSci.
