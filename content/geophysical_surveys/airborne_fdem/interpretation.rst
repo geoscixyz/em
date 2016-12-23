@@ -65,7 +65,7 @@ setting and lack the ability to decode the conductivity values from the data.
 However, it still has its value in data quality control and preliminary
 interpretation.
 
-We use a simple sphere in a halfspace model similar to the :ref:`sphere in a resistive halfspace <FDEM_resistive_sphere_example>` example.
+We use a simple sphere in a halfspace model similar to the :ref:`sphere in a resistive halfspace <FDEM_resistive_sphere_example>` example, but this time using a larger halfspace conductivity (:math:`10^{-2}` S/m). Notice that the response away from the sphere varies greatly between frequencies due to the response from the ground.
 
  .. raw:: html
     :file: images/Data_slice.html
@@ -101,6 +101,8 @@ This approach assume the earth’s conductivity only varies as a function of dep
 
 Here we use the synthetic data set generated for the sphere model as an example to demonstrate the 1D inversion technique. The earth is horizontally divided into 20 layers from the surface to the basement. The top layer is 0.5 m thick, and the layers are gradually thickened at a rate of 1.2 toward the depth. The data are noise-free, but we require the FDEM data to be fit within 2% of the observed magnitude in both in-phase and quadrature. The animation below compares the true (top) and recovered (bottom) pseudo-3D conductivity model obtained by stitching the individual 1D layered models. The sphere is reasonably imaged on the cross section. Although the sphere’s geometry is distorted and its conductivity value is underestimated, the inversion still gets the horizontal location and the depth to the top correct.
 
+.. _FEM_1D_model:
+
  .. raw:: html
     :file: images/Inv1D_slice.html
 
@@ -109,7 +111,7 @@ Here we use the synthetic data set generated for the sphere model as an example 
 ***************
 
 2D/3D inversion
-Although the layered earth assumption in 1D inversion has provided a reasonable inversion model, the artifacts and distortion due to the 2D or 3D lateral variation of conductivity can significantly complicate the interpretation in practice. In the synthetic inversion of the sphere, the object is horizontally stretched on the cross section in :numref:`FEM_Sphere_1D`, because the soundings away from the sphere can still sense the high conductivity of the sphere. The underestimated conductivity value is the result of spreading the conductive material belonging to a compact body to an infinite layer in the 1D model.
+Although the layered earth assumption in 1D inversion has provided a reasonable inversion model, the artifacts and distortion due to the 2D or 3D lateral variation of conductivity can significantly complicate the interpretation in practice. In the synthetic inversion of the sphere, the object is horizontally stretched on the cross section of the :ref:`1D stitched model<FEM_1D_model>`, because the soundings away from the sphere can still sense the high conductivity of the sphere. The underestimated conductivity value is the result of spreading the conductive material belonging to a compact body to an infinite layer in the 1D model.
 
 
 The solution to overcome the drawbacks of 1D inversion is to consider the lateral variation of conductivity by using a 2D or 3D model. A 2D/3D inversion discretizes the entire earth to many discrete cells, each of which has a constant conductivity. Then the Maxwell’s equations are numerical solved on the mesh. The obtained images of the subsurface are then in 3D voxel format. 3D inversions provides the best resolution and works for any complicated models in reality, but it is more computationally expensive. 3D inversion is a very involving topic, so we present it in another part of EM.GeoSci.
