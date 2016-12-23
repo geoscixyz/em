@@ -36,7 +36,7 @@ where cos ωt represents a signal in-phase with the source and the sin ωt repre
 
 Note the normalization provides significant convenience, as it eliminates the need of timing the measured signals and the effect of the transmitter and receiver’s dipole moments. Because the data are relative quantities, they are denoted as :math:`Hs/Hp` and expressed in percent or most often in parts per million (ppm).
 
-.. _FDEM_sphere_data:
+.. _FDEM_resistive_sphere_example:
 
 Visualizing data
 ----------------
@@ -48,7 +48,7 @@ Map
 An airborne FDEM data map is produced by contouring data at a particular frequency as a function of the horizontal location. Click the buttons in Fig. ?? to go through a sequence of maps at different frequencies for both the in-phase and quadrature components. The maps are useful in identifying the horizontal location of the sphere. Realistic data are more complicated than the single peak anomaly in this example, but a map is still a good method for general assessment. The variation of the responses at different frequencies shows that the data at higher frequencies are more sensitive to near surface.
 
  .. raw:: html
-    :file: images/Data_slice.html
+    :file: images/Resistive_Data_Model.html
 
 Profile and sounding
 ^^^^^^^^^^^^^^^^^^^^
