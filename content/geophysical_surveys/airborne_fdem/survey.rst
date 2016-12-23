@@ -18,20 +18,48 @@ Transmitter
 
 - **Dipole approximation**: The size of a transmitter loop is typically dozens of centimeters, a length scale much smaller than the wavelength that an EM survey is concerned about. So such a loop is often approximated by a magnetic dipole at the loop center.
 
-- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the current. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions.
+- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the current :numref:`source_moment`. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions.
 
-- **Multi-frequency**: EM waves at different frequencies penetrate different depths of the earth because of the skin effect. Depth resolution is gained by using multiple loop sources operating at multiple frequencies.
+.. figure:: ./images/source_moment.png
+    :align: center
+    :figwidth: 75%
+    :name: source_moment
+    
+    Moment of an airborne EM loop source.
 
+- **Multi-frequency**: EM waves at different frequencies penetrate different depths of the earth because of the skin effect :numref:`skin_depth`. Depth resolution is gained by using multiple loop sources operating at multiple frequencies.
+
+.. figure:: ./images/skin_depth.png
+    :align: center
+    :figwidth: 75%
+    :name: skin_depth
+    
+    Depth resolution with multiple frequencies.
+    
 
 Receiver
 ^^^^^^^^
 
 - **Loop**: A receiver is another loop similar to the transmitter, except it is connected to electronics that measure the electromotive force (EMF, ε) in Volt induced by any external time-varying magnetic fields. Each transmitter loop at a particular frequency has a pairing receiver loop that horizontally offsets the transmitter by a few meters and is designed only receiving signals at that frequency.
 
-- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop ().  Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver (=i=iBAN=iANH), as the frequency, the magnetic permeability and the effective area are known.
+- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop
 
+.. math::
+	\varepsilon = - frac{d \Phi}{~d \mathbf{t}} = ~i \varomega \Phi.
+    
+Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver
 
-Fig. ??: The EMF measured at the receiver loop is proportional to the magnetic field.
+.. math::
+	\varepsilon = ~i \varomega \Phi = ~i \varomega B A N = ~i \varomega \varmu A N H,
+    
+as the frequency, the magnetic permeability and the effective area are known.
+
+.. figure:: ./images/receiver_emf.png
+    :align: center
+    :figwidth: 75%
+    :name: receiver_emf
+    
+    The EMF measured at the receiver loop is proportional to the magnetic field.
 
 
 - **Primary removal**: The EMF measured at the receiver loop contains the effect of magnetic fields from both the transmitter current and the eddy current in the earth. The primary field (Hp) from the transmitter is several orders of magnitude greater than the secondary field (Hs) from the earth. Since we are only interested in the earth’s response, it is desirable to remove the effect of the primary field from the measured signals. In many FDEM systems, Hs is obtained by using buckling coils that exactly cancels the primary field at the position of the receiver loop :numref:`BuckingCoil`. Additional methods may be used to find a zero-primary reference level in the instrument (e.g. phase calibration, gain calibration, internal Q-coil calibration,etc.).
@@ -41,7 +69,7 @@ Fig. ??: The EMF measured at the receiver loop is proportional to the magnetic f
     :figwidth: 75%
     :name: BuckingCoil
 
-
+    The primary magnetic field at the receiver is cancelled by a bucking coil.
 
 Configurations
 ^^^^^^^^^^^^^^
@@ -50,9 +78,12 @@ Configurations
 
 - **Separation**: A transmitter-receiver pair is usually two coils that are separated a few meters apart. For low-induction number (separation << skin depth), this separation may be negligible, but for high frequency or very conductive ground, the separation can significantly affect the measured data.
 
+.. figure:: ./images/hcp_vca.jpg
+    :align: center
+    :figwidth: 80%
+    :name: hcp_vca
 
-
-Fig. 95 A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
+    A diagram of a possible arrangement of HCP and VCA coils in a towed bird.
 
 Field Operation
 ---------------
@@ -111,107 +142,3 @@ If you are a service provider, or have experience with a specific AFEM system an
    </div>
 
 
-
-.. _AFEM_survey_RESOLVE:
-
-RESOLVE
-```````
-
-Fig. 96 A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer. Source: USGS.
-
-
-
-RESOLVE is a frequency-domain multi-coil system operated by CGG. The system has evolved over years, but here we describe the basic specification of  the system based on RESOLVE III system.
-
-Coils
-^^^^^
-
-.. list-table:: : RESOLVE III system specifications
-   :header-rows: 1
-   :widths: 1 1 1 1 1 1 1
-   :stub-columns: 0
-   :name: RESOLVE
-
-   *  - Frequency (Hz)
-      - 400
-      - 1.8k
-      - 3.3k
-      - 8.2k
-      - 40k
-      - 140k
-   *  - Configuration
-      - HCP
-      - HCP
-      - VCA
-      - HCP
-      - HCP
-      - HCP
-   *  - Separation (m)
-      - 7.86
-      - 7.86
-      - 8.99
-      - 7.86
-      - 7.86
-      - 7.86
-
-
-The system consists of six pairs of coils operating at six discrete frequencies and in horizontal coplanar (HCP) or vertical coaxial (VCA) configurations as listed above. The actual operating frequencies can be slightly different from the nominal frequencies in the table.The relative geometry of the coils are illustrated in Fig. 97. The measured data is the secondary magnetic field (Hs) normalized by the primary field (Hp) in part per million (ppm).
-
-Fig. 97 A RESOLVE bird and the coils.
-Flight
-RESOLVE has a nominal terrain clearance of 30 m and a nominal aircraft speed of 30 m/s. The aircraft is positioned using post-processed differential GPS in processing, and real-time satellite differential GPS in flight. A typical sampling rate of data is 10 Hz (approximately 3 m sounding spacing).
-
-.. _AFEM_survey_DIGHEM:
-
-DIGHEM
-``````
-
-A DIGHEM system in operation. Source: Strongbow Exploration Inc.
-
-
-DIGHEM is a frequency-domain multi-coil system operated by CGG. The system has evolved over years, but here we describe the basic specification of  the system based on DIGHEMV system.
-
-
-Coils
-^^^^^
-
-.. list-table:: : DIGHEM V system specifications
-   :header-rows: 1
-   :widths: 1 1 1 1 1 1
-   :stub-columns: 0
-   :name: DIGHEM
-
-   *  - Frequency (Hz)
-      - 900
-      - 1k
-      - 5.5k
-      - 7k
-      - 56k
-   *  - Configuration
-      - HCP
-      - VCA
-      - VCA
-      - HCP
-      - HCP
-   *  - Separation (m)
-      - 7.86
-      - 7.86
-      - 7.86
-      - 7.86
-      - 6.3
-
-
-The system consists of five pairs of coils operating at five discrete frequencies and in horizontal coplanar (HCP) or vertical coaxial (VCA) configurations as listed above. The actual operating frequencies can be slightly different from the nominal frequencies in the table. The measured data is the secondary magnetic field (Hs) normalized by the primary field (Hp) in part per million (ppm).
-
-
-Flight
-^^^^^^
-
-DIGHEM has a nominal terrain clearance of 45 m and a nominal aircraft speed of 55 km/h. A typical sampling rate is 10 per second, equivalent to 1 sample every 3 m at a speed of 110 km/h. The aircraft is also equiped with the following instruments:
-
-- Ancillary equipment
-- Magnetometer
-- Radar altimeter
-- Video camera,
-- Analog and digital recorders
-- GPS navigation system
