@@ -50,10 +50,14 @@ An airborne FDEM data map is produced by contouring data at a particular frequen
 Profile and sounding
 --------------------
 
-An airborne FDEM profile is produced by plotting the data of the same frequency from all the soundings along a flight line. In-phase and quadrature are plotted separately. Fig. ?? shows one profile directly over the sphere. A profile plot can be used to locate the object along the line. Analysis of the profile curves is sometimes used to infer the geometry and orientation of the object. The data can also be plotted as a function of frequency at individual soundings. Click the buttons to see how the in-phase and quadrature data change when the sounding is taken near or away from the sphere. The sounding plot is particularly useful in indicating whether the system is in resistive limit or inductive limit.
+An airborne FDEM profile is produced by plotting the data of the same frequency from all the soundings along a flight line. In-phase and quadrature are plotted separately. :numref:`afem_Profile_Sounding`(a) shows one profile directly over the sphere. A profile plot can be used to locate the object along the line. Analysis of the profile curves is sometimes used to infer the geometry and orientation of the object. The data can also be plotted as a function of frequency at individual soundings. The sounding plot is particularly useful in indicating whether the system is in resistive limit or inductive limit.
 
- .. raw:: html
-    :file: images/Freq_slice.html
+.. figure:: ./images/FEM_Profile_Sounding.png
+    :align: center
+    :scale: 80%
+    :name: afem_Profile_Sounding
+
+    (top) FEM profile over a conductive sphere (1 S/m) in a halfspace (:math:`10^{-2}` S/m) for a range of frequencies. (bottom) The frequency sounding for a single location.
 
 By visualizing the data, we can answer the following questions:
 
