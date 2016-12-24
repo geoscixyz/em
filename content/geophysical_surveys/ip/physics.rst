@@ -14,7 +14,7 @@ Physics
 
     Complex conductivity in frequency domain. Pelton's Cole-Cole model :cite:`pelton1978` model is used (:math:`\eta` = 0.4, :math:`\tau` = 0.01 s, :math:`c` = 0.4).
 
-In the :ref:`DC experiment <_dcr_index>` we assumed non-dispersive electrical resistivity, i.e. not frequency-depndent. However, in reality resistivity of the earth material is dispersive, and effectively generate polarization charge buildup when electric field is applied to a chargeable medium. For instance, :numref:`resistivity` shows complex-valued resistivity in frequency domain. They have real and imaginary parts, and vary in frequency.
+In the :ref:`DC experiment <dcr_index>` we assumed non-dispersive electrical resistivity, i.e. not frequency-depndent. However, in reality resistivity of the earth material is dispersive, and effectively generate polarization charge buildup when electric field is applied to a chargeable medium. For instance, :numref:`resistivity` shows complex-valued resistivity in frequency domain. They have real and imaginary parts, and vary in frequency.
 
 To understand the impact of complex resisitivty, we only consider the end member of the resistivity at zero and infinte frequency: :math:`\rho_0` and :math:`\rho_{\infty}`,  respectively. Chargeability, :math:`\eta` can be defined as
 

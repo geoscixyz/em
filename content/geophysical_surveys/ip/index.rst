@@ -50,6 +50,9 @@ different conductivity and these charges generate an electric potential. Althoug
     :maxdepth: 1
 
     physics
+    survey
+    data
+    interpretation
 
 **Related Case Histories**
 
