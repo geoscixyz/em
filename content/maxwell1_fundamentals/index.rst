@@ -16,7 +16,7 @@ Maxwell Equations in the :ref:`time <time_domain_equations>` and
 These equations can be solved once sources are specified and appropriate
 boundary and interface conditions are provided. Much can be learned by solving
 the equations in an :ref:`unbounded homogeneous earth
-<maxwells_equations_in_homogeneous_media_index>`, with plane wave and dipolar
+<equations_in_homogeneous_media_index>`, with plane wave and dipolar
 sources. We present these along with software apps that allow the user to
 visualize the fields and fluxes and explore the relationships between physical
 properties, sources and EM fields. These examples also allow us to introduce
@@ -45,4 +45,5 @@ route to take and how to proceed.
     reflection_and_refraction/index
     quick_guide_maxwell
     solving_maxwells_equations/index
+    looking_for_more
 
