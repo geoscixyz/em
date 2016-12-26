@@ -320,7 +320,7 @@ What is important is the refraction angle at the Air-Earth interface, the
 angle of the transmitted wave in the ground.
 
 As any wave, electromagnetic waves follow `Snell's law`_, that we can derive
-from the :ref:`Maxwell's equation<maxwells_equations_index>`.
+from the :ref:`Frequency Domain Maxwell's equation<frequency_domain_equations>`.
 
 .. _Snell's law: https://en.wikipedia.org/wiki/Snell%27s_law
 
