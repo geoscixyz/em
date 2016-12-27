@@ -18,8 +18,6 @@ Transmitter
 
 - **Dipole approximation**: The size of a transmitter loop is typically dozens of centimeters, a length scale much smaller than the wavelength that an EM survey is concerned about. So such a loop is often approximated by a magnetic dipole at the loop center.
 
-- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the current :numref:`source_moment`. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions.
-
 .. figure:: ./images/source_moment.png
     :align: right
     :figwidth: 30%
@@ -27,11 +25,15 @@ Transmitter
 
     Moment of an airborne EM loop source.
 
+- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the current :numref:`source_moment`. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions.
+
+
+
 - **Multi-frequency**: EM waves at different frequencies penetrate different depths of the earth because of the skin effect :numref:`skin_depth`. Depth resolution is gained by using multiple loop sources operating at multiple frequencies.
 
 .. figure:: ./images/skin_depth.png
     :align: center
-    :figwidth: 50%
+    :figwidth: 60%
     :name: skin_depth
 
     Depth resolution with multiple frequencies.
@@ -42,8 +44,6 @@ Receiver
 
 - **Loop**: A receiver is another loop similar to the transmitter, except it is connected to electronics that measure the electromotive force (EMF, ε) in Volt induced by any external time-varying magnetic fields. Each transmitter loop at a particular frequency has a pairing receiver loop that horizontally offsets the transmitter by a few meters and is designed only receiving signals at that frequency.
 
-- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop (:math:`\varepsilon = - \frac{d \Phi}{~d \mathbf{t}} = ~i \omega \Phi`). Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver (:math:`\varepsilon = ~i \omega \Phi = ~i \omega B A N = ~i \omega \mu A N H`), as the frequency, the magnetic permeability and the effective area are known.
-
 .. figure:: ./images/receiver_emf.png
     :align: right
     :figwidth: 30%
@@ -51,6 +51,7 @@ Receiver
 
     The EMF measured at the receiver loop is proportional to the magnetic field.
 
+- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop (:math:`\varepsilon = - \frac{d \Phi}{~d \mathbf{t}} = ~i \omega \Phi`). Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver (:math:`\varepsilon = ~i \omega \Phi = ~i \omega B A N = ~i \omega \mu A N H`), as the frequency, the magnetic permeability and the effective area are known.
 
 - **Primary removal**: The EMF measured at the receiver loop contains the effect of magnetic fields from both the transmitter current and the eddy current in the earth. The primary field (Hp) from the transmitter is several orders of magnitude greater than the secondary field (Hs) from the earth. Since we are only interested in the earth’s response, it is desirable to remove the effect of the primary field from the measured signals. In many FDEM systems, Hs is obtained by using buckling coils that exactly cancels the primary field at the position of the receiver loop :numref:`BuckingCoil`. Additional methods may be used to find a zero-primary reference level in the instrument (e.g. phase calibration, gain calibration, internal Q-coil calibration,etc.).
 
@@ -66,7 +67,7 @@ Configurations
 
 - **Orientation**: There are two commonly-used transmitter-receiver geometries: horizontal coplanar (HCP) and vertical co-axial (VCA). The combination of HCP and VCA provides different ways of coupling with the geological targets oriented in different angles.
 
-- **Separation**: A transmitter-receiver pair is usually two coils that are separated a few meters apart. For low-induction number (separation << skin depth), this separation may be negligible, but for high frequency or very conductive ground, the separation can significantly affect the measured data.
+- **Separation**: A transmitter-receiver pair is usually two coils that are separated a few meters apart. For low-induction number (separation :math:`\ll` skin depth), this separation may be negligible, but for high frequency or very conductive ground, the separation can significantly affect the measured data.
 
 .. figure:: ./images/hcp_vca.jpg
     :align: center
