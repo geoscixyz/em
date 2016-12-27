@@ -129,7 +129,7 @@ petrophysical constraints.  Although the geology is 3D, we invert the data using
    *  - Number of data
       - 195
    *  - Data uncertainties
-      - :math:`2\%|d| (percentage) + 2 \times 10^{-5} V` (floor)
+      - :math:`2\%|d| (percentage) + 2 \times 10^{-4} V` (floor)
    *  - Mesh Size
       - :math:`10 \times 10 \times 10` meters
    *  - Reference conductivity
@@ -139,7 +139,7 @@ petrophysical constraints.  Although the geology is 3D, we invert the data using
 
 :numref:`DCIP_DpDp_inversion` (b) presents the recovered 2D conductivity model after convergence of the algorithm. Multiple conductors and a resistor are well imaged in 2D section.
 
-For the IP inversion, the same inversion parameters are used except for uncertainty and reference model. Percentage and floor for the uncertainty are set to 0 :math:`\%` and 1 mV/V. The reference chargeability used here is zero. :numref:`DCIP_DpDp_inversion` (d) shows the reocovered 2D chargeability model, and all chargealbe prisms either on the surface and at depth are imaged well.
+For the IP inversion, the same inversion parameters are used except for uncertainty and reference model. Percentage and floor for the uncertainty are set to 0 :math:`\%` and 0.3 mV/V. The reference chargeability used here is zero. :numref:`DCIP_DpDp_inversion` (d) shows the reocovered 2D chargeability model, and all chargealbe prisms either on the surface and at depth are imaged well.
 
 .. figure:: images/DCIP_DpDp_inversion.png
     :align: center
