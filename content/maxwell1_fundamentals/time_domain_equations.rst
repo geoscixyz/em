@@ -1,10 +1,10 @@
 .. _time_domain_equations:
 
-Maxwell's equations in time
-===========================
+Time Domain Equations
+=====================
 
 .. raw:: html
-    :file: ../../../underconstruction.html
+    :file: ../../underconstruction.html
 
 
 
@@ -20,13 +20,13 @@ Maxwell's equations in time
 We begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law
 <ampere_maxwell>` in the time-domain:
 
-.. include:: ../../equation_bank/faraday_time.rst
+.. include:: ../equation_bank/faraday_time.rst
 
-.. include:: ../../equation_bank/ampere_maxwell_time.rst
+.. include:: ../equation_bank/ampere_maxwell_time.rst
 
 and the three constitutive relations:
 
-.. include:: ../../equation_bank/ohms_law_time.rst
+.. include:: ../equation_bank/ohms_law_time.rst
 
 .. math:: \mathbf{d} = \epsilon \mathbf{e}
         :name: depse

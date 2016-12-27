@@ -1,10 +1,10 @@
 .. _frequency_domain_equations:
 
-Maxwell's equations in frequency
-================================
+Frequency Domain Equations
+==========================
 
 .. raw:: html
-    :file: ../../../underconstruction.html
+    :file: ../../underconstruction.html
 
 
 
