@@ -54,6 +54,7 @@ Note that for above two cases, we only have one datum in time due to the integra
 .. math::
     d^{IP}(t) = 10^3 \frac{V_s(t)}{V_0}  \ \text{[mV/V]}
     :label: charg_mVperV
+
 or
 
 .. math::
