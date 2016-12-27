@@ -12,98 +12,122 @@ Interpretation
 Linearization
 -------------
 
-Apparent chargeability
-----------------------
+For the inversion of IP data, often linearzed approach is used :cite:`seigel1959` :cite:`doug1994`. The measured voltage, :math:`V` will be a function of conductivity. We consider two end members of conductivity at inifinte and zero frequency: :math:`\sigma_{\infty}` and :math:`\sigma_0`. Here conductivity at zero frequency can be expressed as
 
-.. Plotting apparent chargeability, as pseudosections or in plan-view maps, is
-.. informative. The images are useful for  recognizing data `outliers`, bad
-.. electrodes, and validating normalizations that might have been applied to the
-.. data. In addition, they sometimes provide valuable information about earth
-.. structure.
+.. math::
+    \sigma_0 = \sigma_{\infty} (1-\eta)
 
-.. As an illustration, :numref:`DCR_DpDp_Simple` (a) shows an earth model
-.. consisting of a single prism (:math:`\rho=10\; \Omega \cdot m`) buried in a
-.. uniform halfspace (:math:`\rho= 100\; \Omega \cdot m`). A dipole-dipole survey
-.. is carried out along a line that passes directly above the conductive prism.
-.. The resulting pseudosection is shown in :numref:`DCR_DpDp_Simple` (b). The
-.. prism is manifested as a region of lower apparent resistivity in the center of
-.. the image and there are `wings` extending outwards and downward. The apex of
-.. the image can be used to estimate the horizontal location of the prism but the
-.. depth to the body is less evident since the vertical scale of the
-.. pseudosection is in `n-values` and not in meters.
+Considering measured voltage at zero frequency or late on-time, the voltage will be a function of :math:`\sigma_0 \ (x, y, z)` :
 
-.. Despite the above success, the situation worsens if the earth is more complex.
-.. This is illustrated in :numref:`DCR_DpDp_Simple` (c) where some near-surface
-.. inhomogeneities are added. The same dipole-dipole survey is carried out and
-.. resultant pseudosection is shown in :numref:`DCR_DpDp_Simple` (d). The
-.. response of the prism is masked and attempting to infer existence and location
-.. of the prism is extremely challenging.
+.. math::
+    V_0 = V[\sigma_0] = V[\sigma_{\infty}(1-\eta)]
 
-.. This example can be downloaded :ref:`here<dcr_synthetics>`.
+By expanding this in terms of :math:`\sigma_{\infty}`, we obtain
 
-.. figure:: images/DCIP_DpDp_fwd.png
-    :align: center
-    :figwidth: 100%
-    :name: DCIP_DpDp_fwd
+.. math::
+    V_0 = V[\sigma_{\infty}(1-\eta)] = V[\sigma_{\infty}] - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta + O \Big( (\sigma_{\infty} \eta)^2 \Big)
 
-    : (a) Vertical section through a simple conductive prism (:math:`\rho=10 \;\Omega \cdot m`) buried in a homogeneous halfspace :math:`\rho=100 \;\Omega \cdot m`. Source and receiver locations for a dipole-dipole survey are shown for reference.
-    (b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
-    (c) Vertical section through a more complicated resistivity model with near-surface inhomogeneities added and (d) resulting pseudosection of apparent resistivity.
+IP datum is considered as a small perturbation (:math:`\eta \ll 1`), and can be written as
 
+.. math::
+    d^{IP} = V_0 - V_{\infty} = - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta + O \Big( (\sigma_{\infty} \eta)^2 \Big)
 
-.. :ref:`Gradient array surveys<dcr_survradiobuttons>`
-.. are often used in reconnaissance modes and it is insightful to repeat the
-.. above analysis with a representative example. A plan view of the resistivity
-.. model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The
-.. survey consists of a grid of 13 x 13 receivers located between a 450 meter
-.. dipole current source. Each receiver is a 20 meter dipole. The corresponding
-.. apparent resistivity map is shown in :numref:`DCR_Grad_Simple` (b). An
-.. estimate of the horizontal location of the center of the prism can be
-.. obtained, but again there is no quantitative information about the depth.
+Ignoring second order term yields
+
+.. math::
+    d^{IP} = - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta
+           = - \frac{\partial V}{\partial \ log (\sigma_{\infty})}  \eta \\
+           =  \frac{\partial V}{\partial \ log (\rho_{\infty})}  \eta
+
+Considering apparent chargeability, :math:`\eta_a`, we obtain
+
+.. math::
+    d^{IP} = \eta_a = \frac{V_0 - V_{\infty} }{V_0} =  \frac{\partial log \ (V)}{\partial \ log (\rho_{\infty})}  \eta
+    :label: linear_appchg
+
+Finally, IP data can be expressed as a linear equation
+
+.. math::
+    \mathbf{d}^{IP} = \mathbf{J} \boldsymbol{\eta}
+    :label: linearIP
+
+where :math:`\mathbf{J}` is a sensitivity matrix.
+
+Two stage method
+----------------
+
+.. figure:: images/Overvoltage_single.png
+    :align: right
+    :figwidth: 40%
+    :name: Overvoltage_data
+
+    Overvoltage curve in time domain.
+
+For the inversion of time domain IP data, two-stage method is often used :cite:`doug1994`. The first step is DC inversion, and here we consider a voltage at at late on-time (:math:`V_0`) as DC datum. By inverting DC data, we recover conductivity model, :math:`\sigma_{est}`.  Second step is IP inversion. Voltages at late off-times (:math:`V_s`) are considered as IP data, and often voltages in specific time window is integrated. The recovered conductivity is used to form sensitivity matrix, and using the linear equation (Eq. :eq:`linearIP`) we invert IP data, and recover chargeability.
+
+.. note::
+
+    Note that in practice there are signficant electromagnetic (EM) induction effects right after current is turend on, hence obtaining :math:`V_{\infty}` is challenging. Similarly, right after the current is turned off, significant EM induction effects exists, and this is the reason why we only consider late off-time voltages as IP data.
+
+Example
+-------
+
+We illustrate a synthetic two stage inversion (DC-IP inversion) example. Voltages at zero and infinite freqencies are computed: :math:`V_0` and :math:`V_{\infty}` using :math:`\sigma_0` and :math:`\sigma_{\infty}`, respectively. DC datum is considered as :math:`V_0`, and apparent chargeabiility is calculated using Eq. :eq:`linear_appchg`. Conductivity and chargeability models are presented in :numref:`DCIP_Grad_fwd` (a) and (c), respectively.
+
+DC-IP data
+^^^^^^^^^^
+
+A :ref:`gradient array survey<dcr_survradiobuttons>` is used to obtain both DC and IP data. A plan view of the resistivity
+model and electrode geometry is shown in :numref:`DCR_Grad_Simple` (a). The
+survey consists of a grid of 13 x 13 receivers located between a 450 meter
+dipole current source. Each receiver is a 20 meter dipole. The corresponding
+apparent resistivity map is shown in :numref:`DCR_Grad_Simple` (b). Due to the multiple prisms having different resistivity values from the background, the obtained apparent resistivity map is fairly complicated. In constrast, only the center prism is chargeable, hence a single apparent chargeability anomaly is obtained. From these apparent resistivity and chargeability maps, we can recognize conductive and chargeable unit, and its hoizontal location and extent, whereas depth information the unit is lacked.
 
 .. figure:: images/DCIP_Grad_fwd.png
     :align: center
     :figwidth: 100%
     :name: DCIP_Grad_fwd
 
-    : (a) Bird-eye view of gradient array survey over a simple conductive prism model (:math:`\rho= 10\; \Omega \cdot m`) buried in a uniform halfspace (:math:`\rho= 100\; \Omega \cdot m`) and
-    (b) corresponding apparent conductivity map. By simple inspection of the data map, it is easy to locate the center of the conductive anomaly.
-    (c) The experiment is replicated with a more complicated conductivity model with near-surface inhomogeneities added. Direct interpretation of the resulting apparent resistivity map
-    (d) is challenging.
+    : (a) Bird-eye view of gradient array survey over a DC resistivity model (:math:`\sigma_0`) and
+    (b) corresponding apparent resistivity map.
+    (c) Plan map of chargeability model (:math:`\eta`) and
+    (b) corresponding apparent chargeability map.
 
-.. Contaminating the model by adding some conductive and resistive features
-.. (:numref:`DCR_Grad_Simple` (c)) leads to an apparent resistivity map that is
-.. very complicated and in which the signal of the prism is masked
-.. (:numref:`DCR_Grad_Simple` (d)). To obtain information about the electrical
-.. conductivity we need to invert the data.
+A :ref:`dipole-dipole survey<dcr_survradiobuttons>` is carried out along a line that passes directly above the conductive prism. Different from the gradient array case, we assumed all prisms are chargeable. :numref:`DCIP_DpDp_fwd` (a) and (c) show conductivity and chargeability sections, respectively. The resulting pseudosections are shown in :numref:`DCIP_DpDp_fwd` (b) and (d). Due to the near surface prisms both DC and IP pseudosections are complicated, and hard to be interpreted just by looking at them. For following DC-IP inversions, we use these DC and IP data obtained with the dipole-dipole array.
+
+
+.. figure:: images/DCIP_DpDp_fwd.png
+    :align: center
+    :figwidth: 100%
+    :name: DCIP_DpDp_fwd
+
+    : (a) Vertical section through a conductivity model with near-surface inhomogeneities.  Source and receiver locations for a dipole-dipole survey are shown for reference.
+    (b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
+    (c) Vertical section through a chargeability model with near-surface inhomogeneities and (d) resulting pseudosection of apparent chargeability.
+
 
 .. _ip_interp_inversion:
 
-Inversion of DC-IP data
------------------------
+2D Inversion of DC-IP data
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. The DCR data are inverted using a standard Gauss-Newton framework. This is
-.. outlined in :ref:`Inversion<inversion>`. The data are the measured voltages
-.. and the goal is to find an electrical conductivity that satisfactorily
-.. reproduces these data and agrees with a priori geologic structure and
-.. petrophysical constraints.
+Following the two stage inversion method we first invert DC data, and obtain conductivity model. Then by using the recovered conductivity, we form a sensitivity matrix for an IP inversion, invert IP data, and recover chargeability model.
 
-.. To illustrate the importance of inverting the data, we return to the thematic
-.. :ref:`2-sphere problem<two_sphere_setup>`. Although the geology is 3D, we
-.. first invert the data using a 2D inversion algorithm. Parameters used for the
-.. inversion of the dipole-dipole data (:numref:`DCR_TwoSpheres_Simple` (b)) are
-.. provided in :numref:`twospheres_inv_table`.
+The DC and IP data are inverted using a standard Gauss-Newton framework. This is
+outlined in :ref:`Inversion<inversion>`. The DC data are the measured voltages (:math:`V_0`) and the goal is to find an electrical conductivity that satisfactorily
+reproduces these data and agrees with a priori geologic structure and
+petrophysical constraints.  Although the geology is 3D, we invert the data using a 2D inversion algorithm. Parameters used for the inversion of the dipole-dipole data (:numref:`DCIP_Grad_fwd` (b)) are provided in :numref:`DCIP_inv_table`.
 
-.. list-table:: : 2D Inversion parameters
+.. list-table:: : 2D DC inversion parameters
    :header-rows: 0
    :widths: 5 5
    :stub-columns: 1
-   :name: twospheres_inv_table
+   :name: DCIP_inv_table
 
    *  - Number of sources
-      - 43
+      - 20
    *  - Number of data
-      - 540
+      - 195
    *  - Data uncertainties
       - :math:`2\%|d| (percentage) + 2 \times 10^{-5} V` (floor)
    *  - Mesh Size
@@ -113,64 +137,19 @@ Inversion of DC-IP data
    *  - Regularization Scales ( :math:`\alpha_s, \alpha_x,\alpha_y,\alpha_z` )
       - :math:`0.01, 1, 1, 1`
 
-.. :numref:`DCR_TwoSpheres_Simple` (c) presents the recovered 2D conductivity model after convergence of the
-.. algorithm.
+:numref:`DCIP_DpDp_inversion` (b) presents the recovered 2D conductivity model after convergence of the algorithm. Multiple conductors and a resistor are well imaged in 2D section.
 
-.. **Important comments:**
-
-.. (a) Even though there are no contaminating near-surface blocks the pseudosection
-..     does not clearly indicate two bodies. This is in contrast to
-..     :numref:`DCR_DpDp_Simple` (a) where a single prism was clearly identified in
-..     the pseudosection.
-
-.. (b) The two spheres are recovered but they have lower conductivity contrasts with
-..     respect to the halfspace than do the true spheres. This occurs for three
-..     reasons: (i) the inversion generates smooth models and this extends structures
-..     and reduces amplitudes; (ii) the true spheres extend into regions where there
-..     is limited depth of investigation; and (iii) the 2D inversion assumes that the
-..     structures are cylindrical.
+For the IP inversion, the same inversion parameters are used except for uncertainty and reference model. Percentage and floor for the uncertainty are set to 0 :math:`\%` and 1 mV/V. The reference chargeability used here is zero. :numref:`DCIP_DpDp_inversion` (d) shows the reocovered 2D chargeability model, and all chargealbe prisms either on the surface and at depth are imaged well.
 
 .. figure:: images/DCIP_DpDp_inversion.png
     :align: center
     :figwidth: 100%
     :name: DCIP_DpDp_inversion
 
-    : (a) Vertical section through a two-sphere model (:math:`\rho_1= 10\; \Omega \cdot m` ; :math:`\rho_2= 1000\; \Omega \cdot m`) buried in a homogeneous halfspace (:math:`\rho_0= 100\; \Omega \cdot m`).
-    (b) Corresponding pseudosection of apparent conductivity acquired from a dipole-dipole survey layout, 20 meter dipole spacing.
-    (c) Recovered conductivity model from a 2D inversion.
-    (d) Two sphere model with near-surface inhomogeneities.
-    (e) pseudosection
-    (f) Recovered model from 2D inversion.
+    : Vertical sections of resitivity and chargeability models. (a) True and (b) recovered conductivity models. (c) True and (d) recovered chargeability model.
 
-.. Similar to the prism model example (:numref:`DCR_DpDp_Simple`), we repeat the
-.. experiment with the same survey setup but use a more complicated resistivity
-.. model that has near-surface inhomogeneities (:numref:`DCR_TwoSpheres_Simple`
-.. (d)). The resulting pseudosection (:numref:`DCR_TwoSpheres_Simple` (e)) is
-.. challenging to interpret visually. The 2D resistivity model recovered from the
-.. inversion ( :numref:`DCR_TwoSpheres_Simple` (f)) unravels the data complexity.
+.. note::
 
-.. **Important comments:**
+    Considering time domain IP data in practice, we cannot measure neither :math:`V_0` and :math:`V_{\infty}`. Hence, often an IP datum is considered as an integration of late off-time voltages (named apparent chargeability): :math:`\eta_a = \frac{1}{V_0}\int V_s \ (t)  \ dt`. Therefore, a recovered chargeability model by inverting the apparent chargeability will not correspond to the chargeability, :math:`\eta=\frac{\rho_{0}-\rho_{\infty}}{\rho_0}`.
 
-.. (a) The pseudosection of data is complicated and dominated by the near-surface conductors.
-
-.. (b) The inversion recovers the contaminating surface conductors. It also recovers
-..     the two spheres with about the same fidelity as in the simple case.
-
-.. This example can be downloaded :ref:`here<dcr_synthetics>`.
-
-
-.. .. _dcr_synthetics:
-
-.. Downloads
-.. *********
-
-.. Data, model and inversion files used in this page can be downloaded below:
-
-..  `Prism <https://storage.googleapis.com/simpeg/em_geosci/DCR_Interp_Prism.zip>`_
-
-..  `Two_Spheres <https://storage.googleapis.com/simpeg/em_geosci/DCR_Interp_TwoSpheres.zip>`_
-
-
-.. Utilities: UBC-DC2D `data viewer <http://gif.eos.ubc.ca/sites/default/files
-.. /dcip2d-data-viewer.zip>`_ and `model viewer
-.. <http://gif.eos.ubc.ca/sites/default/files/dcip2d-model-viewer.zip>`_
+    Rather, the recovered charegeability model from the inversion should be considered as "pseudo-chargeability" reflecting some chargeability information captured in a chosen window.
