@@ -133,6 +133,7 @@ electrodes on the surface and in boreholes (:numref:`dcr_3dgeneral`). Any
 datum from a specific electrode placement produces some information but, as
 aquistion continues, some electrode placements may not provide new independent
 information.
+
 .. The choice of what data to collect is addressed in the section
 .. :ref:`Survey Design <dcr_survey_design>`.
 
