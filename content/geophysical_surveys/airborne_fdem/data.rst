@@ -28,8 +28,8 @@ A FDEM system in practice only measures the secondary field :math:`H_s \mathbf{c
 where :math:`\mathbf{cos}(\omega t)` represents a signal in-phase with the source and :math:`\mathbf{sin}(\omega t)` represents a signal out of phase with the source. The first term is also called “real”’ and the second term “imaginary” or “quadrature”. Next, the amplitudes of the two sinusoidal signals are normalized by the amplitude of the primary field at the receiver to obtain the data in real and imaginary components
 
 
-.. math:: Real = \frac{H_s cos(\psi)}{H_p}
-.. math:: Imag = \frac{H_s sin(\psi)}{H_p}
+.. math:: Real = \frac{H_s \mathbf{cos}(\psi)}{H_p}
+.. math:: Imag = \frac{H_s \mathbf{sin}(\psi)}{H_p}
 
 
 Note the normalization provides significant convenience, as it eliminates the need of timing the measured signals and the effect of the transmitter and receiver’s dipole moments. Because the data are relative quantities, they are denoted as :math:`H_s/H_p` and expressed in percent or most often in parts per million (ppm).
