@@ -26,11 +26,11 @@ Time domain IP data
 .. figure:: images/Overvoltage_single.png
     :align: right
     :figwidth: 50%
-    :name: Overvoltage_single
+    :name: Overvoltage_single_data
 
     Time domain IP data.
 
-We first introduce time domain IP data. :numref:`Overvoltage_single` shows schematic diagram of measured voltage when the medium is chargeable. In the on-time the voltage reflecting resistivity at infinite frequency, :math:`\rho_{\infty}(x, y, z)` is immediately generated. Then, the measured voltage increases, and reaches to the steady state. This time when the voltage reaches to the steady state is often considered as DC datum: :math:`V_0`, and this reflects resistivity at zero frequency :math:`\rho_0`. Here impact of IP effects are minor compared to DC effects, whereas polarization charge buildup is at maxium. In the off-time, DC effects are disappeared hence only secondary voltage, :math:`V_s (t)` due to IP can be measured; :math:`V(t)` decays in time.
+We first introduce time domain IP data. :numref:`Overvoltage_single_data` shows schematic diagram of measured voltage when the medium is chargeable. In the on-time the voltage reflecting resistivity at infinite frequency, :math:`\rho_{\infty}(x, y, z)` is immediately generated. Then, the measured voltage increases, and reaches to the steady state. This time when the voltage reaches to the steady state is often considered as DC datum: :math:`V_0`, and this reflects resistivity at zero frequency :math:`\rho_0`. Here impact of IP effects are minor compared to DC effects, whereas polarization charge buildup is at maxium. In the off-time, DC effects are disappeared hence only secondary voltage, :math:`V_s (t)` due to IP can be measured; :math:`V(t)` decays in time.
 
 The most common definitions of IP data, :math:`d^{IP}` are
 

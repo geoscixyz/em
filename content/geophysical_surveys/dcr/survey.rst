@@ -132,8 +132,9 @@ modern technologies, data can be collected in three dimensions, using
 electrodes on the surface and in boreholes (:numref:`dcr_3dgeneral`). Any
 datum from a specific electrode placement produces some information but, as
 aquistion continues, some electrode placements may not provide new independent
-information. The choice of what data to collect is addressed in the section
-:ref:`Survey Design <dcr_survey_design>`.
+information.
+.. The choice of what data to collect is addressed in the section
+.. :ref:`Survey Design <dcr_survey_design>`.
 
 Here we outline some basic principles about survey design and provide some
 acquistion strategies that are currently used.
