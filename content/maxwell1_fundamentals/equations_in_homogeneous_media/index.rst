@@ -1,10 +1,10 @@
-.. _maxwells_equations_in_homogeneous_media_index:
+.. _equations_in_homogeneous_media_index:
 
-Maxwell's Equations in Homogeneous Media
-========================================
+Equations in Homogeneous Media
+==============================
 
 .. raw:: html
-    :file: ../../../../underconstruction.html
+    :file: ../../../underconstruction.html
 
 .. purpose::
 
@@ -14,10 +14,13 @@ Maxwell's Equations in Homogeneous Media
     Content developed here should provide a fundamental understanding of the physics which governs many geophysical problems.
 
 
-Within a homogeneous medium, the conductivity, magnetic permeability and dielectric permittivity are spatially invariant.
-In this case, Maxwell's equations can be used to describe the electromagnetic fields as a set of waves.
+Within a homogeneous medium, the conductivity, magnetic permeability and
+dielectric permittivity are spatially invariant. In this case, Maxwell's
+equations can be used to describe the electromagnetic fields as a set of
+waves.
 
-In the frequency domain, the electric and magnetic fields are represented using the Helmholtz equation:
+In the frequency domain, the electric and magnetic fields are represented
+using the Helmholtz equation:
 
 
 .. math::
@@ -39,7 +42,7 @@ In the time domain, Maxwell's equations simplify to a wave equation with a lossy
 .. math::
 	\begin{split}
 	\frac{1}{\mu \varepsilon} \nabla^2 \vec e  &= \frac{\partial^2 \vec e}{\partial t^2} + \frac{\sigma}{\varepsilon} \frac{\partial \vec e}{\partial t}  \\
-	\frac{1}{\mu \varepsilon} \nabla^2 \vec h  &= \frac{\partial^2 \vec h}{\partial t^2} + \frac{\sigma}{\varepsilon} \frac{\partial \vec h}{\partial t} 
+	\frac{1}{\mu \varepsilon} \nabla^2 \vec h  &= \frac{\partial^2 \vec h}{\partial t^2} + \frac{\sigma}{\varepsilon} \frac{\partial \vec h}{\partial t}
 	\end{split}
 
 
