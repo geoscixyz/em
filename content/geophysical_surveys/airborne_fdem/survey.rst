@@ -21,8 +21,8 @@ Transmitter
 - **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the current :numref:`source_moment`. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions.
 
 .. figure:: ./images/source_moment.png
-    :align: center
-    :figwidth: 75%
+    :align: right
+    :figwidth: 30%
     :name: source_moment
 
     Moment of an airborne EM loop source.
@@ -31,7 +31,7 @@ Transmitter
 
 .. figure:: ./images/skin_depth.png
     :align: center
-    :figwidth: 75%
+    :figwidth: 50%
     :name: skin_depth
 
     Depth resolution with multiple frequencies.
@@ -42,21 +42,11 @@ Receiver
 
 - **Loop**: A receiver is another loop similar to the transmitter, except it is connected to electronics that measure the electromotive force (EMF, ε) in Volt induced by any external time-varying magnetic fields. Each transmitter loop at a particular frequency has a pairing receiver loop that horizontally offsets the transmitter by a few meters and is designed only receiving signals at that frequency.
 
-- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop
-
-.. math::
-	\varepsilon = - frac{d \Phi}{~d \mathbf{t}} = ~i \varomega \Phi.
-
-Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver
-
-.. math::
-	\varepsilon = ~i \varomega \Phi = ~i \varomega B A N = ~i \varomega \varmu A N H,
-
-as the frequency, the magnetic permeability and the effective area are known.
+- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop (:math:`\varepsilon = - \frac{d \Phi}{~d \mathbf{t}} = ~i \omega \Phi`). Because the loop is much smaller than the wavelength of the magnetic field in an airborne FDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the magnetic field (H) at the receiver (:math:`\varepsilon = ~i \omega \Phi = ~i \omega B A N = ~i \omega \mu A N H`), as the frequency, the magnetic permeability and the effective area are known.
 
 .. figure:: ./images/receiver_emf.png
-    :align: center
-    :figwidth: 75%
+    :align: right
+    :figwidth: 30%
     :name: receiver_emf
 
     The EMF measured at the receiver loop is proportional to the magnetic field.
