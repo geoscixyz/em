@@ -26,7 +26,7 @@ Some questions to think about that will influence the survey design:
 
 Detectability
 -------------
-  
+
 
 In order for a target to be detectable, the secondary field (whether that be
 the electric field, magnetic field, or voltage potential) must be larger than
@@ -78,11 +78,11 @@ previous geophysical surveys, geological information, drilling, etc) to be
 able to design an appropriate survey. In the end, spending time on survey
 design will likely provide better information and recovery about the target.
 
-For more information about survey design for specific geophysical methods, see
-the following pages:
+.. For more information about survey design for specific geophysical methods, see
+.. the following pages:
 
-- :ref:`DC resistivity survey geometry <dcr_survey_design>`
-- :ref:`Airborne FDEM survey geometry <airborne_fdem_survey_design>`
+.. - :ref:`DC resistivity survey geometry <dcr_survey_design>`
+.. - :ref:`Airborne FDEM survey geometry <airborne_fdem_survey_design>`
 
 
 

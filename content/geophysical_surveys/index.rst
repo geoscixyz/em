@@ -47,6 +47,7 @@ sections, we discuss:
 
     fundamentals/index
     dcr/index
+    ip/index
     airborne_fdem/index
     airborne_tdem/index
     mt/index
