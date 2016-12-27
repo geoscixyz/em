@@ -1,16 +1,15 @@
-.. _tdem_fields_from_inductive_sources_index:
+.. _fdem_grounded_sources_index:
 
-Fields from inductive sources
-=============================
+Grounded sources
+================
 
 .. raw:: html
     :file: ../../../underconstruction.html
-
 
 .. toctree::
     :maxdepth: 2
 
     halfspace
     layered_earth
-    sphere/index
+    sphere
     plate

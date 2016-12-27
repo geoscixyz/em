@@ -6,6 +6,10 @@ Physics
 .. raw:: html
     :file: ../../../underconstruction.html
 
+
+.. raw:: html
+    :file: ./images/AirborneTDEM.html
+
 To understand the theory of airborne FEM, knowledge in Maxwell3 and Maxwell4
 are required. The physical principles of ATEM can be built base upon the
 knowledge about a frequency-domain system. Essnetially, the following items

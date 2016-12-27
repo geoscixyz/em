@@ -254,14 +254,14 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'EM.geosci'
+html_title = 'Electromagnetic Geophysics'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'emgeosci.png'
+# html_logo = 'disclogo-02.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

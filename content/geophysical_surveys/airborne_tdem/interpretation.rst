@@ -127,6 +127,9 @@ together to form a pseudo-3D volume for visualization. Advanced techniques
 also consider the correlation between adjacent locations by imposing lateral
 constraints, etc.
 
+ .. raw:: html
+    :file: images/Pred_slice.html
+
 2D/3D inversion
 ***************
 
