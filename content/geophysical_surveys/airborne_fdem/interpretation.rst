@@ -90,19 +90,19 @@ Quantitative Inversion
 
 .. figure:: ./images/fdem_inv1d_demo.png
   :align: right
-  :figwidth: 40%
+  :figwidth: 50%
   :name: fdem_inv1d_demo
 
   1D layered earth inversion of the 3-layer model.
 
-This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the data at all the observing frequencies. :numref:`fdem_inv1d_demo` shows the 1D inversion result of the 3-layer example in :ref:`Physics<airborne_fdem_physics>`. The conductive layer from 20 to 40 m depth is reasonably recovered by the inversion, although the interfaces are not sharp becasue of the smooth constraint used in the inversion. 
+This approach assume the earth’s conductivity only varies as a function of depth. At each measurement location, the inversion find a layered model that explains the data at all the observing frequencies. :numref:`fdem_inv1d_demo` shows the 1D inversion result of the 3-layer example in :ref:`Physics<airborne_fdem_physics>`. The conductive layer from 20 to 40 m depth is reasonably recovered by the inversion, although the interfaces are not sharp becasue of the smooth constraint used in the inversion.
 
 .. figure:: ./images/FEM_1D_Columns.png
   :align: right
-  :figwidth: 40%
+  :figwidth: 50%
   :name: FEM_1D_Colm
 
-  1D layered earth inversion of the sphere model.
+  1D layered earth inversions of the sphere model.
   
 For the data from the sphere model, 1D inversion can still be performed at individual stations to provide information about local changes in conductivity. :numref:`FEM_1D_Colm` presents such 1-D models in a 3-D space for the :ref:`sphere example<FDEM_sphere_example>`, but the lack of lateral continuity makes it difficult to interpret. Many layered models at multiple locations then can be stitched together to form a pseudo-3D volume for model visualization. Advanced techniques can also consider the correlation between adjacent locations by imposing lateral constraints.
 
