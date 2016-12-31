@@ -22,7 +22,7 @@ Ground penetrating radar (GPR) is an electromagnetic method used for very near s
 Basic Idea
 ----------
 
-During GPR surveys, a source antenna (Tx) is used to send a pulse of high-frequency electromagnetic waves (10 MHz to 2.6 GHz) into the ground. As the radiowaves propagate through the Earth, they are distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Sensors (Rx) at the Earth’s surface measure the amplitudes and travel times of signals returning to the surface. This information is then used to image discrete targets and physical boundaries.
+During GPR surveys, a source antenna (Tx) is used to send a pulse of radiowaves (10 MHz to 2.6 GHz) into the ground. As the radiowaves propagate through the Earth, they are distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Sensors (Rx) at the Earth’s surface measure the amplitudes and travel times of signals returning to the surface. This information is then used to image discrete targets and physical boundaries.
 
 Depending on the application, various transmitter-receiver configurations can be used. GPR systems can also be mounted to helicopters or placed in boreholes. The depth of penetration and resolution of the survey may also be adjusted by changing the operating frequency of the transmitter antenna.
 
