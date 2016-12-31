@@ -8,7 +8,9 @@ Survey
 
 The success of a GPR survey depends on the transmitter-receiver configuration used and the operating frequency of the source.
 
-
+	- What are the transmitter and receiver?
+	- Resolution and depth of investigation for the survey
+	- Transmitter-receiver configuration
 
 Transmitter
 -----------
@@ -172,8 +174,10 @@ Using these figures, we can see that:
 	- The probing distances for hard rocks (granites, limestones, schists...) is quite large.
 
 
-Survey Design: Survey Configurations
-------------------------------------
+Survey Design: Antenna Configurations
+-------------------------------------
+
+**General design for GPR surveys**
 
 
 Common-Offset and Zero-Offset
