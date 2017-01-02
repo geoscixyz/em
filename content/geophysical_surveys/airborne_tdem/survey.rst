@@ -15,17 +15,17 @@ Transmitter
 ^^^^^^^^^^^
 
 - **Loop**: Because an ATEM system covers a wide bandwidth using rapid change in the
-transmitter current waveform, only one transmitter loop is needed in a system.
+  transmitter current waveform, only one transmitter loop is needed in a system.
 
 - **Platform**: If using a helicopter, the transmitter loop is usually attached to
-a round frame towed after the helicopter through a cable. If using a fixed-
-wing airplane, the transmitter loop is shaped as a diamond attached to the
-nose, tail and wingtips of the plane.
+  a round frame towed after the helicopter through a cable. If using a fixed-
+  wing airplane, the transmitter loop is shaped as a diamond attached to the
+  nose, tail and wingtips of the plane.
 
 - **Peak current**. The actual peak current that goes through the coil may vary depending on
-the power of the generator and other constraints. A transmitter loop mounted
-on a fixed-wing aircraft usually carries larger peak current thanks to the
-lifting capability of a fixed-wing for more powerful generators.
+  the power of the generator and other constraints. A transmitter loop mounted
+  on a fixed-wing aircraft usually carries larger peak current thanks to the
+  lifting capability of a fixed-wing for more powerful generators.
 
 .. figure:: ./images/source_moment.png
     :align: right
@@ -34,9 +34,22 @@ lifting capability of a fixed-wing for more powerful generators.
 
     Moment of an airborne EM loop source.
     
-- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, a quantity defined as the product of the effective area and the peak current :numref:`source_moment`. A high moment can generate greater excitations and thus improves the quality of data in a noisy environment, but the actual area and current of the loop are limited by the power supply and other practical restrictions. Modern ATEM systems are equipped with a dipole moment over 1 million Am:math:`^2` to achieve a depth of penetration down to a couple of kilometers.
+- **Moment**: The strength of a magnetic dipole source is specified by dipole moment, 
+  a quantity defined as the product of the  effective area and the peak current 
+  :numref:`source_moment`. A high moment can generate greater excitations and thus 
+  improves the quality of data in a noisy environment, but the actual area and 
+  current of the loop are limited by the power supply and other practical restrictions. 
+  Modern ATEM systems are equipped with a dipole moment over 1 million Am:math:`^2` to 
+  achieve a depth of penetration down to a couple of kilometers.
 
-- **Waveform**: An ATEM source induces a time-dependent EM fields underground by making rapid change in the transmitter current. An ATEM waveform usually consists of on-time (current is turned on and changing) and off-time (current is turned off and not changing). ATEM waveforms are usually bipolar, so some systematic errors can be stacked out. The shape of an ATEM system's waveform is fixed, but how often a on-time pulse appears can be tuned by a parameter called base frequency (typically from 20 to 90 Hz). A lower base frequency allows a larger transmitter moment, measuring at later delay times, and thus detection of deep geology. 
+- **Waveform**: An ATEM source induces a time-dependent EM fields underground by 
+  making rapid change in the transmitter current. An ATEM waveform usually consists 
+  of on-time (current is turned on and changing) and off-time (current is turned off 
+  and not changing). ATEM waveforms are usually bipolar, so some systematic errors 
+  can be stacked out. The shape of an ATEM system's waveform is fixed, but how often 
+  a on-time pulse appears can be tuned by a parameter called base frequency (typically 
+  from 20 to 90 Hz). A lower base frequency allows a larger transmitter moment, 
+  measuring at later delay times, and thus detection of deep geology. 
 
 .. figure:: ./images/atem_waves.jpg
     :align: center
@@ -50,8 +63,11 @@ Receiver
 ^^^^^^^^
 
 - **Loop**: ATEM uses another loop to measure the time-derivative of the magnetic
-field (dB/dt), in a way similar to AFEM. At the receiver coil, an electromotive force (measured in Volt) can
-be induced by the primary field from the source and the secondary field from the earth. When the transmitter current is turned off during the off-time, only the secondary field is measured. The coils can be multi-turned to increase the effective area for better SNR.
+  field (dB/dt), in a way similar to AFEM. At the receiver coil, an electromotive 
+  force (measured in Volt) can be induced by the primary field from the source 
+  and the secondary field from the earth. When the transmitter current is turned 
+  off during the off-time, only the secondary field is measured. The coils can be 
+  multi-turned to increase the effective area for better SNR.
 
 .. figure:: ./images/receiver_emf_atem.png
     :align: right
@@ -60,26 +76,37 @@ be induced by the primary field from the source and the secondary field from the
 
     The EMF measured at the receiver loop is proportional to dB/dt data.
     
-- **Measurement**: The induced EMF is proportional to the rate of change of the magnetic flux through the area enclosed by the loop (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}}). Because the loop is much smaller than the wavelength of the magnetic field in an airborne TDEM survey, the magnetic field at the receiver can be considered uniform. The total magnetic flux is then approximated by the product of magnetic flux intensity and the effective area of the receiver loop. Then the measured EMF can be used to calculate the dB/dt at the receiver (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}} = - \frac{d A N \mathbf{B}}{d \mathbf{t}} = - A N \frac{d \mathbf{B}}{d \mathbf{t}}`), as the effective area is known. Conventionally, a time-domain system only measures dB/dt during off-time when the primary is zero, but in practice both on-time and off-time data are acquired as time series. In some cases, the on-time data can be particularly diagnostic.
+- **Measurement**: The induced EMF is proportional to the rate of change of the 
+  magnetic flux through the area enclosed by the loop 
+  (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}}). Because the loop is much 
+  smaller than the wavelength of the magnetic field in an airborne TDEM survey, 
+  the magnetic field at the receiver can be considered uniform. The total magnetic 
+  flux is then approximated by the product of magnetic flux intensity and the 
+  effective area of the receiver loop. Then the measured EMF can be used to 
+  calculate the dB/dt at the receiver 
+  (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}} = - \frac{d A N \mathbf{B}}{d \mathbf{t}} = - A N \frac{d \mathbf{B}}{d \mathbf{t}}`), as the effective area is known. Conventionally, a time-domain 
+  system only measures dB/dt during off-time when the primary is zero, but in practice 
+  both on-time and off-time data are acquired as time series. In some cases, the 
+  on-time data can be particularly diagnostic.
 
 
 Configuration
 ^^^^^^^^^^^^^
 
 - **Orientation**: The transmitter loop in an ATEM system is usually a horizontal
-loop, which is relatively easier to manufacture and implement in the field
-operation. The receiver loop can be much smaller, and three loops can be
-oriented orthogonally to measure three-component dB/dt.
+  loop, which is relatively easier to manufacture and implement in the field
+  operation. The receiver loop can be much smaller, and three loops can be
+  oriented orthogonally to measure three-component dB/dt.
 
 - **Separation**: Basic physical model for ATEM is a configuration called
-"coincident loop" or "central loop", in which the recevier is at the center
-of the transmitter loop. This has been strictly used in same ATEM systems,
-but there are variants. For example, the receiver can be mounted to the tail
-of the transmitter loop or suspended above the transmitter loop. In a fixed-
-wing system, the receiver is usually towed a couple of hundreds
-meters after and below the transmitter loop. Such separation is negligible
-for low induction number, but must be taken into account when interpreting
-early time channels or over conductive region.
+  "coincident loop" or "central loop", in which the recevier is at the center
+  of the transmitter loop. This has been strictly used in same ATEM systems,
+  but there are variants. For example, the receiver can be mounted to the tail
+  of the transmitter loop or suspended above the transmitter loop. In a fixed-
+  wing system, the receiver is usually towed a couple of hundreds
+  meters after and below the transmitter loop. Such separation is negligible
+  for low induction number, but must be taken into account when interpreting
+  early time channels or over conductive region.
 
 .. figure:: images/atem_configs.jpg
     :align: center
@@ -91,7 +118,8 @@ early time channels or over conductive region.
 Field Operation
 ---------------
 
-During production, a frame or bird is towed by a helicopter flying along lines and the EM data are measured during the flight.
+During production, a frame or bird is towed by a helicopter flying along lines 
+and the EM data are measured during the flight.
 
 Flight
 ^^^^^^
