@@ -78,7 +78,7 @@ Receiver
     
 - **Measurement**: The induced EMF is proportional to the rate of change of the 
   magnetic flux through the area enclosed by the loop 
-  (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}}). Because the loop is much 
+  (:math:`\varepsilon = - \frac{d \Phi}{d \mathbf{t}}`). Because the loop is much 
   smaller than the wavelength of the magnetic field in an airborne TDEM survey, 
   the magnetic field at the receiver can be considered uniform. The total magnetic 
   flux is then approximated by the product of magnetic flux intensity and the 
