@@ -36,8 +36,7 @@ The objective of the project is to model and estimate the nitrate reduction in s
 
     setup
     properties
-    survey
-    data
+    survey_data
     processing
     interpretation
     synthesis
