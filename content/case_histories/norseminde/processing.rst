@@ -1,7 +1,7 @@
 .. _norseminde_processing:
 
-Data and Processing
-===================
+Processing
+==========
 
 After data collection the raw data was processed in the Aarhus Workbench to remove noise.  Coupled data arising from man-made installations such as buildings, power lines, cables, roads and railroads was also removed. :numref:`fignoise_processing` shows the data before (:numref:`fignoise_processing` a) and after removal of data affected by noise and couplings (:numref:`fignoise_processing` b).
 

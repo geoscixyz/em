@@ -1,7 +1,7 @@
-.. _kasted_survey:
+.. _kasted_survey_data:
 
-Survey
-======
+Survey and Data
+===============
 
 .. figure:: images/fig_instrument.png
     :align: right
