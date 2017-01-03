@@ -126,7 +126,7 @@ Quantitative Inversion
 
 This approach assume the earth's conductivity only varies as a function of
 depth. At each measurement location, the inversion find a layered model that
-explains the entire decay curve in time. :numref:`fdem_inv1d_demo` shows the 
+explains the entire decay curve in time. :numref:`tdem_inv1d_demo` shows the 
 1D inversion result of the 3-layer example in :ref:`Physics<airborne_tdem_physics>`.
 Many layered models at multiple 
 locations then can be stitched together to form a pseudo-3D volume for 
