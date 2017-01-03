@@ -1,7 +1,7 @@
-.. _norseminde_survey:
+.. _norseminde_survey_data:
 
-Survey
-======
+Survey and Data
+===============
 
 .. figure:: images/fig_instrument.png
     :align: right

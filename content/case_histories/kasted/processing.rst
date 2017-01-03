@@ -1,7 +1,7 @@
 .. _kasted_processing:
 
-Data and Processing
-===================
+Processing
+==========
 
 Due to the dense infrastructure in the area, many of the soundings suffered from couplings to man-made conductors and were removed during the data processing, and prior to the inversion. Failure to eliminate these data would have inevitably resulted in artefacts in the resistivity models recovered. We estimate that approximately 30% of the acquired data had to be culled (:numref:`kasted_datalines_processing`).
 
