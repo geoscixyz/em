@@ -53,7 +53,7 @@ Transmitter
 
 .. figure:: ./images/atem_waves.jpg
     :align: center
-    :scale: 50%
+    :figwidth: 60%
     :name: atem_waves
 
     Common ATEM waveforms.
