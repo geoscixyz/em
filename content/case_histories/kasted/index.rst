@@ -39,8 +39,7 @@ In Denmark all drinking water is groundwater. The geological setting is dominate
 
     setup
     properties
-    survey
-    data
+    survey_data
     processing
     interpretation
     synthesis
