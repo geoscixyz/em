@@ -4,7 +4,7 @@ SkyTEM
 ``````
 
 .. figure:: ./images/skytem_view.jpg
-    :align: center
+    :align: right
     :scale: 50%
     :name: skytem_view
 
