@@ -61,8 +61,8 @@ However, it still has its value in data quality control and preliminary
 interpretation.
 
 .. figure:: ./images/con_res_decays.jpg
-    :align: center
-    :figwidth: 30%
+    :align: right
+    :figwidth: 50%
     :name: con-res_decays
 
     A conductive terrain has a slowly-decaying dB/dt response. For most time
@@ -76,8 +76,8 @@ slower decays (greater time constant) and poor conductors have faster decays
 (smaller time constant). 
 
 .. figure:: ./images/atem_visual_sounding.jpg
-    :align: center
-    :figwidth: 30%
+    :align: right
+    :figwidth: 50%
     :name: atem_visual_sounding1
 
     Example sounding showing variation of conductivity at depth. A slowly-decaying
