@@ -161,7 +161,7 @@ This section presents commercial airborne TEM systems.
     :maxdepth: 1
 
     skytem
-    vtem
+..    vtem
 .. - :ref:`RESOLVE<AFEM_survey_RESOLVE>`
 .. - :ref:`DIGHEM<AFEM_survey_DIGHEM>`
 
