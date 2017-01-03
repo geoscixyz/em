@@ -30,13 +30,13 @@ Transmitter
 .. figure:: ./images/source_moment.png
     :align: right
     :figwidth: 30%
-    :name: source_moment
+    :name: source_moment_atem
 
     Moment of an airborne EM loop source.
     
 - **Moment**: The strength of a magnetic dipole source is specified by dipole moment, 
-  a quantity defined as the product of the  effective area and the peak current 
-  :numref:`source_moment`. A high moment can generate greater excitations and thus 
+  a quantity defined as the product of the effective area and the peak current (:numref:`source_moment_atem`). 
+  A high moment can generate greater excitations and thus 
   improves the quality of data in a noisy environment, but the actual area and 
   current of the loop are limited by the power supply and other practical restrictions. 
   Modern ATEM systems are equipped with a dipole moment over 1 million Am:math:`^2` to 
