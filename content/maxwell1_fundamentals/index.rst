@@ -15,9 +15,10 @@ Maxwell Equations in the :ref:`time <time_domain_equations>` and
 :ref:`frequency <frequency_domain_equations>` domains.
 These equations can be solved once sources are specified and appropriate
 boundary and interface conditions are provided. Much can be learned by solving
-the equations in an :ref:`unbounded homogeneous earth
-<equations_in_homogeneous_media_index>`, with plane wave and dipolar
-sources. We present these along with software apps that allow the user to
+the equations in an unbounded homogeneous earth, with
+:ref:`plane wave <plane_waves_in_homogeneous_media_index>` and
+:ref:`dipolar sources <dipole_sources_in_homogeneous_media_index>`.
+We present these along with software apps that allow the user to
 visualize the fields and fluxes and explore the relationships between physical
 properties, sources and EM fields. These examples also allow us to introduce
 concepts, terminology and background mathematics that are used throughout
@@ -41,8 +42,9 @@ route to take and how to proceed.
     formative_laws/index
     time_domain_equations
     frequency_domain_equations
-    equations_in_homogeneous_media/index
+    plane_waves_in_homogeneous_media/index
     reflection_and_refraction/index
+    dipole_sources_in_homogeneous_media/index
     quick_guide_maxwell
     solving_maxwells_equations/index
     looking_for_more

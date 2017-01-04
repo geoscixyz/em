@@ -1,4 +1,4 @@
-.. _time_domain_planewave_sources_analytic_solution:
+.. _time_domain_plane_wave_sources_analytic_solution:
 
 Analytic Solution
 =================
