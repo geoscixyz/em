@@ -28,6 +28,9 @@ Aspen
 
 3. Limitations of different EM surveys
 
+.. figure:: ./images/FormationMM.png
+    :align: right
+    :figwidth: 70%
 
 .. toctree::
     :maxdepth: 1
