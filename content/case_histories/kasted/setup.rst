@@ -24,7 +24,12 @@ The local focus area of this study is shown in :numref:`kasted_location_setup`. 
 
 Based on the findings of Høyer, et al. (:cite:`Hoyer2015`), at least five generations of valley structures are crosscutting in the area around the pumping wells. Some of these valleys are filled with coarse sediments, thereby acting as aquifers, and others are filled up with clay. The system of valleys connects the well-fields near Kasted, which leaves the important question how these two well-fields interact despite their distance of 5 km, and also how the expected pumping induced drawdown influences local streams and wetlands.
 
+.. figure:: images/fig_crosssection.jpg
+    :align: center
+    :figwidth: 90%
+    :name: fig_crosssection
 
+    Cross-section showing local geology (:cite:`Hoyer2015`).
 
 
 

@@ -1,4 +1,4 @@
-.. _norseminde_survey_data:
+.. _norsminde_survey_data:
 
 Survey and Data
 ===============
@@ -17,12 +17,12 @@ The survey was conducted by SkyTEM Surveys ApS and the HydroGeophysics Group, Aa
     :figwidth: 45%
     :name: figlines_survey
 
-    Norseminde survey lines.
+    Norsminde survey lines.
 
 The small size and weight of the system allows the use of a smaller and more cost effective helicopter. The frame is made from a composite material and the aerodynamics profile allows the system to be flown at a speed of 100 to 140 km/h. In our case it took one week to fly the pilot survey of ~ 2000 line km over an area of 120 km :math:`\!^2` with a line spacing of 50-100 m. This time includes refueling of helicopter, check and small repairs of the system, delays due to weather conditions etc.
 In the acquisition settings of the present survey, each moment, SLM and HM, had a stack size of 80 transients with a repetition frequency of 400 Hz resulting in a full sounding for each 0.6 s. With an average flight speed of 30 m/s, this gives a full SLM+HM sounding for each 15 m. An additional stacking window is applied to the data during processing to improve the signal-to-noise ratio at late times. The width of the stacking filter varies and increases with gate times in order to obtain the best lateral resolution possible; it is shorter at earlier gate times, starting with 1 s for gates until 20 µs. The final best lateral resolution of the top 30 m is estimated at ~ 20-40 m, considering the diffusivity of the method, the frame altitude close to 30 m, and a conductive ground. For a more resistive ground, the footprint of the system becomes larger, and a larger volume of the ground is averaged. 
 
-
+    
 
 
 
