@@ -21,7 +21,7 @@ Norsminde
 .. figure:: images/fig_thumbnail.png
     :align: right
     :figwidth: 50%
-    :name: figthumbnail_index
+    :name: figthumbnail_norsminde_index
 
     Average resistivity map for a depth of 15-20 metres within the Norsminde survey region.
 
