@@ -1,14 +1,14 @@
-.. _norseminde_setup:
+.. _norsminde_setup:
 
 Setup
 =====
 
-.. figure:: images/fig_norsemindelocation.png
+.. figure:: images/fig_norsmindelocation.png
     :align: right
     :figwidth: 55%
     :name: figlocation_setup
 
-    Location of the Norseminde survey area.
+    Location of the Norsminde survey area.
 
 The survey area is located 20 km south of Aarhus, Denmark and covers the Norsminde catchment area of about 120 km :math:`\!^2` (:numref:`figlocation_setup`). The geology of the catchment is complex and can be divided into units consisting of glacial beds, Miocene beds, Eocene beds, buried valleys and glacial tectonic complexes. The complex geology settings high demands to the survey design ad resolution of the ATDEM data. The entire catchment was flown with a SkyTEM system to resolve the upper 30 meters of the soil at a farm scale resolution.
 

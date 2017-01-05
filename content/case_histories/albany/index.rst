@@ -20,7 +20,7 @@ Albany
 .. figure:: images/figDrillModel.png
     :align: right
     :figwidth: 40%
-    :name: figThumbnail_index
+    :name: figThumbnail_albany_index
 
 
 On January 19 :math:`\!^{\textrm{th}}`, 2012, Zenyatta Ventures Ltd. (Zenyatta) announced the discovery of a very rare type of hydrothermal graphite deposit on its Albany Project. The discovery was based on drill testing of anomalies identified by airborne electromagnetic survey flown in 2010 by Geotech Ltd. using its prototype VTEM :math:`\!^{\textrm{MAX}}` time-domain EM system. Crone Geophysics & Exploration Ltd. (Crone) was contracted by Zenyatta to perform surface time-domain EM (TDEM) surveys on the Property during February and March 2013. Crone targeted the drill-confirmed East and West graphitic breccia pipes using an in-loop and out-of-loop configuration to couple with their top and steeply dipping edges, respectively, and successfully outlined their lateral extents.

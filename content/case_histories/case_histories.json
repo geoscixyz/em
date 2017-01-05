@@ -147,26 +147,24 @@
             {"uid":"Albany graphite deposit, Ontario, Canada", "as":"Location"}
         ]
     },
-    "norseminde":{
-        "title":"Norseminde",
+    "norsminde":{
+        "title":"Norsminde",
         "description":"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data",
-        "source":"./norseminde/",
-        "thumbnail":"./norseminde/images/fig_thumbnail.png",
+        "source":"./norsminde/",
+        "thumbnail":"./norsminde/images/fig_thumbnail.png",
         "contributors":[
-            {"uid":"user:jpedersen", "as":"author"},
-            {"uid":"user:fefferso", "as":"author"},
-            {"uid":"user:fjorgensen", "as":"author"},
-            {"uid":"user:jcrefsgaard", "as":"author"},
             {"uid":"user:eauken", "as":"author"},
-            {"uid":"user:cschamper", "as":"author"},
             {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
             {"uid":"user:dccowan", "as":"reviewer"}
         ],
         "tags":[
             {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
             {"uid":"Groundwater Mapping", "as":"Applications"},
             {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
-            {"uid":"Norseminde, Denmark", "as":"Location"}
+            {"uid":"Norsminde, Denmark", "as":"Location"}
         ]
     },
     "kasted":{

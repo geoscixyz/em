@@ -1,4 +1,4 @@
-.. _norseminde_synthesis:
+.. _norsminde_synthesis:
 
 Synthesis
 =========

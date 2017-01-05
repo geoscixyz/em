@@ -1,4 +1,4 @@
-.. _norseminde_processing:
+.. _norsminde_processing:
 
 Processing
 ==========

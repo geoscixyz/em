@@ -1,4 +1,4 @@
-.. _norseminde_interpretation:
+.. _norsminde_interpretation:
 
 Interpretation
 ==============
