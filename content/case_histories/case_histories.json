@@ -126,9 +126,9 @@
     },
     "albany":{
         "title":"Albany",
-        "description":"Description needed",
+        "description":"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery",
         "source":"./albany/",
-        "thumbnail":"./albany/images/figThumbnail.png",
+        "thumbnail":"./albany/images/figDrillModel.png",
         "contributors":[
             {"uid":"user:jlegault", "as":"author"},
             {"uid":"user:jlymburner", "as":"author"},

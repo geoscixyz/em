@@ -17,7 +17,7 @@ Albany
 
 **Abstract**
 
-.. figure:: images/figThumbnail.png
+.. figure:: images/figDrillModel.png
     :align: right
     :figwidth: 40%
     :name: figThumbnail_index
@@ -36,10 +36,8 @@ This case study describes the airborne time-domain EM (TDEM) and magnetic geophy
 
     setup
     properties
-    survey
-    data
-    processing
-    interpretation
+    survey_data
+    processing_interpretation
     synthesis
     lessons
 
