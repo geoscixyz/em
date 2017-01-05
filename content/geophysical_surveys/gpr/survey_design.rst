@@ -9,19 +9,19 @@ Survey Design
 
 
 Transmitter and Receiver Orientation
-++++++++++++++++++++++++++++++++++++
+------------------------------------
 
 
 
 
 Resolution and Probing Distance
-+++++++++++++++++++++++++++++++
+-------------------------------
 
 The choice in operating frequency is a very important aspect of GPR survey design. When designing a survey, we must ensure that GPR signals can penetrate to sufficient depth in order to image the target. However, we must also ensure that frequencies contained within the GPR signal provide sufficient resolution. We will show that although higher operating frequencies can be used to obtain higher resolution images of the subsurface, higher frequency GPR signals cannot penetrate very deeply.
 
 
 Vertical Resolution for Layers
-------------------------------
+******************************
 
 In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incoming wavelet.
 As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
@@ -35,7 +35,7 @@ This means higher frequencies/shorter pulse widths are used for higher resolutio
 
 
 Horizontal Resolution for Objects
----------------------------------
+*********************************
 
 .. figure:: images/GPR_resolution_horizontal.png
 		:align: right
@@ -53,7 +53,7 @@ In general, we can distinguish the signals from two nearby objects so long as:
 where :math:`V` is the propagation velocity, :math:`f_c` is the central frequency for the wavelet, :math:`d` is the depth to the objects and :math:`L` is the horizontal separation distance of both objects. We can see from this equation, that by reducing the pulse length, we can image objects that are closer together. Additionally, it is harder to distinguish objects which are further away from the transmitters and receivers.
 
 Probing Distance
-----------------
+****************
 
 .. figure:: images/GPR_probing_distance_2.jpg
 	:align: right
