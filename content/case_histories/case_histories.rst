@@ -149,12 +149,12 @@ Elevenmile Canyon
 Albany
 ^^^^^^
 
-.. image:: ./albany/images/figThumbnail.png
+.. image:: ./albany/images/figDrillModel.png
     :alt: albany
     :width: 260
     :align: right
 
-- :ref:`Description needed <albany_index>`
+- :ref:`Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery <albany_index>`
 
 
 - Contributors
