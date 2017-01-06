@@ -1,14 +1,12 @@
 .. _gpr_interpretation:
 
+
+.. purpose::
+	
+	Here, some basic interpretation techniques for GPR data are discussed. As we will show, the responses from particular structures result in diagnostic signatures within radargram data.
+
 Interpretation
 ==============
-
-.. raw:: html
-    :file: ../../../underconstruction.html
-
-
-
-
 
 Zero-Offset Surveys: Buried Compact Objects
 -------------------------------------------

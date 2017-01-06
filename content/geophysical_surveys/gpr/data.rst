@@ -1,5 +1,8 @@
 .. _gpr_csem_data:
 
+.. purpose::
+
+	Here, we define the data which are collected during GPR surveys. Common methods for visualizing the data are presented. Important processing steps applied to raw collected data are also discussed.
 
 Data
 ====
@@ -13,7 +16,7 @@ Data
 
 During GPR surveys, a source antenna (Tx) is used to send a pulse of radiowaves (10 MHz to 2.6 GHz) into the ground. As the radiowave signal propagates through the Earth, it is distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Distorted radiowave signals are then measured by the receiver antenna (Rx).
 
-**What is measured:** Receiver antennas are sensitive to the electric fields carried by radiowave signals and act as transducers, converting incoming GPR signals into electrical current. The induced current produces a corresponding voltage which is then recorded. Ultimately GPR receivers measure the amplitude and polarization of incoming radiowave signals as a function of time. The change in amplitude and polarization of radiowave signals occurs as they are distorted by propagating through the Earth. Because the raw data are eventually normalized, the units are not particularly important.
+**What is measured:** Receiver antennas are sensitive to the electric fields carried by radiowave signals and act as transducers, converting incoming GPR signals into electrical current. The induced current produces a corresponding voltage which is then recorded digitally. Ultimately GPR receivers measure the amplitude and polarization of incoming radiowave signals as a function of time. The change in amplitude and polarization of radiowave signals occurs as they are distorted by propagating through the Earth. Because the raw data are eventually normalized, the units are not particularly important.
 
 **Measurement duration:** Radiowave signals for GPR propagate through the Earth at velocities comparable to the speed of light (c :math:`\approx 3.0 \times 10^8` m/s) and travel relatively short distances (metres to 10s of metres). As a result, the total travel times for GPR signals as they propagate from the transmitter antenna to the receiver antenna are very short. The time series collected for a single GPR shot typically lasts up to a few hundred nanoseconds after the signal is generated. However for GPR surveys meant to image very near to the surface (resulting in shorter travel times), data are collected for a shorter period after the transmitter emits the GPR signal.
 
