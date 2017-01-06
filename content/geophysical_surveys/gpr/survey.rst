@@ -106,7 +106,7 @@ In these cases, the electrical current creates standing waves in the transmitter
 
 **Broadband Dipole Antenna:** Dipole antennas can be made more broadband by increasing the width of the conductive rods or by using elongated conductive plates. By making the antennas sufficiently broadband, we can more effectively transmit the entire frequency content contained within the source wavelet signal. This antenna type is best used for operating frequencies below 250 MHz. 
 
-**Bow-Tie Antenna**: Bow-tie antennas consist of two symmetrically oriented flat conductors. Bow-tie antennas were designed to operate at freqencies between 100 MHz and 1 GHz. Bow-tie transmitters are a form of wide-band antenna; which is able to more effectively transmit signals with larger bandwidths compared to dipole antennas. As a result, bow-tie antennas are superior when transmitting short wavelength high frequency radiowave signals.
+**Bow-Tie Dipole Antenna**: Bow-tie antennas consist of two symmetrically oriented flat conductors. Bow-tie dipole antennas were designed to operate at freqencies between 100 MHz and 1 GHz. Bow-tie transmitters are a form of wide-band antenna; which is able to more effectively transmit signals with larger bandwidths compared to dipole antennas. As a result, bow-tie antennas are superior when transmitting short wavelength high frequency radiowave signals. This antenna type tends to have dimensions on the order of 10s of centimetres; making them more compact than broadband dipole antennas used for GPR.
 
 
 Survey Configurations
