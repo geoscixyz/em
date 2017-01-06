@@ -1,4 +1,4 @@
-.. _norseminde_properties:
+.. _norsminde_properties:
 
 Properties
 ==========

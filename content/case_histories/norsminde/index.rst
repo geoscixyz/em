@@ -1,7 +1,7 @@
-.. _norseminde_index:
+.. _norsminde_index:
 
-Norseminde
-==========
+Norsminde
+=========
 
 **Assessment of near-surface mapping capabilities by airborne transient electromagnetic data – an extensive comparison to conventional borehole data**
 
@@ -21,9 +21,9 @@ Norseminde
 .. figure:: images/fig_thumbnail.png
     :align: right
     :figwidth: 50%
-    :name: figthumbnail_index
+    :name: figthumbnail_norsminde_index
 
-    Average resistivity map for a depth of 15-20 metres within the Norseminde survey region.
+    Average resistivity map for a depth of 15-20 metres within the Norsminde survey region.
 
 Groundwater models are an essential decision tool for the administration and evaluation of groundwater resources. To establish reliable models high-resolution measurements of geological structures are required putting increasing demands on the quantity, density and quality of the data collected.  The financial and physical constraints of drilling make the application of near surface airborne geophysical techniques appropriate for data collection; however, is this data sufficient to have confidence in the formulation of a reliable model? To answer these questions a SkyTEM system, which special focus on the upper 30 m of the ground, was developed and tested in the Norsminde Fjord catchment in Denmark as a part of the NiCA project.
 
