@@ -11,7 +11,7 @@ Data
     :align: right
     :figwidth: 55%
 
-    Schematic of a zero-offset GPR setup.
+    Schematic of a common-offset GPR setup.
 
 
 During GPR surveys, a source antenna (Tx) is used to send a pulse of radiowaves (10 MHz to 2.6 GHz) into the ground. As the radiowave signal propagates through the Earth, it is distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Distorted radiowave signals are then measured by the receiver antenna (Rx).
