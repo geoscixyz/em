@@ -1,4 +1,4 @@
-.. _frequency_domain_planewave_sources_simulation:
+.. _frequency_domain_plane_wave_sources_simulation:
 
 
 Simulation

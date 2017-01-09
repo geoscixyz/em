@@ -1,17 +1,27 @@
-.. _maxwells_equations_in_homogeneous_media_plane_wave_index:
+.. _plane_waves_in_homogeneous_media_index:
 
-Maxwell's Equations for Plane Wave Sources
-==========================================
+Plane Waves in Homogeneous Media
+================================
 
 .. topic:: Purpose
 
-    Plane wave solutions to Helmholtz’s equations exist when the medium is homogeneous. By exploring the plane wave solution in both frequency and time domain, we understand how the plane EM wave propagates. Our content parallels that offered in many EM resources :cite:`ward1988,griffiths1999,stratton1941`
+    Plane wave solutions to Helmholtz’s equations exist when the medium is
+    homogeneous. By exploring the plane wave solution in both frequency and
+    time domain, we understand how the plane EM wave propagates. Our content
+    parallels that offered in many EM resources
+    :cite:`ward1988,griffiths1999,stratton1941`
 
 
-Setup
------
+**Setup**
 
-Consider a situation where infinite current sheet at :math:`z` =0 m, and plane EM wave propagating downward (negative :math:`z` direction) due to this. We focus on a specific situation where only :math:`E_x` and :math:`H_y` are existing. For the frequency domain case, the sheet current can be considered alternating in time (e.g. :math:`I_x=I_0cos(\omega t)`). Lightening can be considered for the domain, and impulse current will be the closest option for its mathematical representation ( :math:`I_x = I_0\delta (t)` ), where :math:`\delta (t)` is a Dirac-Delta function.
+Consider a situation where infinite current sheet at :math:`z` =0 m, and plane
+EM wave propagating downward (negative :math:`z` direction) due to this. We
+focus on a specific situation where only :math:`E_x` and :math:`H_y` are
+existing. For the frequency domain case, the sheet current can be considered
+alternating in time (e.g. :math:`I_x=I_0cos(\omega t)`). Lightening can be
+considered for the domain, and impulse current will be the closest option for
+its mathematical representation ( :math:`I_x = I_0\delta (t)` ), where
+:math:`\delta (t)` is a Dirac-Delta function.
 
 .. figure:: images/planewavedown.png
    :align: center

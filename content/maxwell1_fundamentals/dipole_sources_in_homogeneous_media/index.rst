@@ -1,15 +1,11 @@
-.. _maxwells_equations_in_homogeneous_media_dipole_sources_index:
+.. _dipole_sources_in_homogeneous_media_index:
 
-Maxwell's Equations for Dipole Sources
-======================================
-
-.. raw:: html
-    :file: ../../../../underconstruction.html
-
+Dipole Sources in Homogeneous Media
+===================================
 
 .. topic:: Purpose
 
-    In this section of EMgeosci, we present the concept of dipole sources and examine the fields they generate within homogeneous media.
+    In this section, we present the concept of dipole sources and examine the fields they generate within homogeneous media.
     The intent of this material is to provide a fundamental understanding of the sources used in many geophysical applications.
     For each dipole source, analytic expressions for the electric and magnetic fields are provided in both the frequency and time domains.
     Numerical modeling tools are also made available for investigating the dependency of the magnetic and electric fields on various parameters.
@@ -26,18 +22,6 @@ On this page, we will focus on defining the term dipole source and show how dipo
 	\nabla \times \mathbf{E} + i \omega \mu \mathbf{H} &= \pm \, \mathbf{J_m}  \\
 	\nabla \times \mathbf{H} - \sigma \mathbf{E} &= \pm \, \mathbf{J_e}
 	\end{split}
-
-
-
-
-
-
-
-
-
-
-**Organization of sections here**
-
 
 
 
