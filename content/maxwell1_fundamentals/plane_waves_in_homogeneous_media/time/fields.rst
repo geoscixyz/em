@@ -1,4 +1,4 @@
-.. _time_domain_planewave_sources_fields:
+.. _time_domain_plane_wave_sources_fields:
 
 Fields
 ======
@@ -13,12 +13,12 @@ Fields
 
    Setup diagram of plane EM wave propagation heading downward (negaitve :math:`z`).
 
-As shown in :numref:`planewavedown`, the same setup is considered to :ref:`frequency_domain_planewave_sources_fields`. However, in :ref:`time_domain_planewave_sources_analytic_solution` to solve the plane EM wave equations, we let known impulse electric field as an initial condition, and obtained full expression for the electric field. Here we limit our attention to quasi-static regime where displacement currents are ignored (:math:`\epsilon \frac{\partial \mathbf{e}}{\partial t} << \sigma \mathbf{e}`).
+As shown in :numref:`planewavedown`, the same setup is considered to :ref:`frequency_domain_plane_wave_sources_fields`. However, in :ref:`time_domain_plane_wave_sources_analytic_solution` to solve the plane EM wave equations, we let known impulse electric field as an initial condition, and obtained full expression for the electric field. Here we limit our attention to quasi-static regime where displacement currents are ignored (:math:`\epsilon \frac{\partial \mathbf{e}}{\partial t} << \sigma \mathbf{e}`).
 
 EM fields
 ^^^^^^^^^
 
-Time domain magnetic for the given setup can be simply derived by transforming frequency domain magnetic field to time. Here we are going to use inverse Laplace transform. Frequency domain magnetic field obtained in :ref:`frequency_domain_planewave_sources_fields` can be rewritten as
+Time domain magnetic for the given setup can be simply derived by transforming frequency domain magnetic field to time. Here we are going to use inverse Laplace transform. Frequency domain magnetic field obtained in :ref:`frequency_domain_plane_wave_sources_fields` can be rewritten as
 
 .. math::
     H_y = -\frac{i k}{i\omega \mu} E_x = -\frac{i k}{i\omega \mu} E_{0 \ x}^- e^{ikz},
