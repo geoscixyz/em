@@ -30,6 +30,8 @@ import urllib, hashlib
 import json
 
 from webapp2 import Route, RedirectHandler
+import webapp2_extras
+
 
 TEMPLATEFOLDER = '_build/html/'
 
@@ -62,14 +64,22 @@ class Redirect(webapp2.RequestHandler):
         self.redirect(('/%s' % os.path.sep.join(path)), permanent=True)
 
 
+class RedirectIndex(webapp2.RequestHandler):
+    def get(self, *args, **kwargs):
+        path = str(self.request.path).split(os.path.sep) + ['index.html']
+        path = filter(None, path)
+        self.redirect(('/%s' % os.path.sep.join(path)), permanent=True)
+
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        setTemplate(self, {"indexPage": True}, 'index.html')
+        setTemplate(self, {"indexPage": True}, '/index.html')
 
-# class Error(webapp2.RequestHandler):
-#     def get(self):
-#         setTemplate(self, {}, 'error.html', _templateFolder='_templates/')
-#         # self.redirect('/error.html', permanent=True)
+
+class Error(webapp2.RequestHandler):
+    def get(self):
+        setTemplate(self, {}, '/error.html', _templateFolder='_templates/')
+        # self.redirect('/error.html', permanent=True)
 
 # pointers = [
 #             Route('/en/latest/.*', RedirectHandler, defaults={'_uri': '/.*'}),
@@ -84,9 +94,10 @@ class MainPage(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/_images/.*', Images),
-    ('/en/latest/.*',Redirect),
-    # Route('/en/latest/', RedirectHandler, defaults={'_uri': '/'}),
-    ('/', MainPage),
+    ('/en/latest/.*', Redirect),
+    Route(r'/', RedirectHandler, defaults={'_uri': 'index.html'}),
+    Route(r'<:(.+)>', RedirectIndex),
+    # ('/', MainPage),
     # ('/.*', Error),
 ], debug=True)
 
