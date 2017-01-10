@@ -3,9 +3,6 @@
 Ground Penetrating Radar
 ========================
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 .. figure:: images/GPR_picture_example.jpg
     :align: right
