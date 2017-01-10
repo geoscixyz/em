@@ -8,10 +8,6 @@
 Physics
 =======
 
-	- Basic Explanation
-	- Some properties of radiowaves signals
-	- 2D simulation for a layer model and a sphere model
-
 .. figure:: images/GPR_schematic_example.jpg
     :align: right
     :figwidth: 55%
@@ -19,17 +15,18 @@ Physics
 
     Basic diagram for a GPR survey.
 
-The basic conceptual understanding of GPR is shown in :numref:`fig_survey_GPR_schematic`. During GPR surveys, a source antenna (Tx) is used to send a pulse of radiowaves (10 MHz to 2.6 GHz) into the ground. As the radiowaves propagate through the Earth, they are distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Sensors (Rx) measure the amplitudes and travel times of radiowave signals that have been distorted by the Earth. This information is then used to image discrete targets and physical boundaries.
+As explained on the previous page, the source transmitter (Tx) sends a pulse of radiowaves into the ground. For practical purposes, the source may be considered an electrical current dipole (link). As the radiowaves propagate through the Earth, they are distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. The fundamentals of this were presented in (link). Sensors (Rx) measure the amplitudes and travel times of radiowave signals that have been distorted by the Earth. A 2D simulation can be seen `here <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
 
 Properties of Radiowave Signals
 -------------------------------
 
-Having a-priori knowledge of radiowave properties within the Earth 
+As we will show in :ref:`survey design <gpr_survey_design>`, knowning certain properties of the radiowave signal is beneficial. Several important properties of radiowaves are discussed below. More detail can be found `here <http://gpg.geosci.xyz/content/GPR/GPR_fundamental_principles.html>`__ .
 
 Propagation Velocity
 ********************
 
 Radiowaves propagate through different materials at different speeds.
+The propagation velocity of the Earth directly effects the arrival times of GPR signals.
 The velocity of the radiowaves depends on the physical properties of the medium.
 In general, the velocity of radiowaves through a homogeneous material is given by:
 
@@ -49,25 +46,77 @@ Using the approximation, and assuming the Earth is non-permeable (:math:`\mu = \
 
 where :math:`\mu_r` is the relative permeability and :math:`\varepsilon_r` is the relative permittivity.
 
-Normal Transmission and Reflection
-**********************************
-
-
 Skin Depth
 **********
 
+Skin depth (:math:`\delta`) defines the propagation distance at which the amplitude of an electromagnetic wave is reduced by a factor of :math:`1/e`; i.e. reduced to 37\% of its original amplitude. Skin depth determines the penetration depth for GPR systems. The skin depth is given by:
+
+.. math::
+    \delta = \sqrt{\frac{2}{\omega^2 \mu \varepsilon}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{-1/2} - \; 1 \; \Bigg ]^{1/2} 
+
+If we assume the Earth is non-permeable (:math:`\mu = \mu_0`), then two convenient approximations exist for the skin depth:
+
+.. math::
+	\delta \approx \begin{cases} 503 \sqrt{\dfrac{1}{\sigma f}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ 0.0053 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
+
+Where :math:`f` is the transmitter's operating frequency in Hz.
+
+
+Transmission, Reflection and Refraction
+***************************************
+
+**Transmission and Reflection**
+
+.. figure:: images/normal_incidence_reflection.gif
+    :align: right
+    :figwidth: 35%
+    
+    Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__ .
+
+The transmission, reflection and refraction of radiowave signals is most easily understood by considering plane-waves; which were discussed :ref:`here <fresnel_equations>`. The behaviour of GPR signals at interfaces is strongly dependent on the dielectric properties accross the boundary. For GPR signals arriving at normal incidence, the transmission and reflection coefficients are simplified to:
+
+.. math::
+    R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
+
+and
+
+.. figure:: images/GPR_refraction.png
+    :align: right
+    :figwidth: 25%
+
+    Reflection and refraction of an incoming radiowave.
+
+.. math::
+    T = \frac{\textrm{Transmitted Amplitude}}{\textrm{Incident Amplitude}} = \frac{2 \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
+
+**Refraction**
+
+The refraction of GPR signals can be understood using :ref:`Snell's law <snells_law>`: 
+
+.. math::
+    \frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}
+
+
+For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to :math:`V = c/ \! \sqrt{\varepsilon_r}` (shown earlier).
+In this case, Snell's law can be expressed as:
+
+.. math::
+    \sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2
+
+where :math:`\varepsilon_1` and :math:`\varepsilon_2` are relative permittivities.
 
 
 
 Example: Layered Earth
 ----------------------
 
-
+GPR can be used to resolve layered structures within the Earth. 
 
 
 
 Example: Buried Conductor
 -------------------------
+
 
 
 
