@@ -7,7 +7,7 @@ Unexploded Ordnance
     :file: ../../../underconstruction.html
 
 
-Unexploded ordnances (UXOs) are deﬁned as munitions that were armed, ﬁred and remain unexploded through malfunction. Globally, the United Nations estimates that 15,000-25,000 people are killed or maimed each year from land mines and unexploded ordnance.
+Unexploded ordnance (UXO) are munitions that were armed, ﬁred and remain unexploded through malfunction. Globally, the United Nations estimates that 15,000-25,000 people are killed or maimed each year from land mines and unexploded ordnance.
 
 	- Depth of burial
 	- Physical property contrast
