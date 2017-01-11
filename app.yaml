@@ -60,22 +60,29 @@ handlers:
   static_files: _build/html/\1
   upload: _build/html/(.*\.html)
 
-# serve index files
-- url: /(.+)/
-  static_files: _build/html/\1/index.html
-  upload: _build/html/(.+)/index.html
-
-- url: /(.+)
-  static_files: _build/html/\1/index.html
-  upload: _build/html/(.+)/index.html
-
-- url: /
-  static_files: _build/html/index.html
-  upload: _build/html/index.html
-
-- url: /.*
+- url: /error.html
   static_files: _templates/error.html
   upload: _templates/error.html
+
+
+# serve index files
+- url: /(.+)/
+  script: emgeosci.app
+  # static_files: _build/html/\1/index.html
+  # upload: _build/html/(.+)/index.html
+
+- url: /(.+)
+  script: emgeosci.app
+  # static_files: _build/html/\1/index.html
+  # upload: _build/html/(.+)/index.html
+
+# - url: /
+#   static_files: _build/html/index.html
+#   upload: _build/html/index.html
+
+# - url: /.*
+#   static_files: _templates/error.html
+#   upload: _templates/error.html
 
 - url: .*
   script: emgeosci.app

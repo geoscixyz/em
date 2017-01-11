@@ -13,7 +13,7 @@ Kasted
 
 .. topic :: Prelude
 
-    This case study is based upon the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (et al. 2016) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
+    This case study is based upon the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (:cite:`Vilhelmsen2016`) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
 
 
 **Abstract**
@@ -39,8 +39,7 @@ In Denmark all drinking water is groundwater. The geological setting is dominate
 
     setup
     properties
-    survey
-    data
+    survey_data
     processing
     interpretation
     synthesis
