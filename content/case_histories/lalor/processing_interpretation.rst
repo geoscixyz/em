@@ -19,9 +19,9 @@ Inversion of Late-Times (TC 1-7)
 Because the early time channels are contaminated by cultural noise, the first step is to follow the common practice that only inverting the more reliable late-time data.
 Determination of a uniform background. One location in the survey area is chosen in the region where no significant anomaly is present. The HeliSAM data at that location are used to calculate the best-fitting half-space value about 0.0014 S/m.
 Assignment of data uncertainty. A synthetic HeliSAM data set was generated using the best-fitting half-space model. Then 30% of the magnitude of the simulated datum at each receiver and at each time is used as the uncertainty for that corresponding datum.
-Initial and reference models. The inversion algorithm computes the model complexity with reference to the best-fitting half-space of 0.0014 S/m. However, achieving a good result requires a warm-start that initiates the inversion iteration with an initial guess of a two-prism model (Figure ???). 
+Initial and reference models. The inversion algorithm computes the model complexity with reference to the best-fitting half-space of 0.0014 S/m. However, achieving a good result requires a warm-start that initiates the inversion iteration with an initial guess of a two-prism model (:numref:`lalor_prisms`). 
 
-After 18 iterations, the inversion achieves the desired data misfit and the observed data are reasonably fit in the end of inversion (Figure ???). The recovered 3D conductivity model shows the presence of a highly conductive object below the depth of about 600 m (Figure ???).
+After 18 iterations, the inversion achieves the desired data misfit and the observed data are reasonably fit in the end of inversion (:numref:`lalor_late_fit`). The recovered 3D conductivity model shows the presence of a highly conductive object below the depth of about 600 m (:numref:`lalor_late_model`).
 
 
 .. figure:: images/lalor_late_fit.png
@@ -43,7 +43,7 @@ After 18 iterations, the inversion achieves the desired data misfit and the obse
 Inversion of Late-Times (TC 8-16)
 ---------------------------------
 
-The late-time inversion successfully imaged a major conductors, but it also revealed other near surface conductive features of geologic interest (see the slice at depth = 0 in Figure ???). In order to better resolve those near-surface features, early-time data need to be included in the inversion. The early-time data are difficult to invert because they are heavily contaminated by the power lines. A refined mesh is then designed for the early-time inversion to capture the fine-scale variation of conductivity associated with the power lines. With constraints from the early-time data, the inversion resolves the fine-scale near surface features at a higher resolution compared to only using the late-time data (Figure ???). 
+The late-time inversion successfully imaged a major conductors, but it also revealed other near surface conductive features of geologic interest (see the slice at depth = 0 in :numref:`lalor_powerline`). In order to better resolve those near-surface features, early-time data need to be included in the inversion. The early-time data are difficult to invert because they are heavily contaminated by the power lines. A refined mesh is then designed for the early-time inversion to capture the fine-scale variation of conductivity associated with the power lines. With constraints from the early-time data, the inversion resolves the fine-scale near surface features at a higher resolution compared to only using the late-time data (:numref:`lalor_powerline`). 
 
 .. figure:: images/lalor_powerline_all.png
     :align: center
@@ -56,7 +56,7 @@ The late-time inversion successfully imaged a major conductors, but it also reve
 Inversion of All-Time Data
 --------------------------
 
-Separate inversions of late-time and early-time data reveals that the HeliSAM data contain information about both deep geologic target and near surface features. Then it is desired to invert all time channels together for a complete image. The initial model new contains two sets of object: (1) The high conductivity cells on the surface representing the power lines and (2) the two prisms used in the warm-start inversion of late-time data. The recovered final conductivity model in Figure ??? is a combination of the results from the late-time and early-time inversions.
+Separate inversions of late-time and early-time data reveals that the HeliSAM data contain information about both deep geologic target and near surface features. Then it is desired to invert all time channels together for a complete image. The initial model new contains two sets of object: (1) The high conductivity cells on the surface representing the power lines and (2) the two prisms used in the warm-start inversion of late-time data. The recovered final conductivity model in :numref:`lalor_model_all` is a combination of the results from the late-time and early-time inversions.
 
 .. figure:: images/lalor_alltc_model.png
     :align: right

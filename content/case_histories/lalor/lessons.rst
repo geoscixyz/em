@@ -15,7 +15,7 @@ Warm-Start Inversion
 
     Late-time inversion with a uniform half-space initial model results in an erroneous inversion result, in which the conductors are pushed the outside of the survey area.
 
-It is a common practice to start an EM inversion with a uniform half-space assuming no existing structure in the model. However, at Lalor, we have found that a warm-start with two conductive blocks is necessary. When inverting the late-time data with a uniform half-space initial model, the inversion fits the observed data with an alternative model that is mathematically acceptable but geologically erroneous (Figure ???). 
+It is a common practice to start an EM inversion with a uniform half-space assuming no existing structure in the model. However, at Lalor, we have found that a warm-start with two conductive blocks is necessary. When inverting the late-time data with a uniform half-space initial model, the inversion fits the observed data with an alternative model that is mathematically acceptable but geologically erroneous (:numref:`lalor_model_bad`). 
 
 Although the non-uniqueness of geophysical inversions is well-known, a complete
 failure like this is surprising in EM where there are supposed to be sufficient horizontal and depth resolution. Readers are referred to the original reference for the discussion on the plausible reasons.
@@ -23,7 +23,7 @@ failure like this is surprising in EM where there are supposed to be sufficient 
 Inversion for Near-Surface Infrastructure
 -----------------------------------------
 
-The difficulty of inverting early-time data is from the fact that the 100-m cells originally design for the geologic features are not small enough to capture the signature of the power line cable. So the mesh needs to be refined to a point that the coarseness of the mesh does not prevent the inversion from fitting the data. Here we run three trial inversions of the early-time data with three different cell sizes (100 m, 50 m, and 25 m) around the power line area. The convergences of the trial inversions show that there is still significant amount of anomaly that cannot be fit by using the 100-m mesh, but the resolving powers of the 50-m and 25-m meshes are very similar (Figure ???). It is then determined that a mesh refinement to 50 m would be sufficient in the inversion of early-time HeliSAM data at Lalor.
+The difficulty of inverting early-time data is from the fact that the 100-m cells originally design for the geologic features are not small enough to capture the signature of the power line cable. So the mesh needs to be refined to a point that the coarseness of the mesh does not prevent the inversion from fitting the data. Here we run three trial inversions of the early-time data with three different cell sizes (100 m, 50 m, and 25 m) around the power line area. The convergences of the trial inversions show that there is still significant amount of anomaly that cannot be fit by using the 100-m mesh, but the resolving powers of the 50-m and 25-m meshes are very similar (:numref:`lalor_refine_mesh`). It is then determined that a mesh refinement to 50 m would be sufficient in the inversion of early-time HeliSAM data at Lalor.
 
 .. figure:: images/lalor_refine_mesh.png
     :align: right
