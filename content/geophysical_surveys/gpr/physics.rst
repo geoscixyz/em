@@ -151,8 +151,8 @@ Scattering
 
 Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal. Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise. It also make the interpretation of GPR data more challenging. Several sources of scattering are:
 
-    - Irregular surface shape of larger buried objects (below left).
-    - Rocky soils, which are a large contributor to the scattering of GPR signals (below right).
+    - Irregular surface shape of larger buried objects.
+    - Rocky soils, which are a large contributor to the scattering of GPR signals.
     - Gas bubbles trapped in ice.
     - Clutter made up of small buried objects
 
