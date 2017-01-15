@@ -193,11 +193,5 @@ This represents a non-invasive approach for determining internal structures.
 
 
 
-Commonly Used GPR Systems
-+++++++++++++++++++++++++
-
-
-
-
 
 
