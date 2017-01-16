@@ -3,9 +3,9 @@
 Properties
 ==========
 
-Because of the abundance of sulphide in the ore body, Lalor is geophysically characterised as a deeply buried good conductor that exhibits electrical responses that are distinct from the relatively resistive background. The table below summarizes some typical conductivity values of common sulphide minerals.
+Because of the abundance of sulphide in the ore body, Lalor is geophysically characterized as a deeply buried good conductor that exhibits electrical responses that are distinct from the relatively resistive background. The table below summarizes some typical conductivity values of common sulphide minerals.
 
-The specific electrical conductivity of mineralized rocks at Lalor depends on the type, content and size of sulphides. Given the possible variation in the conductivity of ore bodies, we analyse the expected relative conductivities of the three mineralization types based on the rock sample information from HudBay (Taylor et al., 2014, BCGS Symposium). 
+The specific electrical conductivity of mineralized rocks at Lalor depends on the type, content and size of sulphides. Given the possible variation in the conductivity of ore bodies, we analyze the expected relative conductivities of the three mineralization types based on the rock sample information from HudBay (:cite:`Taylor2014`). 
 
 
 +----------------------+----------------------------+----------------------------+

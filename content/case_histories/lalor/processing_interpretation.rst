@@ -3,7 +3,7 @@
 Processing and Interpretation
 =============================
 
-The Lalor HeliSAM dataset has been preliminarily interpreted by the contractor using plate modelling for the purpose of data quality control. The noticeable irregular shape of the anomaly,
+The Lalor HeliSAM dataset has been preliminarily interpreted by the contractor using plate modeling for the purpose of data quality control. The noticeable irregular shape of the anomaly,
 and the peak on its northern tip, indicate that the target ore body can have complex geometry or orientation, or there is an undiscovered extension that we are not aware of. A full 3D voxel inversion is therefore considered necessary to extract more complete information about the deposit and its surroundings.
 
 Inversion of Late-Times (TC 1-7)

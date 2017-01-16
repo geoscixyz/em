@@ -18,7 +18,7 @@ Since the initial discovery by deeply penetrating electromagnetic (EM) surveys, 
 
 The helicopter sub-audio magnetics (HeliSAM) system (Gap Geophysics Australia) is configured to address those issues. HeliSAM employs a large ground loop fixed on the surface as the transmitter to enhance the strength of signals, and flies a caesium vapour magnetometer (B-field SAM sensor) over the area to collect the transient total magnetic intensity (TMI) data. The scalar TMI data are insensitive to the orientation of the towed bird, so the data quality of HeliSAM is higher than in the conventional airborne EM.
 
-The TMI data measured by a SAM sensor is a vector combination of the earth’s regional magnetic field (B0), the local magnetic anomaly due to the magnetic susceptibility (Ba), and the magnetic field from the EM induction (Bem). By using a bipolar source excitation and stacking, (B0) and (Ba) can be cancelled out, and the final HeliSAM data is only (Bem) projected onto the direction of the earth’s magnetic field (B0).
+The TMI data measured by a SAM sensor is a vector combination of the Earth’s regional magnetic field (:math:`B_0`), the local magnetic anomaly due to the magnetic susceptibility (:math:`B_a`), and the magnetic field from the EM induction (:math:`B_{em}`). By using a bipolar source excitation and stacking, (:math:`B_0`) and (:math:`B_a`) can be canceled out, and the final HeliSAM data is only (:math:`B_{em}`) projected onto the direction of the Earth’s magnetic field (:math:`B_0`).
 
 The following summarizes the specification of the HeliSAM survey at Lalor
 
