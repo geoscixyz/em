@@ -116,6 +116,8 @@ linkcheck_ignore = [
     'http://dx.doi.org/10.1071/EG08027',
     'http://www.publish.csiro.au/paper/PVv2010n149p23',
     'http://www.zenyatta.ca',
+    'https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf',
+    'https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500

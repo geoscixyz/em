@@ -188,6 +188,23 @@
             {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
             {"uid":"Aarhus, Denmark", "as":"Location"}
         ]
+    },
+    "lalor":{
+        "title":"Lalor",
+        "description":"3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit",
+        "source":"./lalor/",
+        "thumbnail":"./lalor/images/lalor_alltc_model.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne TDEM, massive sulphide", "as":"Keywords"},
+            {"uid":"Lalor Lake, Manitoba, Canada", "as":"Location"}
+        ]
     }
 }
 

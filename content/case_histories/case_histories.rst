@@ -18,6 +18,7 @@
     mt_isa/index
     bookpurnong/index
     aspen/index
+    lalor/index
     emc/index
     albany/index
     furggwanghorn/index
@@ -108,6 +109,36 @@ Aspen
     - application: Hydrocarbons
     - location: Canada
     - keyword: Oil Sands
+
+|
+|
+|
+
+
+
+        
+
+Lalor
+^^^^^
+
+.. image:: ./lalor/images/lalor_alltc_model.png
+    :alt: lalor
+    :width: 260
+    :align: right
+
+- :ref:`3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit <lalor_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, massive sulphide
+    - Applications: Mineral exploration
+    - Location: Lalor Lake, Manitoba, Canada
+    - Geophysical Surveys: Airborne TDEM
 
 |
 |
