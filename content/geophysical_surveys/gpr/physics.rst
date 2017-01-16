@@ -110,19 +110,53 @@ where :math:`\varepsilon_1` and :math:`\varepsilon_2` are relative permittivitie
 Example: Layered Earth
 ----------------------
 
-GPR can be used to resolve layered structures within the Earth. 
+.. figure:: images/LayeredEarth.gif
+    :align: right
+    :figwidth: 40%
+
+    GPR signal as it propagates through a 2-layer Earth.
+
+GPR can be used to resolve layered structures within the Earth. On the right, we show radiowave signals undergoing reflections and transmissions due to differences in dielectric permittivity (:math:`\varepsilon_{r,0} = 1`, :math:`\varepsilon_{r,1} = 4` and :math:`\varepsilon_{r,2} = 8`). From this example we can see several things:
+
+    - GPR signals propagate faster in mediums where the dielectric permittivity is lower.
+    - The wavelength of GPR signals is larger in mediums where the dielectric permittivity is lower.
+    - As a portion of the signal is transmitted from a more dielectric material to a less dielectric material (ground to air), refraction causes the signal to spread out.
+
 
 
 
 Example: Buried Conductor
 -------------------------
 
+.. figure:: images/Conductor.gif
+    :align: right
+    :figwidth: 40%
+
+    GPR signal as it reflects off a highly conductive object.
+
+Many target objects relevant to GPR (buried pipes, landmines, etc...) are highly conductive. When radiowaves reach highly conductive objects, the radiowave signal experiences a near-perfect reflection. This results in a strong reflected signal which can be measured by one or more receivers. Returning signals from buried conductors result in distinct geophysical signatures which can be interpreted from GPR data.
+
+The reflection of a GPR signal as it reaches a highly conductive body is shown on the right. Notice that because there is a perfect reflection, none of the signal propagates through the conductive body.
 
 
 
+Scattering
+----------
 
+.. figure:: images/Scattering.gif
+    :align: right
+    :figwidth: 40%
 
+    Scattering of GPR signals due to non-uniform physical properties in each layer.
 
+Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal. Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise. It also make the interpretation of GPR data more challenging. Several sources of scattering are:
 
+    - Irregular surface shape of larger buried objects.
+    - Rocky soils, which are a large contributor to the scattering of GPR signals.
+    - Gas bubbles trapped in ice.
+    - Clutter made up of small buried objects
+
+|
+|
 
 
