@@ -82,7 +82,7 @@ where :math:`A` is a 3D rotation matrix from the coordinate system of the transm
 where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. In the case that our object is a sphere, analytic expressions can be found here (link). For particular ordnance items, the polarization along each axis may be obtained and stored in a library. Parameterizations also exist for describing the polarization of UXOs. One such parameterization (Pasion, 1999) is given by:
 
 .. math::
-	L_{ii} (t) = k (t-\alpha)^{-\beta} e^{-t/\gamma}
+	L_{ii} (t) = k_i (t-\alpha_i)^{-\beta_i} e^{-t/\gamma_i}
 
 
 
