@@ -23,17 +23,17 @@ Dipole Model for UXO Responses
 
 **maybe show a nice dipole response over an object**
 
-Research has shown that in general, the EM response from a UXO (:math:`\mathbf{B}_{uxo}`) can be approximated by its dipole response (reference). As a result, the excitation of the ordnance item is characterized by an induced magnetic dipole moment (:math:`\mathbf{m}`). Thus:
+Research has shown that in general, the EM response from a UXO (:math:`\mathbf{B}_{s}`) can be approximated by its dipole response (reference). As a result, the excitation of the ordnance item is characterized by an induced magnetic dipole moment (:math:`\mathbf{m}`):
 
 .. math::
-	\mathbf{B}_{uxo} = \frac{\mu_0}{4 \pi} \Bigg [ \frac{\hat r \big ( \hat r \cdot \mathbf{m} \big ) - \mathbf{m}}{r^3} \Bigg ]
+	\mathbf{B}_{s} = \frac{\mu_0}{4 \pi} \Bigg [ \frac{\hat r \big ( \hat r \cdot \mathbf{m} \big ) - \mathbf{m}}{r^3} \Bigg ]
 
-where :math:`\hat r = (r_x,r_y,r_z)` is the unit vector distance from the UXO to a particular location. For practical purposes, the dipole response is formulated in terms of a linear operator:
+where :math:`\hat r = (r_x,r_y,r_z)` is the unit vector distance from the UXO to a particular observation location. For practical purposes, the dipole response is generally formulated in terms of a linear operator:
 
 .. math::
 	\begin{bmatrix} B_x \\ B_y \\ B_z \end{bmatrix} = \begin{bmatrix} G_{xx} & G_{xy} & G_{xz} \\ G_{yx} & G_{yy} & G_{yz} \\ G_{zx} & G_{zy} & G_{zz} \end{bmatrix} \begin{bmatrix} m_x \\ m_y \\ m_z \end{bmatrix}
 
-where
+where the entries within the geometric forward modeling operator (:math:`\mathbf{G}`) are given by:
 
 .. math::
 	G_{ij} = \frac{\mu_0}{4 \pi r^3} \big (r_i r_j - \delta{ij} \big ) \;\;\; \textrm{for} \;\;\; i,j = x,y,z
@@ -41,57 +41,79 @@ where
 and :math:`\delta_{ij}` is the Kronecker delta. The linear formulation allows for rapid computation of the response for multiple receiver coils at one or more separate orientations.
 
 
-Frequency-Domain Response
--------------------------
+Model for Frequency-Domain Responses
+************************************
 
-The physics of the FEM response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). Unlike the sphere however, the excitation of the UXO is not the same in all directions.
-
-
-.. math::
-	\mathbf{m = A^T L A h_p}
-
-where :math:`A` is a 3 :math:`\times` 3 is a 3D rotatation matrix from the coordinate system of the transmitter to the coordinate system of the UXO, :math:`L` characterizes the excitation of the UXO and :math:`h_p` is the transmitter's primary field.
-
-
-
-Transient Responses
--------------------
-
-The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. 
+The physics which governs the UXO's FEM response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). Using the dipole model, the UXO's FEM response can be expressed as:
 
 .. math::
-	\mathbf{d}(t) = 
+	\mathbf{B_s}(\omega) = \mathbf{G m}(\omega)
 
+where :math:`\mathbf{m}(\omega)` is the induced dipole moment for the UXO and :math:`\mathbf{G}` is a linear operator. Unlike a conductive and magnetically permeable sphere, the polarization of the UXO is not the same in all directions and cannot be characterized by a single excitation factor (link). This is overcome by treating the UXO as a tri-axial object, which has a polarization for each axis. Ultimately, the UXO's dipole moment can be expressed as: 
 
-Parameterization of the Decay
+.. math::
+	\mathbf{m}(\omega) = \mathbf{A^T L}(\omega) \mathbf{A h_p}
+
+where :math:`A` is a 3D rotation matrix from the coordinate system of the transmitter (:math:`x,y,z`) to the coordinate system for the UXO (:math:`x',y',z'`), :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter's primary field and :math:`\mathbf{L}(\omega)` is the polarization tensor. Assuming there is no anisotropy, :math:`\mathbf{L}(\omega)` is a diagonal matrix of the form:
+
+.. math::
+	\mathbf{L}(\omega) = \begin{bmatrix} L_{x'} (\omega) & 0 & 0 \\ 0 & L_{y'} (\omega) & 0 \\ 0 & 0 & L_{z'} (\omega) \end{bmatrix}
+
+where :math:`L_{ii}(\omega)` characterizes the polarization along each axis of the UXO. In the case that our object were a sphere, :math:`L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)`; where :math:`\chi (\omega)` is the excitation factor for a sphere. From the model we ultimately see that the UXO's FEM response depends on its orientation relative to the transmitter, its polarization along each axis and the frequency of the transmitter.
+
+Model for Transient Responses
 *****************************
 
+The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO's transient response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). TEM UXO instruments primarily measure :math:`dB_s/dt` as opposed to :math:`B_s(t)`. In any case, the transient response can be expressed as:
+
+.. math::
+	\mathbf{d}(t) = \mathbf{G m}(t) 
+
+where :math:`\mathbf{d}(t)` is used to represent :math:`dB/dt` or :math:`B(t)` and :math:`\mathbf{m}(t)` is the induced dipole moment for the UXO after the primary field has been removed. The UXO's transient dipole moment is given by:
+
+.. math::
+	\mathbf{m}(t) = \mathbf{A^T L}(t) \mathbf{A h_p}
+
+where :math:`A` is a 3D rotation matrix from the coordinate system of the transmitter (:math:`x,y,z`) to the coordinate system for the UXO (:math:`x',y',z'`), :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter's primary field before shut-off and :math:`\mathbf{L}(t)` defines the polarization of the UXO. Assuming there is no anisotropy, :math:`\mathbf{L}(t)` is a diagonal matrix of the form:
+
+.. math::
+	\mathbf{L}(t) = \begin{bmatrix} L_{x'} (t) & 0 & 0 \\ 0 & L_{y'} (t) & 0 \\ 0 & 0 & L_{z'} (t) \end{bmatrix}
+
+where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. In the case that our object is a sphere, analytic expressions can be found here (link). For particular ordnance items, the polarization along each axis may be obtained and stored in a library. Parameterizations also exist for describing the polarization of UXOs. One such parameterization (Pasion, 1999) is given by:
+
+.. math::
+	L_{ii} (t) = k (t-\alpha)^{-\beta} e^{-t/\gamma}
 
 
 
 Geological Noise
 ----------------
 
-Typically, the EM responses from UXOs are significantly stronger than the EM responses from the host medium. In these cases, it is acceptable to neglect the response from the host medium. However, there are certain geological environments in which this assumption is invalid. As an approximation, it is common to neglect coupling and consider the UxO and geological responses as separable, thus:
+Typically, the EM responses from UXOs are significantly stronger than the EM responses from the host medium. In these cases, it is acceptable to neglect the response from the host medium. However, there are certain geological environments in which this assumption is invalid. As an approximation, it is common to neglect coupling and consider the UXO and geological responses as separable, thus:
 
 .. math::
-	B_{tot} = B_{uxo} + B_{geo}
+	B_{tot} = B_{s} + B_{geo}
 
 Conductive Backgrounds
 **********************
 
-In regions where proximal geological units are very conductive (:math:`\sigma > 0.1` S/m), the Earth's inductive response becomes significant.
-
-	- The TEM decay of the inductive response
-
+In regions where proximal geological units are very conductive (:math:`\sigma > 0.1` S/m), the Earth's inductive response becomes significant. As a result, processing steps are required in order to remove the Earth's inductive response. The transient response from conductive geologies is generally recognized as having a :math:`t^{-3/2}` decay; thus its time-derivative has a :math:`t^{-5/2}` decay.
 
 Magnetic Backgrounds
 ********************
 
+TEM methods become less effective in regions where lateritic topsoils are prominent. Lateritic soils are highly weathered, rich in iron-oxide minerals and found within tropical and sub-tropical climates. 
+
+
+These soils have been known to exhibit a distinct magnetic response, called the viscous remanent magnetization (VRM) response, which masks the TEM anomalies from UXOs. 
 
 
 
-**From Laurens**: Magnetic and electromagnetic (EM) data are the most common geophysical data types which are acquired for UXO detection and discrimination. Magnetic instruments are used to measure distortions in the Earth’s geomagnetic fields produced by magnetically susceptible materials (e.g. steel). Magnetic sensors deployed for UXO detection typically either measure the total magnetic field (scalar measurement) or the difference between two closely spaced magnetometers measuring the vertical component of the magnetic field (gradiometer measurement).Magnetic sensor arrays have been deployed for helicopter-borne surveys ("heli-mag") in wide area assessments. Multiple magnetometers can also be arranged in arrays for ground-based surveying, with the increased swath decreasing the number of passes required to cover a given area.  Data processing of magnetic data is often complicated by a significant background soil response, which can obscure identification of discrete targets in the measured signal. In addition, magnetic data can only provide limited information about intrinsic target properties (i.e. size and shape) and so are rarely used to classify detected targets as UXO and non-UXO (Billings, 2004).   Our emphasis here will therefore be on detection and classification with electromagnetic data.
+
+From Laurens
+------------
+
+Magnetic and electromagnetic (EM) data are the most common geophysical data types which are acquired for UXO detection and discrimination. Magnetic instruments are used to measure distortions in the Earth’s geomagnetic fields produced by magnetically susceptible materials (e.g. steel). Magnetic sensors deployed for UXO detection typically either measure the total magnetic field (scalar measurement) or the difference between two closely spaced magnetometers measuring the vertical component of the magnetic field (gradiometer measurement).Magnetic sensor arrays have been deployed for helicopter-borne surveys ("heli-mag") in wide area assessments. Multiple magnetometers can also be arranged in arrays for ground-based surveying, with the increased swath decreasing the number of passes required to cover a given area.  Data processing of magnetic data is often complicated by a significant background soil response, which can obscure identification of discrete targets in the measured signal. In addition, magnetic data can only provide limited information about intrinsic target properties (i.e. size and shape) and so are rarely used to classify detected targets as UXO and non-UXO (Billings, 2004).   Our emphasis here will therefore be on detection and classification with electromagnetic data.
 
 
 As depicted in Figure 1, electromagnetic instruments actively transmit a time-varying primary magnetic field which illuminates the earth. The variation of the primary field induces currents in the ground and these currents in turn produce a secondary field which can be measured by a receiver at the surface. EM sensors measure the decay of these secondary fields after the primary field is switched off. These secondary fields provide information regarding electrically conductive items in the ground.
