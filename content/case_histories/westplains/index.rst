@@ -13,7 +13,7 @@ West Plains
 
 .. topic :: Prelude
 
-    This case history is based upon some stuff. 
+    This case history describes the inversion of VTEM and RESOLVE airborne datasets to characterize an orogenic gold deposit. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
 
 
 **Abstract**
