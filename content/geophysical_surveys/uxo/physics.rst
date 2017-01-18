@@ -63,7 +63,7 @@ where :math:`L_{ii}` characterizes the polarization along each each axial direct
 Frequency-Domain Responses
 **************************
 
-**Needs a set of images for geometry and response**
+**Needs a set of images the response**
 
 The physics which governs the UXO's FEM response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). Using the dipole model, the UXO's FEM response can be expressed as:
 
@@ -79,6 +79,8 @@ where :math:`L_{ii}(\omega)` characterizes the polarization along each axis of t
 
 Transient Responses
 *******************
+
+**Needs images of the response and the parameterization**
 
 The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO's transient response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). TEM UXO instruments primarily measure :math:`dB_s/dt` as opposed to :math:`B_s(t)`. In any case, the transient response can be expressed as:
 
@@ -116,17 +118,16 @@ Typically, the EM responses from UXOs are significantly stronger than the EM res
 Conductive Backgrounds
 **********************
 
-In regions where proximal geological units are very conductive (:math:`\sigma > 0.1` S/m), the Earth's inductive response becomes significant. As a result, processing steps are required in order to remove the Earth's inductive response. The transient response from conductive geologies is generally recognized as having a :math:`t^{-3/2}` decay; thus its time-derivative has a :math:`t^{-5/2}` decay. The decay of the Earth's inductive response is comparatively faster than the decays of typical UXOs. As a result, inductive responses from the Earth generally impact UXO surveys at earlier time channels.
+**Needs image as example**
 
-**Show an example**
+In regions where the local geology is very conductive (:math:`\sigma > 0.1` S/m), the Earth's inductive response becomes significant. As a result, processing steps are required in order to remove the Earth's inductive response. The transient response from conductive geologies is generally recognized as having a :math:`B(t)` response which decays as :math:`t^{-3/2}` and a :math:`dB/dt` response which decays as :math:`t^{-5/2}`. The decay of the Earth's inductive response is comparatively faster than the decays of typical UXOs. As a result, inductive responses from the Earth are more likely to impact UXO data at earlier times.
 
 Magnetic Backgrounds
 ********************
 
-TEM methods become less effective in regions where lateritic topsoils are prominent. Lateritic soils are highly weathered, rich in iron-oxide minerals and found within tropical and sub-tropical climates. 
+**Needs image as example**
 
-
-These soils have been known to exhibit a distinct magnetic response, called the viscous remanent magnetization (VRM) response, which masks the TEM anomalies from UXOs. 
+TEM methods become less effective in regions where lateritic topsoils are prominent. Lateritic soils are highly weathered, rich in iron-oxide minerals and found within tropical and sub-tropical climates. Lateritic soils exhibit viscous remanent magnetization (VRM) (link). Responses attributed to VRM have been known to mask the TEM anomalies from UXOs. The VRM response is characterized as having a B(t) decay poportional to :math:`ln(t)` and a :math:`dB/dt` decay proportional to :math:`t^{-1}`.
 
 
 
