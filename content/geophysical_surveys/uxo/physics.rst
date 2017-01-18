@@ -52,7 +52,7 @@ Unlike a conductive and magnetically permeable sphere, the excitation of a UXO i
 .. math::
 	\mathbf{m}(\omega) = \mathbf{A^T L A h_p}
 
-where :math:`A` is a 3D rotation matrix from the coordinate system of the fields (:math:`\hat x,\hat y,\hat z`) to the coordinate system for the UXO (:math:`\hat x',\hat y',\hat z'`), :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter's primary field and :math:`\mathbf{L}` is the polarization tensor. Assuming there is no anisotropy, :math:`\mathbf{L}` is a diagonal matrix of the form:
+where :math:`A (\theta ,\phi )` is a 3D rotation matrix from the coordinate system of the fields (:math:`\hat x,\hat y,\hat z`) to the coordinate system for the UXO (:math:`\hat x',\hat y',\hat z'`), :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter's primary field and :math:`\mathbf{L}` is the polarization tensor. Assuming there is no anisotropy, :math:`\mathbf{L}` is a diagonal matrix of the form:
 
 .. math::
 	\mathbf{L} = \begin{bmatrix} L_{x'} & 0 & 0 \\ 0 & L_{y'} & 0 \\ 0 & 0 & L_{z'} \end{bmatrix}
@@ -95,12 +95,14 @@ where :math:`A` is a 3D rotation matrix from the coordinate system of the transm
 .. math::
 	\mathbf{L}(t) = \begin{bmatrix} L_{x'} (t) & 0 & 0 \\ 0 & L_{y'} (t) & 0 \\ 0 & 0 & L_{z'} (t) \end{bmatrix}
 
-where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. In the case that our object is a sphere, analytic expressions can be found here (link). For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library. Parameterizations also exist for describing the polarization of UXOs. One such parameterization (Pasion, 1999) is given by:
+where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. In the case that our object is a sphere, analytic expressions can be found here (link). For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library.
+
+Parameterizations also exist for describing the polarization of UXOs such that :math:`\mathbf{m}(t) = L(t) \mathbf{h_p}`. In this case, :math:`L(t)` is a scalar function which assumes that polarization of the UXO is parallel to the inducing field. One such parameterization for the decay of :math:`B (t)` is given by (Becker):
 
 .. math::
-	L_{ii} (t) = k_i (t-\alpha_i)^{-\beta_i} e^{-t/\gamma_i}
+	L(t) = k \Bigg ( 1 + \sqrt{\frac{t}{\alpha}} \, \Bigg )^{-\beta} e^{-t/\gamma}
 
-which depends on parameters :math:`k_i, \alpha_i, \beta_i` and :math:`\gamma_i` for :math:`i = x,y,z`.
+which depends on parameters :math:`k, \alpha, \beta` and :math:`\gamma`. At early times, we can see that the decay of :math:`B(t)` is very flat and that :math:`dB/dt` decays proportional to :math:`t^{-1/2}`. At intermediate times, the decay of :math:`B(t)` is proportional to :math:`t^{-\beta/2}`. At late times, the responses exhibits exponential decay which is dependent on :math:`e^{-t/\gamma}`.
 
 
 Geological Noise
