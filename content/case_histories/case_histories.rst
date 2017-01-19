@@ -21,6 +21,7 @@
     lalor/index
     emc/index
     albany/index
+    westplains/index
     furggwanghorn/index
     norsminde/index
     barents_sea/index
@@ -198,6 +199,36 @@ Albany
     - Applications: Mineral exploration, hydrothermal graphite porphyry
     - Location: Albany graphite deposit, Ontario, Canada
     - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+
+|
+|
+|
+
+
+
+        
+
+West Plains
+^^^^^^^^^^^
+
+.. image:: ./westplains/images/thumbnail_westplains.png
+    :alt: westplains
+    :width: 260
+    :align: right
+
+- :ref:`West Plains <westplains_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne EM, orogenic gold, greenstone belt
+    - Applications: Mineral exploration
+    - Location: Nunavut, Canada
+    - Geophysical Surveys: VTEM, RESOLVE
 
 |
 |

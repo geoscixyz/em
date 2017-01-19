@@ -205,6 +205,23 @@
             {"uid":"Airborne TDEM, massive sulphide", "as":"Keywords"},
             {"uid":"Lalor Lake, Manitoba, Canada", "as":"Location"}
         ]
+    },
+    "westplains":{
+        "title":"West Plains",
+        "Description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt.",
+        "source":"./westplains/",
+        "thumbnail":"./westplains/images/thumbnail_westplains.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"VTEM, RESOLVE", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
+            {"uid":"Nunavut, Canada", "as":"Location"}
+        ]
     }
 }
 
