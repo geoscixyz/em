@@ -25,7 +25,7 @@ Transforming to the frequency domain also reduced the data set as the final data
 
 For example, suppose an MT time series was collected using a sampling rate of 2 seconds and a time window of 30 minutes. That means 900 measurements were made for 5 different field components. In comparions, the data are usually only evaluated at 30-50 frequencies, thus significantly reducing the number of data :cite:`simpsonbahr2005`.
 
-:cite:`simpsonbahr2005` describe two way this data reduction is done: (1) stacking the data from discretized time windows and (2) using information from nearby frequencies as Weidelt's dispersion relations states that similar information is provided by neighbouring frequencies.
+:cite:`simpsonbahr2005` describe two ways this data reduction is done: (1) stacking the data from discretized time windows and (2) using information from nearby frequencies as Weidelt's dispersion relations states that similar information is provided by neighbouring frequencies.
 
 .. todo:: Add data image + time windowing (like DISC MT slide... using Unsworth figure). 
 
@@ -45,4 +45,18 @@ The :ref:`complex impendance tensor <mt_physics>` consists of 4 components that 
 
 Using the impedance, we can :ref:`calculate the apparent resistivity and phase<mt_physics>` and plot it for the different frequencies.
 
-.. todo:: insert a data image, rho app and phase?
+Examples
+********
+
+**Layered earth**: The first example has 3 layers (:numref:`mt_3layer`). The overburden is 25 m thick and has a resistivity of 100 :math:`\Omega` m. The second layer is 75 m thick with a resistivity of 10 :math:`\Omega` m. And the bottom layer extends to depth and has a resistivity of 100 :math:`\Omega` m. The equations to calculate the electric and magnetic fields for this example are given :ref:`here <MT_N_layered_Earth>`, which also includes an interactive app to remove layers and/or change the resistivity of each layer.
+
+.. figure:: images/3_layeredEarth_data.png
+        :name: mt_3layer
+        :figwidth: 100%
+        :align: center
+
+.. todo:: add in images for sphere problem
+
+**Sphere**: The second example contains a sphere with 50 m radius and 10 :math:`\Omega` m in a background of 100 :math:`\Omega` m.
+
+.. todo:: tie back to electrostatic sphere problem (charges)

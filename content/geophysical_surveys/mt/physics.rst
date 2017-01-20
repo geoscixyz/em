@@ -6,24 +6,48 @@ Physics
 .. raw:: html
     :file: ../../../underconstruction.html
  
-The natural source fields travel as plane waves. At the surface of the Earth, the fields are :ref:`transmitted <reflection_and_refraction_index>` vertically into the subsurface, creating vertically propagating plane waves that generate sheet currents.
+The natural source fields travel as plane waves and the physics behind these are explained in high detail on the :ref:`page for fundamentals of natural sources <MT_N_layered_Earth>`. At the surface of the Earth, the fields are :ref:`transmitted <reflection_and_refraction_index>` vertically into the subsurface, creating vertically propagating plane waves that generate sheet currents, as shown :ref:`below <mt_refltransmovie>`. This :ref:`fundamentals page <MT_refl_transcoeff>` provides more details and reflection and transmission for MT.
 
-.. figure:: images/Reflection_Transmission.png
-        :name: mt_rt
-        :figwidth: 50%
-        :align: center
+.. _mt_refltransmovie:
+
+.. list-table:: : Reflection at the interface
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: images/Reflection_Transmission.html
+   *  - Powered by: `SimPEG <http://simpeg.xyz/>`_
 
 .. todo:: step-by-step from plane source to apparent resistivity (radio button widghet): (1) plane waves, (2) skin depth), (3) phase difference between E and H (tie back to 1D stuff Thibaut already did)
 
-.. figure:: images\SkinDepth.png
-        :name: mt_sd
-        :figwidth: 100%
-        :align: center
+The fields propogate at different frequencies and each frequency provides different information about the subsurface. Low frequencies penetrate deeper while high frequencies provide information near the surface. The plane wave attenuates with depth and a skin depth is the distance at which the amplitude has decreased by :math:`1/e`. This is explained in detail :ref:`on the fundamentals page <MT_skindepthdoi>`. :ref:`The movie below <mt_sd_envelopes>` shows the magnetic field at different frequencies and how it attenuates in the subsurface.
 
-.. figure:: images/EH_fields.png
-        :name: mt_eh
-        :align: center
-        :figwidth: 50%
+.. _mt_sd_envelopes:
+
+.. list-table:: : Given the same conductivity model, the skindepth decreases as the frequency increases.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: images/SkinDepth_envelope.html
+   *  - Powered by: `SimPEG <http://simpeg.xyz/>`_
+
+
+In the :ref:`movie below <mt_doimovie>`, we see that even at very high frequencies (20,000 Hz), MT is still a deep exploration method in resistive environments. The skin depth for this scenario is about 1125 m, providing an estimate of the survey's depth of investigation.
+
+.. _mt_doimovie: 
+
+.. list-table:: : Depth of investigation in MT.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: images/MT_EH_fields_movie.html
+   *  - Powered by: `SimPEG <http://simpeg.xyz/>`_
+
 
 **Impedance**
 
@@ -43,16 +67,14 @@ For a halfspace earth, the impedance simplifies to a single component of the mat
 
 .. math:: \rho_a = \frac{1}{\omega \mu} \left| Z_{xy} \right| ^2
 
-.. math:: \Phi = \tan^{-1} (\frac{Im(Z_{xy})}{Re(Z_{xy})}) = -\frac{\pi}{4}
+.. math:: \Phi = \tan^{-1} \left( \frac{Im(Z_{xy})}{Re(Z_{xy})} \right) = -\frac{\pi}{4}
 
 For a one-dimensional Earth, the off-diagonal components of the impedance are zero and the on-diagonal components are equal to each other:
 
 .. math:: 
         Z_{1D} = \left( \begin{matrix} 0 && Z_{xy}\\ Z_{yx} && 0\end{matrix} \right)
 
-.. math:: Z_{xy} = Z_{yx}
-
-.. todo:: insert 1D figures
+.. math:: Z_{xy} = -Z_{yx}
 
 For a two-dimensional Earth, the on-diagonal components are no longer identical but the off-diagonal parts remain zero:
 
@@ -60,8 +82,6 @@ For a two-dimensional Earth, the on-diagonal components are no longer identical 
         Z_{2D} = \left( \begin{matrix} 0 && Z_{xy}\\ Z_{yx} && 0\end{matrix} \right)
 
 .. math:: Z_{xy} \neq Z_{yx}
-
-.. todo:: insert 2D figures: TE mode and TM mode
 
 There is no symmetry for a 3D Earth and all components of the impedance are non-zero.
 
@@ -74,22 +94,6 @@ A ratio can be also be calculated using just the magnetic fields. This is referr
 
 For a 1D Earth, :math:`T_{zx} = T_{zy} = 0`.
 
-.. todo:: 2D te and tm?
-
 In 3D, all components of the tipper are non-zero. A special case of a tipper survey is when the horizontal components of the magnetic field are measured at a single reference station and the vertical component is measured using an airborne system. This is known as a :ref:`ZTEM survey <ztem_index>`.
 
-Examples
-********
 
-**Layered earth**: The first example has 3 layers (:numref:`mt_3layer`). The overburden is 25 m thick and has a resistivity of 100 :math:`\Omega` m. The second layer is 75 m thick with a resistivity of 10 :math:`\Omega` m. And the bottom layer extends to depth and has a resistivity of 100 :math:`\Omega` m. The equations to calculate the electric and magnetic fields for this example are given :ref:`here <MT_N_layered_Earth>`, which also includes an interactive app to remove layers and/or change the resistivity of each layer.
-
-.. figure:: images/3_layeredEarth_data.png
-        :name: mt_3layer
-        :figwidth: 100%
-        :align: center
-
-**Sphere**: The second example contains a sphere with 50 m radius and 10 :math:`\Omega` m in a background of 100 :math:`\Omega` m.
-
-.. todo:: tie back to electrostatic sphere problem (charges)
-
-.. todo:: add in images for sphere problem
