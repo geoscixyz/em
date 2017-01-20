@@ -75,7 +75,7 @@ The physics which governs the UXO's FEM response can be best understood by consi
 	:figwidth: 50%
 	:name: uxo_physics_FEM_moment
 
-	Induced dipole moment parallel to the inducing field, normalized by the inducing field, for a sphere 2 m below an inductive source.
+	Induced dipole moment parallel to the inducing field (normalized by the inducing field) for a sphere (:math:`R` = 20 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 6) 2 m below an inductive source.
 
 
 .. math::
@@ -88,7 +88,7 @@ where :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter'
 
 where :math:`L_{ii}(\omega)` characterizes the polarization along each axis of the UXO. From the model we ultimately see that the UXO's FEM response depends on its orientation relative to the transmitter, its polarization along each axis and the frequency of the transmitter.
 
-In the case that the object were a sphere, :math:`L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)` where :math:`\chi (\omega)` is the excitation factor for a sphere. The induced dipole moment parallel to the inducing field, normalized by the inducing field, is shown in :numref:`uxo_physics_FEM_moment`. The FEM anomaly from the sphere at f = 10 :math:`\!^4` Hz is shown in :numref:`uxo_physics_FEM_anomaly`.
+In the case that the object were a sphere, :math:`L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)` where :math:`\chi (\omega)` is the excitation factor for a sphere. The dipole moment for a spherical object (normalized by the inducing field) is shown in :numref:`uxo_physics_FEM_moment`. The FEM anomaly from the sphere at f = 10 :math:`\!^4` Hz is shown in :numref:`uxo_physics_FEM_anomaly`.
 
 .. figure:: images/physics_FEM_anomaly.png
 	:align: center
@@ -101,6 +101,14 @@ Transient Responses
 *******************
 
 The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO's transient response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). TEM UXO instruments primarily measure :math:`dB_s/dt` as opposed to :math:`B_s(t)`. In any case, the transient response can be expressed as:
+
+.. figure:: images/physics_TEM_moment.png
+	:align: right
+	:figwidth: 50%
+	:name: uxo_physics_TEM_moment
+
+	Induced dipole moment parallel to the inducing field, normalized by the inducing field, for a sphere 2 m below an inductive source (a) Dipole moment. (b) Time derivative.
+
 
 .. math::
 	\mathbf{d}(t) = \mathbf{G \eta}(t) 
@@ -115,9 +123,11 @@ where :math:`A` is a 3D rotation matrix from the coordinate system of the transm
 .. math::
 	\mathbf{L}(t) = \begin{bmatrix} L_{x'} (t) & 0 & 0 \\ 0 & L_{y'} (t) & 0 \\ 0 & 0 & L_{z'} (t) \end{bmatrix}
 
-where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. In the case that our object is a sphere, analytic expressions can be found here (link). For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library.
+where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. 
 
-Parameterizations also exist for describing the polarization of UXOs such that :math:`\mathbf{m}(t) = L(t) \mathbf{h_p}`. In this case, :math:`L(t)` is a scalar function which assumes that polarization of the UXO is parallel to the inducing field. One such parameterization for the decay of :math:`B (t)` is given by (Becker):
+In the case that our object is a sphere, analytic expressions can be found here (link). The dipole transient moment of the UXO (normalized by the inducing field) and its time-derivative3 are shown in :numref:`uxo_physics_TEM_moment`. The TEM anomaly from the sphere at t = 10 :math:`\!^{-4}` s is shown in :numref:`uxo_physics_TEM_anomaly`.
+
+For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library. Parameterizations also exist for describing the polarization of UXOs such that :math:`\mathbf{m}(t) = L(t) \mathbf{h_p}`. In this case, :math:`L(t)` is a scalar function which assumes that polarization of the UXO is parallel to the inducing field. One such parameterization for the decay of :math:`B (t)` is given by (Becker):
 
 .. math::
 	L(t) = k \Bigg ( 1 + \sqrt{\frac{t}{\alpha}} \, \Bigg )^{-\beta} e^{-t/\gamma}
