@@ -9,13 +9,14 @@ Transient responses
     responses. Differentiate standard types of transient responses: a) step-on,
     b) impulse, and c) step-off.
 
+
 .. plot::
 
     import numpy as np
     import matplotlib.pyplot as plt
     import matplotlib
     matplotlib.rcParams['font.size'] = 12
-    tau = [1e-1, 1e-1/5, 1e-1/10]
+    tau = [0.1, 0.05, 0.01]
     fig = plt.figure(figsize=(10, 3))
     ax1 = plt.subplot(131)
     ax2 = plt.subplot(132)
@@ -48,6 +49,7 @@ Transient responses
     ax3.set_title("Impulse current")
     plt.tight_layout()
     plt.show()
+
 
 Step-on response
 ----------------
