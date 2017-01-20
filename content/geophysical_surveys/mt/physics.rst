@@ -25,6 +25,7 @@ The natural source fields travel as plane waves. At the surface of the Earth, th
         :align: center
         :figwidth: 50%
 
+**Impedance**
 
 Because the source fields are not known, we calculate a ratio based on the measured electric (:math:`\mathbf{E}`) and magnetic (:math:`\mathbf{H}`) fields. This ratio is referred to as the impedance :math:`Z`:
 
@@ -42,7 +43,7 @@ For a halfspace earth, the impedance simplifies to a single component of the mat
 
 .. math:: \rho_a = \frac{1}{\omega \mu} \left| Z_{xy} \right| ^2
 
-.. math:: \Phi = \tan^{-1} (Z_{xy}) = -\frac{\pi}{4}
+.. math:: \Phi = \tan^{-1} (\frac{Im(Z_{xy})}{Re(Z_{xy})}) = -\frac{\pi}{4}
 
 For a one-dimensional Earth, the off-diagonal components of the impedance are zero and the on-diagonal components are equal to each other:
 
@@ -63,6 +64,8 @@ For a two-dimensional Earth, the on-diagonal components are no longer identical 
 .. todo:: insert 2D figures: TE mode and TM mode
 
 There is no symmetry for a 3D Earth and all components of the impedance are non-zero.
+
+**Tipper**
 
 A ratio can be also be calculated using just the magnetic fields. This is referred to as the tipper and is defined as following:
 
