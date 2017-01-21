@@ -12,7 +12,7 @@ As explained on the previous page, EM UXO surveys operate on the principles of e
 
 .. figure:: images/UXOschematic.png
 	:align: center
-	:figwidth: 80%
+	:figwidth: 100%
 	:name: fig_UXO_physics_schematic
 
 	Electromagnetic induction (EMI) survey for UXO discrimination.
@@ -68,14 +68,14 @@ where :math:`L_{ii}` characterizes the polarization along each each axial direct
 Frequency-Domain Responses
 **************************
 
-The physics which governs the UXO's FEM response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). Using the dipole model, the UXO's FEM response can be expressed as:
+The physics which governs the UXO's FEM response can be best understood by considering a :ref:`conductive and magnetically permeable sphere in free-space <sphereFEM_freespace_index>`. Using the dipole model, the UXO's FEM response can be expressed as:
 
 .. figure:: images/physics_FEM_moment.png
 	:align: right
 	:figwidth: 50%
 	:name: uxo_physics_FEM_moment
 
-	Induced dipole moment parallel to the inducing field (normalized by the inducing field) for a sphere (:math:`R` = 20 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 6) 2 m below an inductive source.
+	Induced dipole moment parallel to the inducing field (normalized by the inducing field) for a sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30) 2 m below an inductive source.
 
 
 .. math::
@@ -88,26 +88,26 @@ where :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter'
 
 where :math:`L_{ii}(\omega)` characterizes the polarization along each axis of the UXO. From the model we ultimately see that the UXO's FEM response depends on its orientation relative to the transmitter, its polarization along each axis and the frequency of the transmitter.
 
-In the case that the object were a sphere, :math:`L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)` where :math:`\chi (\omega)` is the excitation factor for a sphere. The dipole moment for a spherical object (normalized by the inducing field) is shown in :numref:`uxo_physics_FEM_moment`. The FEM anomaly from the sphere at f = 10 :math:`\!^4` Hz is shown in :numref:`uxo_physics_FEM_anomaly`.
+In the case that the object is a sphere, :math:`L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)` for :math:`ii=x',y',z'` where :math:`\chi (\omega)` is the excitation factor for a sphere. The dipole moment for a spherical object (normalized by the inducing field) is shown in :numref:`uxo_physics_FEM_moment`. The FEM anomaly from the sphere at f = 10 :math:`\!^5` Hz is shown in :numref:`uxo_physics_FEM_anomaly`.
 
 .. figure:: images/physics_FEM_anomaly.png
 	:align: center
-	:figwidth: 90%
+	:figwidth: 100%
 	:name: uxo_physics_FEM_anomaly
 
-	FEM anomaly at f = :math:`10^4` Hz for a coincident loop system which measures 3-component data 2 m above a conductive and magnetically permeable sphere (:math:`R` = 20 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 6).
+	FEM anomaly at f = :math:`10^5` Hz for a coincident loop system which measures 3-component data 2 m above a conductive and magnetically permeable sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30).
 
 Transient Responses
 *******************
 
-The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO's transient response can be best understood by considering a conductive and magnetically permeable sphere in free-space (link). TEM UXO instruments primarily measure :math:`dB_s/dt` as opposed to :math:`B_s(t)`. In any case, the transient response can be expressed as:
+The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO's transient response can be best understood by considering a :ref:`conductive and magnetically permeable sphere in free-space <SphereTEM_index>`. TEM UXO instruments primarily measure :math:`dB_s/dt` as opposed to :math:`B_s(t)`. In any case, the transient response can be expressed as:
 
 .. figure:: images/physics_TEM_moment.png
 	:align: right
 	:figwidth: 50%
 	:name: uxo_physics_TEM_moment
 
-	Induced dipole moment parallel to the inducing field, normalized by the inducing field, for a sphere 2 m below an inductive source (a) Dipole moment. (b) Time derivative.
+	Transient dipole moment parallel to the inducing field (normalized by the inducing field) for a sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30) 2 m below an inductive source. (a) Dipole moment. (b) Time-derivative.
 
 
 .. math::
@@ -125,37 +125,22 @@ where :math:`A` is a 3D rotation matrix from the coordinate system of the transm
 
 where :math:`L_{ii}(t)` characterizes the polarization along each axis of the UXO. 
 
-In the case that our object is a sphere, analytic expressions can be found here (link). The dipole transient moment of the UXO (normalized by the inducing field) and its time-derivative3 are shown in :numref:`uxo_physics_TEM_moment`. The TEM anomaly from the sphere at t = 10 :math:`\!^{-4}` s is shown in :numref:`uxo_physics_TEM_anomaly`.
+In the case that our object is a sphere, analytic expressions can be found :ref:`here <SphereTEM_transient_response>`. The dipole transient moment of the UXO (normalized by the inducing field) and its time-derivative3 are shown in :numref:`uxo_physics_TEM_moment`. The TEM anomaly from the sphere at t = 10 :math:`\!^{-4}` s is shown in :numref:`uxo_physics_TEM_anomaly`.
 
 For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library. Parameterizations also exist for describing the polarization of UXOs such that :math:`\mathbf{m}(t) = L(t) \mathbf{h_p}`. In this case, :math:`L(t)` is a scalar function which assumes that polarization of the UXO is parallel to the inducing field. One such parameterization for the decay of :math:`B (t)` is given by (Becker):
 
 .. math::
 	L(t) = k \Bigg ( 1 + \sqrt{\frac{t}{\alpha}} \, \Bigg )^{-\beta} e^{-t/\gamma}
 
-which depends on parameters :math:`k, \alpha, \beta` and :math:`\gamma`. At early times, we can see that the decay of :math:`B(t)` is very flat and that :math:`dB/dt` decays proportional to :math:`t^{-1/2}`. At intermediate times, the decay of :math:`B(t)` is proportional to :math:`t^{-\beta/2}`. At late times, the responses exhibits exponential decay which is dependent on :math:`e^{-t/\gamma}`.
+which depends on parameters :math:`k, \alpha, \beta` and :math:`\gamma`. At early times, we can see that the decay of :math:`B(t)` is very flat and that :math:`dB/dt` decays proportional to :math:`t^{-1/2}`. At intermediate times, the decay of :math:`B(t)` is proportional to :math:`t^{-\beta/2}`. At late times, the responses exhibits exponential decay which is dependent on :math:`e^{-t/\gamma}`. Early, mid and late-time decays can all be see in :numref:`uxo_physics_TEM_moment`.
 
+.. figure:: images/physics_TEM_anomaly.png
+	:align: center
+	:figwidth: 100%
+	:name: uxo_physics_TEM_anomaly
 
-Geological Noise
-----------------
+	TEM anomaly at t = :math:`10^{-4}` s for a coincident loop system which measures 3-component data 2 m above a conductive and magnetically permeable sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30).
 
-Typically, the EM responses from UXOs are significantly stronger than the EM responses from the host medium. In these cases, it is acceptable to neglect the response from the host medium. However, there are certain geological environments in which this assumption is invalid. As an approximation, it is common to neglect coupling and consider the UXO and geological responses as separable, thus:
-
-.. math::
-	B_{tot} = B_{s} + B_{geo}
-
-Conductive Backgrounds
-**********************
-
-**Needs image as example**
-
-In regions where the local geology is very conductive (:math:`\sigma > 0.1` S/m), the Earth's inductive response becomes significant. As a result, processing steps are required in order to remove the Earth's inductive response. The transient response from conductive geologies is generally recognized as having a :math:`B(t)` response which decays as :math:`t^{-3/2}` and a :math:`dB/dt` response which decays as :math:`t^{-5/2}`. The decay of the Earth's inductive response is comparatively faster than the decays of typical UXOs. As a result, inductive responses from the Earth are more likely to impact UXO data at earlier times.
-
-Magnetic Backgrounds
-********************
-
-**Needs image as example**
-
-TEM methods become less effective in regions where lateritic topsoils are prominent. Lateritic soils are highly weathered, rich in iron-oxide minerals and found within tropical and sub-tropical climates. Lateritic soils exhibit viscous remanent magnetization (VRM) (link). Responses attributed to VRM have been known to mask the TEM anomalies from UXOs. The VRM response is characterized as having a B(t) decay poportional to :math:`ln(t)` and a :math:`dB/dt` decay proportional to :math:`t^{-1}`.
 
 
 
