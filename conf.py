@@ -155,7 +155,7 @@ numfig = True
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 check_meta = False
 
@@ -349,7 +349,7 @@ htmlhelp_basename = 'emdoc'
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------
