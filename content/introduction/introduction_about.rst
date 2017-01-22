@@ -12,14 +12,15 @@ What is em.geosci?
 ------------------
 
 em.geosci is a conglomeration of pieces of information, stored on the cloud
-using Github_, and currently organized through `Read-the-docs`_. It uses ( Juypter
-...ipython.. notebooks...). It is an out-growth of the EM group at UBC-GIF
+using Github_, and currently organized through `Read-the-docs`_. It uses ( `Juypter
+notebooks <http://github.com/geoscixyz/em_apps>`_). It is an out-growth of the EM group at UBC-GIF
 with a goal to capture our historic EM achievements and knowledge, make it
 available to members of the group, expand its reach to individuals and groups
 outside UBC and obtain participation from outside UBC.  It interfaces with our
-other open-source software (gpg.geosci which  provides an introduction to the
+other open-source software (`gpg.geosci.xyz <http://gpg.geosci.xyz>`_
+which  provides an introduction to the
 use of geophysics for geoscientists; and SimPEG_ which is an open-source
-forward simulation and parameter estimation resource;...).
+forward simulation and parameter estimation resource).
 
 .. _SimPEG: http://simpeg.xyz
 
@@ -85,9 +86,9 @@ At the large scale we have the following items.
   presence of a conductive or resistive body. To keep material organized, most
   of the code in the examples, is stored on SimPEG_.
 
-.. _Examples: http://mybinder.org/repo/ubcgif/em_examples
+.. _Examples: http://mybinder.org/repo/geoscixyz/em_apps
 
-.. _Github: http://github.com/ubcgif/em
+.. _Github: http://github.com/geoscixyz/em
 .. _SimPEG: http://simpeg.xyz
 
 How to contribute?
