@@ -4,7 +4,7 @@ ipython
 ipywidgets
 sphinx==1.4.8
 matplotlib
-properties
+properties[math]
 sphinxcontrib-bibtex
 sphinx_rtd_theme
 Pillow
