@@ -24,24 +24,24 @@ Therefore, arbitrary plane EM fields in frequency domain can be
     \mathbf{F}(\sigma, \epsilon, \mu; z; \omega).
 
 
-By using the `Plane wave widget <http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb>`_, we enable exploration of plane EM fields by altering physical property, frequency, and depth.
+By using the `Plane wave widget <http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb>`_, we enable exploration of plane EM fields by altering physical property, frequency, and depth.
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
+   :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
    :align: center
 
 
 Electric field will be on x-z plane, and by using the app, we can visualize real part of the electric field.
 
 .. figure:: ../images/simulation_Ex.png
-   :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
+   :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
    :align: center
    :scale: 60%
 
 Depth profiles of real and imaginary parts can be visualized.
 
 .. figure:: ../images/simulation_Ex_profile.png
-   :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
+   :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell1_fundamentals/PlanewaveWidget.ipynb
    :align: center
    :scale: 60%
 

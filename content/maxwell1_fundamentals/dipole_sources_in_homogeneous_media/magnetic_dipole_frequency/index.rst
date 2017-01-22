@@ -22,7 +22,7 @@ The magnetizaton vector is given by, for a loop laying in the yz plane:
 .. math::
 	\mathbf{M} = m \mathbf{u_x} \delta(x) \delta(y) \delta(z)
 
-.. _notebook: https://github.com/ubcgif/em_examples/blob/master/notebooks/maxwell1_fundamentals/DipoleWidget_MD.ipynb
+.. _notebook: https://github.com/geoscixyz/em_apps/blob/master/notebooks/maxwell1_fundamentals/HarmonicDipoleWidget_MD.ipynb
 
 **Contents**
 

@@ -93,7 +93,7 @@ Considering airborne EM survey or small-loop EM survey often
 You can use below link to play with the app that we used to run a given simulation.
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell3_fdem/HarmonicVMDLayerWidget.ipynb
+   :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell3_fdem/HarmonicVMDLayerWidget.ipynb
    :align: center
 
 |
