@@ -113,7 +113,7 @@ The transient response characterizes the secondary fields which are generated af
 .. math::
 	\mathbf{d}(t) = \mathbf{G \eta}(t) 
 
-where :math:`\mathbf{d}(t)` is used to represent :math:`dB/dt` or :math:`B(t)` and :math:`\mathbf{\eta}(t)` represents :math:`\mathbf{m}(t)` or :math:`d\mathbf{m}/dt` after the primary field has been removed. The UXO's transient dipole moment is given by:
+where :math:`\mathbf{d}(t)` is used to represent :math:`dB/dt` or :math:`B(t)` and :math:`\mathbf{\eta}(t)` represents :math:`\mathbf{m}(t)` or :math:`d\mathbf{m}/dt`, respectively, after the primary field has been removed. The UXO's transient dipole moment is given by:
 
 .. math::
 	\mathbf{\eta}(t) = \mathbf{A^T L}(t) \mathbf{A h_p}
