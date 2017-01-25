@@ -120,7 +120,7 @@ Computed coupling coefficient along the line is shown below:
 
 .. plot::
 
-    from SimPEG.EM.Analytics.EMcircuit import Mijfun, Cfun, Qfun
+    from em_examples.EMcircuit import Mijfun, Cfun, Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.
@@ -169,7 +169,7 @@ imaginary or ampliutde and phase.
 
 .. plot::
 
-    from SimPEG.EM.Analytics.EMcircuit  import Qfun
+    from em_examples.EMcircuit  import Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.
