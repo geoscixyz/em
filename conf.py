@@ -108,13 +108,17 @@ exclude_patterns = [
                     ]
 
 linkcheck_ignore = [
-    'http://mybinder.org/repo/ubcgif/em_examples',
+    'http://mybinder.org/repo/geoscixyz/em_apps',
     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
     'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
     'https://linkedin.com/in/*',
     'http://dx.doi.org/10.1071/EG08027',
     'http://www.publish.csiro.au/paper/PVv2010n149p23',
+    'http://www.zenyatta.ca',
+    'https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf',
+    'https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja',
+    'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
@@ -151,7 +155,7 @@ numfig = True
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 check_meta = False
 
@@ -253,14 +257,14 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'EM.geosci'
+html_title = 'Electromagnetic Geophysics'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'emgeosci.png'
+# html_logo = 'disclogo-02.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -345,7 +349,7 @@ htmlhelp_basename = 'emdoc'
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -508,7 +512,7 @@ sys.path.append(os.getcwd())
 
 from _ext import (
     make_contributorslist, make_formula_sheet, make_case_histories,
-    checkDependencies, supress_nonlocal_image_warn
+    checkDependencies, supress_nonlocal_image_warn, copyImages
     )
 
 make_contributorslist()
@@ -516,3 +520,4 @@ make_formula_sheet()
 make_case_histories()
 # checkDependencies()
 supress_nonlocal_image_warn()
+copyImages()

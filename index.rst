@@ -42,7 +42,7 @@ knowledge that has been acquired by practising geoscientists and, when made
 available, can elevate the learning and responsible use of electromagnetics
 throughout the communinity.
 
-.. _Github: http://github.com/ubcgif/em
+.. _Github: http://github.com/geoscixyz/em
 
 .. _what:
 
@@ -69,11 +69,11 @@ The simulations use the open-source Simulation and Parameter Estimation package
 SimPEG_.
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/ubcgif/em_examples
+   :target: http://mybinder.org/repo/geoscixyz/em_apps
    :align: center
 
-.. _Jupyter Notebooks: http://github.com/ubcgif/em_examples
-.. _Binders: http://mybinder.org/repo/ubcgif/em_examples
+.. _Jupyter Notebooks: http://github.com/geoscixyz/em_examples
+.. _Binders: http://mybinder.org/repo/geoscixyz/em_apps
 .. _SimPEG: http://simpeg.xyz
 
 This resource is Open Source and while currently being led by brilliant
@@ -90,7 +90,7 @@ EM GeoSci is under construction
 .. raw:: html
 
    <div class="col-md-2" align="center">
-      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+      <a href="http://github.com/geoscixyz/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
    </div>
 
 EM GeoSci is under active construction. We are working to fill in blank

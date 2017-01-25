@@ -1,7 +1,7 @@
 .. _balboa_index:
 
-The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
-===========================================================
+Balboa
+======
 
 .. .. raw:: html
 ..     :file: ../../../underconstruction.html
@@ -20,6 +20,7 @@ The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama
     :figwidth: 100%
 
     3D ZTEM inversion for L1170 over Balboa, and for L1170, both showing outline of ore grade shells.
+
 
 .. toctree::
     :maxdepth: 1

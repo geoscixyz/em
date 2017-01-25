@@ -110,21 +110,21 @@
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"alan.green@erdw.ethz.ch",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/agreen.png"
     },
     "kmerz":{
         "name":"Kaspar Merz",
         "affiliation":"Geo2X (formerly ETH Zurich)",
         "location":"Baar, Switzerland",
         "email":"Kaspar.merz@gmail.com",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/kmerz.png"
     },
     "hmaurer":{
         "name":"Hansruedi Maurer",
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/hmaurer.png"
     },
     "dccowan":{
         "name":"Devin C. Cowan",
@@ -175,7 +175,7 @@
     },
     "sannatti":{
         "name":"Sanna Tyrvainen",
-        "avatar":"https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg",
+        "avatar":"https://raw.githubusercontent.com/geoscixyz/em/master/images_contributors/sanna.jpeg",
         "email":"sannatyr@math.ubc.ca",
         "location":"Vancouver, BC",
         "affiliation":"University of British Columbia"
@@ -219,5 +219,81 @@
         "avatar":"https://avatars0.githubusercontent.com/u/913249?v=3&s=460",
         "email":"rowan@row1.ca",
         "ORCID":"0000-0002-7859-8394"
+    },
+    "jlymburner":{
+        "name":"Josh Lymburner",
+        "affiliation":"Crone Geophysics and Exploration Ltd.",
+        "location":"Toronto, ON",
+        "email":"lymbruj@gmail.com"
+    },
+    "kralph":{
+        "name":"Kevin Ralf",
+        "affiliation":"Crone Geophysics and Exploration Ltd.",
+        "location":"Toronto, ON"
+    },
+    "pwood":{
+        "name":"Peter Wood",
+        "affiliation":"Zenyatta Ventures Ltd.",
+        "location":"Toronto, ON",
+        "email":"pcwood@zenyatta.ca"
+    },
+    "morta":{
+        "name":"Marta Orta",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"marta.orta@geotech.ca"
+    },
+    "aprikhodko":{
+        "name":"Alexander Prikhodko",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"alexander.prikhodko@geotech.ca"
+    },
+    "nbournas":{
+        "name":"Nasreddine Bournas",
+        "affiliation":"Geotech Ltd.",
+        "location":"Aurora, ON",
+        "email":"nasreddine.bournass@geotech.ca"
+    },
+    "shickey":{
+        "name":"Stanislawa Hickey",
+        "affiliation":"Mira Geoscience Ltd.",
+        "location":"Vancouver, BC",
+        "email":"stanislawah@miregeoscience.com"
+    },
+    "jpedersen":{
+        "name":"Jesper Pedersen",
+        "affiliation":"Aarhus University - Hydrogeophysics Group",
+        "location":"Aarhus, Denmark"
+    },
+    "fefferso":{
+        "name":"Flemming Effersø",
+        "affiliation":"SkyTEM Surveys ApS",
+        "location":"Aarhus, Denmark"
+    },
+    "fjorgensen":{
+        "name":"Flemming Jørgensen",
+        "affiliation":"GEUS - Groundwater Mapping Dept.",
+        "location":"Aarhus, Denmark"
+    },
+    "jcrefsgaard":{
+        "name":"Jens Christian Refsgaard",
+        "affiliation":"GEUS - Hydrological Dept.",
+        "location":"Aarhus, Denmark"
+    },
+    "eauken":{
+        "name":"Esben Auken",
+        "affiliation":"Aarhus University - Hydrogeophysics Group",
+        "location":"Aarhus, Denmark"
+    },
+    "cschamper":{
+        "name":"Cyril Schamper",
+        "affiliation":"Aarhus University - Dept. of Geoscience",
+        "location":"Aarhus, Denmark"
+    },
+    "avchristiansen":{
+        "name":"Anders Vest Christiansen",
+        "affiliation":"Aarhus University - Hydrogeophysics Group",
+        "location":"Aarhus, Denmark"
     }
 }

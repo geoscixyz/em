@@ -53,7 +53,7 @@ simulation package, so that he/she can generate their own codes and test
 results or carry out further exploration of a topic.
 
 .. _SimPEG : http://simpeg.xyz
-.. _Examples : http://mybinder.org/repo/ubcgif/em_examples
+.. _Examples : http://mybinder.org/repo/geoscixyz/em_apps
 
 .. Introduction
 .. ============

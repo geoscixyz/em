@@ -5,6 +5,7 @@ Survey
 
 Helicopter-borne geophysical surveys were carried out over the Cobre Panama Project from August 26th to September 8th, 2010, on behalf of Minera Panama SA and Inmet Mining Ltd., now owned by First Quantum Minerals since 2013. Principal geophysical sensors included a Z-Axis Tipper electromagnetic (ZTEM) system, and a caesium magnetometer (:numref:`ztemequip`). A total of 831 line-kilometers were flown along 300m spaced, north-south oriented flight lines, with nominal EM bird terrain clearance of 85 meters and a magnetic sensor clearance of 102 meters. The 246 km :math:`^2` survey block features moderate relief, with elevations ranging from 42 to 415 meters above sea level (:numref:`ztemequip` a). Flown early in the Cobre Panama mine development, the survey area had minimal culture, such as roads, trails and few buildings.
 
+
 .. figure:: images/ztemequip.png
     :align: center
     :figwidth: 80%
@@ -13,7 +14,7 @@ Helicopter-borne geophysical surveys were carried out over the Cobre Panama Proj
     ZTEM EM system during survey at Cobre Panama project, showing: a) Mobile Z-axis receiver measuring HZ, and b) Fixed base-station receiver, measuring :math:`H_x` and :math:`H_y` (after :cite:`burge2014`).
 
 The ZTEM airborne AFMAG :cite:`ward1959` electromagnetic system measures the anomalous vertical secondary magnetic fields that are created by the interaction between naturally occurring, plane wave audio frequency EM fields, caused by distant electrical sferic/lightning storm activity, and electrical heterogeneities in the earth.
-In ZTEM surveys, a single vertical-dipole air-core receiver coil measuring the vertical magnetic field :math:`H_z` (:numref:`ztemequip` a) is flown over the survey area in a grid pattern, similar to regional airborne EM surveys. Orthogonal, air-core horizontal axis coils (:numref:`ztemequip` b) are placed close to the survey site to measure the horizontal EM magnetic reference fields (:math:`H_x` and :math:`H_y`). Data from the three coils are used to obtain the Tzx and Tzy Tipper :cite:`labson1985` components at six frequencies in the 30 to 720 Hz (or 25 to 600Hz) band, according to the following equation by :cite:`holtham10`:
+In ZTEM surveys, a single vertical-dipole air-core receiver coil measuring the vertical magnetic field :math:`H_z` (:numref:`ztemequip` a) is flown over the survey area in a grid pattern, similar to regional airborne EM surveys. Orthogonal, air-core horizontal axis coils (:numref:`ztemequip` b) are placed close to the survey site to measure the horizontal EM magnetic reference fields (:math:`H_x` and :math:`H_y`). Data from the three coils are used to obtain the Tzx and Tzy Tipper :cite:`labson1985` components at six frequencies in the 30 to 720 Hz (or 25 to 600 Hz) band, according to the following equation by :cite:`holtham10`:
 
 .. math::
     H_z(r) = T_{zx}(r,r_0) H_{x}(r_0) + T_{zy}(r,r_0) H_{y}(r_0)
@@ -32,10 +33,10 @@ where :math:`\rho` is the bedrock resistivity (:math:`\Omega m`), :math:`f` is t
 
 .. _balboa_survey_design:
 
-Can ZTEM see Baloboa deposit below conductive cover?
+Can ZTEM see Balboa deposit below conductive cover?
 ----------------------------------------------------
 
-Although it seems likely to relate to hydrothermal alteration, the source of conductivity for Balboa and the other porphyry orebodies has not been determined with certainty, since the sulphide ore is disseminated and non-supergene enriched. Subsequent to the Balboa discovery, a helicopter time-domain EM (HTEM) survey was flown to determine the overburden characteristics for mine-development purposes. The HTEM survey resolved the 10-30m conductive saprolite layer but did not appear to detect the conductive anomalies related to the deeper porphyry bodies. Since ZTEM is relatively insensitive to horizontal layering :cite:`sattel2012`, the 2D-3D inversions do not appear to define the conductive blanket either (see :numref:`zteminv2d3d` b). A synthetic 2D model (:numref:`ztemsyn2dinv` a) that replicates the Balboa deposit, from the 3D inversion result in :numref:`zteminv2d3d` b, was tested using a 30m thick, 30 ohm-m surficial layer, based on the HTEM evidence. As shown in :numref:`ztemsyn2dinv` b, in spite of the presence of the conductive blanket, a dipping conductive anomaly, extending to 750m depth and very similar to the Balboa response, is defined in the 2D ZTEM inversion result, which would appear to confirm its detectability using passive airborne electromagnetics.
+Although it seems likely to relate to hydrothermal alteration, the source of conductivity for Balboa and the other porphyry ore bodies has not been determined with certainty, since the sulphide ore is disseminated and non-supergene enriched. Subsequent to the Balboa discovery, a helicopter time-domain EM (HTEM) survey was flown to determine the overburden characteristics for mine-development purposes. The HTEM survey resolved the 10-30m conductive saprolite layer but did not appear to detect the conductive anomalies related to the deeper porphyry bodies. Since ZTEM is relatively insensitive to horizontal layering :cite:`sattel2012`, the 2D-3D inversions do not appear to define the conductive blanket either (see :numref:`zteminv2d3d` b). A synthetic 2D model (:numref:`ztemsyn2dinv` a) that replicates the Balboa deposit, from the 3D inversion result in :numref:`zteminv2d3d` b, was tested using a 30m thick, 30 ohm-m surficial layer, based on the HTEM evidence. As shown in :numref:`ztemsyn2dinv` b, in spite of the presence of the conductive blanket, a dipping conductive anomaly, extending to 750m depth and very similar to the Balboa response, is defined in the 2D ZTEM inversion result, which would appear to confirm its detectability using passive airborne electromagnetics.
 
 .. figure:: images/ztemsyn2dinv.png
     :align: center
@@ -43,3 +44,4 @@ Although it seems likely to relate to hydrothermal alteration, the source of con
     :name: ztemsyn2dinv
 
     ZTEM 2D synthetic modeling: a) 2D resistivity model for a porphyry body, resembling Balboa, buried below 30m of conductive saprolite (30 Ω-m), and b) 2D inversion of synthetic ZTEM data from model in :numref:`ztemsyn2dinv` a.
+
