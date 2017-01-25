@@ -6,8 +6,8 @@ Data
 .. raw:: html
     :file: ../../../underconstruction.html
 
-Processing:
-***********
+Processing
+**********
 
 From Time Domain measurements to Frequency domain data
 ------------------------------------------------------
