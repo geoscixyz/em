@@ -32,7 +32,8 @@ Chargeability
 
 The Mt Novit Horizon has a high chargeability. This unit, along with the
 Breakaway Shales might be distinguishable from their hosts due to the
-difference in chargeability. The Mt Novit Horizon is important because it
+difference in chargeability. Contrary to what was initially targeted as high priority, the 
+Mt Novit Horizon is important because it
 hosts the mineralisation. The remaining rocks, such as the Native Bee
 siltstone and Surprise Creek Formation, have low, to no, chargeability.
 
