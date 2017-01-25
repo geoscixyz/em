@@ -8,7 +8,7 @@ RESOLVE
     :name: resolve_view
 
     A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer. 
-    Source: `USGS <http://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf>`_.
+    Source: `USGS <https://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf>`_.
 
 
 RESOLVE is a frequency-domain multi-coil system operated by CGG. The system has evolved over years, 
