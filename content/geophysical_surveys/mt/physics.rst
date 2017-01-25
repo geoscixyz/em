@@ -61,7 +61,7 @@ where the impedance is a matrix defined as:
 .. math:: 
         Z = \left( \begin{matrix} Z_{xx} && Z_{xy}\\ Z_{yx} && Z_{yy}\end{matrix} \right)
 
-and :math:`\mathbf{E} = \left( \begin{matrix} \mathbf{H}_{x}\\ \mathbf{H}_{y} \end{matrix} \right)` and :math:`\mathbf{H} = \left( \begin{matrix} \mathbf{H}_{x}\\ \mathbf{H}_{y} \end{matrix} \right)`. The electric and magnetic fields are perpendicular to each other.
+and :math:`\mathbf{E} = \left( \begin{matrix} \mathbf{E}_{x}\\ \mathbf{E}_{y} \end{matrix} \right)` and :math:`\mathbf{H} = \left( \begin{matrix} \mathbf{H}_{x}\\ \mathbf{H}_{y} \end{matrix} \right)`. The electric and magnetic fields are perpendicular to each other.
 
 For a halfspace earth, the impedance simplifies to a single component of the matrix: :math:`Z_{xy} = \frac{\mathbf{E}_x}{\mathbf{H}_y}`. From the impedance, we can calculate the apparent resistivity :math:`\rho_a` and the phase :math:`\Phi`:
 
