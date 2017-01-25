@@ -110,21 +110,21 @@
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"alan.green@erdw.ethz.ch",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/agreen.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/agreen.png"
     },
     "kmerz":{
         "name":"Kaspar Merz",
         "affiliation":"Geo2X (formerly ETH Zurich)",
         "location":"Baar, Switzerland",
         "email":"Kaspar.merz@gmail.com",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/kmerz.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/kmerz.png"
     },
     "hmaurer":{
         "name":"Hansruedi Maurer",
         "affiliation":"ETH Zurich",
         "location":"Zurich, Switzerland",
         "email":"Hansruedi.maurer@erdw.ethz.ch",
-        "avatar":"https://github.com/ubcgif/em/raw/master/images_contributors/hmaurer.png"
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/hmaurer.png"
     },
     "dccowan":{
         "name":"Devin C. Cowan",
@@ -175,7 +175,7 @@
     },
     "sannatti":{
         "name":"Sanna Tyrvainen",
-        "avatar":"https://raw.githubusercontent.com/ubcgif/em/master/images_contributors/sanna.jpeg",
+        "avatar":"https://raw.githubusercontent.com/geoscixyz/em/master/images_contributors/sanna.jpeg",
         "email":"sannatyr@math.ubc.ca",
         "location":"Vancouver, BC",
         "affiliation":"University of British Columbia"
