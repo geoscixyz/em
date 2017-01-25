@@ -17,7 +17,7 @@
     ,
     "balboa":{
         "title": "Balboa",
-        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "description":"Balboa",
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
