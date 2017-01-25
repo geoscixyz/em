@@ -30,4 +30,4 @@ Thus, in order to recover a decent model, such as the green model (:numref:`mtss
 
 
         
-There are various sources in the literature that discuss removal of the static shift from MT data :cite:`simpsonbahr2005, rosenkjar2011`, including using additional time-domain EM data to jointly recover the resistivity structures at depth.
+There are various sources in the literature that discuss removal of the static shift from MT data :cite:`simpsonbahr2005`,:cite:`rosenkjar2011` including using additional time-domain EM data to jointly recover the resistivity structures at depth.

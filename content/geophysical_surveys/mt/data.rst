@@ -46,6 +46,9 @@ Magnetic field data from a remote reference station is used to eliminate bias du
 
 The notation (*) indicates the complex conjugate and <> averages over multiple samples. The same thing can be done using the electric fields measured at a remote reference station but common practice is to use the magnetic fields.
 
+TE and TM modes
+***************
+
 The :ref:`complex impendance tensor <mt_physics>` consists of 4 components that provide information about the subsurface. Considerin a 2D-Earth model, when the impedance tensor is rotated such that the x-direction is parallel to the geological strike and the y-direction is perpendicular to it, the :math:`Z_{xx}` and :math:`Z_{yy}` components are zero. This gives rise to 2 different modes:
 
 - Transverse electric (TE) or E-polarization: when the electric field is parallel to the geolocgical strike, :math:`Z_{TE} = Z_{xy}`
