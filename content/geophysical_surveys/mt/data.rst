@@ -6,6 +6,12 @@ Data
 .. raw:: html
     :file: ../../../underconstruction.html
 
+Processing:
+***********
+
+From Time Domain measurements to Frequency domain data
+------------------------------------------------------
+
 The MT instrumentation measures the electric and magnetic fields over time but the data of interest are impedances, which is the ratio of the electric and magnetic field. A few steps are requried to calculate the impedances from the measured time series. The time series are amplified, filtered, and converted from analog to digial format by the data collection system :cite:`Rosenkjar2011`.
 
 Then, to process the data, the series are split into segments (time windows) and Fourier transformed from the time domain to the frequency domain. This is commonly done using the Fast Fourier Transform (FFT). This is done for each station:
@@ -27,7 +33,10 @@ For example, suppose an MT time series was collected using a sampling rate of 2 
 
 :cite:`simpsonbahr2005` describe two ways this data reduction is done: (1) stacking the data from discretized time windows and (2) using information from nearby frequencies as Weidelt's dispersion relations states that similar information is provided by neighbouring frequencies.
 
-.. todo:: Add data image + time windowing (like DISC MT slide... using Unsworth figure). 
+.. todo:: Add data image + time windowing (like DISC MT slide... using Unsworth figure).
+
+From Frequency Domain data to Impedance using a remote station
+--------------------------------------------------------------
 
 Once the data are in the frequency domain, the impedance tensor can be formed for each frequency. The :ref:`impedance <mt_physics>` :math:`Z` is a matrix that relates the electric and magnetic fields.
 
