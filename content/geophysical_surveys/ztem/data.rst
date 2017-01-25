@@ -5,7 +5,7 @@ Data
 
 ZTEM data consists of the vertical magnetic field :math:`\mathbf{H}_z` collected along survey lines with an airborne system. The horizontal magnetic fields :math:`\mathbf{H}_x` and :math:`\mathbf{H}_y` are measured at a referecen station on the ground. Generally, the reference station is placed in a location where the earth structure is 1D.
 
-Similar to the :ref:`measured MT data <mt_data>`, the ZTEM system records a time-series of the magnetic field. The data are then binned and processed to generate transfer functions in the frequency domain :cite:`holtham2010`. For more information about converting the time-series into frequency domain, see the :ref:`<MT data page mt_data>`.
+Similar to the :ref:`measured MT data <mt_data>`, the ZTEM system records a time-series of the magnetic field. The data are then binned and processed to generate transfer functions in the frequency domain :cite:`holtham2010`. For more information about converting the time-series into frequency domain, see the :ref:`MT data page <mt_data>`.
 
 Similar to MT which uses the impedance, ZTEM data or tipper data are transfer functions. For this method, the transfer functions are calculated from relating the vertical magnetic field at locations :math:`\mathbf{r}` and the horizontal magnetic fields at the base station located at :math:`\mathbf{r}_0`. :
 
