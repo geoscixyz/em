@@ -12,7 +12,7 @@ Processing
 From Time Domain measurements to Frequency domain data
 ------------------------------------------------------
 
-The MT instrumentation measures the electric and magnetic fields over time but the data of interest are impedances, which is the ratio of the electric and magnetic field. A few steps are requried to calculate the impedances from the measured time series. The time series are amplified, filtered, and converted from analog to digial format by the data collection system :cite:`Rosenkjar2011`.
+The MT instrumentation measures the electric and magnetic fields over time but the data of interest are impedances, which is the ratio of the electric and magnetic field. A few steps are requried to calculate the impedances from the measured time series. The time series are amplified, filtered, and converted from analog to digial format by the data collection system :cite:`rosenkjar2011`.
 
 Then, to process the data, the series are split into segments (time windows) and Fourier transformed from the time domain to the frequency domain. This is commonly done using the Fast Fourier Transform (FFT). This is done for each station:
 
@@ -46,11 +46,11 @@ Magnetic field data from a remote reference station is used to eliminate bias du
 
 The notation (*) indicates the complex conjugate and <> averages over multiple samples. The same thing can be done using the electric fields measured at a remote reference station but common practice is to use the magnetic fields.
 
-The :ref:`complex impendance tensor <mt_physics>` consists of 4 components that provide information about the subsurface. When the impedance tensor is rotated such that the x-direction is parallel to the electromagnetic strike and the y-direction is perpendiculat, the :math:`Z_{xy}` and :math:`Z_{yz}` components are zero. This gives rise to 2 different modes:
+The :ref:`complex impendance tensor <mt_physics>` consists of 4 components that provide information about the subsurface. Considerin a 2D-Earth model, when the impedance tensor is rotated such that the x-direction is parallel to the geological strike and the y-direction is perpendicular to it, the :math:`Z_{xx}` and :math:`Z_{yy}` components are zero. This gives rise to 2 different modes:
 
-- Transverse electric (TE) or E-polarization: when the electric field is parallel to the electromagnetic strike, :math:`Z_{TE} = Z_{yx}`
+- Transverse electric (TE) or E-polarization: when the electric field is parallel to the geolocgical strike, :math:`Z_{TE} = Z_{xy}`
 
-- Transverse magnetic (TM) or H-polarization: when the magnetic field is parallel to the electromagnetic strike, :math:`Z_{TM} = Z_{xy}`
+- Transverse magnetic (TM) or H-polarization: when the magnetic field is parallel to the geological strike, :math:`Z_{TM} = Z_{yx}`
 
 Using the impedance, we can :ref:`calculate the apparent resistivity and phase<mt_physics>` and plot it for the different frequencies.
 
