@@ -62,7 +62,7 @@ where :math:`A (\theta ,\phi )` is a 3D rotation matrix from the coordinate syst
 .. math::
 	\mathbf{L} = \begin{bmatrix} L_{x'} & 0 & 0 \\ 0 & L_{y'} & 0 \\ 0 & 0 & L_{z'} \end{bmatrix}
 
-where :math:`L_{ii}` characterizes the polarization along each each axial direction :math:`\hat x'`, :math:`\hat y'` and :math:`\hat z'`.
+where :math:`L_{ii}` characterizes the polarization along each each axial direction :math:`\hat x'`, :math:`\hat y'` and :math:`\hat z'`. It should be noted that this model assumes the inducing field is spatially invariant about the target. For most ordnance items this assumption is acceptable because the items are small.
 
 
 Frequency-Domain Responses
