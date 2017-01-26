@@ -15,7 +15,7 @@ Data
     porphyry deposit locations and drill-hole coverage prior to Balboa
     discovery (after :cite:`burge2014`).
 
-As mentioned in previous :ref:`balboa_survey` section, measured tipper data have both :math:`T_{zx}` and :math:`T_{zy}`, and each of them has in-phase and quadrature components. :numref:`bboa_tipper_raw` shows ZTEM tipper data at 90 Hz. :math:`T_{zx}` data map shows large scale feature enlongated to :math:`x`-direction, whereas :math:`T_{zy}` shows similar feature but enlongated to :math:`y`-direction. Quadurature component data shows much smoother variation in space compared to in-phase data.
+As mentioned in previous :ref:`balboa_survey` section, measured tipper data have both :math:`T_{zx}` and :math:`T_{zy}`, and each of them has in-phase and quadrature components. :numref:`bboa_tipper_raw` shows ZTEM tipper data at 90 Hz. :math:`T_{zx}` data map shows large scale feature elongated to :math:`x`-direction, whereas :math:`T_{zy}` shows similar feature but elongated to :math:`y`-direction. Quadrature component data shows much smoother variation in space compared to in-phase data.
 
 
 .. figure:: images/bboa_tipper_raw.png

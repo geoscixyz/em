@@ -108,7 +108,7 @@ exclude_patterns = [
                     ]
 
 linkcheck_ignore = [
-    'http://mybinder.org/repo/ubcgif/em_examples',
+    'http://mybinder.org/repo/geoscixyz/em_apps',
     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
     'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
@@ -116,6 +116,9 @@ linkcheck_ignore = [
     'http://dx.doi.org/10.1071/EG08027',
     'http://www.publish.csiro.au/paper/PVv2010n149p23',
     'http://www.zenyatta.ca',
+    'https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf',
+    'https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja',
+    'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
@@ -152,7 +155,7 @@ numfig = True
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 check_meta = False
 
@@ -346,7 +349,7 @@ htmlhelp_basename = 'emdoc'
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------

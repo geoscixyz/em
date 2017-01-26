@@ -142,7 +142,7 @@ problem that we derived in Section :ref:`effects_of_topography_electric_potentia
 proceed with this validation, we consider a pole transmitter injected in the
 ground. In the above figure, injected current source location is shown.
 
-.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/em_examples/DCsphere.py
+.. _DC sphere code: https://github.com/geoscixyz/em_examples/blob/master/em_examples/DCsphere.py
 
 For numerical computations, a 3D mesh with 5 m core cells is used. We compute
 potentials in every cells in the 3D domain. Top and middle panels of the below

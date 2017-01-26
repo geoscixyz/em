@@ -163,7 +163,7 @@ Eq. :eq:`Potential_Sphere_WholeSpace` can be split into two terms: the potential
 Eq. :eq:`PsiWholespace2`, and an anomalous potential which results from the exstence of a
 conducting sphere. Python code functions which evaluate above solution is given at `DC sphere code`_.
 
-.. _DC sphere code: https://github.com/ubcgif/em_examples/blob/master/em_examples/DCsphere.py
+.. _DC sphere code: https://github.com/geoscixyz/em_examples/blob/master/em_examples/DCsphere.py
 
 .. figure:: ../images/SphericalDepression_Sphere.png
    :align: center

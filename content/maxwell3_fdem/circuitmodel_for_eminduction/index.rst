@@ -72,7 +72,7 @@ is the induction number.
 
 .. plot::
 
-    from SimPEG.EM.Analytics.EMcircuit import Qfun
+    from em_examples.EMcircuit import Qfun
     import numpy as np
     import matplotlib.pyplot as plt
     L = 1.

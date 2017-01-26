@@ -17,7 +17,7 @@
     ,
     "balboa":{
         "title": "Balboa",
-        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "description":"Balboa",
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
@@ -187,6 +187,40 @@
             {"uid":"Groundwater Mapping", "as":"Applications"},
             {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
             {"uid":"Aarhus, Denmark", "as":"Location"}
+        ]
+    },
+    "lalor":{
+        "title":"Lalor",
+        "description":"3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit",
+        "source":"./lalor/",
+        "thumbnail":"./lalor/images/lalor_alltc_model.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne TDEM, massive sulphide", "as":"Keywords"},
+            {"uid":"Lalor Lake, Manitoba, Canada", "as":"Location"}
+        ]
+    },
+    "westplains":{
+        "title":"West Plains",
+        "Description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt.",
+        "source":"./westplains/",
+        "thumbnail":"./westplains/images/thumbnail_westplains.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"VTEM, RESOLVE", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
+            {"uid":"Nunavut, Canada", "as":"Location"}
         ]
     }
 }

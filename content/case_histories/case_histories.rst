@@ -18,8 +18,10 @@
     mt_isa/index
     bookpurnong/index
     aspen/index
+    lalor/index
     emc/index
     albany/index
+    westplains/index
     furggwanghorn/index
     norsminde/index
     barents_sea/index
@@ -117,6 +119,36 @@ Aspen
 
         
 
+Lalor
+^^^^^
+
+.. image:: ./lalor/images/lalor_alltc_model.png
+    :alt: lalor
+    :width: 260
+    :align: right
+
+- :ref:`3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit <lalor_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, massive sulphide
+    - Applications: Mineral exploration
+    - Location: Lalor Lake, Manitoba, Canada
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
 Elevenmile Canyon
 ^^^^^^^^^^^^^^^^^
 
@@ -167,6 +199,36 @@ Albany
     - Applications: Mineral exploration, hydrothermal graphite porphyry
     - Location: Albany graphite deposit, Ontario, Canada
     - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+
+|
+|
+|
+
+
+
+        
+
+West Plains
+^^^^^^^^^^^
+
+.. image:: ./westplains/images/thumbnail_westplains.png
+    :alt: westplains
+    :width: 260
+    :align: right
+
+- :ref:`West Plains <westplains_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne EM, orogenic gold, greenstone belt
+    - Applications: Mineral exploration
+    - Location: Nunavut, Canada
+    - Geophysical Surveys: VTEM, RESOLVE
 
 |
 |
@@ -303,7 +365,7 @@ Balboa
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
+- :ref:`Balboa <balboa_index>`
 
 
 - Contributors
