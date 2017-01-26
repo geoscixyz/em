@@ -69,11 +69,11 @@ The simulations use the open-source Simulation and Parameter Estimation package
 SimPEG_.
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/ubcgif/em_examples
+   :target: http://mybinder.org/repo/geoscixyz/em_apps
    :align: center
 
 .. _Jupyter Notebooks: http://github.com/geoscixyz/em_examples
-.. _Binders: http://mybinder.org/repo/ubcgif/em_examples
+.. _Binders: http://mybinder.org/repo/geoscixyz/em_apps
 .. _SimPEG: http://simpeg.xyz
 
 This resource is Open Source and while currently being led by brilliant

@@ -11,10 +11,10 @@ the DC resistivity experiment, including the behavior of electric potentials,
 electric fields, current density and the build up of charges at interfaces.
 This work follows the derivation in :cite:`ward1988` and is supported by apps developed in a `binder`_.
 
-.. _binder:  http://mybinder.org/repo/ubcgif/em_examples/notebooks/maxwell2_dc/ElectrostaticSphere_example.ipynb
+.. _binder:  http://mybinder.org/repo/geoscixyz/em_apps/notebooks/maxwell2_dc/ElectrostaticSphere_example.ipynb
 
  .. image:: http://mybinder.org/badge.svg
-    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/maxwell2_dc/ElectrostaticSphere_example.ipynb
+    :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/maxwell2_dc/ElectrostaticSphere_example.ipynb
     :align: center
 
 Setup
