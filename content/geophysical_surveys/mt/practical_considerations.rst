@@ -19,15 +19,15 @@ Thus, in order to recover a decent model, such as the green model (:numref:`mtss
         :align: left
         :figwidth: 40%
 
-        cpation!
+        Static shift can cause the inversion to recover a model incorrectly, as shown here. The true model (black) is compared to the recovered models when there is no static shift (green), when the static shift multiplier is 10 (red), and when the static shift multiplier is 0.1 (blue). 
 
 .. figure:: images/staticshift1.png
         :name: mtss2
         :align: right
         :figwidth: 50%
 
-        cpation! caption
+        The static shift affects only the apparent resistivity and not the phase. The top plot shows how the apparent resistivity changes for static shift multipliers of 10 (red) and 0.1 (blue) compared to the actual data (green).
 
 
         
-There are various sources in the literature that discuss removal of the static shift from MT data :cite:`simpsonbahr2005`,:cite:`rosenkjar2011` including using additional time-domain EM data to jointly recover the resistivity structures at depth.
+There are various sources in the literature that discuss removal of the static shift from MT data :cite:`simpsonbahr2005`, :cite:`rosenkjar2011` including using additional time-domain EM data to jointly recover the resistivity structures at depth.

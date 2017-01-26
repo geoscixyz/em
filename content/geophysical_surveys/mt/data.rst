@@ -9,7 +9,7 @@ Data
 Processing
 **********
 
-From Time Domain measurements to Frequency domain data
+From time-domain measurements to frequency-domain data
 ------------------------------------------------------
 
 The MT instrumentation measures the electric and magnetic fields over time but the data of interest are impedances, which is the ratio of the electric and magnetic field. A few steps are requried to calculate the impedances from the measured time series. The time series are amplified, filtered, and converted from analog to digial format by the data collection system :cite:`rosenkjar2011`.
@@ -35,7 +35,7 @@ For example, suppose an MT time series was collected using a sampling rate of 2 
 
 .. todo:: Add data image + time windowing (like DISC MT slide... using Unsworth figure).
 
-From Frequency Domain data to Impedance using a remote station
+From frequency-domain data to impedance using a remote station
 --------------------------------------------------------------
 
 Once the data are in the frequency domain, the impedance tensor can be formed for each frequency. The :ref:`impedance <mt_physics>` :math:`Z` is a matrix that relates the electric and magnetic fields.

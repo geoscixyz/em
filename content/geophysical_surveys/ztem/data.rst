@@ -37,6 +37,6 @@ Consider the example below where a conductive block is buried in a uniform halfs
 
         Real and imaginary components of tipper data for a conductive block in a halfspace.
 
-.. todo:: explain that data are zero over a halfspace/1D earth
+For a halfspace or uniformly layered earth, the tippers are zero, meaning that no information is available. Therefore, ZTEM data are only sensitive to 3D structures.
 
 

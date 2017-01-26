@@ -27,6 +27,10 @@ These tools help to identify areas of higher and lower resistivity but they stil
 
 The tipper functions are zero over a halfspace or 1D earth. Thus, care must be taken to determine the background conductivity to start an inversion. A few options have been explored to determine the best starting halfspace model, including testing a range of values and observing which inversion converges the best. Other options include using a priori information, whether from another geophysical method or from ground truth data.
 
-.. todo:: insert synthetic example? maybe from elliot's thesis?
+The following case histories use ZTEM data to answer specific geologic questions:
+
+- :ref:`Using ZTEM for geothermal areas <emc_index>`
+
+- :ref:`Using ZTEM to find porphyry deposits <balboa_index>`
 
 
