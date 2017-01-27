@@ -14,14 +14,20 @@ There are two categories of notebooks
 .. We have provided instructions on working with the apps in the `Jupyter
 .. Notebook<http://jupyter.org>`_ environment.
 
+If you run into any issues, please let us know at: http://github.com/geoscixyz/em_apps.
+
+
 .. _em_apps:
 
 EM Apps
 -------
 
-There are three ways you can run the notebooks
+There are a few ways you can run the notebooks. We recommend:
 
-- Microsoft Azure (free, login required, stable):
+- Microsoft Azure (recommended): https://notebooks.azure.com/library/em_apps
+
+Alternatively, you can use:
+
 - Binders (free, no login required, not-so-stable): http://mybinder.org/repo/geoscixyz/em_apps
 - Download from Github (free, installation of python required): http://github.com/geoscixyz/em_apps
 
@@ -84,9 +90,12 @@ Simulation Notebooks
 These notebooks walk through forward simulations of both frequency domain
 electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.xyz>`_.
 
-These notebooks are available
+These notebooks are available at
 
-- Microsoft Azure (free, login required, stable):
+- Microsoft Azure (recommended): https://notebooks.azure.com/library/electromagnetics
+
+or alternatively:
+
 - Binders (free, no login required, not-so-stable): http://mybinder.org/repo/simpeg/em_notebooks
 - Download from Github (free, installation of python required): http://github.com/simpeg/em_notebooks
 
