@@ -24,7 +24,7 @@ EM Apps
 
 There are a few ways you can run the notebooks. We recommend:
 
-- Microsoft Azure (recommended): https://notebooks.azure.com/library/em_apps
+- Microsoft Azure (recommended): http://notebooks.azure.com/library/em_apps
 
 Alternatively, you can use:
 
@@ -92,7 +92,7 @@ electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.x
 
 These notebooks are available at
 
-- Microsoft Azure (recommended): https://notebooks.azure.com/library/electromagnetics
+- Microsoft Azure (recommended): http://notebooks.azure.com/library/electromagnetics
 
 or alternatively:
 
