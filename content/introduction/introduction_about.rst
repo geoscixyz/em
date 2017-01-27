@@ -13,7 +13,7 @@ What is em.geosci?
 
 em.geosci is a conglomeration of pieces of information, stored on the cloud
 using Github_, and currently organized through `Read-the-docs`_. It uses ( `Juypter
-notebooks <http://github.com/geoscixyz/em_apps>`_). It is an out-growth of the EM group at UBC-GIF
+notebooks <https://github.com/geoscixyz/em_apps>`_). It is an out-growth of the EM group at UBC-GIF
 with a goal to capture our historic EM achievements and knowledge, make it
 available to members of the group, expand its reach to individuals and groups
 outside UBC and obtain participation from outside UBC.  It interfaces with our
@@ -24,7 +24,7 @@ forward simulation and parameter estimation resource).
 
 .. _SimPEG: http://simpeg.xyz
 
-.. _Read-the-docs: https://docs.readthedocs.org/en/latest/index.html
+.. _Read-the-docs: https://docs.readthedocs.io/en/latest/index.html
 
 How is it organized?
 --------------------
@@ -88,7 +88,7 @@ At the large scale we have the following items.
 
 .. _Examples: http://mybinder.org/repo/geoscixyz/em_apps
 
-.. _Github: http://github.com/geoscixyz/em
+.. _Github: https://github.com/geoscixyz/em
 .. _SimPEG: http://simpeg.xyz
 
 How to contribute?
