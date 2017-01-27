@@ -115,6 +115,7 @@ How is it organized?
    :name: `EM GeoSci`
    :hidden:
 
+   apps
    contributors
    content/introduction/index
    content/physical_properties/index
