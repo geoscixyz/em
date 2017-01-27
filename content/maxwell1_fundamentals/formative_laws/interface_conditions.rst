@@ -211,6 +211,6 @@ the interface.
 
 .. _Luz: https://github.com/lacmajedrez
 
-.. _CC BY 2.0: http://creativecommons.org/licenses/by/2.0/
+.. _CC BY 2.0: https://creativecommons.org/licenses/by/2.0/
 
 

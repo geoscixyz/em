@@ -365,7 +365,7 @@ Balboa
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
+- :ref:`Balboa <balboa_index>`
 
 
 - Contributors

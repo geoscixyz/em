@@ -27,12 +27,4 @@ hydrothermal alteration.
     over Balboa (b), and 3D MVI magnetic susceptibility inversion for L1170
     (c), both showing outline of ore grade shells (after :cite:`burge2014`).
 
-The Balboa discovery is a geophysical success story, where a significant porphyry copper deposit was discovered beneath cover at Cobre Panama even though after many exploration and drilling campaigns motivated by conventional soil sampling had failed to clearly identify it.
-Balboa and aeromagnetics providing an unexpected signature. The ZTEM appears to map all the porphyry deposits in the tropical environment at Cobre Panama, including Balboa, making
-it the first documented case of a porphyry copper discovery using ZTEM
-airborne EM.
-Our 2D-3D inversion analyses appear to confirm the bedrock source of conductivity that extend from surface to >500-750m depths.
-The exact source of conductivity is undetermined, with mainly disseminated mineralization and a
-lack of visible supergene enrichment, although it is assumed to be related to clay-phyllic alteration.
-Subsequent HTEM surveys also do not appear to detect any of the porphyry bodies below the conductive saprolitic weathering blanket.
-However, ZTEM data are insensitive the layered conductivity :cite:`sattel2012`, and this feature allowed ZTEM to detect Balobal deposit below conductive saporite layer.
+The Balboa discovery is a geophysical success story, where a significant porphyry copper deposit was discovered beneath cover at Cobre Panama even though after many exploration and drilling campaigns motivated by conventional soil sampling had failed to clearly identify it. Balboa and aeromagnetics providing an unexpected signature. The ZTEM appears to map all the porphyry deposits in the tropical environment at Cobre Panama, including Balboa, making it the first documented case of a porphyry copper discovery using ZTEM airborne EM. Our 2D-3D inversion analyses appear to confirm the bedrock source of conductivity that extend from surface to >500-750m depths. The exact source of conductivity is undetermined, with mainly disseminated mineralization and a lack of visible supergene enrichment, although it is assumed to be related to clay-phyllic alteration. Subsequent HTEM surveys also do not appear to detect any of the porphyry bodies below the conductive saprolitic weathering blanket. However, ZTEM data are insensitive the layered conductivity :cite:`sattel2012`, and this feature allowed ZTEM to detect Baloba deposit below conductive saprolite layer.
