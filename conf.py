@@ -46,7 +46,7 @@ extensions = [
     'purpose',
     'question',
     # 'sphinx_nbexamples'
-    'sphinx_gallery.gen_gallery',
+    # 'sphinx_gallery.gen_gallery',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
