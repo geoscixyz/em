@@ -19,9 +19,9 @@ During a UXO survey, an inductive loop source generates a primary field. The pri
 Frequency Domain Data
 ---------------------
 
-In the frequency domain, FEM responses have both real and imaginary components. These may also be referred to as the in-phase and quadrature components, respectively. It is important to note that EMF :math:`\propto -i B_\perp`. That is, real components of the response result in imaginary voltages and visa-versa. Therefore, it is important to understand how the data are being represented and the significance of the real and imaginary components.
+In the frequency domain, FEM responses have both real and imaginary components; also known as in-phase and quadrature components, respectively. It is important to note that the EMF is proportional to :math:`-i \omega B_s`. That is, real components of the response result in imaginary voltages and visa-versa. Therefore, it is important to understand how the data are being represented and the significance of the real and imaginary components.
 
-Vertical FEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and magnetically permeable (:math:`\mu_r > 1`) objects are shown below. The objects were excited with horizontal transmitter loop using a frequency of 5 kHz. This is meant to demonstrate the type of data one would observe when using a frequency domain coincident loop system.
+Vertical FEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and magnetically permeable (:math:`\mu_r > 1`) objects are shown below. The objects were excited with vertical dipole source (small loop) using a frequency of 5 kHz. This is meant to demonstrate the type of data one would observe when using a frequency domain coincident loop system.
 
 
 .. figure:: images/FEM_data_example.png
@@ -29,20 +29,29 @@ Vertical FEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and 
 	:figwidth: 80%
 	:name: fig_uxo_FEM_data_example
 
-	Vertical FEM anomalies observed using a coincident loop system at f = 5 kHz.
+	Vertical FEM anomalies observed using a coincident loop system at f = 5 kHz. Data shows prominent anomalies in both the in-phase and quadrature components.
 
 
 
 Time Domain Data
 ----------------
 
-When operating in the time domain, we are generally interested in the UXO's transient response; that is, the response to step-off excitation. For some systems (EM-61), the off-time response may only be measured for a few time channels. For newer systems, 10s of time channels are used to accurately characterize the decays of potential targets. Off-time data are typically collected between 100 :math:`\mu s` to 25 :math:`ms` after the transmitter is shut off.
+When operating in the time domain, we are generally interested in the UXO's transient response; that is, the response to step-off excitation. For some systems (EM-61), the off-time response may only be measured for a few time channels. For newer systems, 10s of time channels are used to accurately characterize the decays of potential targets. Off-time data are typically collected between 100 :math:`\mu s` to 25 :math:`ms` after the transmitter is shut off. A representation of the transmitter's current waveform and measured time channels is illustrated below.
+
+.. figure:: images/time_channels.png
+	:align: center
+	:figwidth: 60%
+	:name: fig_uxo_time_channels
+
+	Bi-modal boxcar waveform for TEM systems. Data are measured during the off-time.
 
 
 TEM Anomalies
 *************
 
-Anomalies such as these may be observed when using an EM-61.
+Anomalies associated with the transient response decay over time. The rate of decay (:math:`dBdt`) at early, mid and late-times depends significantly on the dimensions and physical properties of each target.
+
+Vertical TEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and magnetically permeable (:math:`\mu_r > 1`) objects are shown below. The objects were excited with a step-off excitation using a vertical dipole source (small loop). This is meant to demonstrate the type of data one would observe when using a domain coincident loop system (EM-61).
 
 .. figure:: images/TEM_data_example.png
 	:align: center
@@ -57,12 +66,14 @@ TEM Decays
 
 .. figure:: images/TEM_data_decays.png
 	:align: right
-	:figwidth: 50%
+	:figwidth: 40%
 	:name: fig_uxo_TEM_data_decays
 
-	3-component TEM decays observed using MPV.
+	3-component TEM decays observed using MPV instrument.
 
+For instrument arrays containing multiple transmitters and receivers, we frequently plot the decays observed over a particular target. In physics (link), we showed that UXOs display particular decays over early, mid and late times.
 
+On the right, we show a host of decays over a conductive (:math:`\sigma = 10^6` S/m) and magnetically permeable (:math:`\mu_r = 30`) using an MPV instrument. Here, 3-component data were collected within a 2 m :math:`\times` 2 m grid over the target.
 
 
 
