@@ -7,7 +7,7 @@ Survey
     :file: ../../../underconstruction.html
 
 
-Instruments designed for UXO applications come in a wide variety of geometries ranging from single loop, man-portable systems to cart systems with multiple transmitters and receivers. Each system has its advantages and disadvantages. As a result, it is important to choose a UXO system which works well for a particular setting. Frequency domain systems have been used for decades, however, modern time domain systems are currently a more popular choice. Aspects of UXO surveys as they relate to instrumentation are discussed here. Aspects of survey design are discussed here (link).
+Instruments designed for UXO applications come in a wide variety of geometries ranging from single loop, man-portable systems to cart systems with multiple transmitters and receivers. Each system has its advantages and disadvantages. As a result, it is important to choose a UXO system which works well for a particular setting. Frequency domain systems have been used for decades, however, modern time domain systems are currently a more popular choice. Aspects of UXO surveys as they relate to instrumentation are discussed here. Aspects of survey design are discussed :ref:`here <uxo_survey_design>`.
 
 .. figure:: images/surveys_examples.png
 	:align: center
@@ -56,7 +56,7 @@ For UXO systems, coils of wire (receiver loops) are used to measure the secondar
 
 Frequency domain systems measured real and quadrature components of the secondary field. Time domain systems generally measure the target's :math:`dB/dt` response; although there are systems capable of measuring :math:`B(t)` directly. Receiver loops are only sensitive to components of the secondary field parallel to their normal vector. Thus in order to obtain 3-component data, multiple orthogonal receiver loops must be used.
 
-As we can see from the illustration above, the EMF induced within the receiver loop is proportional to both the loop's cross-sectional area (:math:`A`) and the number of turns (:math:`N`). Because the EM anomalies from UXOs are so compact, receiver coils with smaller cross-sectional areas must be used in order to accurately quantify the target's response at a particular location. The corresponding decrease is signal to noise ratio which results from using small receiver loops is overcome by using coils of wire with many turns.
+As we can see from the illustration above, the EMF induced within the receiver loop is proportional to both the loop's cross-sectional area (:math:`A`) and the number of turns (:math:`N`). Because the EM anomalies from UXOs are so compact, receiver coils with smaller cross-sectional areas must be used in order to accurately quantify the target's response at a particular location. The corresponding decrease in signal to noise ratio from small receiver loops is overcome by using coils of wire with many turns.
 
 Transmitter Source Signal
 -------------------------
@@ -90,7 +90,7 @@ When operating in the time domain, we are generally interested in the UXO's tran
 Survey Configurations
 ---------------------
 
-Below are a set of electromagnetic sensors which have been applied to UXO detection and classification problems. This is not a comprehensive list of electromagnetic sensors, but is intended to illustrate the recent evolution towards configurations with multiple transmitters and receivers. Although FEM systems have been used for decades with varying levels of success, modern TEM systems are most commonly used for UXO detection. As a result, most of the instruments presented here will belong to the class of TEM systems. 
+Below are a set of electromagnetic sensors which have been applied to UXO detection and classification problems. This is not a comprehensive list of electromagnetic sensors, but is intended to illustrate the recent evolution towards configurations with multiple transmitters and receivers. Although FEM systems have been used for decades with varying levels of success, modern TEM systems are more commonly used for UXO detection. As a result, most of the instruments presented here will belong to the class of TEM systems. 
 
 Frequency-Domain Systems
 ************************
@@ -118,7 +118,7 @@ The Geonix EM-61 is a time-domain instrument with a single horizontal transmitte
 
 **TEMTADS**
 
-The TEMTADS system is comprised of a square horizontal transmitter loop and an array of 25 horizontal coplanar receiver loops; thus it measures the vertical TEM response. By mounting this system onto a cart, it may be used to survey larger regions in a relatively short amount of time. The addition of multiple smaller receiver loops allows for better characterization of more compact TEM anomalies.
+The TEMTADS system is comprised of a square horizontal transmitter loop and an array of 25 horizontal coplanar receiver loops; thus it measures the vertical TEM response. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple small receiver loops allows for better characterization of compact TEM anomalies.
 
 .. figure:: images/fig_TEMTADS_uxo.png
 	:align: center
@@ -128,7 +128,7 @@ The TEMTADS system is comprised of a square horizontal transmitter loop and an a
 
 **MPV**
 
-The man-portable vector (MPV) instrument is comprised of a 50 cm diameter transmitter loop and an array of 5 receivers. Each receiver measures 3-component data, resulting in 15 transmitter-receiver pairs. This instrument was designed to improve maneuverability in more rugged terrain. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.
+The man-portable vector (MPV) instrument is comprised of a 50 cm diameter transmitter loop and an array of 5 receivers. Each receiver measures 3-component data, resulting in 15 transmitter-receiver pairs. This instrument was designed to improve maneuverability in rugged terrain. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.
 
 .. figure:: images/fig_MPV_uxo.png
 	:align: center

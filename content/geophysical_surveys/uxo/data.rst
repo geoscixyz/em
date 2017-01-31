@@ -12,9 +12,9 @@ During a UXO survey, an inductive loop source generates a primary field. The pri
 
 	EMF induced within a receiver loop. A) FEM receiver loop. B) TEM receiver loop.
 
-**What are the raw data:** The voltage induced within the receiver coil represents the raw data for UXO surveys. However if information about the receiver is known (dimensions, number of turns, gain factor), raw voltages can be used to obtain the secondary field or its time-derivative at each data location.
+**What are the raw data:** The voltage induced within the receiver coil represents the raw data for UXO surveys. However if information about the receiver is known (dimensions, number of turns, gain factor), raw voltages can be used to recover the secondary field or its time-derivative at each data location.
 
-**Units:** For UXO surveys, data are frequently given in units of :math:`mV` or :math:`\mu V`. It should be noted that a gain factor may have been applied to the voltages measured by the receiver(s). If the data are being represented in terms of the field, :math:`\mu T` or :math:`nT` may be used. When representing the time-derivative, data are usually given in :math:`\mu T/s` or :math:`nT/s`. As we will discuss in interpretation (link), specific units for the data are somewhat less important for UXO surveys than they are for other EM surveys.
+**Units:** Data are frequently given in units of :math:`mV` or :math:`\mu V`. It should be noted that a gain factor may have been applied to the voltages measured by the receiver(s). If the data are being represented in terms of the field, :math:`\mu T` or :math:`nT` may be used. When representing the time-derivative, data are usually given in :math:`\mu T/s` or :math:`nT/s`.
 
 Frequency Domain Data
 ---------------------
@@ -36,7 +36,7 @@ Vertical FEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and 
 Time Domain Data
 ----------------
 
-When operating in the time domain, we are generally interested in the UXO's transient response; that is, the response to step-off excitation. For some systems (EM-61), the off-time response may only be measured for a few time channels. For newer systems, 10s of time channels are used to accurately characterize the decays of potential targets. Off-time data are typically collected between 100 :math:`\mu s` to 25 :math:`ms` after the transmitter is shut off. A representation of the transmitter's current waveform and measured time channels is illustrated below.
+When operating in the time domain, we are generally interested in the UXO's transient response; that is, the response to step-off excitation. For some systems (EM-61), the off-time response may only be measured for a few time channels. For newer systems, 10s of time channels are used to accurately characterize the decays of potential targets. Off-time data are typically collected between 100 :math:`\mu s` and 25 :math:`ms` after the transmitter is shut off. A representation of the transmitter's current waveform and measured time channels is illustrated below.
 
 .. figure:: images/time_channels.png
 	:align: center
@@ -49,7 +49,7 @@ When operating in the time domain, we are generally interested in the UXO's tran
 TEM Anomalies
 *************
 
-Anomalies associated with the transient response decay over time. The rate of decay (:math:`dBdt`) at early, mid and late-times depends significantly on the dimensions and physical properties of each target.
+Anomalies associated with the transient response decay over time. The rate of decay (:math:`dB/dt`) at early, mid and late-times depends significantly on the dimensions and physical properties of each target.
 
 Vertical TEM anomalies over a host a conductive (:math:`\sigma > 10^6` S/m) and magnetically permeable (:math:`\mu_r > 1`) objects are shown below. The objects were excited with a step-off excitation using a vertical dipole source (small loop). This is meant to demonstrate the type of data one would observe when using a domain coincident loop system (EM-61).
 
@@ -71,9 +71,9 @@ TEM Decays
 
 	3-component TEM decays observed using MPV instrument.
 
-For instrument arrays containing multiple transmitters and receivers, we frequently plot the decays observed over a particular target. In physics (link), we showed that UXOs display particular decays over early, mid and late times.
+In the :ref:`physics section <uxo_physics>`, we learned that UXOs display particular decays over early, mid and late times. As a result, significant information about a potential target can be obtained by plotting the TEM response over all time channels. For instrument arrays containing multiple transmitters and receivers, this may result in many plotted decays. 
 
-On the right, we show a host of decays over a conductive (:math:`\sigma = 10^6` S/m) and magnetically permeable (:math:`\mu_r = 30`) using an MPV instrument. Here, 3-component data were collected within a 2 m :math:`\times` 2 m grid over the target.
+On the right, we show decaying :math:`dB/dt` responses over a conductive (:math:`\sigma = 10^6` S/m) and magnetically permeable (:math:`\mu_r = 30`) object using an MPV instrument. Here, 3-component data were collected within a 2 m :math:`\times` 2 m grid over the target.
 
 
 
