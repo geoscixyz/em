@@ -107,7 +107,7 @@ The transient response characterizes the secondary fields which are generated af
 	:figwidth: 50%
 	:name: uxo_physics_TEM_moment
 
-	Transient dipole moment parallel to the inducing field (normalized by the inducing field) for a sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30) 2 m below an inductive source. (a) Dipole moment. (b) Time-derivative.
+	Transient dipole moment normalized by the inducing field for a sphere (:math:`R` = 15 cm, :math:`\sigma=10^6` S/m, :math:`\mu_r` = 30) 2 m below an inductive source. (a) Dipole moment. (b) Time-derivative.
 
 
 .. math::
