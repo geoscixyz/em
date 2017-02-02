@@ -24,7 +24,7 @@ Transmitter
 
 For UXO systems, inductive loop sources are used as transmitters. Each transmitter loop is comprised of a coil of wire which carries a time-varying electrical current; which produces a time-varying primary magnetic field.
 
-Transmitter loops can be square or circular in shape. For single-loop systems (EM-61, TEMTADS, MPV), the transmitter loop is generally oriented horizontally. For multi-loop systems (Metal Mapper), the transmitter loops are oriented orthogonal to one another; which allows the transmitter to illuminate targets from multiple directions. Mobile systems (EM-61, MPV, TEMTADS, etc...) use transmitter loops with dimensions anywhere from 10s of centimeters to roughly a meter. Large loop systems use a stationary transmitter loop with dimensions up to 10s of meters (UltraTEM).
+Transmitter loops can be square or circular in shape. For single-loop systems (EM-61, TEMTADS, MPV), the transmitter loop is generally oriented horizontally. For multi-loop systems (Metal Mapper), the transmitter loops are oriented orthogonal to one another; which allows the transmitter to illuminate targets from multiple directions at a single location. Mobile systems (EM-61, MPV, TEMTADS, etc...) use transmitter loops with dimensions anywhere from 10s of centimeters to roughly a meter. Large loop systems use a stationary transmitter loop with dimensions up to 10s of meters (UltraTEM).
 
 .. figure:: images/source_moment.png
 	:align: right

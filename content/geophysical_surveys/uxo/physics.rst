@@ -111,12 +111,12 @@ The transient response characterizes the secondary fields which are generated af
 
 
 .. math::
-	\mathbf{d}(t) = \mathbf{G \eta}(t) 
+	\mathbf{d}(t) = \mathbf{G p}(t) 
 
-where :math:`\mathbf{d}(t)` is used to represent :math:`dB/dt` or :math:`B(t)` and :math:`\mathbf{\eta}(t)` represents :math:`\mathbf{m}(t)` or :math:`d\mathbf{m}/dt`, respectively, after the primary field has been removed. The UXO's transient dipole moment is given by:
+where :math:`\mathbf{d}(t)` is used to represent :math:`dB/dt` or :math:`B(t)` and :math:`\mathbf{p}(t)` represents :math:`\mathbf{m}(t)` or :math:`d\mathbf{m}/dt`, respectively, after the primary field has been removed. The UXO's transient dipole moment is given by:
 
 .. math::
-	\mathbf{\eta}(t) = \mathbf{A^T L}(t) \mathbf{A h_p}
+	\mathbf{p}(t) = \mathbf{A^T L}(t) \mathbf{A h_p}
 
 where :math:`A` is a 3D rotation matrix from the coordinate system of the transmitter (:math:`x,y,z`) to the coordinate system of the UXO (:math:`x',y',z'`), :math:`\mathbf{h_p} = [h_x, h_y, h_z]^T` is a vector denoting transmitter's primary field before shut-off and :math:`\mathbf{L}(t)` defines the polarization of the UXO. Assuming there is no anisotropy, :math:`\mathbf{L}(t)` is a diagonal matrix of the form:
 
