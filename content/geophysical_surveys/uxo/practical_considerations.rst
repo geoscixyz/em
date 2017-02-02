@@ -1,56 +1,40 @@
 .. _uxo_pratical_considerations:
 
+.. purpose::
+
+	Here
+
 Practical Considerations
 ========================
 
-.. raw:: html
-    :file: ../../../underconstruction.html
+Geological responses and clutter items make UXO classification difficult because they mask the responses from targets and distort anomalies. Before attempting to locate and classify UXOs within a new area, work must be done to ensure the survey will produce successful results. In practice this is accomplished by:
 
-Before attempting to locate and classify UXOs within a new area, work must be done to ensure the survey will produce successful classification results. Geological and clutter can make UXO classification difficult
+	- Accurately characterizing the background response due to local geology and clutter.
+	- Performing test surveys over seeded items to validate location and classification algorithms.
 
-Important practical considerations are:
+Characterizing the Background Response
+--------------------------------------
 
-	- Accurate characterization of the background response due to local geology and small clutter.
-	- Using test surveys over seeded to validate location and classification algorithms.
+An important aspect of UXO surveys is accurate characterization of the background response. By measuring the local background response, we can determine the nature and amplitude of signals which may mask responses from UXOs. In the case of geological responses, it may be possible to remove the background response and isolate the UXO's response. In the case of clutter items, characterization of the background response can be used to infer survey limitations; for example, the maximum depth at which a particular ordnance item can be classified with 100% certainty (detection assurance level).
 
-The Background Response
------------------------
-
+Below, we show the background response due to clutter items and the responses over two identical UXOs a different depths. The shallow UXO produces a much higher amplitude anomaly than the deeply buried UXO. In the latter case, the amplitude of the background response is significant and distorts the TEM anomaly. 
 
 
+.. figure:: images/data_practical_clutter.png
+	:align: center
+	:figwidth: 100%
+	:name: fig_clutter_uxo
 
+	Distortion of TEM anomalies due to clutter items at t = :math:`10^{-3}` s. (left) Background response. (center) Response over shallow UXO; z = -1 m. (right) Response over deep UXO; z = -2 m.
 
-**Have geological noise and clutter, 3 UXOs at different depths, and the sum. Show that at sufficient depth, we can't see the UXO**
-
-
-
-Responses over Seeded Items
----------------------------
-
-**Show a picture of someone seeding an item or doing a test survey?**
-
-
-
-
-Classification
---------------
-
-**If you want to get fancy, show that you were able to recover polarizations but not for the object at significant depth**.
-
-
-
-Detection Assurance Level
--------------------------
-
-The detection assurance level refers to the maximum distance from the transmitter in which a particular ordnance item may be classified with 100% certainty. 
+Test Survey over Seeded Items
+-----------------------------
 
 
 
 
 
 
-Test Survey
------------
 
 Once an instrument has been chosen and the survey designed, it may be beneficial to perform a test survey. During the test survey, a known ordnance item is buried within a test site. The proposed survey design is then used to locate and accurately classify the ordnance.
 
@@ -59,6 +43,21 @@ Test surveys are used to determine whether:
 	1) the line and station spacings are sufficient.
 	2) the detection assurance level is accurate.
 	3) the current survey parameters can be used to accurately locate and classify ordnance items.
+
+
+
+
+**If you want to get fancy, show that you were able to recover polarizations but not for the object at significant depth**.
+
+
+.. figure:: images/practical_recovery.png
+	:align: center
+	:figwidth: 80%
+	:name: fig_uxo_practical_recovery
+
+	Successful (left) and unsuccessful (right) classification of seeded items. :math:`L1` is the true primary polarization, :math:`L2 = L3` are the true secondary polarizations and :math:`Lx, \; Ly` and :math:`Lz` are recovered polarizations.
+
+
 
 
 

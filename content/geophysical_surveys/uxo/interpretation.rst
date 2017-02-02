@@ -1,11 +1,11 @@
 .. _uxo_interpretation:
 
+.. purpose::
+
+	Here, we present a workflow for UXO classification. We then discuss methods for removing geological responses.
+
 Interpretation
 ==============
-
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 In many cases, the number of clutter items far exceeds the number of ordnance items within the survey area. As a result, data processing and interpretation techniques are used to differentiate ordnance items from clutter and produce a prioritized dig list of targets for excavation. A workflow showing the processing steps for UXO classification is shown in :numref:`fig_workflow_uxo`.
 

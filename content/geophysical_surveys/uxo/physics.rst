@@ -1,11 +1,11 @@
 .. _uxo_physics:
 
+.. purpose::
+
+	Here, the nature of UXO responses is described in both the frequency and time domain. A commonly used model for characterizing UXO responses is also presented. 
+
 Physics
 =======
-
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 As explained on the previous page, EM UXO surveys operate on the principles of electromagnetic induction (:numref:`fig_UXO_index_schematic`). Compared to the host medium, UXO casings are both highly conductive (:math:`\sigma > 10^5` S/m) and highly permeable (:math:`\mu_r \gg 1`). During a UXO survey, an inductive loop source generates a primary field. The primary field induces eddy currents within ordnance casings and other buried metallic objects (known as clutter). Induced eddy currents generate secondary electromagnetic fields which are measured by one or more receiver coils.
 

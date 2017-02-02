@@ -1,11 +1,11 @@
 .. _uxo_survey:
 
+.. purpose::
+
+	Here, we describe a host of instruments used for UXO surveys along with some of their pros and cons. Properties of the transmitter and receiver are discussed.
+
 Survey
 ======
-
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 Instruments designed for UXO applications come in a wide variety of geometries ranging from single loop, man-portable systems to cart systems with multiple transmitters and receivers. Each system has its advantages and disadvantages. As a result, it is important to choose a UXO system which works well for a particular setting. Frequency domain systems have been used for decades, however, modern time domain systems are currently a more popular choice. Aspects of UXO surveys as they relate to instrumentation are discussed here. Aspects of survey design are discussed :ref:`here <uxo_survey_design>`.
 

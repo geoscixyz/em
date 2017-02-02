@@ -1,11 +1,11 @@
 .. _uxo_survey_design:
 
+.. purpose::
+
+	Here, important aspects of survey design are discussed.
+
 Survey Design
 =============
-
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 Spatial Sampling Density
 ------------------------

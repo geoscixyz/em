@@ -1,5 +1,9 @@
 .. _uxo_data:
 
+.. purpose::
+
+	Here, we describe the raw data which are collected during a UXO survey. We then discuss the manner in which raw data can be used to recover the EM response at each data location. Examples of frequency domain and time domain data collected over a set of conductive and magnetically permeable objects are then presented. This is used to demonstrate how UXO data are visualized.
+
 Data
 ====
 
