@@ -14,8 +14,11 @@
 
 import sys
 import os
+import em_examples
 
 sys.path.append(os.path.abspath('./_ext'))
+# sys.path.append(os.path.abspath('./em_notebooks'))
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,7 +44,9 @@ extensions = [
     'matplotlib.sphinxext.plot_directive',
     'edit_on_github',
     'purpose',
-    'question'
+    'question',
+    # 'sphinx_nbexamples'
+    # 'sphinx_gallery.gen_gallery',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +55,22 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst']
+
+# sphinx_gallery_conf = {
+#     # path to your examples scripts
+#     'examples_dirs' : 'em_notebooks',
+#     # path where to save gallery generated examples
+#     'gallery_dirs'  : 'auto_examples'}
+
+
+    # Sphinx Gallery
+sphinx_gallery_conf = {
+    # path to your examples scripts
+    'examples_dirs' : '../../simpeg/em_notebooks',
+    'gallery_dirs'  : 'auto_examples'
+}
+
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -71,6 +91,7 @@ project = u'em'
 
 # """
 author = u'GeoSci Developers'
+
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -97,7 +118,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'AUTHORS.rst', 'README.md',
+    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints',
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
