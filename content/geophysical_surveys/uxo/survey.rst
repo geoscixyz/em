@@ -140,7 +140,7 @@ The man-portable vector (MPV) instrument is comprised of a 50 cm diameter transm
 
 The Geometrics Metal Mapper is a time-domain instrument with 3 orthogonal transmitter loops (1m :math:`\times` 1m) and a horizontal array with 7 receivers. Each receiver measures 3-component data, resulting in 63 transmitter-receiver pairs. Because the Metal Mapper illuminates targets from multiple orientations, it has an advantage over single transmitting loop systems. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.
 
-.. figure:: images/fig_MetalMapper_uxo.png
+.. figure:: images/fig_metalmapper_uxo.png
 	:align: center
 	:figwidth: 100%
 	:name: fig_MetalMapper_uxo
