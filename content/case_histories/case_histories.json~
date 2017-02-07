@@ -233,7 +233,7 @@
             {"uid":"user:sdevriese", "as":"author"}
         ],
         "tags":[
-            {"uid":"Borehole EM", "as":"geophysical_survey"},
+            {"uid":"Borehole FEM", "as":"geophysical_survey"},
             {"uid":"Hydrocarbons", "as":"application"},
             {"uid":"Oil Sands", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
