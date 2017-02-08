@@ -23,6 +23,7 @@
     albany/index
     westplains/index
     furggwanghorn/index
+    sagd/index
     norsminde/index
     barents_sea/index
     kasted/index
@@ -258,6 +259,35 @@ Furggwanghorn
     - geophysical survey: GPR
     - application: Geotechnical
     - location: Switzerland
+
+|
+|
+|
+
+
+
+        
+
+SAGD
+^^^^
+
+.. image:: ./sagd/images/ChamberIrregular.png
+    :alt: sagd
+    :width: 260
+    :align: right
+
+- :ref:`SAGD <sagd_index>`
+
+
+- Contributors
+    - author: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: Borehole EM
+    - application: Hydrocarbons
+    - location: Canada
+    - keyword: Oil Sands
 
 |
 |

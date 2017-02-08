@@ -222,8 +222,7 @@
             {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
             {"uid":"Nunavut, Canada", "as":"Location"}
         ]
-    }
-	,
+    },
     "sagd":{
         "title":"SAGD",
         "source":"./sagd/",
@@ -238,6 +237,6 @@
             {"uid":"Oil Sands", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
         ]
-    
+	}    
 }
 
