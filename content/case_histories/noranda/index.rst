@@ -13,7 +13,7 @@ Noranda
 - **Authors**: :ref:`eholtham`
 - **Reviewer**: :ref:`sdevriese`
 
-.. topic:: Prelude
+.. topic :: Prelude
 
 This case history is based on the thesis "3D inversion of natural source electromagnetic data" by :cite:`holtham2012`.
 
