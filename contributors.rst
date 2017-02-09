@@ -539,6 +539,30 @@ Stanislawa Hickey
 
             
 
+.. _eholtham:
+
+Elliot Holtham
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> University of British Columbia
+                              <br>
+        <strong>location:</strong> Vancouver, BC
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _cizarra:
 
 Carlos Izarra

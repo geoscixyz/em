@@ -28,6 +28,7 @@
     barents_sea/index
     kasted/index
     balboa/index
+    noranda/index
     
 
 
@@ -408,6 +409,36 @@ Balboa
     - application: Mining
     - location: Panama
     - keyword: ZTEM, porphyry, copper, gold
+
+|
+|
+|
+
+
+
+        
+
+Noranda
+^^^^^^^
+
+.. image:: ./noranda/images/TrueModel3D.png
+    :alt: noranda
+    :width: 260
+    :align: right
+
+- :ref:`Noranda <noranda_index>`
+
+
+- Contributors
+    - author: :ref:`eholtham`
+    - reviewer: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: ZTEM
+    - application: Mineral deposits
+    - location: Canada
+    - keyword: Noranda
 
 |
 |

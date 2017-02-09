@@ -237,6 +237,22 @@
             {"uid":"Oil Sands", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
         ]
-	}    
+	},
+    "noranda":{
+        "title":"Noranda",
+        "source":"./noranda/",
+        "thumbnail":"./noranda/images/TrueModel3D.png",
+        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "contributors":[
+            {"uid":"user:eholtham", "as":"author"},
+            {"uid":"user:sdevriese", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"ZTEM", "as":"geophysical_survey"},
+            {"uid":"Mineral deposits", "as":"application"},
+            {"uid":"Noranda", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ]
+	}  
 }
 
