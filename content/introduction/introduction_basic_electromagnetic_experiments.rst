@@ -15,7 +15,7 @@ The properties of relevance to electromagnetics are:
 
 - :ref:`electrical conductivity <electrical_conductivity_index>`
 - :ref:`magnetic permeability <magnetic_permeability_index>`
-- :ref:`electrical permittivity <electrical_permittivity_index>`
+- :ref:`dielectric permittivity <dielectric_permittivity_index>`
 
 The success of a geophysical survey depends upon how the physical properties
 of a sought target or geologic structure differ from the background host

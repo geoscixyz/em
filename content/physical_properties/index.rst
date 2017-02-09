@@ -19,7 +19,7 @@ relevant  properties for electromagnetics are:
 
 - :ref:`electrical_conductivity_index`: :math:`\sigma` (or its reciprocal, resistivity, :math:`\rho`)
 - :ref:`magnetic_permeability_index`, :math:`\mu`
-- :ref:`electrical_permittivity_index`, :math:`\varepsilon`
+- :ref:`dielectric_permittivity_index`, :math:`\varepsilon`
 
 A physical property quantifies how a rock responds to a particular input and
 it therefore connects a forcing field to a resulting flux. Typically the
@@ -60,7 +60,7 @@ In this section, we present basic material regarding the various physical proper
 
     electrical_conductivity/index
     magnetic_permeability/index
-    electrical_permittivity/index
+    dielectric_permittivity/index
     constitutive_relations/index
 
 
