@@ -173,13 +173,13 @@
         "source":"./kasted/",
         "thumbnail":"./kasted/images/fig_thumbnail.png",
         "contributors":[
-            {"uid":"user:jpedersen", "as":"author"},
-            {"uid":"user:fefferso", "as":"author"},
-            {"uid":"user:fjorgensen", "as":"author"},
-            {"uid":"user:jcrefsgaard", "as":"author"},
+            {"uid":"user:ashoyer","as":"author"},
+            {"uid":"user:tvilhelmsen","as":"author"},
             {"uid":"user:eauken", "as":"author"},
-            {"uid":"user:cschamper", "as":"author"},
-            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:fjorgensen","as":"author"},
+            {"uid":"user:psandersen","as":"author"},
+            {"uid":"user:aviezzoli","as":"author"},
+            {"uid":"user:imoller","as":"author"},
             {"uid":"user:dccowan", "as":"reviewer"}
         ],
         "tags":[
