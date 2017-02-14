@@ -339,7 +339,7 @@ Kasted
 
 
 - Contributors
-    - author: :ref:`ashoyer`, :ref:`tvilhelmsen`, :ref:`eauken`, :ref:`fjorgensen`, :ref:`psandersen`, :ref:`aviezzoli`, :ref:`imoller`
+    - author: :ref:`ashoyer`, :ref:`tvilhelmsen`, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, :ref:`psandersen`, :ref:`aviezzoli`, :ref:`imoller`
     - reviewer: :ref:`dccowan`
 
 
