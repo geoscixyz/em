@@ -295,5 +295,20 @@
         "name":"Anders Vest Christiansen",
         "affiliation":"Aarhus University - Hydrogeophysics Group",
         "location":"Aarhus, Denmark"
+    },
+    "ashoyer":{
+        "name":"A. S. Høyer"
+    },
+    "tvilhelmsen":{
+        "name":"Troels Vilhelmsen"
+    },
+    "psandersen":{
+        "name":"Peter B. E. Sandersen"
+    },
+    "aviezzoli":{
+        "name":"Andrea Viezzoli"
+    },
+    "imoller":{
+        "name":"Ingelise Møller"
     }
 }
