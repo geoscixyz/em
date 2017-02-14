@@ -5,7 +5,7 @@ Norsminde
 
 **Assessment of near-surface mapping capabilities by airborne transient electromagnetic data – an extensive comparison to conventional borehole data**
 
-- **Authors**: :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, :ref:`cschamper`, :ref:`fjorgensen` and :ref:`fefferso`.
+- **Authors**: :ref:`eauken`, :ref:`avchristiansen`, :ref:`cschamper`, :ref:`fjorgensen` and :ref:`fefferso`.
 - **Editor**: :ref:`dccowan`
 
 
