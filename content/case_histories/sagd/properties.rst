@@ -20,7 +20,7 @@ Properties
                 A cross-section through the resistivity model containing 3 steam chambers.
 
 
-The steam is injected into a resistive oil reservoir (:numref:`sagd2a`) and decreases its resistivity (:numref:`sagd2b`). The amount of change in the resistivity depends on a variety of reservoir parameters, which can include temperature, salinity, and wettability :cite:`mansure1993, martinez2012`.
+The steam is injected into a resistive oil reservoir (:numref:`sagd2a`) and decreases its resistivity (:numref:`sagd2b`). The amount of change in the resistivity depends on a variety of reservoir parameters, which can include temperature, salinity, and wettability :cite:`mansure1993`, :cite:`martinez2012`.
 
 
 In addition, the surrounding geologic layers have differing resistivities, as indicated in the Table 1. The overlying layers consist of glacial till, paleo-channels, sands, and shales while the reservoir itself is a unconsolidated sand that contains the heavy oil. Below the reservoir lies a limestone basement unit, separated by an unconformity. Prairie Evaporites (or salts) may exist along the unconformity. The :ref:`Aspen <aspen_index>` case history describes an airborne EM method which was used to recover the resistivities of the upper geologic layers. 
