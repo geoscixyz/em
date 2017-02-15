@@ -13,7 +13,7 @@ To further understand the data and what changes happen within the reservoir, the
 
 Because the steam is expected to decrease the resistivity, the resistivities in the recovered model were limited to be no higher than 147 :math:`\Omega` m, which was the resistivity of the McMurray Formation. In addition, the orientation of the horizontal well pairs are well known, so we impose increased model smoothness in that direction by changing :math:`\alpha_y` from 1 to 10. 
 
-The data from the earliest time step was inverted first and its recovered model was used to start the inversion for the second time step. This second model was then used as the initial model for the final time step. This “cascading” inversion method reduces computation time by providing the inversion with a model that is assumed to better fit the data than the 1D background model.
+The data from the earliest time step was inverted first and its recovered model was used to start the inversion for the second time step. This second model was then used as the initial model for the final time step. This cascading inversion method reduces computation time by providing the inversion with a model that is assumed to better fit the data than the 1D background model.
 
 The models are shown and interpreted on the :ref:`next page <sagd_interpretation>`.
 

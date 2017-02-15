@@ -8,9 +8,9 @@ SAGD
 
 - **Authors** :ref:`sdevriese`
 
-.. topic:: Prelude
+.. topic :: Prelude
 
-This case history is based on the thesis "Detecting and imaging time-lapse conductive changes using electromagnetic methods" by :cite:`Devriese2016`.
+        This case history is based on the thesis "Detecting and imaging time-lapse conductive changes using electromagnetic methods" by :cite:`Devriese2016`.
 
 .. figure:: images/ChamberIrregular.png
         :align: right

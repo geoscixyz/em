@@ -1,4 +1,4 @@
-.. _noranda_properties
+.. _noranda_properties:
 
 Properties
 ==========

@@ -3,20 +3,20 @@
 Synthesis
 =========
 
-:numref:`noranda6` compares the true and recovered fine model and shows that large-scale structures are nicely recovered in both shape and amplitude. In addition, the recovered model shows the highly conductive ore bodies in the southern portion of the region.
+:numref:`noranda7` compares the true and recovered fine model and shows that large-scale structures are nicely recovered in both shape and amplitude. In addition, the recovered model shows the highly conductive ore bodies in the southern portion of the region.
 
 .. figure:: images/truerecoveredmodel.png
-        :name: noranda6
+        :name: noranda7
         :align: center
         :figwidth: 80%
 
         Comparison of plan view slices of the (left) true model and (right) the recovered model.
 
 
-":numref:`noranda7` compares the recovered high conductivity regions (mineralized zones) with the true mineralized zones in the region outlined in black in :numref:`noranda6`. Although one cannot expect to recover the exact complex geometry of these relatively small mineralized zones, the inverted model does a good job of recovering the general geometry of the ore bodies."
+":numref:`noranda8` compares the recovered high conductivity regions (mineralized zones) with the true mineralized zones in the region outlined in black in :numref:`noranda7`. Although one cannot expect to recover the exact complex geometry of these relatively small mineralized zones, the inverted model does a good job of recovering the general geometry of the ore bodies."
 
 .. figure:: images/synthesis.png
-        :name: noranda7
+        :name: noranda8
         :align: center
         :figwidth: 100%
 

@@ -1,4 +1,4 @@
-.. sagd_survey:
+.. _sagd_survey:
 
 Survey
 ======
