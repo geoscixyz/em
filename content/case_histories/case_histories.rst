@@ -370,7 +370,7 @@ Kasted
 
 
 - Contributors
-    - author: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper`, :ref:`avchristiansen`
+    - author: :ref:`ashoyer`, :ref:`tvilhelmsen`, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, :ref:`psandersen`, :ref:`aviezzoli`, :ref:`imoller`
     - reviewer: :ref:`dccowan`
 
 

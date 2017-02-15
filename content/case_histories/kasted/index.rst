@@ -1,11 +1,18 @@
 .. _kasted_index:
 
+.. |Res| unicode:: 0xAE
+   :ltrim:
+.. |lo| unicode:: 0xF8
+   :ltrim:
+.. |o| unicode:: 0xF8
+   :trim:
+
 Kasted
 ======
 
 **Assessment of near-surface mapping capabilities by airborne transient electromagnetic data – an extensive comparison to conventional borehole data**
 
-- **Authors**: :ref:`jpedersen`, :ref:`fefferso`, :ref:`fjorgensen`, :ref:`jcrefsgaard`, :ref:`eauken`, :ref:`cschamper` and :ref:`avchristiansen`.
+- **Authors**: A. S. H |o| yer, Troels Vilhelmsen, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, Peter B.E. Sandersen, Andrea Viezzoli and Ingelise M |o| ller.
 - **Editor**: :ref:`dccowan`
 
 

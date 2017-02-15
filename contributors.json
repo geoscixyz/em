@@ -296,9 +296,19 @@
         "affiliation":"Aarhus University - Hydrogeophysics Group",
         "location":"Aarhus, Denmark"
     },
-    "eholtham":{
-        "name":"Elliot Holtham",
-        "affiliation":"University of British Columbia",
-        "location":"Vancouver, BC"
+    "ashoyer":{
+        "name":"A. S. Høyer"
+    },
+    "tvilhelmsen":{
+        "name":"Troels Vilhelmsen"
+    },
+    "psandersen":{
+        "name":"Peter B. E. Sandersen"
+    },
+    "aviezzoli":{
+        "name":"Andrea Viezzoli"
+    },
+    "imoller":{
+        "name":"Ingelise Møller"
     }
 }

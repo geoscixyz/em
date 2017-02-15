@@ -539,10 +539,10 @@ Stanislawa Hickey
 
             
 
-.. _eholtham:
+.. _ashoyer:
 
-Elliot Holtham
---------------
+A. S. Høyer
+-----------
 
 .. raw:: html
 
@@ -552,10 +552,6 @@ Elliot Holtham
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
-        <strong>affiliation:</strong> University of British Columbia
-                              <br>
-        <strong>location:</strong> Vancouver, BC
-                              
     </div>
     <br><br>
     </div>
@@ -965,6 +961,26 @@ Michael Mitchell
 
             
 
+.. _imoller:
+
+Ingelise Møller
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _doldenburg:
 
 Douglas Oldenburg
@@ -1227,6 +1243,26 @@ Gudni Karl Rosenkjaer
 
             
 
+.. _psandersen:
+
+Peter B. E. Sandersen
+---------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _cschamper:
 
 Cyril Schamper
@@ -1274,6 +1310,46 @@ Sanna Tyrvainen
         <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
                         
                               
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
+.. _aviezzoli:
+
+Andrea Viezzoli
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
+.. _tvilhelmsen:
+
+Troels Vilhelmsen
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
     </div>
     <br><br>
     </div>
