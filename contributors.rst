@@ -799,13 +799,21 @@ Thomas Martin
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png"><img alt="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png" class="align-left" src="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
-        <strong>affiliation:</strong> Rock Solid Images
+        <strong>affiliation:</strong> University of Hawaii
                               <br>
-        <strong>url:</strong> 
-        <a class="reference external" href="http://rocksolidimages.com">http://rocksolidimages.com</a>
+        <strong>location:</strong> Honolulu, Hawaii
+                              <br>
+        <strong>email:</strong> 
+        <a class="reference external" href="mailto:tpm319@gmail.com">tpm319@gmail.com</a>
+                        
+                              <br>
+        <strong>ORCID:</strong> 
+        <a class="reference external" href="http://orcid.org/0000-0002-4171-0004">0000-0002-4171-0004</a>
                         
                               
     </div>

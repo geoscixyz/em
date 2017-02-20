@@ -162,8 +162,11 @@
     },
     "tmartin":{
         "name":"Thomas Martin",
-        "affiliation":"Rock Solid Images",
-        "url":"http://rocksolidimages.com"
+        "affiliation":"University of Hawaii",
+        "location":"Honolulu, Hawaii",
+        "email":"tpm319@gmail.com",
+        "ORCID":"0000-0002-4171-0004",
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/tmartin.png"
     },
     "mikemcm":{
         "name":"Mike McMillan",
