@@ -262,7 +262,8 @@
         "name":"Stanislawa Hickey",
         "affiliation":"Mira Geoscience Ltd.",
         "location":"Vancouver, BC",
-        "email":"stanislawah@miregeoscience.com"
+        "email":"stanislawah@miregeoscience.com",
+        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     },
     "jpedersen":{
         "name":"Jesper Pedersen",
