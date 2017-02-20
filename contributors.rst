@@ -799,7 +799,7 @@ Thomas Martin
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/tmartin.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/tmartin.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/tmartin.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png"><img alt="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png" class="align-left" src="https://github.com/geoscixyz/em/raw/AffiliationsEdit/images_contributors/tmartin.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
