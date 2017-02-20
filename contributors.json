@@ -328,22 +328,28 @@
     },
     "tvilhelmsen":{
         "name":"Troels Vilhelmsen",
+        "affiliation":"Aarhus University",
         "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     },
     "psandersen":{
         "name":"Peter B. E. Sandersen",
+        "affiliation":"Aarhus University - GEUS",
         "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     },
     "aviezzoli":{
         "name":"Andrea Viezzoli",
+        "affiliation":"Aarhus University",
         "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     },
     "imoller":{
         "name":"Ingelise Møller",
+        "affiliation":"Aarhus University - GEUS",
         "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     },
     "eholtham":{
         "name":"Elliot Holtham",
+        "affiliation":"Computational Geosciences Inc.",
+        "location":"Vancouver, BC"
         "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
     }
 }
