@@ -570,6 +570,10 @@ Elliot Holtham
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
+        <strong>affiliation:</strong> Computational Geosciences Inc.
+                              <br>
+        <strong>location:</strong> Vancouver, BC
+                              
     </div>
     <br><br>
     </div>
@@ -1036,6 +1040,8 @@ Ingelise Møller
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
+        <strong>affiliation:</strong> Aarhus University - GEUS
+                              
     </div>
     <br><br>
     </div>
@@ -1332,6 +1338,8 @@ Peter B. E. Sandersen
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
+        <strong>affiliation:</strong> Aarhus University - GEUS
+                              
     </div>
     <br><br>
     </div>
@@ -1410,6 +1418,8 @@ Andrea Viezzoli
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
+        <strong>affiliation:</strong> Aarhus University
+                              
     </div>
     <br><br>
     </div>
@@ -1432,6 +1442,8 @@ Troels Vilhelmsen
     </div>
     <div class="col-md-6" style="line-height: 1.5">
         
+        <strong>affiliation:</strong> Aarhus University
+                              
     </div>
     <br><br>
     </div>
