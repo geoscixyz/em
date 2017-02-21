@@ -3,17 +3,10 @@
 Magnetic Permeability
 =====================
 
-Magnetic permeability is an important diagnostic physical property in
-geophysics. In addition to compositional differences, rocks and other objects
-may be differentiated by their magnetic permeabilities. In mineral
-exploration, contrasts in magnetic permeabilities between rock types can be
-exploited to recover subsurface geological structures. Contrasts in magnetic
-permeability have also been used to locate unexploded ordnance items; as their
-casings are significantly more permeable than the medium in which they are
-buried.
+Magnetic permeability is a diagnostic physical property which characterizes the degree of induced magnetism a material experiences under the influence of an external magnetic field. Magnetic permeability is relevant to a variety of geophysical surveys, including: frequency-domain EM (FDEM), time-domain EM (TDEM), unexploded ordnance (UXO) and ground-penetrating radar (GPR).
 
-Formal Definition
------------------
+Constitutive Relationship
+-------------------------
 
 When exposed to an applied magnetic field, the collection of individual
 magnetic dipole moments within most materials will attempt to reorient
@@ -41,11 +34,7 @@ magnetic field :math:`{\bf H}`; provided the fields are sufficiently weak:
 
 In a vacuum, the relationship between :math:`{\bf B}` and :math:`{\bf H}` is
 given by the permeability of free-space :math:`\mu_0 = 4\pi \times 10^{-7}` H/m. An illustration representing the magnetic flux density
-as a function of the applied field strength for various rock classifications
-is shown here.
-
-
-
+as a function of the applied field strength for various rock classifications is shown here.
 
 Relative Permeability
 ---------------------
@@ -53,9 +42,9 @@ Relative Permeability
 In addition to the magnetic permeability, magnetic properties are frequently
 represented using the relative permeability. Relative permeability
 characterizes whether the induced magnetization increases or reduces the
-density of magnetic flux within a material. The relative premeability
+density of magnetic flux within a material. The relative permeability
 :math:`\mu_r` is the ratio between the magnetic permeability of a material and
-the premeability of free-space:
+the permeability of free-space:
 
 .. math::
     \mu_r = \frac{\mu}{\mu_0}
@@ -75,7 +64,7 @@ the figure below.
 
 .. figure:: ./images/figMagFluxDensity.png
     :align: center
-    :scale: 70%
+    :scale: 60%
 
     Partial alignment of magnetic dipole moments under the influence of an
     applied magnetic field for various cases. (a) Paramagnetic (:math:`\mu_r > 1`).
@@ -86,9 +75,29 @@ the figure below.
     the density of magnetic flux.
 
 
+Relevance to Geophysical Applications
+-------------------------------------
 
-Contents
---------
+**Inductive Source EM Systems**
+
+In most geological environments, variations in the Earth's magnetic permeability are insignificant (:math:`\mu \sim \mu_0`) and surveys are only sensitive to contrasts in the Earth's electrical conductivity. However, there are a variety of cases where magnetic permeability becomes an important diagnostic physical property. For example, some ore-bearing rocks (magnetite, pyrrhotite) have very high magnetic permeabilities. When using frequency-domain (FDEM) and time-domain (TDEM) electromagnetic systems, large magnetic permeabilities have been shown to impact the measured response. Thus failure to account for the Earth's magnetic properties can result in a mis-characterization of subsurface structures in certain environments. 
+
+**Unexploded Ordnance Surveys**
+
+Magnetic permeability is also a diagnostic physical property for unexploded ordnance (UXO) surveys. An unexploded ordnance (UXO) is a munition that was armed, fired and remains unexploded through malfunction. UXO casings are extremely permeable in comparison to the host medium. This contrast can be exploited in order to locate an remove UXOs from contaminated areas. The UXO's magnetic properties are also responsible for producing distinct TDEM responses. 
+
+**Ground Penetrating Radar**
+
+Magnetic permeability acts as a secondary diagnostic physical property in ground penetrating radar (GPR). Magnetic permeability impacts the reflection, refraction and velocity of radiowave signals as they propagate through the Earth.
+
+**Magnetic Viscosity**
+
+Magnetic viscosity refers to a dispersive magnetic permeability which is exhibited by lateritic soils and rapidly cooled basalts. When using TDEM systems, these rocks produce a response which masks the responses from UXOs and deeply buried conductors. Currently, methods are being developed to model this phenomenon and its response from field collected data.
+
+
+
+
+**Contents**
 
  .. toctree::
     :maxdepth: 1

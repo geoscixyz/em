@@ -3,11 +3,11 @@
 Dielectric Permittivity
 =======================
 
-Dielectric permittivity is an important diagnostic physical property in geophysics. Along with electrical conductivity and magnetic permeability, rocks can be differentiated by their dielectric permittivities. Dielectric permittivity impacts the attenuation, wavelength and velocity of electromagnetic waves as they propagate through a material. This physical is especially important to consider when using ground-penetrating radar.
+Dielectric permittivity is a diagnostic physical property which characterizes the degree of electrical polarization a material experiences under the influence of an external electric field. Dielectric permittivity is the primary diagnostic physical property in ground-penetrating radar (GPR).
 
 
-Formal Definition
------------------
+Constitutive Relationship
+-------------------------
 
 Dielectric permittivity (:math:`\varepsilon`) is defined as the ratio between the electric field (:math:`\vec E`) within a material and the corresponding electric displacement (:math:`\vec D`):
 
@@ -48,6 +48,10 @@ The electrical polarization within a material can be defined in terms of the ele
 
 where :math:`\chi_e` is known as the electric susceptibility. Note that the polarization is always parallel to the electric field. The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.
 
+Relevance to Geophysical Applications
+-------------------------------------
+
+Dielectric permittivity is the primary diagnostic physical property in ground penetrating radar (GPR). Dielectric permittivity impacts the attenuation, wavelength and velocity of radiowave signals as they propagate through the Earth. It also determines the reflection and refraction of radiowave signals are interfacs. The impact the of the Earth's dielectric permittivity on EM systems is only significant for sufficiently high operating frequencies. As a result, dielectric permittivity is generally neglected when using most EM systems. These include: time-domain EM (TDEM), frequency-domain EM (FDEM), direct current resistivity (DCR), induced polarization (IP) and natural source EM (MT and ZTEM).
 
 **Contents**
 
