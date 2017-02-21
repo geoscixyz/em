@@ -3,20 +3,108 @@
 Electrical Conductivity
 =======================
 
-.. purpose::
+Electrical conductivity is a diagnostic physical property that quantifies how easily electrical charges move through a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to use its reciprocal, electrical resistivity. For most of the EM systems described within EM geosci, electrical conductivity is the primary diagnostic physical property.
 
-    Using any electromagnetic geophysical survey we excite the earth, and
-    measure signals from the earth. Measured EM signals is mostly depending
-    upon electrical conductivity contrasts of earth materials. Therefore,
-    understanding ...
+Constitutive Relationship
+-------------------------
+
+When an electric field is applied to a material, free charges within the material experience an electrical (Coulomb) force. This force causes the free charges to move through the material along the direction of the applied field (i.e. electrical current). The ease at which electrical charges move through a material under the influence of an electric field depends on the material's electrical conductivity.
+
+.. figure:: ./images/conductivity_physics_diagram.png
+   :align: right
+   :figwidth: 40%
+   :name: fig_conductivity_physics_diagram
+
+   Flow of electrical charges under an applied electric field.
+
+Electrical conductivity :math:`\sigma` defines the ratio between the current density :math:`\mathbf{J}` within a material and the electric field :math:`\mathbf{E}`. This relationship is known as Ohm's law and is given by:
+
+.. math::
+  \mathbf{J} = \sigma \mathbf{E}
+
+where the current density is defined as the electrical current :math:`\mathbf{I}` per unit cross-sectional area :math:`A` (:numref:`fig_conductivity_physics_diagram`):
+
+.. math::
+  \mathbf{J} = \lim_{A \rightarrow 0} \frac{\mathbf{I}(A)}{A}
 
 
-Electrical conductivity is a physical property that quantifies how well
-electrical charges move in a given material when subjected to an applied
-electric field. In mathematical development and in references describing rocks
-or fluids, it is common to refer to its reciprocal, resistivity.
+Electrical Resistivity
+----------------------
 
-Conductivity is often frequency-dependent.  Effectively the material can act
+In many cases, the electrical properties of a material are characterized using the electrical resistivity :math:`\rho`. Electrical resistivity is defined as the reciprocal of the electrical conductivity:
+
+.. math::
+  \rho = \frac{1}{\sigma}
+
+Thus the constitutive relationship can be re-expressed as follows:
+
+.. math::
+  \mathbf{E} = \rho \mathbf{J}
+
+
+Chargeability and Frequency-Dependence
+--------------------------------------
+
+Under the influence of an electric field, free charges (such as ions) flow through materials along the direction of the applied field. However when ionic charges reach an impermeable barrier, they begin to accumulate. Thus certain materials can act as capacitors for ionic charges; a phenomenon known as induced polarization. Below are two examples of induced polarization in rocks. On the left, ionic charges accumulate because the pore path is blocked by metallic particles (electrode polarization). On the right, ionic charges accumulate because the pore throat is insufficiently large (membrane polarization).
+
+.. figure:: ./images/fig_polarization_example.png
+   :align: center
+   :figwidth: 60%
+   :name: fig_polarization_example
+
+The degree of charge accumulation (capacitance) under the influence of an external electric field is described as **chargeability**. Chargeability is frequently considered a separate physical property from conductivity, although the two are related. For chargeable materials, the constitutive relationship (Ohm's law) becomes frequency-dependent:
+
+.. math::
+  \mathbf{J}(\omega) = \sigma (\omega) \mathbf{E}(\omega) 
+
+A commonly used model for describing frequency-dependent conductivity is the Cole-Cole model:
+
+.. math::
+  \sigma (\omega) = \sigma_{\infty} \Bigg [ 1 - \frac{\eta}{1 + (1-\eta)(i \omega \tau)^C} \Bigg ]
+
+where :math:`\sigma_{\infty}` is the infinity frequency limit, :math:`0 \leq \eta \leq 1` is the **chargeability**, and :math:`\tau` and :math:`0 \leq C \leq 1` define the rate of charge accumulation. After taking the reciprocal, the electrical resistivity is commonly expressed as:
+
+.. math::
+  \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega \tau)^C} \Bigg ) \Bigg ]
+
+where :math:`\rho_0` defines the zero-frequency, or DC, resistivity.
+
+
+
+
+
+Relevance to Geophysical Applications
+-------------------------------------
+
+**Electrical Conductivity**
+
+The majority of EM surveys exploit contrasts in electrical conductivity to image the Earth. As a result, electrical conductivity is generally the most important diagnostic physical property. During **direct current resistivity** DCR surveys, 
+
+
+**Chargeability**
+
+
+
+
+
+
+
+
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+
+
+
+Conductivity is often frequency-dependent. Effectively the material can act
 like a capacitor and build up a charge when an electric field is applied, that
 is, the material is "chargeable". The ability to accumulate charge,  called
 "chargeability" is so important in geophysics that it is often considered as
@@ -33,6 +121,11 @@ charges move from the positive to negative potential. The electric current is
 how much charges move within a unit of time. A high conductivity means a
 material that readily allows the flow of electric current. This constitutive
 relationship between electric currents and fields can be written as
+
+
+
+
+
 
 .. math::
   \mathbf{J} = \sigma \mathbf{E},
