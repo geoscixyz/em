@@ -3,7 +3,7 @@
 Magnetic Permeability
 =====================
 
-Magnetic permeability is a diagnostic physical property which characterizes the degree of induced magnetism a material experiences under the influence of an external magnetic field. Magnetic permeability is relevant to a variety of geophysical surveys, including: frequency-domain EM (FDEM), time-domain EM (TDEM), unexploded ordnance (UXO) and ground-penetrating radar (GPR).
+Magnetic permeability is a diagnostic physical property which characterizes the degree of induced magnetism a material experiences under the influence of an external magnetic field. Magnetic permeability is relevant to a variety of geophysical surveys, including: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`unexploded ordnance <uxo_index>` (UXO) and :ref:`ground penetrating radar <gpr_index>` (GPR).
 
 Constitutive Relationship
 -------------------------
@@ -80,19 +80,19 @@ Relevance to Geophysical Applications
 
 **Inductive Source EM Systems**
 
-In most geological environments, variations in the Earth's magnetic permeability are insignificant (:math:`\mu \sim \mu_0`) and surveys are only sensitive to contrasts in the Earth's electrical conductivity. However, there are a variety of cases where magnetic permeability becomes an important diagnostic physical property. For example, some ore-bearing rocks (magnetite, pyrrhotite) have very high magnetic permeabilities. When using frequency-domain (FDEM) and time-domain (TDEM) electromagnetic systems, large magnetic permeabilities have been shown to impact the measured response. Thus failure to account for the Earth's magnetic properties can result in a mis-characterization of subsurface structures in certain environments. 
+In most geological environments, variations in the Earth's magnetic permeability are insignificant (:math:`\mu \sim \mu_0`) and surveys are only sensitive to contrasts in the Earth's electrical conductivity. However, there are a variety of cases where magnetic permeability becomes an important diagnostic physical property. For example, some ore-bearing rocks (magnetite, pyrrhotite) have very high magnetic permeabilities. When using :ref:`frequency-domain <airborne_fdem_index>` (FDEM) and :ref:`time-domain <airborne_tdem_index>` (TDEM) electromagnetic systems, large magnetic permeabilities have been shown to impact the measured response. Thus failure to account for the Earth's magnetic properties can result in a mis-characterization of subsurface structures in certain environments. 
 
 **Unexploded Ordnance Surveys**
 
-Magnetic permeability is also a diagnostic physical property for unexploded ordnance (UXO) surveys. An unexploded ordnance (UXO) is a munition that was armed, fired and remains unexploded through malfunction. UXO casings are extremely permeable in comparison to the host medium. This contrast can be exploited in order to locate an remove UXOs from contaminated areas. The UXO's magnetic properties are also responsible for producing distinct TDEM responses. 
+Magnetic permeability is also a diagnostic physical property for :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. An unexploded ordnance (UXO) is a munition that was armed, fired and remains unexploded through malfunction. UXO casings are extremely permeable in comparison to the host medium. This contrast can be exploited in order to locate an remove UXOs from contaminated areas. The UXO's magnetic properties are also responsible for producing distinct TDEM responses. 
 
 **Ground Penetrating Radar**
 
-Magnetic permeability acts as a secondary diagnostic physical property in ground penetrating radar (GPR). Magnetic permeability impacts the reflection, refraction and velocity of radiowave signals as they propagate through the Earth.
+Magnetic permeability acts as a secondary diagnostic physical property in :ref:`ground penetrating radar <gpr_index>` (GPR). Magnetic permeability impacts the reflection, refraction and velocity of radiowave signals as they propagate through the Earth.
 
 **Magnetic Viscosity**
 
-Magnetic viscosity refers to a dispersive magnetic permeability which is exhibited by lateritic soils and rapidly cooled basalts. When using TDEM systems, these rocks produce a response which masks the responses from UXOs and deeply buried conductors. Currently, methods are being developed to model this phenomenon and its response from field collected data.
+:ref:`Magnetic viscosity <magnetic_permeability_frequency_dependent>` refers to a dispersive magnetic permeability which is exhibited by lateritic soils and rapidly cooled basalts. When using TDEM systems, these rocks produce a response which masks the responses from UXOs and deeply buried conductors. Currently, methods are being developed to model this phenomenon and its response from field collected data.
 
 
 

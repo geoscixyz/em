@@ -3,7 +3,7 @@
 Electrical Conductivity
 =======================
 
-Electrical conductivity is a diagnostic physical property that quantifies how easily electrical charges move through a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to use its reciprocal, electrical resistivity. For most of the EM systems described within EM geosci, electrical conductivity is the primary diagnostic physical property.
+Electrical conductivity is a diagnostic physical property that quantifies how easily electrical charges move through a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to use its reciprocal, electrical resistivity. For most of the :ref:`geophysical surveys <geophysical_surveys_index>` described within EM geosci, electrical conductivity is the primary diagnostic physical property.
 
 Constitutive Relationship
 -------------------------
@@ -82,11 +82,11 @@ Relevance to Geophysical Applications
 
 **Electrical Conductivity**
 
-The majority of EM surveys exploit contrasts in electrical conductivity to image the subsurface. During **direct current resistivity** (DCR) surveys for example, electrical current is forced through the Earth. The path taken by the current, as well as the measured data, depend on the subsurface conductivity distribution.
+The majority of EM surveys exploit contrasts in electrical conductivity to image the subsurface. During :ref:`direct current resistivity <dcr_index>` (DCR) surveys for example, electrical current is forced through the Earth. The path taken by the current, as well as the measured data, depend on the subsurface conductivity distribution.
 
-Many EM systems operate on the principles of EM induction. These include: **frequency-domain EM** (FDEM), **time-domain EM** (TDEM) and **unexploded ordnance** (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivity.
+Many EM systems operate on the principles of EM induction. These include: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`marine controlled source EM <marine_csem_index>` (CSEM) and :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivity.
 
-Data collected during **magnetotelluric** (MT) and **Z-axis Tipper EM** (ZTEM) also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
+Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
 
 **Chargeability**
 

@@ -16,7 +16,6 @@ Here, our description of the magnetic viscosity is limited to providing useful
 expressions for implementation in applied problems. Comprehensive studies of
 magnetic viscosity, and its relevance to geophysical surveying, may be found
 in (:cite:`Neel1949,Buselli1982,Lee1984,Dabasetal1992,DunlopOzdemir1997,Das2006,Pasion2007`).
-page.
 
 Mathematical Description
 ------------------------

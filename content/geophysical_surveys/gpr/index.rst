@@ -1,4 +1,4 @@
-.. _gpr_csem_index:
+.. _gpr_index:
 
 Ground Penetrating Radar
 ========================
