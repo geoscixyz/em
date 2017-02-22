@@ -67,23 +67,30 @@ where :math:`\sigma_{\infty}` is the infinity frequency limit, :math:`0 \leq \et
 .. math::
   \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega \tau)^C} \Bigg ) \Bigg ]
 
-where :math:`\rho_0` defines the zero-frequency, or DC, resistivity.
+where :math:`\rho_0` defines the zero-frequency, or DC, resistivity. The conductivity and resitivity as a function of frequency are illustrated below.
 
 
+.. figure:: ./images/Cole_Cole_example.png
+   :align: center
+   :figwidth: 80%
+   :name: fig_Cole_Cole_example
 
-
+   Cole-Cole conductivity (left) and resistivity (right) for :math:`\sigma_\infty` = 2 S/m, :math:`\rho_0` = 1 :math:`\Omega m`, :math:`\eta` = 0.5, :math:`\tau` = :math:`10^{-4}` s and :math:`C` = 0.5.
 
 Relevance to Geophysical Applications
 -------------------------------------
 
 **Electrical Conductivity**
 
-The majority of EM surveys exploit contrasts in electrical conductivity to image the Earth. As a result, electrical conductivity is generally the most important diagnostic physical property. During **direct current resistivity** DCR surveys, 
+The majority of EM surveys exploit contrasts in electrical conductivity to image the subsurface. During **direct current resistivity** (DCR) surveys for example, electrical current is forced through the Earth. The path taken by the current, as well as the measured data, depend on the subsurface conductivity distribution.
 
+Many EM systems operate on the principles of EM induction. These include: **frequency-domain EM** (FDEM), **time-domain EM** (TDEM) and **unexploded ordnance** (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivity.
+
+Data collected during **magnetotelluric** (MT) and **Z-axis Tipper EM** (ZTEM) also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
 
 **Chargeability**
 
-
+In comparison to most other rock types, sulphide-bearing rocks are highly chargeable; one exception being rock's with a high clay content. In sufficient concentrations, sulphide-bearing rocks can have significant economic value. Unlike DCR surveys, IP surveys can be used to distinguish chargeable and non-chargeable bodies, even if both are similarly conductive. TDEM system can also be used to recognize the presence of chargeable bodies, as they produce distinct time-domain responses. 
 
 
 
