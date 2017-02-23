@@ -79,7 +79,7 @@ Frequency domain measurements are frequently plotted in terms of amplitude and p
    :align: center
    :name: fig_props_amp_phase
 
-   Amplitude and phase plot for a sample with :math:`\rho_0 = 8,800` S/m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
+   Amplitude and phase plot for a sample with :math:`\rho_0 = 8.8 \times 10^3 \; \Omega \!` m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
 
 
 .. figure:: ./images/Cole_Cole_plot.png
@@ -87,7 +87,7 @@ Frequency domain measurements are frequently plotted in terms of amplitude and p
    :align: right
    :name: fig_props_Cole_Cole
 
-   Cole-Cole plot for a sample with :math:`\rho_0 = 8,800` S/m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
+   Cole-Cole plot for a sample with :math:`\rho_0 = 8.8 \times 10^3 \; \Omega \!` m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
 
 **Cole-Cole Plot**
 
@@ -97,18 +97,18 @@ The Cole-Cole plot is also a popular choice for visualizing frequency-domain mea
 Measuring DC Resistivity and Chargeability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Recovering the DC resistivity and chargeability from frequency-domain measurements requires an appropriate model for describing the sample's electric properties. From the previous page, we stated that electrical rock properties can generally be characterized using the Cole-Cole model. For an individual sample:
+
 .. figure:: ./images/Cole_Cole_fit.png
    :figwidth: 50%
    :align: right
    :name: fig_props_Cole_Cole_fit
 
-   Cole-Cole fit showing a sample with :math:`\rho_0 = 8,800` S/m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
+   Cole-Cole fit showing a sample with :math:`\rho_0 = 8.8 \times 10^3 \; \Omega \!` m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
 
-Recovering the DC resistivity and chargeability from frequency-domain measurements requires an appropriate model for describing the sample's electric properties. From the previous page, we stated that electrical rock properties can generally be characterized using the Cole-Cole model. For an individual sample:
-
-   1) The complex impedance is measured at logarithmically spaced frequencies between 0.016 Hz and 1 MHz.
-   2) The dimensions of the sample are then used to obtain the corresponding resistivity values according to Pouillet's equation.
-   3) Resistivity values are fit using the Cole-Cole model, which is subsequently used to obtain intrinsic values for the DC resistivity (:math:`\rho_0`) and chargeability (:math:`\eta`).
+1) The complex impedance is measured at logarithmically spaced frequencies between 0.016 Hz and 1 MHz.
+2) The dimensions of the sample are then used to obtain the corresponding resistivity values according to Pouillet's equation.
+3) Resistivity values are fit using the Cole-Cole model, which is subsequently used to obtain values for the DC resistivity (:math:`\rho_0`) and chargeability (:math:`\eta`).
 
 Recall that the Cole-Cole model for electrical resistivity is given by:
 
