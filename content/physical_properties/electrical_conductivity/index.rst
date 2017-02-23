@@ -86,11 +86,11 @@ The majority of EM surveys exploit contrasts in electrical conductivity to image
 
 Many EM systems operate on the principles of EM induction. These include: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`marine controlled source EM <marine_csem_index>` (CSEM) and :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivity.
 
-Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
+Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) surveys also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
 
 **Chargeability**
 
-In comparison to most other rock types, sulphide-bearing rocks are highly chargeable; one exception being rock's with a high clay content. In sufficient concentrations, sulphide-bearing rocks can have significant economic value. Unlike :ref:`DCR surveys <dcr_index>`, :ref:`IP surveys <ip_index>` can be used to distinguish chargeable and non-chargeable bodies, even if both are similarly conductive. :ref:`TDEM systems <airborne_tdem_index>` can also be used to recognize the presence of chargeable bodies, as they produce distinct time-domain responses. 
+In comparison to most other rock types, sulphide-bearing rocks are highly chargeable; one exception being rocks with a high clay content. In sufficient abundances, sulphide-bearing rocks can have significant economic value. Unlike :ref:`DCR surveys <dcr_index>`, :ref:`IP surveys <ip_index>` can be used to distinguish chargeable and non-chargeable bodies, even if both are similarly conductive. :ref:`TDEM systems <airborne_tdem_index>` can also be used to recognize the presence of chargeable bodies, as they produce distinct time-domain responses. As a result, chargeability has become a unique diagnostic physical property used to located sulphide-bearing ore deposits.
 
 **Contents**
 
