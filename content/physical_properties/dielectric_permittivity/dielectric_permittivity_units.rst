@@ -16,7 +16,7 @@ The units for dielectric proporties and associated quantities are summarized in 
 +---------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity   | :math:`\varepsilon`               | F/m              |
 +---------------------------+-----------------------------------+------------------+
-| Dielectric Susceptibility | :math:`\chi_e`                    | *Unitsless*      |
+| Dielectric Susceptibility | :math:`\chi_e`                    | *Unitless*       |
 +---------------------------+-----------------------------------+------------------+
 | Relative Permittivity     | :math:`\varepsilon_r`             | *Unitless*       |
 +---------------------------+-----------------------------------+------------------+

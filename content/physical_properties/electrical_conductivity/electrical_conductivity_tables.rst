@@ -6,7 +6,7 @@ Typical Values for Rocks
 DC Conductivity/Resistivity
 ---------------------------
 
-The conductivities/resistivities of rocks spans many orders of magnitude. For common rock types, this is illustrated below.
+The conductivities/resistivities of rocks span many orders of magnitude. For common rock types, this is illustrated below.
 
 .. figure:: ./images/resistivity_table1.png
 	:align: center
