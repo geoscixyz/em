@@ -161,7 +161,13 @@ Chargeability results from mechanisms which promote electrode polarization and m
 Sulphide Mineralization
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-As we discussed earlier, electrode polarization occurs when the pore path is blocked by metallic particles.
+.. figure:: ./images/elec_pol_1.gif
+		:align: right
+		:figwidth: 50%
+
+		Electrode polarization.
+
+As we presented :ref:`earlier <electrical_conductivity_mechanisms_electrode>`, electrode polarization occurs when the pore path is blocked by metallic particles.
 A major source of these metallic particles is sulphide mineralization. As the abundance of sulphide minerals within a rock increases, so does the number of interfaces which promote electrode polarization. Therefore, highly mineralized rock tend to be very chargeable. This can be seen in the table below.
 
 +-----------------------+--------------------------+
@@ -177,7 +183,7 @@ A major source of these metallic particles is sulphide mineralization. As the ab
 Clay Content
 ^^^^^^^^^^^^
 
-As discussed earlier, clays have a tendancy to partially block paths which ions take through the rock's pore water (link) and promote the formation of electric double layers (link). This results in an "ion-selective" membrane polarization where both anions and cation accumulate at one end of each clay particle. Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks. As expected, the chargeabilities of clay-rich rocks increases with respect to clay content, as it increases the potential for membrane polarization.
+As we presented :ref:`earlier <electrical_conductivity_mechanisms_membrane>`, clays have a tendancy to partially block paths which ions take through the rock's pore water and promote the formation of electric double layers. This results in an "ion-selective" membrane polarization where both anions and cation accumulate at one end of each clay particle. Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks. As expected, the chargeabilities of clay-rich rocks increases with respect to clay content, as it increases the potential for membrane polarization.
 
 .. figure:: ./images/memb_pol_2nd_type.gif
 	:align: center
@@ -186,32 +192,8 @@ As discussed earlier, clays have a tendancy to partially block paths which ions 
 Pore-Water Saturation, Salinity and Tortuosity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The induced polarization within a rock depends on having a mechanism for accumulating ionic charges. It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water. As the pore-water salinity increases, so does the rock's capacity to support a build-up of ionic charges. This is ultimately responsible for high chargeabilities. The total abundance of charge carries, and the resulting capacity for induced polarization, also increases as the pore-water saturation increases. This is due to the fact that as pore-water saturation increases, there are more electrolyte-surface interfaces in which charge accumulation can occur. Tortuosity also play a rock in determining a rock's chargeability. For a more tortuous pore space, it is harder for ionic charges to flow through the pore-space without encountering obstacles. The more obtacles which result in the accumulationg of ionic charges, the higher the chargeability for the rock. It is important to note that although we have qualitatively described the relationships between pore-water saturation, salinity, tortuosity and rock chargeability, these relationships are very complex.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The induced polarization within a rock depends on having a mechanism for accumulating ionic charges. It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water. As the pore-water salinity increases, so does the capacity of the rock to support a build-up of ionic charges.
-This results in an increases chargeability for the rock.
-
-
-Tortuosity
-^^^^^^^^^^
-
-As the tortuosity of the rock's pore-space increases, it becomes more difficult for ionic charges to move freely through the rock.
-As a result, and increases abundance of ionic charges will accumulate within the rock when it is subjected to an electric field.
-Thus, the chargeability of a rock increases and its tortuosity increases.
 
 
 

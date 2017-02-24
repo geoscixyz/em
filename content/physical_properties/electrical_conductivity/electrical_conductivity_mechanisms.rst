@@ -109,6 +109,8 @@ There are two primary causes of chargeability, "membrane polarization" and
 		:figwidth: 100 %
 		:name: fig_elec_pol_4
 
+.. _electrical_conductivity_mechanisms_electrode:
+
 Electrode Polarization
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -123,6 +125,8 @@ Ion diffusion is not easy to model with circuit elements. Instead, this process 
 
 Note that while it is useful to understand simplified models of the relevant
 electrical behaviors of surface-electrolyte interactions, all rocks are "dirty" in the sense that they are not simply pure "electrodes". There are other materials and particles affecting ionic behavior within and outside the diffuse layer, and some of the sample's constituents will affect the behavior of the fixed layer near and on the liquid-solid interfaces. This has resulted in the creation of many emprical models for describing surface-electrolyte interactions.
+
+.. _electrical_conductivity_mechanisms_membrane:
 
 Membrane Polarization
 ^^^^^^^^^^^^^^^^^^^^^
