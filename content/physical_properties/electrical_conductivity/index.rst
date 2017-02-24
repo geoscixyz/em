@@ -92,7 +92,8 @@ Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Ti
 
 In comparison to most other rock types, sulphide-bearing rocks are highly chargeable; one exception being rocks with a high clay content. In sufficient abundances, sulphide-bearing rocks can have significant economic value. Unlike :ref:`DCR surveys <dcr_index>`, :ref:`IP surveys <ip_index>` can be used to distinguish chargeable and non-chargeable bodies, even if both are similarly conductive. :ref:`TDEM systems <airborne_tdem_index>` can also be used to recognize the presence of chargeable bodies, as they produce distinct time-domain responses. As a result, chargeability has become a unique diagnostic physical property used to located sulphide-bearing ore deposits.
 
-**Contents**
+Contents
+--------
 
 .. toctree::
     :maxdepth: 1

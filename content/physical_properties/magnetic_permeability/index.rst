@@ -95,9 +95,8 @@ Magnetic permeability acts as a secondary diagnostic physical property in :ref:`
 :ref:`Magnetic viscosity <magnetic_permeability_frequency_dependent>` refers to a dispersive magnetic permeability which is exhibited by lateritic soils and rapidly cooled basalts. When using TDEM systems, these rocks produce a response which masks the responses from UXOs and deeply buried conductors. Currently, methods are being developed to model this phenomenon and its response from field collected data.
 
 
-
-
-**Contents**
+Contents
+--------
 
  .. toctree::
     :maxdepth: 1

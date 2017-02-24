@@ -53,9 +53,10 @@ Relevance to Geophysical Applications
 
 Dielectric permittivity is the primary diagnostic physical property in :ref:`ground penetrating radar <gpr_index>` (GPR). Dielectric permittivity impacts the attenuation, wavelength and velocity of radiowave signals as they propagate through the Earth. It also determines the reflection and refraction of radiowave signals are interfacs. The impact the of the Earth's dielectric permittivity on EM systems is only significant for sufficiently high operating frequencies. As a result, dielectric permittivity is generally neglected when using most EM systems. These include: :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`direct current resistivity <dcr_index>` (DCR), :ref:`induced polarization <ip_index>` (IP) and natural source EM (:ref:`MT <mt_index>` and :ref:`ZTEM <ztem_index>`).
 
-**Contents**
+Contents
+--------
 
- .. toctree::
+.. toctree::
     :maxdepth: 1
 
     dielectric_permittivity_lab_setup_measurements
