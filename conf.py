@@ -14,7 +14,7 @@
 
 import sys
 import os
-import em_examples
+# import em_examples
 
 sys.path.append(os.path.abspath('./_ext'))
 # sys.path.append(os.path.abspath('./em_notebooks'))

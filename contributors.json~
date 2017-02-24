@@ -83,31 +83,27 @@
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"jean@geotech.ca",
-        "url":"http://www.geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://www.geotech.ca"
     },
     "cizarra":{
         "name":"Carlos Izarra",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"carlos.izarra@geotech.ca",
-        "url":"http://www.geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://www.geotech.ca"
     },
     "gplastow":{
         "name":"Geoffrey Plastow",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
         "email":"geoffrey.plastow@geotech.ca",
-        "url":"http://www.geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://www.geotech.ca"
     },
     "cwijns":{
         "name":"Chris Wijns",
         "affiliation":"First Quantum Minerals Ltd.",
         "location":"Perth, WA, AUS",
-        "email":"chris.wijns@fqml.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"chris.wijns@fqml.com"
     },
     "agreen":{
         "name":"Alan G. Green",
@@ -142,40 +138,32 @@
         "name":"Lucy Macgregor",
         "affiliation":"Rock Solid Images",
         "email":"lucy.macgregor@rocksolidimages.com",
-        "url":"http://rocksolidimages.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://rocksolidimages.com"
     },
     "palvarez":{
         "name":"Pedro Alvarez",
         "affiliation":"Rock Solid Images",
-        "url":"http://rocksolidimages.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://rocksolidimages.com"
     },
     "aalvarez":{
         "name":"Amanda Alvarez",
         "affiliation":"Rock Solid Images",
-        "url":"http://rocksolidimages.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://rocksolidimages.com"
     },
     "fbolivar":{
         "name":"Fransisco Bolivar",
         "affiliation":"Rock Solid Images",
-        "url":"http://rocksolidimages.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://rocksolidimages.com"
     },
     "rkeirstead":{
         "name":"Rob Keirstead",
         "affiliation":"Rock Solid Images",
-        "url":"http://rocksolidimages.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "url":"http://rocksolidimages.com"
     },
     "tmartin":{
         "name":"Thomas Martin",
-        "affiliation":"University of Hawaii",
-        "location":"Honolulu, Hawaii",
-        "email":"tpm319@gmail.com",
-        "ORCID":"0000-0002-4171-0004",
-        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/tmartin.png"
+        "affiliation":"Rock Solid Images",
+        "url":"http://rocksolidimages.com"
     },
     "mikemcm":{
         "name":"Mike McMillan",
@@ -236,120 +224,91 @@
         "name":"Josh Lymburner",
         "affiliation":"Crone Geophysics and Exploration Ltd.",
         "location":"Toronto, ON",
-        "email":"lymbruj@gmail.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"lymbruj@gmail.com"
     },
     "kralph":{
         "name":"Kevin Ralf",
         "affiliation":"Crone Geophysics and Exploration Ltd.",
-        "location":"Toronto, ON",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Toronto, ON"
     },
     "pwood":{
         "name":"Peter Wood",
         "affiliation":"Zenyatta Ventures Ltd.",
         "location":"Toronto, ON",
-        "email":"pcwood@zenyatta.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"pcwood@zenyatta.ca"
     },
     "morta":{
         "name":"Marta Orta",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
-        "email":"marta.orta@geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"marta.orta@geotech.ca"
     },
     "aprikhodko":{
         "name":"Alexander Prikhodko",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
-        "email":"alexander.prikhodko@geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"alexander.prikhodko@geotech.ca"
     },
     "nbournas":{
         "name":"Nasreddine Bournas",
         "affiliation":"Geotech Ltd.",
         "location":"Aurora, ON",
-        "email":"nasreddine.bournass@geotech.ca",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"nasreddine.bournass@geotech.ca"
     },
     "shickey":{
         "name":"Stanislawa Hickey",
         "affiliation":"Mira Geoscience Ltd.",
         "location":"Vancouver, BC",
-        "email":"stanislawah@miregeoscience.com",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "email":"stanislawah@miregeoscience.com"
     },
     "jpedersen":{
         "name":"Jesper Pedersen",
         "affiliation":"Aarhus University - Hydrogeophysics Group",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "fefferso":{
         "name":"Flemming Effersø",
         "affiliation":"SkyTEM Surveys ApS",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "fjorgensen":{
         "name":"Flemming Jørgensen",
         "affiliation":"GEUS - Groundwater Mapping Dept.",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "jcrefsgaard":{
         "name":"Jens Christian Refsgaard",
         "affiliation":"GEUS - Hydrological Dept.",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "eauken":{
         "name":"Esben Auken",
         "affiliation":"Aarhus University - Hydrogeophysics Group",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "cschamper":{
         "name":"Cyril Schamper",
         "affiliation":"Aarhus University - Dept. of Geoscience",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "avchristiansen":{
         "name":"Anders Vest Christiansen",
         "affiliation":"Aarhus University - Hydrogeophysics Group",
-        "location":"Aarhus, Denmark",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "location":"Aarhus, Denmark"
     },
     "ashoyer":{
-        "name":"A. S. Høyer",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "name":"A. S. Høyer"
     },
     "tvilhelmsen":{
-        "name":"Troels Vilhelmsen",
-        "affiliation":"Aarhus University",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "name":"Troels Vilhelmsen"
     },
     "psandersen":{
-        "name":"Peter B. E. Sandersen",
-        "affiliation":"Aarhus University - GEUS",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "name":"Peter B. E. Sandersen"
     },
     "aviezzoli":{
-        "name":"Andrea Viezzoli",
-        "affiliation":"Aarhus University",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "name":"Andrea Viezzoli"
     },
     "imoller":{
-        "name":"Ingelise Møller",
-        "affiliation":"Aarhus University - GEUS",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
-    },
-    "eholtham":{
-        "name":"Elliot Holtham",
-        "affiliation":"Computational Geosciences Inc.",
-        "location":"Vancouver, BC",
-        "avatar":"https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"
+        "name":"Ingelise Møller"
     }
 }

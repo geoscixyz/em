@@ -9,7 +9,7 @@ The specific electrical conductivity of mineralized rocks at Lalor depends on th
 
 
 +----------------------+----------------------------+----------------------------+
-| Ore-bearing minerals | :math:`\sigma_{min}` (S/m) | :math:`\sigma_{min}` (S/m) |
+| Ore-bearing minerals | :math:`\sigma_{min}` (S/m) | :math:`\sigma_{max}` (S/m) |
 +======================+============================+============================+
 | Pyrite               | 0.003                      | 1                          |
 +----------------------+----------------------------+----------------------------+
