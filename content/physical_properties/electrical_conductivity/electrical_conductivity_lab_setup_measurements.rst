@@ -3,19 +3,21 @@
 Laboratory Measurements
 =======================
 
-Electrical conductivity/resistivity measurements are an integral part of classifying physical rock properties. Here, we present the general approach for measuring a rock’s electrical properties, including electrical conductivity/resistivity and chargeability. Instrumentation is also discussed
+Electrical conductivity/resistivity measurements are an integral part of classifying physical rock properties. Here, we present the general approach for measuring a rock’s electrical properties, including electrical conductivity/resistivity and chargeability. Instrumentation is also discussed.
 
 Two-Electrode Laboratory Setup
 ------------------------------
 
-Electrical resistivity measurements are most commonly performed using a two-electrode setup. This is illustrated in :numref:`fig_cond_lab_setup`. For these measurements, a rock core of known dimension is placed between two copper or graphite electrodes. Current is then forced through the rock, which acts as the resistive element for an electrical circuit. By measuring the voltage drop across the rock, Ohm's law can be used to determine the corresponding resistance. Given that we know the dimensions of the rock sample, Pouillet's law can be used to obtain the rock's electrical resistivity. The electrical conductivity is obtained by taking the reciprocal of the resistivity.
+Electrical resistivity measurements are most commonly performed using a two-electrode setup. This is illustrated in :numref:`fig_cond_lab_setup`. For these measurements, a rock core of known dimensions is placed between two copper or graphite electrodes. Current is then forced through the rock, which acts as the resistive element for an electrical circuit. By measuring the voltage drop across the rock, Ohm's law can be used to determine the corresponding resistance. Given that we know the dimensions of the rock sample, Pouillet's law can be used to obtain the rock's electrical resistivity. The electrical conductivity is obtained by taking the reciprocal of the resistivity.
+
+Electrical resistivity measurements can be performed in both the frequency domain and the time domain. For frequency domain measurements, a sinuisoidal current is driven through the rock sample. In the time domain, a boxcar waveform is used.
 
 .. figure:: ./images/cond_lab_setup.png
    :figwidth: 75%
    :align: center
    :name: fig_cond_lab_setup
 
-   Basic setup for electrical resistivity measurements. (A) Theoretical circuit where rock acts as a a resistive element. (B) Rock sample between two electrodes.
+   Basic setup for electrical resistivity measurements. (A) Theoretical circuit where rock acts as a a resistive element. (B) Rock sample between two electrodes. (C) Circuit schematic for frequency domain and time domain measurements.
 
 DC Conductivity/Resistivity
 ---------------------------
@@ -32,17 +34,17 @@ The DC (or zero-frequency) resistivity is obtained by forcing direct current (:m
 .. math::
    R = \frac{V}{I}
 
-According to Pouillet's law, the electrical resistivity of the sample is the product of the resistance and the cross-sectional area (:math:`A`), divided by the sample's length (:math:`l`):
+According to Pouillet's law, the electrical resistivity of the sample is the product of the resistance and its cross-sectional area (:math:`A`), divided by the sample's length (:math:`l`):
 
 .. math::
    \rho = \frac{RA}{l}
 
-The DC resistivity is a single, real-valued quantity.
+The DC resistivity is a single, real-valued quantity and has units Ohm meters (:math:`\Omega m`).
 
 Frequency-Domain Measurements
 -----------------------------
 
-Electrical conductivity can be frequency-dependent and complex-valued, which
+Electrical resistivity can be frequency-dependent and complex-valued, which
 effectively generates polarization effects with the applied electric field.
 This is often called induced polarization (IP) effects. In order to measure
 complex conductivity of a rock specimen, we inject sinusoidal currents (that is, AC
@@ -55,12 +57,12 @@ currents) into to the rock at logarithmically spaced frequencies and measure the
 
    Electrical circuit for frequency-domain measurements.
 
-In this case, the impedance attributed to the rock core and the voltage measured across it are frequency-dependent and complex. Ohm's law is therefore expressed as:
+In this case, the impedance attributed to the rock sample and the voltage measured across it are frequency-dependent and complex. Ohm's law is therefore expressed as:
 
 .. math::
    Z(\omega) = \frac{V(\omega)}{I(\omega)}
 
-where :math:`I(\omega)` is the current which flows through the rock sample, :math:`V(\omega)` is the voltage measured across the rock, and :math:`Z(\omega)` is the corresponding electric impedance. Using Pouillet's equation, the resistivity of the rock is given by:
+where :math:`I(\omega)` is the current which flows through the rock sample, :math:`V(\omega)` is the voltage measured across the rock, and :math:`Z(\omega)` is the corresponding electrical impedance. Using Pouillet's equation, the resistivity of the rock is given by:
 
 .. math::
    \rho (\omega) = \frac{Z(\omega) A}{l}
@@ -72,7 +74,7 @@ There are several ways in which frequency-domain measurements can be represented
 
 **Amplitude and Phase**
 
-Frequency domain measurements are frequently plotted in terms of amplitude and phase. As we can see from :numref:`fig_props_amp_phase`, the amplitude is a monotonic decreasing function with respect to frequency. According to the phase plot, the frequency corresponding to the large phase occurs at roughly :math:`\tilde f = 1/2\pi\tau`.
+Frequency domain measurements are frequently plotted in terms of amplitude and phase. As we can see from :numref:`fig_props_amp_phase`, the amplitude is a monotonic decreasing function with respect to frequency. According to the phase plot, the frequency corresponding to the largest phase occurs at roughly :math:`\tilde f = 1/2\pi\tau`.
 
 .. figure:: ./images/amp_phase_plot.png
    :figwidth: 100%
@@ -97,6 +99,8 @@ The Cole-Cole plot is also a popular choice for visualizing frequency-domain mea
 Measuring DC Resistivity and Chargeability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Electrical Impedance Spectroscopy**
+
 Recovering the DC resistivity and chargeability from frequency-domain measurements requires an appropriate model for describing the sample's electric properties. From the previous page, we stated that electrical rock properties can generally be characterized using the Cole-Cole model. For an individual sample:
 
 .. figure:: ./images/Cole_Cole_fit.png
@@ -116,125 +120,90 @@ Recall that the Cole-Cole model for electrical resistivity is given by:
   \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega \tau)^C} \Bigg ) \Bigg ]
 
 
+**Percent Frequency Effect**
+
+A simpler form of frequency domain measurements is done with two frequencies. If the rock is non-chargeable, then frequency-dependence of the sample's resistivity is negligible; resulting in near-identical voltage measurements at each frequency. For increasingly chargeable samples, the difference in absolute resistivity becomes larger. Percent frequency effect is used to describe this effect. The percent frequency effect is defined as:
+
+.. math::
+   PFE = \Bigg ( \frac{V(f_1) - V(f_2)}{V(f_1)} \Bigg ) \times 100 \% = \Bigg ( \frac{\rho (f_1) - \rho (f_2)}{\rho (f_1)} \Bigg ) \times 100 \%
+
+where :math:`V(f_1)` is the absolute voltage measured at a lower frequency and :math:`V(f_2)` is the absolute voltage measured at a higher frequency. The percent frequency effect can also be expressed in terms of the absolute resistivity, where :math:`\rho (f_1)` is the absolute resistivity measured at a lower frequency and :math:`\rho (f_2)` is the absolute resistivity measured at a higher frequency.
+
+**Phase Difference**
+
+.. figure:: ./images/cond_meas_phase.png
+   :figwidth: 40%
+   :align: right
+   :name: fig_cond_meas_phase
+
+   Measured voltage showing a change in phase due to induced polarization effects.
+
+Chargeability is sometimes inferred by measuring the complex impedance at a particular frequency and determining its phase relative to that of the current:
+
+.. math::
+   \phi = \textrm{tan}^{-1} \Bigg ( \frac{V (\omega)}{I (\omega)} \Bigg )
+
+By examining :numref:`fig_props_amp_phase` and :numref:`fig_props_Cole_Cole`, we can see that the effects of chargeability are largest when the phase angle is at its maximum. Therefore, the larger the phase, the more dominant IP effects are for the sample. These data are generally given in units of milliradians [mrad].
+
+
 Time-Domain Measurements
 ------------------------
 
+Electrical resistivity and chargeability can also be measured in the time domain. The experimental setup for time domain measurements is more or less the same as is shown in :numref:`fig_cond_lab_setup`. In this case, a boxcar waveform is used to excite the sample and voltages are measured during both the on-time and the off-time (:numref:`cond_volt_tdem`).
 
-sdfasfa
-
-
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
-
-
-
-Chargeability
--------------
-
-Chargeability can be measured in both the frequency and time domain as shown
-in :numref:`ACsetup`.
-
-- For the frequency domain measurement, we inject sinusoidal currents in to the rock.
-
-- For the time domain measurement, we inject half-duty cycle currents
-  including both onand off-time.
-
-In both measurements, voltages measured are affected by chargeability of the
-rock hence we can obtain chargeability of the rock.
-
-.. figure:: ./images/ACsetup.png
-   :scale: 70%
+.. figure:: ./images/IPonoff.png
+   :scale: 100%
    :align: center
-   :name: ACsetup
+   :name: cond_volt_tdem
 
-   A chargeability measurement set-up in either frequency or time domain.
+   Time-domain measurements. (a) Boxcar current waveform. (b) Measured voltage across the rock.
 
+At the moment in which current is initially forced through the rock sample, there is an instantaneous increase in the measured voltage (:math:`V_\infty`). As ionic charges build up, there is a relaxation process in which the measured voltage approaches a steady-state (or DC) voltage (:math:`V_0`). After sufficient time, the current source is turned off and there is an instantaneous drop in measured voltage equal to :math:`V_\infty`. It takes time for the rock to "discharge" due to induced polarization effects. As a result, there is a measurable voltage across the rock during the off-time which we denote as :math:`V_s(t)`. In practice, the boxcar excitation is applied many times and the data are stacked.
 
-Time domain measurements
+Measuring DC Resistivity
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Measured voltage can be stacked and we could obtain half-period voltage as
-shown in :numref:`DCIPcurve`.
-
-- :math:`V_0`: Voltage right after current switch-off (DC)
-- :math:`V_{\infty}`: Voltage right after current switch-on
-- :math:`V_s(t)`:Voltage at off-time
-- :math:`t_1` and :math:`t_2` are arbitrary times determining integration window
-
-When the current is switched on in the on-time, polarization charges start to
-build up (:math:`V_{\infty}`). Then at late time, it asymptotes to steady-
-state (:math:`V_0`). After the current is switched off, built polarization
-charge is decaying (:math:`V_s`) and asymptotes to zero.
-
-
-.. figure:: ./images/DCIPcurve.png
-   :align: center
-   :scale: 50%
-   :name: DCIPcurve
-
-   Figure Measured time domain IP curve.
-
-Data could be:
+For time-domain measurements, DC resistivity is easy to measure. The DC voltage is measured by applying direct current for a sufficient amount of time. In :numref:`cond_volt_tdem`, this voltage is given by :math:`V_0`. Once obtained, Ohm's law can be used to obtain the DC resistance (:math:`R_{DC}`):
 
 .. math::
-   \eta = \frac{V_0-V_\infty}{V_0} \ \text{[V/V]}
-   :label: etaintrinsic
+   R_{DC} = \frac{V_0}{I_0}
+
+and Pouillet's equations can be used to obtain the DC resistivity:
 
 .. math::
-   \eta^{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[msec]}
-   :label: etaappint_msec
+   \rho_0 = \frac{R_{DC} A}{l}
+
+Cole-Cole Chargeability
+^^^^^^^^^^^^^^^^^^^^^^^
+
+According to the Cole-Cole model, the chargeability can be defined as the fractional difference between the DC resistivity and the resistivity as :math:`\omega \rightarrow \infty` (or :math:`\rho_\infty`):
 
 .. math::
-   \eta^{app} = \frac{1}{t_2-t_1}\int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt  \ \text{[mV/V]}
-   :label: etaappint_mVV
+   \eta = \frac{\rho_0 - \rho_\infty}{\rho_0}
+
+However, it can also be shown that the chargeability is the fractional difference between the measured DC voltage (:math:`V_0`) across the rock sample and the instantaneous increase in voltage (:math:`V_\infty`) observed when the current is turned on. Thus:
 
 .. math::
-   \eta^{app} = \frac{V_s(t)}{V_0}  \ \text{[mV/V]}
-   :label: etaapp_mVV
+   \eta = \frac{V_0 - V_\infty}{V_0}
+
+Although the formal definition comes directly from our model for electrical resistivity, the latter definition is more relevant in a laboratory setting. In an ideal scenario, it would be possible to measure :math:`V_0` and :math:`V_\infty` directly and use to previous equation to calculate the chargeability. Unfortunately, there are high-frequency phenomena which significantly impact the measured voltage at the moment the current is applied or removed. This obstacle is overcome by measuring intrinsic values for rock chargeability.
+
+Intrinsic Chargeability Measurements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Intrinsic chargeability measurements are performed by measuring the off-time voltage (:math:`V_s(t)` in :numref:`cond_volt_tdem`) and integrating over a specified range of time channels [:math:`t_1,t_2`]. This is meant to characterize the induced polarization which occurs over time channels relevant to geophysical surveying methods. The intrinsic chargeability is frequently referred to as the *apparent chargeability* (:math:`\eta_{app}`). There are two common ways to define the apparent chargeability. Either the off-time voltage is integrated between :math:`t_1` and :math:`t_2`:
+
+.. math::
+   \eta_{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt
+
+and the apparent chargeability is given in units of milliseconds [ms]. Or the off-time voltage is integrated between :math:`t_1` and :math:`t_2` and normalized by the time interval:
+
+.. math::
+   \eta_{app} = \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt
+
+In this case, the apparent chargeability is given in units of milli-Volts per Volt [mV/V], or as a unitless quantity. Intrinsic chargeability values depend greatly on the definition as well as integration time. There are several common conventions. A well-established choice is the Newmont Standard chargeability which integrated between 0.15 s and 1.1 s.
 
 
-By definition of the chargeability, :math:`\eta`, it is intrinsic,
-dimensionless (V/V), and bounded to :math:`[0,1)`. The chargeability can be
-considered as net voltage difference from infinite to zero frequency
-normalized by voltage at zero frequency, :math:`V_0`.
-
-However, because we cannot measure exact value of :math:`V_{\infty}` and
-:math:`V_0`, we often alternatively measure voltage at off-time,
-:math:`V_s(t)` then integrate in certain range of time to obtain apparent
-chargeability, :math:`\eta^{app}` as shown in Eq. :eq:`etaappint_msec` and
-:eq:`etaappint_mVV`.
-
-.. note::
-
-   Depending on the used time window, measured apparent chargeability can
-   under- or over-estimate intrinsic chargeability. For instance, if
-   discharging happens within really short time window and our integration
-   time window is on much later time, then the integrated apparent
-   chargeability could be significantly underestimated.
 
 
-A simple and often used system in the field is GDD's `SCIP Tester
-<http://www.gddinstrumentation.com/index.php/scip-tester>`_.
-
-Frequency domain measurements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. todo::
-   PFE (Percent frequency effect)
-
-.. todo::
-   Phase difference
 

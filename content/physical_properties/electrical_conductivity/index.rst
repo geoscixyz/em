@@ -3,7 +3,7 @@
 Electrical Conductivity
 =======================
 
-Electrical conductivity is a diagnostic physical property that quantifies how easily electrical charges move through a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to use its reciprocal, electrical resistivity. For most of the :ref:`geophysical surveys <geophysical_surveys_index>` described within EM geosci, electrical conductivity is the primary diagnostic physical property.
+Electrical conductivity is a diagnostic physical property that quantifies how easily electrical charges move through a given material when subjected to an applied electric field. In mathematical development and in references describing rocks or fluids, it is common to use its reciprocal, electrical resistivity. For most of the :ref:`geophysical surveys <geophysical_surveys_index>` described within EM GeoSci, electrical conductivity is the primary diagnostic physical property.
 
 Constitutive Relationship
 -------------------------
@@ -45,7 +45,7 @@ Thus the constitutive relationship can be re-expressed as follows:
 Chargeability and Frequency-Dependence
 --------------------------------------
 
-Under the influence of an electric field, free charges (such as ions) flow through materials along the direction of the applied field. However when ionic charges reach an impermeable barrier, they begin to accumulate. Thus certain materials can act as capacitors for ionic charges; a phenomenon known as induced polarization. Below are two examples of induced polarization in rocks. On the left, ionic charges accumulate because the pore path is blocked by metallic particles (electrode polarization). On the right, ionic charges accumulate because the pore throat is insufficiently large (membrane polarization).
+Under the influence of an electric field, free charges (such as ions) flow through materials along the direction of the applied field. For most practical applications, the flow of electrical charges is in phase with the applied electric field. However when ionic charges reach an impermeable barrier, they begin to accumulate. As a result, certain materials can act as capacitors for ionic charges; a phenomenon known as induced polarization. Below are two examples of induced polarization in rocks. On the left, ionic charges accumulate because the pore path is blocked by metallic particles (electrode polarization). On the right, ionic charges accumulate because the pore throat is insufficiently large (membrane polarization).
 
 .. figure:: ./images/fig_polarization_example.png
    :align: center
@@ -62,12 +62,12 @@ A commonly used model for describing frequency-dependent conductivity is the Col
 .. math::
   \sigma (\omega) = \sigma_{\infty} \Bigg [ 1 - \frac{\eta}{1 + (1-\eta)(i \omega \tau)^C} \Bigg ]
 
-where :math:`\sigma_{\infty}` is the infinity frequency limit, :math:`0 \leq \eta \leq 1` is the **chargeability**, and :math:`\tau` and :math:`0 \leq C \leq 1` define the rate of charge accumulation. After taking the reciprocal, the electrical resistivity is commonly expressed as:
+where :math:`\sigma_{\infty}` is the infinite frequency limit, :math:`0 \leq \eta \leq 1` is the **chargeability**, and :math:`\tau` and :math:`0 \leq C \leq 1` define the rate of charge accumulation. After taking the reciprocal, the electrical resistivity is commonly expressed as:
 
 .. math::
   \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega \tau)^C} \Bigg ) \Bigg ]
 
-where :math:`\rho_0` defines the zero-frequency, or DC, resistivity. The conductivity and resitivity as a function of frequency are illustrated below.
+where :math:`\rho_0` defines the zero-frequency, or DC, resistivity. Electrical conductivity and resitivity as a function of frequency are illustrated below.
 
 
 .. figure:: ./images/Cole_Cole_example.png
@@ -84,7 +84,7 @@ Relevance to Geophysical Applications
 
 The majority of EM surveys exploit contrasts in electrical conductivity to image the subsurface. During :ref:`direct current resistivity <dcr_index>` (DCR) surveys for example, electrical current is forced through the Earth. The path taken by the current, as well as the measured data, depend on the subsurface conductivity distribution.
 
-Many EM systems operate on the principles of EM induction. These include: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`marine controlled source EM <marine_csem_index>` (CSEM) and :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivity.
+Many EM systems operate on the principles of EM induction. These include: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`marine controlled source EM <marine_csem_index>` (CSEM) and :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivities.
 
 Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) surveys also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
 
@@ -98,9 +98,13 @@ In comparison to most other rock types, sulphide-bearing rocks are highly charge
     :maxdepth: 1
 
     electrical_conductivity_lab_setup_measurements
+    units
     electrical_conductivity_tables
+    electrical_conductivity_mechanisms
+    electrical_conductivity_factors
     relevanttopics/index
     electrical_conductivity_mathematical_relationships
+    
 
 
 
