@@ -114,8 +114,7 @@ There are two primary causes of chargeability, "membrane polarization" and
 Electrode Polarization
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Electrode polarization occurs when pore spaces are blocked by metallic
-particles (:numref:`fig_elec_pol_1`). Again, charges accumulate when an electric field is applied. The result is two electrical double layers which contribute to measured voltages (:numref:`fig_elec_pol_2`).
+Electrode polarization occurs when pore spaces are blocked by metallic particles (:numref:`fig_elec_pol_1` ). Again, charges accumulate when an electric field is applied. The result is two electrical double layers which contribute to measured voltages (:numref:`fig_elec_pol_2` ).
 
 At interfaces between ionic and metallic conductors (for example, an ore
 grain within the pore space), there is an impedance associated with getting current to
