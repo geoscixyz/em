@@ -8,9 +8,25 @@ Electrical conductivity/resistivity measurements are an integral part of classif
 Two-Electrode Laboratory Setup
 ------------------------------
 
-Electrical resistivity measurements are most commonly performed using a two-electrode setup. This is illustrated in :numref:`fig_cond_lab_setup`. For these measurements, a rock core of known dimensions is placed between two copper or graphite electrodes. Current is then forced through the rock, which acts as the resistive element for an electrical circuit. By measuring the voltage drop across the rock, Ohm's law can be used to determine the corresponding resistance. Given that we know the dimensions of the rock sample, Pouillet's law can be used to obtain the rock's electrical resistivity. The electrical conductivity is obtained by taking the reciprocal of the resistivity.
+Electrical resistivity measurements are most commonly performed using a two-electrode setup. This is illustrated in :numref:`fig_cond_lab_setup`. For these measurements, a rock core of known dimensions is placed between two copper or graphite electrodes. Current is then forced through the rock, which acts as the resistive element for an electrical circuit. By measuring the voltage drop across the rock (:math:`V`), Ohm's law for electrical circuits can be used to determine the corresponding resistance. In this case:
 
-Electrical resistivity measurements can be performed in both the frequency domain and the time domain. For frequency domain measurements, a sinuisoidal current is driven through the rock sample. In the time domain, a boxcar waveform is used.
+.. math::
+   V = IR
+   :label: phys_prop_ohm_circuit
+
+where :math:`I` is the current being forced through the rock and :math:`R` is the resistance due to the rock sample. Given that we know the dimensions of the rock sample, Pouillet's law can be used to obtain the rock's electrical resistivity. Pouillet's law is given by:
+
+.. math::
+   \rho = \frac{RA}{l}
+   :label: phys_prop_pouillet
+
+where :math:`l` is the length of the sample and :math:`A` is its cross-sectional area. The electrical conductivity is obtained simply by taking the reciprocal of the resistivity, i.e.:
+
+.. math::
+   \sigma = \frac{1}{\rho}
+   :label: phys_prop_cond_recip
+
+Electrical resistivity measurements can be performed in both the frequency domain and the time domain. For frequency domain measurements, a sinusoidal current is driven through the rock sample. We will show that changes must be made to the aforementioned equations in the case of frequency domain measurements. In the time domain, a boxcar waveform is used.
 
 .. figure:: ./images/cond_lab_setup.png
    :figwidth: 75%
@@ -19,9 +35,6 @@ Electrical resistivity measurements can be performed in both the frequency domai
 
    Basic setup for electrical resistivity measurements. (A) Theoretical circuit where rock acts as a a resistive element. (B) Rock sample between two electrodes. (C) Circuit schematic for frequency domain and time domain measurements.
 
-DC Conductivity/Resistivity
----------------------------
-
 .. figure:: ./images/DCcircuit_simple.png
    :figwidth: 25%
    :align: right
@@ -29,17 +42,10 @@ DC Conductivity/Resistivity
 
    Electrical circuit for DC resistivity measurements.
 
-The DC (or zero-frequency) resistivity is obtained by forcing direct current (:math:`I`) through the rock and measuring the voltage drop (:math:`V`). Using Ohm's law, the resistance (:math:`R`) due to the rock is given by:
+DC Conductivity/Resistivity
+---------------------------
 
-.. math::
-   R = \frac{V}{I}
-
-According to Pouillet's law, the electrical resistivity of the sample is the product of the resistance and its cross-sectional area (:math:`A`), divided by the sample's length (:math:`l`):
-
-.. math::
-   \rho = \frac{RA}{l}
-
-The DC resistivity is a single, real-valued quantity and has units Ohm meters (:math:`\Omega m`).
+The DC (or zero-frequency) resistivity is obtained by forcing direct current (:math:`I`) through the rock and measuring the voltage drop (:math:`V`). The resistance (:math:`R`) due to the rock is obtained by using Ohm's law Eq. :eq:`phys_prop_ohm_circuit`. The electrical resistivity is then obtained by using Eq. :eq:`phys_prop_pouillet`. The DC resistivity is a single, real-valued quantity and has units Ohm meters (:math:`\Omega m`).
 
 Frequency-Domain Measurements
 -----------------------------
@@ -48,7 +54,7 @@ Electrical resistivity can be frequency-dependent and complex-valued, which
 effectively generates polarization effects with the applied electric field.
 This is often called induced polarization (IP) effects. In order to measure
 complex conductivity of a rock specimen, we inject sinusoidal currents (that is, AC
-currents) into to the rock at logarithmically spaced frequencies and measure the corresponding voltages. The typical frequency range for these measurement is from 0.016 Hz - 1 MHz.
+currents) into to the rock at logarithmically spaced frequencies and measure the corresponding voltages. The typical frequency range for these measurement is from 0.01 Hz - 1 MHz.
 
 .. figure:: ./images/Zcircuit_simple.png
    :figwidth: 25%
@@ -57,12 +63,12 @@ currents) into to the rock at logarithmically spaced frequencies and measure the
 
    Electrical circuit for frequency-domain measurements.
 
-In this case, the impedance attributed to the rock sample and the voltage measured across it are frequency-dependent and complex. Ohm's law is therefore expressed as:
+In this case, the impedance attributed to the rock sample and the voltage measured across it are frequency-dependent and complex. For frequency domain measurements, Eq. :eq:`phys_prop_ohm_circuit` (Ohm's law) is given by:
 
 .. math::
    Z(\omega) = \frac{V(\omega)}{I(\omega)}
 
-where :math:`I(\omega)` is the current which flows through the rock sample, :math:`V(\omega)` is the voltage measured across the rock, and :math:`Z(\omega)` is the corresponding electrical impedance. Using Pouillet's equation, the resistivity of the rock is given by:
+where :math:`I(\omega)` is the current which flows through the rock sample, :math:`V(\omega)` is the voltage measured across the rock, and :math:`Z(\omega)` is the corresponding electrical impedance (complex resistance). By altering Eq. :eq:`phys_prop_pouillet` accordingly, the resistivity of the rock is given by:
 
 .. math::
    \rho (\omega) = \frac{Z(\omega) A}{l}
@@ -110,8 +116,8 @@ Recovering the DC resistivity and chargeability from frequency-domain measuremen
 
    Cole-Cole fit showing a sample with :math:`\rho_0 = 8.8 \times 10^3 \; \Omega \!` m, :math:`\eta=0.157` V/V, :math:`\tau=2.59 \times 10^{-3}` s and :math:`C=0.38`.
 
-1) The complex impedance is measured at logarithmically spaced frequencies between 0.016 Hz and 1 MHz.
-2) The dimensions of the sample are then used to obtain the corresponding resistivity values according to Pouillet's equation.
+1) The complex impedance is measured at logarithmically spaced frequencies between 0.01 Hz and 1 MHz.
+2) The dimensions of the sample are then used to obtain the corresponding resistivity values according to :eq:`phys_prop_pouillet`.
 3) Resistivity values are fit using the Cole-Cole model, which is subsequently used to obtain values for the DC resistivity (:math:`\rho_0`) and chargeability (:math:`\eta`).
 
 Recall that the Cole-Cole model for electrical resistivity is given by:
@@ -163,12 +169,12 @@ At the moment in which current is initially forced through the rock sample, ther
 Measuring DC Resistivity
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For time-domain measurements, DC resistivity is easy to measure. The DC voltage is measured by applying direct current for a sufficient amount of time. In :numref:`cond_volt_tdem`, this voltage is given by :math:`V_0`. Once obtained, Ohm's law can be used to obtain the DC resistance (:math:`R_{DC}`):
+For time-domain measurements, DC resistivity is easy to measure. The DC voltage is measured by applying direct current for a sufficient amount of time. In :numref:`cond_volt_tdem`, this voltage is given by :math:`V_0`. Once obtained, Eq. :eq:`phys_prop_ohm_circuit` (Ohm's law) can be used to obtain the DC resistance (:math:`R_{DC}`):
 
 .. math::
    R_{DC} = \frac{V_0}{I_0}
 
-and Pouillet's equations can be used to obtain the DC resistivity:
+and Eq. :eq:`phys_prop_pouillet` can be used to obtain the DC resistivity:
 
 .. math::
    \rho_0 = \frac{R_{DC} A}{l}

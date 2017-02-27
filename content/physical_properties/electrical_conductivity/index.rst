@@ -77,8 +77,8 @@ where :math:`\rho_0` defines the zero-frequency, or DC, resistivity. Electrical 
 
    Cole-Cole conductivity (left) and resistivity (right) for :math:`\sigma_\infty` = 2 S/m, :math:`\rho_0` = 1 :math:`\Omega m`, :math:`\eta` = 0.5, :math:`\tau` = :math:`10^{-4}` s and :math:`C` = 0.5.
 
-Relevance to Geophysical Applications
--------------------------------------
+Importance to Geophysics
+------------------------
 
 **Electrical Conductivity**
 
@@ -86,7 +86,7 @@ The majority of EM surveys exploit contrasts in electrical conductivity to image
 
 Many EM systems operate on the principles of EM induction. These include: :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`marine controlled source EM <marine_csem_index>` (CSEM) and :ref:`unexploded ordnance <uxo_index>` (UXO) surveys. During these surveys, a transmitter sends time-varying EM signals into the ground which subsequently induce electric currents. The strength of the induced currents and the secondary fields they produce are dependent on the distribution of subsurface conductivities.
 
-Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) surveys also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical condutivity.
+Data collected during :ref:`magnetotelluric <mt_index>` (MT) and :ref:`Z-axis Tipper EM <ztem_index>` (ZTEM) surveys also depend on the conductivity of the Earth. These methods rely on natural sources to generate EM responses. For MT, the relationships between measured components of the electric and magnetic fields provide insight regarding the Earth's electromagnetic impedance, and indirectly its electrical conductivity.
 
 **Chargeability**
 
@@ -99,36 +99,11 @@ Contents
     :maxdepth: 1
 
     electrical_conductivity_lab_setup_measurements
-    units
-    electrical_conductivity_tables
+    electrical_conductivity_units
+    electrical_conductivity_values
     electrical_conductivity_mechanisms
     electrical_conductivity_factors
     
-..    relevanttopics/index
-..    electrical_conductivity_mathematical_relationships
-    
-
-
-
-
-
-.. Conductivity is often frequency-dependent. Effectively the material can act
-.. like a capacitor and build up a charge when an electric field is applied, that
-.. is, the material is "chargeable". The ability to accumulate charge,  called
-.. "chargeability" is so important in geophysics that it is often considered as
-.. another physical property. In this section we connect electrical conductivity
-.. with some of its applications through case histories, investigate the
-.. constitutive relationship and its laboratory foundation, compile useful tables
-.. and provide additional levels of information that are valuable.  See
-.. :ref:`these tables <electrical_conductivity_tables>` for conductivity and
-.. chargeabiltiy of various rocks.
-
-.. As shown in :numref:`Chargeflow`, positive charges in a rock flow in the same
-.. direction as the electric field. In a circuit that involves a battery, the
-.. charges move from the positive to negative potential. The electric current is
-.. how much charges move within a unit of time. A high conductivity means a
-.. material that readily allows the flow of electric current. This constitutive
-.. relationship between electric currents and fields can be written as
 
 
 

@@ -1,4 +1,4 @@
-.. _electrical_conductivity_tables:
+.. _electrical_conductivity_values:
 
 Typical Values for Rocks
 ========================
@@ -23,12 +23,6 @@ The conductivity/resistivity of a rock depends significantly on its mineralogy a
 	:name: LogCond
 
 	Various conductivity values for different materials.
-
-
-
-
-
-
 
 Chargeability
 -------------

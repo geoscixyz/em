@@ -31,7 +31,7 @@ Recall from an earlier definition, that the ionic conductivity was proportional 
 .. math::
 	\sigma = e (n^+ \mu_m^+ + n^- \mu_m^-)
 
-where (+) and (-) were used to denote cations and anions, respectively. Therefore as salinity increases, there are more ionic charge carriers. This is responsible for increasing the conductivity of the rock. The number of ionic charge carriers also increases as the pore-space and pore-saturation increase. Pore space allows more of the rock to be comprised of ionic pore-water, as opposed to resistive minerals. However, the rock will only be conductive if the pore-water saturation is sufficiently large. Air is a perfect resistor. Because of this, dry rocks are very resistive, as the only mechanism for conduction is electric conduction through mineral grains. As the % pore saturation increases, ionic conduction becomes more available, thus increasing the conductivity of the rock.
+where (+) and (-) were used to denote cations and anions, respectively. Therefore as salinity increases, there are more ionic charge carriers. This is responsible for increasing the conductivity of the rock. The number of ionic charge carriers also increases as the pore-space and pore-saturation increase. Pore space allows more of the rock to be comprised of ionic pore-water, as opposed to resistive minerals. However, the rock will only be conductive if the pore-water saturation is sufficiently large. Air is a perfect resistor. Because of this, dry rocks are very resistive, as the only mechanism for conduction is electric conduction through mineral grains. As the percent pore saturation increases, ionic conduction becomes more available, thus increasing the conductivity of the rock.
 
 Tortuosity defines how complicated the network of interconnected pore-spaces are within a rock. If the tortuosity is low, ionic charges can more freely and unimpeded through the pore space. For high tortuosity rocks, membrane polarization is more likely and ions must take complicated paths through the rock. For sedimentary rocks (as well as others in some cases), the DC conductivity can be understood through **Archie's law**.
 
@@ -84,7 +84,7 @@ Clay Content
 In the classical petroleum engineering approach to sedimentary rocks, rocks
 containing clay particles are often called “dirty sands”. Since clay particles are
 substantially more conductive than most rock-forming minerals, they represent a separate
-conductive path. Archie’s law usually works well for sedimentary rocks, however, it must be corrected in the caes of dirty sands. The fundamental cause of the abnormally high conductivity for dirty sands is based upon the double layer capacitance of absorbed cations as shown in
+conductive path. Archie’s law usually works well for sedimentary rocks, however, it must be corrected in the case of dirty sands. The fundamental cause of the abnormally high conductivity for dirty sands is based upon the double layer capacitance of absorbed cations as shown in
 :numref:`DoubleLayer`.
 
 .. figure:: ./images/DoubleLayer.png
@@ -183,7 +183,7 @@ A major source of these metallic particles is sulphide mineralization. As the ab
 Clay Content
 ^^^^^^^^^^^^
 
-As we presented :ref:`earlier <electrical_conductivity_mechanisms_membrane>`, clays have a tendancy to partially block paths which ions take through the rock's pore water and promote the formation of electric double layers. This results in an "ion-selective" membrane polarization where both anions and cation accumulate at one end of each clay particle. Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks. As expected, the chargeabilities of clay-rich rocks increases with respect to clay content, as it increases the potential for membrane polarization.
+As we presented :ref:`earlier <electrical_conductivity_mechanisms_membrane>`, clays have a tendency to partially block paths which ions take through the rock's pore water and promote the formation of electric double layers. This results in an "ion-selective" membrane polarization where both anions and cation accumulate at one end of each clay particle. Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks. As expected, the chargeabilities of clay-rich rocks increases with respect to clay content, as it increases the potential for membrane polarization.
 
 .. figure:: ./images/memb_pol_2nd_type.gif
 	:align: center
@@ -192,7 +192,7 @@ As we presented :ref:`earlier <electrical_conductivity_mechanisms_membrane>`, cl
 Pore-Water Saturation, Salinity and Tortuosity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The induced polarization within a rock depends on having a mechanism for accumulating ionic charges. It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water. As the pore-water salinity increases, so does the rock's capacity to support a build-up of ionic charges. This is ultimately responsible for high chargeabilities. The total abundance of charge carries, and the resulting capacity for induced polarization, also increases as the pore-water saturation increases. This is due to the fact that as pore-water saturation increases, there are more electrolyte-surface interfaces in which charge accumulation can occur. Tortuosity also play a rock in determining a rock's chargeability. For a more tortuous pore space, it is harder for ionic charges to flow through the pore-space without encountering obstacles. The more obtacles which result in the accumulationg of ionic charges, the higher the chargeability for the rock. It is important to note that although we have qualitatively described the relationships between pore-water saturation, salinity, tortuosity and rock chargeability, these relationships are very complex.
+The induced polarization within a rock depends on having a mechanism for accumulating ionic charges. It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water. As the pore-water salinity increases, so does the rock's capacity to support a build-up of ionic charges. This is ultimately responsible for high chargeabilities. The total abundance of charge carries, and the resulting capacity for induced polarization, also increases as the pore-water saturation increases. This is due to the fact that as pore-water saturation increases, there are more electrolyte-surface interfaces in which charge accumulation can occur. Tortuosity also play a rock in determining a rock's chargeability. For a more tortuous pore space, it is harder for ionic charges to flow through the pore-space without encountering obstacles. The more obstacles which result in the accumulation of ionic charges, the higher the chargeability for the rock. It is important to note that although we have qualitatively described the relationships between pore-water saturation, salinity, tortuosity and rock chargeability, these relationships are very complex.
 
 
 

@@ -67,7 +67,7 @@ Relationship Between Magnetization and Magnetic Permeability
 ------------------------------------------------------------
 
 According to the :ref:`magnetic constitutive relationship<magnetic_permeability_index>`, the relationship
-between magnetic susceptibiliy and magnetic permeability is given by (:cite:`griffiths1999`):
+between magnetic susceptibility and magnetic permeability is given by (:cite:`griffiths1999`):
 
 .. math::
     {\bf B} = \mu {\bf H} = \mu_0 \big [1 +\chi \, ] {\bf H} = \mu_0 \big [ {\bf H + M} \big ]

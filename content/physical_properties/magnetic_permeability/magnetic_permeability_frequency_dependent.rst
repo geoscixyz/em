@@ -7,7 +7,7 @@ In response to changes in an applied magnetic field, the induced magnetization
 within most rocks may be considered an instantaneous process. For some
 lateritic soils and rapidly cooled basalts however, a portion of the induced
 magnetization undergoes a relaxation process. This relaxation process is
-commonly refered to as: viscous remanent magnetization, magnetic viscosity, or
+commonly referred to as: viscous remanent magnetization, magnetic viscosity, or
 magnetic after-effect. As a result of their magnetic viscosity, lateritic
 soils and rapidly cooled basalts are characterized by frequency-dependent
 magnetic permeabilities.
@@ -34,7 +34,7 @@ where :math:`\mu (\omega)` may also be characterized a frequency-dependent magne
     \mu (\omega) = \mu_0 \big [ 1 + \chi (\omega) \, \big ]
     :label: SuscPermRel
 
-As presented :ref:`earlier <magnetic_permeability_magnetism>`, magnetic
+As presented in :ref:`magnetism in rocks <magnetic_permeability_magnetism>`, magnetic
 susceptibility represents the proportional degree of induced magnetization, in
 response to an applied magnetic field. For rocks exhibiting magnetic
 viscosity, the relaxation process may be understood by considering a Debye

@@ -3,7 +3,7 @@
 Units
 =====
 
-The units for dielectric proporties and associated quantities are summarized in the table below. The units for the dielectric permittivity reflect the fact that it relates a field (:math:`\vec E`) to a flux (:math:`\vec D`). On the other hand, the relative permittivity is unitless, as is the dielectric susceptibililty.
+The units for dielectric properties and associated quantities are summarized in the table below. The units for the dielectric permittivity reflect the fact that it relates a field (:math:`\vec E`) to a flux (:math:`\vec D`). On the other hand, the relative permittivity is unitless, as is the dielectric susceptibililty.
 
 +---------------------------+-----------------------------------+------------------+
 | **Property**              | **Symbol**                        | **Units**        |

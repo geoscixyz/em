@@ -75,8 +75,8 @@ the figure below.
     the density of magnetic flux.
 
 
-Relevance to Geophysical Applications
--------------------------------------
+Importance to Geophysics
+------------------------
 
 **Inductive Source EM Systems**
 

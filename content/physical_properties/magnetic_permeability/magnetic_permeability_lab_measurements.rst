@@ -91,7 +91,7 @@ This can be described using `Hopkinson's law <https://en.wikipedia.org/wiki/Magn
 
 where :math:`\Phi` is the magnetic flux along the path of the ferrite, and :math:`\Re` is defined as the magnetic reluctance.
 Magnetic reluctance represents the ratio of magnetomotive force to induced magnetic flux.
-If our ferrite formes a closed path, has uniform cross-sectional area :math:`A`, and total length :math:`\ell`, its magnetic reluctance is given by:
+If our ferrite forms a closed path, has uniform cross-sectional area :math:`A`, and total length :math:`\ell`, its magnetic reluctance is given by:
 
 .. math::
     \Re = \frac{\ell}{\mu_f A}
@@ -121,7 +121,7 @@ By definition of the self-inductance, and by using Eqs. :eq:`Hopkinsons_Law` and
     L = \frac{N \Phi}{I} = \frac{N \mathcal{F}}{I \Re} = \frac{N^2}{\Re}
     :label: Inductance
 
-Therefore, the self-inducance of the circuit is inversely proportional to the magnetic reluctance.
+Therefore, the self-inductance of the circuit is inversely proportional to the magnetic reluctance.
 Using Eqs. :eq:`Omega_Resonance`, :eq:`Reluctance_Sample` and :eq:`Inductance`, the magnetic permeability of a rock sample may be determined by the following expression:
 
 .. math::

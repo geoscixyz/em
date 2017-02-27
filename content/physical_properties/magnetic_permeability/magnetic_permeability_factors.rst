@@ -52,7 +52,7 @@ The magnetic susceptibility of a sedimentary rock depends on the mineralogy of
 its parent material, as well as its weathering history. Clays, shales,
 carbonates and sandstones are not typically susceptible. In laterites,
 weathering has leached out more soluble minerals, leaving behind minerals
-which are rich in iron and aluminium. Laterities therefore have the potential
+which are rich in iron and aluminum. Laterities therefore have the potential
 to be somewhat susceptible. Banded-iron formations are a class of sedimentary
 rock, characterized by alternating layers of chert/shale and
 magnetite/hematite. Magnetite-rich banded-iron formations are one of the most

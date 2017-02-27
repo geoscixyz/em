@@ -123,7 +123,7 @@ flow across the interfaces. These interfaces look like those illustrating in :nu
 Ion diffusion is not easy to model with circuit elements. Instead, this process is frequently described using the Warburg impedance and reaction resistance. The magnitude of the Warburg impedance varies approximately as :math:`\omega^{-1/2}`. Therefore, the impedance due to ion diffusion actually increases as the frequency decreases.
 
 Note that while it is useful to understand simplified models of the relevant
-electrical behaviors of surface-electrolyte interactions, all rocks are "dirty" in the sense that they are not simply pure "electrodes". There are other materials and particles affecting ionic behavior within and outside the diffuse layer, and some of the sample's constituents will affect the behavior of the fixed layer near and on the liquid-solid interfaces. This has resulted in the creation of many emprical models for describing surface-electrolyte interactions.
+electrical behaviors of surface-electrolyte interactions, all rocks are "dirty" in the sense that they are not simply pure "electrodes". There are other materials and particles affecting ionic behavior within and outside the diffuse layer, and some of the sample's constituents will affect the behavior of the fixed layer near and on the liquid-solid interfaces. This has resulted in the creation of many empirical models for describing surface-electrolyte interactions.
 
 .. _electrical_conductivity_mechanisms_membrane:
 
@@ -155,7 +155,7 @@ Membrane Polarization
 
 Membrane polarization occurs when pore space narrows to within several
 boundary layer thicknesses (which are the thicknesses of ions adsorbed into a
-surface). Note that the surfaces of mineral grains naturally posess a weak negative charge which attracts cations (:numref:`fig_memb_pol_1`).
+surface). Note that the surfaces of mineral grains naturally possess a weak negative charge which attracts cations (:numref:`fig_memb_pol_1`).
 
 When an electric field is applied, the charges cannot flow easily through the "pore throat" so they accumulate (:numref:`fig_memb_pol_2`). The result is a net electric dipole which contributes towards any other voltages measured across the rock. Like electrode polarization, this process is non-instantaneous. 
 
