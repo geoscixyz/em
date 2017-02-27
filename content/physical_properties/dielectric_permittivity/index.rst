@@ -3,11 +3,11 @@
 Dielectric Permittivity
 =======================
 
-Dielectric permittivity is an important diagnostic physical property in geophysics. Along with electrical conductivity and magnetic permeability, rocks can be differentiated by their dielectric permittivities. Dielectric permittivity impacts the attenuation, wavelength and velocity of electromagnetic waves as they propagate through a material. This physical is especially important to consider when using ground-penetrating radar.
+Dielectric permittivity is a diagnostic physical property which characterizes the degree of electrical polarization a material experiences under the influence of an external electric field. Dielectric permittivity is the primary diagnostic physical property in :ref:`ground penetrating radar <gpr_index>` (GPR).
 
 
-Formal Definition
------------------
+Constitutive Relationship
+-------------------------
 
 Dielectric permittivity (:math:`\varepsilon`) is defined as the ratio between the electric field (:math:`\vec E`) within a material and the corresponding electric displacement (:math:`\vec D`):
 
@@ -27,8 +27,8 @@ When exposed to an electric field, bounded electrical charges of opposing sign w
 where the permittivity of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the material is non-polarizable.
 Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
 
-Relative Pemittivity
---------------------
+Relative Permittivity
+---------------------
 
 The dielectric properties of materials are generally expressed using the relative permittivity (:math:`\varepsilon_r`).
 The relative permittivity defines the dielectric properties of a material relative to that of free-space:
@@ -48,10 +48,15 @@ The electrical polarization within a material can be defined in terms of the ele
 
 where :math:`\chi_e` is known as the electric susceptibility. Note that the polarization is always parallel to the electric field. The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.
 
+Importance to Geophysics
+------------------------
 
-**Contents**
+Dielectric permittivity is the primary diagnostic physical property in :ref:`ground penetrating radar <gpr_index>` (GPR). Dielectric permittivity impacts the attenuation, wavelength and velocity of radiowave signals as they propagate through the Earth. It also determines the reflection and refraction of radiowave signals are interfaces. The impact the of the Earth's dielectric permittivity on EM systems is only significant for sufficiently high operating frequencies. As a result, dielectric permittivity is generally neglected when using most EM systems. These include: :ref:`time-domain EM <airborne_tdem_index>` (TDEM), :ref:`frequency-domain EM <airborne_fdem_index>` (FDEM), :ref:`direct current resistivity <dcr_index>` (DCR), :ref:`induced polarization <ip_index>` (IP) and natural source EM (:ref:`MT <mt_index>` and :ref:`ZTEM <ztem_index>`).
 
- .. toctree::
+Contents
+--------
+
+.. toctree::
     :maxdepth: 1
 
     dielectric_permittivity_lab_setup_measurements

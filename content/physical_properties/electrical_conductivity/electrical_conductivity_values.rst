@@ -1,28 +1,28 @@
-.. _electrical_conductivity_tables:
+.. _electrical_conductivity_values:
 
-Tables of value
-===============
+Typical Values for Rocks
+========================
 
-DC conductivity / resistivity
------------------------------
+DC Conductivity/Resistivity
+---------------------------
 
-The electrical conductivity of matter has a large variation. Consider the table below:
-
-.. figure:: ./images/CondRestable.png
-   :align: center
-   :name: LogCond
-
-   Various conductivity values for different materials.
-
-Even for rock units, the range of electrical conductivity is large.
+The conductivities/resistivities of rocks span many orders of magnitude. For common rock types, this is illustrated below.
 
 .. figure:: ./images/resistivity_table1.png
-   :align: center
-   :name: resistivity_table1
+	:align: center
+	:figwidth: 90%
+	:name: resistivity_table1
 
-   Electrical conductivity and resistivity of common rocks.
+	Electrical conductivity and resistivity of common rocks.
 
+The conductivity/resistivity of a rock depends significantly on its mineralogy and pore-water properties. To demonstrate this, the conductivities and resistivities of water and certain rock forming minerals are provided.
 
+.. figure:: ./images/CondRestable.png
+	:figwidth: 50%
+	:align: center
+	:name: LogCond
+
+	Various conductivity values for different materials.
 
 Chargeability
 -------------

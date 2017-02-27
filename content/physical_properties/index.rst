@@ -61,7 +61,6 @@ In this section, we present basic material regarding the various physical proper
     electrical_conductivity/index
     magnetic_permeability/index
     dielectric_permittivity/index
-    constitutive_relations/index
 
 
 
