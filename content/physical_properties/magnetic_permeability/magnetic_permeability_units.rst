@@ -16,7 +16,7 @@ Therefore, the magnetic permeability also characterizes the magnetic inductance 
 
 More commonly, the magnetic properties of rocks are represented using the magnetic susceptibility :math:`\chi`.
 Magnetic susceptibility represents the proportion of total magnetic flux density attributed to induced magnetization.
-A physical description of the magnetic susceptibility is discussed :ref:`here <magnetic_permeability_magnetism>`.
+A physical description of the magnetic susceptibility is discussed in :ref:`magnetic_permeability_magnetism`.
 Magnetic susceptibility is related to the magnetic permeability by the following equation:
 
 .. math::
