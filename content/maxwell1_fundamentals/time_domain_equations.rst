@@ -1,7 +1,7 @@
 .. _time_domain_equations:
 
-Time Domain Equations
-=====================
+Electromagnetic Wave Equation: Time-Domain
+==========================================
 
 .. raw:: html
     :file: ../../underconstruction.html
@@ -17,14 +17,13 @@ Time Domain Equations
     attenuation. For most earth problems the diffusion term dominates and the
     electromagnetic equations behave like the heat equation.
 
-We begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law
-<ampere_maxwell>` in the time-domain:
+To derive Maxwell's equations in the time domain, we begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law <ampere_maxwell>`, respectively:
 
 .. include:: ../equation_bank/faraday_time.rst
 
 .. include:: ../equation_bank/ampere_maxwell_time.rst
 
-and the three constitutive relations:
+as well as the three :ref:`constitutive relations<physical_properties_index>`:
 
 .. include:: ../equation_bank/ohms_law_time.rst
 
@@ -34,7 +33,7 @@ and the three constitutive relations:
 .. math:: \mathbf{b} = \mu \mathbf{h}
         :name: bmuh
 
-The goal is to combine these equations to obtain a single equation that
+Our goal is to combine these equations to obtain a single equation that
 involves :math:`\mathbf{e}` or :math:`\mathbf{h}`. For instance, to develop an
 equation for :math:`\mathbf{e}`, we take the curl of :eq:`faraday_time` and
 use Equations :eq:`ohms_law_time` and :eq:`depse` to reduce the number of

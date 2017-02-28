@@ -1,7 +1,7 @@
 .. _frequency_domain_equations:
 
-Frequency Domain Equations
-==========================
+Electromagnetic Wave Equation: Frequency Domain
+===============================================
 
 .. raw:: html
     :file: ../../underconstruction.html
