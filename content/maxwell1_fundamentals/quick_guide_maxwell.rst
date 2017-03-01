@@ -1,33 +1,35 @@
 .. _quick_guide_maxwell:
 
-Quick Guide to Maxwell's Equations
-==================================
+Maxwell's Equations in Four Forms
+=================================
 
-In this section we first present a synopsis of Maxwell's equations in three forms:
+.. purpose::
+	
+	Having provided the set of formative laws for electromagnetics (link), here we present the four most common representations of Maxwell's equations. This is meant to serve as a quick guide.
+
+In this section we present Maxwell's equations in four forms:
 
 (a) :ref:`differential_equations_time`
 (b) :ref:`integral_equations_time`
 (c) :ref:`differential_equations_frequency`
 
-These are designed to be a quick access to the relevant equations with proper
-:ref:`notation<introduction_notation>` and units. Each of the four fundamental
-Maxwell equations, as well as the conservation of charge, is then explored in
-more detail to promote a physical understanding and provide insight as to
-where the law is useful. In addition we provide a short synopsis of the
-scientists involved in discovering the law.
+.. (d) :ref:`integral_equations_frequency`
 
-Maxwell's equations connect electric and mangetic fields, fluxes and physical properties.
+This page is designed to be a quick access to the relevant equations with proper
+:ref:`notation<introduction_notation>` and units.
 
+Variables and Units
+-------------------
+
+The variables and units for relevant quantities in Maxwell's equations is given here.
 
 .. include:: maxwell_variables.rst
 
 
 .. _differential_equations_time:
 
-
 Differential equations in time
 ------------------------------
-
 
 - :ref:`Faraday's Law <faraday_differential_time>`
     .. include:: ../equation_bank/faraday_time.rst
