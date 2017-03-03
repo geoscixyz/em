@@ -58,7 +58,6 @@ spheres in a uniform half-space.
     survey
     data
     interpretation
-    survey_design
     practical_considerations
 
 

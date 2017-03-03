@@ -19,9 +19,9 @@ before_install:
 
 install:
   - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then
-      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx ;
+      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx docutils==0.12;
     else
-      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx ;
+      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx docutils==0.12;
     fi
   - pip install -r requirements.txt
 
@@ -42,7 +42,7 @@ after_success:
       gcloud auth activate-service-account --key-file client-secret.json ;
       gcloud config set project emgeosci ;
       gcloud -q components update gae-python ;
-      gcloud -q preview app deploy ./app.yaml --version ${TRAVIS_COMMIT} --promote;
+      gcloud -q app deploy ./app.yaml --version ${TRAVIS_COMMIT} --promote;
     fi
 
 notifications:

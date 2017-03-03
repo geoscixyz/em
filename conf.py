@@ -14,8 +14,11 @@
 
 import sys
 import os
+# import em_examples
 
 sys.path.append(os.path.abspath('./_ext'))
+# sys.path.append(os.path.abspath('./em_notebooks'))
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,7 +44,9 @@ extensions = [
     'matplotlib.sphinxext.plot_directive',
     'edit_on_github',
     'purpose',
-    'question'
+    'question',
+    # 'sphinx_nbexamples'
+    # 'sphinx_gallery.gen_gallery',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +55,22 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst']
+
+# sphinx_gallery_conf = {
+#     # path to your examples scripts
+#     'examples_dirs' : 'em_notebooks',
+#     # path where to save gallery generated examples
+#     'gallery_dirs'  : 'auto_examples'}
+
+
+    # Sphinx Gallery
+sphinx_gallery_conf = {
+    # path to your examples scripts
+    'examples_dirs' : '../../simpeg/em_notebooks',
+    'gallery_dirs'  : 'auto_examples'
+}
+
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -71,6 +91,7 @@ project = u'em'
 
 # """
 author = u'GeoSci Developers'
+
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -97,7 +118,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'AUTHORS.rst', 'README.md',
+    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints',
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
@@ -108,13 +129,17 @@ exclude_patterns = [
                     ]
 
 linkcheck_ignore = [
-    'http://mybinder.org/repo/ubcgif/em_examples',
+    'http://mybinder.org/repo/geoscixyz/em_apps',
     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
     'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
     'https://linkedin.com/in/*',
     'http://dx.doi.org/10.1071/EG08027',
     'http://www.publish.csiro.au/paper/PVv2010n149p23',
+    'http://www.zenyatta.ca',
+    'https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf',
+    'https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja',
+    'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
@@ -151,7 +176,7 @@ numfig = True
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 check_meta = False
 
@@ -253,14 +278,14 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'EM.geosci'
+html_title = 'Electromagnetic Geophysics'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = 'EM'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'emgeosci.png'
+# html_logo = 'disclogo-02.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -345,7 +370,7 @@ htmlhelp_basename = 'emdoc'
 
 # -- Edit on Github Extension ---------------------------------------------
 
-edit_on_github_project = 'ubcgif/em'
+edit_on_github_project = 'geoscixyz/em'
 edit_on_github_branch = 'master'
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -513,11 +538,12 @@ else:
     make_contributorslist()
 
 from _ext import (
-    make_formula_sheet, make_case_histories,
-    checkDependencies, supress_nonlocal_image_warn
+    make_contributorslist, make_formula_sheet, make_case_histories,
+    checkDependencies, supress_nonlocal_image_warn, copyImages
     )
 
 make_formula_sheet()
 make_case_histories()
 # checkDependencies()
 supress_nonlocal_image_warn()
+copyImages()

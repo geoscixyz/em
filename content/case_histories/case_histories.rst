@@ -18,10 +18,17 @@
     mt_isa/index
     bookpurnong/index
     aspen/index
+    lalor/index
     emc/index
+    albany/index
+    westplains/index
     furggwanghorn/index
+    sagd/index
+    norsminde/index
     barents_sea/index
+    kasted/index
     balboa/index
+    noranda/index
     
 
 
@@ -114,6 +121,36 @@ Aspen
 
         
 
+Lalor
+^^^^^
+
+.. image:: ./lalor/images/lalor_alltc_model.png
+    :alt: lalor
+    :width: 260
+    :align: right
+
+- :ref:`3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit <lalor_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, massive sulphide
+    - Applications: Mineral exploration
+    - Location: Lalor Lake, Manitoba, Canada
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
 Elevenmile Canyon
 ^^^^^^^^^^^^^^^^^
 
@@ -143,6 +180,66 @@ Elevenmile Canyon
 
         
 
+Albany
+^^^^^^
+
+.. image:: ./albany/images/figDrillModel.png
+    :alt: albany
+    :width: 260
+    :align: right
+
+- :ref:`Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery <albany_index>`
+
+
+- Contributors
+    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
+    - Applications: Mineral exploration, hydrothermal graphite porphyry
+    - Location: Albany graphite deposit, Ontario, Canada
+    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+
+|
+|
+|
+
+
+
+        
+
+West Plains
+^^^^^^^^^^^
+
+.. image:: ./westplains/images/thumbnail_westplains.png
+    :alt: westplains
+    :width: 260
+    :align: right
+
+- :ref:`West Plains <westplains_index>`
+
+
+- Contributors
+    - author: :ref:`doldenburg`, :ref:`dyang`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne EM, orogenic gold, greenstone belt
+    - Applications: Mineral exploration
+    - Location: Nunavut, Canada
+    - Geophysical Surveys: VTEM, RESOLVE
+
+|
+|
+|
+
+
+
+        
+
 Furggwanghorn
 ^^^^^^^^^^^^^
 
@@ -163,6 +260,65 @@ Furggwanghorn
     - geophysical survey: GPR
     - application: Geotechnical
     - location: Switzerland
+
+|
+|
+|
+
+
+
+        
+
+SAGD
+^^^^
+
+.. image:: ./sagd/images/ChamberIrregular.png
+    :alt: sagd
+    :width: 260
+    :align: right
+
+- :ref:`SAGD <sagd_index>`
+
+
+- Contributors
+    - author: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: Borehole EM
+    - application: Hydrocarbons
+    - location: Canada
+    - keyword: Oil Sands
+
+|
+|
+|
+
+
+
+        
+
+Norsminde
+^^^^^^^^^
+
+.. image:: ./norsminde/images/fig_thumbnail.png
+    :alt: norsminde
+    :width: 260
+    :align: right
+
+- :ref:`Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data <norsminde_index>`
+
+
+- Contributors
+    - author: :ref:`eauken`, :ref:`avchristiansen`, :ref:`cschamper`, :ref:`fjorgensen`, :ref:`fefferso`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Norsminde, Denmark
+    - Geophysical Surveys: Airborne TDEM
 
 |
 |
@@ -202,6 +358,36 @@ Barents Sea
 
         
 
+Kasted
+^^^^^^
+
+.. image:: ./kasted/images/fig_thumbnail.png
+    :alt: kasted
+    :width: 260
+    :align: right
+
+- :ref:`3D geological modelling of a complex buried-valley network delineated from borehole and AEM data <kasted_index>`
+
+
+- Contributors
+    - author: :ref:`ashoyer`, :ref:`tvilhelmsen`, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, :ref:`psandersen`, :ref:`aviezzoli`, :ref:`imoller`
+    - reviewer: :ref:`dccowan`
+
+
+- Tags
+    - Keywords: Airborne TDEM, Groundwater
+    - Applications: Groundwater Mapping
+    - Location: Aarhus, Denmark
+    - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
 Balboa
 ^^^^^^
 
@@ -210,7 +396,7 @@ Balboa
     :width: 260
     :align: right
 
-- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
+- :ref:`Balboa <balboa_index>`
 
 
 - Contributors
@@ -223,6 +409,36 @@ Balboa
     - application: Mining
     - location: Panama
     - keyword: ZTEM, porphyry, copper, gold
+
+|
+|
+|
+
+
+
+        
+
+Noranda
+^^^^^^^
+
+.. image:: ./noranda/images/TrueModel3D.png
+    :alt: noranda
+    :width: 260
+    :align: right
+
+- :ref:`Noranda <noranda_index>`
+
+
+- Contributors
+    - author: :ref:`eholtham`
+    - reviewer: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: ZTEM
+    - application: Mineral deposits
+    - location: Canada
+    - keyword: Noranda
 
 |
 |

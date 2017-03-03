@@ -80,7 +80,7 @@ Log plot. In the Lin-Log plot, exponential decay will be straight line.
     import matplotlib
     matplotlib.rcParams['font.size'] = 12
     # Time constant
-    tau = [1e-1, 1e-1/5, 1e-1/10]
+    tau = [0.1, 0.05, 0.01]
     fig = plt.figure(figsize=(10, 3))
     ax1 = plt.subplot(121)
     ax2 = plt.subplot(122)

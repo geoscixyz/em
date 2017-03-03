@@ -132,8 +132,10 @@ modern technologies, data can be collected in three dimensions, using
 electrodes on the surface and in boreholes (:numref:`dcr_3dgeneral`). Any
 datum from a specific electrode placement produces some information but, as
 aquistion continues, some electrode placements may not provide new independent
-information. The choice of what data to collect is addressed in the section
-:ref:`Survey Design <dcr_survey_design>`.
+information.
+
+.. The choice of what data to collect is addressed in the section
+.. :ref:`Survey Design <dcr_survey_design>`.
 
 Here we outline some basic principles about survey design and provide some
 acquistion strategies that are currently used.
@@ -370,8 +372,7 @@ receiver electrode for a DC survey with a copper sulphate solution is shown in
 
 **Capacitive sensors**
 are different from electrodes in that they don't require a galvanic contact
-with the earth. `These sensors <https://www.onepetro.org/download/conference-
-paper/SEG-2012-1478?id=conference-paper%2FSEG-2012-1478>`_  allow measurement
+with the earth. `These sensors <https://www.onepetro.org/conference-paper/SEG-2012-1478>`_  allow measurement
 of the electric field by placing a unit on the surface. Good contact with the
 ground is not required and this allows reliable data to be collected in
 regions with dry soils or icy conditions and other areas where electrode

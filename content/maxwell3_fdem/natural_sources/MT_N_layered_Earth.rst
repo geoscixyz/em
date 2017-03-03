@@ -24,10 +24,10 @@ of the resulting data. This work follows the derivation presented in
 `binder`_.
 
  .. image:: http://mybinder.org/badge.svg
-    :target: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+    :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
     :align: center
 
-.. _binder: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+.. _binder: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
 
 The magnetotelluric (MT) method is a widely used geophysical technique, in
 particular for imaging geothermal systems, that is sensitive to Earth
@@ -206,6 +206,8 @@ top layer using the matrix :math:`P_j T_j P^{-1}_J`.
 Building Intuition for MT problems
 ----------------------------------
 
+.. _MT_skindepthdoi:
+
 Skin Depth and Depth of investigation
 *************************************
 
@@ -243,6 +245,7 @@ frequency (20000 Hz), MT is still a deep exploration method in resistive
 environment (:math:`10^{-5} S/m`) with a skin depth of about 1125m. Skin Depth
 is often use as an estimator for the depth of investigation of a survey.
 
+.. _MT_refl_transcoeff:
 
 Reflection and Transmission Coefficients
 ****************************************
@@ -320,7 +323,7 @@ What is important is the refraction angle at the Air-Earth interface, the
 angle of the transmitted wave in the ground.
 
 As any wave, electromagnetic waves follow `Snell's law`_, that we can derive
-from the :ref:`Maxwell's equation<maxwells_equations_index>`.
+from the :ref:`Frequency Domain Maxwell's equation<frequency_domain_equations>`.
 
 .. _Snell's law: https://en.wikipedia.org/wiki/Snell%27s_law
 

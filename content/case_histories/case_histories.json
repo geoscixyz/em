@@ -17,7 +17,7 @@
     ,
     "balboa":{
         "title": "Balboa",
-        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "description":"Balboa",
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
@@ -123,6 +123,137 @@
             {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
             {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
         ]
-    }
+    },
+    "albany":{
+        "title":"Albany",
+        "description":"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery",
+        "source":"./albany/",
+        "thumbnail":"./albany/images/figDrillModel.png",
+        "contributors":[
+            {"uid":"user:jlegault", "as":"author"},
+            {"uid":"user:jlymburner", "as":"author"},
+            {"uid":"user:kralph", "as":"author"},
+            {"uid":"user:pwood", "as":"author"},
+            {"uid":"user:morta", "as":"author"},
+            {"uid":"user:aprikhodko", "as":"author"},
+            {"uid":"user:nbournas", "as":"author"},
+            {"uid":"user:shickey", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM, ground-based TDEM, aeromagnetic", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration, hydrothermal graphite porphyry", "as":"Applications"},
+            {"uid":"Mineral exploration, airborne, ground-based, TDEM, porphyry", "as":"Keywords"},
+            {"uid":"Albany graphite deposit, Ontario, Canada", "as":"Location"}
+        ]
+    },
+    "norsminde":{
+        "title":"Norsminde",
+        "description":"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data",
+        "source":"./norsminde/",
+        "thumbnail":"./norsminde/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Norsminde, Denmark", "as":"Location"}
+        ]
+    },
+    "kasted":{
+        "title":"Kasted",
+        "description":"3D geological modelling of a complex buried-valley network delineated from borehole and AEM data",
+        "source":"./kasted/",
+        "thumbnail":"./kasted/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:ashoyer","as":"author"},
+            {"uid":"user:tvilhelmsen","as":"author"},
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:fjorgensen","as":"author"},
+            {"uid":"user:psandersen","as":"author"},
+            {"uid":"user:aviezzoli","as":"author"},
+            {"uid":"user:imoller","as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Aarhus, Denmark", "as":"Location"}
+        ]
+    },
+    "lalor":{
+        "title":"Lalor",
+        "description":"3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit",
+        "source":"./lalor/",
+        "thumbnail":"./lalor/images/lalor_alltc_model.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne TDEM, massive sulphide", "as":"Keywords"},
+            {"uid":"Lalor Lake, Manitoba, Canada", "as":"Location"}
+        ]
+    },
+    "westplains":{
+        "title":"West Plains",
+        "Description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt.",
+        "source":"./westplains/",
+        "thumbnail":"./westplains/images/thumbnail_westplains.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"VTEM, RESOLVE", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
+            {"uid":"Nunavut, Canada", "as":"Location"}
+        ]
+    },
+    "sagd":{
+        "title":"SAGD",
+        "source":"./sagd/",
+        "thumbnail":"./sagd/images/ChamberIrregular.png",
+        "citations":["DevrieseOldenburg2016","Devriese2016"],
+        "contributors":[
+            {"uid":"user:sdevriese", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Borehole EM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbons", "as":"application"},
+            {"uid":"Oil Sands", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ]
+	},
+    "noranda":{
+        "title":"Noranda",
+        "source":"./noranda/",
+        "thumbnail":"./noranda/images/TrueModel3D.png",
+        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "contributors":[
+            {"uid":"user:eholtham", "as":"author"},
+            {"uid":"user:sdevriese", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"ZTEM", "as":"geophysical_survey"},
+            {"uid":"Mineral deposits", "as":"application"},
+            {"uid":"Noranda", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ]
+	}  
 }
 
