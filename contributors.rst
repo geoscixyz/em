@@ -1544,9 +1544,3 @@ Dikun Yang
     </div>
 
 
-<<<<<<< HEAD
-        
-
-=======
-            
->>>>>>> master
