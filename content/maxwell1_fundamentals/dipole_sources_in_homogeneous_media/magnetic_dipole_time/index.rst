@@ -50,7 +50,7 @@ By including the source term, Maxwell's equations in the time domain are given b
 
 
 where subscripts :math:`_m` remind us that we are considering a magnetic source.
-The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`MagDipole`).
+The source is responsible for generating a primary magnetic field in the surrounding region (:numref:`MagDipoleTime`).
 According to :ref:`Faraday's law<faraday_differential_time>`, time-varying magnetic fields generate rotational electric fields.
 In matter, this leads to an induced current density which produces secondary magnetic fields according to the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_time>`.
 
@@ -81,10 +81,10 @@ By including the source term, Maxwell's equations in the time domain are given b
 
 
 .. math::
-	\begin{split}
-	\nabla \times \mathbf{e_m} + \mu \dfrac{\partial  \mathbf{h_m} \}{\partial t} &= I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
+	\begin{align}
+	\nabla \times \mathbf{e_m} + \mu \dfrac{\partial  \mathbf{h_m} }{\partial t} &= I \delta(t) \mathbf{S} \, \delta (x) \delta (y) \delta (z)  \\
 	\nabla \times \mathbf{h_m} - &\sigma \mathbf{e_m}  - \varepsilon \dfrac{\partial \mathbf{e_m} }{\partial t} = 0
-	\end{split}
+	\end{align}
 
 
 It is possible to solve this system to obtain analytic solutions for the transient electric and magnetic fields.

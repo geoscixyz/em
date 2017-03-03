@@ -95,7 +95,7 @@ Assuming we are in the quasi-static regime :math:`k^2 = - i \omega \mu \sigma`, 
 .. math::
 	\mathbf{H_m} \approx
 	\begin{cases}
-	\dfrac{i \omega \mu \ sigma m}{4 \pi r} e^{-ikr} \Bigg [ \left ( \dfrac{x^2}{r^2} - 1 \right ) \hat x + \dfrac{xy}{r^2} \, \hat y + \dfrac{xz}{r^2} \, \hat z \Bigg ] \; \; &\textrm{for} \; \; y,z \not \ll x \\
+	\dfrac{i \omega \mu \sigma m}{4 \pi r} e^{-ikr} \Bigg [ \left ( \dfrac{x^2}{r^2} - 1 \right ) \hat x + \dfrac{xy}{r^2} \, \hat y + \dfrac{xz}{r^2} \, \hat z \Bigg ] \; \; &\textrm{for} \; \; y,z \not \ll x \\
 	\; & \; \\
 	\dfrac{ik m}{2 \pi x^2} e^{-ikx} \hat x &\textrm{for} \; \; y,z \ll x
 	\end{cases}
