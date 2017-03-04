@@ -30,10 +30,10 @@ Below, we show the background response due to clutter items and the responses ov
 Test Survey over Seeded Items
 -----------------------------
 
-Seeded items are disarmed UXOs that are buried in order to test a proposed survey and classification procedure. Typically, seeded items are buried within a local test pit. Next, cued interrogation data are collected over the seeded items. Processing steps described in :ref:`interpretation <uxo_interpretation>` are then used to classify each item. Test surveys are used to determine whether:
+Seeded items are disarmed UXOs or industry standard objects that are buried in order to test a proposed survey and classification procedure. Typically, seeded items are buried within a local test pit. Next, cued interrogation data are collected over the seeded items. Processing steps described in :ref:`interpretation <uxo_interpretation>` are then used to classify each item. Test surveys are used to determine whether:
 
 	1) the line and station spacings are sufficient.
-	2) the detection assurance level is acceptable.
+	2) the detection threshold finds all seeded items.
 	3) the current survey parameters can be used to accurately locate and classify ordnance items.
 
 If seeded items are accurately located and classified, the approach can be used to find UXOs within the area. If the test survey is unsuccessful, a different approach is likely required. Below, we illustrate examples of successful and unsuccessful classification of a seeded item. On the left, recovered polarizations match the primary and secondary polarizations for a particular item. On the right, recovered polarization to not match. In this case, the test survey was unsuccessful in accurately classifying the seeded item.

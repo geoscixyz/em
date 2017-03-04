@@ -24,7 +24,7 @@ Transmitter
 
 For UXO systems, inductive loop sources are used as transmitters. Each transmitter loop is comprised of a coil of wire which carries a time-varying electrical current; which produces a time-varying primary magnetic field.
 
-Transmitter loops can be square or circular in shape. For single-loop systems (EM-61, TEMTADS, MPV), the transmitter loop is generally oriented horizontally. For multi-loop systems (Metal Mapper), the transmitter loops are oriented orthogonal to one another; which allows the transmitter to illuminate targets from multiple directions at a single location. Mobile systems (EM-61, MPV, TEMTADS, etc...) use transmitter loops with dimensions anywhere from 10s of centimeters to roughly a meter. Large loop systems use a stationary transmitter loop with dimensions up to 10s of meters (UltraTEM).
+Transmitter loops can be square or circular in shape. For single-loop systems, the transmitter loop is generally oriented horizontally. For multi-loop systems, transmitter loops can be orthogonal to one another and/or organized as part of an array. Multi-loop configurations allow the transmitter to illuminate targets from multiple directions at a single location. Mobile systems (EM-61, MPV, TEMTADS, etc...) use transmitter loops with dimensions anywhere from 10s of centimeters to roughly a meter. Large loop systems use a stationary transmitter loop with dimensions up to 10s of meters (UltraTEM).
 
 .. figure:: images/source_moment.png
 	:align: right
@@ -97,7 +97,7 @@ Frequency-Domain Systems
 
 **Coincident Loop Systems**
 
-Coincident loop systems are by far the most common configuration for FEM UXO surveys. These systems generally consist of a circular transmitter loop and a circular receiver loop which lie on the same plane. This allows for easy removal of the transmitter's primary field from the data, thus isolating the target's response. The diameter of the transmitter and receiver loops are generally on the order of 10s of centimeters. Although this type of system is very portable, the data collected cannot be as easily used to discriminate and classify targets. As a result, these types of systems are becoming less common.
+Coincident loop systems are by far the most common configuration for FEM UXO surveys. These systems generally consist of a circular transmitter loop and a circular receiver loop which lie on the same plane. This allows for easy removal of the transmitter's primary field from the data, thus isolating the target's response. The diameter of the transmitter and receiver loops are generally on the order of 10s of centimeters. Although this type of system is very portable, the data collected cannot be as easily used to locate and classify targets. As a result, these types of systems are becoming less common. A variation of this particular instrument is the **Terraplus GEM-3** system which operates within a bandwidth of 30 Hz to 24 kHz. This system can be equiped with 40 cm, 64 cm or 94 cm diameter heads.
 
 .. figure:: images/fig_coincident_uxo.png
 	:align: center
@@ -118,7 +118,7 @@ The Geonix EM-61 is a time-domain instrument with a single horizontal transmitte
 
 **TEMTADS**
 
-The TEMTADS system is comprised of a square horizontal transmitter loop and an array of 25 horizontal coplanar receiver loops; thus it measures the vertical TEM response. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple small receiver loops allows for better characterization of compact TEM anomalies.
+The TEMTADS system is comprised of a square horizontal transmitter loop and an array of 25 horizontal coplanar receiver loops; thus it measures the vertical TEM response. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple small receiver loops allows for better characterization of compact TEM anomalies. The popularity of this survey configuration has decreased recently with the development of the Metal-Mapper 2x2 system.
 
 .. figure:: images/fig_TEMTADS_uxo.png
 	:align: center
@@ -138,12 +138,18 @@ The man-portable vector (MPV) instrument is comprised of a 50 cm diameter transm
 
 **Metal-Mapper**
 
-The Geometrics Metal Mapper is a time-domain instrument with 3 orthogonal transmitter loops (1m :math:`\times` 1m) and a horizontal array with 7 receivers. Each receiver measures 3-component data, resulting in 63 transmitter-receiver pairs. Because the Metal Mapper illuminates targets from multiple orientations, it has an advantage over single transmitting loop systems. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.
+The Geometrics Metal-Mapper is a time-domain instrument with 3 orthogonal transmitter loops (1m :math:`\times` 1m) and a horizontal array with 7 receivers. Each receiver measures 3-component data, resulting in 63 transmitter-receiver pairs. Because the Metal Mapper illuminates targets from multiple orientations, it has an advantage over single transmitting loop systems. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.
 
 .. figure:: images/fig_metalmapper_uxo.png
 	:align: center
 	:figwidth: 100%
 	:name: fig_MetalMapper_uxo
+
+
+**Metal-Mapper 2x2**
+
+The Metal-Mapper 2x2, sometimes referred to as the TEMTADS 2x2, combines the advantages of the original TEMTADS system with those of the Metal-Mapper system. The Metal-Mapper 2x2 is has a 2x2 array of orthogonal transmitter loops; which makes 12 transmitter loops in total. This system is relatively new but has begun to replace the orignal TEMTADS and Metal-Mapper systems for most applications.
+
 
 
 
