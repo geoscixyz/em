@@ -351,5 +351,11 @@
         "affiliation":"Computational Geosciences Inc.",
         "location":"Vancouver, BC",
         "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"
+    },
+    "eholtham":{
+        "name":"Laurens Beran",
+        "affiliation":"Black Tusk Geophysics",
+        "location":"Vancouver, BC",
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"
     }
 }
