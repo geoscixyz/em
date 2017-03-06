@@ -25,7 +25,7 @@ Amanda Alvarez
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -53,7 +53,7 @@ Pedro Alvarez
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -119,7 +119,7 @@ Esben Auken
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -169,6 +169,32 @@ Patrick Belliveau
 
             
 
+.. _eholtham:
+
+Laurens Beran
+-------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> Black Tusk Geophysics
+                              <br>
+        <strong>location:</strong> Vancouver, BC
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _fbolivar:
 
 Fransisco Bolivar
@@ -179,7 +205,7 @@ Fransisco Bolivar
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -207,7 +233,7 @@ Nasreddine Bournas
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -237,7 +263,7 @@ Anders Vest Christiansen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -403,7 +429,7 @@ Flemming Effersø
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -535,7 +561,7 @@ Stanislawa Hickey
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -555,32 +581,6 @@ Stanislawa Hickey
 
             
 
-.. _eholtham:
-
-Elliot Holtham
---------------
-
-.. raw:: html
-
-    <div class="row" style="min-height: 170px">
-    <div class="col-md-4">
-        
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
-                
-    </div>
-    <div class="col-md-6" style="line-height: 1.5">
-        
-        <strong>affiliation:</strong> Computational Geosciences Inc.
-                              <br>
-        <strong>location:</strong> Vancouver, BC
-                              
-    </div>
-    <br><br>
-    </div>
-
-
-            
-
 .. _ashoyer:
 
 A. S. Høyer
@@ -591,7 +591,7 @@ A. S. Høyer
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -613,7 +613,7 @@ Carlos Izarra
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -647,7 +647,7 @@ Flemming Jørgensen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -711,7 +711,7 @@ Rob Keirstead
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -739,7 +739,7 @@ Jean Legault
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -773,7 +773,7 @@ Josh Lymburner
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -803,7 +803,7 @@ Lucy Macgregor
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1035,7 +1035,7 @@ Ingelise Møller
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1093,7 +1093,7 @@ Marta Orta
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1123,7 +1123,7 @@ Jesper Pedersen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1183,7 +1183,7 @@ Geoffrey Plastow
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1217,7 +1217,7 @@ Alexander Prikhodko
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1247,7 +1247,7 @@ Kevin Ralf
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1273,7 +1273,7 @@ Jens Christian Refsgaard
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1333,7 +1333,7 @@ Peter B. E. Sandersen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1357,7 +1357,7 @@ Cyril Schamper
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1413,7 +1413,7 @@ Andrea Viezzoli
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1437,7 +1437,7 @@ Troels Vilhelmsen
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1461,7 +1461,7 @@ Chris Wijns
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1491,7 +1491,7 @@ Peter Wood
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/PlaceHolderAvatars/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">

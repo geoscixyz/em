@@ -22,5 +22,5 @@ Excitation Orientation of the Target
 
 The excitation of a buried target occurs parallel to the inducing field. Thus in order to accurately recover polarizations :math:`L_{x'},L_{y'}` and :math:`L_{z'}` for the target, we must excite the target significantly from multiple angles. Ideally, the target would be excited from 3 orthogonal directions; thus assuring the data contains significant contributions from each polarization.
 
-For systems with multiple orthogonal transmitter loops (Metal Mapper), this aspect of survey design is not an issue. For single loop transmitters however (EM61, MPV, TEMTADS), perpendicular survey lines are sometimes added to excite targets from multiple sides. This is done especially when collecting cued interrogation data.
+For systems with multiple orthogonal transmitter loops (Metal Mapper), this aspect of survey design is not an issue. For single loop transmitters however (EM61), perpendicular survey lines have historically been added to excite targets from multiple sides. This is done especially when collecting cued interrogation data. With the advances of modern systems with multiple orthogonal transmitter loops, cued interrogation data can be collected from a stationary position.
 
