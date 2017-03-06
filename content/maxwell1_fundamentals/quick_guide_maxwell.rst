@@ -1,7 +1,7 @@
 .. _quick_guide_maxwell:
 
-Maxwell's Equations in Four Forms
-=================================
+Maxwell's Equations in Different Forms
+======================================
 
 .. purpose::
 	
@@ -127,5 +127,15 @@ where the following :ref:`constitutive relationships<physical_properties_index>`
 	\mathbf{B} &= \mu \mathbf{H}\\
 	\mathbf{D} &= \varepsilon \mathbf{E}
 	\end{align}
+
+
+
+
+
+
+
+
+
+
 
 
