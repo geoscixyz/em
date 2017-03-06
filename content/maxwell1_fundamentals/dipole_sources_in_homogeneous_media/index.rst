@@ -65,7 +65,7 @@ Ultimately, the right-hand side of :ref:`Faraday's law <faraday_differential_fre
 And the right-hand side of the :ref:`Ampere-Maxwell law <ampere_maxwell_differential_frequency>` becomes non-zero in the presence of an electrical current source.
 
 
-**Contents**
+**Organization**
 
 For each dipole source, we begin by presenting a physical model.
 This is used to replace frequency-dependent or time-dependent source terms in Maxwell's equations.

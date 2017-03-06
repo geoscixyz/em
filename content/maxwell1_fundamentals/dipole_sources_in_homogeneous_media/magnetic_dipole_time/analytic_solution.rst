@@ -42,31 +42,31 @@ From Ward and Hohmann :cite:`ward1988`, the step-response can be obtained via th
 	:label: step_Laplace_transform
 
 where :math:`F(s)` is obtained by replacing :math:`s=i\omega` in the system's harmonic response function.
-For the electric field, magnetic field and vector potential arising from a harmonic magnetic dipole in the :math:`\hat x` direction, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
+For the electric field, magnetic field and vector potential arising from a harmonic magnetic dipole in the :math:`\mathbf{\hat x}` direction, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
 
 
 **Harmonic Solutions for a Magnetic Dipole**
 
-As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z)` \hat x. 
+As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z)` \mathbf{\hat x}. 
 
 
 For the vector potential:
 
 .. math::
-	{\bf F}(i\omega ) = \frac{i\omega \mu m}{4\pi r} e^{-ikr} \hat x
+	{\bf F}(i\omega ) = \frac{i\omega \mu m}{4\pi r} e^{-ikr} \mathbf{\hat x}
 	:label: F_harmonic_response
 
 
 For the electric field:
 
 .. math::
-	{\bf E_m}(i\omega ) = \frac{i\omega \mu m}{4\pi r^2} (ikr +1) e^{-ikr} \Bigg ( \frac{z}{r}\hat y - \frac{y}{r}\hat z  \Bigg )
+	{\bf E_m}(i\omega ) = \frac{i\omega \mu m}{4\pi r^2} (ikr +1) e^{-ikr} \Bigg ( \frac{z}{r}\mathbf{\hat y} - \frac{y}{r}\mathbf{\hat z}  \Bigg )
 	:label: E_harmonic_response
 
 And for the magnetic field:
 
 .. math::
-	{\bf H_m}(i\omega ) = \frac{m}{4\pi r^3} e^{-ikr} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 -ikr -1 \big ) \hat x \Bigg ]
+	{\bf H_m}(i\omega ) = \frac{m}{4\pi r^3} e^{-ikr} \Bigg [ \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 -ikr -1 \big ) \mathbf{\hat x} \Bigg ]
 	:label: H_harmonic_response
 
 where the wavenumber :math:`k` is given by:
@@ -90,21 +90,21 @@ If we substitute :math:`s = i\omega` in Eqs. :eq:`F_harmonic_response`, :eq:`E_h
 
 
 .. math::
-	\frac{{\bf F}(s)}{s} = \frac{\mu m}{4 \pi r} e^{- \sqrt{s \mu\sigma r^2}} \hat x \; ,
+	\frac{{\bf F}(s)}{s} = \frac{\mu m}{4 \pi r} e^{- \sqrt{s \mu\sigma r^2}} \mathbf{\hat x} \; ,
 	:label: A_frac_inverse_Laplace
 
 
 
 .. math::
-	\frac{{\bf E_m}(s)}{s} = s \Bigg [ \frac{\mu m}{4\pi r^3} \bigg ( \sqrt{\frac{ \mu \sigma}{s}} r + \frac{1}{s} \bigg ) e^{-\sqrt{s \mu \sigma r^2}} \big ( z \, \hat y - y\, \hat z  \big ) \Bigg ]
+	\frac{{\bf E_m}(s)}{s} = s \Bigg [ \frac{\mu m}{4\pi r^3} \bigg ( \sqrt{\frac{ \mu \sigma}{s}} r + \frac{1}{s} \bigg ) e^{-\sqrt{s \mu \sigma r^2}} \big ( z \, \mathbf{\hat y} - y\, \mathbf{\hat z}  \big ) \Bigg ]
 	:label: E_frac_inverse_Laplace
 
 and
 
 .. math::
 	\begin{split}
-	\frac{{\bf H_m}(s)}{s} = \frac{m}{4\pi r^3} & e^{-\sqrt{s\mu \sigma r^2}} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x +  \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \; ... \\
-	& \Bigg ( -\mu\sigma r^2 + 3 \sqrt{\frac{\mu \sigma}{s}}r + \frac{3}{s} \Bigg ) + \Bigg ( -\mu\sigma r^2 - \sqrt{\frac{\mu \sigma}{s}} r - \frac{1}{s} \Bigg ) \hat x \Bigg ]
+	\frac{{\bf H_m}(s)}{s} = \frac{m}{4\pi r^3} & e^{-\sqrt{s\mu \sigma r^2}} \Bigg [ \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} +  \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \; ... \\
+	& \Bigg ( -\mu\sigma r^2 + 3 \sqrt{\frac{\mu \sigma}{s}}r + \frac{3}{s} \Bigg ) + \Bigg ( -\mu\sigma r^2 - \sqrt{\frac{\mu \sigma}{s}} r - \frac{1}{s} \Bigg ) \mathbf{\hat x} \Bigg ]
 	\end{split}
 	:label: H_frac_inverse_Laplace
 
@@ -132,13 +132,13 @@ where erfc(x) is the complimentary error function.
 Thus:
 
 .. math::
-	L^{-1} \Bigg [ \frac{{\bf F}(s)}{s} \Bigg ] = \frac{m\theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \hat x \; ,
+	L^{-1} \Bigg [ \frac{{\bf F}(s)}{s} \Bigg ] = \frac{m\theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \mathbf{\hat x} \; ,
 	:label: a_step_response
 
 
 
 .. math::
-	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( z \, \hat y - y \, \hat z \big )
+	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( z \, \mathbf{\hat y} - y \, \mathbf{\hat z} \big )
 	:label: e_step_response
 
 
@@ -146,8 +146,8 @@ and
 
 .. math::
 	\begin{split}
-	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \, ...  \\
-	& + 3\, \textrm{erfc} (\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \hat x \Bigg ]
+	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \, ...  \\
+	& + 3\, \textrm{erfc} (\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \mathbf{\hat x} \Bigg ]
 	\end{split}
 	:label: h_step_response
 
@@ -163,7 +163,7 @@ For the vector potential, the transient response is given by:
 
 
 .. math::
-	{\bf f}(t) = -\frac{m \theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \hat x
+	{\bf f}(t) = -\frac{m \theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \mathbf{\hat x}
 	:label: vector_potential_step_off
 
 
@@ -171,7 +171,7 @@ For the electric field, the transient response is given by:
 
 
 .. math::
-	{\bf e_m}(t) = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \hat y + y \, \hat z \big )
+	{\bf e_m}(t) = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( -z \, \mathbf{\hat y} + y \, \mathbf{\hat z} \big )
 	:label: e_step_off_response
 
 where erf(:math:`x`) is the error function.
@@ -179,8 +179,8 @@ And for the magnetic field, the transient response is given by:
 
 .. math::
 	\begin{split}
-	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2} \hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3  \; ... \\ 
-	&+ \frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) - \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x  \Bigg ]
+	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3  \; ... \\ 
+	&+ \frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) - \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \mathbf{\hat x}  \Bigg ]
 	\end{split}
 	:label: h_step_off_response
 
@@ -190,5 +190,5 @@ As a result, we are interested in the time-rate of decay of the magnetic field.
 Taking the derivative of Eq. :eq:`h_step_off_response`, this is given by:
 
 .. math::
-	\frac{\partial{ \bf h_m}}{\partial t} = - \frac{4m \theta^5}{\pi^{3/2} \mu\sigma} e^{-\theta^2 r^2} \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2} \hat y + \frac{xz}{r^2} \hat z \Bigg ) \theta^2 r^2  + \big (1 -\theta^2 r^2 \big ) \hat x \Bigg ]
+	\frac{\partial{ \bf h_m}}{\partial t} = - \frac{4m \theta^5}{\pi^{3/2} \mu\sigma} e^{-\theta^2 r^2} \Bigg [ \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2} \mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \theta^2 r^2  + \big (1 -\theta^2 r^2 \big ) \mathbf{\hat x} \Bigg ]
 	:label: dhdt_step_off_quasi_static

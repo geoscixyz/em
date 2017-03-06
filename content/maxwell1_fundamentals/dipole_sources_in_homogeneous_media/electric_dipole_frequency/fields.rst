@@ -18,7 +18,7 @@ Here, we will show you how to use the widget and walk you through some research 
 
 
 
-**Simple instructions on how to open it and get it running**
+**Getting Started**
 
 Within the jupyter notebook, there are 3 tools:
 
@@ -83,7 +83,7 @@ Now slowly increase the frequency by factors of 10. When you reach 1000 Hz, noti
 
 **The Inductive Response:**
 
-According to `Faraday's law<faraday>`, the effects of EM induction increase as frequency increases. Set the conductivity to 0.1 S/m and choose a point (x,y,z) = (40m, 0m, 0m). Examine the x,y and z components of the electric and magnetic fields.
+According to :ref:`Faraday's law<faraday>`, the effects of EM induction increase as frequency increases. Set the conductivity to 0.1 S/m and choose a point (x,y,z) = (40m, 0m, 0m). Examine the x,y and z components of the electric and magnetic fields.
 
 	- At what frequency do the effects of EM induction become significant?
 	- Now increase the background conductivity to 1 S/m and examine the same location. At what frequency do the effects of EM induction become significant?
@@ -98,9 +98,9 @@ Set the log-conductivity to .
 	- Now try increasing the relative permittivity (:math:`\varepsilon_r`). When you do this at low frequencies, do you notice any significant changes in the shape and amplitude of the electric and magnetic fields? How about when you do this at high frequencies?
 
 
-**Hypothetical Scenario 1:**
+.. **Hypothetical Scenario 1:**
 
-*I put this here in case we wanted to make a hypthetical scenario where these equations could be used to solve a practical problem.*
+.. *I put this here in case we wanted to make a hypthetical scenario where these equations could be used to solve a practical problem.*
 
 
 

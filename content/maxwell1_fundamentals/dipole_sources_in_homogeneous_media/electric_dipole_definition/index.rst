@@ -42,11 +42,11 @@ However, a true electric dipole represents the polarization of electrical charge
 
 
 In order to develop a more detailed definition for the electrical current dipole, let us first consider the source current from a wire of finite length.
-Assume the wire has length :math:`\Delta s` and carries a current :math:`I` which flows in the :math:`\hat x` direction along the wire.
+Assume the wire has length :math:`\Delta s` and carries a current :math:`I` which flows in the :math:`\mathbf{\hat x}` direction along the wire.
 The source current density :math:`\mathbf{J_e^s}` for the wire segment is given by:
 
 .. math::
-	\mathbf{J_e^s} = \hat x I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
+	\mathbf{J_e^s} = \mathbf{\hat x} I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
 	:name: eq_Je_wire
 
 
@@ -74,7 +74,7 @@ The electrical current dipole accomplishes this by defining a source term which 
 
 
 The electrical current dipole source is defined by letting :math:`\Delta s \rightarrow ds` in the previous equation; making it a wire of infinitessimal length.
-As a result, the source current density for a harmonic electrical current dipole in the :math:`\hat x` direction is given by:
+As a result, the source current density for a harmonic electrical current dipole in the :math:`\mathbf{\hat x}` direction is given by:
 
 .. figure:: images/E_source_current_dipole.png
 		:align: right
@@ -85,7 +85,7 @@ As a result, the source current density for a harmonic electrical current dipole
 
 
 .. math::
-	\mathbf{J_e^s} = \hat x I ds \delta (x) \delta (y) \delta (z)
+	\mathbf{J_e^s} = \mathbf{\hat x} I ds \delta (x) \delta (y) \delta (z)
 	:name: eq_Je_xdip
 
 

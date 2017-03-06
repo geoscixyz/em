@@ -91,7 +91,7 @@ It is possible to solve this system to obtain analytic solutions for the transie
 However, we will apply a different approach which uses the inverse Laplace transform.
 
 
-**Contents**
+**Organization**
 
 In the following section, we solve Maxwell's equations for a transient magnetic dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
 Asymptotic expressions are then provided for several cases.

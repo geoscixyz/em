@@ -57,7 +57,7 @@ In matter, this leads to an induced current density which produces secondary mag
 
 .. _notebook: https://github.com/geoscixyz/em_apps/blob/master/notebooks/maxwell1_fundamentals/HarmonicDipoleWidget_MD.ipynb
 
-**Contents**
+**Organization**
 
 In the following section, we solve Maxwell's equations for a harmonic magnetic dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
 Asymptotic expressions are then provided for several cases.

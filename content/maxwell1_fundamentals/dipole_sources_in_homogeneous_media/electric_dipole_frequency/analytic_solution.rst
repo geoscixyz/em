@@ -58,47 +58,47 @@ The scalar Green's function for the Helmholtz equation is:
 and hence the vector potential for an arbitrary electric current source is:
 
 .. math::
-	\mathbf{A}(\mathbf{r}) = \int_v \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J_e^s}(\mathbf{r}') dv
+	\mathbf{A}(\mathbf{r}) = \int_{V^\prime} \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J_e^s}(\mathbf{r}') dV^\prime
 	:label: A_Potential
 
-where :math:`\mathbf{r}` is the observation location and :math:`\mathbf{r^\prime}` refers to locations within the source region.
-For an electric current dipole oriented in the :math:`\hat{x}` direction, the source term is given by:
+where :math:`\mathbf{r}` is the observation location, :math:`\mathbf{r^\prime}` refers to locations within the source region and :math:`V^\prime` is the volume of the source region.
+For an electric current dipole oriented in the :math:`\mathbf{\hat{x}}` direction, the source term is given by:
 
 .. math::
-	\mathbf{J_e^s} = \hat{x} I ds \delta(x) \delta(y) \delta(z)
+	\mathbf{J_e^s} = \mathbf{\hat{x}} I ds \delta(x) \delta(y) \delta(z)
 	:label: Je_x
 
 and the solution to Eq. :eq:`A_Potential` is:
 
 .. math::
-	\mathbf{A} = \frac{I ds}{4\pi r} e^{-ikr} \hat{x}
+	\mathbf{A} = \frac{I ds}{4\pi r} e^{-ikr} \mathbf{\hat{x}}
 	:label: A_Potential_for_Je_x
 
 
 Recall the :math:`\mathbf{A}` can be used to obtain the electric and magnetic field according to Eqs. :eq:`H_A_potential` and :eq:`E_A_potential`.
-Thus the electric field for an electrical current dipole in the :math:`\hat x` direction is:
+Thus the electric field for an electrical current dipole in the :math:`\mathbf{\hat x}` direction is:
 
 .. math::
-	\mathbf{E_e} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon)} \left[ \left( k^2 + \frac{\partial^2}{\partial x^2} \right) \hat{x} + \frac{\partial^2}{\partial x \partial y} \hat{y} + \frac{\partial^2}{\partial x \partial z} \hat{z} \right] \frac{e^{-ikr}}{r}
+	\mathbf{E_e} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon)} \left[ \left( k^2 + \frac{\partial^2}{\partial x^2} \right) \mathbf{\hat{x}} + \frac{\partial^2}{\partial x \partial y} \mathbf{\hat{y}} + \frac{\partial^2}{\partial x \partial z} \mathbf{\hat{z}} \right] \frac{e^{-ikr}}{r}
 
 which is equal to:
 
 .. math::
 	\begin{split}
-	\mathbf{E_e} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} e^{-ikr} \Bigg [ \Bigg ( \frac{x^2}{r^2} \hat{x} + & \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \Bigg ) ... \\
-	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 - ikr -1 \big ) \hat{x} \Bigg ] .
+	\mathbf{E_e} = \frac{I ds}{4 \pi (\sigma + i \omega \varepsilon) r^3} e^{-ikr} \Bigg [ \Bigg ( \frac{x^2}{r^2} \mathbf{\hat{x}} + & \frac{xy}{r^2} \mathbf{\hat{y}} + \frac{xz}{r^2} \mathbf{\hat{z}} \Bigg ) ... \\
+	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 - ikr -1 \big ) \mathbf{\hat{x}} \Bigg ] .
 	\end{split}
 	:label: E_Cartesian
 
 The magnetic field is:
 
 .. math::
-	\mathbf{H_e} = \frac{I ds}{4 \pi} \left[ \frac{\partial}{\partial z} \hat{y} - \frac{\partial}{\partial y} \hat{z} \right] \frac{e^{-ikr}}{r}
+	\mathbf{H_e} = \frac{I ds}{4 \pi} \left[ \frac{\partial}{\partial z} \mathbf{\hat{y}} - \frac{\partial}{\partial y} \mathbf{\hat{z}} \right] \frac{e^{-ikr}}{r}
 
 which is equal to:
 
 .. math::
-	\mathbf{H_e} = \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right) .
+	\mathbf{H_e} = \frac{I ds}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \mathbf{\hat{y}} + \frac{y}{r} \mathbf{\hat{z}} \right) .
 	:label: H_Cartesian
 
 

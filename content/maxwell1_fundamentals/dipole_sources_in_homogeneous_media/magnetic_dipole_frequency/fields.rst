@@ -18,7 +18,7 @@ Here, we will show you how to use the widget and walk you through some research 
 
 
 
-**Simple instructions on how to open it and get it running**
+**Getting Started**
 
 Within the jupyter notebook, there are 3 tools:
 
@@ -83,9 +83,9 @@ Set the log-conductivity to .
 	- Now try increasing the relative permittivity (:math:`\varepsilon_r`). When you do this at low frequencies, do you notice any significant changes in the shape and amplitude of the electric and magnetic fields? How about when you do this at high frequencies?
 
 
-**Hypothetical Scenario 1:**
+.. **Hypothetical Scenario 1:**
 
-*I put this here in case we wanted to make a hypthetical scenario where these equations could be used to solve a practical problem.*
+.. *I put this here in case we wanted to make a hypthetical scenario where these equations could be used to solve a practical problem.*
 
 
 

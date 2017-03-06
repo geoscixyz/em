@@ -57,9 +57,8 @@ where
 
 .. math::
 	\begin{split}
-	\mathbf{M (r)}\! =\! \mathbf{M} \Delta V & \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] ... \\ 
-	& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \! \Bigg [ \! \frac{u \big ( y \! +\!\frac{\Delta y}{2} \big ) \! - \! u \big ( y \! -\!\frac{\Delta y}{2} \big )}{\Delta y} \! \Bigg ] \! 
-	\! \Bigg [ \! \frac{u \big ( z \! +\!\frac{\Delta z}{2} \big ) \! - \! u \big ( z \! -\!\frac{\Delta z}{2} \big )}{\Delta z} \! \Bigg ]
+	\mathbf{M (r)}\!=\!\mathbf{M} \Delta V & \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] ... \\ 
+	& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \! \Bigg [ \! \frac{u \big ( y \! +\!\frac{\Delta y}{2} \big ) \! - \! u \big ( y \! -\!\frac{\Delta y}{2} \big )}{\Delta y} \! \Bigg ] \!\! \Bigg [ \! \frac{u \big ( z \! +\!\frac{\Delta z}{2} \big ) \! - \! u \big ( z \! -\!\frac{\Delta z}{2} \big )}{\Delta z} \! \Bigg ]
 	\end{split}
 	:name: M_def
 
@@ -68,7 +67,7 @@ and :math:`u(x)` is the unit step function.
 Recall that :math:`\mathbf{J_m^s}` defines a :ref:`magnetic current density <ampere_maxwell_differential_frequency>` and has units V/m :math:`\!^2`.
 Thus :math:`\mathbf{J_m^s}` can be used to replace the magnetic source term in Maxwell's equations for a uniformly magnetized block.
 
-In :numref:`BarMagnet_def`, we consider a uniformly magnetized volume where :math:`\mathbf{M} = M\hat y`.
+In :numref:`BarMagnet_def`, we consider a uniformly magnetized volume where :math:`\mathbf{M} = M\mathbf{\hat y}`.
 As we can see, the magnetization contained within the volume generates a primary magnetic field in the surrounding region.
 Notice how the field lines seem to begin at the north end of the magnetized volume and terminate at the south (:numref:`BarMagnet_def` left).
 However, when the volume is much smaller than the scale of observation (:math:`\Delta x, \Delta y, \Delta z \ll r`), then it appears as though the magnetic field lines converge at a single point; see :numref:`BarMagnet_def` (right).
@@ -137,11 +136,11 @@ The analytic solution for the Biot-Savart law in this case is rather complicated
 If the radius of the loop is much smaller than the scale of observation (:math:`a \ll r`), then the primary magnetic field due to the loop can be simplified to:
 
 .. math::
-	\mathbf{H(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r} (\pi a^2 I \hat n \cdot \mathbf{r)} }{r^5} - \frac{\mathbf{\pi a^2 I \hat n}}{r^3} \Bigg ]
+	\mathbf{H(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r} (\pi a^2 I \mathbf{\hat n} \cdot \mathbf{r)} }{r^5} - \frac{\mathbf{\pi a^2 I \mathbf{\hat n}}}{r^3} \Bigg ]
 	:name: dip_field_loop
 
 
-where :math:`\hat n` is the unit vector normal to the area within the loop.
+where :math:`\mathbf{\hat n}` is the unit vector normal to the area within the loop.
 The primary magnetic field for a small loop is shown in :numref:`CurrentLoop` (right).
 
 
@@ -164,7 +163,7 @@ Therefore, if we define the dipole moment of the loop as:
 	:name: dip_moment_loop
 
 
-where :math:`\mathbf{S} = \pi a^2 I \hat n`, then the primary magnetic field due to a small current loop is given by:
+where :math:`\mathbf{S} = \pi a^2 I \mathbf{\hat n}`, then the primary magnetic field due to a small current loop is given by:
 
 
 .. math::

@@ -64,7 +64,7 @@ However, the :ref:`Ampere-Maxwell equation<ampere_maxwell_differential_frequency
 In addition, the harmonic nature of the magnetic fields should produce secondary electric fields according to :ref:`Faraday's law<faraday_differential_frequency>`.
 
 
-**Contents**
+**Organization**
 
 In the following section, we solve Maxwell's equations for a harmonic electrical current dipole source and provide analytic expressions for the electric and magnetic fields within a homogeneous medium.
 Asymptotic expressions are then provided for several cases.

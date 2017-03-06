@@ -45,34 +45,34 @@ From Ward and Hohmann :cite:`ward1988`, the step-response can be obtained via th
 	:label: step_Laplace_transform
 
 where :math:`F(s)` is obtained by replacing :math:`s=i\omega` in the system's harmonic response function.
-For the electric field, magnetic field and vector potential arising from a harmonic electrical current dipole in the :math:`\hat x` direction, these have :ref:`already been derived<frequency_domain_electric_dipole_analytic_solution>`.
+For the electric field, magnetic field and vector potential arising from a harmonic electrical current dipole in the :math:`\mathbf{\hat x}` direction, these have :ref:`already been derived<frequency_domain_electric_dipole_analytic_solution>`.
 
 
 
 **Harmonic Solutions for an Electrical Current Dipole**
 
-As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_electric_dipole_analytic_solution>` for a source term :math:`\mathbf{J_e^s} = \hat x Ids \delta (x) \delta (y) \delta (z)`. 
+As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_electric_dipole_analytic_solution>` for a source term :math:`\mathbf{J_e^s} = \mathbf{\hat x} Ids \delta (x) \delta (y) \delta (z)`. 
 
 For the vector potential:
 
 
 .. math::
-	{\bf A} = \frac{Ids}{4\pi r}e^{-ikr} \hat x 
+	{\bf A} = \frac{Ids}{4\pi r}e^{-ikr} \mathbf{\hat x} 
 	:label: A_frequency_response
 
 
 For the electric field:
 
 .. math::
-	{\bf E_e}(i\omega ) = \frac{Ids}{4\pi (\sigma + i\omega \varepsilon )r^3} e^{-ikr} \Bigg [ \bigg ( \frac{x^2}{r^2}\hat x + & \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \Bigg ) \; ... \\
-	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 -ikr -1 \big ) \hat x \Bigg ] 
+	{\bf E_e}(i\omega ) = \frac{Ids}{4\pi (\sigma + i\omega \varepsilon )r^3} e^{-ikr} \Bigg [ \bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + & \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \; ... \\
+	&\big ( -k^2 r^2 + 3ikr +3 \big ) + \big ( k^2 r^2 -ikr -1 \big ) \mathbf{\hat x} \Bigg ] 
 	:label: E_frequency_response
 
 
 And for the magnetic field:
 
 .. math::
-	{\bf H_e}(i\omega ) = \frac{Ids}{4\pi r^2} (ikr +1) e^{-ikr} \Bigg ( - \frac{z}{r}\hat y + \frac{y}{r}\hat z  \Bigg )
+	{\bf H_e}(i\omega ) = \frac{Ids}{4\pi r^2} (ikr +1) e^{-ikr} \Bigg ( - \frac{z}{r}\mathbf{\hat y} + \frac{y}{r}\mathbf{\hat z}  \Bigg )
 	:label: H_frequency_response
 
 where the wavenumber :math:`k` is given by:
@@ -97,22 +97,22 @@ Substituting :math:`s = i\omega` into Eqs. :eq:`A_frequency_response`, :eq:`E_fr
 
 
 .. math::
-	\frac{{\bf A}(s)}{s} = \frac{Ids}{4 \pi r} \frac{e^{- \sqrt{s \mu\sigma r^2}}}{s} \hat x \; ,
+	\frac{{\bf A}(s)}{s} = \frac{Ids}{4 \pi r} \frac{e^{- \sqrt{s \mu\sigma r^2}}}{s} \mathbf{\hat x} \; ,
 	:label: A_frequency_response_s
 
 
 
 .. math::
 	\begin{split}
-	\frac{{\bf E_e}(s)}{s} = \frac{Ids}{4\pi \sigma r^3} e^{- \sqrt{s\mu\sigma r^2 } } \Bigg [ \bigg ( \frac{x^2}{r^2}\hat x + & \frac{xy}{r^2}\hat y + \frac{xz}{r^2} \hat z \bigg ) ... \\
-	\bigg ( & \mu\sigma r^2 + 3 \sqrt{\dfrac{\mu \sigma}{s} } r + \frac{3}{s} \bigg ) - \bigg ( \mu\sigma r^2 + \sqrt{\frac{\mu\sigma}{s}r} + \frac{1}{s} \bigg ) \hat x \Bigg ],
+	\frac{{\bf E_e}(s)}{s} = \frac{Ids}{4\pi \sigma r^3} e^{- \sqrt{s\mu\sigma r^2 } } \Bigg [ \bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + & \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \bigg ) ... \\
+	\bigg ( & \mu\sigma r^2 + 3 \sqrt{\dfrac{\mu \sigma}{s} } r + \frac{3}{s} \bigg ) - \bigg ( \mu\sigma r^2 + \sqrt{\frac{\mu\sigma}{s}r} + \frac{1}{s} \bigg ) \mathbf{\hat x} \Bigg ],
 	\end{split}
 	:label: E_frequency_response_s
 
 and
 
 .. math::
-	\frac{{\bf H_e}(s)}{s} = \frac{Ids}{4\pi r^2} e^{- \sqrt{s\mu\sigma r^2 } } \bigg ( \sqrt{\frac{\mu\sigma}{s}r} + \frac{1}{s} \bigg )  \bigg ( - \frac{z}{r}\hat y + \frac{y}{r}\hat z  \bigg ),
+	\frac{{\bf H_e}(s)}{s} = \frac{Ids}{4\pi r^2} e^{- \sqrt{s\mu\sigma r^2 } } \bigg ( \sqrt{\frac{\mu\sigma}{s}r} + \frac{1}{s} \bigg )  \bigg ( - \frac{z}{r}\mathbf{\hat y} + \frac{y}{r}\mathbf{\hat z}  \bigg ),
 	:label: H_frequency_response_s
 
 The inverse Laplace transform of the previous three expressions, and thus the step-response, can be derived by using the following identities (Abramowitz and Stegun, 1964):
@@ -134,21 +134,21 @@ Thus:
 
 
 .. math::
-	L^{-1} \Bigg [ \frac{{\bf A}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r} \textrm{erfc} (\theta r) \hat x \; ,
+	L^{-1} \Bigg [ \frac{{\bf A}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r} \textrm{erfc} (\theta r) \mathbf{\hat x} \; ,
 	:label: a_step_response
 
 
 .. math::
 	\begin{split}
-	L^{-1}\Bigg [ \frac{{\bf E_e}(s)}{s} \Bigg ] = \frac{Ids}{4\pi \sigma r^3} &\Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 +  \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} \; ... \\ 
-	&+ 3 \, \textrm{erfc}(\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \Bigg ) \hat x \Bigg ]
+	L^{-1}\Bigg [ \frac{{\bf E_e}(s)}{s} \Bigg ] = \frac{Ids}{4\pi \sigma r^3} &\Bigg [ \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 +  \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} \; ... \\ 
+	&+ 3 \, \textrm{erfc}(\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \Bigg ) \mathbf{\hat x} \Bigg ]
 	\end{split}
 	:label: e_step_response
 
 and
 
 .. math::
-	L^{-1}\Bigg [ \frac{{\bf H_e}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r^3} \bigg ( \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \bigg ) \big ( - z \, \hat y + y \, \hat z  \big )
+	L^{-1}\Bigg [ \frac{{\bf H_e}(s)}{s} \Bigg ] = \frac{Ids}{4 \pi r^3} \bigg ( \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2} + \textrm{erfc}(\theta r) \bigg ) \big ( - z \, \mathbf{\hat y} + y \, \mathbf{\hat z}  \big )
 	:label: h_step_response
 
 
@@ -164,7 +164,7 @@ For the vector potential, the transient response is given by:
 
 
 .. math::
-	{\bf a}(t) = \frac{Ids}{4 \pi r} \textrm{erf} (\theta r) \hat x
+	{\bf a}(t) = \frac{Ids}{4 \pi r} \textrm{erf} (\theta r) \mathbf{\hat x}
 	:label: a_transient
 	
 
@@ -173,8 +173,8 @@ For the electric field, the transient response is given by:
 
 .. math::
 	\begin{split}
-	{\bf e_e}(t) = \frac{Ids}{4\pi \sigma r^3} & \Bigg [ \Bigg ( \frac{x^2}{r^2}\hat x + \frac{xy}{r^2}\hat y + \frac{xz}{r^2}\hat z \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 \; ... \\
-	& + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \Bigg ) - \Bigg ( \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \hat x \Bigg ]
+	{\bf e_e}(t) = \frac{Ids}{4\pi \sigma r^3} & \Bigg [ \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 \; ... \\
+	& + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \Bigg ) - \Bigg ( \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \mathbf{\hat x} \Bigg ]
 	\end{split}
 	:label: e_transient
 
@@ -182,7 +182,7 @@ For the electric field, the transient response is given by:
 And for the magnetic field, the transient response is given by:
 
 .. math::
-	{\bf h_e}(t) = \frac{Ids}{4 \pi r^3} \bigg ( \textrm{erf}(\theta r) - \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2}  \bigg ) \big ( - z \, \hat y + y \, \hat z  \big )
+	{\bf h_e}(t) = \frac{Ids}{4 \pi r^3} \bigg ( \textrm{erf}(\theta r) - \frac{2}{\sqrt{\pi}} \theta r \, e^{-\theta^2 r^2}  \bigg ) \big ( - z \, \mathbf{\hat y} + y \, \mathbf{\hat z}  \big )
 	:label: h_transient
 
 
@@ -191,5 +191,5 @@ As a result, we are interested in the time-rate of decay of the magnetic field.
 By taking the derivative of Eq. :eq:`h_transient`, we obtain:
 
 .. math::
-	\frac{\partial{ \bf h_e}}{\partial t} = - \frac{2 \, \theta^5 Ids}{\pi^{3/2} \mu \sigma} e^{-\theta^2 r^2} \big ( - z \, \hat y + y \, \hat z  \big )
+	\frac{\partial{ \bf h_e}}{\partial t} = - \frac{2 \, \theta^5 Ids}{\pi^{3/2} \mu \sigma} e^{-\theta^2 r^2} \big ( - z \, \mathbf{\hat y} + y \, \mathbf{\hat z}  \big )
 	:label: dhdt_transient
