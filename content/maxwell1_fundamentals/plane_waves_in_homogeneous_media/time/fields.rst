@@ -3,7 +3,7 @@
 Fields
 ======
 
-.. topic:: Purpose
+.. purpose::
 
     Within the quasi-static approximation, we provide explicit expressions for both eletric and magnetic fields for plane EM wave equations with an impulse electric field, and understands different features of electric and magnetic fields propagation in time.
 

@@ -53,6 +53,8 @@ induce rotational electric fields. Furthermore, the curl of the induced
 electric fields opposes time-dependent changes in the inducing magnetic field.
 
 
+.. _faraday_differential_frequency:
+
 Faraday's Law in the Frequency-Domain
 -------------------------------------
 

@@ -3,7 +3,7 @@
 Plane Waves in Homogeneous Media
 ================================
 
-.. topic:: Purpose
+.. purpose::
 
     Plane wave solutions to Helmholtz’s equations exist when the medium is
     homogeneous. By exploring the plane wave solution in both frequency and

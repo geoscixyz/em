@@ -3,7 +3,7 @@
 Analytic Solution
 =================
 
-.. topic:: Purpose
+.. purpose::
 
     We provide solutions of Plane wave equations in time domain for the homogeneous medium with intial impulse electric fields. And from the solutions, we extract meaningful physical principles: peak time, peak distance, and peak velocity.
 

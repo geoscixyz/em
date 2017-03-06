@@ -3,7 +3,7 @@
 Time domain
 ===========
 
-.. topic:: Purpose
+.. purpose::
 
     By exploring the plane wave solution in time domain, we understand how EM fields propagte in time, and further understand relationship between frequency and time domain EM fields.
 

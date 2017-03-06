@@ -40,12 +40,12 @@ route to take and how to proceed.
     :maxdepth: 1
 
     formative_laws/index
+    quick_guide_maxwell
     time_domain_equations
     frequency_domain_equations
     plane_waves_in_homogeneous_media/index
     reflection_and_refraction/index
     dipole_sources_in_homogeneous_media/index
-    quick_guide_maxwell
     solving_maxwells_equations/index
     looking_for_more
 
