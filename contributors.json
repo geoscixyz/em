@@ -356,8 +356,8 @@
         "name":"Laurens Beran",
         "affiliation":"Black Tusk Geophysics",
         "location":"Vancouver, BC",
-        "email":"laurens.beran@btgeophysics.com"
-        "url":"http://www.btgeophysics.com"
+        "email":"laurens.beran@btgeophysics.com",
+        "url":"http://www.btgeophysics.com",
         "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png"
     }
 }
