@@ -51,19 +51,22 @@ Quasi-Static Regime
 In the quasi-stative regime, the diffusive term is much larger than the conservation, i.e.:
 
 .. math::
-    \sigma \frac{\partial \mathbf{e}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\; \textrm{or} \;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
+    \sigma \frac{\partial \mathbf{e}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
+    :name:
 
 In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the **heat equation**, with:
 
 .. math::
     \nabla^2 \mathbf{e} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
+    :name:
 
 and
 
 .. math::
-    \nabla^2 \mathbf{e} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
+    \nabla^2 \mathbf{h} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} = 0
+    :name:
 
-The rate of diffusion is controled by the product of :math:`\mu\sigma`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\sigma` varies over many orders of magnitude. As a result, the diffusive properties of electromagnetic signals are primarily dependent on the conductivity.
+The rate of diffusion is controlled by the product of :math:`\mu\sigma`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\sigma` varies over many orders of magnitude. As a result, the diffusive properties of electromagnetic signals are primarily dependent on the conductivity. The diffusive behaviour of EM signals is a very important aspect of time-domain electromagnetic (:ref:`TDEM<airborne_tdem_index>`) methods.
 
 
 Wave Regime
@@ -72,9 +75,9 @@ Wave Regime
 In the wave regime, the diffusive term is much smaller than the conservation term, i.e.:
 
 .. math::
-    \sigma \frac{\partial \mathbf{e}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\; \textrm{or} \;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
+    \sigma \frac{\partial \mathbf{e}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
 
-In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the **wave equation**, with:
+In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the classic **wave equation**, with:
 
 .. math::
     \nabla^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = 0
@@ -82,8 +85,8 @@ In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to
 and
 
 .. math::
-    \nabla^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = 0
+    \nabla^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} = 0
 
-
+In this case, energy is conserved and both :math:`\mathbf{e}` and :math:`\mathbf{h}` propagate as waves. The properties of the waves (wavelength, propagation velocity, etc...) depend on the product of :math:`\mu\epsilon`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\epsilon` varies over several orders of magnitude. As a result, the wave properties are primarily dependent on the dielectric permittivity. Wave properties are an important aspect of ground-penetrating radar (:ref:`GPR<gpr_index>`) surveys.
 
 
