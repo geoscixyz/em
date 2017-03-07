@@ -47,9 +47,9 @@ where the following :ref:`constitutive relationships<physical_properties_index>`
 
 .. math::
 	\begin{align}
-	\mathbf{j} &= \sigma \ast \mathbf{e}\\
-	\mathbf{b} &= \mu \ast \mathbf{h}\\
-	\mathbf{d} &= \varepsilon \ast \mathbf{e}
+	\mathbf{j} &= \sigma \mathbf{e}\\
+	\mathbf{b} &= \mu \mathbf{h}\\
+	\mathbf{d} &= \varepsilon \mathbf{e}
 	\end{align}
 
 .. _differential_equations_frequency:
@@ -97,9 +97,9 @@ where the following :ref:`constitutive relationships<physical_properties_index>`
 
 .. math::
 	\begin{align}
-	\mathbf{j} &= \sigma \ast \mathbf{e}\\
-	\mathbf{b} &= \mu \ast \mathbf{h}\\
-	\mathbf{d} &= \varepsilon \ast \mathbf{e}
+	\mathbf{j} &= \sigma \mathbf{e}\\
+	\mathbf{b} &= \mu \mathbf{h}\\
+	\mathbf{d} &= \varepsilon \mathbf{e}
 	\end{align}
 
 
