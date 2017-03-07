@@ -3,14 +3,9 @@
 Electromagnetic Wave Equation: Time-Domain
 ==========================================
 
-.. raw:: html
-    :file: ../../underconstruction.html
-
-
-
 .. purpose::
 
-    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct equations which depend only :math:`\mathbf{e}` or :math:`\mathbf{h}` within a homogeneous medium. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
+    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct equations which depend only on :math:`\mathbf{e}` or :math:`\mathbf{h}`. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
 
 Let us begin with the differential form of :ref:`Faraday's Law <faraday>` and the :ref:`Ampere-Maxwell's equation <ampere_maxwell>`, respectively:
 
@@ -43,12 +38,12 @@ The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`he
 The Lossy Wave Equation
 -----------------------
 
-Eqs. :eq:`hme7` and :eq:`hmh7` have identical form and are both characterized using the **lossy wave equation**. Thus, electromagnetic signals propagate as waves that are also subject to diffusion. The first term in each equation is called the Laplacian (:math:`\nabla^2`). The second term, which contains a first order time derivative, controls the diffusive behaviour of the electromagnetic signal. The third term, which contains a second order time derivative, represents an energy conservation term. The propagation velocity, attenuation and other behaviours of electromagnetic waves will be discussed :ref:`here<time_domain_plane_wave_sources_index>`.
+Eqs. :eq:`hme7` and :eq:`hmh7` have identical form and are both characterized using the **lossy wave equation**. Thus, electromagnetic signals propagate as waves that are also subject to diffusion. The first term in each equation is called the Laplacian (:math:`\nabla^2`). The second term, which contains a first order time derivative, controls the diffusive behaviour of the electromagnetic signal. The third term, which contains a second order time derivative, represents an energy conservation term. The propagation velocity, diffusion and other behaviours of electromagnetic waves are discussed when presenting materials on :ref:`plane waves in homogeneous media<time_domain_plane_wave_sources_index>`.
 
 Quasi-Static Regime
 -------------------
 
-In the quasi-stative regime, the diffusive term is much larger than the conservation, i.e.:
+In the quasi-static regime, the diffusive term is much larger than the conservation term, i.e.:
 
 .. math::
     \sigma \frac{\partial \mathbf{e}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
@@ -87,6 +82,6 @@ and
 .. math::
     \nabla^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} = 0
 
-In this case, energy is conserved and both :math:`\mathbf{e}` and :math:`\mathbf{h}` propagate as waves. The properties of the waves (wavelength, propagation velocity, etc...) depend on the product of :math:`\mu\epsilon`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\epsilon` varies over several orders of magnitude. As a result, the wave properties are primarily dependent on the dielectric permittivity. Wave properties are an important aspect of ground-penetrating radar (:ref:`GPR<gpr_index>`) surveys.
+Here, energy is conserved and both :math:`\mathbf{e}` and :math:`\mathbf{h}` propagate as waves. The properties of the waves (wavelength, propagation velocity, etc...) depend on the product of :math:`\mu\epsilon`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\epsilon` varies over several orders of magnitude. As a result, the wave properties are primarily dependent on the dielectric permittivity. Wave properties are an important aspect of ground-penetrating radar (:ref:`GPR<gpr_index>`) surveys.
 
 
