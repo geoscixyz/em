@@ -27,7 +27,7 @@ Electromagnetic physical properties are defined using a set of constitutive rela
 By taking the inverse Fourier transform, the corresponding time domain relationships are given by:
 
 - :math:`\mathbf{j}(t)= \sigma \mathbf{e}(t)`  (Ohm's Law)
-- :math:`\mathbf{b}(t)= \mu \mathbf{g}(t)`
+- :math:`\mathbf{b}(t)= \mu \mathbf{h}(t)`
 - :math:`\mathbf{d}(t)= \varepsilon \mathbf{e}(t)`
 
 **Dispersion**
