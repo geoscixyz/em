@@ -5,7 +5,7 @@ Electromagnetic Wave Equation: Frequency Domain
 
 .. purpose::
 
-    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct equations which depend only on :math:`\mathbf{E}` or :math:`\mathbf{H}`. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting differential equations in frequency are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
+    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct vector Helmholtz equations for both :math:`\mathbf{E}` and :math:`\mathbf{H}`, respectively. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting differential equations in frequency are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
 
 To obtain the frequency-domain wave equations, we use the Fourier transform with
 an :math:`e^{i\omega t}` time dependence. The derivative of :math:`e^{i\omega

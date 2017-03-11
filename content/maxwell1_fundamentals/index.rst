@@ -18,7 +18,7 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
 
     - :ref:`Formative Laws<formative_laws_index>`: The formative laws of electromagnetics characterize the physical processes which occur when electromagnetic signals interact with matter. As a result, they are of fundamental importance when considering applied problems in electromagnetic geoscience. Here, formal definitions are provided for each formative law along with an appropriate mathematical description.
 
-    - :ref:`Maxwell's Equations<quick_guide_maxwell>`: Maxwell's equations are a concise way of characterizing all of the physics pertaining to electromagnetic theory. Here, four common ways of representing Maxwell's equations are shown. This page is designed to be a quick access to Maxwell's equations with proper units and notation.
+    - :ref:`Maxwell's Equations in Various Forms<quick_guide_maxwell>`: Maxwell's equations are a concise way of characterizing all of the physics pertaining to electromagnetic theory. Here, four common ways of representing Maxwell's equations are shown. This page is designed to be a quick access to Maxwell's equations with proper units and notation.
 
     - :ref:`Electromagnetic Wave Equation (Time Domain)<time_domain_equations>`: Here, we show that within a homogeneous media, time-dependent electromagnetic signals behave according to the diffusive wave equation. Diffusive and wave behaviours are very important when considering time-domain electromagnetic methods.
 

@@ -13,6 +13,8 @@ Dipole Sources in Homogeneous Media
     	- Asymptotic expressions are provided for several cases.
     	- Numerical modeling tools are made available for investigating the dependency of the electric and magnetic fields on various parameters.
 
+**Introduction**
+
 Dipole sources are fundamental electromagnetic sources which exist at a single point in space.
 Although true dipole sources do not exist in nature, they do very well at approximating the electromagnetic sources used for many geophysical applications.
 In geophysics, there are two types of dipole sources: electrical current dipole sources and magnetic dipole sources.

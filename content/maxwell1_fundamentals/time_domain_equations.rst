@@ -5,7 +5,7 @@ Electromagnetic Wave Equation: Time-Domain
 
 .. purpose::
 
-    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct equations which depend only on :math:`\mathbf{e}` or :math:`\mathbf{h}`. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
+    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct lossy wave equations for both :math:`\mathbf{e}` and :math:`\mathbf{h}`, respectively. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
 
 Let us begin with the differential form of :ref:`Faraday's Law <faraday>` and the :ref:`Ampere-Maxwell's equation <ampere_maxwell>`, respectively:
 

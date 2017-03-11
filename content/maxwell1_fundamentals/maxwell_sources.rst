@@ -5,14 +5,14 @@ Maxwell's Equations with Electromagnetic Sources
 
 .. purpose::
 	
-	Here we show how Maxwell's equations are altered in the presence of electromagnetic sources. The two principle types of electromagnetic sources are discussed.
+	Here, we show how Maxwell's equations are altered in the presence of electromagnetic sources. The two principle types of electromagnetic sources are discussed.
 
 In many cases, the fields and fluxes within a region result from the presence of an electromagnetic source. Because Maxwell's equations fully characterize all electromagnetic interactions, they must also accommodate the existence of electromagnetic sources. There are two principle types of electromagnetic sources: electrical sources (:math:`\mathbf{j_e^s}`) and magnetic sources (:math:`\mathbf{j_m^s}`).
 
 Electrical Sources
 ------------------
 
-In Maxwell's equations, electrical sources are represented using a current density (:math:`\mathbf{j_e^s}`). Thus they have units [A/m :math:`\! ^2`]. Electrical sources may corresponding to an :ref:`electrical current dipole<definition_electric_dipole_index>` or a current-carrying loop of wire. 
+In Maxwell's equations, electrical sources are represented using a current density (:math:`\mathbf{j_e^s}`). Thus they have units [A/m :math:`\! ^2`]. Electrical sources may correspond to an :ref:`electrical current dipole<definition_electric_dipole_index>` or a current-carrying loop of wire. 
 
 According to the :ref:`Ampere-Maxwell<ampere_maxwell>` equation, electrical currents are responsible for generating magnetic fluxes. By accounting for the electrical source term, the Ampere-Maxwell equation becomes:
 
@@ -74,9 +74,9 @@ where the following :ref:`constitutive relationships<physical_properties_index>`
 
 .. math::
 	\begin{align}
-	\mathbf{j} &= \sigma \ast \mathbf{e}\\
-	\mathbf{b} &= \mu \ast \mathbf{h}\\
-	\mathbf{d} &= \varepsilon \ast \mathbf{e}
+	\mathbf{j} &= \sigma \mathbf{e}\\
+	\mathbf{b} &= \mu \mathbf{h}\\
+	\mathbf{d} &= \varepsilon \mathbf{e}
 	\end{align}
 
 If we consider a **homogeneous medium** and combined the Maxwell-Ampere equation and Faraday's law to obtain the wave equation, we see that for an **electrical source**:

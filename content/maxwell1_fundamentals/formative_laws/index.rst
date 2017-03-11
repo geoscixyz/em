@@ -7,6 +7,8 @@ Formative Laws
 
     Here, the formative laws which govern electromagnetics are presented. Formal definitions are provided along with appropriate mathematical descriptions.
 
+**Introduction**
+
 The formative laws of electromagnetics characterize the physical processes which occur when electromagnetic signals interact with matter. As a result, they are of fundamental importance when considering applied problems in electromagnetic geoscience. Whereas the :ref:`constitutive relationships<physical_properties_index>` are used to relate fields to their corresponding fluxes, the set of formative laws can be used to relate fields and fluxes to one another through conservation laws or through the description of physical interactions. The first four laws presented here make up Maxwell's equations; a concise mathematical representation of the fundamental laws of electromagnetics. Here, a formal definition is provided for each formative law. The physics governing each formative law is then described both qualitatively and mathematically.
 
 **Contents:**
