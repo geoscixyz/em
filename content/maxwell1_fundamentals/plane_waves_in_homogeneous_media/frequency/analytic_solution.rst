@@ -1,12 +1,19 @@
 .. _frequency_domain_plane_wave_sources_analytic_solution:
 
-Analytic Solution
-=================
+Analytic Solution (Frequency Domain)
+====================================
 
 .. purpose::
 
     We provide solutions of Plane wave equations in frquency domain for the homogeneous medium. And from the solutions, we extract meaningful physical principles: wavenumber, skin depth, phase velocity, and wave legnth of EM waves.
 
+
+.. figure:: ../images/planewavedown.png
+   :align: right
+   :figwidth: 50%
+   :name: planewavedown_frequency
+
+   Geometry of an EM plane wave propagating downwards.
 
 :ref:`Maxwell's equations in the frequency domain <frequency_domain_equations>`, without source terms, are:
 

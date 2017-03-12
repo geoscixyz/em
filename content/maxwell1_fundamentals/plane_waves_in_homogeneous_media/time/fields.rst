@@ -1,7 +1,7 @@
 .. _time_domain_plane_wave_sources_fields:
 
-Fields
-======
+Fields (Time Domain)
+====================
 
 .. purpose::
 

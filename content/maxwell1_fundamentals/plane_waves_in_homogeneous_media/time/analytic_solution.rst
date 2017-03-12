@@ -1,12 +1,18 @@
 .. _time_domain_plane_wave_sources_analytic_solution:
 
-Analytic Solution
-=================
+Analytic Solution (Time Domain)
+===============================
 
 .. purpose::
 
     We provide solutions of Plane wave equations in time domain for the homogeneous medium with intial impulse electric fields. And from the solutions, we extract meaningful physical principles: peak time, peak distance, and peak velocity.
 
+.. figure:: ../images/planewavedown.png
+   :align: right
+   :figwidth: 50%
+   :name: planewavedown_time
+
+   Geometry of an EM plane wave propagating downwards.
 
 :ref:`Maxwell's equations in the time domain <time_domain_equations>`, without source terms, are:
 

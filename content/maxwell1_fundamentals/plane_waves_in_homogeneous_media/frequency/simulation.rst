@@ -1,8 +1,8 @@
 .. _frequency_domain_plane_wave_sources_simulation:
 
 
-Simulation
-==========
+Simulation (Frequency Domain)
+=============================
 
 Consider a situation where infinite current sheet at :math:`z` =0 m, and plane EM wave propagating downward (negative :math:`z` direction) due to this. Only :math:`E_x` and :math:`H_y` are existing for this setup. For the frequency domain case, the sheet current can be considered alternating in time (e.g. :math:`I_x=I_0cos(\omega t)`).
 
