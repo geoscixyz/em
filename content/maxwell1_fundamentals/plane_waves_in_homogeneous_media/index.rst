@@ -40,8 +40,8 @@ Here, we present the most basic setup for learning about plane waves. Consider a
 
 In the frequency domain, we will consider a current sheet whose current behaves according to :math:`I_x = I_0 \, \textrm{cos}(\omega t)`. In the time domain, we will consider a current sheet which carries an impulse current :math:`I_x = I_0 \delta(t)`, where :math:`\delta(t)` is the delta Dirac function.
 
-Solving Maxwell's Equations for Plane Waves
--------------------------------------------
+Solving for a Down-Going Plane Wave
+-----------------------------------
 
 To obtain analytic solutions for the above setup, we begin by solving the Helmholtz equations in the frequency domain. Time domain solutions are obtained by taking the inverse Fourier or inverse Laplace transform.
 
@@ -62,12 +62,12 @@ where :math:`k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}` is the comp
 Let us consider solving the Helmholtz equations where :math:`\mathbf{E}(z=0) = \mathbf{E}_0`. In this case, the solution for the electric field is given by:
 
 .. math::
-    \mathbf{E} = \mathbf{E}_0 e^{ikz}
+    \mathbf{E} = \mathbf{E}_0 e^{i(kz -\omega t)}
 
 Using Faraday's Law, the corresponding magnetic field is given by:
 
 .. math::
-    \mathbf{H} = -\frac{1}{i \omega \mu} \nabla \times \big ( \mathbf{E}_0 e^{ikz} \big )
+    \mathbf{H} = -\frac{1}{i \omega \mu} \nabla \times \big ( \mathbf{E}_0 e^{i(kz-\omega t)} \big )
 
 Note that the previous expression is in fact a solution to :eq:`fd_helmholtz_h`.
 
@@ -89,12 +89,12 @@ with the initial condition:
 If boundary condition 2) is used in to solve Eq. :eq:`fd_helmholtz_h`, then the magnetic field has a solution:
 
 .. math::
-    \mathbf{H} = \mathbf{H}_0 e^{ikz}.
+    \mathbf{H} = \mathbf{H}_0 e^{i(kz - \omega t)}
 
 Using the Ampere-Maxwell equation, the corresponding electric field is given by:
 
 .. math::
-    \mathbf{E} = \frac{1}{\sigma + i\omega\epsilon} \nabla \times \big ( \mathbf{H_0}e^{ikz} \big )
+    \mathbf{E} = \frac{1}{\sigma + i\omega\epsilon} \nabla \times \big ( \mathbf{H_0}e^{i(kz - \omega t)} \big )
 
 Note that the previous expression is in fact a solution to :eq:`fd_helmholtz_e`.
 
@@ -110,6 +110,9 @@ with the initial condition:
     \mathbf{h}(t=0)=\delta(t)\mathbf{H}_0, \ \text{when} \ z=0,
 
     \mathbf{h}(t=0)=0, \ \text{when} \ z\neq 0.
+
+.. note::
+    Although solutions to the Helmholtz equation contain terms of the form :math:`e^{-i\omega t}`, these terms are often suppressed for more concise notation.
 
 **To Summarize:**
 
