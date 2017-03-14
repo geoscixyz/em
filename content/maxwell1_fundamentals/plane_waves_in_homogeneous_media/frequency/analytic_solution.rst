@@ -5,7 +5,7 @@ Analytic Solution (Frequency Domain)
 
 .. purpose::
 
-    Here, we provide analytic solutions for the Helmholtz equation with a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: wavenumber, skin depth, phase velocity, and wavelength.
+    Here, we provide analytic solutions for the Helmholtz equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: wavenumber, skin depth, phase velocity, and wavelength.
 
 
 .. figure:: ../images/planewavedown.png
@@ -117,8 +117,8 @@ Fundamental physics
 
 EM wave propagation can be described using the following parameters: wavenumber, skin depth, phase velocity, and wave length. These properties are discussed below. In addition, two important regimes exist for EM wave propagation. These regimes depend on the relative magnitudes of :math:`\epsilon \omega` and :math:`\sigma`, where:
 
-- :math:`\epsilon \omega \ll \sigma` : "Quasi-static" approximation
-- :math:`\epsilon \omega \gg \sigma` : "Wave" approximation
+- :math:`\epsilon \omega \ll \sigma` : "Quasi-static" regime
+- :math:`\epsilon \omega \gg \sigma` : "Wave" regime
 
 These two regimes are fundamental bases of geophysical applications using EM. EM induction, and GPR are correspondingly based upon "Quasi-static", and "Wave" approximation. In each regime, EM wave propagtaion shows distinctively different physical behavior. Thus, by working through imporant concepts on EM wave propagation: wave number, skin depth, phase velocity, and wave length, we understand different features of the EM wave propagation in each regime.
 
@@ -268,7 +268,7 @@ In the wave regime ( :math:`\epsilon \omega \gg \sigma` ), the phase velocity si
 .. math:: v_{phase} = \frac{1}{\sqrt{\mu \epsilon}}
         :name: wn3
 
-Thus at sufficiently high frequencies, waves at all frequencies propagate as the same speed. In free space, the previous equations simplifies to :math:`1/ \, \sqrt{\mu_0\epsilon_0} = 3\times 10^8` m/s, which is the speed of light.
+Thus at sufficiently high frequencies, waves at all frequencies propagate as the same speed. In free space, the previous equations simplifies to :math:`1/ \! \sqrt{\mu_0\epsilon_0} = 3\times 10^8` m/s, which is the speed of light.
 
 .. _frequency_domain_plane_wave_sources_wavelength:
 

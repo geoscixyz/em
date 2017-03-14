@@ -5,7 +5,7 @@ Analytic Solution (Time Domain)
 
 .. purpose::
 
-    We provide solutions of Plane wave equations in time domain for the homogeneous medium with intial impulse electric fields. And from the solutions, we extract meaningful physical principles: peak time, peak distance, and peak velocity.
+    Here, we provide analytic solutions for the lossy wave equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: peak time, peak distance and peak velocity.
 
 .. figure:: ../images/planewavedown.png
    :align: right
@@ -14,87 +14,91 @@ Analytic Solution (Time Domain)
 
    Geometry of an EM plane wave propagating downwards.
 
-:ref:`Maxwell's equations in the time domain <time_domain_equations>`, without source terms, are:
+To characterize EM waves within a homogeneous medium, let us begin with the following vector wave equations for :math:`\mathbf{e}` and :math:`\mathbf{h}`:
 
-.. math:: \boldsymbol{\nabla}^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t}    = 0
+.. math:: 
+    \boldsymbol{\nabla}^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} &= 0\\
+    \boldsymbol{\nabla}^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} &= 0
+    :name: Wave_full_analytic
 
-Initial condition at :math:`t=0` should be defined, hence we let impulse electric field at this time:
-
-- :math:`\mathbf{e}(t=0)=\mathbf{e}_0\delta(t)`
-
-where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Solution of above systems can be obtained by applying inverse Fourier transfrom to the frequency domain solutions for downward propagating plane wave:
-
-.. math:: \mathbf{E} =  \mathbf{E}_0^- e^{ikz}.
-
-
-Time domain solution with impulse excitation can be written as
-
-.. math:: \mathbf{e}(t) = \mathcal{F}^{-1}[\mathbf{E}(\omega)],
-
-where :math:`\mathcal{F}[\cdot]` stands for Fourier transform.
-
-.. .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t}    = 0
-
-.. - :math:`\mathbf{h}(t=0)=\mathbf{h}_0\delta(t)`
-
-.. .. math:: \mathbf{H} =  \mathbf{h}_0^- e^{ikz}.
-
-.. .. math:: \mathbf{h}(t) = \mathcal{F}^{-1}[\mathbf{H}(\omega)],
-
-Modified from :cite:`ward1988`, time domain solution can be written as
+For simplicity, let us assume that the electric and magnetic fields lie in the xy-plane and that the wave propagates perpendicular to that plane (in the z-direction); see :numref:`planewavedown_time`. With this geometry, the governing equation for the electric field simplifies to:
 
 .. math::
-    \mathbf{e}(t) = \mathbf{e}_0^- \Bigg( e^{a(z/c)} \delta(t+\frac{z}{c})
-    -\frac{a\frac{z}{c}e^{-at}}{(t^2-\frac{z^2}{c^2})^{1/2}}
-    I_1\Big[a(t^2-\frac{z^2}{c^2})^{1/2}\Big] u(t+\frac{z}{c}) \Bigg),
+    \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
+
+In order to provide initial conditions for the PDE, let the electric field be caused an impulse such that:
+
+.. math::
+  \mathbf{e}(t=0)=\mathbf{e}_0\delta(t)
+  :name: e_impulse
+
+where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of solving the time-depend PDE directly, we will apply the inverse Fourier transform to analytic solutions derived in the :ref:`frequency domain<frequency_domain_plane_wave_sources_analytic_solution>`:
+
+.. math::
+    \mathbf{E} =  \mathbf{E}_0^- e^{ikz} + \mathbf{E}_0^+ e^{-ikz}
+    :name: e_frequency_analytic
+
+where the :math:`e^{-i\omega t}` term is being supressed. The time domain solution for an impulse excitation can be expressed as:
+
+.. math:: \mathbf{e}(t) = \mathcal{F}^{-1}[\mathbf{E}(\omega)]
+
+where :math:`\mathcal{F}[\cdot]` is the Fourier transform. Modified from :cite:`ward1988`, the corresponding time domain solution for the wave equation is:
+
+.. math::
+    \mathbf{e}(t) =& \mathbf{e}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg ) \\
+    &+ \mathbf{e}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
+    :name: e_wave_analytic_sol
 
 where
 
-- :math:`a=\frac{\sigma}{2\epsilon}`
+- :math:`u(t)` is the heaviside step function
 
-- :math:`c=\frac{1}{\sqrt{\mu\epsilon}}`: velocity of the EM wave in vacuum space
+- :math:`I_1(x)` is the modified Bessel function of the first kind
 
-- :math:`u(t)`: Heaviside step function
+- :math:`a=\dfrac{\sigma}{2\epsilon}`
 
-The first and second term indicates wave and diffusion term, respectively.
-Note that the sign of :math:`z` is negative, hence even the wave term decays exponentially (:math:`\sim e^{a(z/c)}`).
+- :math:`c=\dfrac{1}{\sqrt{\mu\epsilon}}`
 
-.. Similarly, solution of the magnetic field can be
+Constants :math:`a` and :math:`c` control both the oscillation and diffusion of the plane wave. Note that the sign of :math:`z` is negative, hence the electric field decays according to :math:`e^{a(z/c)}`.
 
-.. .. math::
-..     \mathbf{h}(t) = \mathbf{h}_0^- \Bigg( e^{a(z/c)} \delta(t+\frac{z}{c})
-..     -\frac{a\frac{z}{c}e^{-at}}{(t^2-\frac{z^2}{c^2})^{1/2}}
-..     I_1\Big[a(t^2-\frac{z^2}{c^2})^{1/2}\Big] u(t+\frac{z}{c}) \Bigg),
-..     :label: e_impulse_full
+By the same approach, the solution for the down-going magnetic field is given by:
 
-.. which is exactly same with an assumption that both :math:`\mathbf{e}_0^-` and :math:`\mathbf{h}_0^-` are given. Considering they are exactly same, we only limit our attention to electric field from now.
+.. math::
+    \mathbf{h}(t) =& \mathbf{h}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg )\\
+    &+ \mathbf{h}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
+    :name: h_wave_analytic_sol
+
+Note that Eq. :eq:`e_wave_analytic_sol` and Eq. :eq:`h_wave_analytic_sol` have the exact same form.
+
+.. note::
+
+    Eq. :eq:`e_wave_analytic_sol` is still a general solution, as only initial conditions have been applied. To determine :math:`\mathbf{e}_0^-` and :math:`\mathbf{e}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{e}_0 \delta (t)`. From this solution, :math:`\mathbf{h}(t)` can be determined using Faraday's law. You could also envoke boundary conditions to solve for :math:`\mathbf{h}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{e}`.
 
 .. _time_domain_plane_wave_sources_fundamental_physics:
 
 Fundamental physics
 -------------------
 
-Since we are inverse Fourier transforming frequency domain solution to time domain, similar to the frequency domain case, both wave and quasi-static approximation can be made:
+EM wave propagation in the time domain can be described using the following parameters: peak time, peak distance and peak velocity. These properties are discussed below by considering the electric field of a downward propagating EM wave. Recall that there are two important regimes for EM wave propagation:
 
-- :math:`\epsilon \omega \gg \sigma` : "Wave" approximation
-- :math:`\epsilon \omega \ll \sigma` : "Quasi-static" approximation
+- :math:`\epsilon \omega \ll \sigma` : "Quasi-static" regime
+- :math:`\epsilon \omega \gg \sigma` : "Wave" regime
 
-In the wave regime, solution of the electric field can be reduced to
+In both cases, we will show how parameters describing wave propagation are simplified.
 
-.. math::
-    \mathbf{e}(t) = \mathbf{e}_0^- \delta(t+\frac{z}{c}),
+**Quasi-Static Solution:**
 
-Therefore the electric field propagate with the speed of light, :math:`c`; this does not decay with :math:`z`.
-
-In the quasi-static regime, solution of the electric field can be simplified to
+In the quasi-static regime, the solution for the electric field can be simplified to:
 
 .. math::
-    \mathbf{e}(t) = -\frac{(\mu\sigma)^{1/2}z}{2 \pi^{1/2}t^{3/2}} e^{-\mu\sigma z^2 / (4t)}.
+    \mathbf{e}(t) = -\frac{(\mu\sigma)^{1/2}z}{2 \pi^{1/2}t^{3/2}} e^{-\mu\sigma z^2 / (4t)}
     :label: e_impulse_quasistatic
 
-This is a simplified form of the diffusion term shown in Eq. :eq:`e_impulse_full`, which was only defined after :math:`t=-\frac{z}{c}`. :numref:`Ward1988Fig1_2` a and b show electric field as a function of time and depth, respectively. Both peak time and peak depth can be recognized in this figure.
-
-From the approximate form show in Eq. :eq:`e_impulse_quasistatic`, we derive peak time, depth, and velocity describing trasient plane EM wave propagation.
+The electric field as a function of time and depth is shown in :numref:`Ward1988Fig1_2` (a) and (b), respectively. Both peak time and peak depth can be recognized intuitively in this figure. Below, we derive peak time, depth and velocity in the quasi-static case from Eq. :eq:`e_impulse_quasistatic`.
 
 .. figure:: ../images/Ward1988Fig1_2.png
    :align: center
@@ -102,6 +106,15 @@ From the approximate form show in Eq. :eq:`e_impulse_quasistatic`, we derive pea
    :name: Ward1988Fig1_2
 
    Electric field as a function of time 100 m from a 1D impulse in the field in a 0.01 S/m whole space (a). Electric field at t = 0.03 ms as a function of distance (Modifed from :cite:`ward1988`) (b).
+
+**Wave Regime Solution:**
+
+In the wave regime, the solution for the electric field can be reduced to:
+
+.. math::
+    \mathbf{e}(t) = \mathbf{e}_0^- \delta \bigg ( t+\frac{z}{c} \bigg )
+
+In this case, the wave propagates with velocity :math:`c = 1/\!\sqrt{\mu\epsilon}` and does not diffuse at it propagates.
 
 .. _time_domain_planewave_sources_peaktime:
 
