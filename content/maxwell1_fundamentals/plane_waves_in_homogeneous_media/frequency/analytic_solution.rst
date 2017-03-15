@@ -37,19 +37,19 @@ For simplicity, let us assume that the electric and magnetic fields lie in the x
 where :math:`\mathbf{E} \equiv \mathbf{E}(z,\omega)`; thus it does not depend on :math:`x` or :math:`y`. The previous equation has a general solution of the form:
 
 .. math::
-    \mathbf{E} = \mathbf{E}_0^- \, e^{-i(kz+\omega t)} + \mathbf{E}_0^+ \, e^{i(kz - \omega t)}
+    \mathbf{E} = \mathbf{E}_0^- \, e^{i(kz-\omega t)} + \mathbf{E}_0^+ \, e^{-i(kz + \omega t)}
     :name: Helmholtz_1D_solution
 
 where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the amplitudes of down-going and up-going waves, respectively. The :math:`e^{-i\omega t}` in both terms controls the temporal phase. The complex wavenumber has both real and imaginary components, thus it is commonly expressed as:
 
 .. math::
-    k = \alpha + i\beta
+    k = \alpha - i\beta
     :name: wavenumber_split
 
 where :math:`\alpha` and :math:`\beta` depend on the frequency and physical properties of the media. Substituting Eq. :eq:`wavenumber_split` into Eq. :eq:`Helmholtz_1D_solution`, the solution to our wave equation for :math:`\mathbf{E}` becomes:
 
 .. math::
-    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z} e^{- i(\alpha z +\omega t)} + \mathbf{E}_0^+ \, e^{-\beta z} e^{i (\alpha z - \omega t)} 
+    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z} e^{i(\alpha z -\omega t)} + \mathbf{E}_0^+ \, e^{-\beta z} e^{-i (\alpha z + \omega t)} 
     :name: Helmholtz_1D_components
 
 For both the down-going and up-going waves, there are two important behaviours within the solution. The first term, which contains :math:`e^{\pm i \alpha z}`, controls the oscillatory behaviour of each wave. The second term, which contains :math:`e^{\pm \beta z}`, controls the decay behaviour of each wave. Notice that as :math:`z \rightarrow -\infty` for the down-going wave, its amplitude goes to zero. The same behaviour occurs for the up-going wave as :math:`z \rightarrow \infty`.
@@ -57,13 +57,13 @@ For both the down-going and up-going waves, there are two important behaviours w
 Using the same approach, the magnetic field has a general solution of the form:
 
 .. math::
-    \mathbf{H} &= \mathbf{H}_0^- \, e^{-i(kz+\omega t)} + \mathbf{H}_0^+ \, e^{i(kz-\omega t)}\\
-    &= \mathbf{H}_0^- \, e^{\beta z} e^{- i(\alpha z+\omega t)} + \mathbf{H}_0^+ \, e^{-\beta z} e^{i (\alpha z-\omega t)}
+    \mathbf{H} &= \mathbf{H}_0^- \, e^{i(kz-\omega t)} + \mathbf{H}_0^+ \, e^{-i(kz+\omega t)}\\
+    &= \mathbf{H}_0^- \, e^{\beta z} e^{i(\alpha z-\omega t)} + \mathbf{H}_0^+ \, e^{-\beta z} e^{-i (\alpha z+\omega t)}
     :name: Helmholtz_1D_h
 
 .. note::
 
-    Eq. :eq:`Helmholtz_1D_components` is still a general solution. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{E}(z \rightarrow -\infty,\omega) = 0` and :math:`\mathbf{E}(z =0,\omega) = \mathbf{E}_0`. This would give you a solution :math:`\mathbf{E}(z,\omega) = \mathbf{E}_0 \, e^{\beta z} e^{- i(\alpha z+\omega t)}` (i.e. just the down-going wave). From this solution, :math:`\mathbf{H}(z,\omega)` can be determined using Faraday's law. You could also envoke boundary conditions to solve for :math:`\mathbf{H}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{E}`.
+    Eq. :eq:`Helmholtz_1D_components` is still a general solution. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{E}(z \rightarrow -\infty,\omega) = 0` and :math:`\mathbf{E}(z =0,\omega) = \mathbf{E}_0`. This would give you a solution :math:`\mathbf{E}(z,\omega) = \mathbf{E}_0 \, e^{\beta z} e^{ i(\alpha z-\omega t)}` (i.e. just the down-going wave). From this solution, :math:`\mathbf{H}(z,\omega)` can be determined using Faraday's law. You could also envoke boundary conditions to solve for :math:`\mathbf{H}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{E}`.
 
 
 
@@ -133,18 +133,18 @@ The wavenumber characterizes all properties of electromagnetic waves described b
 
 and that it may be decomposed into real and imaginary components such that:
 
-.. math:: k = \alpha + i \beta
+.. math:: k = \alpha - i \beta
 
 According to :cite:`stratton1941,ward1988`, :math:`\alpha` and :math:`\beta` depend on the frequency and the physics properties of the media, where:
 
-.. math:: \alpha = \omega \left ( \frac{\mu \epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right )^{1/2} + 1 \right ] \right )^{1/2}
+.. math:: \alpha = \omega \left ( \frac{\mu \epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right )^{1/2} + 1 \right ] \right )^{1/2} \geq 0
 
-.. math:: \beta = \omega \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2}
+.. math:: \beta = \omega \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2} \geq 0
 
 Let us now examine a wave travelling in the negative z-direction with the following form:
 
 .. math::
-    \mathbf{E} = \mathbf{E}_0^- e^{-i(\alpha z+\omega t)}e^{\beta z}
+    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z}e^{i(\alpha z-\omega t)}
     :name: E_downgoing
 
 As we already discussed during our derivation, :math:`\beta` controls the rate of decay with respect to :math:`z`. And :math:`\alpha` controls the oscillatory behaviour.
@@ -182,8 +182,8 @@ For a perfect wave equation, :math:`\beta = 0` and the waves do not decay in amp
 
 .. _frequency_domain_plane_wave_sources_skindepth:
 
-Skin Depth
-^^^^^^^^^^
+Attenuation and Skin Depth
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../images/skindepth.png
         :figwidth: 50%
@@ -192,7 +192,7 @@ Skin Depth
 
         Skindepth is defined as the depth at which the amplitude of the wave has been reduced by :math:`1/e`.
 
-The skin depth :math:`\delta` defines the distance a wave must travel before its amplitude has decayed by a factor of :math:`1/e`. This is illustrated in :numref:`sd`. As it turns out, the skin depth is the reciprocal of the decay constant :math:`\beta`. Thus:
+**Attenuation** defines the rate of amplitude loss an EM wave experiences at it propagates. The attenuation of an EM wave depends on the parameter :math:`\beta`. The **skin depth** :math:`\delta` defines the distance a wave must travel before its amplitude has decayed by a factor of :math:`1/e`. This is illustrated in :numref:`sd`. As it turns out, the skin depth is the reciprocal of the decay constant :math:`\beta`. Thus:
 
 .. math:: \delta = \frac{1}{\beta}.
 

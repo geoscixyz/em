@@ -5,7 +5,7 @@ Plane Waves in Homogeneous Media
 
 .. purpose::
 
-    We have already shown that in a homogeneous media, electromagnetic signals behave according to the :ref:`wave<time_domain_equations>` and :ref:`Helmholtz<frequency_domain_equations>` equations. Here, we discuss the properties of plane wave solutions in both the time domain and the frequency domains. The content here will parallel materials provided in many EM resources (see :cite:`ward1988,griffiths1999,stratton1941`).
+    We have already shown that in a homogeneous media, electromagnetic signals behave according to the :ref:`wave<time_domain_equations>` and :ref:`Helmholtz<frequency_domain_equations>` equations. Here, we discuss the properties of plane wave solutions in both the time domain and the frequency domains. We also discuss the relationships between the electric and magnetic fields carried by plane waves. The content here will parallel materials provided in many EM resources (see :cite:`ward1988,griffiths1999,stratton1941`).
 
 Introduction
 ------------
@@ -14,9 +14,11 @@ Here, the properties of plane waves in homogeneous media are presented in both t
 
     - :ref:`Wavenumber<frequency_domain_plane_wave_sources_wavenumber>`: A fundamental constant which characterizes plane waves at a particular frequency.
     - :ref:`Attenuation<frequency_domain_plane_wave_sources_skindepth>`: The amplitude loss of a plane wave as it propagates.
-    - :ref:`Skin Depth<frequency_domain_plane_wave_sources_skindepth>`: The distance a plane wave travels before it experiences an amplitude loss of :math:`1/e`.
+    - :ref:`Skin Depth<frequency_domain_plane_wave_sources_skindepth>`: The distance an EM wave travels before it experiences an amplitude loss of :math:`1/e`.
     - :ref:`Phase Velocity<frequency_domain_plane_wave_sources_phasevelocity>`: The velocity at which plane waves at a certain frequency travel.
     - :ref:`Wavelength<frequency_domain_plane_wave_sources_wavelength>`: The wavelength of a plane wave.
+    - :ref:`Impedance<frequency_domain_plane_wave_sources_fields_impedance>`: A medium property which characterizes the relationship between perpendicular components of the electric and magnetic fields supported by EM waves.
+    - :ref:`Apparent Resistivity<frequency_domain_plane_wave_sources_fields_resistivity>`: An approximation of a medium's electrical resistivity based on the relationship between the electric and magnetic fields.
 
 For :ref:`plane waves in the time domain<time_domain_plane_wave_sources_analytic_solution>`, you will learn about:
 

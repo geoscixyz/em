@@ -5,112 +5,117 @@ Fields (Frequency Domain)
 
 .. purpose::
 
-    Provide explicit expressions for both eletric and magnetic fields for plane EM wave equations, and understand the concept of the impedance, apparent resistivity, and phase.
+    Here, we provide explicit expressions for the electric and magnetic fields supported by plane waves. Relationships between the electric and magnetic fields are discussed and used to define useful quantities such as: impedance, apparent resistivity and phase.
 
 .. figure:: ../images/planewavedown.png
-   :align: center
-   :scale: 60%
+   :align: right
+   :figwidth: 50%
+   :name: planewave_down_fields
 
    Setup diagram of plane EM wave propagation heading downward (negaitve :math:`z`).
 
-EM fields
-^^^^^^^^^
+By :ref:`solving the Helmholtz equation<frequency_domain_plane_wave_sources_analytic_solution>` for the electric field, we obtain a general solution of the form:
 
-By solving plane EM wave equations in frequency domain, we obtain solution for the magnetic field as
+.. math:: \mathbf{E} (z,\omega) = \mathbf{E}_0^-  e^{ikz} + \mathbf{E}_0^+ e^{-ikz} 
 
-.. math:: \mathbf{E} (z,\omega) = \mathbf{E}_0^+ e^{-ikz} + \mathbf{E}_0^-  e^{ikz}.
+where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the amplitudes of the down-going and up-going waves, respectively. In this section, analysis will be performed by considering only the down-going wave (:numref:`planewave_down_fields`), thus:
 
-Here superscript :math:`+` and :math:`-` represents up- and down-going waves. In this section we focus our attentiont to down-going wave, hence
+.. math:: \mathbf{E} (z,\omega) = \mathbf{E}_0^- e^{ikz}
 
-.. math:: \mathbf{E} (z,t) = \mathbf{E}_0^- e^{ikz}.
+According to the figure, we are considering the case where the electric field only has components in the x-direction. Thus our solution for the electric field can be expressed as:
 
-Since magnetic field only exists in :math:`y`-direction (:math:`\mathbf{E} = E_x \mathbf{u}_y`), then we obtain
+.. math:: \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{ikz} \mathbf{u_x}
 
-.. math:: E_x = E_{x \ 0}^{-} e^{ikz}
-
-From Ampere's law with the knowledge that we only have two components of EM fields :math:`E_x` and :math:`E_x`, we obtain
+where :math:`\mathbf{u_x}` is a unit vector in the x-direction. Using Faraday's law, we find that the corresponding magnetic field only has components in the y-direction. This can be described by the following ODE:
 
 .. math::
   \frac{\partial E_x}{\partial z} + i \omega \mu H_y = 0
 
-By evaluating differentiation, and rearranging the equation yields
+Solving for the y component of the magnetic field, we obtain:
 
 .. math::
-  H_y = - \frac{k}{\omega \mu} H_{y \ 0}^{-} e^{ikz} = E_{x \ 0} ^{-} e^{ikz},
+  H_y (z,\omega ) = H_{y,0}^- e^{ikz} = -\frac{k}{\omega \mu} E_{x,0}^- e^{ikz}
 
-where :math:`E_{x \ 0}^{-} = - \frac{\omega \mu}{k} H_{y \ 0}^{-}`.
+where 
 
-Therefore, we have otained full expressions of electric and magnetic fields for the plane wave equations assuming :math:`E_{x \ 0}^{-}` is known.
+.. math:: H_{y , 0}^{-} = - \frac{k}{\omega \mu} E_{x, 0}^{-} 
+
+We have now otained full analytic expressions for the electric and magnetic fields for the plane wave equations. Assuming :math:`E_{x ,0}^{-}` is known, these solutions are given below:
 
 .. math::
-	\mathbf{E} = E_x \mathbf{u}_x = E_{x \ 0}^{-} e^{ikz} \mathbf{u}_x
+	\mathbf{E} = E_x \mathbf{u}_x = E_{x,0}^{-} \, e^{ikz} \mathbf{u}_x
 	:label: FDplaneEx
 
 .. math::
-	\mathbf{H} = H_y \mathbf{u}_y = -\frac{k}{\omega \mu} E_{x \ 0}^{-} e^{ikz} \mathbf{u}_y
+	\mathbf{H} = H_y \mathbf{u}_y = H_{y,0}^{-}\, e^{ikz} \mathbf{u}_y= -\frac{k}{\omega \mu} E_{x \ 0}^{-} \, e^{ikz} \mathbf{u}_y
 	:label: FDplaneHy
 
-Impedance
-^^^^^^^^^
+This result can be extended to plane waves in any direction. It states that the electric and magnetic fields supported by an EM wave are perpendicular to one another and perpendicular to the propagation direction.
 
-We define impedance between :math:`E_x` and :math:`H_y` as
+.. _frequency_domain_plane_wave_sources_fields_impedance:
+
+Impedance and Phase
+^^^^^^^^^^^^^^^^^^^
+
+**Impedance** is defined as the negative ratio between perpendicular components of corresponding electric and magnetic fields. For the setup shown in :numref:`planewave_down_fields`, the impedance is given by:
 
 .. math::
 	Z_{xy} = -\frac{E_x}{H_y} = \frac{\omega \mu}{k}
 
-This can be simplified using quais-static or wave approximation:
+The impedance can be used to tell us about the **phase difference** between the electric and magnetic fields. The phase difference between the electric and magnetic field is given by:
 
-- Quasi-static (:math:`\epsilon \omega \ll \sigma`):
+.. math::
+    \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg )
+
+where :math:`0 \leq \phi_{xy} \leq \pi/4`. According to our definition, the electric field lags the magnetic field.
+
+**Quasi-Static Regime:**
+
+In the quasi-static regime (:math:`\epsilon \omega \ll \sigma`), the wavenumber becomes :math:`\sqrt{-i\omega\mu\sigma}` and the impedance simplifies to:
 
 .. math::
     Z_{xy} = \frac{\omega \mu}{\sqrt{-i\omega\mu\sigma}}
-    = \sqrt{i} \sqrt{\frac{\omega \mu}{\sigma}}
+    = \sqrt{\frac{i \omega \mu}{\sigma}}
+
+The phase of the impedance is given by:
 
 .. math::
-    \phi_{Z_{xy}} = \frac{\pi}{4},
+    \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg ) = \frac{\pi}{4}
 
-where :math:`\phi_{Z_{xy}}` is the phase (rad) of the impedance.
+In this case, the electric field lags the magnetic field by :math:`\pi/4` radians.
 
-- Wave (:math:`\epsilon \omega \gg \sigma`):
+**Wave Regime:**
+
+In the wave regime (:math:`\epsilon \omega \gg \sigma`), the wavenumber simplifies to :math:`\omega \sqrt{\mu\epsilon}` and the impedance simplifies to:
 
 .. math::
-    Z_{xy} = \frac{\omega \sqrt{\mu\epsilon}}{\omega \epsilon}
+    Z_{xy} = \frac{\omega \mu}{\omega \sqrt{\mu\epsilon}}
     = \sqrt{\frac{\mu}{\epsilon}}
 
-.. math::
-    \phi_{Z_{xy}} = 0
-
-
-Apparent resisitivity and phase
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In magnetotelluric (MT) application, this impedance often considered as data, although this cannot be simply expressed since the earth medium is not homogeneous (e.g. :math:`\sigma(x, y, z)`). With the quasi-static approximation, apparent resistivity, :math:`\rho_{app}` can be written as
+where the phase is equal to:
 
 .. math::
-    \rho_{app} = \frac{1}{\sigma}_{app} = \frac{|Z_{xy}|^2}{\omega \mu}
-    :label: apparent_res
+    \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg ) = 0
 
-Apparent phase of the impedance, :math:`\phi_{Z_{xy}}` can be written as
-
-.. math::
-	\phi_{app} = tan^{-1} (Z_{xy}).
-
-Note that within the quasi-static approximation for homogeneous medium, the phase of the impedance is constant (:math:`\phi_{Z_{xy}}=\frac{\pi}{4}`) on variable frequency indicating phase difference between the :math:`E_x` and :math:`H_y` is always constant for this specific setup.
+In this case, the electric and magnetic fields are in phase with one another.
 
 .. todo::
-    Add description for polarization ellipse
 
-.. Dummy
-.. .. math::
-..  \frac{\partial H_y}{\partial z} + (\sigma+i \omega \epsilon) E_x = 0
+    Visualization of this.
 
-.. .. math::
-..   E_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} = H_{y \ 0} ^{-} e^{ikz},
 
-.. .. math::
-..   \mathbf{H} = H_y \mathbf{u}_y = E_{x \ 0}^{-} e^{ikz} \mathbf{u}_y
-..   :label: FDplaneHy
+.. _frequency_domain_plane_wave_sources_fields_resistivity:
 
-.. .. math::
-..   \mathbf{E} = E_x \mathbf{u}_x = -\frac{i k}{(\sigma+i \omega \epsilon)} H_{y \ 0}^{-} e^{ikz} \mathbf{u}_x
-..   :label: FDplaneEx
+Apparent Resistivity
+^^^^^^^^^^^^^^^^^^^^
+
+The resistivity value obtained using simplified geometry and physics is known as the apparent resistivity. It is useful in providing a ball-park estimate of the Earth's electric properties. Various definitions for apparent resistivity will be provided when learning about :ref:`direct current resistivity<dcr_index>` and :ref:`magnetotelluric<mt_index>` methods.
+
+Here, we present the definition for apparent resistivity which is most relevant to magnetotellurics. According to our quasi-static approximation for the impedance, where resistivity is the reciprocal of the conductivity:
+
+.. math::
+    \rho_{app} = \frac{1}{\sigma_{app}} = \frac{| Z_{xy}|^2}{\omega \mu}
+
+Therefore, if perpendicular components of the electric and magnetic fields are known within a homogeneous medium, it is possible to estimate the electrical resisitivity of that medium; assuming also that the Earth is approximately non-permeable (:math:`\mu = \mu_0`). For a half-space model, the Earth's true resistivity is equal to the apparent resistivity.
+
+

@@ -26,10 +26,10 @@ For simplicity, let us assume that the electric and magnetic fields lie in the x
 .. math::
     \frac{\partial^2 \mathbf{e}}{\partial z^2} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
 
-In order to provide initial conditions for the PDE, let the electric field be caused an impulse such that:
+In order to provide initial conditions for the PDE, let the electric field be caused an impulse such that our initial conditions are given by:
 
 .. math::
-  \mathbf{e}(t=0)=\mathbf{e}_0\delta(t)
+  \mathbf{e}(t=0)=\mathbf{E}_0\delta(t)
   :name: e_impulse
 
 where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of solving the time-depend PDE directly, we will apply the inverse Fourier transform to analytic solutions derived in the :ref:`frequency domain<frequency_domain_plane_wave_sources_analytic_solution>`:
@@ -45,9 +45,9 @@ where the :math:`e^{-i\omega t}` term is being supressed. The time domain soluti
 where :math:`\mathcal{F}[\cdot]` is the Fourier transform. Modified from :cite:`ward1988`, the corresponding time domain solution for the wave equation is:
 
 .. math::
-    \mathbf{e}(t) =& \mathbf{e}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    \mathbf{e}(t) =& \mathbf{E}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg ) \\
-    &+ \mathbf{e}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    &+ \mathbf{E}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
     :name: e_wave_analytic_sol
 
@@ -61,14 +61,14 @@ where
 
 - :math:`c=\dfrac{1}{\sqrt{\mu\epsilon}}`
 
-Constants :math:`a` and :math:`c` control both the oscillation and diffusion of the plane wave. Note that the sign of :math:`z` is negative, hence the electric field decays according to :math:`e^{a(z/c)}`.
+Both the up-going and down-going waves have two terms. The first term, containing the Dirac delta function, is the wave term. The second term is the diffusion term. Constants :math:`a` and :math:`c` control both the wave and diffusion properties of the plane wave. Note that the sign of :math:`z` is negative, hence the electric field decays according to :math:`e^{a(z/c)}`.
 
 By the same approach, the solution for the down-going magnetic field is given by:
 
 .. math::
-    \mathbf{h}(t) =& \mathbf{h}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    \mathbf{h}(t) =& \mathbf{H}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg )\\
-    &+ \mathbf{h}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
+    &+ \mathbf{H}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
     :name: h_wave_analytic_sol
 
@@ -95,7 +95,7 @@ In both cases, we will show how parameters describing wave propagation are simpl
 In the quasi-static regime, the solution for the electric field can be simplified to:
 
 .. math::
-    \mathbf{e}(t) = -\frac{(\mu\sigma)^{1/2}z}{2 \pi^{1/2}t^{3/2}} e^{-\mu\sigma z^2 / (4t)}
+    \mathbf{e}(t) = - \mathbf{E}_0^- \frac{(\mu\sigma)^{1/2}z}{2 \pi^{1/2}t^{3/2}} e^{-\mu\sigma z^2 / (4t)}
     :label: e_impulse_quasistatic
 
 The electric field as a function of time and depth is shown in :numref:`Ward1988Fig1_2` (a) and (b), respectively. Both peak time and peak depth can be recognized intuitively in this figure. Below, we derive peak time, depth and velocity in the quasi-static case from Eq. :eq:`e_impulse_quasistatic`.
@@ -112,40 +112,42 @@ The electric field as a function of time and depth is shown in :numref:`Ward1988
 In the wave regime, the solution for the electric field can be reduced to:
 
 .. math::
-    \mathbf{e}(t) = \mathbf{e}_0^- \delta \bigg ( t+\frac{z}{c} \bigg )
+    \mathbf{e}(t) = \mathbf{E}_0^- \delta \bigg ( t+\frac{z}{c} \bigg )
 
 In this case, the wave propagates with velocity :math:`c = 1/\!\sqrt{\mu\epsilon}` and does not diffuse at it propagates.
 
 .. _time_domain_planewave_sources_peaktime:
 
-Peak time
+Peak Time
 ^^^^^^^^^
 
-Since there is only one peak point in time as shown in :numref:`Ward1988Fig1_2` a, the peak time, :math:`t_{max}` can be dervied by setting the time derivative of Eq. :eq:`e_impulse_quasistatic` to zero.
+The peak time is the time at which the maximum signal amplitude is observed at a particular location. The peak time observed in :numref:`Ward1988Fig1_2` (a) can be dervied by setting the time derivative of Eq. :eq:`e_impulse_quasistatic` to zero:
 
 .. math::
     t_{max} = \frac{\mu\sigma z^2}{6}
     :label: tmax
 
+For an impulse excitation, the peak time is proportional to the square of the distance traveled.
+
 .. _time_domain_planewave_sources_diffusiondistance:
 
-Peak depth (Diffusion distance)
+Peak Depth (Diffusion Distance)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Similarly by setting the depth derivative of Eq. :eq:`e_impulse_quasistatic` to zero, we obtain the peak depth, :math: `z_{max}` as
+At a particular time, the distance at which the signal amplitude is largest is the peak depth. The peak depth observed in :numref:`Ward1988Fig1_2` (b) can be dervied by setting the depth derivative of Eq. :eq:`e_impulse_quasistatic` to zero:
 
 .. math::
     z_{max} = \sqrt{\frac{2 t}{\mu\sigma}} \approx 1260 \sqrt{\frac{ t}{\sigma}}.
     :label: zmax
 
-This basically corresponds to the :ref:`frequency_domain_plane_wave_sources_skindepth` from the harmonic plane wave, and this often called diffusion distance.
+This quantity is frequently referred to as the **diffusion distance**. It acts as a time domain equivalent for the :ref:`skin depth<frequency_domain_plane_wave_sources_skindepth>`.
 
 .. _time_domain_planewave_sources_peakvelocity:
 
-Peak velocity
+Peak Velocity
 ^^^^^^^^^^^^^
 
-This peak depth travels in time, hence by taking time derivative to Eq. :eq:`zmax` we obtain the peak velocity, :math:`v_{max}` as
+As the EM wave propagates, the peak depth moves as a function of time. The velocity at which the peak moves is called the peak velocity. By by taking time derivative of Eq. :eq:`zmax`, the peak velocity is given by:
 
 .. math::
     v_{max} = \frac{d z_{max}}{dt} = \frac{1}{\sqrt{2\mu\sigma t}}
