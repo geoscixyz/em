@@ -65,51 +65,6 @@ Using the same approach, the magnetic field has a general solution of the form:
 
     Eq. :eq:`Helmholtz_1D_components` is still a general solution. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{E}(z \rightarrow -\infty,\omega) = 0` and :math:`\mathbf{E}(z =0,\omega) = \mathbf{E}_0`. This would give you a solution :math:`\mathbf{E}(z,\omega) = \mathbf{E}_0 \, e^{\beta z} e^{ i(\alpha z-\omega t)}` (i.e. just the down-going wave). From this solution, :math:`\mathbf{H}(z,\omega)` can be determined using Faraday's law. You could also envoke boundary conditions to solve for :math:`\mathbf{H}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{E}`.
 
-
-
-
-
-
-
-
-
-
-
-.. Writing the wave number as :math:`k = k_R + ik_I` and substituting into Equation :eq:`fd1` yields:
-
-.. .. math:: \mathbf{E} = \mathbf{E}_0 e^{\pm i(k_R +ik_I)z}.
-..         :name: fd2
-
-.. This has two terms. The first, :math:`e^{\pm ik_Rz}`, is a complex sinusoidal. The second term, :math:`e^{\pm k_Iz}`, has a real exponent and this term shows how the amplitude vaires with :math:`z`. Equation :eq:`fd2` thus corresponds to a propagating harmonic wave that decays as it travels.
-
-.. To add clarity, and keep with notation that is typically used, we do the following. First, we explicitly include the time dependence :math:`e^{i\omega t}`. Second, we write
-
-..  k = \alpha + i\beta
-..     :name: fd3
-
-.. We have chosen to keep this notation for :math:`k` since it corresponds to that used in :cite:`ward1988`. The propagating harmonic wave in time is then written as
-
-..  \mathbf{e} (z,t) \equiv \mathbf{e} = \mathbf{e}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{e}_0^- e^{\beta z} e^{i(\alpha z + \omega t)}.
-..     :name: fd4
-
-.. We begin by considering the first part of this equation. The term :math:`e^{-i(\alpha z - \omega t)}` represents a wave travelling in the positive z-direction. The phase velocity of the wave is :math:`v_{phase} = \omega/\alpha`. The initial amplitude of the wave is :math:`\mathbf{e}_0^+` and the term :math:`e^{-\beta z}` indicates that the amplitude decreases exponentially with :math:`z`. Thus in homogeneous media, the electromagnetic fields can propagate as plane waves in which their amplitude exponentially decreases with distance. The second part in Equation :eq:`fd4` is understood in the same manner except that the wave is travelling in the opposite direction (negative z-direction) and the initial amplitude is :math:`\mathbf{e}_0^-`.
-
-.. General solutions of the 1D Helmholtz equations generally require waves travelling in the positive and negative z-directions.
-
-.. The magnetic field will also travel in the x-y plane but is perpendiculat to :math:`\mathbf{e}`. Similarly, solution of the magnetic field can be written as
-
-..  \mathbf{h} (z,t) \equiv \mathbf{h} = \mathbf{h}_0^+ e^{-\beta z} e^{-i(\alpha z - \omega t)} + \mathbf{h}_0^- e^{\beta z} e^{i(\alpha z + \omega t)}.
-..     :name: fd5
-
-.. We can investigate the plane wave propagation more fully by looking more closely at the mathematics and using an interactive app.
-
-
-.. todo::
-    Add app?
-
-
-
-
 .. _frequency_domain_plane_wave_sources_fundamental_physics:
 
 Fundamental physics
@@ -208,26 +163,7 @@ Assuming the Earth is non-magnetic (:math:`\mu = \mu_0 = 4\pi \times 10^{-7}` H/
 
 .. math:: \delta \approx 503 \sqrt{\frac{1}{f \sigma}} = 503 \sqrt{\frac{\rho}{f}}.
 
-where :math:`\rho = 1/\sigma` is the resistivity. Thus from the previous two equations, we see that the skin depth decreases as the conductivity :math:`\sigma`, magnetic permeability :math:`\mu` and frequency :math:`\omega` increase. In most cases however, the magnetic properties are negligible as :math:`\mu \sim \mu_0`. The below shows skin depths for some representative rocks and frequencies in the quasi-static regime. To see how physical properties and frequencies affect skin depth, check out the app.
-
-.. todo:: NEED Seogi's APP LINK
-
-
-+------------------+--------------+----------------+----------+------------+--------------+
-|                  | Resistivity  | Conductivity   | f = 1 Hz | f = 100 Hz | f = 1,000 Hz |
-|                  | :math:`\rho` | :math:`\sigma` |          |            |              |
-+------------------+--------------+----------------+----------+------------+--------------+
-|Magmatic rocks    | 10,000       | 0.0001         | 50,000 m | 5,000 m    | 1,581 m      |
-+------------------+--------------+----------------+----------+------------+--------------+
-|Metamorphic rocks,|              |                | 15,811 m | 1,581 m    | 500 m        |
-|limestone         | 1,000        | 0.001          |          |            |              |
-+------------------+--------------+----------------+----------+------------+--------------+
-|Sediments         | 100          | 0.01           | 5,000 m  | 500 m      | 158 m        |
-+------------------+--------------+----------------+----------+------------+--------------+
-|Sea water         | 0.3          | 3.3            | 274 m    | 27 m       | 9 m          |
-+------------------+--------------+----------------+----------+------------+--------------+
-|Suphides, graphite| 0.01         | 100            | 50 m     | 5 m        | 2 m          |
-+------------------+--------------+----------------+----------+------------+--------------+
+where :math:`\rho = 1/\sigma` is the resistivity. Thus from the previous two equations, we see that the skin depth decreases as the conductivity :math:`\sigma`, magnetic permeability :math:`\mu` and frequency :math:`\omega` increase. In most cases however, the magnetic properties are negligible as :math:`\mu \sim \mu_0`. 
 
 **Wave Regime:**
 
@@ -241,8 +177,30 @@ Assuming the Earth is non-magnetic (:math:`\mu = \mu_0 = 4\pi \times 10^{-7}` H/
 
 Thus from the previous two equations, we see that the skin depth decreases proportional :math:`\sqrt{\epsilon_r}/\sigma`; provided the magnetic properties are negligible (:math:`\mu \sim \mu_0`). The below shows skin depths for some representative rocks and frequencies in the wave regime. To see how physical properties and frequencies affect skin depth, check out the app.
 
-.. todo::
-    Add table
+The table below shows skin depths for certain rocks at various frequencies. This is meant to serve as a general guide, as rock types are classified by a range of physical properties values.
+
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Type             |:math:`\sigma`     |:math:`\mu_r`|:math:`\epsilon_r`|:math:`\delta` (1Hz)|:math:`\delta` (1kHz)|:math:`\delta` (10kHz)|:math:`\delta` (1GHz)|
++=================+===================+=============+==================+====================+=====================+======================+=====================+
+|Air              | 0 S/m             | 1           | 1                |:math:`\infty`      | :math:`\infty`      |:math:`\infty`        |:math:`\infty`       |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Sea Water        | 3.3 S/m           | 1           | 80               |31 m                |  1 m                | 0.3 m                | 0.001 m             |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Igneous          |:math:`10^{-4}` S/m| 1           | 5                |22,500 m            |710 m                | 225 m                | 17 m                |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Sedimentary (dry)|:math:`10^{-4}` S/m| 1           | 4                |25,200 m            |800 m                | 250 m                | 17 m                |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Sedimentary (wet)|:math:`10^{-2}` S/m| 1           | 25               |1,000 m             |32 m                 | 10m                  | 0.17 m              |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Sulphide Skarn   |:math:`10^{2}` S/m | 1           | 5                |22.5 m              | 0.7 m               | 0.23 m               | 0.0007 m            |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+|Magnetite Skarn  |:math:`10^{2}` S/m | 2           | 5                |22.5 m              | 0.7 m               | 0.23 m               | 0.0007 m            |
++-----------------+-------------------+-------------+------------------+--------------------+---------------------+----------------------+---------------------+
+
+
+
+
+
 
 .. _frequency_domain_plane_wave_sources_phasevelocity:
 

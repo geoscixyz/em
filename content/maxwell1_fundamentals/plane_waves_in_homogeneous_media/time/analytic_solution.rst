@@ -61,9 +61,7 @@ where
 
 - :math:`c=\dfrac{1}{\sqrt{\mu\epsilon}}`
 
-Both the up-going and down-going waves have two terms. The first term, containing the Dirac delta function, is the wave term. The second term is the diffusion term. Constants :math:`a` and :math:`c` control both the wave and diffusion properties of the plane wave. Note that the sign of :math:`z` is negative, hence the electric field decays according to :math:`e^{a(z/c)}`.
-
-By the same approach, the solution for the down-going magnetic field is given by:
+Both the up-going and down-going waves have two terms. The first term, containing the Dirac delta function, is the wave term. The second term is the diffusion term. Constants :math:`a` and :math:`c` control both the wave and diffusion properties of the plane wave. The corresponding solution for the down-going magnetic field is given by:
 
 .. math::
     \mathbf{h}(t) =& \mathbf{H}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
@@ -76,7 +74,7 @@ Note that Eq. :eq:`e_wave_analytic_sol` and Eq. :eq:`h_wave_analytic_sol` have t
 
 .. note::
 
-    Eq. :eq:`e_wave_analytic_sol` is still a general solution, as only initial conditions have been applied. To determine :math:`\mathbf{e}_0^-` and :math:`\mathbf{e}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{e}_0 \delta (t)`. From this solution, :math:`\mathbf{h}(t)` can be determined using Faraday's law. You could also envoke boundary conditions to solve for :math:`\mathbf{h}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{e}`.
+    Eq. :eq:`e_wave_analytic_sol` is still a general solution, as only initial conditions have been applied. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{E}_0 \delta (t)`. From this solution, :math:`\mathbf{h}(t)` can be determined using Faraday's law. You could also envoke boundary conditions and initial conditions to solve for :math:`\mathbf{h}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{e}`.
 
 .. _time_domain_plane_wave_sources_fundamental_physics:
 

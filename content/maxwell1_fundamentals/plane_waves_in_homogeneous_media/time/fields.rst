@@ -14,7 +14,7 @@ Fields (Time Domain)
 
    Setup diagram of plane EM wave propagation heading downward (negaitve :math:`z`).
 
-When deriving :ref:`analytic solutions<time_domain_plane_wave_sources_analytic_solution>`, we considered a downward propgating plane wave caused by an impulse :math:`\mathbf{e} (t=0)=\mathbf{e}_0 \delta (t)` (:numref:`planewave_down_fields_time`). This lead to set a complicated expressions for both the electric and magnetic fields. For simplicity, we will consider only the quasi-static solution (:math:`\omega\epsilon \ll \sigma`). For a down-going wave, the solution is given by:
+When deriving :ref:`analytic solutions<time_domain_plane_wave_sources_analytic_solution>`, we considered a downward propgating plane wave caused by an impulse :math:`\mathbf{e} (t=0)=\mathbf{E}_0 \delta (t)` (:numref:`planewave_down_fields_time`). This lead to set a complicated expressions for both the electric and magnetic fields. For simplicity, we will consider only the quasi-static solution (:math:`\omega\epsilon \ll \sigma`). For a down-going wave, the solution is given by:
 
 .. math::
     \mathbf{e}(t) = -\mathbf{E}_0^- \frac{(\mu\sigma)^{1/2}z}{2 \pi^{1/2} t^{3/2}} e^{-\mu\sigma z^2 / (4t)}
@@ -94,7 +94,7 @@ where :math:`\mathbf{u_y}` is the unit vector in the y-direction.
 Examining the Fields
 ^^^^^^^^^^^^^^^^^^^^
 
-For 
+For the setup described in :numref:`planewave_down_fields_time`, the electric field has components defined in the negative x-direction and the magnetic field has components in the positive y-direction. If we compute the :ref:`Poynting vector<plane_waves_in_homogeneous_media_index_Poynting>`, we can verify that the EM wave is in fact propagating in the downward direction. In :numref:`Ward1988Fig1_2withhy`, we show the electric and magnetic fields as a function of time (a) and as a function of distance (b).
 
 .. figure:: ../images/Ward1988Fig1_2withhy.png
    :align: center
@@ -107,6 +107,3 @@ For
 
     What physical meaning can we infer from magnetic field?
 
-.. Dummy
-.. .. math::
-..     \mathcal{L}^{-1}[\frac{1}{s}e^{-ikr}] = \text{erfc} (\theta r)

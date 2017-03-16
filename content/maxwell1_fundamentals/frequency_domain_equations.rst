@@ -1,7 +1,7 @@
 .. _frequency_domain_equations:
 
-Electromagnetic Wave Equation: Frequency Domain
-===============================================
+Electromagnetic Wave Equation (Frequency Domain)
+================================================
 
 .. purpose::
 

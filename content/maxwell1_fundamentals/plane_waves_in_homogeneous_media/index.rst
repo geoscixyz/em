@@ -116,13 +116,28 @@ with the initial condition:
 .. note::
     Although solutions to the Helmholtz equation contain terms of the form :math:`e^{-i\omega t}`, these terms are often suppressed for more concise notation.
 
-**To Summarize:**
+**Summary:**
 
 Solutions to the Helmholtz equations, and the wave equations, can be obtained two ways. Either we solve for the electric field and use it to obtain the magnetic field, or visa versa. In the following material, we will solve the scenario illustrated in :numref:`planewavedown` by using our second choice in boundary conditions; which solves for the magnetic field and uses it to obtain the electric field.
 
 In following sections, we derive analytic expressions for the plane wave EM fields in both frequency and time domain. Important physical behaviours of each solution are discussed (Analytic Solution section) along with the relationship between EM fields (Fields section). Finally, using numerical apps, we simulate plane EM fields, and visualize them (Simulation section).
 
-**Contents:**
+.. _plane_waves_in_homogeneous_media_index_Poynting:
+
+Poynting Vector
+---------------
+
+The Poynting vector (:math:`\mathbf{S}`) defines the directional energy flux density of an electromagnetic field. The Poynting vector is useful from a qualitative standpoint because it can be used to relate the electric field, magnetic field and propagation direction of EM waves. This quantity is given by the following equation:
+
+.. math::
+    \mathbf{S} = \mathbf{E \times H}
+    :name:
+
+Thus if an EM wave at a certain time and location were to support an electric field in the positive x-direction and a magnetic field in the negative y-direction, we could deduce that the EM wave is propagating downward.
+
+Contents
+
+--------
 
 .. toctree::
     :maxdepth: 1

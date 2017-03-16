@@ -31,7 +31,7 @@ where :math:`\mathbf{u_x}` is a unit vector in the x-direction. Using Faraday's 
 .. math::
   \frac{\partial E_x}{\partial z} + i \omega \mu H_y = 0
 
-Solving for the y component of the magnetic field, we obtain:
+We could have also deduced this by considering the :ref:`Poynting vector<plane_waves_in_homogeneous_media_index_Poynting>`. Solving for the y component of the magnetic field, we obtain:
 
 .. math::
   H_y (z,\omega ) = H_{y,0}^- e^{ikz} = -\frac{k}{\omega \mu} E_{x,0}^- e^{ikz}
@@ -69,6 +69,13 @@ The impedance can be used to tell us about the **phase difference** between the 
 
 where :math:`0 \leq \phi_{xy} \leq \pi/4`. According to our definition, the electric field lags the magnetic field.
 
+.. figure:: ../images/EHquasi.gif
+   :align: right
+   :figwidth: 50%
+   :name: waves_homogeneous_freq_EHquasi
+
+   Electric and magnetic fields of an EM wave propagating in the x-direction (quasi-static regime).
+
 **Quasi-Static Regime:**
 
 In the quasi-static regime (:math:`\epsilon \omega \ll \sigma`), the wavenumber becomes :math:`\sqrt{-i\omega\mu\sigma}` and the impedance simplifies to:
@@ -84,6 +91,13 @@ The phase of the impedance is given by:
 
 In this case, the electric field lags the magnetic field by :math:`\pi/4` radians.
 
+.. figure:: ../images/EHwave.gif
+   :align: right
+   :figwidth: 50%
+   :name: waves_homogeneous_freq_EHwave
+
+   Electric and magnetic fields of an EM wave propagating in the x-direction (wave regime).
+
 **Wave Regime:**
 
 In the wave regime (:math:`\epsilon \omega \gg \sigma`), the wavenumber simplifies to :math:`\omega \sqrt{\mu\epsilon}` and the impedance simplifies to:
@@ -98,10 +112,6 @@ where the phase is equal to:
     \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg ) = 0
 
 In this case, the electric and magnetic fields are in phase with one another.
-
-.. todo::
-
-    Visualization of this.
 
 
 .. _frequency_domain_plane_wave_sources_fields_resistivity:

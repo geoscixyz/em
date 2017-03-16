@@ -1,7 +1,7 @@
 .. _time_domain_equations:
 
-Electromagnetic Wave Equation: Time-Domain
-==========================================
+Electromagnetic Wave Equation (Time-Domain)
+===========================================
 
 .. purpose::
 
