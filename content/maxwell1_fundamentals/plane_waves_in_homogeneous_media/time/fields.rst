@@ -91,19 +91,21 @@ where :math:`\mathbf{u_y}` is the unit vector in the y-direction.
 
 .. :numref:`Ward1988Fig1_2withhy` a and b shows both :math:`e_x` and :math:`h_y` as a function of time and depth, respectively.
 
+
+.. figure:: ../images/EHtime.gif
+   :align: right
+   :figwidth: 50%
+   :name: planewave_fields_time_1D
+
+   Electric and magnetic fields from a down-going EM wave resulting from initial conditions :math:`\mathbf{e}(t) = E_0 \delta (t) \, \mathbf{u_x}`.
+
 Examining the Fields
 ^^^^^^^^^^^^^^^^^^^^
 
-For the setup described in :numref:`planewave_down_fields_time`, the electric field has components defined in the negative x-direction and the magnetic field has components in the positive y-direction. If we compute the :ref:`Poynting vector<plane_waves_in_homogeneous_media_index_Poynting>`, we can verify that the EM wave is in fact propagating in the downward direction. In :numref:`Ward1988Fig1_2withhy`, we show the electric and magnetic fields as a function of time (a) and as a function of distance (b).
+In :numref:`planewave_fields_time_1D`, we show the electric and magnetic fields from the down-going wave illustrated in :numref:`planewave_down_fields_time`. The square-root of the amplitude is being plotted so that characteristics of the wave are more easily visible over all times. Note that the electric field is in the positive x-direction and the magnetic field is in the negative y-dirction. We can verify that the EM is propagating downward by computing the :ref:`Poynting vector<plane_waves_in_homogeneous_media_index_Poynting>`.
 
-.. figure:: ../images/Ward1988Fig1_2withhy.png
-   :align: center
-   :scale: 40%
-   :name: Ward1988Fig1_2withhy
+Examining :numref:`planewave_fields_time_1D`, we can see both the wave and diffusive behaviours of the signal. We can also see the time-dependency of the peak distance; i.e. the peak velocity. The peak distance (:math:`z_{max}`) increases proportional to :math:`t^{1/2}` whereas the peak velocity (:math:`v_{max}`) is proprtional to :math:`t^{-1/2}`.
 
-   Electric and magnetic field as a function of time 100 m from a 1D impulse in the field in a 0.01 S/m whole space (a). Electric and magnetic field at t = 0.03 ms as a function of distance (Modifed from :cite:`ward1988`) (b). Black and red lines differentiate electric and magnetic field.
 
-.. todo::
 
-    What physical meaning can we infer from magnetic field?
 
