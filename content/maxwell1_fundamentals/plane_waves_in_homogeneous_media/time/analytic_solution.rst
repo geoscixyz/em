@@ -61,7 +61,9 @@ where
 
 - :math:`c=\dfrac{1}{\sqrt{\mu\epsilon}}`
 
-Both the up-going and down-going waves have two terms. The first term, containing the Dirac delta function, is the wave term. The second term is the diffusion term. Constants :math:`a` and :math:`c` control both the wave and diffusion properties of the plane wave. The corresponding solution for the down-going magnetic field is given by:
+Both the up-going and down-going waves have two terms. The first term, containing the Dirac delta function, is the wave term. The second term is the diffusion term. Constants :math:`a` and :math:`c` control both the wave and diffusion properties of the plane wave.
+
+In the case that the EM wave were caused by an impulse corresponding to initial conditions :math:`\mathbf{h}(t=0) = \mathbf{H_0}\delta (t)`, the general solution for the magnetic field would be given by:
 
 .. math::
     \mathbf{h}(t) =& \mathbf{H}_0^- \Bigg ( e^{a(z/c)} \delta \bigg ( t+\frac{z}{c} \bigg ) -\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
@@ -74,7 +76,7 @@ Note that Eq. :eq:`e_wave_analytic_sol` and Eq. :eq:`h_wave_analytic_sol` have t
 
 .. note::
 
-    Eq. :eq:`e_wave_analytic_sol` is still a general solution, as only initial conditions have been applied. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{E}_0 \delta (t)`. From this solution, :math:`\mathbf{h}(t)` can be determined using Faraday's law. You could also envoke boundary conditions and initial conditions to solve for :math:`\mathbf{h}` and use the Ampere-Maxwell law to obtain :math:`\mathbf{e}`.
+    Eqs. :eq:`e_wave_analytic_sol` and :eq:`h_wave_analytic_sol` are still general solutions, as only initial conditions have been applied. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` or :math:`\mathbf{H}_0^-` and :math:`\mathbf{H}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{E}_0 \delta (t)` results in a downward propagating electric field.
 
 .. _time_domain_plane_wave_sources_fundamental_physics:
 

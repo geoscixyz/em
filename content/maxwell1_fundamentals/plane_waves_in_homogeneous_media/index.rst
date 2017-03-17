@@ -136,7 +136,6 @@ The Poynting vector (:math:`\mathbf{S}`) defines the directional energy flux den
 Thus if an EM wave at a certain time and location were to support an electric field in the positive x-direction and a magnetic field in the negative y-direction, we could deduce that the EM wave is propagating downward.
 
 Contents
-
 --------
 
 .. toctree::
@@ -147,4 +146,5 @@ Contents
     frequency/simulation
     time/analytic_solution
     time/fields
+    time/simulation
 

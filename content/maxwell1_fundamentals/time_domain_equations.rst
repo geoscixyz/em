@@ -38,7 +38,7 @@ The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`he
 The Lossy Wave Equation
 -----------------------
 
-Eqs. :eq:`hme7` and :eq:`hmh7` have identical form and are both characterized using the **lossy wave equation**. Thus, electromagnetic signals propagate as waves that are also subject to diffusion. The first term in each equation is called the Laplacian (:math:`\nabla^2`). The second term, which contains a first order time derivative, controls the diffusive behaviour of the electromagnetic signal. The third term, which contains a second order time derivative, represents an energy conservation term. The propagation velocity, diffusion and other behaviours of electromagnetic waves are discussed when presenting materials on :ref:`plane waves in homogeneous media<time_domain_plane_wave_sources_index>`.
+Eqs. :eq:`hme7` and :eq:`hmh7` have identical form and are both characterized using the **lossy wave equation**. Thus, electromagnetic signals propagate as waves that are also subject to diffusion. The first term in each equation is called the Laplacian (:math:`\nabla^2`). The second term, which contains a first order time derivative, controls the diffusive behaviour of the electromagnetic signal. The third term, which contains a second order time derivative, represents an energy conservation term. The propagation velocity, diffusion and other behaviours of electromagnetic waves are discussed when presenting materials on :ref:`plane waves in homogeneous media<time_domain_plane_wave_sources_analytic_solution>`.
 
 Quasi-Static Regime
 -------------------
