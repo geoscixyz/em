@@ -5,7 +5,7 @@ Analytic Solution (Time Domain)
 
 .. purpose::
 
-    Here, we provide analytic solutions for the lossy wave equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: peak time, peak distance and peak velocity.
+    Here, we provide analytic solutions for the lossy wave equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: :ref:`peak time<time_domain_planewave_sources_peaktime>`, :ref:`peak distance<time_domain_planewave_sources_diffusiondistance>` and :ref:`peak velocity<time_domain_planewave_sources_peakvelocity>`.
 
 .. figure:: ../images/planewavedown.png
    :align: right

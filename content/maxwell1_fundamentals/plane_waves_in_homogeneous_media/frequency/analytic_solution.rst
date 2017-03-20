@@ -5,7 +5,7 @@ Analytic Solution (Frequency Domain)
 
 .. purpose::
 
-    Here, we provide analytic solutions for the Helmholtz equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: wavenumber, skin depth, phase velocity, and wavelength.
+    Here, we provide analytic solutions for the Helmholtz equation for plane waves within a homogeneous medium. From the solutions, we extract and discuss meaningful physical principles such as: :ref:`wavenumber<frequency_domain_plane_wave_sources_wavenumber>`, :ref:`skin depth<frequency_domain_plane_wave_sources_skindepth>`, :ref:`phase velocity<frequency_domain_plane_wave_sources_phasevelocity>`, and :ref:`wavelength<frequency_domain_plane_wave_sources_wavelength>`.
 
 
 .. figure:: ../images/planewavedown.png
@@ -22,7 +22,7 @@ To characterize EM waves within a homogeneous medium, let us begin with the foll
     \boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  &= 0
     :name: Helmholtz_full_analytic
 
-where the complex wavenumber is given by:
+where the complex :ref:`wavenumber<frequency_domain_plane_wave_sources_wavenumber>` is given by:
 
 .. math::
     k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}

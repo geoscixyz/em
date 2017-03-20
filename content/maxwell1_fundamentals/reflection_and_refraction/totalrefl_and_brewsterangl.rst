@@ -10,7 +10,7 @@ Total reflection and Brewster angle
 Total reflection
 ----------------
 
-For a perfect dielectric, the conductivity is zero and the permeability is that of free space that is, :math:`\mu_1=\mu_2=\mu_0`. Snell's law of refraction shown in :ref:`snells_law` with the setup shown in :numref:`snellslaw_setup` then reduces to
+For a perfect dielectric, the conductivity is zero and the permeability is that of free space that is, :math:`\mu_1=\mu_2=\mu_0`. In this case, Snell's law reduces to:
 
 .. math::
     \frac{\text{sin} \theta_i}{\text{sin} \theta_t} = \frac{k_1}{k_2} = \Big(\frac{\epsilon_2}{\epsilon_1}\Big)^{1/2} = n_{12}

@@ -17,6 +17,7 @@ The formative laws of electromagnetics characterize the physical processes which
     :maxdepth: 1
 
     gauss_electric
+    coulomb
     gauss_magnetic
     faraday
     ampere_maxwell
@@ -24,4 +25,3 @@ The formative laws of electromagnetics characterize the physical processes which
     biot_savart
     lenz
     interface_conditions
-    details

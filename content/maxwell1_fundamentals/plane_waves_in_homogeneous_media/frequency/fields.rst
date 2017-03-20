@@ -5,7 +5,7 @@ Fields (Frequency Domain)
 
 .. purpose::
 
-    Here, we provide explicit expressions for the electric and magnetic fields supported by plane waves. Relationships between the electric and magnetic fields are discussed and used to define useful quantities such as: impedance, apparent resistivity and phase.
+    Here, we provide explicit expressions for the electric and magnetic fields supported by plane waves. Relationships between the electric and magnetic fields are discussed and used to define useful quantities such as: :ref:`impedance, phase<frequency_domain_plane_wave_sources_fields_impedance>` and :ref:`apparent resistivity<frequency_domain_plane_wave_sources_fields_resistivity>`.
 
 .. figure:: ../images/planewavedown.png
    :align: right

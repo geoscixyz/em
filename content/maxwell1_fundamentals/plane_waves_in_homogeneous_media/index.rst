@@ -45,7 +45,7 @@ In the frequency domain, we will consider a current sheet whose current behaves 
 Solving for a Down-Going Plane Wave
 -----------------------------------
 
-To obtain analytic solutions for the above setup, we begin by solving the Helmholtz equations in the frequency domain. Time domain solutions are obtained by taking the inverse Fourier or inverse Laplace transform.
+To obtain analytic solutions for the setup in :numref:`planewavedown`, we begin by solving the Helmholtz equations in the frequency domain. Time domain solutions are obtained by taking the inverse Fourier or inverse Laplace transform.
 
 For EM plane waves, the Helmholtz equations for :math:`\mathbf{E}` and :math:`\mathbf{H}` are given by:
 
@@ -66,7 +66,7 @@ Let us consider solving the Helmholtz equations where :math:`\mathbf{E}(z=0) = \
 .. math::
     \mathbf{E} = \mathbf{E}_0 e^{i(kz -\omega t)}
 
-Using Faraday's Law, the corresponding magnetic field is given by:
+Using :ref:`Faraday's Law<faraday>`, the corresponding magnetic field is given by:
 
 .. math::
     \mathbf{H} = -\frac{1}{i \omega \mu} \nabla \times \big ( \mathbf{E}_0 e^{i(kz-\omega t)} \big )
@@ -93,7 +93,7 @@ If boundary condition 2) is used in to solve Eq. :eq:`fd_helmholtz_h`, then the 
 .. math::
     \mathbf{H} = \mathbf{H}_0 e^{i(kz - \omega t)}
 
-Using the Ampere-Maxwell equation, the corresponding electric field is given by:
+Using the :ref:`Ampere-Maxwell equation<ampere_maxwell>`, the corresponding electric field is given by:
 
 .. math::
     \mathbf{E} = \frac{1}{\sigma + i\omega\epsilon} \nabla \times \big ( \mathbf{H_0}e^{i(kz - \omega t)} \big )

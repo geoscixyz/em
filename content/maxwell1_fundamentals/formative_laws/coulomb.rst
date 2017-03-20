@@ -1,7 +1,7 @@
-.. _fundamental_laws_details:
+.. _fundamental_laws_coulomb:
 
-Details
-=======
+Gauss's Law from Coulomb's Law
+==============================
 
 
 .. _gauss_electric_equivalence_to_coulombs_law:
