@@ -28,7 +28,7 @@ Electromagnetic waves follow the superposition principle. In order to simplify t
     The modes are often called the "transverse electric" (denoted by TE or TE :sub:`z`) mode and the tranverse magnetic (denoted by TM or TM  :sub:`z`) mode because either electric or magnetic field is transverse to :math:`z`-direction.
 
 Fresnel Equation for TE Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 .. figure:: images/fresnel_setup_TE.png
    :align: right
@@ -154,7 +154,7 @@ Substituting the following:
 
 
 Fresnel Equation for TM Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 The geometry, as it relates to the TM mode, is shown in :numref:`fresnel_setup_TM`. For the TM mode, the reflection and transmission coefficients are given by:
 
