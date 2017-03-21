@@ -19,7 +19,8 @@ For the setup in :numref:`snells_law_setup`, the incident wave (:math:`k_i`) arr
    :figwidth: 70%
    :name: snells_law_setup
 
-   Geometry for Snell's law. Modified from :ref:`ward1988` Figure 3.1.
+   Geometry for Snell's law. Modified from :cite:`ward1988` Figure 3.1.
+
 
 .. _Snells_law_derive:
 
