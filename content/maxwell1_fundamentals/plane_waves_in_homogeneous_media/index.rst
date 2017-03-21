@@ -118,7 +118,7 @@ with the initial condition:
 
 **Summary:**
 
-Solutions to the Helmholtz equations, and the wave equations, can be obtained two ways. Either we solve for the electric field and use it to obtain the magnetic field, or visa versa. In the following material, we will solve the scenario illustrated in :numref:`planewavedown` by using our second choice in boundary conditions; which solves for the magnetic field and uses it to obtain the electric field.
+Solutions to the Helmholtz equations, and the wave equations, can be obtained two ways. Either we solve for the electric field and use it to obtain the magnetic field, or visa versa. In the following material, we will solve the scenario illustrated in :numref:`planewavedown` by using our first choice in boundary conditions; which solves for the electric field and uses it to obtain the magnetic field.
 
 In following sections, we derive analytic expressions for the plane wave EM fields in both frequency and time domain. Important physical behaviours of each solution are discussed (Analytic Solution section) along with the relationship between EM fields (Fields section). Finally, using numerical apps, we simulate plane EM fields, and visualize them (Simulation section).
 
