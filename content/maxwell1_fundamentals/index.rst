@@ -48,5 +48,5 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
     maxwell_sources
     dipole_sources_in_homogeneous_media/index
     solving_maxwells_equations/index
-    looking_for_more
+    appendix/appendix_index
 

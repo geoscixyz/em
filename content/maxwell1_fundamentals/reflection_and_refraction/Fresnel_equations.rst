@@ -27,6 +27,8 @@ Electromagnetic waves follow the superposition principle. In order to simplify t
 
     The modes are often called the "transverse electric" (denoted by TE or TE :sub:`z`) mode and the tranverse magnetic (denoted by TM or TM  :sub:`z`) mode because either electric or magnetic field is transverse to :math:`z`-direction.
 
+.. _Fresnel_equations_TE:
+
 Fresnel Equation for TE Mode
 ----------------------------
 
@@ -152,6 +154,7 @@ Substituting the following:
 
     In the final form of :math:`r_{TE}` and :math:`t_{TE}` shown in Eqs :eq:`rTE_u` and :eq:`tTE_u`, angular information is merged into :math:`u_1` and :math:`u_2`, which are scalar wavenumbers in :math:`z`-direction. Namely, horizontal component of the wavenumber do not make any impact to determine :math:`r_{TE}` and :math:`t_{TE}`, and this is driven by transverse electic field to :math:`z`-direction.
 
+.. _Fresnel_equations_TM:
 
 Fresnel Equation for TM Mode
 ----------------------------

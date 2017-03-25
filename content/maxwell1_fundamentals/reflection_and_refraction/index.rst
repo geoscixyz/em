@@ -34,6 +34,5 @@ The content within this portion is organized into 3 parts:
 
     Snells_law
     Fresnel_equations
-    totalrefl_and_brewsterangl
     impedance_layeredearth
 

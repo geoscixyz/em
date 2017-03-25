@@ -61,8 +61,8 @@ According to Eq. :eq:`eq_reflected`, the reflected angle and the incident angle 
 
 .. _Snells_law_Snells_law:
 
-Snell's Law Extended
---------------------
+Snell's Law Approximations
+--------------------------
 
 The most common definition of Snell's law is given by:
 
@@ -71,6 +71,20 @@ The most common definition of Snell's law is given by:
 	:name: eq_Snells_law_2
 
 where :math:`k_1` is the wavenumber for the incident wave with angle :math:`\theta_1` and :math:`k_1` is the wavenumber of the refracted wave with angle :math:`\theta_2`. Here, we discuss a few properties of Snell's law.
+
+**Quasi-Static Regime**
+
+In the quasi-static regime (:math:`\sigma \gg \omega \varepsilon`), the wavenumber becomes:
+
+.. math::
+	k \approx \sqrt{-i \omega \mu \sigma}
+	:name:
+
+In this case, Snell's law reduces to:
+
+.. math::
+	\sqrt{\mu_1 \sigma_1} \, \textrm{sin}\theta_1 = \sqrt{\mu_2 \sigma_2} \, \textrm{sin} \theta_2
+
 
 **Wave Regime**
 

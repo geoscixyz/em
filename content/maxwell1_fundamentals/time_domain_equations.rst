@@ -5,7 +5,7 @@ Electromagnetic Wave Equation (Time-Domain)
 
 .. purpose::
 
-    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct lossy wave equations for both :math:`\mathbf{e}` and :math:`\mathbf{h}`, respectively. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
+    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct lossy wave equations for both :math:`\mathbf{e}` and :math:`\mathbf{h}`, respectively. This is accomplished by assuming we are in a homogeneous medium. Detailed derivations can be found in the :ref:`Appendix<maxwell1_appendix_wave_eq_derivation_time>`. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
 
 Let us begin with the differential form of :ref:`Faraday's Law <faraday>` and the :ref:`Ampere-Maxwell's equation <ampere_maxwell>`, respectively:
 
@@ -33,7 +33,7 @@ A similar procedure can be used to obtain an equation that involves only :math:`
 .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
         :name: hmh7
 
-The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`here <time_domain_equations_details>`.
+The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`here <maxwell1_appendix_wave_eq_derivation_time>`.
 
 The Lossy Wave Equation
 -----------------------

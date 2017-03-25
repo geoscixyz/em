@@ -10,48 +10,7 @@ Visualization of the Electromagnetic Fields
     By completing this exercise, you will become comfortable with the numerical modeling tools provided and gain a fundamental understanding of the fields which are caused by a harmonic electrical current dipole.
 
 
-
-Introduction
-------------
-
-Here, we will show you how to use the widget and walk you through some research questions.
-
-
-
-**Getting Started**
-
-Within the jupyter notebook, there are 3 tools:
-
-
-.. figure:: images/E_source_widget_geometry.png
-		:align: right
-		:figwidth: 50%
-		:name: widget_geometry
-
-		Visualization of problem geometry in 3D.
-
-
-**Step 1: Choosing Geometric Parameters**
-
-These toggles allow the user to adjust the problem geometry and visualize it in 3D.
-Relative to the source dipole, the user may specify observation locations on a profile line or comprising a plane.
-An example of the problem geometry is shown on the right.
-
-
-**Step 2: Visualizing the Fields**
-
-These toggles allow the user to change physical parameters relevant to the problem and visualize different components of the electric field, magnetic field and current density.
-As any of the physical parameters or plotting parameters are changed, the fields are automatically plotted on the profile line and plane defined in Step 1.
-An example of the fields on a profile line and on a plane is shown below.
-
-
-.. figure:: images/E_source_plane_example.png
-		:align: center
-		:figwidth: 100%
-		:name: field_example
-
-		Visualization of the fields. (Left panel) Vector plot of :math:`E_x` at locations on a plane. (Right panel) In-phase component of :math:`E_x` along a profile line.
-
+**Link to the modeling app**
 
 Research Questions
 ------------------
