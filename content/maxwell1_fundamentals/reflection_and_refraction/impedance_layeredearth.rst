@@ -8,12 +8,26 @@ Plane Waves within an N-Layered Earth
     Here, we consider a special case of the plane wave solution for an N-layered Earth. Our derivation follows that found in :cite:`ward1988`. This example is a first step to understanding how the Earth's structure and physical properties impact electric and magnetic fields measured at the surface.
 
 
+.. figure:: images/Nlayer_diagram.png
+   :align: right
+   :figwidth: 40%
+   :name: planewave_n_layer_diagram
+
+   Geometry for N-layer case.
+
 Consider up-going and down-going plane waves which are normally incident to an N-layered, isotropic Earth. We will assume that the electric fields associated with these waves are polarized along the x-direction; thus the magnetic fields are polarized along the y-direcion. Below, we will develope a scheme for determining the electric and magnetic fields in any of the layers. Morever, we will characterize the relationship between perpendicular components of the electric and magnetic field at the Earth's surface.
 
 Fields in the j-th Layer
 ------------------------
 
 In the j-th layer, we have both up-going and down-going waves resulting from transmissions and reflections within the Earth. The electric field has the following form:
+
+.. figure:: images/jlayer_diagram.png
+   :align: right
+   :figwidth: 40%
+   :name: planewave_j_layer_diagram
+
+   Notation for up-going and down-going waves in the j-th layer.
 
 .. math::
 	E_{x,j}(\omega ,z) = U_j e^{-ik_j (z-z_j)} + D_j e^{ik_j (z-z_j)}
@@ -119,7 +133,7 @@ The relationship between :math:`E_x` and :math:`H_y` at the Earth's surface is t
 	Z = \frac{E_x}{H_y} = \frac{M_{12}}{M_{22}}
 	:name: impedance_Earth
 
-Eq. :eq:`impedance_Earth` tells us that the relationship between perpendicular components of the electric and magnetic fields at the Earth's surface and at a particular frequency depend on the physical properties of all layers. However, the exponential nature of matricies :math:`\boldsymbol{\Lambda_j}` within :math:`\mathbf{S_j}` suggests that the impact of deeper layers on :math:`Z` is smaller than it is for shallow layers.
+Eq. :eq:`impedance_Earth` tells us that the relationship between perpendicular components of the electric and magnetic fields at the Earth's surface, at a particular frequency, depend on the physical properties of all layers. However, the exponential nature of matricies :math:`\boldsymbol{\Lambda_j}` within :math:`\mathbf{S_j}` suggests that the impact of deeper layers on :math:`Z` is smaller than it is for shallow layers. This result is very important when considering :ref:`magnetotelluric (MT) methods<mt_index>`.
 
 **Impedance for a Half-Space**
 
@@ -140,5 +154,8 @@ and thus:
 .. math::
 	\frac{E_x}{H_y} = \frac{M_{12}}{M_{22}} = - \frac{\omega\mu_1}{k_1} = -\frac{\omega \mu_1}{\sqrt{-i\omega\mu_1\sigma_1 + \omega^2\mu_1\varepsilon_1}} = \begin{cases} -\sqrt{\dfrac{i\omega\mu_1}{\sigma_1}} \;\; \textrm{for} \;\; \sigma \gg \omega\varepsilon \\ -\sqrt{\dfrac{\mu_1}{\varepsilon_1}} \;\;\;\;\,\;\; \textrm{for} \;\; \sigma \ll \omega\varepsilon \end{cases}
 	:name:
+
+The physical significance of this was explained during the material on :ref:`impedance and phase<frequency_domain_plane_wave_sources_fields_impedance>` for plane waves in homogeneous media.
+
 
 
