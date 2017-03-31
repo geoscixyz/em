@@ -20,6 +20,8 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
 
     - :ref:`Maxwell's Equations in Various Forms<quick_guide_maxwell>`: Maxwell's equations are a concise way of characterizing all of the physics pertaining to electromagnetic theory. Here, four common ways of representing Maxwell's equations are shown. This page is designed to be a quick access to Maxwell's equations with proper units and notation.
 
+    - :ref:`Interface Conditions<maxwell1_fundamentals_interface_conditions_index>`: To solve Maxwell's equations in general cases, we must consider the conditions on fields and fluxes at physical interfaces. Here, the appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}` are presented.
+
     - :ref:`Electromagnetic Wave Equation (Time Domain)<time_domain_equations>`: Here, we show that within a homogeneous media, time-dependent electromagnetic signals behave according to the diffusive wave equation. Diffusive and wave behaviours are very important when considering time-domain electromagnetic methods.
 
     - :ref:`Electromagnetic Wave Equation (Frequency Domain)<frequency_domain_equations>`: Here, we show that within a homogeneous media, frequency-dependent electromagnetic signals behave according to the vector Helmholtz equation. The physical understanding of this equation is very important when considering frequency-domain electromagnetic methods.
@@ -41,6 +43,7 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
 
     formative_laws/index
     quick_guide_maxwell
+    interface_conditions/index
     time_domain_equations
     frequency_domain_equations
     plane_waves_in_homogeneous_media/index

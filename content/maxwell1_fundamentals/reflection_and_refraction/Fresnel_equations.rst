@@ -82,7 +82,7 @@ and
     \hat{\mathbf{n}} \cdot \mathbf{E_t} = \mathbf{\hat n} \cdot \mathbf{E_r} = 0
     :name: eq_2_TE
 
-According to the :ref:`interface conditions<interface_conditions>` stated in constitutive relationships, components of the electric field parallel to surface :math:`S` are continuous across the interface. Thus:
+According to the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` stated in constitutive relationships, components of the electric field parallel to surface :math:`S` are continuous across the interface. Thus:
 
 .. math::
     \mathbf{E}_i + \mathbf{E}_r = \mathbf{E}_t
@@ -210,7 +210,7 @@ and
     \hat{\mathbf{n}} \cdot \mathbf{H}_t = \hat{\mathbf{n}} \cdot \mathbf{H}_r = 0
     :name: eq_2_TM
 
-According to the :ref:`interface conditions<interface_conditions>` stated in constitutive relationships, components of the magnetic field parallel to surface :math:`S` are continuous across the interface. Thus:
+According to the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` stated in constitutive relationships, components of the magnetic field parallel to surface :math:`S` are continuous across the interface. Thus:
 
 .. math::
     \mathbf{H}_i + \mathbf{H}_r = \mathbf{H}_t

@@ -24,4 +24,4 @@ The formative laws of electromagnetics characterize the physical processes which
     conservation_of_charge
     biot_savart
     lenz
-    interface_conditions
+
