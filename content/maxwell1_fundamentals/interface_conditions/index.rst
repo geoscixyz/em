@@ -12,72 +12,30 @@ Interface Conditions
     :figwidth: 50%
     :name: interface_cond_index
 
-    Fields across an horizontal physical property interface. 
+    Fields and fluxes across a horizontal physical property interface. 
 
-Electromagnetic fields and fluxes differ across physical property interfaces. As we will show, the relationships between fields or fluxes on either side of an interface can be expressed in terms of the physical properties on either side of the interface. Before solving Maxwell's equations for general cases, we must derive appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}`. 
+Electromagnetic fields and fluxes are discontinuous across physical property interfaces. Before solving Maxwell's equations for general cases, we must have appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}`. Here, we show the most general representations of interface conditions for electromagnetic fields and fluxes. These are tabulated below and are valid in both the time domain and the frequency domain.
 
-|
-|
-|
-|
-|
-|
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|Property                         | Normal Component                                                        | Tangential Component                                          |
++=================================+=========================================================================+===============================================================+
+|:math:`\mathbf{e}`               |:math:`\varepsilon_1e_1^\perp-\varepsilon_2e_2^\perp=\tau_f`             |:math:`e_1^\parallel-e_2^\parallel=0`                          |
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|:math:`\mathbf{d}`               | :math:`d_1^\perp-d_2^\perp=\tau_f`                                      |:math:`\varepsilon_2d_1^\parallel-\varepsilon_1d_2^\parallel=0`|
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|:math:`\mathbf{j}`               | :math:`\varepsilon_1\rho_1j_1^\perp-\varepsilon_2\rho_2j_2^\perp=\tau_f`|:math:`\rho_1j_1^\parallel-\rho_2 j_2^\parallel=0`             |
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|:math:`\mathbf{j}` (steady-state)| :math:`j_1^\perp=j_2^\perp`                                             |:math:`\rho_1j_1^\parallel-\rho_2 j_2^\parallel=0`             |
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|:math:`\mathbf{h}`               |:math:`\mu_1h_1^\perp-\mu_2h_2^\perp=0`                                  |:math:`h_1^\parallel-h_2^\parallel=K_f`                        |
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
+|:math:`\mathbf{b}`               | :math:`b_1^\perp-b_2^\perp=0`                                           |:math:`\mu_1^{-1} b_1^\perp- \mu_2^{-1}b_2^\perp=K_f`          |
++---------------------------------+-------------------------------------------------------------------------+---------------------------------------------------------------+
 
-+------------------+------------------------------------------------------------+---------------------------------------------------------------+
-|Property          | Normal Component                                           | Tangential Component                                          |
-+==================+============================================================+===============================================================+
-|:math:`\mathbf{e}`|:math:`\varepsilon_1e_1^\perp-\varepsilon_2e_2^\perp=\tau_f`|:math:`e_1^\parallel-e_2^\parallel=0`                          |
-+------------------+------------------------------------------------------------+---------------------------------------------------------------+
-|:math:`\mathbf{d}`| :math:`d_1^\perp-d_2^\perp=\tau_f`                         |:math:`\varepsilon_2d_1^\parallel-\varepsilon_1d_2^\parallel=0`|
-+------------------+------------------------------------------------------------+---------------------------------------------------------------+
-|:math:`\mathbf{h}`|:math:`\mu_1h_1^\perp-\mu_2h_2^\perp=\tau_f`                |:math:`h_1^\parallel-h_2^\parallel=0`                          |
-+------------------+------------------------------------------------------------+---------------------------------------------------------------+
-|:math:`\mathbf{b}`| :math:`b_1^\perp-b_2^\perp=0`                              |:math:`\mu_2b_1^\perp-\mu_1b_2^\perp=0`                        |
-+------------------+------------------------------------------------------------+---------------------------------------------------------------+
-
-
-
-
-
-
-This can be accomplished by using Maxwell's equations in integral form in the time-domain, where:
-
-.. math::
-  \oint_S \mathbf{d} \cdot d \mathbf{a} = Q_f
-  :label: GaussEint
-  
-.. math::
-  \oint_S \mathbf{b}\cdot d \mathbf{a} = 0
-  :label: GaussMint
-  
-.. math::
-  \oint_C \mathbf{e} \cdot d\mathbf{l} = - \int_S \frac{\partial \mathbf{b}}{\partial t} \cdot d\mathbf{a}
-  :label:
-
-.. math::
-  \oint_C \mathbf{h} \cdot d\mathbf{l} = \int_S \bigg ( \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} \bigg ) \cdot d\mathbf{a}
-  :label: AmpMaxInt
-
-
-Recall that :math:`Q_f` and :math:`\mathbf{j}` are the total enclosed free charge and free current density, respectively. The fields and fluxes are related through the following constitutive relationships:
-
-.. math::
-  \mathbf{j} = \sigma \mathbf{e},
-  :label: JsigE
-
-.. math::
-  \mathbf{d} = \varepsilon \mathbf{e},
-  :label: DepsE
-
-.. math::
-  \mathbf{b} = \mu \mathbf{h},
-  :label: BmuH
-
-where :math:`\sigma` denotes the electric conductivity, :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
-
-**Organization**
-
-The subsequent content has been organized into two parts. First, we define the interface conditions for the electric field, free current density and displacement current. Next, we define the interface conditions for the magnetic field and magnetic flux density.
+	- **Normal Component** (:math:`\perp`): Components of fields or fluxes perpendicular to the interface.
+	- **Tangential Component** (:math:`\parallel`): Components of fields or fluxes parallel to the interface.
+	- **Free Surface Charge Density** (:math:`\tau_f`): The free surface charge per unit area on the interface. Occurs due to discontinuities in the normal component of the electric displacement across the interface.
+	- **Free Surface Current Density** (:math:`K_f`): The free surface current per unit area on the interface. Occurs due to discontinuities in the tangential component of the magnetic field across the interface.
 
 
 **Contents**
