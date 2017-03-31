@@ -39,7 +39,7 @@ where :math:`\mathbf{k}` is the wave vector (Poynting vector) for each wave and:
 	\mathbf{E \times H} = \mathbf{k}
 	:name:
 
-Within formative laws, we discussed the :ref:`interface conditions<interface_conditions>` required for electric and magnetic fields. They state that components of the electric field parallel to surface :math:`S` must be equal across the interface. As a result:
+Within formative laws, we discussed the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` required for electric and magnetic fields. They state that components of the electric field parallel to surface :math:`S` must be equal across the interface. As a result:
 
 .. math::
 	\mathbf{\hat n} \times \big ( \mathbf{E_i} + \mathbf{E_r} \big ) = \mathbf{\hat n} \times \mathbf{E_t}
