@@ -272,7 +272,7 @@ Let define at the j-th interface :math:`(E^i ; H^i)` as the incident waves,
 :math:`(E^r ; H^r)` as the refleted wave and :math:`(E^t ; H^t)` as the
 transmitted wave into the ground (:numref:`Reflection_Efield`)
 
-Using the :ref:`interface conditions<interface_conditions>` for the tangential
+Using the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` for the tangential
 components of the electric, we can write:
 
 .. math::

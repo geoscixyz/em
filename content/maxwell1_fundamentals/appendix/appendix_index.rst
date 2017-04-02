@@ -3,6 +3,7 @@
 Appendix
 ========
 
+Here, supplementary derivations and content relevant to *Maxwell 1: Fundaments* is provided.
 
 **Contents**
 
