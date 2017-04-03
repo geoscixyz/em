@@ -179,7 +179,7 @@ Laurens Beran
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -187,6 +187,14 @@ Laurens Beran
         <strong>affiliation:</strong> Black Tusk Geophysics
                               <br>
         <strong>location:</strong> Vancouver, BC
+                              <br>
+        <strong>email:</strong> 
+        <a class="reference external" href="mailto:laurens.beran@btgeophysics.com">laurens.beran@btgeophysics.com</a>
+                        
+                              <br>
+        <strong>url:</strong> 
+        <a class="reference external" href="http://www.btgeophysics.com">http://www.btgeophysics.com</a>
+                        
                               
     </div>
     <br><br>
@@ -1113,6 +1121,40 @@ Marta Orta
 
             
 
+.. _tgranda:
+
+Teresa Granda Paris
+-------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> International Geophysical Technology S. L. (IGT)
+                              <br>
+        <strong>location:</strong> Madrid, Spain
+                              <br>
+        <strong>email:</strong> 
+        <a class="reference external" href="mailto:tgranda@igt-geofysica.com">tgranda@igt-geofysica.com</a>
+                        
+                              <br>
+        <strong>url:</strong> 
+        <a class="reference external" href="http://www.igt-geofysica.com">http://www.igt-geofysica.com</a>
+                        
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _jpedersen:
 
 Jesper Pedersen
@@ -1165,6 +1207,30 @@ Ronghua Peng
         <strong>url:</strong> 
         <a class="reference external" href="https://github.com/prhjiajie">https://github.com/prhjiajie</a>
                         
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
+.. _jperez:
+
+Juan Manuel Pons Perez
+----------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> Minas de Aguas Tenidas (MATSA)
                               
     </div>
     <br><br>
@@ -1347,6 +1413,30 @@ Peter B. E. Sandersen
 
             
 
+.. _agranda:
+
+Angel Granda Sanz
+-----------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> International Geophysical Technology S. L. (IGT)
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _cschamper:
 
 Cyril Schamper
@@ -1395,6 +1485,30 @@ Sanna Tyrvainen
         <strong>email:</strong> 
         <a class="reference external" href="mailto:sannatyr@math.ubc.ca">sannatyr@math.ubc.ca</a>
                         
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
+.. _jvideira:
+
+Juan Carlos Videira
+-------------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> Minas de Aguas Tenidas (MATSA)
                               
     </div>
     <br><br>

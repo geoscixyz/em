@@ -26,6 +26,7 @@
     sagd/index
     norsminde/index
     barents_sea/index
+    lamagdalena/index
     kasted/index
     balboa/index
     noranda/index
@@ -349,6 +350,36 @@ Barents Sea
     - Applications: Reservoir characterization, marine EM
     - Location: Hoop Fault Complex, Barents Sea, Norway
     - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+La Magdalena
+^^^^^^^^^^^^
+
+.. image:: ./lamagdalena/images/Thumbnail.png
+    :alt: lamagdalena
+    :width: 260
+    :align: right
+
+- :ref:`La Magdalena <lamagdalena_index>`
+
+
+- Contributors
+    - author: :ref:`tgranda`, :ref:`agranda`, :ref:`jperez`, :ref:`jvideira`
+    - reviewer: :ref:`sdevriese`
+
+
+- Tags
+    - geophysical survey: Airborne TDEM, Surface TDEM, Borehole EM, Mise-a-la-masse
+    - application: Mineral deposits
+    - location: Spain
+    - keyword: La Magdalena
 
 |
 |
