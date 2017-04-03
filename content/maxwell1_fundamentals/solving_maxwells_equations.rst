@@ -173,7 +173,7 @@ For problems involving :math:`\mathbf{E}` and :math:`\mathbf{B}`, this approach 
 
 **Applying Computer Algorithms:**
 
-As a final step, the numerical problem is commonly written as a linear system and solved using computer algorithms. The system generally has the form:
+As a final step, the numerical problem is commonly written as a linear system and solved using computer algorithms. The system can be formed using finite difference, finite volume or finite element methods. It generally takes the form:
 
 .. math::
 	\mathbf{A(m)u=q_s}
