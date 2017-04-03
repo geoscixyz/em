@@ -23,9 +23,7 @@ form of this equation.
 The equation can be discretized directly using, for example, standard finite
 difference, finite element, or finite volume methods. However if we use a
 mimetic discretization of the full Maxwell equations, we can derive a
-discretization of the DC equation from the discrete Maxwell equations. For a
-brief discussion of the discretization of Maxwell's equation, see the section
-:ref:`numeric_discretization` on this website. The following notation for the
+discretization of the DC equation from the discrete Maxwell equations. A brief overview of this approach can be found in :ref:`solving_maxwells_equations`. The following notation for the
 discrete system in this section comes from that page.
 
 The discrete potential field condition is :math:`\tilde{\mathbf{e}} =
