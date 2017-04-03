@@ -359,5 +359,13 @@
         "email":"laurens.beran@btgeophysics.com",
         "url":"http://www.btgeophysics.com",
         "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png"
-    }
+    },
+    "tgranda":{
+        "name":"Teresa Granda Paris",
+        "affiliation":"INternation Geophysical Technology S. L. (IGT)",
+        "location":"Madrid, Spain",
+        "email":"tgranda@igt-geofysica.co",
+        "url":"www.igt-geofysica.com",
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"
+    },
 }

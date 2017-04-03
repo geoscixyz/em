@@ -254,6 +254,27 @@
             {"uid":"Noranda", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
         ]
-	}  
+	},
+    "lamagdalena":{
+        "title":"La Magdalena",
+        "source":"./lamagdalena/",
+        "thumbnail":"./lamagdalena/images/ThumbnailImage.bmp",
+        "citations":["GrandaEtAl2016"],
+        "contributors":[
+            {"uid":"user:tgranda", "as":"author"},
+            {"uid":"user:agranda", "as":"author"},
+            {"uid":"user:jperez", "as":"author"},
+            {"uid":"user:jvideira", "as":"author"},
+            {"uid":"user:sdevriese", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
+            {"uid":"Surface TDEM", "as":"geophysical_survey"},
+            {"uid":"Borehole EM", "as":"geophysical_survey"},
+            {"uid":"Mineral deposits", "as":"application"},
+            {"uid":"La Magdalena", "as":"keyword"},
+            {"uid":"Spain", "as":"location"}
+        ]
+    }
 }
 
