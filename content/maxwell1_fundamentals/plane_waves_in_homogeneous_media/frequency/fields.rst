@@ -1,7 +1,7 @@
 .. _frequency_domain_plane_wave_sources_fields:
 
-Fields (Frequency Domain)
-=========================
+Fields
+======
 
 .. purpose::
 

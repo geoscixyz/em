@@ -1,8 +1,8 @@
 .. _frequency_domain_plane_wave_sources_simulation:
 
 
-Simulation (Frequency Domain)
-=============================
+Simulation
+==========
 
 .. raw:: html
     :file: ../../../../underconstruction.html

@@ -1,7 +1,7 @@
 .. _maxwell1_fundamentals_interface_conditions_derivation:
 
-Derivation of Interface Conditions
-==================================
+Introduction
+============
 
 Here, we derive the interface conditions for fields :math:`\mathbf{e}` and :math:`\mathbf{h}` as well as for fluxes :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}` according to Griffiths (:cite:`griffiths1999`). This can be accomplished by using Maxwell's equations in integral form in the time-domain, where:
 
@@ -39,7 +39,7 @@ Recall that :math:`Q_f` and :math:`\mathbf{j}` are the total enclosed free charg
 where :math:`\sigma` denotes the electric conductivity, :math:`\varepsilon` denotes the dielectric permittivity and :math:`\mu` denotes the magnetic permeability.
 
 Components Normal to the Interface
-----------------------------------
+==================================
 
 Here, we consider components of the fields and fluxes which are normal to the interface.
 
@@ -152,7 +152,7 @@ To obtain the interface condition for normal components of the magnetic field, w
 
 
 Components Tangential to the Interface
---------------------------------------
+======================================
 
 Here, we consider components of the fields and fluxes which are tangential to the interface.
 

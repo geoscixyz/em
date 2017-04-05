@@ -1,7 +1,7 @@
 .. _solving_maxwells_equations:
 
-Solving Maxwell's Equations in Practice
-=======================================
+Solving Maxwell's Equations
+===========================
 
 .. purpose::
 
@@ -26,40 +26,33 @@ In ":ref:`quick_guide_maxwell`", we presented general formulations for Maxwell's
 - :ref:`DC Resistivity:<dcr_index>`
 
 .. math::
-	\nabla \cdot \sigma \phi = \nabla \cdot \mathbf{J_s}
+	\begin{align}
+	\nabla \cdot \sigma \phi &= \nabla \cdot \mathbf{J_s}\\
+	\mathbf{E} =& - \nabla \phi
+	\end{align}
 
-where :math:`\mathbf{J_s}` is an electrical current source and :math:`\phi` is a scalar potential such that :math:`\mathbf{E} = -\nabla \phi`.
+where :math:`\mathbf{J_s}` is an electrical current source and :math:`\phi` is a scalar potential.
 
 - :ref:`Frequency Domain Electromagnetics:<airborne_fdem_index>`
 
 .. math::
 	\begin{align}
-	\nabla\times\nabla\times\mathbf{E} + i\omega \mu_0 \sigma \mathbf{E} &= - i\omega \mu_0 \mathbf{J_s}\\
+	\nabla\times \mu^{-1} \nabla\times\mathbf{E} + i\omega \sigma \mathbf{E} -& \omega^2 \varepsilon \mathbf{E} = - i\omega \mathbf{J_s}\\
 	\nabla\times\mathbf{E} + i\omega \mathbf{B} &= 0
 	\end{align}
 
-where :math:`\mathbf{J_s}` is an electrical current source. For this problem, the magnetic properties of the Earth are typically neglected (i.e. :math:`\mu\approx \mu_0`). Furthermore, we operate in the quasi-static regime (:math:`\sigma \gg \omega \varepsilon`), allowing us to neglect electric displacement.
+where :math:`\mathbf{J_s}` is an electrical current source. For some problems, we may be able to work in the quasi-static (:math:`\sigma \gg \omega \varepsilon`) or wave (:math:`\sigma \ll \omega \varepsilon`) regimes; allowing us to neglect terms involving :math:`\mathbf{E}`. In many geological environments, the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`). In this case, we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
 
 - :ref:`Time Domain Electromagnetics:<airborne_tdem_index>`
 
 .. math::
 	\begin{align}
-	\nabla\times\nabla\times\mathbf{e} + \mu_0 \sigma \frac{\partial \mathbf{e}}{\partial t} &= - \mu_0 \frac{\partial \mathbf{j_s}}{\partial t}\\
+	\nabla\times \mu^{-1} \nabla\times\mathbf{e} + \sigma \frac{\partial \mathbf{e}}{\partial t} +& \varepsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}= - \frac{\partial \mathbf{j_s}}{\partial t}\\
 	\nabla\times\mathbf{e} + \frac{\partial \mathbf{b}}{\partial t} &= 0
 	\end{align}
 
-where :math:`\mathbf{j_s}` is an electrical current source. This equation is the time-dependent equivalent to the one used in frequency domain electromagnetics.
+where :math:`\mathbf{j_s}` is an electrical current source. This equation is the time-dependent equivalent to the one used in frequency domain electromagnetics. For some problems, we may be able to work in the quasi-static or wave regimes; allowing us to neglect terms involving :math:`\mathbf{e}`. If the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`), we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
 
-- :ref:`Time-Dependent Wave Equation:<time_domain_equations>`
-
-.. math::
-	\nabla^2 \mathbf{e} - \frac{1}{v^2} \frac{\partial^2 \mathbf{e}}{\partial t^2} = \mu \frac{\partial \mathbf{j_s}}{\partial t}
-
-where :math:`\mathbf{j_s}` defines an electrical current source and :math:`v=1/\!\sqrt{\mu\varepsilon}`. For this problem, electric displacement dominates the current density and we can use the wave regime approximation (:math:`\sigma \ll \omega \varepsilon`). The Laplacian operator results from assuming the physical properties defining discrete regions within the domain are homogeneous.
-
-
-.. note::
-	These are only a few examples. Other problems in electromagnetic geosciences may require different formulations. Additionally, there may be multiple formulations of Maxwell's equations which can be used to solve a particular problem. It is up to the researcher to choose the one which is the most effective.
 
 Boundary and Initial Conditions
 -------------------------------
@@ -178,7 +171,7 @@ As a final step, the numerical problem is commonly written as a linear system an
 .. math::
 	\mathbf{A(m)u=q_s}
 
-where :math:`\mathbf{u}` contains the fields and/or fluxes at discrete locations throughout the domain, :math:`\mathbf{q_s}` is a vector corresponding to the source term and :math:`\mathbf{A(m)}` is a linear operator that depends on the physical properties (:math:`\sigma,\mu,\varepsilon`) which make up a physical property model :math:`\mathbf{m}`. In electromagnetic geosciences, we are frequently interested in the "inverse problem". i.e., can we recover a physical property model :math:`\mathbf{m}` if :math:`\mathbf{u}` and :math:`\mathbf{q_s}` are known?
+where :math:`\mathbf{u}` contains the fields and/or fluxes at discrete locations throughout the domain, :math:`\mathbf{q_s}` is a vector corresponding to the source term and :math:`\mathbf{A(m)}` is a linear operator that depends on the physical properties (:math:`\sigma,\mu,\varepsilon`). Collectively, the physical properties defining each cell make up a physical property model :math:`\mathbf{m}`. In electromagnetic geosciences, we are frequently interested in the "inverse problem". That is, can we recover the physical property model :math:`\mathbf{m}` if :math:`\mathbf{u}` and :math:`\mathbf{q_s}` are known?
 
 
 

@@ -1,7 +1,7 @@
 .. _frequency_domain_plane_wave_sources_analytic_solution:
 
-Analytic Solution (Frequency Domain)
-====================================
+Analytic Solution
+=================
 
 .. purpose::
 

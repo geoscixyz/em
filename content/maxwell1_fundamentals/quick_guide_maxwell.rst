@@ -1,7 +1,7 @@
 .. _quick_guide_maxwell:
 
-Maxwell's Equations in Various Forms
-====================================
+Overview of Maxwell's Equations
+===============================
 
 .. purpose::
 	

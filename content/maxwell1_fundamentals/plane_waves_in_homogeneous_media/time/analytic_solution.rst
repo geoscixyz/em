@@ -1,7 +1,7 @@
 .. _time_domain_plane_wave_sources_analytic_solution:
 
-Analytic Solution (Time Domain)
-===============================
+Analytic Solution
+=================
 
 .. purpose::
 
