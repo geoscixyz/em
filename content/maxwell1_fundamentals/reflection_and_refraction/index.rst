@@ -25,7 +25,7 @@ The content within this portion is organized into 3 parts:
 
 	- :ref:`Reflection and Snell's Law<Snells_law>`: Defines the relationship between the propagation directions of incident, reflected and refracted EM waves.
 	- :ref:`Fresnel Equations<Fresnel_equations>`: Defines the relationships between the propagation directions and amplitudes of incident, reflected, refracted and transmitted EM waves.
-	- N-Layer Earth: After characterizing the behaviours of plane waves at a single interface, we extend the theory to a layered Earth model.
+	- :ref:`N-Layer Earth<impedance_layeredearth>`: After characterizing the behaviours of plane waves at a single interface, we extend the theory to a layered Earth model.
 
 **Contents**
 
