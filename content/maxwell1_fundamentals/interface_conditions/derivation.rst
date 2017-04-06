@@ -1,7 +1,7 @@
 .. _maxwell1_fundamentals_interface_conditions_derivation:
 
-Introduction
-============
+Derivation of Interface Conditions
+==================================
 
 Here, we derive the interface conditions for fields :math:`\mathbf{e}` and :math:`\mathbf{h}` as well as for fluxes :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}` according to Griffiths (:cite:`griffiths1999`). This can be accomplished by using Maxwell's equations in integral form in the time-domain, where:
 

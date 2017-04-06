@@ -36,8 +36,7 @@ Electromagnetic fields and fluxes are discontinuous across physical property int
 	- **Free Surface Current Density** (:math:`K_f`): The free surface current per unit area on the interface. Occurs due to discontinuities in the tangential component of the magnetic field across the interface.
 
 
-Derivation of Interface Conditions
-----------------------------------
+**Contents**
 
 .. toctree::
     :maxdepth: 2
