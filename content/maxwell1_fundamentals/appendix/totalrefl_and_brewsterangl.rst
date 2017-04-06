@@ -1,16 +1,16 @@
 .. _totalrefl_and_brewsterangl:
 
-Total reflection and Brewster angle
-===================================
+Total Reflection and Brewster's Angle
+=====================================
 
 .. purpose::
 
     We first identify total reflection and brewster angle for a dielectric media, then relate them to conductive medium.
 
-Total reflection
+Total Reflection
 ----------------
 
-For a perfect dielectric, the conductivity is zero and the permeability is that of free space that is, :math:`\mu_1=\mu_2=\mu_0`. Snell's law of refraction shown in :ref:`snells_law` with the setup shown in :numref:`snellslaw_setup` then reduces to
+For a perfect dielectric, the conductivity is zero and the permeability is that of free space that is, :math:`\mu_1=\mu_2=\mu_0`. In this case, Snell's law reduces to:
 
 .. math::
     \frac{\text{sin} \theta_i}{\text{sin} \theta_t} = \frac{k_1}{k_2} = \Big(\frac{\epsilon_2}{\epsilon_1}\Big)^{1/2} = n_{12}
@@ -26,8 +26,8 @@ where :math:`n_{12}` is the relative index of refraction. If :math:`\epsilon_2 >
    Tranmission angle :math:`\theta_t` as a function of the incident angle :math:`\theta_i` when :math:`\sigma_1` = 1 S/m and :math:`\sigma_2` = 0.1 S/m. Magnetic permeability and dielectric permittivitivy assumed to be those of free-space (:math:`\epsilon = \epsilon_0` and :math:`\mu = \mu_0`)
 
 
-Brewster angle
---------------
+Brewster's Angle
+----------------
 
 From derived reflection coefficients for TE mode in :ref:`fresnel_equations`, the reflection coefficient for perfect dielectric can be written as
 

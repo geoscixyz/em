@@ -78,22 +78,58 @@ integrands, giving the differential form of Gauss's law:
 It can be shown that Gauss' law for electric fields is equivalent to Coulomb's
 law (see :ref:`gauss_electric_equivalence_to_coulombs_law`)
 
+Gauss's Law in Matter
+---------------------
+
+Gauss's law for electric fields is most easily understood by neglecting :ref:`electric displacement<dielectric_permittivity_index>` (:math:`\mathbf{d}`). In matter, the :ref:`dielectric permittivity<dielectric_permittivity_index>` may not be equal to the permittivity of free-space (i.e. :math:`\varepsilon \neq \varepsilon_0`). In matter, the density of electric charges can be separated into a "free" charge density (:math:`\rho_f`) and a "bounded" charge density (:math:`\rho_b`), such that:
+
+.. math::
+	\rho = \rho_f + \rho_b
+	:label: gauss_law_charge_decomp
+
+The free-charge density refers to charges which flow freely under the application of an electric field; i.e. they produce a current which is divergence-free. The bounded-charge density refers to electrical charges attributed to electrical polarization (:math:`\mathbf{p}`). By combining Eqs. :eq:`Gauss_e_diff` and :eq:`gauss_law_charge_decomp` with our definition for :ref:`electrical polarization<dielectric_permittivity_index>`, we find that:
+
+.. math::
+	\nabla \cdot \mathbf{d} - \nabla \cdot \mathbf{p} = \rho_f + \rho_b
+	:label:
+
+By using the constitutive relationship :math:`\mathbf{d} = \varepsilon \mathbf{e}` and separating the previous equation into bounded and free contributions, we find that:
+
+.. math::
+	-\nabla \cdot \mathbf{p} = \rho_b
+	:label:
+
+and
+
+.. math::
+	\nabla \cdot \mathbf{d} = \rho_f
+	:label:
+
+The above equation is the **differential form of Gauss's equation in matter**. Meanwhile, the **integral form of Gauss's equations in matter** is given by:
+
+.. math::
+	\int_V \nabla \cdot \mathbf{d} \; dV = \oint_S \mathbf{d} \cdot \mathbf{\hat n} \; da = Q_f
+
+where :math:`Q_f` is the total enclosed free charge.
+
 Units
 -----
 
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Surface area      |  :math:`\text{S}`   | :math:`\text{m}^{2}`               |      Square meter                     |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Volume            |  :math:`V`          | :math:`\text{m}^{3}`               |                  Cubic meter          |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric charge   | :math:`\text{q, Q}` | :math:`\text{C}`                   |            Coulomb                    |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electric charge density| :math:`\rho`        |:math:`\frac{\text{C}}{\text{m}^3}` |  Coulomb per cubic meter              |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|     Electric field    | :math:`\mathbf{e}`  |:math:`\frac{\text{V}}{\text{m}}`   | Volt per meter                        |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
-|Electrical permittivity|:math:`\varepsilon_0`| :math:`\frac{\text{F}}{\text{m}}`  | Farad per meter                       |
-+-----------------------+---------------------+------------------------------------+---------------------------------------+
++-----------------------+-----------------------------+---------------------+-------------------------+
+|     Surface area      |  :math:`\text{S}`           | m :math:`\! ^{2}`   | Square meter            |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|     Volume            |  :math:`V`                  | m :math:`\! ^{3}`   |  Cubic meter            |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|     Electric charge   | :math:`q, Q, Q_f`           | C                   |  Coulomb                |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|Electric charge density| :math:`\rho, \rho_f, \rho_b`| C/m :math:`\! ^{3}` | Coulomb per cubic meter |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|     Electric field    | :math:`\mathbf{e}`          | V/m                 | Volt per meter          |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|Electric displacement  | :math:`\mathbf{d}`          | A/m :math:`\! ^{2}` | Volt per meter          |
++-----------------------+-----------------------------+---------------------+-------------------------+
+|Dielectric permittivity|:math:`\varepsilon`          | F/m                 | Farad per meter         |
++-----------------------+-----------------------------+---------------------+-------------------------+
 
 **Conversions**
 

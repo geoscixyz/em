@@ -10,31 +10,7 @@ Visualization of the Electromagnetic Fields
     By completing this exercise, you will become comfortable with the numerical modeling tools provided and gain a fundamental understanding of the fields which are caused by a harmonic magnetic dipole.
 
 
-
-Introduction
-------------
-
-Here, we will show you how to use the widget and walk you through some research questions.
-
-
-
-**Getting Started**
-
-Within the jupyter notebook, there are 3 tools:
-
-**Step 1: Choosing Geometric Parameters**
-
-These toggles allow the user to adjust the problem geometry and visualize it in 3D.
-Relative to the source dipole, the user may specify observation locations on a profile line or comprising a plane.
-An example of the problem geometry is shown on the right.
-
-
-**Step 2: Visualizing the Fields**
-
-These toggles allow the user to change physical parameters relevant to the problem and visualize different components of the electric field, magnetic field and current density.
-As any of the physical parameters or plotting parameters are changed, the fields are automatically plotted on the profile line and plane defined in Step 1.
-An example of the fields on a profile line and on a plane is shown below.
-
+**Link to the app**
 
 Research Questions
 ------------------
@@ -68,7 +44,7 @@ Now slowly increase the frequency by factors of 10. When you reach 1000 Hz, noti
 
 **The Inductive Response:**
 
-According to `Faraday's law<faraday>`, the effects of EM induction increase as frequency increases. Set the conductivity to 0.1 S/m and choose a point (x,y,z) = (40m, 0m, 0m). Examine the x,y and z components of the electric and magnetic fields.
+According to :ref:`Faraday's law<faraday>`, the effects of EM induction increase as frequency increases. Set the conductivity to 0.1 S/m and choose a point (x,y,z) = (40m, 0m, 0m). Examine the x,y and z components of the electric and magnetic fields.
 
 	- At what frequency do the effects of EM induction become significant?
 	- Now increase the background conductivity to 1 S/m and examine the same location. At what frequency do the effects of EM induction become significant?
@@ -76,16 +52,12 @@ According to `Faraday's law<faraday>`, the effects of EM induction increase as f
 
 **Magnetic Permeability and Dielectric Permittivity**
 
-Set the log-conductivity to .
-
+Set the log-conductivity to 0.01 S/m.
 
 	- Try increasing the relative permeability (:math:`\mu_r`). Do you notice any significant changes in the shape and amplitude of the electric and magnetic fields?
 	- Now try increasing the relative permittivity (:math:`\varepsilon_r`). When you do this at low frequencies, do you notice any significant changes in the shape and amplitude of the electric and magnetic fields? How about when you do this at high frequencies?
 
 
-.. **Hypothetical Scenario 1:**
-
-.. *I put this here in case we wanted to make a hypthetical scenario where these equations could be used to solve a practical problem.*
 
 
 

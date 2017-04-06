@@ -1,30 +1,19 @@
 .. _time_domain_equations:
 
-Time Domain Equations
-=====================
-
-.. raw:: html
-    :file: ../../underconstruction.html
-
-
+Maxwell's Equations: Time Domain
+================================
 
 .. purpose::
 
-    We combine the first-order partial :ref:`differential equations
-    <differential_equations_time>` into second-order equations for :math:`\mathbf{e}`
-    or :math:`\mathbf{h}` in the time domain. The equation has both a wave propagation
-    and a diffusion term. When :math:`\sigma` is zero, the wave propagates without
-    attenuation. For most earth problems the diffusion term dominates and the
-    electromagnetic equations behave like the heat equation.
+    Here, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell<ampere_maxwell>` equation are used to construct lossy wave equations for both :math:`\mathbf{e}` and :math:`\mathbf{h}`, respectively. This is accomplished by assuming we are in a homogeneous medium. Detailed derivations can be found in the :ref:`Appendix<maxwell1_appendix_wave_eq_derivation_time>`. Various components of the resulting 2nd order differential equations in time are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.
 
-We begin with :ref:`Faraday's Law <faraday>` and :ref:`Ampere-Maxwell's Law
-<ampere_maxwell>` in the time-domain:
+Let us begin with the differential form of :ref:`Faraday's Law <faraday>` and the :ref:`Ampere-Maxwell's equation <ampere_maxwell>`, respectively:
 
 .. include:: ../equation_bank/faraday_time.rst
 
 .. include:: ../equation_bank/ampere_maxwell_time.rst
 
-and the three constitutive relations:
+as well as the three :ref:`constitutive relations<physical_properties_index>`:
 
 .. include:: ../equation_bank/ohms_law_time.rst
 
@@ -34,33 +23,65 @@ and the three constitutive relations:
 .. math:: \mathbf{b} = \mu \mathbf{h}
         :name: bmuh
 
-The goal is to combine these equations to obtain a single equation that
-involves :math:`\mathbf{e}` or :math:`\mathbf{h}`. For instance, to develop an
-equation for :math:`\mathbf{e}`, we take the curl of :eq:`faraday_time` and
-use Equations :eq:`ohms_law_time` and :eq:`depse` to reduce the number of
-variables. Because all of the physical properties are assumed to be constant
-in space and time, they are not affected by curl operators or time
-derivatives. Thus the equation for :math:`\mathbf{e}` becomes Equation
-:eq:`hme7`.
+Our goal is to combine these equations to obtain an equation which depends solely on :math:`\mathbf{e}` or :math:`\mathbf{h}`. For :math:`\mathbf{e}`, we begin by taking the curl of :eq:`faraday_time`. We then use Eqs. :eq:`ohms_law_time` and :eq:`depse` to reduce the number of variables. Assuming all of the physical properties are constant in space and time, we can take them outside curl operators and time derivatives. Ultimately, we obtain Eq. :eq:`hme7`:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}  = 0
         :name: hme7
 
-A similar procedure can be used to obtain an equation that involves only :math:`\mathbf{h}`, starting from Equation :eq:`ampere_maxwell_time` and using Equations :eq:`faraday_time` and :eq:`bmuh`, we obtain:
+A similar procedure can be used to obtain an equation that involves only :math:`\mathbf{h}`. We start from Eq. :eq:`ampere_maxwell_time`, and by using Eqs. :eq:`faraday_time` and :eq:`bmuh` we obtain:
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
         :name: hmh7
 
-The detailed derivation of Equations :eq:`hme7` and :eq:`hmh7` can be found
-:ref:`here <time_domain_equations_details>`.
+The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`here <maxwell1_appendix_wave_eq_derivation_time>`.
 
-The equations for :math:`\mathbf{e}` and :math:`\mathbf{h}` are identical in
-form. The first term is the Laplacian, the second term involves a first
-derivative in time, and the third term has a second order time derivative.
-This is the general form taken by a propagating and attenuating wave. If
-:math:`\sigma` = 0, the second term vanishes and the equations become a pure
-wave equation so that the energy propagates without loss. Alternatively, if
-the third term were zero, the equations reduce to the heat equation and the
-field is diffusive.
+The Lossy Wave Equation
+-----------------------
 
-..todo:: alter equations to include source terms
+Eqs. :eq:`hme7` and :eq:`hmh7` have identical form and are both characterized using the **lossy wave equation**. Thus, electromagnetic signals propagate as waves that are also subject to diffusion. The first term in each equation is called the Laplacian (:math:`\nabla^2`). The second term, which contains a first order time derivative, controls the diffusive behaviour of the electromagnetic signal. The third term, which contains a second order time derivative, represents an energy conservation term. The propagation velocity, diffusion and other behaviours of electromagnetic waves are discussed when presenting materials on :ref:`plane waves in homogeneous media<time_domain_plane_wave_sources_analytic_solution>`.
+
+Quasi-Static Regime
+-------------------
+
+In the quasi-static regime, the diffusive term is much larger than the conservation term, i.e.:
+
+.. math::
+    \sigma \frac{\partial \mathbf{e}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
+    :name:
+
+In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the **heat equation**, with:
+
+.. math::
+    \nabla^2 \mathbf{e} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
+    :name:
+
+and
+
+.. math::
+    \nabla^2 \mathbf{h} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} = 0
+    :name:
+
+The rate of diffusion is controlled by the product of :math:`\mu\sigma`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\sigma` varies over many orders of magnitude. As a result, the diffusive properties of electromagnetic signals are primarily dependent on the conductivity. The diffusive behaviour of EM signals is a very important aspect of time-domain electromagnetic (:ref:`TDEM<airborne_tdem_index>`) methods.
+
+
+Wave Regime
+-----------
+
+In the wave regime, the diffusive term is much smaller than the conservation term, i.e.:
+
+.. math::
+    \sigma \frac{\partial \mathbf{e}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \ll \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
+
+In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the classic **wave equation**, with:
+
+.. math::
+    \nabla^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = 0
+
+and
+
+.. math::
+    \nabla^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} = 0
+
+Here, energy is conserved and both :math:`\mathbf{e}` and :math:`\mathbf{h}` propagate as waves. The properties of the waves (wavelength, propagation velocity, etc...) depend on the product of :math:`\mu\epsilon`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\epsilon` varies over several orders of magnitude. As a result, the wave properties are primarily dependent on the dielectric permittivity. Wave properties are an important aspect of ground-penetrating radar (:ref:`GPR<gpr_index>`) surveys.
+
+
