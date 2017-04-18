@@ -81,7 +81,7 @@ Thibaut Astic
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://simpeg.xyz/s/img/people/thibaut.jpg"><img alt="http://simpeg.xyz/s/img/people/thibaut.jpg" class="align-left" src="http://simpeg.xyz/s/img/people/thibaut.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/thibaut.jpg"><img alt="http://simpeg.xyz/img/people/thibaut.jpg" class="align-left" src="http://simpeg.xyz/img/people/thibaut.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -169,7 +169,7 @@ Patrick Belliveau
 
             
 
-.. _eholtham:
+.. _lberan:
 
 Laurens Beran
 -------------
@@ -463,7 +463,7 @@ Dom Fournier
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://simpeg.xyz/s/img/people/dom.jpg"><img alt="http://simpeg.xyz/s/img/people/dom.jpg" class="align-left" src="http://simpeg.xyz/s/img/people/dom.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/dom.jpg"><img alt="http://simpeg.xyz/img/people/dom.jpg" class="align-left" src="http://simpeg.xyz/img/people/dom.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -581,6 +581,32 @@ Stanislawa Hickey
         <strong>email:</strong> 
         <a class="reference external" href="mailto:stanislawah@miregeoscience.com">stanislawah@miregeoscience.com</a>
                         
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
+.. _eholtham:
+
+Elliot Holtham
+--------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> Computational Geosciences Inc.
+                              <br>
+        <strong>location:</strong> Vancouver, BC
                               
     </div>
     <br><br>
@@ -1005,7 +1031,7 @@ Michael Mitchell
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://www.simpeg.xyz/s/img/people/mike.jpg"><img alt="http://www.simpeg.xyz/s/img/people/mike.jpg" class="align-left" src="http://www.simpeg.xyz/s/img/people/mike.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/mike.jpg"><img alt="http://simpeg.xyz/img/people/mike.jpg" class="align-left" src="http://simpeg.xyz/img/people/mike.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
