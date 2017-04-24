@@ -114,7 +114,6 @@ libraries:
   version: "1.1.7"
 - name: numpy
   version: "latest"
-- name: jinja2
-  version: "latest"
-- name: flask
-  version: "latest"
+# - name: jinja2
+#   version: "latest"
+
