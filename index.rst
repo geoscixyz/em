@@ -87,15 +87,9 @@ experts, worldwide, contribute. Join the development on Github_ or
 EM GeoSci is under construction
 -------------------------------
 
-.. raw:: html
-
-   <div class="col-md-2" align="center">
-      <a href="https://github.com/geoscixyz/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
-   </div>
-
 EM GeoSci is under active construction. We are working to fill in blank
 pages and address todo's. Our  goal is to have a mature version available by the
-beginning of 2017. In the meantime, we are making this resource available and
+end of 2017. In the meantime, we are making this resource available and
 `inviting contributions for case histories <http://disc2017.geosci.xyz/#contribute>`_.
 We welcome `feedback <http://geosci.xyz/contact>`_ about the useability of the site and the technical details.
 
@@ -151,9 +145,10 @@ At the large scale we have the following items.
 
 - :ref:`maxwell1_fundamentals_index`:
 
-  - This contains items that relate to the general understanding of Maxwell's
-    equations and how they are solved. Topics are general and not survey specific.
-    (eg  the basic equations, interface conditions, concepts of fields and fluxes,
+  - This contains a summary and background about the formative laws 
+  that are the basis for Maxwell's
+    equations as well as an introduction to general topics that and not survey specific.
+    (eg  the basic equations in the frequency and time domain, interface conditions, concepts of fields and fluxes,
     plane waves in homogeous media, fields from electric and magnetic dipoles etc.
     )
 
