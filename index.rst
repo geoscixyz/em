@@ -146,7 +146,7 @@ At the large scale we have the following items.
 - :ref:`maxwell1_fundamentals_index`:
 
   - This contains a summary and background about the formative laws 
-  that are the basis for Maxwell's
+    that are the basis for Maxwell's
     equations as well as an introduction to general topics that and not survey specific.
     (eg  the basic equations in the frequency and time domain, interface conditions, concepts of fields and fluxes,
     plane waves in homogeous media, fields from electric and magnetic dipoles etc.
