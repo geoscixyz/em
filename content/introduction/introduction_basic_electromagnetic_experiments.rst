@@ -11,7 +11,7 @@ energy is input to the
 ground. This energy propagates through the subsurface and signals are
 recorded. We briefly discuss each of the elements involved in a generic geophysical survey below.
 
-**Physical properties:** Earth materials can be characterized in terms of their :ref:`physical properties <<physical_properties_index>`.
+**Physical properties:** Earth materials can be characterized in terms of their :ref:`physical properties <physical_properties_index>`.
 The properties of relevance to electromagnetics are:
 
 - :ref:`electrical conductivity <electrical_conductivity_index>`
