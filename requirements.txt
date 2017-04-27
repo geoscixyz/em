@@ -2,6 +2,7 @@ numpy
 scipy
 ipython
 ipywidgets
+flask
 sphinx==1.4.8
 matplotlib
 properties[math]
