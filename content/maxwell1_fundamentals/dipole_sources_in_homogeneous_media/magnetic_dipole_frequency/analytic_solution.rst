@@ -82,7 +82,7 @@ and the solution to Eq. :eq:`F_Potential` is:
 
 
 Recall the :math:`\mathbf{F}` can be used to obtain the electric and magnetic field according to Eqs. :eq:`H_F_potential` and :eq:`E_F_potential`.
-Thus the electric field for an electrical current dipole in the :math:`\hat x` direction is:
+Thus the electric field for a magnetic dipole in the :math:`\hat x` direction is:
 
 .. math::
 	\mathbf{E_m} = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \mathbf{\hat y} + \frac{y}{r} \mathbf{\hat z} \right).
