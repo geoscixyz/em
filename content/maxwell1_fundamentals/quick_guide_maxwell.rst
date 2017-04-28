@@ -15,7 +15,7 @@ Maxwell's equations are comprised of the first four :ref:`formative laws<formati
 (d) :ref:`integral_equations_frequency`
 
 This page is designed to be a quick access to the relevant equations with proper
-:ref:`notation<introduction_notation>` and units. The equations are appropriate for EM fields in matter. If the fields are in free space then the same constititive relations are used but with epsilon_0=.. and mu_0= ..
+:ref:`notation<introduction_notation>` and units. The equations are appropriate for EM fields in matter. If the fields are in free space then the same constititive relations are used but with epsilon_0=.. and mu_0= .. These constitutive equations are also written by assuming that the physical properties are isotropic and non-dispersive. Further elaboration about this can be found in WH p 133. 
 
 Variables and Units
 -------------------
