@@ -7,9 +7,7 @@ Overview of Maxwell's Equations
 	
 	Having provided the set of :ref:`formative laws<formative_laws_index>` for electromagnetics, we present four common representations of Maxwell's equations. This page is meant to serve as a quick guide. For specific problems, it may be beneficial to begin from less common forms of Maxwell's equations. Please note however, that all forms can be derived from the expressions presented here.
 
-Maxwell's equations are comprised of the first four :ref:`formative laws<formative_laws_index>`; i.e. :ref:`Gauss's law for electric fields<gauss_electric>`, :ref:`Gauss's law for magnetic fields<gauss_magnetic>`, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell law<ampere_maxwell>`. Although we tend to state Gauss's law's for electric and magnetic fields explicitly, it should be noted that all other formative laws may be derived from Farday's law and the Ampere-Maxwell equation.
-
-In this section, we will provide four forms for representing Maxwell's equations:
+Maxwell's equations are comprised of the first four :ref:`formative laws<formative_laws_index>`; i.e. :ref:`Gauss's law for electric fields<gauss_electric>`, :ref:`Gauss's law for magnetic fields<gauss_magnetic>`, :ref:`Faraday's law<faraday>` and the :ref:`Ampere-Maxwell law<ampere_maxwell>`. The equations can be written in various ways but here we with fields (e,h) and fluxes (b,d) and the constitutive relations that relate these. The equations can be written in frequency or in time and in a differential or integral form:
 
 (a) :ref:`differential_equations_time`
 (b) :ref:`differential_equations_frequency`
@@ -17,7 +15,7 @@ In this section, we will provide four forms for representing Maxwell's equations
 (d) :ref:`integral_equations_frequency`
 
 This page is designed to be a quick access to the relevant equations with proper
-:ref:`notation<introduction_notation>` and units.
+:ref:`notation<introduction_notation>` and units. The equations are appropriate for EM fields in matter. If the fields are in free space then the same constititive relations are used but with epsilon_0=.. and mu_0= ..
 
 Variables and Units
 -------------------
