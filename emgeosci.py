@@ -28,7 +28,7 @@ import os
 import jinja2
 import urllib, hashlib
 import json
-# from flask import request
+from flask import request
 
 from webapp2 import Route, RedirectHandler
 import webapp2_extras
