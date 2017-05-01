@@ -250,7 +250,7 @@ As we can see, higher frequency waves correspond to shorter wavelengths.
 
 In quasi-static regime (:math:`\epsilon\omega \ll \sigma`), the wavelength simplifies to:
 
-.. math:: \lambda = \sqrt{ \frac{2}{\omega \mu \sigma} }
+.. math:: \lambda = 2 \pi \delta
 
 Notice that in this case, the wavelength is actually equal to the skin depth.
 
