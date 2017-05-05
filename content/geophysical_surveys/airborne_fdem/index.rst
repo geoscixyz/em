@@ -23,6 +23,7 @@ A typical airborne system consists of the aircraft, either a fixed-wing or a hel
 
 Mounting coils on an aircraft, an airborne system can quickly probe the earth’s conductivity over large areas. As a result, it is particularly suitable for cost-effective regional reconnaissance and other situations where surface access is difficult. Compared to ground-based surveys, airborne EM may have a higher level of noise due to the power limitation and the rapid movement of the platform, which in general limits its depth penetration.
 
+Add something here
 
 
 **Contents**
