@@ -3,6 +3,7 @@ scipy
 ipython
 ipywidgets
 flask
+docutils==0.12
 sphinx==1.4.8
 matplotlib
 properties[math]
