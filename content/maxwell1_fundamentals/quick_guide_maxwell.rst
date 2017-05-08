@@ -40,7 +40,7 @@ Here, we present differential forms for :ref:`Gauss's law for electric fields<ga
 	\textbf{Ampere-Maxwell:}   \;\;  &\nabla\times\mathbf{h}=\mathbf{j} + \dfrac{\partial \mathbf{d}}{\partial t}
 	\end{align}
 
-where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
+where :math:`\rho_f` is the free change density and :math:`\mathbf{j}` is the free current density. The following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
 
 .. math::
 	\begin{align}
@@ -64,7 +64,7 @@ Here, we present differential forms for :ref:`Gauss's law for electric fields<ga
 	\textbf{Ampere-Maxwell:}    \;\; &\nabla\times\mathbf{H}=\mathbf{J} + i\omega \mathbf{D}
 	\end{align}
 
-where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
+where :math:`\rho_f` is the free change density and :math:`\mathbf{J}` is the free current density. The following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
 
 .. math::
 	\begin{align}
@@ -88,7 +88,7 @@ Here, we present integral forms for :ref:`Gauss's law for electric fields<gauss_
 	\textbf{Ampere-Maxwell:}    \; & \oint_C \!\mathbf{h} \cdot  d\mathbf{l} = \! \int_S \!\Big ( \mathbf{j} \!+\! \dfrac{\partial \mathbf{d}}{\partial t} \Big ) \!\cdot d\mathbf{a}
 	\end{align}
 
-where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
+where :math:`Q_f` is the total enclose free electrical charge and :math:`\mathbf{j}` is the free current density. :math:`d \mathbf{a}` is an infinitessimal unit of surface area with vector direction normal to the surface :math:`S`. :math:`d \mathbf{l}` is an infinitessimal length with vector direction along a closed path :math:`C`. The following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
 
 .. math::
 	\begin{align}
@@ -113,7 +113,7 @@ Here, we present integral forms for :ref:`Gauss's law for electric fields<gauss_
 	\textbf{Ampere-Maxwell:}    \; & \oint_C \!\mathbf{H} \cdot  d\mathbf{l} = \! \int_S \!\big ( \mathbf{J} \!+\! i\omega \mathbf{D} \big ) \!\cdot d\mathbf{a}
 	\end{align}
 
-where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
+where :math:`Q_f` is the total enclose free electrical charge and :math:`\mathbf{J}` is the free current density. :math:`d \mathbf{a}` is an infinitessimal unit of surface area with vector direction normal to the surface :math:`S`. :math:`d \mathbf{l}` is an infinitessimal length with vector direction along a closed path :math:`C`. The following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
 
 .. math::
 	\begin{align}
