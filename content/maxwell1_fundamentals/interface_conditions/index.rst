@@ -14,7 +14,7 @@ Interface Conditions
 
     Fields and fluxes across a horizontal physical property interface. 
 
-Electromagnetic fields and fluxes are discontinuous across physical property interfaces. Before solving Maxwell's equations for general cases, we must have appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}`. Here, we show the most general representations of interface conditions for electromagnetic fields and fluxes. These are tabulated below and are valid in both the time domain and the frequency domain.
+Electromagnetic fields and fluxes are discontinuous across physical property interfaces. Before solving Maxwell's equations for general cases, we must have appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}`. Here, we show the most general representations of interface conditions for electromagnetic fields and fluxes. These are tabulated below and are valid in both the time domain and the frequency domain. The physical properties in each layer are dielectric permittivity :math:`\varepsilon`, magnetic permeability :math:`\mu` and electrical resistivity :math:`\rho`, which is the reciprocal of the electrical conductivity (i.e. :math:`\rho = 1/\sigma`).
 
 +---------------------------------+------------------------------------------------------------+---------------------------------------------------------------+
 |Property                         | Normal Component                                           | Tangential Component                                          |
