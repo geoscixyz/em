@@ -34,11 +34,10 @@ Here, we present differential forms for :ref:`Gauss's law for electric fields<ga
 
 .. math::
 	\begin{align}
-	                            & \textbf{In a Vacuum}                              & & \textbf{In Matter} \\
-	\textbf{Gauss for E-field:}\;\;  & \nabla\cdot\mathbf{e}=\dfrac{\rho}{\varepsilon_0} & &\nabla\cdot\mathbf{d}=\rho_f \\
-	\textbf{Gauss for B-field:}\;\;  & \nabla\cdot\mathbf{b}=0                           & &\nabla\cdot\mathbf{b}=0 \\
-	\textbf{Faraday:}          \;\;  & \nabla\times\mathbf{e}=-\dfrac{\partial \mathbf{b}}{\partial t} & &\nabla\times\mathbf{e}=-\dfrac{\partial \mathbf{b}}{\partial t} \\
-	\textbf{Ampere-Maxwell:}   \;\;  & \nabla\times\mathbf{b}=\mu_0\varepsilon_0 \dfrac{\partial \mathbf{e}}{\partial t} & &\nabla\times\mathbf{h}=\mathbf{j_f} + \dfrac{\partial \mathbf{d}}{\partial t}
+	\textbf{Gauss for E-field:}\;\;  &\nabla\cdot\mathbf{d}=\rho_f \\
+	\textbf{Gauss for B-field:}\;\;  &\nabla\cdot\mathbf{b}=0 \\
+	\textbf{Faraday:}          \;\;  &\nabla\times\mathbf{e}=-\dfrac{\partial \mathbf{b}}{\partial t} \\
+	\textbf{Ampere-Maxwell:}   \;\;  &\nabla\times\mathbf{h}=\mathbf{j} + \dfrac{\partial \mathbf{d}}{\partial t}
 	\end{align}
 
 where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
@@ -59,11 +58,10 @@ Here, we present differential forms for :ref:`Gauss's law for electric fields<ga
 
 .. math::
 	\begin{align}
-	                                 & \textbf{In a Vacuum}                              & & \textbf{In Matter} \\
-	\textbf{Gauss for E-field:} \;\; & \nabla\cdot\mathbf{E}=\dfrac{\rho}{\varepsilon_0} & &\nabla\cdot\mathbf{D}=\rho_f \\
-	\textbf{Gauss for B-field:} \;\; & \nabla\cdot\mathbf{B}=0                           & &\nabla\cdot\mathbf{B}=0 \\
-	\textbf{Faraday:}           \;\; & \nabla\times\mathbf{E}=-i\omega\mathbf{B}         & &\nabla\times\mathbf{E}=-i\omega\mathbf{B} \\
-	\textbf{Ampere-Maxwell:}    \;\; & \nabla\times\mathbf{B}=i\omega\mu_0\varepsilon_0\mathbf{E} & &\nabla\times\mathbf{H}=\mathbf{J_f} + i\omega \mathbf{D}
+	\textbf{Gauss for E-field:} \;\; &\nabla\cdot\mathbf{D}=\rho_f \\
+	\textbf{Gauss for B-field:} \;\; &\nabla\cdot\mathbf{B}=0 \\
+	\textbf{Faraday:}           \;\; &\nabla\times\mathbf{E}=-i\omega\mathbf{B} \\
+	\textbf{Ampere-Maxwell:}    \;\; &\nabla\times\mathbf{H}=\mathbf{J} + i\omega \mathbf{D}
 	\end{align}
 
 where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
@@ -84,11 +82,10 @@ Here, we present integral forms for :ref:`Gauss's law for electric fields<gauss_
 
 .. math::
 	\begin{align}
-	                            & \;\;\;\;\;\;\;\;\; \textbf{In a Vacuum}                              & & \;\;\;\;\;\;\;\;\; \textbf{In Matter} \\
-	\textbf{Gauss for E-field:} \; & \int_V\nabla\cdot\mathbf{e}\; dV \! =\!\oint_S\mathbf{e}\cdot d \mathbf{a} \!=\! \dfrac{Q}{\varepsilon_0} & & \int_V\nabla\cdot\mathbf{d}\; dV \! =\!\oint_S\mathbf{d}\cdot d\mathbf{a} \! = \! Q_f \\
-	\textbf{Gauss for B-field:} \; & \oint_S \mathbf{b} \cdot  d\mathbf{a}=0                          & & \oint_S \mathbf{b} \cdot d \mathbf{a}=0 \\
-	\textbf{Faraday:}           \; & \oint_C \mathbf{e}\cdot d\mathbf{l}=-\int_S\dfrac{\partial \mathbf{b}}{\partial t}\cdot d\mathbf{a} & & \oint_C \mathbf{e}\cdot d\mathbf{l}=-\int_S\dfrac{\partial \mathbf{b}}{\partial t}\cdot d\mathbf{a} \\
-	\textbf{Ampere-Maxwell:}    \; & \oint_C \mathbf{b} \cdot d\mathbf{l} = \mu_0\varepsilon_0 \int_S \dfrac{\partial \mathbf{e}}{\partial t} \!\cdot d\mathbf{a} & & \oint_C \!\mathbf{h} \cdot  d\mathbf{l} = \! \int_S \!\Big ( \mathbf{j_f} \!+\! \dfrac{\partial \mathbf{d}}{\partial t} \Big ) \!\cdot d\mathbf{a}
+	\textbf{Gauss for E-field:} \; & \int_V\nabla\cdot\mathbf{d}\; dV \! =\!\oint_S\mathbf{d}\cdot d\mathbf{a} \! = \! Q_f \\
+	\textbf{Gauss for B-field:} \; & \oint_S \mathbf{b} \cdot d \mathbf{a}=0 \\
+	\textbf{Faraday:}           \; & \oint_C \mathbf{e}\cdot d\mathbf{l}=-\int_S\dfrac{\partial \mathbf{b}}{\partial t}\cdot d\mathbf{a} \\
+	\textbf{Ampere-Maxwell:}    \; & \oint_C \!\mathbf{h} \cdot  d\mathbf{l} = \! \int_S \!\Big ( \mathbf{j} \!+\! \dfrac{\partial \mathbf{d}}{\partial t} \Big ) \!\cdot d\mathbf{a}
 	\end{align}
 
 where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
@@ -110,11 +107,10 @@ Here, we present integral forms for :ref:`Gauss's law for electric fields<gauss_
 
 .. math::
 	\begin{align}
-	                            & \;\;\;\;\;\;\;\;\; \textbf{In a Vacuum}                              & & \;\;\;\;\;\;\;\;\; \textbf{In Matter} \\
-	\textbf{Gauss for E-field:} \; & \int_V\nabla\cdot\mathbf{E}\; dV \! = \!\oint_S\mathbf{E}\cdot d\mathbf{a} \! =\!\dfrac{Q}{\varepsilon_0} & &\int_V\nabla\cdot\mathbf{D}\; dV=\oint_S\mathbf{D}\cdot d \mathbf{a} \! =\! Q_f \\
-	\textbf{Gauss for B-field:} \; & \oint_S \mathbf{B} \cdot d\mathbf{a}=0           & &\oint_S \mathbf{B} \cdot d\mathbf{a}=0 \\
-	\textbf{Faraday:}           \; & \oint_C \mathbf{E}\cdot d\mathbf{l}=-i\omega\int_S\mathbf{B}\cdot d\mathbf{a} & &\oint_C \mathbf{E}\cdot d\mathbf{l}=-i\omega\int_S\mathbf{B}\cdot d\mathbf{a} \\
-	\textbf{Ampere-Maxwell:}    \; & \oint_C \mathbf{B} \cdot d\mathbf{l} = i\omega\mu_0\varepsilon_0 \int_S \mathbf{E} \cdot d\mathbf{a} & & \oint_C \!\mathbf{H} \cdot  d\mathbf{l} = \! \int_S \!\big ( \mathbf{J_f} \!+\! i\omega \mathbf{D} \big ) \!\cdot d\mathbf{a}
+	\textbf{Gauss for E-field:} \; &\int_V\nabla\cdot\mathbf{D}\; dV=\oint_S\mathbf{D}\cdot d \mathbf{a} \! =\! Q_f \\
+	\textbf{Gauss for B-field:} \; &\oint_S \mathbf{B} \cdot d\mathbf{a}=0 \\
+	\textbf{Faraday:}           \; &\oint_C \mathbf{E}\cdot d\mathbf{l}=-i\omega\int_S\mathbf{B}\cdot d\mathbf{a} \\
+	\textbf{Ampere-Maxwell:}    \; & \oint_C \!\mathbf{H} \cdot  d\mathbf{l} = \! \int_S \!\big ( \mathbf{J} \!+\! i\omega \mathbf{D} \big ) \!\cdot d\mathbf{a}
 	\end{align}
 
 where the following :ref:`constitutive relationships<physical_properties_index>` can be used to replace fields and fluxes:
