@@ -46,6 +46,7 @@ extensions = [
     'edit_on_github',
     'purpose',
     'question',
+    'geosciapp',
     # 'sphinx_nbexamples'
     # 'sphinx_gallery.gen_gallery',
 ]

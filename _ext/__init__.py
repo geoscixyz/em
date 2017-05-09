@@ -6,3 +6,4 @@ from copyImages import copyImages
 from edit_on_github import *
 from purpose import *
 from question import *
+from geosciapp import *
