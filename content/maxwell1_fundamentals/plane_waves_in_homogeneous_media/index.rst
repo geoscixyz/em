@@ -32,15 +32,12 @@ For :ref:`plane waves in the time domain<time_domain_plane_wave_sources_analytic
     - :ref:`Peak Velocity<time_domain_planewave_sources_peakvelocity>`: The velocity of the plane wave at its peak amplitude.
 
 .. geosciapp::
-    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you go to the :ref:`apps page<apps_index>` and open the corresponding application. Instructions for how to run applications can be found on the apps page. The related apps are **"FDEM_Planewave_Wholespace"** and **"TDEM_Planewave_Wholespace"**.
-
-.. danger::
-    sdf sd fasd fasd fasd .
+    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you go to the :ref:`apps page<apps_index>` and open the corresponding applications. Instructions for how to run applications can be found on the :ref:`apps page<apps_index>`. The related apps are **"FDEM_Planewave_Wholespace"** and **"TDEM_Planewave_Wholespace"**.
 
 FDEM Planewaves in Homogeneous Media
 ------------------------------------
 
-A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the "FDEM_Planewave_Wholespace" App; which plots the associated EM fields and demonstrates how the planewave properties depend on frequency and the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining frequency-dependent planewave properties in detail (link).
+A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the **"FDEM_Planewave_Wholespace"** App; which plots the associated EM fields and demonstrates how the planewave properties depend on frequency and the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining frequency-dependent planewave properties in detail (link).
 
 .. figure:: images/planewavedown.png
    :align: right
@@ -65,15 +62,13 @@ where the properties of the EM waves are defined by a complex wavenumber:
 The App considers a downward propagating planewave which results from an infinite current sheet on the xy-plane at :math:`z` = 0 m. The current sheet is polarized with a current :math:`I(\omega ) = I_x \textrm{cos}(\omega t)` such that it only generates electric field components along the x-direction. By Faraday's law, the corresponding magnetic field only has components along the y-direction. The analytic solution for the electric field in this case is given by:
 
 .. math::
-    \mathbf{E} = E_{x,0}^- \, e^{ikz} \mathbf{u_x}
+    \mathbf{E}(\omega) = E_{x,0}^- \, e^{ikz} \mathbf{u_x}
     :name:
 
-where :math:`E_{x,0}^-` is the scalar amplitude and :math:`\mathbf{u_x}` is the unit vector in the x-direction. The analytic solution for the corresponding magnetic field is given by:
+where :math:`E_{x,0}^-` is the scalar amplitude and :math:`\mathbf{u_x}` is the unit vector in the x-direction. Where :math:`\mathbf{u_y}` is the unit vector in the y-direction, the analytic solution for the corresponding magnetic field is given by:
 
 .. math::
-    \mathbf{H} = - \frac{k}{\omega \mu} E_{x,0}^- \, e^{ikz} \mathbf{u_y}
-
-where :math:`\mathbf{u_y}` is the unit vector in the y-direction.
+    \mathbf{H}(\omega) = - \frac{k}{\omega \mu} E_{x,0}^- \, e^{ikz} \mathbf{u_y}
 
 **Questions here**
 
@@ -81,7 +76,7 @@ where :math:`\mathbf{u_y}` is the unit vector in the y-direction.
 TDEM Planewaves in Homogeneous Media
 ------------------------------------
 
-A fundamental understanding of planewave propagation in the time domain can be obtained by using the "FDEM_Planewave_Wholespace" App; which plots the associated EM fields and demonstrates how time-dependent planewave properties depend on the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining time-dependent planewave properties in detail (link).
+A fundamental understanding of planewave propagation in the time domain can be obtained by using the **"TDEM_Planewave_Wholespace"** App; which plots the associated EM fields and demonstrates how time-dependent planewave properties depend on the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining time-dependent planewave properties in detail (link).
 
 .. figure:: images/planewavedown.png
    :align: right
@@ -102,15 +97,14 @@ The App considers a downward propagating planewave which results from an infinit
 In order to provide an intuitive understanding, we will first consider the quasi-stative solution. The analytic solution for the electric field in this case is given by:
 
 .. math::
-    \mathbf{e} = - E_{x,0}^- \frac{\big ( \my \sigma \big )^{1/2}}{2\pi^{1/2} t^{3/2}} e^{-\mu\sigma z^2/4t} \mathbf{u_x}
+    \mathbf{e}(t>0) = - E_{x,0}^- \frac{\big ( \mu \sigma \big )^{1/2}}{2\pi^{1/2} t^{3/2}} e^{-\mu\sigma z^2/4t} \mathbf{u_x}
     :name:
 
-where :math:`E_{x,0}^-` is the scalar amplitude and :math:`\mathbf{u_x}` is the unit vector in the x-direction. The analytic solution for the corresponding magnetic field is given by:
+where :math:`E_{x,0}^-` is the scalar amplitude and :math:`\mathbf{u_x}` is the unit vector in the x-direction. Where :math:`\mathbf{u_y}` is the unit vector in the y-direction, the analytic solution for the corresponding magnetic field is given by:
 
 .. math::
-    \mathbf{e} = E_{x,0}^- \frac{\big ( \my \sigma \big )^{1/2}}{2\pi^{1/2} t^{3/2}} e^{-\mu\sigma z^2/4t} \mathbf{u_y}
-
-where :math:`\mathbf{u_y}` is the unit vector in the y-direction. 
+    \mathbf{h}(t>0) = E_{x,0}^- \sqrt{\frac{\sigma}{\pi \mu t}} e^{-\mu\sigma z^2/4t} \mathbf{u_y}
+    :name: 
 
 **Questions here**
 

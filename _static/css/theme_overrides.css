@@ -48,7 +48,7 @@ div.admonition-question.admonition {
 }
 
 div.admonition-geosciapp.admonition {
-    background-color: #f0f0f0 !important;
+    background-color: #FFE1FF !important;
     margin-left: 0px;
     margin-right: 0px;
     padding: 1px 12px;
@@ -56,5 +56,5 @@ div.admonition-geosciapp.admonition {
 }
 
 #geosciapp.admonition-geosciapp.admonition .admonition-title {
-    background-color: #FF0000 !important;
+    background-color: #960096 !important;
 }
