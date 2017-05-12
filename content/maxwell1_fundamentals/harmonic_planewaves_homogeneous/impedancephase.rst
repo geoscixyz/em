@@ -1,7 +1,7 @@
-.. _harmonic_planewaves_homogeneous_impedance:
+.. _harmonic_planewaves_homogeneous_impedancephase:
 
-Impedance
-=========
+Wave Impedance and Phase
+========================
 
 **Impedance** is defined as the negative ratio between perpendicular components of corresponding electric and magnetic fields. For the setup shown in :numref:`planewave_down_fields`, the impedance is given by:
 
@@ -11,11 +11,11 @@ Impedance
 The impedance can be used to tell us about the **phase difference** between the electric and magnetic fields. The phase difference between the electric and magnetic field is given by:
 
 .. math::
-    \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg )
+    \phi_{Z_{xy}} = \textrm{tan}^{-1} \Bigg ( - \frac{\textrm{Im}[Z_{xy}]}{\textrm{Re}[Z_{xy}]} \Bigg )
 
 where :math:`0 \leq \phi_{xy} \leq \pi/4`. According to our definition, the electric field lags the magnetic field.
 
-.. figure:: ../images/EHquasi.gif
+.. figure:: images/EHquasi.gif
    :align: right
    :figwidth: 50%
    :name: waves_homogeneous_freq_EHquasi
@@ -37,7 +37,7 @@ The phase of the impedance is given by:
 
 In this case, the electric field lags the magnetic field by :math:`\pi/4` radians.
 
-.. figure:: ../images/EHwave.gif
+.. figure:: images/EHwave.gif
    :align: right
    :figwidth: 50%
    :name: waves_homogeneous_freq_EHwave

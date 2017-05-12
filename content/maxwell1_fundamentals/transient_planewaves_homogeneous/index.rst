@@ -14,14 +14,17 @@ We have previously shown that in homogeneous media, the propagation of electroma
 
 .. figure:: images/planewavedown.png
    :align: right
-   :figwidth: 40%
+   :figwidth: 50%
    :name: planewavedown_index_time_1
 
    Geometry of an EM plane wave propagating downwards.
 
 Here, we explore the propagation of plane waves in the time domain (for impulse signals). :ref:`Apps<transient_planewaves_homogeneous_index_app>` are provided that allow you to explore the concepts of diffusion and other aspects of the propagating EM fields. :ref:`Questions<transient_planewaves_homogeneous_questions>` are provided to promote interactive learning. The resource is augmented with derivations and equations that quantify the information learned through using the apps.
 
-    - The supporting derivation for the planewave solution is found :ref:`here<transient_planewaves_homogeneous_derivation>`.
+**Quick Links:**
+
+    - A derivation for the planewave solution is found :ref:`here<transient_planewaves_homogeneous_derivation>`.
+    - The supporting math for the app is found here (link).
     - Questions which can be solved using the app are found :ref:`here<transient_planewaves_homogeneous_questions>`.
 
 The content provided here parallels materials from many EM resources (see [WH88][Gri99][Str41]).
@@ -43,35 +46,9 @@ Transient Planewaves App
 .. geosciapp::
     While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you go to the :ref:`apps page<apps_index>` and open the Jupyter notebook for the **TDEM_Planewave_Wholespace** app.
 
-A fundamental understanding of planewave propagation in the time domain can be obtained by using the **"TDEM_Planewave_Wholespace"** App; which plots the associated EM fields and demonstrates how time-dependent planewave properties depend on the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining time-dependent planewave properties in detail (link).
+.. A fundamental understanding of planewave propagation in the time domain can be obtained by using the **"TDEM_Planewave_Wholespace"** App; which plots the associated EM fields and demonstrates how time-dependent planewave properties depend on the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining time-dependent planewave properties in detail (link).
 
-.. figure:: images/planewavedown.png
-   :align: right
-   :figwidth: 50%
-   :name: planewavedown_time_index
 
-   Geometry of an EM plane wave propagating downwards.
-
-In the time domain, the EM fields supported by planewaves in a homogeneous medium are characterized by the wave equation:
-
-.. math:: 
-    \boldsymbol{\nabla}^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} &= 0\\
-    \boldsymbol{\nabla}^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} &= 0
-    :name: Wave_full_analytic
-
-The App considers a downward propagating planewave which results from an infinite current sheet on the xy-plane at :math:`z` = 0 m. The current sheet is polarized with an impulse current such that it generates an initial electric field :math:`\mathbf{e}(t) = E_{x,0}^- \delta (t) \mathbf{u_x}`. As a result, the planewave only supports electric field components along the x-direction. By Faraday's law, the corresponding magnetic field only has components along the y-direction.
-
-In order to provide an intuitive understanding, we will first consider the quasi-stative solution. The analytic solution for the electric field in this case is given by:
-
-.. math::
-    \mathbf{e}(t>0) = - E_{x,0}^- \frac{\big ( \mu \sigma \big )^{1/2}}{2\pi^{1/2} t^{3/2}} e^{-\mu\sigma z^2/4t} \mathbf{u_x}
-    :name:
-
-where :math:`E_{x,0}^-` is the scalar amplitude and :math:`\mathbf{u_x}` is the unit vector in the x-direction. Where :math:`\mathbf{u_y}` is the unit vector in the y-direction, the analytic solution for the corresponding magnetic field is given by:
-
-.. math::
-    \mathbf{h}(t>0) = E_{x,0}^- \sqrt{\frac{\sigma}{\pi \mu t}} e^{-\mu\sigma z^2/4t} \mathbf{u_y}
-    :name: 
 
 Contents
 --------

@@ -3,31 +3,32 @@
 Wavenumber
 ==========
 
-The wavenumber characterizes all properties of electromagnetic waves described by the Helmholtz equation. Recall that the wave number :math:`k` is given by:
+For electromagnetic waves characterized by the Helmholtz equation, all of the corresponding wave properties can be derived from the wavenumber :math:`k`. The wavenumber at a particular frequency depends on the physical properties of the propagation medium and is given by:
 
-.. math:: k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}.
+.. math:: k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}
 
-and that it may be decomposed into real and imaginary components such that:
+The wavenumber has both real and imaginary components and may be decomposed as follows:
 
 .. math:: k = \alpha - i \beta
 
-According to :cite:`stratton1941,ward1988`, :math:`\alpha` and :math:`\beta` depend on the frequency and the physics properties of the media, where:
+such that the :ref:`general solution<harmonic_planewaves_homogeneous_derivation>` for EM planewaves propagating in the vertical direction becomes:
+
+.. math::
+	\mathbf{E} = \mathbf{E}_0^- \, e^{\beta z}e^{i(\alpha z-\omega t)} + \mathbf{E}_0^+ \, e^{-\beta z}e^{-i(\alpha z+\omega t)}
+
+According to :cite:`stratton1941,ward1988`, :math:`\alpha` and :math:`\beta` are given by:
 
 .. math:: \alpha = \omega \left ( \frac{\mu \epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right )^{1/2} + 1 \right ] \right )^{1/2} \geq 0
 
 .. math:: \beta = \omega \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2} \geq 0
 
-Let us now examine a wave travelling in the negative z-direction with the following form:
+When deriving a :ref:`general solution<harmonic_planewaves_homogeneous_derivation>`, we stated that :math:`\alpha` (the real component of the wavenumber) determines the :ref:`wavelength<harmonic_planewaves_homogeneous_wavelength>` and :ref:`velocity<harmonic_planewaves_homogeneous_phasevelocity>` of the planewave. Whereas :math:`\beta` (the imaginary component of the wavenumber) determines the :ref:`attenuation<harmonic_planewaves_homogeneous_skindepth>`. The details of this can be learned visually through app as well as through the following material on planewave properties.
 
-.. math::
-    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z}e^{i(\alpha z-\omega t)}
-    :name: E_downgoing
+Approximations
+--------------
 
-As we already discussed during our derivation, :math:`\beta` controls the rate of decay with respect to :math:`z`. And :math:`\alpha` controls the oscillatory behaviour.
-
-
-
-**Quasi-Static Regime:**
+Quasi-Static Approximation
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the quasi-static regime (:math:`\epsilon\omega \ll \sigma`), the wavenumber simplifies to:
 
@@ -39,9 +40,10 @@ where it can be shown that:
 .. math::
     \alpha = \beta = \left ( \frac{\omega \mu \sigma}{2} \right ) ^{1/2}
 
-In this case, the waves oscillate and decay as they propagate.
+In this case, EM waves oscillate and decay as they propagate.
 
-**Wave Regime:**
+Wave Regime Approximation
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the wave regime (:math:`\epsilon\omega \gg \sigma`), the wavenumber simplifies to:
 
