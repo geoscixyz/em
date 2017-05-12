@@ -45,12 +45,22 @@ There are numerous properties which can be used to understand the propagation of
 FDEM Planewave App
 ------------------
 
+A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the **FDEM_Planewave_Wholespace** App (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, frequency) and answer a set of fundamental questions. For example, assume you are sending a harmonic EM planewave signal into the Earth and that the ground has a conductivity of 0.1 S/m.
+
+    - For a harmonic signal at a particular frequency (100 Hz for example), how deep does the signal penetrate the Earth before it loses 90% of its amplitude?
+    - By choosing a different frequency for the signal, can I change how deep the signal penetrates the Earth?
+
+A host of additional questions which can be answered using the app are found :ref:`here<harmonic_planewaves_homogeneous_questions>`.
+
+.. figure:: images/simulation_Ex.png
+   :align: center
+   :figwidth: 80%
+   :name: FDEM_planewaves_wholespace_app
+
+   Screen shot of the FDEM planewaves wholespace app.
+
 .. geosciapp::
     While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you go to the :ref:`apps page<apps_index>` and open the Jupyter notebook for the **FDEM_Planewave_Wholespace** app.
-
-.. A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the **"FDEM_Planewave_Wholespace"** App; which plots the associated EM fields and demonstrates how the planewave properties depend on frequency and the properties of the medium. Here, we provide a cursory description of planewaves in the frequency domain by considering a downward propagating planewave. A separate page is devoted to deriving the planewave solution and defining frequency-dependent planewave properties in detail (link).
-
-
 
 Contents
 --------
