@@ -7,8 +7,7 @@ Harmonic Planewaves in Homogeneous Media
 
     We have already shown that in a homogeneous media, electromagnetic signals in the frequency domain behave according to the :ref:`Helmholtz<frequency_domain_equations>` equation. Here, we discuss the properties of harmonic planewave solutions in the frequency domain. Educational content is augmented by using the :ref:`interactive apps<apps_index>` provided to answer a set of fundamental questions. We also discuss the relationships between the electric and magnetic fields carried by planewaves. The content here parallels materials provided in many EM resources (see :cite:`ward1988,griffiths1999,stratton1941`).
 
-Introduction
-------------
+**Introduction**
 
 We have previously shown that in homogeneous media, the propagation of electromagnetic signals in the frequency domain is governed by the :ref:`Helmholtz equation<frequency_domain_equations>`. One solution to this equation is a planewave, where electric and magnetic fields lie in a 2D plane and the wave propagates in a direction perpendicular to that plane. Physically, the planewave solutions offer good approximations to what is happening far away from electromagnetic sources. As a result, planewaves form a primary basis for understanding the fundamental behaviours of many electromagnetic phenomena. 
 
@@ -19,16 +18,16 @@ We have previously shown that in homogeneous media, the propagation of electroma
 
    Geometry of an EM planewave propagating downwards.
 
-Here, we explore the propagation of planewaves in the frequency domain (for harmonic signals). The content provided here parallels materials from many EM resources (see [WH88][Gri99][Str41]). :ref:`Apps<harmonic_planewaves_homogeneous_index_app>` are provided that allow you to explore the concepts of wavelength, attenuation and other aspects of the propagating EM fields. To compliment the app, :ref:`questions<harmonic_planewaves_homogeneous_questions>` are provided to promote interactive learning. The resource is augmented with derivations and equations that quantify the information learned through using the apps. 
+Here, we explore the propagation of planewaves in the frequency domain (for harmonic signals). The content provided here parallels materials from many EM resources (see [WH88][Gri99][Str41]). `An app <https://notebooks.azure.com/library/em_apps>`__ is provided that allow you to explore the concepts of wavelength, attenuation and other aspects of the propagating EM fields. To compliment the app, :ref:`questions<harmonic_planewaves_homogeneous_questions>` are provided to promote interactive learning. The resource is augmented with derivations and equations that quantify the information learned through using the apps. 
 
-**Quick Links:**
+**Quick Links**
 
     - :ref:`Deriving the planewave solution<harmonic_planewaves_homogeneous_derivation>`
+    - `Link to the FDEM Planewave Wholespace App <https://notebooks.azure.com/library/em_apps>`__
     - :ref:`Supporting math for the app<harmonic_planewaves_homogeneous_derivation_app>`
     - :ref:`Question to be answered using the app<harmonic_planewaves_homogeneous_questions>`
 
-Planewave Properties
---------------------
+**Planewave Topics**
 
 There are numerous properties which can be used to understand the propagation of planewaves in the frequency domain. Understanding these properties is very important, as they can be used to describe the behaviours of EM waves in more general cases. Here, we will discuss the following properties:
 
@@ -42,10 +41,10 @@ There are numerous properties which can be used to understand the propagation of
 
 .. _harmonic_planewaves_homogeneous_index_app:
 
-FDEM Planewave App
-------------------
+.. geosciapp::
+    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `FDEM Planewave Wholespace App <https://notebooks.azure.com/library/em_apps/html/FDEM_Planewave_Wholespace.ipynb>`__ from the notebooks page. Don't forget to sign in.
 
-A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the **FDEM_Planewave_Wholespace** App (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, frequency) and answer a set of fundamental questions. For example, assume you are sending a harmonic EM planewave signal into the Earth and that the ground has a conductivity of 0.1 S/m.
+A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the `FDEM Planewave Wholespace App <https://notebooks.azure.com/library/em_apps/html/FDEM_Planewave_Wholespace.ipynb>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, frequency) and answer a set of fundamental questions. For example, assume you are sending a harmonic EM planewave signal into the Earth and that the ground has a conductivity of 0.1 S/m.
 
     - For a harmonic signal at a particular frequency (100 Hz for example), how deep does the signal penetrate the Earth before it loses 90% of its amplitude?
     - By choosing a different frequency for the signal, can I change how deep the signal penetrates the Earth?
@@ -59,11 +58,7 @@ A host of additional questions which can be answered using the app are found :re
 
    Screen shot of the FDEM planewaves wholespace app.
 
-.. geosciapp::
-    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you go to the :ref:`apps page<apps_index>` and open the Jupyter notebook for the **FDEM_Planewave_Wholespace** app.
-
-Contents
---------
+**Contents**
 
 .. toctree::
     :maxdepth: 1

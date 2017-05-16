@@ -85,6 +85,8 @@ To solve for the electric field, we begin with the general solution from Eq. :eq
 
 where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the amplitudes of the down-going and up-going waves, respectively. Given that we are only modeling the downgoing wave and the corresponding electric field only has components in the x-direction, our solution takes the form:
 
+.. _harmonic_planewaves_homogeneous_derivation_app_soln:
+
 .. math::
     \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{ikz} \mathbf{u_x}
     :name:

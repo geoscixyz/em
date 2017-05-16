@@ -34,6 +34,8 @@ The table below shows phase velocity for certain rocks at various frequencies. T
 Approximations
 --------------
 
+.. _harmonic_planewaves_homogeneous_phasevelocity_quasi:
+
 Quasi-Static Approximation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

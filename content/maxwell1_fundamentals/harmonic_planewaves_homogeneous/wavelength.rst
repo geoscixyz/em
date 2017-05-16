@@ -47,6 +47,8 @@ Approximations
 Quasi-Static Approximation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _harmonic_planewaves_homogeneous_wavelength_formula:
+
 In quasi-static regime (:math:`\epsilon\omega \ll \sigma`), the wavelength simplifies to:
 
 .. math:: \lambda = \sqrt{ \frac{2}{\omega \mu \sigma} }

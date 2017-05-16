@@ -10,14 +10,34 @@ Attenuation and Skin Depth
 
         Skindepth is defined as the depth at which the amplitude of the wave has been reduced by :math:`1/e`.
 
-**Attenuation** defines the rate of amplitude loss an EM wave experiences at it propagates. The attenuation of an EM wave depends on the parameter :math:`\beta`. The **skin depth** :math:`\delta` defines the distance a wave must travel before its amplitude has decayed by a factor of :math:`1/e`. This is illustrated in :numref:`sd`. As it turns out, the skin depth is the reciprocal of the decay constant :math:`\beta`. Thus:
+Attenuation
+-----------
+
+Attenuation defines the rate of amplitude loss an EM wave experiences at it propagates (:numref:`sd`). The attenuation of an EM wave is defined by the parameter :math:`\beta`. For a downgoing planewave, the attenuation formula is given by:
+
+.. _harmonic_planewaves_homogeneous_attenuation_formula:
+
+.. math::
+	A(z) = A_0 e^{\beta z}
+
+where absolute :math:`A` is the amplitude, :math:`A_0` is the absolute amplitude at :math:`z` = 0 m and:
+
+.. math::
+	\beta = \omega \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2} \geq 0
+
+Skin Depth
+----------
+
+Skin depth defines the distance a wave must travel before its amplitude has decayed by a factor of :math:`1/e`. The skin depth is the reciprocal of the decay constant :math:`\beta`. Thus:
+
+.. _harmonic_planewaves_homogeneous_skindepth_formula:
 
 .. math:: \delta = \frac{1}{\beta} = \frac{1}{\omega} \left ( \frac{\mu\epsilon}{2} \left [ \left ( 1 + \frac{\sigma^2}{\epsilon^2 \omega^2} \right)^{1/2} - 1 \right ] \right ) ^{1/2}
 
 Since :math:`\beta` depends on the frequency and the physical properties of the media, so does the skin depth. For a general case, the skin depth can be considered a fairly complicated function. However, approxmations exist in the quasi-static and wave regimes.
 
 Skin Depth for Various Materials
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The table below shows skin depths for certain rocks at various frequencies. This is meant to serve as a general guide, as rock types are classified by a range of physical properties values which can lead to order of magnitude differences in skin depth.
 
@@ -41,10 +61,11 @@ The table below shows skin depths for certain rocks at various frequencies. This
 
 
 Approximations
---------------
+^^^^^^^^^^^^^^
 
-Quasi-Static Approximation
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _harmonic_planewaves_homogeneous_skindepth_formula_quasi:
+
+**Quasi-Static Approximation**
 
 In the quasi-static regime (:math:`\epsilon\omega \ll \sigma`), the skin depth is approximately equal to:
 
@@ -56,8 +77,7 @@ Assuming the Earth is non-magnetic (:math:`\mu = \mu_0 = 4\pi \times 10^{-7}` H/
 
 where :math:`\rho = 1/\sigma` is the resistivity. Thus from the previous two equations, we see that the skin depth decreases as the conductivity :math:`\sigma`, magnetic permeability :math:`\mu` and frequency :math:`\omega` increase. In most cases however, the magnetic properties are negligible as :math:`\mu \sim \mu_0`. 
 
-Wave-Regime Approximation
-^^^^^^^^^^^^^^^^^^^^^^^^^
+**Wave-Regime Approximation**
 
 In the wave regime (:math:`\epsilon\omega \gg \sigma`), the skin depth is approximately equal to:
 
