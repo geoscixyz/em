@@ -13,10 +13,7 @@ A close examination of the depth-migrated seismic in the section close to the su
     :figwidth: 70%
     :name: fig_wadi_sahba_seismic_cube
 
-    Seismic cube from 3D prestack depth migration with co-rendered
-resistivity from HTEM inversion. The resistivity distribution provides the fine
-description of the near-surface structures and layering as inferred from the
-depth-domain seismic images.
+    Seismic cube from 3D prestack depth migration with co-rendered resistivity from HTEM inversion. The resistivity distribution provides the fine description of the near-surface structures and layering as inferred from the depth-domain seismic images.
 
 Additional Comments
 -------------------
