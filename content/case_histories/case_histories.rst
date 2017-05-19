@@ -16,6 +16,7 @@
     :hidden:
 
     mt_isa/index
+    wadi_sahba/index
     bookpurnong/index
     aspen/index
     lalor/index
@@ -55,6 +56,36 @@ Mt. Isa
     - geophysical survey: DC, IP
     - application: Mining
     - location: Australia
+
+|
+|
+|
+
+
+
+        
+
+Wadi Sahba
+^^^^^^^^^^
+
+.. image:: ./wadi_sahba/images/Thumbnail.png
+    :alt: wadi_sahba
+    :width: 260
+    :align: right
+
+- :ref:`Wadi Sahba <wadi_sahba_index>`
+
+
+- Contributors
+    - author: :ref:`dcolombo`
+    - reviewer: :ref:`dccowan`, :ref:`doldenburg`, :ref:`skang`, :ref:`lheagy`
+
+
+- Tags
+    - geophysical survey: Seismic, ATEM
+    - application: Hydrocarbon
+    - location: Arabian Gulf, Qatar
+    - keyword: Wadi Sahba, Multi-physics, Joint Inversion
 
 |
 |

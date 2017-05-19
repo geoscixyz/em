@@ -254,6 +254,25 @@
             {"uid":"Noranda", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
         ]
-	}  
+	},
+    "wadi_sahba":{
+        "title":"Wadi Sahba",
+        "source":"./wadi_sahba/",
+        "thumbnail":"./wadi_sahba/images/Thumbnail.png",
+        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "contributors":[
+            {"uid":"user:dcolombo", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:lheagy", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Seismic, ATEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"Wadi Sahba, Multi-physics, Joint Inversion", "as":"keyword"},
+            {"uid":"Arabian Gulf, Qatar", "as":"location"}
+        ]
+    } 
 }
 
