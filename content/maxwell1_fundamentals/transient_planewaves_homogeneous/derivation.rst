@@ -31,7 +31,7 @@ where :math:`\mathbf{e} \equiv \mathbf{e}(z,t)`; thus it does not depend on x or
   \mathbf{e}(t=0)=\mathbf{E}_0\delta(t)
   :name: e_impulse
 
-where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of solving the time-depend PDE directly, we will apply the inverse Fourier transform to analytic solutions derived in the :ref:`harmonic_planewaves_homogeneous_derivation>`:
+where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of solving the time-depend PDE directly, we will apply the inverse Laplace transform to analytic solutions derived in the :ref:`frequency-domain<harmonic_planewaves_homogeneous_derivation>`:
 
 .. math::
     \mathbf{E} =  \mathbf{E}_0^- e^{ikz} + \mathbf{E}_0^+ e^{-ikz}
@@ -39,7 +39,8 @@ where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of sol
 
 where :math:`E_0^-` and :math:`E_0^+` are the vector amplitudes of down-going and up-going waves, respectively. Note that the harmonic term :math:`e^{-i\omega t}` term is being supressed. The time domain solution for an impulse excitation can be expressed as:
 
-.. math:: \mathbf{e}(t) = \mathcal{F}^{-1}[\mathbf{E}(\omega)]
+.. math::
+	\mathbf{e}(t) = \mathcal{F}^{-1}[\mathbf{E}(\omega)]
 
 where :math:`\mathcal{F}[\cdot]` is the Fourier transform. Modified from :cite:`ward1988`, the corresponding time domain solution for the wave equation is:
 
@@ -89,14 +90,46 @@ Supporting Derivation for the App
 
 The app simulates the downward propagation of an EM planewave due to an impulse current. As we can see in :numref:`planewavedown_time_derive_app`, the planewave is polarized such that the electric lies along the x-direction and the magnetic field lies along the y-direction. Physically, we can think of this wave as being caused by a horizontal impulse current :math:`\mathbf{I}(t) = I_0 \delta (t) \mathbf{u_x}`, where :math:`\mathbf{u_x}` is the unit vector in the x-direction.
 
-For the app, we only consider the quasi-static approximation of Eq. :eq:`e_wave_analytic_sol`. This can be obtained by taking the inverse Laplace transform of the :ref:`corresponding harmonic solution<>`, i.e.
+For the app, we only consider the quasi-static approximation of Eq. :eq:`e_wave_analytic_sol`. This can be obtained by taking the inverse Laplace transform of the :ref:`corresponding harmonic solution<harmonic_planewaves_homogeneous_derivation_app_soln>` such that :math:`k = \sqrt{-i\omega\mu\sigma}`, i.e:
 
 .. math::
-    \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{ikz} \mathbf{u_x}
+    \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{i\sqrt{-i\omega\mu\sigma}z} \mathbf{u_x}
     :name:
 
-where :math:`E_x` is a scalar function and :math:`E_{x,0}^{-}` is the scalar amplitude of the electric field.
+where :math:`E_x` is a scalar function and :math:`E_{x,0}^{-}` is the scalar amplitude of the electric field. If we replace :math:`s=i\omega`, the inverse Laplace transform of :math:`E_x (z,w)` becomes:
 
+.. math::
+    \mathcal{L}^{-1}[E_x (z,\omega)] = \mathcal{L}^{-1} \Bigg [ E_{x,0}^- \, e^{- \sqrt{\mu\sigma s} z} \Bigg ]
+    :name:
+
+If we use the following identity (Abramowitz and Stegun, 1964):
+
+.. math::
+    \mathcal{L}^{-1} \Bigg [ e^{-\alpha \sqrt{s}} \Bigg ] = \frac{\alpha}{2 \pi^{1/2} t^{3/2}} e^{-\alpha^2/4t} \;\;\; \textrm{for} \;\;\; \alpha \geq 0
+
+
+the quasi-static solution for the electric field at :math:`t>0` is given by:
+
+.. math::
+	\mathbf{e}(t) = e_x(t) \mathbf{u_x} = E_{x,0}^- \frac{\big (\mu\sigma)^{1/2} z}{2\pi^{1/2} t^{3/2}} \, e^{-\mu\sigma z^2/4t} \, \mathbf{u_x}
+	:name:
+
+Similarly, the solution for the magnetic field can be obtained by taking inverse Laplace transform of the :ref:`corresponding harmonic solution<harmonic_planewaves_homogeneous_derivation_app_soln>` such that :math:`k = \sqrt{-i\omega\mu\sigma}`.
+
+.. math::
+    \mathcal{L}^{-1}[H_y (z,\omega)] = \mathcal{L}^{-1} \Bigg [ - \frac{ik}{i\omega \mu} E_{x,0}^- \, e^{ikz} \Bigg ] = \mathcal{L}^{-1} \Bigg [ - \sqrt{ \dfrac{\sigma}{\mu s}} E_{x,0}^- \, e^{- \sqrt{\mu\sigma s} z} \Bigg ]
+
+where :math:`k = \sqrt{-i\omega\mu\sigma}`, we replace :math:`s = i\omega` and we let :math:`\sqrt{-1} = -i`. If we use the following identity (Abramowitz and Stegun, 1964):
+
+.. math::
+    \mathcal{L}^{-1} \Bigg [ \frac{1}{\sqrt{s}} e^{-\alpha \sqrt{s}} \Bigg ] = \frac{1}{\sqrt{\pi t}} e^{-\alpha^2/4t} \;\;\; \textrm{for} \;\;\; \alpha \geq 0
+
+the quasi-static solution for the magnetic field is given by:
+
+.. math::
+    \mathbf{h}(t) = h_y(t) \mathbf{u_y} =  -E_{x,0}^- \sqrt{\dfrac{\sigma}{\pi\mu t}}\, e^{-\mu\sigma z^2/4t} \, \mathbf{u_y}
+
+where :math:`\mathbf{u_y}` is the unit vector in the y-direction.
 
 
 
