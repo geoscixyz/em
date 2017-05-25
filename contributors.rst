@@ -325,6 +325,40 @@ Rowan Cockett
 
             
 
+.. _dcolombo:
+
+Daniele Colombo
+---------------
+
+.. raw:: html
+
+    <div class="row" style="min-height: 170px">
+    <div class="col-md-4">
+        
+        <a class="reference internal image-reference" href="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"><img alt="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" class="align-left" src="https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+                
+    </div>
+    <div class="col-md-6" style="line-height: 1.5">
+        
+        <strong>affiliation:</strong> Saudi Aramco
+                              <br>
+        <strong>location:</strong> Dhahran, Saudi Arabia
+                              <br>
+        <strong>email:</strong> 
+        <a class="reference external" href="mailto:daniele.colombo@aramco.com">daniele.colombo@aramco.com</a>
+                        
+                              <br>
+        <strong>ORCID:</strong> 
+        <a class="reference external" href="http://orcid.org/0000-0002-2870-5876">0000-0002-2870-5876</a>
+                        
+                              
+    </div>
+    <br><br>
+    </div>
+
+
+            
+
 .. _dccowan:
 
 Devin C. Cowan
