@@ -15,13 +15,11 @@ Barents Sea
 
 .. topic:: Prelude
 
-    This case history has been taken from the paper `"Predicting resevoir
-    properties using CSEM, pre-stack seismic and well log data: case study in
-    Hoop area, Barents Sea, Norway"
-    <http://www.rocksolidimages.com/pdf/2016_Case_Study_Multiphysics.pdf>`__ ,
-    which was supplied by `Rock Solid Images
-    <http://www.rocksolidimages.com>`__ . Survey data were collected by
-    `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
+    This case history follows the use of towed seismic and controlled source electromagnetic data to delineate hydrocarbon reservoirs in the Barents Sea. A workflow is presented which addresses the challenges of multi-physics and multi-scale data integration for reservoir characterization purposes. The survey data were collected by `Petroleum Geo-Services (PGS) <https://www.pgs.com>`__ in 2015.
+
+**Special Thanks**
+
+Thank to `Rock Solid Images <http://www.rocksolidimages.com>`__ for for permission to reproduce figures and adapt text from the source material. This case history has been taken from the paper `"Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway" <http://www.rocksolidimages.com/pdf/2016_Case_Study_Multiphysics.pdf>`__ .
 
 **Abstract**
 

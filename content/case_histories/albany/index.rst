@@ -11,9 +11,11 @@ Albany
 
 .. topic :: Prelude
 
-    This case history has been adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery"
-    <http://www.cronegeophysics.com/wp/wp-content/uploads/2015/04/Albany-Graphite-Air-Ground-TEM_Expanded_abstract_final-13-Feb-2015.pdf>`__. The initial VTEM survey identifying the anomaly was flown by `Geotech Ltd. <http://www.geotech.com>`__ in 2010. Based on the discovery of the deposit by `Zenyatta Ventures Ltd. <http://www.zenyatta.ca>`__ in 2011, `Crone Geophysics Ltd. <http://www.cronegeophysics.com>`__ was contracted to perform supplementary ground-based TDEM surveys in 2013.
+    This case history follows the role of magnetic and time-domain electromagnetic surveying in the discovery and characterization of the Albany graphite complex, Ontario, Canada. The initial VTEM survey identifying the anomaly was flown by `Geotech Ltd. <http://www.geotech.com>`__ in 2010. Based on the discovery of the deposit by `Zenyatta Ventures Ltd. <http://www.zenyatta.ca>`__ in 2011, `Crone Geophysics Ltd. <http://www.cronegeophysics.com>`__ was contracted to perform supplementary ground-based TDEM surveys in 2013.
 
+**Special Thanks**
+
+Thanks to :ref:`jlegault` and `Geotech Ltd. <http://www.geotech.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery" <http://www.cronegeophysics.com/wp/wp-content/uploads/2015/04/Albany-Graphite-Air-Ground-TEM_Expanded_abstract_final-13-Feb-2015.pdf>`__.
 
 **Abstract**
 
