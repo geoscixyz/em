@@ -15,7 +15,7 @@ Aspen
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org/>`__ for permission to reproduce figures and adapt text from the source material. This case study is based on the extended abstract `"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands" <http://library.seg.org/doi/abs/10.1190/segam2016-13842507.1>`__ :cite:`DevrieseOldenburg2016a`.
+Thanks to the `Society of Exploration Geophysicists <http://www.seg.org/>`__ for permission to reproduce figures and adapt text from the source material. This case study is based on the extended abstract `"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands" <http://library.seg.org/doi/abs/10.1190/segam2016-13842507.1>`__ :cite:`DevrieseOldenburg2016a`.
 
 **Abstract**
 

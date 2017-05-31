@@ -17,7 +17,7 @@ West Plains
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org/>`__ for permission to reproduce figures and adapt text from the source material. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
+Thanks to the `Society of Exploration Geophysicists <http://www.seg.org/>`__ for permission to reproduce figures and adapt text from the source material. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
 
 **Abstract**
 
