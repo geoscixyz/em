@@ -11,11 +11,12 @@ Balboa
 
 .. topic :: Prelude
 
-    This case history describes the inversion of ZTEM airborne EM and magnetic data over the porphyry copper-gold camp at Cobre Mine, Panama. Data collected as part of this case history were flown in the summer of 2010.
+    This case history describes the inversion of ZTEM airborne EM and magnetic data over the porphyry copper-gold camp at Cobre Mine, Panama. Data collected as part of this case history were flown in the summer of 2010. This case history was adapted from the expanded abstract `"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama" <http://www.publish.csiro.au/EX/pdf/ASEG2016ab212>`__.
 
-**Special Thanks**
 
-Thanks to the `Australian Society of Exploration Geophysicists <http://www.aseg.org.au/>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama" <http://www.publish.csiro.au/EX/pdf/ASEG2016ab212>`__.
+.. **Special Thanks**
+
+.. Thanks to the `Australian Society of Exploration Geophysicists <http://www.aseg.org.au/>`__ for permission to reproduce figures and adapt text from the source material.
 
 **Abstract**
 

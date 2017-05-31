@@ -14,11 +14,9 @@ Furggwanghorn
 
 .. topic:: Prelude
 
-    This case history follows the use of ground-based and helicopter-borne ground-penetrating radar to map 3D geological structures below the Furggwanghorn glacier, Switzerland. Data corresponding to the case history were collected between 2010 and 2012.
+    This case history follows the use of ground-based and helicopter-borne ground-penetrating radar to map 3D geological structures below the Furggwanghorn glacier, Switzerland. Data corresponding to the case history were collected between 2010 and 2012. This case history was adapted from the papers *"A new 3-D thin-skinned rock glacier model based on helicopter GPR results from the Swiss Alps"* (:cite:`merz2015a`) and *"Evaluation of Ground-Based and Helicopter Ground-Penetrating Radar Data Acquired Across an Alpine Rock Glacier"* (:cite:`merz2015b`).
 
-**Special Thanks** 
 
-A new 3-D thin-skinned rock glacier model based on helicopter GPR results from the Swiss Alps" (:cite:`merz2015a`) and Evaluation of Ground-Based and Helicopter Ground-Penetrating Radar Data Acquired Across an Alpine Rock Glacier (:cite:`merz2015b`).
 
 **Abstract**
 
