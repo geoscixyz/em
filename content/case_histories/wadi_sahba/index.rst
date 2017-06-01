@@ -11,8 +11,11 @@ Wadi Sabha
 
 .. topic :: Prelude
 
-    This case history has been adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__. It follows a comprehensive multi-physics and joint-inversion study of 3D non-seismic data over the wadi Sahba region off the coast of Qatar. The helicopter-borne TEM and MT data used for this study was collected in December, 2014.
+     This case history follows a comprehensive multi-physics and joint-inversion study of 3D non-seismic data over the wadi Sahba region off the coast of Qatar. The goal of this study was to accurately characterize complex near-surface structures and aid in the discovery of hydrocarbon reservoirs. The helicopter-borne TEM and MT data used for this study was collected in December, 2014.
 
+**Special Thanks**
+
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__.
 
 **Abstract**
 

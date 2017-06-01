@@ -13,8 +13,11 @@ West Plains
 
 .. topic :: Prelude
 
-    This case history describes the inversion of VTEM and RESOLVE airborne datasets to characterize an orogenic gold deposit. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
+    This case history describes the inversion of VTEM and RESOLVE airborne datasets to characterize an orogenic gold deposit within the Committee Bay Greenstone Belt, Nunavut, Canada. VTEM data were collected in 2003 while RESOLVE data were collected in 2005.
 
+**Special Thanks**
+
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
 
 **Abstract**
 
