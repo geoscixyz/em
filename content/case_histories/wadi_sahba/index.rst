@@ -15,7 +15,7 @@ Wadi Sabha
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://www.seg.org/>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__.
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__.
 
 **Abstract**
 
