@@ -142,6 +142,7 @@ linkcheck_ignore = [
     'https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja',
     'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
     'http://seg.org',
+    'http://library.seg.org/doi/',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
