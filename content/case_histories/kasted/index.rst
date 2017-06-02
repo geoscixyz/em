@@ -20,8 +20,11 @@ Kasted
 
 .. topic :: Prelude
 
-    This case study is based upon the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (:cite:`Vilhelmsen2016`) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
+    This case history follows the use of the SkyTEM airborne system to delineate subterranean water-bearing structures and assist in groundwater management in Kasted, Denmark.
 
+**Special Thanks**
+
+Thanks to SkyTEM and the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case study was adapted from the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (:cite:`Vilhelmsen2016`) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
 
 **Abstract**
 

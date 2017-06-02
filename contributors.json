@@ -359,5 +359,13 @@
         "email":"laurens.beran@btgeophysics.com",
         "url":"http://www.btgeophysics.com",
         "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/LaurensBeran.png"
+    },
+    "dcolombo":{
+        "name":"Daniele Colombo",
+        "affiliation":"Saudi Aramco",
+        "location":"Dhahran, Saudi Arabia",
+        "email":"daniele.colombo@aramco.com",
+        "ORCID":"0000-0002-2870-5876",
+        "avatar":"https://github.com/geoscixyz/em/raw/master/images_contributors/placeholder.png"
     }
 }
