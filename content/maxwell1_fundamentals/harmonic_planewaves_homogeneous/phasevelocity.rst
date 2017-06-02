@@ -58,7 +58,7 @@ Thus at sufficiently high frequencies, waves at all frequencies propagate as the
 Relating Wavelength and Phase Velocity
 --------------------------------------
 
-As we have shown, both the :ref:`wavelength<harmonic_planewaves_homogeneous_wavelength>' and phase velocity can be defined in terms of the real component of the :ref:`wavenumber<harmonic_planewaves_homogeneous_wavenumber>` (:math:`\alpha`). As a result, we can define a mathematical relationship when relates the wavelength and phase velocity at a given frequency. This relationship is given by:
+As we have shown, both the :ref:`wavelength<harmonic_planewaves_homogeneous_wavelength>` and phase velocity can be defined in terms of the real component of the :ref:`wavenumber<harmonic_planewaves_homogeneous_wavenumber>` (:math:`\alpha`). As a result, we can define a mathematical relationship when relates the wavelength and phase velocity at a given frequency. This relationship is given by:
 
 .. math::
 	\lambda = \frac{2\pi v_{ph}}{\omega} = \frac{v_{ph}}{f}

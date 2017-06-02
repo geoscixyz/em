@@ -33,7 +33,7 @@ In the j-th layer, we have both up-going and down-going waves resulting from tra
 	E_{x,j}(\omega ,z) = U_j e^{-ik_j (z-z_j)} + D_j e^{ik_j (z-z_j)}
 	:name: E_j
 
-where :math:`z_j` denotes the bottom location of the j-th layer. :math:`U_j` and :math:`D_j` are electric field amplitudes of the up-going and down-going wave at the bottom of the j-th layer, respectively. According to the theory presented for :ref:`EM waves in homogeneous media<frequency_domain_plane_wave_sources_fields>`, the relationship between the electric field and the magnetic field is given by:
+where :math:`z_j` denotes the bottom location of the j-th layer. :math:`U_j` and :math:`D_j` are electric field amplitudes of the up-going and down-going wave at the bottom of the j-th layer, respectively. According to the theory presented for :ref:`EM waves in homogeneous media<harmonic_planewaves_homogeneous_derivation>`, the relationship between the electric field and the magnetic field is given by:
 
 .. math::
 	\frac{\partial E_x}{\partial z} + i\omega \mu H_y = 0
@@ -45,7 +45,7 @@ As a result, the associated magnetic field in the j-th layer is given by:
 	H_{y,j} (\omega ,z) = \frac{1}{Z_j} \bigg [ U_j e^{-ik_j (z-z_j)} - D_j e^{ik_j (z-z_j)} \bigg ]
 	:name: H_j
 
-where the :ref:`wave impedance<frequency_domain_plane_wave_sources_fields_impedance>` for the j-th layer is given by:
+where the :ref:`wave impedance<harmonic_planewaves_homogeneous_impedancephase>` for the j-th layer is given by:
 
 .. math::
 	Z_j = \frac{\omega \mu_j}{k_j}
@@ -155,7 +155,7 @@ and thus:
 	\frac{E_x}{H_y} = \frac{M_{12}}{M_{22}} = - \frac{\omega\mu_1}{k_1} = -\frac{\omega \mu_1}{\sqrt{-i\omega\mu_1\sigma_1 + \omega^2\mu_1\varepsilon_1}} = \begin{cases} -\sqrt{\dfrac{i\omega\mu_1}{\sigma_1}} \;\; \textrm{for} \;\; \sigma \gg \omega\varepsilon \\ -\sqrt{\dfrac{\mu_1}{\varepsilon_1}} \;\;\;\;\,\;\; \textrm{for} \;\; \sigma \ll \omega\varepsilon \end{cases}
 	:name:
 
-The physical significance of this was explained during the material on :ref:`impedance and phase<frequency_domain_plane_wave_sources_fields_impedance>` for plane waves in homogeneous media.
+The physical significance of this was explained during the material on :ref:`impedance and phase<harmonic_planewaves_homogeneous_impedancephase>` for plane waves in homogeneous media.
 
 
 
