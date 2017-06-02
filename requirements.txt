@@ -4,6 +4,7 @@ ipython
 ipywidgets
 flask
 sphinx==1.4.8
+docutils==0.12
 matplotlib
 properties[math]
 sphinxcontrib-bibtex
