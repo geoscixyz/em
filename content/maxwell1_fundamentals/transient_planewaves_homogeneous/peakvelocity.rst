@@ -3,7 +3,7 @@
 Peak Velocity
 =============
 
-As the EM wave propagates, the peak depth moves as a function of time. The velocity at which the peak moves is called the peak velocity. By by taking time derivative of Eq. :eq:`zmax`, the peak velocity is given by:
+As the EM wave propagates, the peak depth moves as a function of time. The velocity at which the peak moves is called the peak velocity. By by taking time derivative of the :ref:`peak distance<transient_planewaves_homogeneous_peakdistance>` and setting it to zero, the peak velocity is given by:
 
 .. math::
     v_{max} = \frac{d z_{max}}{dt} = \frac{1}{\sqrt{2\mu\sigma t}}

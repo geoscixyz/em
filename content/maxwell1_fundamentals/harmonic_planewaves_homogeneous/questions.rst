@@ -57,16 +57,7 @@ Apparent Resistivity
 
 Impedances can be converted to :ref:`apparent resistivities<harmonic_planewaves_homogeneous_apparentresistivity>`.
 
-	- Use your impedance values from the previous exercise and :ref:`this equation<harmonic_planewaves_homogeneous_apparentresisitivity>` to compute the apparent resistivity. How does this value compare to the resistivity entered into the app? (*Note that it doesn’t matter at what depth the measurements were obtained*).  
-
-Polarization Ellipses
----------------------
-
-We need clear objectives and questions
-Semi-axes of the ellipse - 
-
-
-
+	- Use your impedance values from the previous exercise and :ref:`this equation<harmonic_planewaves_homogeneous_apparentresistivity>` to compute the apparent resistivity. How does this value compare to the resistivity entered into the app? (*Note that it doesn’t matter at what depth the measurements were obtained*).  
 
 
 

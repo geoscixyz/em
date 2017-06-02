@@ -36,7 +36,7 @@ There are numerous properties which can be used to understand the propagation of
     - :ref:`Skin Depth<harmonic_planewaves_homogeneous_skindepth>`: The distance an EM wave travels before it experiences an amplitude loss of :math:`1/e`.
     - :ref:`Wavelength<harmonic_planewaves_homogeneous_wavelength>`: The wavelength of a planewave.
     - :ref:`Phase Velocity<harmonic_planewaves_homogeneous_phasevelocity>`: The velocity at which planewaves at a certain frequency travel.
-    - :ref:`Impedance<harmonic_planewaves_homogeneous_impedance>`: A medium property which characterizes the relationship between perpendicular components of the electric and magnetic fields supported by EM waves.
+    - :ref:`Impedance<harmonic_planewaves_homogeneous_impedancephase>`: A medium property which characterizes the relationship between perpendicular components of the electric and magnetic fields supported by EM waves.
     - :ref:`Apparent Resistivity<harmonic_planewaves_homogeneous_apparentresistivity>`: An approximation of a medium's electrical resistivity based on the relationship between the electric and magnetic fields.
 
 .. _harmonic_planewaves_homogeneous_index_app:

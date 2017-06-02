@@ -78,6 +78,8 @@ Note that Eq. :eq:`e_wave_analytic_sol` and Eq. :eq:`h_wave_analytic_sol` have t
 
     Eqs. :eq:`e_wave_analytic_sol` and :eq:`h_wave_analytic_sol` are still general solutions, as only initial conditions have been applied. To determine :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` or :math:`\mathbf{H}_0^-` and :math:`\mathbf{H}_0^+`, you must envoke a set of boundary conditions. For example, :math:`\mathbf{e}(z \rightarrow -\infty,t) = 0` in addition to :math:`\mathbf{e}(t=0) = \mathbf{E}_0 \delta (t)` results in a downward propagating electric field.
 
+.. _transient_planewaves_homogeneous_derivation_app:
+
 Supporting Derivation for the App
 ---------------------------------
 
