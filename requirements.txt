@@ -12,8 +12,3 @@ sphinx_rtd_theme
 Pillow
 em_examples
 SimPEG
-
-
-
-.. "conda list _______" for version of conda related (sphinx, docutils, ...)
-.. "conda install ______==___" to install specific version (ex: conda install sphinx==1.4.8)
