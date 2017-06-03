@@ -23,7 +23,7 @@ Here, we explore the propagation of planewaves in the time domain (for impulse s
 **Quick Links**
 
     - :ref:`Deriving the planewave solution <transient_planewaves_homogeneous_derivation>`
-    - `Link to the TDEM Planewave Wholespace app <http://notebooks.azure.com/library>`__
+    - `Link to the TDEM Planewave Wholespace app <http://notebooks.azure.com/library/em_apps>`__
     - :ref:`Supporting math for the App <transient_planewaves_homogeneous_derivation_app>`
     - :ref:`Questions to be answered using the app <transient_planewaves_homogeneous_questions>`
 
@@ -38,9 +38,9 @@ There are numerous properties which can be used to understand the propagation of
 .. _transient_planewaves_homogeneous_index_app:
 
 .. geosciapp::
-    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `TDEM Planewave Wholespace App <http://notebooks.azure.com/library>`__ from the notebooks page. Don't forget to sign in.
+    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `TDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps>`__ from the notebooks page. Don't forget to sign in.
 
-A fundamental understanding of planewave propagation in the time domain can be obtained by using the `TDEM Planewave Wholespace App <http://notebook.azure.com/library>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, time) and answer a set of fundamental questions. For example, assume that an impulse excitation sends an EM planewave signal into the Earth and that the ground has a conductivity of 1 S/m.
+A fundamental understanding of planewave propagation in the time domain can be obtained by using the `TDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, time) and answer a set of fundamental questions. For example, assume that an impulse excitation sends an EM planewave signal into the Earth and that the ground has a conductivity of 1 S/m.
 
     - What is the peak amplitude (maximum amplitude) at :math:`t` = 0.01 s?
     - At what time does the peak amplitude of the wave cross 600 m depth?
