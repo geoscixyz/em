@@ -42,7 +42,7 @@ There are numerous properties which can be used to understand the propagation of
 .. _harmonic_planewaves_homogeneous_index_app:
 
 .. geosciapp::
-    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `FDEM Planewave Wholespace App <https://notebooks.azure.com/library/em_apps/html/FDEM_Planewave_Wholespace.ipynb>`__ from the notebooks page. Don't forget to sign in.
+    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `FDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps/html/FDEM_Planewave_Wholespace.ipynb>`__ from the notebooks page. Don't forget to sign in.
 
 A fundamental understanding of planewave propagation in the frequency domain can be obtained by using the `FDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps/html/FDEM_Planewave_Wholespace.ipynb>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, frequency) and answer a set of fundamental questions. For example, assume you are sending a harmonic EM planewave signal into the Earth and that the ground has a conductivity of 0.1 S/m.
 
