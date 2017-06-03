@@ -144,6 +144,7 @@ linkcheck_ignore = [
     'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
     'http://seg.org',
     'http://library.seg.org/doi/',
+    'notebooks.azure.com/library/em_apps',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
