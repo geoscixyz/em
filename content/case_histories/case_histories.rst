@@ -27,6 +27,7 @@
     sagd/index
     norsminde/index
     barents_sea/index
+    saurashtra/index
     kasted/index
     balboa/index
     noranda/index
@@ -380,6 +381,35 @@ Barents Sea
     - Applications: Reservoir characterization, marine EM
     - Location: Hoop Fault Complex, Barents Sea, Norway
     - Geophysical Surveys: CSEM, 2D seismic
+
+|
+|
+|
+
+
+
+        
+
+Saurashtra
+^^^^^^^^^^
+
+.. image:: ./saurashtra/images/thumbnail.png
+    :alt: saurashtra
+    :width: 260
+    :align: right
+
+- :ref:`Exploration with Controlled Source Electromagnetics Under Basalt Cover in India <saurashtra_index>`
+
+
+- Contributors
+    - reviewer: :ref:`dccowan`, :ref:`doldenburg`
+
+
+- Tags
+    - geophysical survey: LOTEM
+    - application: Hydrocarbon
+    - location: Saurashtra Peninsula, India
+    - keyword: LOTEM, Hydrocarbon
 
 |
 |

@@ -273,6 +273,23 @@
             {"uid":"Wadi Sahba, Multi-physics, Joint Inversion", "as":"keyword"},
             {"uid":"Arabian Gulf, Qatar", "as":"location"}
         ]
+    },
+    "saurashtra":{
+        "title":"Saurashtra",
+        "description":"Exploration with Controlled Source Electromagnetics Under Basalt Cover in India",
+        "source":"./saurashtra/",
+        "thumbnail":"./saurashtra/images/thumbnail.png",
+        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "contributors":[
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"LOTEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"LOTEM, Hydrocarbon", "as":"keyword"},
+            {"uid":"Saurashtra Peninsula, India", "as":"location"}
+        ]
     } 
 }
 
