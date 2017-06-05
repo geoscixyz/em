@@ -1,3 +1,5 @@
+.. _apps_index:
+
 Apps
 ====
 

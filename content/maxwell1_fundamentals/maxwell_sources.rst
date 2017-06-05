@@ -123,7 +123,7 @@ where the magnitude of the forcing term increases linearly with respect to the a
 .. math::
 	\nabla^2 \mathbf{H} + k^2 \mathbf{H} = - \big ( \sigma + i\omega\varepsilon \big ) \mathbf{J_m^s}
 
-where the right-hand side depends on both the conductive and dielectric properties of the medium. Recall that the :ref:`wavenumber<plane_waves_in_homogeneous_media_index>` is given by:
+where the right-hand side depends on both the conductive and dielectric properties of the medium. Recall that the :ref:`wavenumber<harmonic_planewaves_homogeneous_wavenumber>` is given by:
 
 .. math::
 	k = \sqrt{\omega^2 \mu \varepsilon - i\omega \mu\sigma}
