@@ -15,7 +15,7 @@ Saurashtra
 
 **Special Thanks**
 
-Thanks to `KMS Technologies <http://www.kmstechnologies.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from "Exploration with controlled–source electromagnetics under basalt cover in India".
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and `KMS Technologies <http://www.kmstechnologies.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the Leading Edge article `"Exploration with controlled–source electromagnetics under basalt cover in India" <http://library.seg.org/doi/abs/10.1190/1.2715056>`__ by :cite:`strackpandey2007`.
 
 **Abstract**
 
