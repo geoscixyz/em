@@ -22,11 +22,13 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
 
     - :ref:`Interface Conditions<maxwell1_fundamentals_interface_conditions_index>`: To solve Maxwell's equations in general cases, we must consider the conditions on fields and fluxes at physical interfaces. Here, the appropriate interface conditions for :math:`\mathbf{e}`, :math:`\mathbf{h}`, :math:`\mathbf{j}`, :math:`\mathbf{d}` and :math:`\mathbf{b}` are presented.
 
-    - :ref:`Maxwell's Equations: Time Domain<time_domain_equations>`: Here, we show that within a homogeneous media, time-dependent electromagnetic signals behave according to the diffusive wave equation. Diffusive and wave behaviours are very important when considering time-domain electromagnetic methods.
-
     - :ref:`Maxwell's Equations: Frequency Domain<frequency_domain_equations>`: Here, we show that within a homogeneous media, frequency-dependent electromagnetic signals behave according to the vector Helmholtz equation. The physical understanding of this equation is very important when considering frequency-domain electromagnetic methods.
 
-    - :ref:`Plane Wave in Homogeneous Media<plane_waves_in_homogeneous_media_index>`: Here, we expand on the content provided in the previous two sections. For plane waves in the time domain, we discuss diffusion distance, peak time and peak velocity. In the frequency domain, we discuss the skin depth, phase velocity, wavelength and apparent resistivity. Numerical apps are also provided to visualize plane waves in various cases.
+    - :ref:`Maxwell's Equations: Time Domain<time_domain_equations>`: Here, we show that within a homogeneous media, time-dependent electromagnetic signals behave according to the diffusive wave equation. Diffusive and wave behaviours are very important when considering time-domain electromagnetic methods.
+
+    - :ref:`Harmonic Plane Waves in Homogeneous Media<harmonic_planewaves_homogeneous_index>`: For harmonic planewaves in the frequency domain, we discuss the skin depth, phase velocity, wavelength and apparent resistivity. Numerical apps are also provided to visualize plane waves in various cases.
+
+    - :ref:`Transient Plane Waves in Homogeneous Media<transient_planewaves_homogeneous_index>`: For plane waves in the time domain, we discuss diffusion distance, peak time and peak velocity. Numerical apps are also provided to visualize plane waves in various cases.
 
     - :ref:`Reflection and Refraction of Plane Waves<reflection_and_refraction_index>`: When plane waves reach an interface characterized by an abrupt change in physical properties, the signal is altered. Here, the physics pertaining to plane waves as they reach an interface is presented. Content includes: Snell's law, the Fresnel equations and Brewster's angle. Numerical apps are provided to simulate electromagnetic signals.
 
@@ -46,7 +48,8 @@ The content in *Maxwell I: Fundamentals* is organized as follows:
     interface_conditions/index
     time_domain_equations
     frequency_domain_equations
-    plane_waves_in_homogeneous_media/index
+    harmonic_planewaves_homogeneous/index
+    transient_planewaves_homogeneous/index
     reflection_and_refraction/index
     maxwell_sources
     dipole_sources_in_homogeneous_media/index
