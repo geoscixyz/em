@@ -266,7 +266,7 @@
         "description":"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization",
         "source":"./wadi_sahba/",
         "thumbnail":"./wadi_sahba/images/thumbnail.png",
-        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "citations":["colombo2016"],
         "contributors":[
             {"uid":"user:dcolombo", "as":"author"},
             {"uid":"user:dccowan", "as":"reviewer"},
@@ -286,7 +286,7 @@
         "description":"Exploration with Controlled Source Electromagnetics Under Basalt Cover in India",
         "source":"./saurashtra/",
         "thumbnail":"./saurashtra/images/thumbnail.png",
-        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "citations":["strackpandey2007"],
         "contributors":[
             {"uid":"user:dccowan", "as":"reviewer"},
             {"uid":"user:doldenburg", "as":"reviewer"}
