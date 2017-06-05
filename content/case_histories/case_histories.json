@@ -265,7 +265,7 @@
         "title":"Wadi Sahba",
         "description":"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization",
         "source":"./wadi_sahba/",
-        "thumbnail":"./wadi_sahba/images/Thumbnail.png",
+        "thumbnail":"./wadi_sahba/images/thumbnail.png",
         "citations":["HolthamOldenburg2012","Holtham2012"],
         "contributors":[
             {"uid":"user:dcolombo", "as":"author"},

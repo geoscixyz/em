@@ -19,7 +19,7 @@ Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for perm
 
 **Abstract**
 
-.. figure:: images/Thumbnail.png
+.. figure:: images/thumbnail.png
     :align: right
     :figwidth: 40%
     :name: figThumbnail_wadi_sahba_index

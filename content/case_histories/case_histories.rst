@@ -69,7 +69,7 @@ Mt. Isa
 Wadi Sahba
 ^^^^^^^^^^
 
-.. image:: ./wadi_sahba/images/Thumbnail.png
+.. image:: ./wadi_sahba/images/thumbnail.png
     :alt: wadi_sahba
     :width: 260
     :align: right
