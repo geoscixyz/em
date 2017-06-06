@@ -1,6 +1,7 @@
 {
     "aspen":{
         "title":"Aspen",
+        "description":"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands",
         "source":"./aspen/",
         "thumbnail":"./aspen/images/FormationMM.png",
         "citations":["DevrieseOldenburg2016"],
@@ -17,7 +18,7 @@
     ,
     "balboa":{
         "title": "Balboa",
-        "description":"Balboa",
+        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
         "source":"./balboa/",
         "thumbnail":"./balboa/images/bboa_thumbnail.png",
         "contributors":[
@@ -41,6 +42,7 @@
     },
     "bookpurnong":{
         "title":"Bookpurnong",
+        "description":"Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data - an application for environmental assessment in the Lower Murray Region of South Australia",
         "source":"./bookpurnong/",
         "thumbnail":"./bookpurnong/images/booky-hydro.jpg",
         "citations":["viezzoli2009","viezzoli2010"],
@@ -56,6 +58,7 @@
     },
     "emc":{
         "title":"Elevenmile Canyon",
+        "description":"Three-Dimensional Inversion of ZTEM Data at the Elevenmile Canyon Geothermal System, Nevada",
         "source":"./emc/",
         "thumbnail":"./emc/images/geothermal.png",
         "citations":["devrieseetal2012"],
@@ -71,6 +74,7 @@
     },
     "mt_isa":{
         "title":"Mt. Isa",
+        "description":"2-D and 3-D IP/resistivity for the interpretation of Isa-style targets",
         "source":"./mt_isa/",
         "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
         "citations":["rutley2001"],
@@ -209,7 +213,7 @@
     },
     "westplains":{
         "title":"West Plains",
-        "Description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt.",
+        "description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt",
         "source":"./westplains/",
         "thumbnail":"./westplains/images/thumbnail_westplains.png",
         "contributors":[
@@ -226,6 +230,7 @@
     },
     "sagd":{
         "title":"SAGD",
+        "description":"Detecting and imaging time-lapse conductive changes using electromagnetic methods",
         "source":"./sagd/",
         "thumbnail":"./sagd/images/ChamberIrregular.png",
         "citations":["DevrieseOldenburg2016","Devriese2016"],
@@ -241,6 +246,7 @@
 	},
     "noranda":{
         "title":"Noranda",
+        "description":"3D inversion of natural source electromagnetic data",
         "source":"./noranda/",
         "thumbnail":"./noranda/images/TrueModel3D.png",
         "citations":["HolthamOldenburg2012","Holtham2012"],
@@ -257,9 +263,10 @@
 	},
     "wadi_sahba":{
         "title":"Wadi Sahba",
+        "description":"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization",
         "source":"./wadi_sahba/",
-        "thumbnail":"./wadi_sahba/images/Thumbnail.png",
-        "citations":["HolthamOldenburg2012","Holtham2012"],
+        "thumbnail":"./wadi_sahba/images/thumbnail.png",
+        "citations":["colombo2016"],
         "contributors":[
             {"uid":"user:dcolombo", "as":"author"},
             {"uid":"user:dccowan", "as":"reviewer"},
@@ -272,6 +279,23 @@
             {"uid":"Hydrocarbon", "as":"application"},
             {"uid":"Wadi Sahba, Multi-physics, Joint Inversion", "as":"keyword"},
             {"uid":"Arabian Gulf, Qatar", "as":"location"}
+        ]
+    },
+    "saurashtra":{
+        "title":"Saurashtra",
+        "description":"Exploration with Controlled Source Electromagnetics Under Basalt Cover in India",
+        "source":"./saurashtra/",
+        "thumbnail":"./saurashtra/images/thumbnail.png",
+        "citations":["strackpandey2007"],
+        "contributors":[
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"LOTEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"LOTEM, Hydrocarbon", "as":"keyword"},
+            {"uid":"Saurashtra Peninsula, India", "as":"location"}
         ]
     } 
 }

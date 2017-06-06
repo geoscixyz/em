@@ -13,7 +13,7 @@ HTEM data processing consisted primarily of automatic elimination of outliers fr
 
 Our aim is to capture the high-resolution structural details of resistivity shown in Figure 5  into the poorly resolved and noise-affected P-wave velocity model that is obtained by inverting first break traveltimes. There many approaches by which this joint or cooperative inversion can be carried out. We outline ours in the following section.
 
-.. figure:: images/Thumbnail.png
+.. figure:: images/thumbnail.png
     :align: center
     :figwidth: 90%
     :name: fig_wadi_sahba_result_1

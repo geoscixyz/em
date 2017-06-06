@@ -27,6 +27,7 @@
     sagd/index
     norsminde/index
     barents_sea/index
+    saurashtra/index
     kasted/index
     balboa/index
     noranda/index
@@ -45,7 +46,7 @@ Mt. Isa
     :width: 260
     :align: right
 
-- :ref:`Mt. Isa <mt_isa_index>`
+- :ref:`2-D and 3-D IP/resistivity for the interpretation of Isa-style targets <mt_isa_index>`
 
 
 - Contributors
@@ -68,12 +69,12 @@ Mt. Isa
 Wadi Sahba
 ^^^^^^^^^^
 
-.. image:: ./wadi_sahba/images/Thumbnail.png
+.. image:: ./wadi_sahba/images/thumbnail.png
     :alt: wadi_sahba
     :width: 260
     :align: right
 
-- :ref:`Wadi Sahba <wadi_sahba_index>`
+- :ref:`High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization <wadi_sahba_index>`
 
 
 - Contributors
@@ -103,7 +104,7 @@ Bookpurnong
     :width: 260
     :align: right
 
-- :ref:`Bookpurnong <bookpurnong_index>`
+- :ref:`Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data - an application for environmental assessment in the Lower Murray Region of South Australia <bookpurnong_index>`
 
 
 - Contributors
@@ -131,7 +132,7 @@ Aspen
     :width: 260
     :align: right
 
-- :ref:`Aspen <aspen_index>`
+- :ref:`From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands <aspen_index>`
 
 
 - Contributors
@@ -190,7 +191,7 @@ Elevenmile Canyon
     :width: 260
     :align: right
 
-- :ref:`Elevenmile Canyon <emc_index>`
+- :ref:`Three-Dimensional Inversion of ZTEM Data at the Elevenmile Canyon Geothermal System, Nevada <emc_index>`
 
 
 - Contributors
@@ -249,7 +250,7 @@ West Plains
     :width: 260
     :align: right
 
-- :ref:`West Plains <westplains_index>`
+- :ref:`A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt <westplains_index>`
 
 
 - Contributors
@@ -308,7 +309,7 @@ SAGD
     :width: 260
     :align: right
 
-- :ref:`SAGD <sagd_index>`
+- :ref:`Detecting and imaging time-lapse conductive changes using electromagnetic methods <sagd_index>`
 
 
 - Contributors
@@ -389,6 +390,35 @@ Barents Sea
 
         
 
+Saurashtra
+^^^^^^^^^^
+
+.. image:: ./saurashtra/images/thumbnail.png
+    :alt: saurashtra
+    :width: 260
+    :align: right
+
+- :ref:`Exploration with Controlled Source Electromagnetics Under Basalt Cover in India <saurashtra_index>`
+
+
+- Contributors
+    - reviewer: :ref:`dccowan`, :ref:`doldenburg`
+
+
+- Tags
+    - geophysical survey: LOTEM
+    - application: Hydrocarbon
+    - location: Saurashtra Peninsula, India
+    - keyword: LOTEM, Hydrocarbon
+
+|
+|
+|
+
+
+
+        
+
 Kasted
 ^^^^^^
 
@@ -427,7 +457,7 @@ Balboa
     :width: 260
     :align: right
 
-- :ref:`Balboa <balboa_index>`
+- :ref:`The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama <balboa_index>`
 
 
 - Contributors
@@ -457,7 +487,7 @@ Noranda
     :width: 260
     :align: right
 
-- :ref:`Noranda <noranda_index>`
+- :ref:`3D inversion of natural source electromagnetic data <noranda_index>`
 
 
 - Contributors
