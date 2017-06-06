@@ -21,7 +21,7 @@ The Saurashtra basin is marked by the Deccan trap flood basalts, which separate 
 Direct Current Resistivity Survey
 ---------------------------------
 
-The inability of seismic methods to image sediments below the Deccan trap basalts has lead to the promotion of electromagnetic methods. In **YYYY**, the ONGC(?) performed a 2D direct-current resistivity (DCR) survey over the Saurashtra peninsula. This survey was able to recover the margins of the Deccan trap basalts and underlying Mesozoic sediments (:numref:`fig_resistivity_2d`). The survey was also able to outline the top margin of a very resistive basement layer. The recovered sedimentary thickness is quite thick and this motivates other surveys to verify this and also estimate the sedimentary thickness at other parts of the peninsula. 
+The inability of seismic methods to image sediments below the Deccan trap basalts has lead to the promotion of electromagnetic methods. Previously, the ONGC performed a 2D direct-current resistivity (DCR) survey over the Saurashtra peninsula. This survey was able to recover the margins of the Deccan trap basalts and underlying Mesozoic sediments (:numref:`fig_resistivity_2d`). The survey was also able to outline the top margin of a very resistive basement layer. The recovered sedimentary thickness is quite thick and this motivates other surveys to verify this and also estimate the sedimentary thickness at other parts of the peninsula. 
 
 .. figure:: images/Resistivity2D.png
     :align: center
