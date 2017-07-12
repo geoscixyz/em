@@ -1492,15 +1492,4 @@ year = {2011},
   month   = {August},
 }
 
-@Article{KangTKC2017,
-  author  = {Seogi Kang and Dominique Fournier and Douglas W. Oldenburg},
-  title   = {Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 3: Induced polarization},
-  journal = {Interpretation},
-  year    = {2017},
-  volume  = {5},
-  number  = {3},
-  pages   = {345-358},
-  month   = {August},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}
