@@ -14,16 +14,19 @@ DO-27/DO-18 (TKC)
 
 **Abstract**
 
-DO-27 and DO-18 kimberlites, often called the Tli Kwi Cho (TKC) kimberlites,
+DO-27 and DO-18 kimberlites, often known as the Tli Kwi Cho (TKC) deposit,
 have been used as a testbed for airborne geophysical methods applied to
 kimberlite exploration. This case history attempts to characterize the
 DO-27/DO-18 kimberlite pipes based on four physical properties: density,
-susceptibility, conductivity and chargeability. These physical properties
-derived from 3D inversions are used to build a petrophysical model of the
-diamondiferous deposit.
+susceptibility, conductivity and chargeability. Physical properties derived
+from 3D inversions are used to build a petrophysical model of the deposit. At
+least four rocks types are identified and imaged at depth, which are compared
+to drilling results for validation. This study promotes the use of multiple
+geophysical methods for efficient diamond exploration programs.
 
-The results presented are based upon the collaborative work of the UBC-GIF
-members that were published in a three-part series about TKC:
+The work presented is based upon the collaborative efforts of the UBC-GIF
+members. It summaries the results that were published in a three-part series
+on TKC:
 
 - `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 1: Potential fields <https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/int-2016-0142_1.pdf>`_ by Devriese, Davis and Oldenburg :cite:`DevrieseTKC2017`.
 
