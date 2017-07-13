@@ -3,81 +3,100 @@
 Properties
 ==========
 
-The composition of the kimberlite pipes exhibits different physical properties
-than those of the host rock and forms the basis for a geophysical exploration
-model.
+A common geophysical fingerprint for a kimberlite pipe near the poles is a
+circular strong magnetic anomaly, with a gravitational low and an anomalous EM
+response. The composition of the kimberlite pipes exhibits different physical
+properties than those of the host rock and forms the basis for a geophysical
+exploration model.
 
 Density
 -------
 
 .. figure:: images/Core_PK_Density.jpg
     :align: right
-    :figwidth: 25%
+    :figwidth: 20%
     :name: core_pk_den
 
-At Lac de Gras, the pyroclastic nature of VK and PK makes the rocks highly
-porous and generally have low density, although some exceptions exist (Reed and
-Witherly, 2007). Overall, we expect the density of kimberlites
-to be less than that of the background granitic rock.
+Kimberlite pipes are generally associated with negative gravity anomalies due
+to their low density, although some exceptions exist (Reed and Witherly,
+2007). In the Lac de Gras region, pyroclastic units (PK) are highly variable
+in composition, but are often made up of a mix of fine grain volcaniclastic sediments (tuff,
+lapilli) and larger xenoliths of country rocks. Fragments of wood, shale, siltstone and mudstone clasts are common depending on the
+style of eruption and depositionnal environment :cite:`Pell1997`
+Moreover, olivine-rich volcaniclastic sediments are readily
+altered to clay minerals through low temperature metamorphism, further
+contributing to lower the density :cite:`Masun1999`. Overall, we expect the
+density of kimberlite pipes to be less than that of the background granitic
+rock.
 
 Susceptibility
 --------------
 
 .. figure:: images/Core_HK_Susc.jpg
     :align: right
-    :figwidth: 25%
+    :figwidth: 20%
     :name: core_hk_susc
 
-HK and VK kimberlites tend to have higher magnetic susceptibilities than the
-host rock and PK kimberlite (Power and Hildes, 2007; Reed and Witherly, 2007).
-In addition, HK is often remanently magnetized (Clark, 1983; Macnae, 1985;
-Hargraves, 1989; Keating and Sailhac, 2004).
+The bulk magnetic susceptibility of kimberlite rocks is highly variable and
+depends largely on the concentration and size of magnetite grains. Intrusive
+rocks, such as HK and VK units, tends to have kimberlites tend to have a
+stronger magnetic signature than the host rock and PK kimberlite
+(:cite:`Power2007` :cite:`Reed2007`). In addition, there has been many
+documented cases of kimberlite pipes with strong remanent magnetization
+(:cite:`Clark1983`, :cite:`Macnae1985`, :cite:`Hargraves1989`,
+:cite:`Keating2004`). At high latitude, such as in the Lac de Gras region,
+remanence is clearly identified by the reverse (-) polarity of the field.
+Therefore, we expect the susceptibility of kimberlite pipes to be higher than
+that of the background granitic rock, but we must be also aware that the
+response may not by purely induced.
+
 
 Conductivity
 ------------
 
 .. figure:: images/Core_PK_Cond.jpg
     :align: right
-    :figwidth: 25%
+    :figwidth: 20%
     :name: core_pk_cond
 
 
 Electrical conduction is relevant to understanding the geology of kimberlites
 through a number of routes. First, many kimberlite pipes are filled with
-olivine-rich volcaniclastic sediments (Masun, 1999) and generally
+olivine-rich volcaniclastic sediments (:cite:`Masun1999`) and generally
 serpentinized through low temperature metamorphism. Further weathering in the
 upper region of the kimberlite pipes alters the rock to clay minerals which
 are conductive compared to the host rocks. Secondly, glacial scouring of the
 low competency kimberlitic rocks often results in the thick accumulation of
 glacial till and lake sediments, which are typically conductive. The Lac de
 Gras region is located in a sub-Arctic region with a documented permafrost
-layer of variable thickness (Golder Associated Ltd., 2014). Laboratory and
+layer of variable thickness :cite:`Golder2014`. Laboratory and
 field measurements have shown strong dependencies between temperature and the
 EM response.
 
-The temperature dependence of conductivity (Grimm and Stillman, 2015) and the
-presence of ice, as well as fine glaciofluvial sediments, can be the sources
-of chargeability, and in turn significant IP signals.
+
 
 Chargeability
 -------------
 
 .. figure:: images/Core_HK_Charg.jpg
     :align: right
-    :figwidth: 25%
+    :figwidth: 20%
     :name: core_hk_charg
 
 
-From the perspective of kimberlite exploration, however, the existence of an
-IP signal is not necessarily important. Ice and near-surface clays are known
-to be chargeable. Their presence distorts EM signals and impedes
-interpretation (Smith and Klein, 1996; Kozhevnikov and Antonov, 2012). As
-such, the existence of negative transients is usually considered to be “noise”
-and it is commonly referred to as IP contamination. Recent studies, however,
-have shown that negative transients in EM data could be attributed to more
-interesting geological features and thus the negative transients are “signal”
-(El-Kaliouby and Eldiwany, 2004; Flores and Peralta-Ortega, 2009; Kratzer and
-Macnae, 2012; Kang et al, 2014).
+From the perspective of kimberlite exploration, little has been done in the
+past to use chargeability as a diagnostic physical property. Ice and near-
+surface clays are known to be chargeable. The temperature dependence of
+conductivity :cite:`Grimm2015` and the presence of ice, as well as fine
+glaciofluvial sediments, can be the sources of chargeability. The resulting IP
+signal is often considered as "noise" that impedes the interpretation of EM
+data and it is commonly referred to as IP contamination
+:cite:`Kozhevnikov2012`. Recent studies, however, have shown that negative
+transients in EM data could be attributed to more interesting geological
+features :cite:`El-Kaliouby2004`, :cite:`Flores2009`,
+:cite:`Kratzer2012`, :cite:`Kang2014`. In this study, we will attempt to
+extract chargeability information from the EM data to characterize the
+kimberlite rocks.
 
 Conceptual model
 ----------------
