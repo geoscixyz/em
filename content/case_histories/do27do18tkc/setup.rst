@@ -67,11 +67,19 @@ owned by `Peregrine Diamonds Ltd`_
 +---------------------------+-----------------------------+
 
 
+The goal of our work is to determine how well our modern-day inversions of
+geophysical data compare with the latest geologic model. Although geologic and
+drilling information can be used to constrain the inversion, we specifically
+omit such a priori information from our inversions. Our goal is to investigate
+what geologic information can be provided by the geophysical data alone.
+
+
+
 Geological Background
 ---------------------
 
 Many different types of kimberlite can exist within a pipe, and unfortunately,
-there are several classifications and naming conventions (Pell, 1997;
+there are several classifications and naming conventions (:cite:`Pell1997`,
 Kjarsgaard, 2007). Here, we divide kimbelitic rocks into three types based on
 their depositional environment: Hypabyssal (HK): intrusive, igneous,
 nonfragmented rock, root of volcanic pipe Volcaniclastic (VK): extrusive,
@@ -108,11 +116,5 @@ DO-27 during the acquisition of the geophysical data.
     (b) after glaciation removed the top layers. A lake may be present after
     glaciation.
 
-
-The goal of our work is to determine how well our modern-day inversions of
-geophysical data compare with the latest geologic model. Although geologic and
-drilling information can be used to constrain the inversion, we specifically
-omit such a priori information from our inversions. Our goal is to investigate
-what geologic information can be provided by the geophysical data alone.
 
 

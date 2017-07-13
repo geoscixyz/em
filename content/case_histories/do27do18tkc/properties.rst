@@ -4,16 +4,43 @@ Properties
 ==========
 
 The composition of the kimberlite pipes exhibits different physical properties
-that those of the host rock and forms the basis for a geophysical exploration
-model. At Lac de Gras, VK and PK generally have low density although some
-exceptions exist (Reed and Witherly, 2007), whereas HK has a slightly higher
-density. Overall, however, the density of a kimberlite is expected to be less
-than that of the background granitic rock.
+than those of the host rock and forms the basis for a geophysical exploration
+model.
+
+Density
+-------
+
+.. figure:: images/Core_PK_Density.jpg
+    :align: right
+    :figwidth: 25%
+    :name: core_pk_den
+
+At Lac de Gras, the pyroclastic nature of VK and PK makes the rocks highly
+porous and generally have low density, although some exceptions exist (Reed and
+Witherly, 2007). Overall, we expect the density of kimberlites
+to be less than that of the background granitic rock.
+
+Susceptibility
+--------------
+
+.. figure:: images/Core_HK_Susc.jpg
+    :align: right
+    :figwidth: 25%
+    :name: core_hk_susc
 
 HK and VK kimberlites tend to have higher magnetic susceptibilities than the
 host rock and PK kimberlite (Power and Hildes, 2007; Reed and Witherly, 2007).
 In addition, HK is often remanently magnetized (Clark, 1983; Macnae, 1985;
 Hargraves, 1989; Keating and Sailhac, 2004).
+
+Conductivity
+------------
+
+.. figure:: images/Core_PK_Cond.jpg
+    :align: right
+    :figwidth: 25%
+    :name: core_pk_cond
+
 
 Electrical conduction is relevant to understanding the geology of kimberlites
 through a number of routes. First, many kimberlite pipes are filled with
@@ -32,6 +59,15 @@ The temperature dependence of conductivity (Grimm and Stillman, 2015) and the
 presence of ice, as well as fine glaciofluvial sediments, can be the sources
 of chargeability, and in turn significant IP signals.
 
+Chargeability
+-------------
+
+.. figure:: images/Core_HK_Charg.jpg
+    :align: right
+    :figwidth: 25%
+    :name: core_hk_charg
+
+
 From the perspective of kimberlite exploration, however, the existence of an
 IP signal is not necessarily important. Ice and near-surface clays are known
 to be chargeable. Their presence distorts EM signals and impedes
@@ -43,12 +79,12 @@ interesting geological features and thus the negative transients are â€œsignalâ€
 (El-Kaliouby and Eldiwany, 2004; Flores and Peralta-Ortega, 2009; Kratzer and
 Macnae, 2012; Kang et al, 2014).
 
+Conceptual model
+----------------
+
 In summary, we have four physical properties which could be diagnostic in
 differentiating between kimberlites and host rock, as well as between the
-different kimberlitic rock types. The physical property relationships,
-compared with the host rock, are summarized in Table 1 (missing
-chargeability).
-
+different kimberlitic rock types.
 Overall we expect:
 
 .. _TKCgeoTable:
