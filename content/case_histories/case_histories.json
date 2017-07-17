@@ -281,6 +281,24 @@
             {"uid":"Arabian Gulf, Qatar", "as":"location"}
         ]
     },
+    "red_sea":{
+        "title":"Red Sea",
+        "description":"Application of Magnetotelluric and Controlled-Source Electromagnetic Methods for Subsalt Structure Imaging in the Red Sea",
+        "source":"./red_sea/",
+        "thumbnail":"./wadi_sahba/images/thumbnail.png",
+        "citations":["Colombo2013","Colombo2014"],
+        "contributors":[
+            {"uid":"user:dcolombo", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"WAZ, CSEM, MT, Gravity", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"Red Sea, Multi-physics, Data-Driven Inversion, Model-Driven Inversion", "as":"keyword"},
+            {"uid":"Northern Arabian Gulf", "as":"location"}
+        ]
+    },
     "saurashtra":{
         "title":"Saurashtra",
         "description":"Exploration with Controlled Source Electromagnetics Under Basalt Cover in India",
