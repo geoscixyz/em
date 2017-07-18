@@ -47,8 +47,8 @@ Following the discovery, the interpretation of the two kimberlites evolved
 over five geologic models, indicative of the uncommon geometry of the deposit
 :cite:`Harder2009`. What was initial thought to be a large complex was later
 understood to be disconnected bodies created in multiple volcanic phases. The
-resource estimate was also revised down over the years as presented in
-:ref:`Table<TKCResEstTable>`, partially contributing to the Canadian junior
+resource estimate was also revised down over the years as presented in the
+:ref:`table below<TKCResEstTable>`, partially contributing to the Canadian junior
 stock market crash of 1994 :cite:`Coopersmith2006`. The deposit is currently
 owned by `Peregrine Diamonds Ltd`_
 
