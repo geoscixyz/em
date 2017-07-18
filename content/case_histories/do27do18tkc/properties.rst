@@ -1,5 +1,9 @@
 .. _tkc_properties:
 
+.. figure:: images/TKC_sevensteps.png
+    :align: right
+    :figwidth: 30%
+
 Properties
 ==========
 
@@ -8,6 +12,8 @@ circular strong magnetic anomaly, with a gravitational low and an anomalous EM
 response. The composition of the kimberlite pipes exhibits different physical
 properties than those of the host rock and forms the basis for a geophysical
 exploration model.
+
+.. _tkc_density:
 
 Density
 -------
@@ -28,6 +34,8 @@ altered to clay minerals through low temperature metamorphism, further
 contributing to lower the density :cite:`Masun1999`. Overall, we expect the
 density of kimberlite pipes to be less than that of the background granitic
 rock.
+
+.. _tkc_susceptibility:
 
 Susceptibility
 --------------
@@ -50,6 +58,7 @@ Therefore, we expect the susceptibility of kimberlite pipes to be higher than
 that of the background granitic rock, but we must be also aware that the
 response may not by purely induced.
 
+.. _tkc_conductivity:
 
 Conductivity
 ------------
@@ -74,6 +83,7 @@ field measurements have shown strong dependencies between temperature and the
 EM response.
 
 
+.. _tkc_chargeability:
 
 Chargeability
 -------------

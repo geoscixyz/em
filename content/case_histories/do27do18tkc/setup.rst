@@ -1,12 +1,11 @@
 .. _tkc_setup:
 
+.. figure:: images/TKC_sevensteps.png
+    :align: right
+    :figwidth: 30%
+
 Setup
 =====
-
-.. figure:: images/Ekati_Location.png
-    :align: right
-    :figwidth: 50%
-    :name: fig_ekati_location
 
 The Northwest Territories in Canada has been surveyed extensively for
 diamondiferous kimberlites since the early 1980s. The Lac de Gras region has
@@ -18,18 +17,22 @@ kimberlites are of economic interest. Understanding new deposits early in the
 exploration program remains an important problem in diamond exploration, as
 exemplified by the history of the TKC deposit.
 
+.. figure:: images/Ekati_Location.png
+    :align: center
+    :figwidth: 75%
+    :name: fig_ekati_location
 
 Historical background
 ---------------------
 
-.. figure:: images/TKC_Location.png
+.. figure:: images/Topography_Hydro.png
     :align: right
     :figwidth: 50%
     :name: fig_tkc_location
 
-    Location of TKC kimberlite complex in Northwest Territories, Canada. The
-    DIGHEM flight lines (gray) and near surface outlines (black) of DO-27 and
-    DO-18  based on drilling are shown for reference.
+    Topography and hydrology near the DO-27/DO-18 kimberlites. The region of
+    interest (black) and near surface outlines (red) of DO-27 and DO-18  based
+    on drilling are shown for reference.
 
 
 The early 1990s saw a rush to open Canada’s first diamond mine, and in late
@@ -77,15 +80,6 @@ what geologic information can be provided by the geophysical data alone.
 
 Geological Background
 ---------------------
-
-Many different types of kimberlite can exist within a pipe, and unfortunately,
-there are several classifications and naming conventions (:cite:`Pell1997`,
-Kjarsgaard, 2007). Here, we divide kimbelitic rocks into three types based on
-their depositional environment: Hypabyssal (HK): intrusive, igneous,
-nonfragmented rock, root of volcanic pipe Volcaniclastic (VK): extrusive,
-fragmental, main volcanic body Pyroclastic (PK): a subclass of VK, extrusive,
-violent, deposited after an explosive event.
-
 The surrounding lithology at TKC consists of post-Yellowknife Supergroup
 granite. A thin layer of mudstone covers the granites a the surface
 (:cite:`Harder2008`). The Wisconsinan glaciation (Dyke and Prest, 1987)
@@ -115,6 +109,16 @@ DO-27 during the acquisition of the geophysical data.
     Schematic of a typical Lac de Gras kimberlite at (a) emplacement time and
     (b) after glaciation removed the top layers. A lake may be present after
     glaciation.
+
+Many different types of kimberlite can exist within a pipe, and unfortunately,
+there are several classifications and naming conventions (:cite:`Pell1997`,
+:cite:`Kjarsgaard2007`). Here, we divide kimbelitic rocks into three types based on
+their depositional environment: Hypabyssal (HK): intrusive, igneous,
+nonfragmented rock, root of volcanic pipe Volcaniclastic (VK): extrusive,
+fragmental, main volcanic body Pyroclastic (PK): a subclass of VK, extrusive,
+violent, deposited after an explosive event.
+
+
 
 
 
