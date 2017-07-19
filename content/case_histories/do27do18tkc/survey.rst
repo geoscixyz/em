@@ -1,6 +1,6 @@
 .. _tkc_survey:
 
-.. figure:: images/TKC_sevensteps.png
+.. figure:: images/TKC_7Steps_Survey.png
     :align: right
     :figwidth: 30%
 

@@ -1,6 +1,6 @@
 .. _do27do18tkc_index:
 
-.. figure:: images/TKC_sevensteps.png
+.. figure:: images/TKC_7Steps.png
     :align: right
     :figwidth: 50%
 

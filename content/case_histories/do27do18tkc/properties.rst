@@ -1,6 +1,6 @@
 .. _tkc_properties:
 
-.. figure:: images/TKC_sevensteps.png
+.. figure:: images/TKC_7Steps_Properties.png
     :align: right
     :figwidth: 30%
 

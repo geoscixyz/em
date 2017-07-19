@@ -1,5 +1,9 @@
 .. _tkc_data:
 
+.. figure:: images/TKC_7Steps_Data.png
+    :align: right
+    :figwidth: 30%
+
 Data
 ====
 
