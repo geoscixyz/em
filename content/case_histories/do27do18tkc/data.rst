@@ -11,7 +11,7 @@ This section reviews the data that was graciously provided by `Peregrine
 Diamonds Ltd`_. We review the units, normalization and observations that can
 be made by simple visual inspection of the data. Important to note that
 *survey reports* were missing for few data sets. Some of the technical
-information had to be infered from different surveys acquired during the same
+information had to be inferred from surveys acquired during the same
 period.
 
 
@@ -110,14 +110,14 @@ million* (ppm) of the primary field :math:`B_{P}` such that:
 
 :math:`B_{ppm} = B / B_{P} * 10^6`
 
-From the data provided, the quadrature data of the in-line data (x) were
-missing. Hence only the vertical co-planar data were used in this study.
-
 .. raw:: html
 	:file: ./images/Data_DIGHEM_InPhase.html
 
 .. raw:: html
 	:file: ./images/Data_DIGHEM_Quadrature.html
+
+From the data provided, the quadrature data of the in-line data (x) were
+missing. Hence only the vertical co-planar data were used in this study.
 
 FEM data are often interpreted by simple visual inspection of each
 frequencies. From the :ref:`skin
@@ -138,16 +138,30 @@ highlight well the location of two pipes.
 
 Time-Domain EM
 --------------
-The AeroTEM transmitter waveform
-(Figure 2) is a triangular current pulse of 1150  microseconds duration
-operating at a base frequency of 150 Hz. The transmitter loop consists of 8
-turns of copper wire, 5 m in diameter, with a maximum current  of 250 A that
-produces a peak moment of 40,000 Am2.
 
 .. raw:: html
-	:file: ./images/Data_AeroTEM.html
-
-VTEM survey
+    :file: ./images/Data_AeroTEM.html
 
 .. raw:: html
     :file: ./images/Data_VTEM.html
+
+We present the time channels collected by the AeroTEM (2003) and VTEM
+(2004) systems. Both system record the time varying vertical component of the
+magnetic field :math:`\frac{\partial B_z}{\partial t}` in (nT/s). Data
+quality, and the time range for which data are sampled vary across EM systems,
+hence the EM data sets should show some differences. In general, we observe
+the following feature:
+
+- Both systems record a positive anomaly over the southern lobe of DO-27, which later goes negative.
+- Negative data are observed on all time channels over DO-18.
+- Relative noise level gets progressively larger at later times.
+
+The negative data recorded by both time-domain systems is indicative of
+chargeable material. From a kimberlite exploration perspective, the existence
+of an IP signal is not necessarily significant. Ice and near surface clays are
+known to be chargeable. The strong spatial correlation between the negative
+data and the location of the pipes suggests however that the IP signal may
+originate from the kimberlites themselves.
+
+
+

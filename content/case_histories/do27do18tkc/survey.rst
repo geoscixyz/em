@@ -146,7 +146,12 @@ East-West orientation, with 4 additional lines flown NS. The overlap between
 the two sets of lines covered the approximate location of DO-27 and DO-18 with
 the objective of determining the vertical of the kimberlite pipes. The AeroTEM
 system is a concentric transmitter-receiver coil system mounted on a rigid
-platform. A cesium-vapour magnetometer bird is towed 10 m above the EM system.
+platform.
+The AeroTEM transmitter waveform is a triangular current pulse of 1150
+microseconds duration operating at a base frequency of 150 Hz. The transmitter
+loop consists of 8 turns of copper wire, 5 m in diameter, with a maximum
+current  of 250 A that produces a peak moment of 40,000 Am2.
+A cesium-vapour magnetometer bird is towed 10 m above the EM system.
 
 
 .. _survey_VTEM:
