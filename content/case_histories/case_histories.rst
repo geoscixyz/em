@@ -189,7 +189,7 @@ Bookpurnong
 DO-27/DO-18 (TKC)
 ^^^^^^^^^^^^^^^^^
 
-.. image:: ./do27do18tkc/images/TKC_sevensteps.png
+.. image:: ./do27do18tkc/images/TKC_7Steps.png
     :alt: do27do18tkc
     :width: 260
     :align: right
@@ -198,7 +198,7 @@ DO-27/DO-18 (TKC)
 
 
 - Contributors
-    - author: :ref:`sdevriese`, :ref:`fourndo`, :ref:`skang`
+    - author: :ref:`fourndo`, :ref:`sdevriese`, :ref:`skang`
 
 
 - Tags

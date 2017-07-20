@@ -8,8 +8,13 @@ Survey
 ======
 
 The TKC deposit has been used as a testbed for airborne and ground geophysics,
-with over 10 known surveys carried out over the deposit, 5 of which are covered
-in this study.
+with over 10 known surveys carried out over the deposit. In this section, we
+review the acquisition configuration of 5 of these surveys.
+
+All data used in this study were converted from their native coordinate system
+to the NAD27-UTM 12N (`EPSG 26712`_) projection prior to processing.
+
+.. _EPSG 26712: http://spatialreference.org/ref/epsg/nad27-utm-zone-12n/
 
 +---------------------------+-------------------+----------+
 |       **Survey**          | **Data Type**     | **Year** |
@@ -20,11 +25,11 @@ in this study.
 +---------------------------+-------------------+----------+
 |        NanoTEM            |  TEM              | 1993     |
 +---------------------------+-------------------+----------+
-| Ground magnetics          |  magnetics        | 1993     |
+| Ground magnetics          |  Magnetics        | 1993     |
 +---------------------------+-------------------+----------+
-| Ground gravity*           |  gravity          | 1994     |
+| Ground gravity*           |  Gravity          | 1994     |
 +---------------------------+-------------------+----------+
-| Falcon*                   |gravity gradiometry| 2001     |
+| Falcon*                   |Gravity gradiometry| 2001     |
 +---------------------------+-------------------+----------+
 | AeroTEM I                 |  TEM, magnetics   |2001      |
 +---------------------------+-------------------+----------+
@@ -34,13 +39,14 @@ in this study.
 +---------------------------+-------------------+----------+
 | Resolve                   |FEM, magnetics     | 2006     |
 +---------------------------+-------------------+----------+
-| Falcon                    |gravity gradiometry| 2006     |
+| Falcon                    |Gravity gradiometry| 2006     |
 +---------------------------+-------------------+----------+
 | HeliSAM                   | TEM (total field) | 2014     |
 +---------------------------+-------------------+----------+
 | * Used in this study                                     |
 +----------------------------------------------------------+
 
+.. _survey_DIGHEM:
 
 Frequency EM + Magnetics
 ------------------------
@@ -62,6 +68,7 @@ by each coil pair. A magnetometer sensor inside the EM bird was used to
 collect Total Field magnetic data.
 
 .. _DIGHEMconfig:
+
 +---------------------------+-----------------------+--------------------+
 |       **Configuration**   |**Frequencies (Hz)**   | **Separation (m)** |
 +---------------------------+-----------------------+--------------------+
@@ -87,15 +94,14 @@ surveys. The surveys were leveled and combined into a single survey. Stations
 are spaced every 25 m in the easting direction and every 100 m in the northing
 direction over DO-27. Over DO-18, stations are collected every 50 m and every
 25 m in the easting and northing directions, respectively. This gives a total
-of 972 data locations. The data were converted from their native coordinate
-system to NAD27 prior to processing. We note that only elevation data for the
+of 972 data locations. We note that only elevation data for the
 survey over DO-27 was supplied to us. However, given that the data were
 collected in the winter, we used our elevation model
 :numref:`fig_tkc_location` and assume gravity stations were collected on the
 surface of the frozen lake.
 
 
-Gravity gradiometry
+Gravity Gradiometry
 -------------------
 
 .. figure:: images/Survey_Falcon.png
@@ -121,6 +127,7 @@ gradiometry surveys can be reviewed in `GPG Gravity`_.
 Time EM + Magnetics
 -------------------
 
+.. _survey_AeroTEM:
 
 .. figure:: images/Survey_AeroTEM.png
     :align: right
@@ -128,6 +135,9 @@ Time EM + Magnetics
     :name: fig_Survey_AeroTEM
 
     Airborne AeroTEM survey collected in 2003.
+
+AeroTEM
+"""""""
 
 The first time-domain electromagnetic survey to be collected at TKC was an
 helicopter borne AeroTEM I system flown in 2001, then re-flown in 2003 with a
@@ -139,12 +149,17 @@ system is a concentric transmitter-receiver coil system mounted on a rigid
 platform. A cesium-vapour magnetometer bird is towed 10 m above the EM system.
 
 
+.. _survey_VTEM:
+
 .. figure:: images/Survey_VTEM.png
     :align: right
     :figwidth: 50%
     :name: fig_Survey_VTEM
 
     Airborne VTEM survey collected in 2004.
+
+VTEM
+""""
 
 Due to peculiar negative data recorded by the AeroTEM system, the decision was
 made to collect a second TEM survey in 2004 with an helicopter-born VTEM

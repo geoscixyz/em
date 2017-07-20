@@ -1,5 +1,10 @@
 .. _tkc_synthesis:
 
+.. figure:: images/TKC_7Steps_Synthesis.png
+    :align: right
+    :figwidth: 30%
+
+
 Synthesis
 =========
 

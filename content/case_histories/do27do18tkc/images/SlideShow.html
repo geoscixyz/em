@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C90f.png" style="width:100%">
+<div class="text">VTEM 90ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C110f.png" style="width:100%">
+<div class="text">VTEM 110ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_c130f.png" style="width:100%">
+<div class="text">VTEM 130ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C150f.png" style="width:100%">
+<div class="text">VTEM 150ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C170f.png" style="width:100%">
+<div class="text">VTEM 170ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C190f.png" style="width:100%">
+<div class="text">VTEM 190ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C220f.png" style="width:100%">
+<div class="text">VTEM 220ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C260f.png" style="width:100%">
+<div class="text">VTEM 260ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C300f.png" style="width:100%">
+<div class="text">VTEM 300ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C350f.png" style="width:100%">
+<div class="text">VTEM 350ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C410f.png" style="width:100%">
+<div class="text">VTEM 410ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C480f.png" style="width:100%">
+<div class="text">VTEM 480ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C570f.png" style="width:100%">
+<div class="text">VTEM 570ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_c680f.png" style="width:100%">
+<div class="text">VTEM 680ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C810f.png" style="width:100%">
+<div class="text">VTEM 810ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C1130f.png" style="width:100%">
+<div class="text">VTEM 1130ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C1340f.png" style="width:100%">
+<div class="text">VTEM 1340ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C1600f.png" style="width:100%">
+<div class="text">VTEM 1600ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C1900f.png" style="width:100%">
+<div class="text">VTEM 1900ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C2240f.png" style="width:100%">
+<div class="text">VTEM 2240ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C2660f.png" style="width:100%">
+<div class="text">VTEM 2660ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C3180f.png" style="width:100%">
+<div class="text">VTEM 3180ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C3780f.png" style="width:100%">
+<div class="text">VTEM 3780ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C4460f.png" style="width:100%">
+<div class="text">VTEM 4460ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C5300f.png" style="width:100%">
+<div class="text">VTEM 5300ms</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_VTEM_C6340f.png" style="width:100%">
+<div class="text">VTEM 6340ms</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span>
+  <span class="dot" onclick="currentSlide(15)"></span>
+  <span class="dot" onclick="currentSlide(16)"></span>
+  <span class="dot" onclick="currentSlide(17)"></span>
+  <span class="dot" onclick="currentSlide(18)"></span>
+  <span class="dot" onclick="currentSlide(19)"></span>
+  <span class="dot" onclick="currentSlide(20)"></span>
+  <span class="dot" onclick="currentSlide(21)"></span>
+  <span class="dot" onclick="currentSlide(22)"></span>
+  <span class="dot" onclick="currentSlide(23)"></span>
+  <span class="dot" onclick="currentSlide(24)"></span>
+  <span class="dot" onclick="currentSlide(25)"></span>
+  <span class="dot" onclick="currentSlide(26)"></span>
+  <span class="dot" onclick="currentSlide(27)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>

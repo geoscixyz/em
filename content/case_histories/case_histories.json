@@ -103,10 +103,10 @@
         "title":"DO-27/DO-18 (TKC)",
         "description":"Inversion of airborne geophysics over the DO-27/DO-18 kimberlites (TKC)",
         "source":"./do27do18tkc/",
-        "thumbnail":"./do27do18tkc/images/TKC_sevensteps.png",
+        "thumbnail":"./do27do18tkc/images/TKC_7Steps.png",
         "contributors":[
-            {"uid":"user:sdevriese", "as":"author"},
             {"uid":"user:fourndo", "as":"author"},
+            {"uid":"user:sdevriese", "as":"author"},
             {"uid":"user:skang", "as":"author"}
         ],
         "tags":[

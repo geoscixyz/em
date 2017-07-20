@@ -7,26 +7,44 @@
 Data
 ====
 
+This section reviews the data that was graciously provided by `Peregrine
+Diamonds Ltd`_. We review the units, normalization and observations that can
+be made by simple visual inspection of the data. Important to note that
+*survey reports* were missing for few data sets. Some of the technical
+information had to be infered from different surveys acquired during the same
+period.
+
+
+.. _Peregrine Diamonds Ltd: https://www.pdiam.com/projects/peregrine-exploration
+
+
 .. _tkc_data_grav:
 
 Gravity
 -------
 
-Three main features are observed in the gravity data (:numref:`fig_Data_Grav` (a)): low gravity anomalies over DO-27 and DO-18, and also a
-low gravity anomaly connecting the two kimberlite pipes. The gravity data
-hover around 1800 mGal, from which we subtracted a regional field of 1803.163
-mGal.  We assign an uncertainty of 0.045 mGal to
-the gravity data, and invert the data using the same mesh that was used to
-recover susceptibility. The results, presented in :numref:`fig_Data_Grav` (b), have a substantial negative density contrast in the
-area of the two pipes and a smaller negative contrast between them.
-
-.. figure:: images/gravData.png
-    :align: center
-    :figwidth: 100%
+.. figure:: images/Data_Grav.png
+    :align: right
+    :figwidth: 50%
     :name: fig_Data_Grav
 
-    Observed (a) raw and (b) processed ground gravity data after removal of DC
-    shift. Observation locations are denoted by white dots.
+    Observed ground gravity data. Observation locations are denoted by white
+    dots.
+
+Two ground gravity surveys were provided, measuring the vertical gravity field
+(:math:`g_z`) in mGal. The surveys were initially not reference to the same
+coordinate system and no correction had been done to compensate for the
+different instrumental level.  Leveling was done in post- processing by
+:cite:`Jansen2004`, and supplied to us as *Bouguer corrected* (2.67 g/cc)
+data.
+
+Three main features are observed in the gravity data:
+
+- Low gravity anomalies over DO-27 and DO-18
+- Low gravity anomaly connecting the two kimberlite pipes.
+
+Initial interpretation of the gravity data supported the idea of both pipes
+being connected at depth.
 
 
 .. _tkc_data_mag:
@@ -34,31 +52,49 @@ area of the two pipes and a smaller negative contrast between them.
 Magnetics
 ---------
 
-.. figure:: images/magData.png
-    :align: right
-    :figwidth: 50%
-    :name: fig_Data_Mag
+.. .. figure:: images/Data_Mag.png
 
-    The subsets of the observed magnetic data from the (a) DIGHEM, (b)
-    AeroTEM, and (c) VTEM surveys over the TKC kimberlite complex. The
-    respective leveled magnetic data that were inverted are shown in (d), (e),
-    and (f).
 
-The DO-27 anomaly to the south and its northern smaller partner DO-18, are
-clearly visible in all three data sets (:numref:`fig_Data_Mag` (a-c)). However,
-each data set has a regional trend. Any non-zero background may result in
-extra material (i.e., artifacts) in the recovered susceptibility model from
-inversion. We subtracted a constant from the DIGHEM and VTEM magnetic data
-such that the values away from the main anomalies were zero. The removal of a
-DC component was preferred over a polynomial fit because the latter can remove
-part of the kimberlite signal. The resulting leveled data are shown in
-:numref:`fig_Data_Mag` (d) and (f) respectively. In case of the AeroTEM magnetic
-data, it was noticed that each individual line had a varying DC shift. By
-comparing data points that have similar locations to those of the VTEM
-magnetic data, we were able to level each line in the AeroTEM magnetic data
-separately. The processed AeroTEM magnetic data is presented in
-:numref:`fig_Data_Mag` (e).
+..     :align: right
+..     :figwidth: 50%
+..     :name: fig_Data_Mag
 
+..     The subsets of the observed magnetic data from the (a) DIGHEM, (b)
+..     AeroTEM, and (c) VTEM surveys over the TKC kimberlite complex.
+
+.. raw:: html
+	:file: ./images/Data_Mag.html
+
+
+We review the magnetic data acquired along side the :ref:`DIGHEM<survey_DIGHEM>`, :ref:`AeroTEM II<survey_AeroTEM>` and
+:ref:`VTEM<survey_VTEM>` surveys. All three systems are equipped with a cesium vapour magnetometer,
+recording Total Field Intensity (TMI) magnetic data in *nT* as shown below. Differences in TMI levels
+can be attributed to changes in the inducing field and variable flight heights.
+
+Two main features are observed on all three datasets:
+
+- A positive anomaly over DO-27 and DO-18
+- A negative anomaly on the north-eastern flank of DO-27
+
+From the larger footprint of the DIGHEM survey, we can also identify two
+larger magnetic trends. The narrow magnetic anomaly strikes :math:`315^\circ`
+N, found throughout the Lac de Gras region, corresponds to the Mackenzie dyke
+swarm  :cite:`Buchan2009`. A weaker but still distinguishable narrow anomaly
+appears to be striking at :math:`45^\circ` N. This feature may be part of the
+MacKey dyke swarm.
+
+
++------------------------------+-----------+--------+-----------+
+| **System**                   | **DIGHEM**|**VTEM**|**AeroTEM**|
++------------------------------+-----------+--------+-----------+
+| Number of data               | 6274      | 26334  |  22561    |
++------------------------------+-----------+--------+-----------+
+| Field strength (nT)          | 59500     | 59580  | 59500     |
++------------------------------+-----------+--------+-----------+
+| Inclination (:math:`^\circ`) | 83.0      | 83.3   |  83.0     |
++------------------------------+-----------+--------+-----------+
+| Declination (:math:`^\circ`) | 21.0      | 19.5   | 20.0      |
++------------------------------+-----------+--------+-----------+
 
 
 .. _tkc_data_FEM:
@@ -66,10 +102,38 @@ separately. The processed AeroTEM magnetic data is presented in
 Frequency-Domain EM
 -------------------
 
-The data were first converted from their native coordinate
-systems to NAD27 for consistency. In our investigation, only a subset of the
-DIGHEM and VTEM datasets that cover the area of interest was used since the
-datasets span a large spatial area.
+The DIGHEM system coil configuration allows to collect the vertical (z) and in-
+line (x) components of the magnetic field in the frequency domain. A bucking coil
+is used to cancel the primary signal from the transmitter loop. The receiver
+records the in-phase and quadrature components secondary field in *parts-per-
+million* (ppm) of the primary field :math:`B_{P}` such that:
+
+:math:`B_{ppm} = B / B_{P} * 10^6`
+
+From the data provided, the quadrature data of the in-line data (x) were
+missing. Hence only the vertical co-planar data were used in this study.
+
+.. raw:: html
+	:file: ./images/Data_DIGHEM_InPhase.html
+
+.. raw:: html
+	:file: ./images/Data_DIGHEM_Quadrature.html
+
+FEM data are often interpreted by simple visual inspection of each
+frequencies. From the :ref:`skin
+depth<harmonic_planewaves_homogeneous_skindepth_formula_quasi>` approximation,
+the highest frequencies can be used to delineate near-surface conductors
+whereas deeper structures can potentially be detected at the lower
+frequencies. As observed on the 56,000 Hz channel, both DO-18 and DO-27 give
+rise to a strong quadrature component. The quadrature component correlates
+well with the hydrography, agreeing with a shallow response from the lake
+bottom sediments and glacial till layer. Two elongated and narrow negative
+anomalies appears in the in-phase maps of the 900 Hz and 7,200 Hz. These
+features are associated with intrusive dyke swarms known to be strong magnetic
+susceptibility anomalies. The quadrature component of both frequencies also
+highlight well the location of two pipes.
+
+
 
 .. _tkc_data_TEM:
 
@@ -80,3 +144,6 @@ The AeroTEM transmitter waveform
 operating at a base frequency of 150 Hz. The transmitter loop consists of 8
 turns of copper wire, 5 m in diameter, with a maximum current  of 250 A that
 produces a peak moment of 40,000 Am2.
+
+.. raw:: html
+	:file: ./images/SlideShow.html
