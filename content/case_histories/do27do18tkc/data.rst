@@ -134,7 +134,6 @@ susceptibility anomalies. The quadrature component of both frequencies also
 highlight well the location of two pipes.
 
 
-
 .. _tkc_data_TEM:
 
 Time-Domain EM
@@ -146,4 +145,9 @@ turns of copper wire, 5 m in diameter, with a maximum current  of 250 A that
 produces a peak moment of 40,000 Am2.
 
 .. raw:: html
-	:file: ./images/SlideShow.html
+	:file: ./images/Data_AeroTEM.html
+
+VTEM survey
+
+.. raw:: html
+    :file: ./images/Data_VTEM.html
