@@ -47,6 +47,33 @@ Initial interpretation of the gravity data supported the idea of both pipes
 being connected at depth.
 
 
+.. _tkc_data_gg:
+
+Gravity Gradiometry
+-------------------
+
+Airborne gravity gradiometry data were collected in 2001 using the Falcon
+system with the final product being the vertical component :math:`g_{zz}` in
+*Eotvos* (:math:`10^{-9}\; s^{-2}`). The survey line spacing was approximately
+50 m. A terrain correction density of 2.67 g/cc and a 100-m wavelength cutoff
+filter were applied to the data by the contractor.
+
+.. figure:: images/Data_GravGrad.png
+    :align: center
+    :figwidth: 75%
+    :name: fig_Data_GravGrad
+
+    Observed airborne gravity gradiometry data.
+
+The main features observed in the gravity data are:
+
+- Negative anomalies over DO-27 and DO-18
+- Negative anomaly connecting the two kimberlite pipes.
+- Positive high along the Mackenzie dyke,
+- Low to negative gravity gradients associated with the hydrography.
+
+
+
 .. _tkc_data_mag:
 
 Magnetics
@@ -67,7 +94,7 @@ Magnetics
 
 
 We review the magnetic data acquired along side the :ref:`DIGHEM<survey_DIGHEM>`, :ref:`AeroTEM II<survey_AeroTEM>` and
-:ref:`VTEM<survey_VTEM>` surveys. All three systems are equipped with a cesium vapour magnetometer,
+:ref:`VTEM<survey_VTEM>` surveys. All three systems were equipped with a cesium vapour magnetometer,
 recording Total Field Intensity (TMI) magnetic data in *nT* as shown below. Differences in TMI levels
 can be attributed to changes in the inducing field and variable flight heights.
 
@@ -102,13 +129,23 @@ MacKey dyke swarm.
 Frequency-Domain EM
 -------------------
 
-The DIGHEM system coil configuration allows to collect the vertical (z) and in-
-line (x) components of the magnetic field in the frequency domain. A bucking coil
-is used to cancel the primary signal from the transmitter loop. The receiver
-records the in-phase and quadrature components secondary field in *parts-per-
-million* (ppm) of the primary field :math:`B_{P}` such that:
+The DIGHEM system coil configuration allows to collect the vertical (:math:`B_z`) and
+in-line (:math:`B_{xy}`) components of the magnetic field in the frequency domain. A
+bucking coil was used to cancel the primary signal from the transmitter loop.
+The receiver records the in-phase and quadrature components secondary field in
+*parts-per- million* (ppm) of the primary field :math:`B_{P}` such that:
 
 :math:`B_{ppm} = B / B_{P} * 10^6`
+
+FEM data are often interpreted by simple visual inspection of each
+frequencies. From the :ref:`skin
+depth<harmonic_planewaves_homogeneous_skindepth_formula_quasi>` approximation,
+the highest frequencies can be used to delineate near-surface conductors
+whereas deeper structures can potentially be detected at the lower
+frequencies.
+From the data provided, the quadrature data of the in-line data
+(:math:`B_{xy}`) were missing. Hence only the vertical co-planar data were
+used in this study.
 
 .. raw:: html
 	:file: ./images/Data_DIGHEM_InPhase.html
@@ -116,15 +153,7 @@ million* (ppm) of the primary field :math:`B_{P}` such that:
 .. raw:: html
 	:file: ./images/Data_DIGHEM_Quadrature.html
 
-From the data provided, the quadrature data of the in-line data (x) were
-missing. Hence only the vertical co-planar data were used in this study.
-
-FEM data are often interpreted by simple visual inspection of each
-frequencies. From the :ref:`skin
-depth<harmonic_planewaves_homogeneous_skindepth_formula_quasi>` approximation,
-the highest frequencies can be used to delineate near-surface conductors
-whereas deeper structures can potentially be detected at the lower
-frequencies. As observed on the 56,000 Hz channel, both DO-18 and DO-27 give
+As observed on the 56,000 Hz channel, both DO-18 and DO-27 give
 rise to a strong quadrature component. The quadrature component correlates
 well with the hydrography, agreeing with a shallow response from the lake
 bottom sediments and glacial till layer. Two elongated and narrow negative
@@ -153,15 +182,70 @@ hence the EM data sets should show some differences. In general, we observe
 the following feature:
 
 - Both systems record a positive anomaly over the southern lobe of DO-27, which later goes negative.
+
 - Negative data are observed on all time channels over DO-18.
+
 - Relative noise level gets progressively larger at later times.
 
-The negative data recorded by both time-domain systems is indicative of
-chargeable material. From a kimberlite exploration perspective, the existence
-of an IP signal is not necessarily significant. Ice and near surface clays are
-known to be chargeable. The strong spatial correlation between the negative
-data and the location of the pipes suggests however that the IP signal may
-originate from the kimberlites themselves.
+From the :ref:`skin depth<transient_planewaves_homogeneous_peakdistance>`
+approximation, we would expect that the later time data could be used to
+illuminate deep conductors. In this case however, the late time channels
+recorded over the pipes are all negative, which may be indicative of
+chargeable material :cite:`Weidelt1982`.
+
+
+IP Signal
+---------
+
+
+The negative :math:`\frac{\partial B_z}{\partial t}` data recorded by both
+time-domain systems may be indicative of chargeable material. From a
+kimberlite exploration perspective however, the existence of an IP signal is
+not necessarily significant. Ice and near surface clays are known to be
+chargeable and often considered to be *EM noise*. The challenge is to
+differentiate between the noise and the usable signal. If successful, we would
+be able to characterize kimberlites based on chargeability.
+
+.. figure:: images/Data_IP_Background.png
+    :align: right
+    :figwidth: 50%
+    :name: Data_IP_Background
+
+
+:numref:`Data_IP_Background` compares multiple soundings from the NanoTEM data
+set at locations directly above DO-18 and away from the pipe, which we refer
+to as *background*. Every soundings shows negative values at later time, but
+the decay rate of background stations are faster than those over DO-18. The IP
+signal in the background soundings is likely due to surface glacial sediments
+(including ice and clays).
+
+.. figure:: images/Data_IP.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Data_IP
+
+The strong spatial correlation between the negative data and the location of
+the pipes suggests however that some IP signal may originate from the
+kimberlites themselves. We focus on the VTEM data set as it includes most of
+the important IP features observed at TKC, while showing less noise at later
+time channels than other TEM data. From the coherent negative
+:math:`\frac{\partial B_z}{\partial t}` data, we identify four anomalies of
+interest:
+
+
+.. figure:: images/Data_IP_Aprofiles.png
+    :align: right
+    :figwidth: 50%
+    :name: Data_IP_Aprofiles
+
+- A1: Near DO-18
+
+- A2: Between DO-18 and DO-27
+
+- A3: On the north eastern edge of DO-27.
+
+- A4: On the southern portion of DO-27. The A4 anomaly appears to be different
+  as the data goes from positive to negative.
 
 
 
