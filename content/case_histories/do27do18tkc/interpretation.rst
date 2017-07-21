@@ -8,39 +8,124 @@
 Interpretation
 ==============
 
-In this section, we combine the 4 physical property models obtained from
-inversion and build a petrophysical model of the deposit.
+In this section, we build a petrophysical model of the deposit based on the
+inverted physical properties: density, susceptibility, conductivity and
+chargeability parameters. We compare our model built from unconstrained
+inversion to our initial :ref:`Conceptual model<TKCgeoTable>` of TKC.
 
 Density
 -------
 
-Two major challenges were faced in using the ground gravity data:
+.. figure:: images/Petrophysic_model_Den.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Petrophysic_model_Den
 
-- The missing elevation over DO-18 and the assumptions made in the position.
+:numref:`fig_Petrophysic_model_Den` Using a cut-off value of -0.24 g/cc,
+we generate an initial rock model for the TKC complex based on the gravity
+gradiometry inversion. This result shows that the DO-27 pipe further extends
+to the south than was originally modeled using the magnetic data alone.
 
-- The center of the DO-18 anomaly differed by approximately 100 m with the known position of the pipe and anomalies observed on the other datasets. This suggests that the two ground surveys may not have been
-  stitched together accurately.
-
-Despite the potential errors in location, we
-view the ground gravity as a valid contribution \citet{JansenDoyle2000} but we
-have more confidence in the accuracy of the gravity gradiometry data.
-
+The density contrast, whether obtained from the surface gravity survey or the
+airborne gradiometry survey, could have immediately showed that the initial
+drilling was on the edge of the pipe instead of sampling its core and may have
+prevented the initial size misinterpretation of the southern pipe.
 
 Susceptibility
 --------------
 
+.. figure:: images/Petrophysic_model_DenSusc.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Petrophysic_model_DenSusc
+
+:numref:`fig_Petrophysic_model_DenSusc` The density contrast model only
+provides information about the spatial extents of the kimberlite pipes but it
+does not reveal information about the different types of kimberlitic rocks
+within DO-18 and DO-27. We further differentiate the kimberlitic rocks based on susceptibility.
+We chose to divide susceptible rocks in ranges of high and moderate values:
+
+- Moderate (:math:`0.002 \leq \kappa \leq 0.006` SI)
+- High :math:`\kappa > 0.006` SI
+
+We begin to identify two distinct regions near DO-27, with the largest
+susceptibilities located outside the density anomaly. The moderate
+susceptibilities appear in both DO-27 and DO-18.
+
 Conductivity
 ------------
+
+.. figure:: images/Petrophysic_model_DenCondSusc.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Petrophysic_model_DenCondSusc
+
+From the density and magnetic susceptibility, kimberlite rocks are easily
+differentiated from the background rocks. Low to moderate susceptibility was
+recovered over both DO-18 and in the southern part of DO-27. From a potential
+field standpoint, the rocks making up the core region of both pipes are
+indistinguishable. The lack of depth resolution in potential fields also makes
+difficult to distinguish the vertical limits of the pipes.
+
+:numref:`fig_Petrophysic_model_DenCondSusc` we overlay the anomalous
+conductivity (:math:`\sigma > 10^{-3}` S/m). which correlates well with the
+density lows. Conductivity help in defining a clear interface at 20 to 40 m
+depth over DO-27, while DO-18 outcrops at the surface. The added information
+from conductivity also highlights the contrast between regions of high and moderate susceptibility.
+
 
 Chargeability
 -------------
 
+.. figure:: images/Petrophysic_model_DenCondSuscCharg.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Petrophysic_model_DenCondSuscCharg
+
+
+We have so far combined information of density, susceptibility and conductivity which
+helped in delineating the two pipes. However, based on these physical
+properties, it is not possible to distinguish between DO-27 and DO-18.
+
+In :numref:`fig_Petrophysic_model_DenCondSuscCharg` we overlay values of chargeability:
+
+- Early pseudo-chargeability :math:`\eta_E` (55 :math:`s^{-1}`)
+- Late pseudo-chargeability :math:`\eta_L` (8 :math:`s^{-1}`)
+
+These two additional properties allows to create a strong distinction between DO-27 and DO-18.
+
+
 Petrophysical Model
 -------------------
 
+.. raw:: html
+    :file: ./images/Interpretation_PetroModel.html
 
-Summary
--------
+From the union of the regions defined by the thresholded physical property
+values, we build a rock model. Important to note that only airborne
+geophysical data were used to build this model. We identify 5 rock units which
+are compared to our initial :ref:`Conceptual model<TKCgeoTable>` of TKC
 
-In this section,
+- R0 indicates the granitic host rock.
+- R1-R5 are related to kimberlites with low density
+- R2 corresponds to HK from the highest susceptibility
+- R3-R5 commonly have moderate susceptibility and conductivity hence they could be either PK or VK
+- R4 and R5 and only differentiated based on chargeability.
 
+The table summarizes our interpretation about the petrophysical model.
+
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+|Rock Unit |:math:`\rho` |:math:`\kappa` |:math:`\sigma` | :math:`\eta_E`  | :math:`\eta_L`  |:math:`\tau` | Interpretation |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R0       | Mod.        | Low           | Low           | Low             | Low             | N/A         |Host Rock       |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R1       | Low         | Low           | Low           | Low             | Low             | N/A         |Kimberlite      |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R2       | Low         | Mod.          | Mod.          | Low             | Low             | N/A         |PK o r VK       |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R3       | Low         | High          | Low           | Low             | Low             | N/A         |HK              |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R4       | Low         | Mod.          | Mod.          | High            | Low             | Small       |  VK            |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+| R5       | Low         | Mod.          | Mod.          | Low             | High            | Large       |  PK            |
++----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+

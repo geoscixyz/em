@@ -109,6 +109,22 @@ Sections through the recovered density model are presented in
 - The near surface fluctuations in density contrast can also be observed in
   the data.
 
+Going forward
+"""""""""""""
+
+We have recovered two density models from the ground gravity and airborne
+gravity gradiometry. Two major challenges were faced in using the ground
+gravity data:
+
+- The missing elevation over DO-18 had to be inferred.
+
+- The center of the DO-18 anomaly differs by approximately 100 m with the
+  known position of the pipe. This suggests that the two ground surveys may
+  not have been stitched together accurately.
+
+Going forward, we will focus on the airborne data set as we
+have more confidence in the accuracy of the gravity gradiometry data.
+
 
 .. _GG3D: http://gg3d.readthedocs.io/en/latest/
 
@@ -155,6 +171,10 @@ We note the following:
 
 - Moderate to low susceptibilities are recovered exactly at the center of
   DO-18 and at depth.
+
+Remanent magnetization
+""""""""""""""""""""""
+
 
 
 .. _MAG3D: http://mag3d.readthedocs.io/en/latest/
