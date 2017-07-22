@@ -133,10 +133,37 @@ The table summarizes our interpretation about the petrophysical model.
 Geological validation
 ---------------------
 
+Following discovery, over 150 drill holes have been completed at TKC, which we
+can use to validate our results.
+:numref:`Interpretation_RockGeology` compares sections of our final
+petrophysical model (100 m below the surface) to the geology based upon
+drilling results. The agreement is quite good particularly regarding the
+geometric confinement of the pipes.
 
-:numref:`Interpretation_RockGeology` compares our rock model to the geological model build from drilling.
+- For the DO-27 pipe, interpretation of R2, R4, and R5 as respectively HK, VK,
+  and PK, agrees with the ground truth.
+
+- The deeper part of the PK unit, which corresponds to R3 and R4, was not well
+  distinguished in our interpretation due to the lack of depth sensitivity of
+  the airborne geophysics.
+
+- The HK unit agrees well with R2 on plan map, but not as well on the B-B'
+  section. This discrepancy between R2 and HK at depth may be caused by low
+  resolving power of our smooth inversion for recovering the geometry of thin
+  dipping sheets (HK).
+
+- Our interpretation that the DO-18 pipe is VK, is reasonable. XVK is a
+  sub-unit of VK and petrophysically similar as identified through drilling.
+
+Overall, our analysis has clearly demonstrated the impact of using 3D IP
+information in an interpretation.
 
 .. figure:: images/Interpretation_RockGeology.png
     :align: center
     :figwidth: 100%
     :name: Interpretation_RockGeology
+
+.. figure:: images/Interpretation_RockGeology_BB.png
+    :align: center
+    :figwidth: 100%
+    :name: Interpretation_RockGeology_BB

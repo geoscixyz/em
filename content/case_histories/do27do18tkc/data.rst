@@ -33,10 +33,10 @@ Gravity
 
 Two ground gravity surveys were provided, measuring the vertical gravity field
 (:math:`g_z`) in mGal. The surveys were initially not reference to the same
-coordinate system and no correction had been done to compensate for the
-different instrumental level.  Leveling was done in post- processing by
-:cite:`Jansen2004`, and supplied to us as *Bouguer corrected* (2.67 g/cc)
-data.
+coordinate system and no correction had been done by the contractor to
+compensate for the different instrumental level.  Leveling was done in post-
+processing by :cite:`Jansen2004`, and supplied to us as *Bouguer corrected*
+(2.67 g/cc) data.
 
 Three main features are observed in the gravity data:
 
