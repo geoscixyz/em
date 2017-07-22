@@ -172,8 +172,8 @@ We note the following:
 - Moderate to low susceptibilities are recovered exactly at the center of
   DO-18 and at depth.
 
-Remanent magnetization
-""""""""""""""""""""""
+.. Remanent magnetization
+.. """"""""""""""""""""""
 
 
 
@@ -324,7 +324,7 @@ the DO-27 kimberlite pipe are consistent. The pipe appears to extend to depths
 $>$ 200 m below the surface. The two EM systems disagree however on the upper
 limit of the pipe.
 
-.. figure:: images/Processing_CoopAlgo.png
+.. figure:: images/Processing_CoopAlgorithm.png
     :align: right
     :figwidth: 50%
     :name: fig_Processing_CoopAlgo

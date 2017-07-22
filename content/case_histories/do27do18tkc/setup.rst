@@ -71,10 +71,12 @@ owned by `Peregrine Diamonds Ltd`_
 
 
 The goal of our work is to determine how well our modern-day inversions of
-geophysical data compare with the latest geologic model. Although geologic and
-drilling information can be used to constrain the inversion, we specifically
-omit such a priori information from our inversions. Our goal is to investigate
-what geologic information can be provided by the geophysical data alone.
+geophysical data could have helped the exploration program at the time of discovery.
+We will attempt to answer the following questions:
+
+- How much information could have been extracted form the airborne geophysical data?
+
+- Can we differentiate between kimberlite units based on multiple physical properties?
 
 
 

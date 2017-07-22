@@ -18,7 +18,7 @@ exploration model.
 Density
 -------
 
-.. figure:: images/Core_PK_Density.jpg
+.. figure:: images/Core_PK_Density.png
     :align: right
     :figwidth: 20%
     :name: core_pk_den
@@ -40,7 +40,7 @@ rock.
 Susceptibility
 --------------
 
-.. figure:: images/Core_HK_Susc.jpg
+.. figure:: images/Core_HK_Susc.png
     :align: right
     :figwidth: 20%
     :name: core_hk_susc
@@ -63,7 +63,7 @@ response may not by purely induced.
 Conductivity
 ------------
 
-.. figure:: images/Core_PK_Cond.jpg
+.. figure:: images/Core_PK_Cond.png
     :align: right
     :figwidth: 20%
     :name: core_pk_cond
@@ -88,7 +88,7 @@ EM response.
 Chargeability
 -------------
 
-.. figure:: images/Core_HK_Charg.jpg
+.. figure:: images/Core_HK_Charg.png
     :align: right
     :figwidth: 20%
     :name: core_hk_charg
@@ -131,6 +131,6 @@ Overall we expect:
 +---------------------------+-------------------+--------------------+---------------------+-------------------+
 | PK                        |  Low              | Low-moderate       |   Moderate-high     |  Moderate-high    |
 +---------------------------+-------------------+--------------------+---------------------+-------------------+
-| Table of the physical properties for the geologic units in the Cluny survey area.                            |
+| Table of physical properties for typical kimberlitic rocks found in the Lac de Gras region.                  |
 +---------------------------+-------------------+--------------------+---------------------+-------------------+
 

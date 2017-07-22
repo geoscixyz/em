@@ -129,3 +129,14 @@ The table summarizes our interpretation about the petrophysical model.
 +----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
 | R5       | Low         | Mod.          | Mod.          | Low             | High            | Large       |  PK            |
 +----------+-------------+---------------+---------------+-----------------+-----------------+-------------+----------------+
+
+Geological validation
+---------------------
+
+
+:numref:`Interpretation_RockGeology` compares our rock model to the geological model build from drilling.
+
+.. figure:: images/Interpretation_RockGeology.png
+    :align: center
+    :figwidth: 100%
+    :name: Interpretation_RockGeology
