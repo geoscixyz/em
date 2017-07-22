@@ -47,16 +47,15 @@ Susceptibility
 
 The bulk magnetic susceptibility of kimberlite rocks is highly variable and
 depends largely on the concentration and size of magnetite grains. Intrusive
-rocks, such as HK and VK units, tends to have kimberlites tend to have a
-stronger magnetic signature than the host rock and PK kimberlite
-(:cite:`Power2007` :cite:`Reed2007`). In addition, there has been many
-documented cases of kimberlite pipes with strong remanent magnetization
-(:cite:`Clark1983`, :cite:`Macnae1985`, :cite:`Hargraves1989`,
-:cite:`Keating2004`). At high latitude, such as in the Lac de Gras region,
-remanence is clearly identified by the reverse (-) polarity of the field.
-Therefore, we expect the susceptibility of kimberlite pipes to be higher than
-that of the background granitic rock, but we must be also aware that the
-response may not by purely induced.
+rocks, such as HK and VK units, tend to have a stronger magnetic signature
+than the host rock and PK kimberlite (:cite:`Power2007` :cite:`Reed2007`). In
+addition, there has been many documented cases of kimberlite pipes with strong
+remanent magnetization (:cite:`Clark1983`, :cite:`Macnae1985`,
+:cite:`Hargraves1989`, :cite:`Keating2004`). At high latitude, such as in the
+Lac de Gras region, remanence is clearly identified by the reverse (-)
+polarity of the field. Therefore, we expect the susceptibility of kimberlite
+pipes to be higher than that of the background granitic rock, but we must be
+aware that the response may not by purely induced.
 
 .. _tkc_conductivity:
 
@@ -132,5 +131,5 @@ Overall we expect:
 | PK                        |  Low              | Low-moderate       |   Moderate-high     |  Moderate-high    |
 +---------------------------+-------------------+--------------------+---------------------+-------------------+
 | Table of physical properties for typical kimberlitic rocks found in the Lac de Gras region.                  |
-+---------------------------+-------------------+--------------------+---------------------+-------------------+
++--------------------------------------------------------------------------------------------------------------+
 
