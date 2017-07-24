@@ -11,7 +11,7 @@ Red Sea
 
 .. topic :: Prelude
 
-     In this case history we detail the use of magnetotelluric (MT) and controlled-source electromagnetic (CSEM) methods for imaging deep subsalt structures below the Red Sea. By using MT and CSEM methods as well as WAZ, we are able to carry out a comprehensive set of surveys which are collectively sensitive to all geologic structures. The results of data driven and model driven EM inversions are then compared to results from the inversion of gravity gradiometry (GG) data.
+     In this case history we detail the use of magnetotelluric (MT) and controlled-source electromagnetic (CSEM) methods for imaging deep subsalt structures below the Red Sea. By using MT and CSEM methods as well as wide-azimuth (WAZ) seismic, we are able to carry out a comprehensive set of surveys which are collectively sensitive to all geologic structures. The results of data driven and model driven EM inversions are then compared to results from the inversion of gravity gradiometry (GG) data.
 
 **Special Thanks**
 
