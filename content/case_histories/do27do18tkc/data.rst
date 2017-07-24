@@ -52,18 +52,19 @@ being connected at depth.
 Gravity Gradiometry
 -------------------
 
+.. figure:: images/Data_GravGrad.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Data_GravGrad
+
+    Observed airborne gravity gradiometry data.
+
 Airborne gravity gradiometry data were collected in 2001 using the Falcon
 system with the final product being the vertical component :math:`g_{zz}` in
 *Eotvos* (:math:`10^{-9}\; s^{-2}`). The survey line spacing was approximately
 50 m. A terrain correction density of 2.67 g/cc and a 100-m wavelength cutoff
 filter were applied to the data by the contractor.
 
-.. figure:: images/Data_GravGrad.png
-    :align: center
-    :figwidth: 75%
-    :name: fig_Data_GravGrad
-
-    Observed airborne gravity gradiometry data.
 
 The main features observed in the gravity data are:
 
@@ -153,14 +154,16 @@ used in this study.
 .. raw:: html
 	:file: ./images/Data_DIGHEM_Quadrature.html
 
-As observed on the 56,000 Hz channel, both DO-18 and DO-27 give
-rise to a strong quadrature component. The quadrature component correlates
-well with the hydrography, agreeing with a shallow response from the lake
-bottom sediments and glacial till layer. Two elongated and narrow negative
-anomalies appears in the in-phase maps of the 900 Hz and 7,200 Hz. These
-features are associated with intrusive dyke swarms known to be strong magnetic
-susceptibility anomalies. The quadrature component of both frequencies also
-highlight well the location of two pipes.
+We highlight the following features:
+
+- As observed on the quadrature component of the 900, 7200 and 56 kHz, a large EM signal is observed at the location of both DO-18 and DO-27.
+
+- The 56 kHz quadrature data displays EM highs correlated with the hydrography, agreeing with a shallow response from the lake
+  bottom sediments and glacial till layer.
+
+- Two elongated and narrow negative anomalies appears in the in-phase maps of
+  the 900 Hz and 7,200 Hz. These features are associated with intrusive dyke
+  swarms known to be strong magnetic susceptibility anomalies.
 
 
 .. _tkc_data_TEM:
