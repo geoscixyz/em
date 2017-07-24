@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Setup.png
     :align: right
-    :figwidth: 30%
+    :figwidth: 50%
 
 Setup
 =====
@@ -49,8 +49,7 @@ over five geologic models, indicative of the uncommon geometry of the deposit
 understood to be disconnected bodies created in multiple volcanic phases. The
 resource estimate was also revised down over the years as presented in the
 :ref:`table below<TKCResEstTable>`, partially contributing to the Canadian junior
-stock market crash of 1994 :cite:`Coopersmith2006`. The deposit is currently
-owned by `Peregrine Diamonds Ltd`_
+stock market crash of 1994 :cite:`Coopersmith2006`. At the time of writing, the deposit is owned by `Peregrine Diamonds Ltd`_.
 
 .. _Peregrine Diamonds Ltd: https://www.pdiam.com/projects/peregrine-exploration
 
@@ -114,11 +113,12 @@ DO-27 during the acquisition of the geophysical data.
 
 Many different types of kimberlite can exist within a pipe, and unfortunately,
 there are several classifications and naming conventions (:cite:`Pell1997`,
-:cite:`Kjarsgaard2007`). Here, we divide kimbelitic rocks into three types based on
-their depositional environment: Hypabyssal (HK): intrusive, igneous,
-nonfragmented rock, root of volcanic pipe Volcaniclastic (VK): extrusive,
-fragmental, main volcanic body Pyroclastic (PK): a subclass of VK, extrusive,
-violent, deposited after an explosive event.
+:cite:`Kjarsgaard2007`). Here, we divide kimberlitic rocks into three types based on
+their depositional environment: 
+
+- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of volcanic pipe - 
+- Volcaniclastic (VK): extrusive, fragmental, main volcanic body
+- Pyroclastic (PK): a subclass of VK, extrusive, violent, deposited after an explosive event.
 
 
 
