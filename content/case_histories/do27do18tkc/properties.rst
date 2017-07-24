@@ -24,10 +24,9 @@ Density
     :name: core_pk_den
 
 Kimberlite pipes are generally associated with negative gravity anomalies due
-to their low density, although some exceptions exist (Reed and Witherly,
-2007). In the Lac de Gras region, pyroclastic units (PK) are highly variable
+to their low density, although some exceptions exist :cite:`Reed2007`. In the Lac de Gras region, pyroclastic units (PK) are highly variable
 in composition, but are often made up of a mix of fine grain volcaniclastic sediments (tuff, lapilli) and larger xenoliths of country rock. Fragments of wood, shale, siltstone and mudstone clasts are common depending on the
-style of eruption and depositional environment :cite:`Pell1997`
+style of eruption and depositional environment :cite:`Pell1997`.
 Moreover, olivine-rich volcaniclastic sediments are readily
 altered to clay minerals through low-temperature metamorphism, further
 contributing to lower the density :cite:`Masun1999`. Overall, we expect the
