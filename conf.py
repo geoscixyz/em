@@ -145,6 +145,7 @@ linkcheck_ignore = [
     'http://seg.org',
     'http://library.seg.org/doi/',
     'notebooks.azure.com/library/em_apps',
+    'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 500
