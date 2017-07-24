@@ -2,16 +2,16 @@
 
 .. figure:: images/TKC_7Steps_Data.png
     :align: right
-    :figwidth: 30%
+    :figwidth: 50%
 
 Data
 ====
 
 This section reviews the data that was graciously provided by `Peregrine
-Diamonds Ltd`_. We review the units, normalization and observations that can
+Diamonds Ltd`_. We review the units and normalization, as well as observations that can
 be made by simple visual inspection of the data. Important to note that
-*survey reports* were missing for few data sets. Some of the technical
-information had to be inferred from surveys acquired during the same
+*survey reports* were missing for a few data sets. Some of the technical
+information had to be inferred from surveys acquired during the same time
 period.
 
 
@@ -32,7 +32,7 @@ Gravity
     dots.
 
 Two ground gravity surveys were provided, measuring the vertical gravity field
-(:math:`g_z`) in mGal. The surveys were initially not reference to the same
+(:math:`g_z`) in mGal. The surveys were initially not referenced to the same
 coordinate system and no correction had been done by the contractor to
 compensate for the different instrumental level.  Leveling was done in post-
 processing by :cite:`Jansen2004`, and supplied to us as *Bouguer corrected*
@@ -40,7 +40,7 @@ processing by :cite:`Jansen2004`, and supplied to us as *Bouguer corrected*
 
 Three main features are observed in the gravity data:
 
-- Low gravity anomalies over DO-27 and DO-18
+- Low gravity anomalies over DO-27 and DO-18, 
 - Low gravity anomaly connecting the two kimberlite pipes.
 
 Initial interpretation of the gravity data supported the idea of both pipes
@@ -68,8 +68,8 @@ filter were applied to the data by the contractor.
 
 The main features observed in the gravity data are:
 
-- Negative anomalies over DO-27 and DO-18
-- Negative anomaly connecting the two kimberlite pipes.
+- Negative anomalies over DO-27 and DO-18,
+- Negative anomaly connecting the two kimberlite pipes,
 - Positive high along the Mackenzie dyke,
 - Low to negative gravity gradients associated with the hydrography.
 
@@ -101,8 +101,8 @@ can be attributed to changes in the inducing field and variable flight heights.
 
 Two main features are observed on all three datasets:
 
-- A positive anomaly over DO-27 and DO-18
-- A negative anomaly on the north-eastern flank of DO-27
+- A positive anomaly over DO-27 and DO-18,
+- A negative anomaly on the north-eastern flank of DO-27.
 
 From the larger footprint of the DIGHEM survey, we can also identify two
 larger magnetic trends. The narrow magnetic anomaly strikes :math:`315^\circ`
@@ -130,19 +130,19 @@ MacKey dyke swarm.
 Frequency-Domain EM
 -------------------
 
-The DIGHEM system coil configuration allows to collect the vertical (:math:`B_z`) and
+The DIGHEM system coil configuration allows for the collection of the vertical (:math:`B_z`) and
 in-line (:math:`B_{xy}`) components of the magnetic field in the frequency domain. A
 bucking coil was used to cancel the primary signal from the transmitter loop.
-The receiver records the in-phase and quadrature components secondary field in
-*parts-per- million* (ppm) of the primary field :math:`B_{P}` such that:
+The receiver records the in-phase and quadrature components of the secondary field in
+*parts-per-million* (ppm) of the primary field :math:`B_{P}` such that:
 
 :math:`B_{ppm} = B / B_{P} * 10^6`
 
 FEM data are often interpreted by simple visual inspection of each
-frequencies. From the :ref:`skin
+frequency. From the :ref:`skin
 depth<harmonic_planewaves_homogeneous_skindepth_formula_quasi>` approximation,
 the highest frequencies can be used to delineate near-surface conductors
-whereas deeper structures can potentially be detected at the lower
+whereas deeper structures can potentially be detected by the lower
 frequencies.
 From the data provided, the quadrature data of the in-line data
 (:math:`B_{xy}`) were missing. Hence only the vertical co-planar data were
@@ -178,11 +178,11 @@ Time-Domain EM
     :file: ./images/Data_VTEM.html
 
 We present the time channels collected by the AeroTEM (2003) and VTEM
-(2004) systems. Both system record the time varying vertical component of the
+(2004) systems. Both system record the time-varying vertical component of the
 magnetic field :math:`\frac{\partial B_z}{\partial t}` in (nT/s). Data
 quality, and the time range for which data are sampled vary across EM systems,
 hence the EM data sets should show some differences. In general, we observe
-the following feature:
+the following features:
 
 - Both systems record a positive anomaly over the southern lobe of DO-27, which later goes negative.
 
@@ -202,8 +202,8 @@ IP Signal
 
 
 The negative :math:`\frac{\partial B_z}{\partial t}` data recorded by both
-time-domain systems may be indicative of chargeable material. From a
-kimberlite exploration perspective however, the existence of an IP signal is
+time-domain systems may be indicative of chargeable material. However, from a
+kimberlite exploration perspective, the existence of an IP signal is
 not necessarily significant. Ice and near surface clays are known to be
 chargeable and often considered to be *EM noise*. The challenge is to
 differentiate between the noise and the usable signal. If successful, we would
@@ -217,8 +217,8 @@ be able to characterize kimberlites based on chargeability.
 
 :numref:`Data_IP_Background` compares multiple soundings from the NanoTEM data
 set at locations directly above DO-18 and away from the pipe, which we refer
-to as *background*. Every soundings shows negative values at later time, but
-the decay rate of background stations are faster than those over DO-18. The IP
+to as *background*. Every sounding shows negative values at later time channels, but
+the decay rate of background stations is faster than those over DO-18. The IP
 signal in the background soundings is likely due to surface glacial sediments
 (including ice and clays).
 
@@ -241,11 +241,11 @@ interest:
     :figwidth: 50%
     :name: Data_IP_Aprofiles
 
-- A1: Near DO-18
+- A1: Near DO-18,
 
-- A2: Between DO-18 and DO-27
+- A2: Between DO-18 and DO-27,
 
-- A3: On the north eastern edge of DO-27.
+- A3: On the north eastern edge of DO-27,
 
 - A4: On the southern portion of DO-27. The A4 anomaly appears to be different
   as the data goes from positive to negative.
