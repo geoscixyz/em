@@ -116,8 +116,8 @@ there are several classifications and naming conventions :cite:`Pell1997`
 :cite:`Kjarsgaard2007`. Here, we divide kimberlitic rocks into three types based on
 their depositional environment: 
 
-- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of volcanic pipe - 
-- Volcaniclastic (VK): extrusive, fragmental, main volcanic body
+- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of the volcanic pipe. 
+- Volcaniclastic (VK): extrusive, fragmental, main volcanic body.
 - Pyroclastic (PK): a subclass of VK, extrusive, violent, deposited after an explosive event.
 
 

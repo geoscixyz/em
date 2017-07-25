@@ -8,9 +8,9 @@ Data
 ====
 
 This section reviews the data that was graciously provided by `Peregrine
-Diamonds Ltd`_. We review the units and normalization, as well as observations that can
-be made by simple visual inspection of the data. Important to note that
-*survey reports* were missing for a few data sets. Some of the technical
+Diamonds Ltd`_. We review the units and normalizations, as well as observations that can
+be made by simple visual inspection of the data. It is important to note that
+*survey reports* were missing for a few data sets. As a result, some of the technical
 information had to be inferred from surveys acquired during the same time
 period.
 
@@ -31,11 +31,10 @@ Gravity
     Observed ground gravity data. Observation locations are denoted by white
     dots.
 
-Two ground gravity surveys were provided, measuring the vertical gravity field
+Two ground gravity surveys were provided, which measured the vertical gravity field
 (:math:`g_z`) in mGal. The surveys were initially not referenced to the same
 coordinate system and no correction had been done by the contractor to
-compensate for the different instrumental level.  Leveling was done in post-
-processing by :cite:`Jansen2004`, and supplied to us as *Bouguer corrected*
+compensate for the different instrumental level.  Leveling was done in post-processing by :cite:`Jansen2004`, and supplied to us as *Bouguer corrected*
 (2.67 g/cc) data.
 
 Three main features are observed in the gravity data:
@@ -94,12 +93,12 @@ Magnetics
 	:file: ./images/Data_Mag.html
 
 
-We review the magnetic data acquired along side the :ref:`DIGHEM<survey_DIGHEM>`, :ref:`AeroTEM II<survey_AeroTEM>` and
-:ref:`VTEM<survey_VTEM>` surveys. All three systems were equipped with a cesium vapour magnetometer,
-recording Total Field Intensity (TMI) magnetic data in *nT* as shown below. Differences in TMI levels
+We reviewed the magnetic data acquired along side the :ref:`DIGHEM<survey_DIGHEM>`, :ref:`AeroTEM II<survey_AeroTEM>` and
+:ref:`VTEM<survey_VTEM>` surveys. All three systems were equipped with a cesium vapour magnetometer, which
+recorded Total Field Intensity (TMI) magnetic data in *nT* as shown below. Differences in TMI levels
 can be attributed to changes in the inducing field and variable flight heights.
 
-Two main features are observed on all three datasets:
+Two main features are observed in all three datasets:
 
 - A positive anomaly over DO-27 and DO-18,
 - A negative anomaly on the north-eastern flank of DO-27.
@@ -193,21 +192,17 @@ the following features:
 From the :ref:`skin depth<transient_planewaves_homogeneous_peakdistance>`
 approximation, we would expect that the later time data could be used to
 illuminate deep conductors. In this case however, the late time channels
-recorded over the pipes are all negative, which may be indicative of
-chargeable material :cite:`Weidelt1982`.
+recorded over the pipes are all negative, which may indicate the presence of :ref:`chargeable <electrical_conductivity_index_chargeability>` materials :cite:`Weidelt1982`. Chargeable materials are frequently responsible for generating induced polarization (IP) responses in time-domain EM data.
 
 
-IP Signal
----------
-
+Induced Polarization Signature
+------------------------------
 
 The negative :math:`\frac{\partial B_z}{\partial t}` data recorded by both
-time-domain systems may be indicative of chargeable material. However, from a
-kimberlite exploration perspective, the existence of an IP signal is
+time-domain systems may be indicative of IP responses resulting from :ref:`chargeable <electrical_conductivity_index_chargeability>` material. However, from a kimberlite exploration perspective, the existence of an IP signal is
 not necessarily significant. Ice and near surface clays are known to be
-chargeable and often considered to be *EM noise*. The challenge is to
-differentiate between the noise and the usable signal. If successful, we would
-be able to characterize kimberlites based on chargeability.
+chargeable and are often considered to be *EM noise*. The challenge here is to
+differentiate between noise and any usable IP signal. If successful, we could characterize the kimberlites based on their chargeability.
 
 .. figure:: images/Data_IP_Background.png
     :align: right

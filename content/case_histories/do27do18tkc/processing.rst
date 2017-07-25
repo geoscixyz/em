@@ -162,7 +162,7 @@ The signal from both DO-27 and DO-18 are now visible on the AeroTEM data set.
     :figwidth: 50%
     :name: fig_Processing_InvInd_Mag
 
-Despite the above leveling, the AeroTEM was still very noisy and difficult to invert. As well, the DIGHEM data were relatively sparse over the region of interest compared to the VTEM data. OVerall, the VTEM data were the cleanest and provided the best coverage so we only present results from inverting the VTEM magnetic data, which was done with the UBC-`MAG3D`_ inversion software.
+Despite the above leveling, the AeroTEM was still very noisy and difficult to invert. As well, the DIGHEM data were relatively sparse over the region of interest compared to the VTEM data. Overall, the VTEM data were the cleanest and provided the best coverage so we only present results from inverting the VTEM magnetic data, which was done with the UBC-`MAG3D`_ inversion software.
 We use the same mesh as for the density inversion. Sections through the
 recovered density model are presented in :numref:`fig_Processing_InvInd_Mag`.
 We note the following:
@@ -321,7 +321,7 @@ sensing the Earth differently, both EM systems are probing the same
 conductivity structure and should therefore agree on the general shape of the
 kimberlite pipe. In both cases, the horizontal location and vertical extent of
 the DO-27 kimberlite pipe are consistent. The pipe appears to extend to depths
-$>$ 200 m below the surface. The two EM systems disagree however on the upper
+>200 m below the surface. The two EM systems disagree however on the upper
 limit of the pipe.
 
 .. figure:: images/Processing_CoopAlgorithm.png
@@ -332,18 +332,14 @@ limit of the pipe.
 To find a single conductivity structure that adequately explains the deposit,
 we re-invert both data sets with a cooperative inversion strategy
 :cite:`McMillan2014`. Due to the limited coverage of the positive VTEM data,
-we limit the analysis to DO-27. :numref:`fig_Processing_CoopInv` gives a
-schematic representation of the cooperative inversion workflow.
+we limit the analysis to DO-27.
 
-1- The DIGHEM data are inverted in 1D to get a general distribution and range
+:numref:`fig_Processing_CoopInv` gives a
+schematic representation of the cooperative inversion workflow. The DIGHEM data are inverted in 1D to get a general distribution and range
 of conductivity values. Since this model is already stored and interpolated in
 3D, it is readily transfered to a different mesh to serve as a starting model
-for the 3D code.
-
-2- The outcome of the 3D DIGHEM inversion is then used as a
-reference model to guide the VTEM inversion.
-
-3- This iterative process is repeated until: (a) both data sets can be
+for the 3D code. The outcome of the 3D DIGHEM inversion is then used as a
+reference model to guide the VTEM inversion. This iterative process is repeated until: (a) both data sets can be
 predicted within an acceptable level; and (b) the recovered models do not
 change substantially between each cycle (:math:`\Delta \mathbf{m} < \delta`). Four
 iterations were carried out.

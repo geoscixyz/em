@@ -42,6 +42,8 @@ Thus the constitutive relationship can be re-expressed as follows:
   \mathbf{E} = \rho \mathbf{J}
 
 
+.. _electrical_conductivity_index_chargeability:
+
 Chargeability and Frequency-Dependence
 --------------------------------------
 
