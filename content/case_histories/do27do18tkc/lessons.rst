@@ -4,7 +4,7 @@ Lessons worth highlighting
 ==========================
 
 The inversion of multiple data sets can greatly increase the complexity of the
-modelisation and interpretation. This section presents some the lessons worth
+models and interpretation. This section presents some the lessons worth
 sharing for future projects.
 
 
@@ -33,5 +33,5 @@ conductivity distribution, as represented schematically in
 
 .. _tkc_ppm2TF:
 
-FEM data conversion: Ppm to Total Field
+FEM data conversion: PPM to Total Field
 ---------------------------------------
