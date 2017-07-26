@@ -27,6 +27,7 @@
     sagd/index
     mt_isa/index
     norsminde/index
+    red_sea/index
     barents_sea/index
     saurashtra/index
     kasted/index
@@ -381,6 +382,36 @@ Norsminde
     - Applications: Groundwater Mapping
     - Location: Norsminde, Denmark
     - Geophysical Surveys: Airborne TDEM
+
+|
+|
+|
+
+
+
+        
+
+Red Sea
+^^^^^^^
+
+.. image:: ./wadi_sahba/images/thumbnail.png
+    :alt: red_sea
+    :width: 260
+    :align: right
+
+- :ref:`Application of Magnetotelluric and Controlled-Source Electromagnetic Methods for Subsalt Structure Imaging in the Red Sea <red_sea_index>`
+
+
+- Contributors
+    - author: :ref:`dcolombo`
+    - reviewer: :ref:`dccowan`, :ref:`doldenburg`
+
+
+- Tags
+    - geophysical survey: WAZ, CSEM, MT, Gravity
+    - application: Hydrocarbon
+    - location: Northern Arabian Gulf
+    - keyword: Red Sea, Multi-physics, Data-Driven Inversion, Model-Driven Inversion
 
 |
 |
