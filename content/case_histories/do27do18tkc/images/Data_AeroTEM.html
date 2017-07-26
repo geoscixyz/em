@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.AeroTEM {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 50%;
+  width: 50%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  float: right;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  padding: 16px;
+  margin-top: -22px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/*.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}*/
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/*.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}*/
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_56.png" style="width:100%">
+<div class="text">AeroTEM: 56 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_82.png" style="width:100%">
+<div class="text">AeroTEM: 82 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_108.png" style="width:100%">
+<div class="text">AeroTEM: 108 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_134.png" style="width:100%">
+<div class="text">AeroTEM: 134 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_160.png" style="width:100%">
+<div class="text">AeroTEM: 160 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_186.png" style="width:100%">
+<div class="text">AeroTEM: 186 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_212.png" style="width:100%">
+<div class="text">AeroTEM: 212 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_238.png" style="width:100%">
+<div class="text">AeroTEM: 238 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_264.png" style="width:100%">
+<div class="text">AeroTEM: 264 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_368.png" style="width:100%">
+<div class="text">AeroTEM: 368 &mu;s</div>
+</div>
+
+<div class="AeroTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_AeroTEM_577.png" style="width:100%">
+<div class="text">AeroTEM: 577 &mu;s</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides_b(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides_b(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide_b(1)"></span>
+  <span class="dot" onclick="currentSlide_b(2)"></span>
+  <span class="dot" onclick="currentSlide_b(3)"></span>
+  <span class="dot" onclick="currentSlide_b(4)"></span>
+  <span class="dot" onclick="currentSlide_b(5)"></span>
+  <span class="dot" onclick="currentSlide_b(6)"></span>
+  <span class="dot" onclick="currentSlide_b(7)"></span>
+  <span class="dot" onclick="currentSlide_b(8)"></span>
+  <span class="dot" onclick="currentSlide_b(9)"></span>
+  <span class="dot" onclick="currentSlide_b(10)"></span>
+  <span class="dot" onclick="currentSlide_b(11)"></span>
+  <span class="dot" onclick="currentSlide_b(12)"></span>
+  <span class="dot" onclick="currentSlide_b(13)"></span>
+  <span class="dot" onclick="currentSlide_b(14)"></span>
+  <span class="dot" onclick="currentSlide_b(15)"></span>
+  <span class="dot" onclick="currentSlide_b(16)"></span>
+</div>
+
+<script>
+var slideIndex_b = 1;
+showSlides_b(slideIndex_b);
+
+function plusSlides_b(n) {
+  showSlides_b(slideIndex_b += n);
+}
+
+function currentSlide_b(n) {
+  showSlides_b(slideIndex_b = n);
+}
+
+function showSlides_b(n) {
+  var i;
+  var slides = document.getElementsByClassName("AeroTEM");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex_b = 1}
+  if (n < 1) {slideIndex_b = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex_b-1].style.display = "block";
+  dots[slideIndex_b-1].className += " active";
+}
+</script>
+
+</body>
+</html>

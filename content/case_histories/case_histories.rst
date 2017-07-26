@@ -15,16 +15,17 @@
     :maxdepth: 1
     :hidden:
 
-    mt_isa/index
+    albany/index
     wadi_sahba/index
     bookpurnong/index
     aspen/index
     lalor/index
     emc/index
-    albany/index
+    do27do18tkc/index
     westplains/index
     furggwanghorn/index
     sagd/index
+    mt_isa/index
     norsminde/index
     barents_sea/index
     saurashtra/index
@@ -38,25 +39,27 @@ Gallery
 -------
     
 
-Mt. Isa
-^^^^^^^
+Albany
+^^^^^^
 
-.. image:: ./mt_isa/images/MtIsa_Cover.png
-    :alt: mt_isa
+.. image:: ./albany/images/figDrillModel.png
+    :alt: albany
     :width: 260
     :align: right
 
-- :ref:`2-D and 3-D IP/resistivity for the interpretation of Isa-style targets <mt_isa_index>`
+- :ref:`Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery <albany_index>`
 
 
 - Contributors
-    - author: :ref:`fourndo`
+    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
+    - reviewer: :ref:`dccowan`
 
 
 - Tags
-    - geophysical survey: DC, IP
-    - application: Mining
-    - location: Australia
+    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
+    - Applications: Mineral exploration, hydrothermal graphite porphyry
+    - Location: Albany graphite deposit, Ontario, Canada
+    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
 
 |
 |
@@ -212,27 +215,26 @@ Elevenmile Canyon
 
         
 
-Albany
-^^^^^^
+DO-27/DO-18 (TKC)
+^^^^^^^^^^^^^^^^^
 
-.. image:: ./albany/images/figDrillModel.png
-    :alt: albany
+.. image:: ./do27do18tkc/images/TKC_7Steps.png
+    :alt: do27do18tkc
     :width: 260
     :align: right
 
-- :ref:`Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery <albany_index>`
+- :ref:`Inversion of airborne geophysics over the DO-27/DO-18 kimberlites (TKC) <do27do18tkc_index>`
 
 
 - Contributors
-    - author: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas`, :ref:`shickey`
-    - reviewer: :ref:`dccowan`
+    - author: :ref:`fourndo`, :ref:`sdevriese`, :ref:`skang`
 
 
 - Tags
-    - Keywords: Mineral exploration, airborne, ground-based, TDEM, porphyry
-    - Applications: Mineral exploration, hydrothermal graphite porphyry
-    - Location: Albany graphite deposit, Ontario, Canada
-    - Geophysical Surveys: Airborne TDEM, ground-based TDEM, aeromagnetic
+    - Keywords: Kimberlite, Diamond, Petrophysics
+    - Applications: Diamond exploration
+    - Location: Northwest Territories,Canada
+    - Geophysical Surveys: Airborne/ground gravity, Airborne magnetics, Airborne FEM, Airborne TEM
 
 |
 |
@@ -321,6 +323,34 @@ SAGD
     - application: Hydrocarbons
     - location: Canada
     - keyword: Oil Sands
+
+|
+|
+|
+
+
+
+        
+
+Mt. Isa
+^^^^^^^
+
+.. image:: ./mt_isa/images/MtIsa_Cover.png
+    :alt: mt_isa
+    :width: 260
+    :align: right
+
+- :ref:`2-D and 3-D IP/resistivity for the interpretation of Isa-style targets <mt_isa_index>`
+
+
+- Contributors
+    - author: :ref:`fourndo`
+
+
+- Tags
+    - geophysical survey: DC, IP
+    - application: Mining
+    - location: Australia
 
 |
 |

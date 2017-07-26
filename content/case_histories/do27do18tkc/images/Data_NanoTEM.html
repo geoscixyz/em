@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.NanoTEM {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 50%;
+  width: 50%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  float: right;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  padding: 16px;
+  margin-top: -22px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/*.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}*/
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/*.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}*/
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_2.png" style="width:100%">
+<div class="text">NanoTEM: 2 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_4.png" style="width:100%">
+<div class="text">NanoTEM: 4 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_5.png" style="width:100%">
+<div class="text">NanoTEM: 5 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_7.png" style="width:100%">
+<div class="text">NanoTEM: 7 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_9.png" style="width:100%">
+<div class="text">NanoTEM: 9 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_11.png" style="width:100%">
+<div class="text">NanoTEM: 11 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_14.png" style="width:100%">
+<div class="text">NanoTEM: 14 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_18.png" style="width:100%">
+<div class="text">NanoTEM: 18 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_22.png" style="width:100%">
+<div class="text">NanoTEM: 22 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_26.png" style="width:100%">
+<div class="text">NanoTEM: 26 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_32.png" style="width:100%">
+<div class="text">NanoTEM: 32 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_39.png" style="width:100%">
+<div class="text">NanoTEM: 39 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_50.png" style="width:100%">
+<div class="text">NanoTEM: 50 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_62.png" style="width:100%">
+<div class="text">NanoTEM: 62 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_77.png" style="width:100%">
+<div class="text">NanoTEM: 77 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_96.png" style="width:100%">
+<div class="text">NanoTEM: 96 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_121.png" style="width:100%">
+<div class="text">NanoTEM: 121 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_153.png" style="width:100%">
+<div class="text">NanoTEM: 153 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_192.png" style="width:100%">
+<div class="text">NanoTEM: 192 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_241.png" style="width:100%">
+<div class="text">NanoTEM: 241 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_303.png" style="width:100%">
+<div class="text">NanoTEM: 303 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_381.png" style="width:100%">
+<div class="text">NanoTEM: 381 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_480.png" style="width:100%">
+<div class="text">NanoTEM: 480 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_603.png" style="width:100%">
+<div class="text">NanoTEM: 603 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_758.png" style="width:100%">
+<div class="text">NanoTEM: 758 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_954.png" style="width:100%">
+<div class="text">NanoTEM: 954 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_1200.png" style="width:100%">
+<div class="text">NanoTEM: 1200 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_1511.png" style="width:100%">
+<div class="text">NanoTEM: 1511 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_1902.png" style="width:100%">
+<div class="text">NanoTEM: 1902 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_2393.png" style="width:100%">
+<div class="text">NanoTEM: 2393 &mu;s</div>
+</div>
+
+<div class="NanoTEM fade">
+<div class="numbertext">1 / 3</div>
+<img src="./../../../_images/Data_nanoTEM_3014.png" style="width:100%">
+<div class="text">NanoTEM: 3014 &mu;s</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides_c(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides_c(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide_c(1)"></span>
+  <span class="dot" onclick="currentSlide_c(2)"></span>
+  <span class="dot" onclick="currentSlide_c(3)"></span>
+  <span class="dot" onclick="currentSlide_c(4)"></span>
+  <span class="dot" onclick="currentSlide_c(5)"></span>
+  <span class="dot" onclick="currentSlide_c(6)"></span>
+  <span class="dot" onclick="currentSlide_c(7)"></span>
+  <span class="dot" onclick="currentSlide_c(8)"></span>
+  <span class="dot" onclick="currentSlide_c(9)"></span>
+  <span class="dot" onclick="currentSlide_c(10)"></span>
+  <span class="dot" onclick="currentSlide_c(11)"></span>
+  <span class="dot" onclick="currentSlide_c(12)"></span>
+  <span class="dot" onclick="currentSlide_c(13)"></span>
+  <span class="dot" onclick="currentSlide_c(14)"></span>
+  <span class="dot" onclick="currentSlide_c(15)"></span>
+  <span class="dot" onclick="currentSlide_c(16)"></span>
+  <span class="dot" onclick="currentSlide_c(17)"></span>
+  <span class="dot" onclick="currentSlide_c(18)"></span>
+  <span class="dot" onclick="currentSlide_c(19)"></span>
+  <span class="dot" onclick="currentSlide_c(20)"></span>
+  <span class="dot" onclick="currentSlide_c(21)"></span>
+  <span class="dot" onclick="currentSlide_c(22)"></span>
+  <span class="dot" onclick="currentSlide_c(23)"></span>
+  <span class="dot" onclick="currentSlide_c(25)"></span>
+  <span class="dot" onclick="currentSlide_c(26)"></span>
+  <span class="dot" onclick="currentSlide_c(27)"></span>
+  <span class="dot" onclick="currentSlide_c(28)"></span>
+  <span class="dot" onclick="currentSlide_c(29)"></span>
+  <span class="dot" onclick="currentSlide_c(30)"></span>
+  <span class="dot" onclick="currentSlide_c(31)"></span>
+</div>
+
+<script>
+var slideIndex_c = 1;
+showSlides_c(slideIndex_c);
+
+function plusSlides_c(n) {
+  showSlides_c(slideIndex_c += n);
+}
+
+function currentSlide_c(n) {
+  showSlides_c(slideIndex_c = n);
+}
+
+function showSlides_c(n) {
+  var i;
+  var slides = document.getElementsByClassName("NanoTEM");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex_c = 1}
+  if (n < 1) {slideIndex_c = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex_c-1].style.display = "block";
+  dots[slideIndex_c-1].className += " active";
+}
+</script>
+
+</body>
+</html>
