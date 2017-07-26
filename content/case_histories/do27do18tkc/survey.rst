@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Survey.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 30%
 
 Survey
 ======
@@ -133,6 +133,26 @@ gradiometry surveys can be reviewed in `GPG Gravity`_.
 Time EM + Magnetics
 -------------------
 
+.. _survey_NanoTEM:
+
+.. figure:: images/Survey_NanoTEM.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Survey_NanoTEM
+
+    Ground NanoTEM survey collected in 1993.
+
+NanoTEM
+"""""""
+
+The first time-domain EM survey collected at TKC was a NanoTEM survey 1993. A
+total of 21 lines with 40 m station spacing were collected. The primary
+objectives of the survey were to delineate the kimberlite pipes and estimate
+the depth of the till layer. The NanoTEM system is a concentric transmitter-
+receiver configuration, 40 m and 10 m in side respectively. The receiver
+measures off-time data over 31 time-channels.
+
+
 .. _survey_AeroTEM:
 
 .. figure:: images/Survey_AeroTEM.png
@@ -145,12 +165,13 @@ Time EM + Magnetics
 AeroTEM
 """""""
 
-The first time-domain electromagnetic survey collected at TKC was a
-helicopter-borne AeroTEM I survey flown in 2001. The survey was repeated in 2003 using a
-new generation of the system, the AeroTEM II. Fifteen survey lines were flown in the
-east-west direction, with 4 additional lines flown north-south. The overlap between
-the two sets of lines covers the approximate location of DO-27 and DO-18 with
-the objective of determining the vertical extent of the kimberlite pipes. 
+The first airborne time-domain electromagnetic survey collected at TKC was a
+helicopter-borne AeroTEM I survey flown in 2001. The survey was repeated in
+2003 using a new generation of the system, the AeroTEM II. Fifteen survey
+lines were flown in the east-west direction, with 4 additional lines flown
+north-south. The overlap between the two sets of lines covers the approximate
+location of DO-27 and DO-18 with the objective of determining the vertical
+extent of the kimberlite pipes.
 
 The AeroTEM system is a concentric transmitter-receiver coil system mounted on a rigid
 platform. The AeroTEM transmitter waveform is a triangular current pulse of 1150

@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Data.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 30%
 
 Data
 ====
@@ -39,7 +39,7 @@ compensate for the different instrumental level.  Leveling was done in post-proc
 
 Three main features are observed in the gravity data:
 
-- Low gravity anomalies over DO-27 and DO-18, 
+- Low gravity anomalies over DO-27 and DO-18,
 - Low gravity anomaly connecting the two kimberlite pipes.
 
 Initial interpretation of the gravity data supported the idea of both pipes
@@ -171,17 +171,21 @@ Time-Domain EM
 --------------
 
 .. raw:: html
+    :file: ./images/Data_NanoTEM.html
+
+.. raw:: html
     :file: ./images/Data_AeroTEM.html
 
 .. raw:: html
     :file: ./images/Data_VTEM.html
 
-We present the time channels collected by the AeroTEM (2003) and VTEM
-(2004) systems. Both system record the time-varying vertical component of the
-magnetic field :math:`\frac{\partial B_z}{\partial t}` in (nT/s). Data
-quality, and the time range for which data are sampled vary across EM systems,
-hence the EM data sets should show some differences. In general, we observe
-the following features:
+We present the time channels collected by the NanoTEM (1993), AeroTEM (2003)
+and VTEM (2004) systems. All three systems record the time-varying vertical
+component of the magnetic field :math:`\frac{\partial B_z}{\partial t}` in
+(nT/s). Data quality, and the time range for which data are sampled vary
+across EM systems, hence the EM data sets should show some differences.
+Morevoer, the NanoTEM is a ground loop survey, whereas both the AeroTEM and
+VTEM are airborne surveys. In general, we observe the following features:
 
 - Both systems record a positive anomaly over the southern lobe of DO-27, which later goes negative.
 

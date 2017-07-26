@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Properties.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 30%
 
 Properties
 ==========

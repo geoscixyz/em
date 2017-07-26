@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Setup.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 30%
 
 Setup
 =====
@@ -114,9 +114,9 @@ DO-27 during the acquisition of the geophysical data.
 Many different types of kimberlite can exist within a pipe, and unfortunately,
 there are several classifications and naming conventions :cite:`Pell1997`
 :cite:`Kjarsgaard2007`. Here, we divide kimberlitic rocks into three types based on
-their depositional environment: 
+their depositional environment:
 
-- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of the volcanic pipe. 
+- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of the volcanic pipe.
 - Volcaniclastic (VK): extrusive, fragmental, main volcanic body.
 - Pyroclastic (PK): a subclass of VK, extrusive, violent, deposited after an explosive event.
 

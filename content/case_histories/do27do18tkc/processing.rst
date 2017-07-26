@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Processing.png
     :align: right
-    :figwidth: 50%
+    :figwidth: 30%
 
 
 Processing
