@@ -2,7 +2,7 @@ def checkDependencies():
     try:
         import numpy, scipy, matplotlib, sphinxcontrib.bibtex, sphinx_bootstrap_theme
         pass
-    except Exception, e:
+    except (Exception, e):
         raise Exception('Requirements not installed, run: "pip install -r requirements.txt" to install requirements')
     else:
         pass

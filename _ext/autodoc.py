@@ -76,7 +76,7 @@ def make_contributorslist(fpath='contributors.json',
 
     # sort by last name
     last_names = []
-    for key, val in contribs.iteritems():
+    for key, val in iter(contribs.items()):
         if 'name' not in val:
             raise Exception('{} has no name!?'.format(keys))
         last_names.append(val['name'].split(' ')[-1])
@@ -262,7 +262,7 @@ Gallery
 
             contributions = ['    - {contrib_style}: {contribs}'.format(
                 contrib_style=contrib_style, contribs=val
-                ) for contrib_style, val in contrib_dict.iteritems() if val]
+                ) for contrib_style, val in iter(contrib_dict.items()) if val]
 
             contributions = '\n'.join(contributions)
 
@@ -283,7 +283,7 @@ Gallery
 
             tags_list = ['    - {tags_style}: {tag}'.format(
                 tags_style=tag_style, tag=val
-                ) for tag_style, val in tags_dict.iteritems()]
+                ) for tag_style, val in iter(tags_dict.items())]
 
             tags_list = '\n'.join(tags_list)
 
