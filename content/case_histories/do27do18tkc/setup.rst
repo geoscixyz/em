@@ -76,7 +76,7 @@ We will attempt to answer the following questions:
 
 - How much information could have been extracted form the airborne geophysical data?
 
-- Can we differentiate between kimberlite units based on multiple physical properties?
+- Can we differentiate between kimberlite units based on multiple physical property distributions obtained from inversions of various airborne geophysical data sets?
 
 
 
@@ -105,7 +105,7 @@ DO-27 during the acquisition of the geophysical data.
 
 .. figure:: images/TKC_Kimberlite.png
     :align: center
-    :figwidth: 50%
+    :figwidth: 80%
     :name: fig_tkc_kimberlite
 
     Schematic of a typical Lac de Gras kimberlite at (a) emplacement time and
@@ -115,10 +115,13 @@ DO-27 during the acquisition of the geophysical data.
 Many different types of kimberlite can exist within a pipe, and unfortunately,
 there are several classifications and naming conventions (:cite:`Pell1997`,
 :cite:`Kjarsgaard2007`). Here, we divide kimbelitic rocks into three types based on
-their depositional environment: Hypabyssal (HK): intrusive, igneous,
-nonfragmented rock, root of volcanic pipe Volcaniclastic (VK): extrusive,
-fragmental, main volcanic body Pyroclastic (PK): a subclass of VK, extrusive,
-violent, deposited after an explosive event.
+their depositional environment:
+
+- Hypabyssal (HK): intrusive, igneous, nonfragmented rock, root of volcanic pipe
+
+- Volcaniclastic (VK): extrusive, fragmental,
+
+- Pyroclastic (PK): main volcanic body, a subclass of VK, extrusive, violent, deposited after an explosive event.
 
 
 
