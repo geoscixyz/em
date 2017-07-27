@@ -16,6 +16,9 @@ to the NAD27-UTM 12N (`EPSG 26712`_) projection prior to processing.
 
 .. _EPSG 26712: http://spatialreference.org/ref/epsg/nad27-utm-zone-12n/
 
+|
+|
+
 +---------------------------+-------------------+----------+
 |       **Survey**          | **Data Type**     | **Year** |
 +---------------------------+-------------------+----------+
@@ -23,7 +26,7 @@ to the NAD27-UTM 12N (`EPSG 26712`_) projection prior to processing.
 +---------------------------+-------------------+----------+
 | Aerodat                   |  FEM,magnetics    | 1993     |
 +---------------------------+-------------------+----------+
-|        NanoTEM            |  TEM              | 1993     |
+|        **NanoTEM**        |  TEM              | 1993     |
 +---------------------------+-------------------+----------+
 | Ground magnetics          |  Magnetics        | 1993     |
 +---------------------------+-------------------+----------+
@@ -43,7 +46,7 @@ to the NAD27-UTM 12N (`EPSG 26712`_) projection prior to processing.
 +---------------------------+-------------------+----------+
 | HeliSAM                   | TEM (total field) | 2014     |
 +---------------------------+-------------------+----------+
-|  **Used in this study**                                  |
+|  **Systems used in this study are bolded**               |
 +----------------------------------------------------------+
 
 .. _survey_DIGHEM:
@@ -56,16 +59,19 @@ Frequency EM + Magnetics
     :figwidth: 50%
     :name: fig_Survey_DIGHEM
 
-    Airborne DIGHEM survey collected in 1992
+    Airborne DIGHEM survey flight lines
 
-The first airborne survey acquired at TKC was the DIGHEM system in 1992,
-responsible for the discovery of both DO-27 and DO-18. The survey consists of
-15 lines flown in the EW orientation at a 200 m line spacing, for a total of
-52 line-km. The nominal flight height of the survey bird is 30 m. The DIGHEM
-system is equip with a co-axial and a co-planar loop configuration. The :ref:`table
-below<DIGHEMconfig>` summaries the separation and frequencies measured
-by each coil pair. A magnetometer sensor inside the EM bird is used to
-collect Total Field magnetic data.
+The first airborne survey acquired at TKC used the DIGHEM system. These data, acquired in 1992, resulted in the discovery of both DO-27 and DO-18. The survey consisted of 15 lines flown in the EW orientation at a 200 m line spacing, for a total of
+52 line-km. The nominal flight height of the survey bird was 30 m. The DIGHEM
+system was equipped with a co-axial and a co-planar loop configuration. The :ref:`table
+below<DIGHEMconfig>` summarizes the separation and frequencies measured
+by each coil pair. A magnetometer sensor inside the EM bird was used to
+collect total field magnetic data.
+
+|
+|
+|
+
 
 .. _DIGHEMconfig:
 
@@ -89,14 +95,14 @@ Ground Gravity
 
     Ground gravity stations collected in 1994.
 
-A ground gravity data set was collected in the winter of 1994 in two seperate
-surveys. The data were leveled and combined into a data set. Stations
-are spaced every 25 m in the easting direction and every 100 m in the northing
-direction over DO-27. Over DO-18, stations are collected every 50 m and every
+A ground gravity data set was collected in the winter of 1994 in two separate
+surveys. The data were leveled and combined into a single data set. Stations
+were spaced every 25 m in the easting direction and every 100 m in the northing
+direction over DO-27. Over DO-18, stations were collected every 50 m and every
 25 m in the easting and northing directions, respectively. This gives a total
 of 972 data locations. We note that only elevation data for the
-survey over DO-27 was supplied to us. However, given that the data were
-collected in the winter, we use our elevation model
+survey over DO-27 were supplied to us. However, given that the data were
+collected in the winter, we were able to use our elevation model
 :numref:`fig_tkc_location` and assume that the gravity stations were collected on the
 surface of the frozen lake.
 
@@ -116,7 +122,7 @@ fixed-wing system. The survey covers a much larger area around the known
 deposit in an effort to find additional drilling targets. Over 140 survey
 lines were flown along the North-South direction, with an approximate line
 spacing of 50 m, for a total of 1,120 line-km. The nominal flight height of
-the survey is 50 m. After processing, the Falcon system returns the vertical
+the survey was 50 m. After processing, the Falcon system returns the vertical
 component of the gravity field :math:`g_{z}` and the vertical component of the
 gradient tensor :math:`g_{zz}`. The fundamentals for the gravity and gravity
 gradiometry surveys can be reviewed in `GPG Gravity`_.
@@ -126,6 +132,26 @@ gradiometry surveys can be reviewed in `GPG Gravity`_.
 
 Time EM + Magnetics
 -------------------
+
+.. _survey_NanoTEM:
+
+.. figure:: images/Survey_NanoTEM.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Survey_NanoTEM
+
+    Ground NanoTEM survey collected in 1993.
+
+NanoTEM
+"""""""
+
+The first time-domain EM survey collected at TKC was a NanoTEM survey 1993. A
+total of 21 lines with 40 m station spacing were collected. The primary
+objectives of the survey were to delineate the kimberlite pipes and estimate
+the depth of the till layer. The NanoTEM system is a concentric transmitter-
+receiver configuration, 40 m and 10 m in side respectively. The receiver
+measures off-time data over 31 time-channels.
+
 
 .. _survey_AeroTEM:
 
@@ -139,15 +165,16 @@ Time EM + Magnetics
 AeroTEM
 """""""
 
-The first time-domain electromagnetic survey to be collected at TKC was an
-helicopter borne AeroTEM I system flown in 2001, then re-flown in 2003 with a
-new generation of equipment AeroTEM II. Fifteen survey lines were flown in the
-East-West orientation, with 4 additional lines flown NS. The overlap between
-the two sets of lines covers the approximate location of DO-27 and DO-18 with
-the objective of determining the vertical extent of the kimberlite pipes. The AeroTEM
-system is a concentric transmitter-receiver coil system mounted on a rigid
-platform.
-The AeroTEM transmitter waveform is a triangular current pulse of 1150
+The first airborne time-domain electromagnetic survey collected at TKC was a
+helicopter-borne AeroTEM I survey flown in 2001. The survey was repeated in
+2003 using a new generation of the system, the AeroTEM II. Fifteen survey
+lines were flown in the east-west direction, with 4 additional lines flown
+north-south. The overlap between the two sets of lines covers the approximate
+location of DO-27 and DO-18 with the objective of determining the vertical
+extent of the kimberlite pipes.
+
+The AeroTEM system is a concentric transmitter-receiver coil system mounted on a rigid
+platform. The AeroTEM transmitter waveform is a triangular current pulse of 1150
 microseconds duration operating at a base frequency of 150 Hz. The transmitter
 loop consists of 8 turns of copper wire, 5 m in diameter, with a maximum
 current  of 250 A that produces a peak moment of 40,000 Am2.
@@ -167,9 +194,8 @@ VTEM
 """"
 
 Due to peculiar negative data recorded by the AeroTEM system, the decision was
-made to collect a second TEM survey in 2004 with an helicopter-born VTEM
-system. A total of 20 lines were flown orientated EW at a 75 m line spacing,
-with an additional 2 tie lines along NS for a total of 39 line-km. The VTEM
-system measured the vertical component of the magnetic field using a
+made to collect a second TEM survey in 2004 with a helicopter-borne VTEM
+system. A total of 20 lines were flown orientated east-west using a 75 m line spacing,
+with an additional 2 tie lines in the north-south direction for a total of 39 line-km. The VTEM system measured the vertical component of the magnetic field using a
 concentric loop configuration. A cesium-vapour magnetometer bird is attached 15 m
 below the helicopter.

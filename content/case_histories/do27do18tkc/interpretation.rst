@@ -11,7 +11,7 @@ Interpretation
 In this section, we build a petrophysical model of the deposit based on the
 inverted physical properties: density, susceptibility, conductivity and
 chargeability parameters. We compare our model built from unconstrained
-inversion to our initial :ref:`Conceptual model<TKCgeoTable>` of TKC.
+inversion to our initial :ref:`conceptual model<TKCgeoTable>` of TKC.
 
 Density
 -------
@@ -21,9 +21,9 @@ Density
     :figwidth: 50%
     :name: fig_Petrophysic_model_Den
 
-:numref:`fig_Petrophysic_model_Den` Using a cut-off value of -0.24 g/cc,
+Using a cut-off value of -0.24 g/cc,
 we generate an initial rock model for the TKC complex based on the gravity
-gradiometry inversion. This result shows that the DO-27 pipe further extends
+gradiometry inversion (shown in :numref:`fig_Petrophysic_model_Den`). This result shows that the DO-27 pipe extends further
 to the south than was originally modeled using the magnetic data alone.
 
 The density contrast, whether obtained from the surface gravity survey or the
@@ -39,7 +39,7 @@ Susceptibility
     :figwidth: 50%
     :name: fig_Petrophysic_model_DenSusc
 
-:numref:`fig_Petrophysic_model_DenSusc` The density contrast model only
+The density contrast model only
 provides information about the spatial extents of the kimberlite pipes but it
 does not reveal information about the different types of kimberlitic rocks
 within DO-18 and DO-27. We further differentiate the kimberlitic rocks based on susceptibility.
@@ -48,7 +48,7 @@ We chose to divide susceptible rocks in ranges of high and moderate values:
 - Moderate (:math:`0.002 \leq \kappa \leq 0.006` SI)
 - High :math:`\kappa > 0.006` SI
 
-We begin to identify two distinct regions near DO-27, with the largest
+The model is shown in :numref:`fig_Petrophysic_model_DenSusc`. We begin to identify two distinct regions near DO-27, with the largest
 susceptibilities located outside the density anomaly. The moderate
 susceptibilities appear in both DO-27 and DO-18.
 
@@ -67,9 +67,9 @@ field standpoint, the rocks making up the core region of both pipes are
 indistinguishable. The lack of depth resolution in potential fields also makes
 difficult to distinguish the vertical limits of the pipes.
 
-:numref:`fig_Petrophysic_model_DenCondSusc` we overlay the anomalous
+In :numref:`fig_Petrophysic_model_DenCondSusc`, we overlay the anomalous
 conductivity (:math:`\sigma > 10^{-3}` S/m). which correlates well with the
-density lows. Conductivity help in defining a clear interface at 20 to 40 m
+density lows. Conductivity helps in defining a clear interface at 20 to 40 m
 depth over DO-27, while DO-18 outcrops at the surface. The added information
 from conductivity also highlights the contrast between regions of high and moderate susceptibility.
 
@@ -83,17 +83,16 @@ Chargeability
     :name: fig_Petrophysic_model_DenCondSuscCharg
 
 
-We have so far combined information of density, susceptibility and conductivity which
+We have so far combined information from density, susceptibility and conductivity which
 helped in delineating the two pipes. However, based on these physical
 properties, it is not possible to distinguish between DO-27 and DO-18.
 
-In :numref:`fig_Petrophysic_model_DenCondSuscCharg` we overlay values of chargeability:
+In :numref:`fig_Petrophysic_model_DenCondSuscCharg`, we overlay values of chargeability:
 
 - Early pseudo-chargeability :math:`\eta_E` (55 :math:`s^{-1}`)
 - Late pseudo-chargeability :math:`\eta_L` (8 :math:`s^{-1}`)
 
 These two additional properties allows to create a strong distinction between DO-27 and DO-18. On top of that recovered Cole-Cole time constant (:math:`\tau`) around cells :math:`\eta_{E}` and :math:`\eta_{L}` anomalies (red and green regions, respectively) were correspondingly small and large as shown in :numref:`Processing_IP_Parameters` (see A1-A3 vs. A4). And these different time constants may suggest size of grains at two anomalies are different.
-
 
 Petrophysical Model
 -------------------
@@ -102,7 +101,7 @@ Petrophysical Model
     :file: ./images/Interpretation_PetroModel.html
 
 From the union of the regions defined by the thresholded physical property
-values, we build a rock model. Important to note that only airborne
+values, we build a final rock model. Important to note that only airborne
 geophysical data were used to build this model. We identify 5 rock units which
 are compared to our initial :ref:`Conceptual model<TKCgeoTable>` of TKC
 
@@ -133,22 +132,22 @@ The table summarizes our interpretation about the petrophysical model.
 Geological validation
 ---------------------
 
-Following discovery, over 150 drill holes have been completed at TKC, which we
+Following its discovery, over 150 drill holes have been completed at TKC, which we
 can use to validate our results.
 :numref:`Interpretation_RockGeology` compares sections of our final
 petrophysical model (100 m below the surface) to the geology based upon
-drilling results. The agreement is quite good particularly regarding the
+drilling results. The agreement is quite good, particularly regarding the
 geometric confinement of the pipes.
 
-- For the DO-27 pipe, interpretation of R2, R4, and R5 as respectively HK, VK,
+- For the DO-27 pipe, interpretation of R3, R4, and R5 as respectively HK, VK,
   and PK, agrees with the ground truth.
 
-- The deeper part of the PK unit, which corresponds to R3 and R4, was not well
+- The deeper part of the PK unit, which corresponds to R2 and R5, was not well
   distinguished in our interpretation due to the lack of depth sensitivity of
   the airborne geophysics.
 
-- The HK unit agrees well with R2 on plan map, but not as well on the B-B'
-  section. This discrepancy between R2 and HK at depth may be caused by low
+- The HK unit agrees well with R3 on plan map, but not as well on the B-B'
+  section. This discrepancy between R3 and HK at depth may be caused by low
   resolving power of our smooth inversion for recovering the geometry of thin
   dipping sheets (HK).
 

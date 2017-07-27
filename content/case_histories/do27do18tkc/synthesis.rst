@@ -2,7 +2,7 @@
 
 .. figure:: images/TKC_7Steps_Synthesis.png
     :align: right
-    :figwidth: 40%
+    :figwidth: 30%
 
 
 Synthesis
@@ -12,12 +12,15 @@ Two primary questions that motivated the initial study were:
 
 - How much information could have been extracted form the airborne geophysical data at the time of discovery?
 
-  Geophysical inversion would have easily determined that DO-27 and DO-18 were seperate bodies. The geometry of both pipes could have estimated prior to drilling for a more optimal exploration program.
+  Geophysical inversion would have easily determined that DO-27 and DO-18 were
+  separate bodies. The geometry of both pipes could have been estimated prior to drilling for a more optimal exploration program.
 
-|
+
 - Can we differentiate between the kimberlite units based on multiple physical properties?
 
-  From a geophysical perspective, the kimberlites differs mainly in their chargeability parameters and by the presence of a strongly magnetic HK unit (only present at DO-27).
+  From a geophysical perspective, the kimberlites differs mainly in their
+  chargeability parameters and by the presence of a strongly magnetic HK unit
+  (only present at DO-27).
 
 .. figure:: images/Synthesis_RockUnits_3D.png
     :align: right
@@ -39,7 +42,7 @@ representative of the geologic model obtained from drilling.
 All of the data used in the analysis were obtained from airborne surveys which
 are far easier, and less costly, to collect than ground data. We note that if
 a single borehole had been drilled in the heart of the DO-27 pipe, then the
-geologic intepretation of the geophysical data would have greatly benefitted;
-this could have had a major impact upon the exploration program
+geologic interpretation of the geophysical data would have greatly benefited;
+this could have had a major impact upon the exploration program.
 
 
