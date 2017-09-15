@@ -118,7 +118,7 @@ The Geonix EM-61 is a time-domain instrument with a single horizontal transmitte
 
 **TEMTADS**
 
-The TEMTADS system is comprised of a square horizontal transmitter loop and an array of 25 horizontal coplanar receiver loops; thus it measures the vertical TEM response. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple small receiver loops allows for better characterization of compact TEM anomalies. The popularity of this survey configuration has decreased recently with the development of the Metal-Mapper 2x2 system.
+The TEMTADS system is comprised of 25 coincident transmitter-receiver pairs. Each transmitter and receiver loop is square, with a side length of 40 cm. The sensor array measures the vertical TEM response due to illumination of the target from multiple orientations. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple transmitters and receivers allows for better characterization of compact TEM anomalies. The popularity of this survey configuration has decreased recently with the development of the Metal-Mapper 2x2 system; which requires the collection of less data while using transmitter loops oriented in three orthogonal directions.
 
 .. figure:: images/fig_TEMTADS_uxo.png
 	:align: center
