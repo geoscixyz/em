@@ -169,7 +169,7 @@ We note the following:
 
 - The largest susceptibilities are concentrated on the northeast edge of DO-27.
 
-- Moderate to low susceptibilities are recovered exactly at the center of
+- Moderate to low susceptibilities are recovered at the center of
   DO-18 and at depth.
 
 .. Remanent magnetization
@@ -321,8 +321,7 @@ sensing the Earth differently, both EM systems are probing the same
 conductivity structure and should therefore agree on the general shape of the
 kimberlite pipe. In both cases, the horizontal location and vertical extent of
 the DO-27 kimberlite pipe are consistent. The pipe appears to extend to depths
->200 m below the surface. The two EM systems disagree however on the upper
-limit of the pipe.
+:math:`>` 200 m below the surface. The two EM systems disagree however on the upper limit of the pipe.
 
 .. figure:: images/Processing_CoopAlgorithm.png
     :align: right
@@ -381,6 +380,13 @@ active research. We follow TEM-IP inversion workflow developed by
 EM-Decoupling
 """""""""""""
 
+.. figure:: images/Processing_IP_Decoupling.png
+    :align: right
+    :figwidth: 50%
+    :name: fig_Processing_IP_Decoupling
+
+    EM-decoupling.
+
 :numref:`fig_Processing_IP_Decoupling` illustrates how our EM decoupling is effective  by concentrating on two
 times: 130 and 410 :math:`\mu s`, with plan view  maps of :math:`d`, :math:`F[\sigma_{est}]`, and
 :math:`d^{IP}_{raw}`. At 130 :math:`\mu s`, near A4 we effectively removed the positive
@@ -389,10 +395,6 @@ features. Near A1-A3, the EM-decoupling results in stronger negatives. At 410
 :math:`\mu s`, near A4, the EM-decoupling makes a greater impact, and it converts
 positive observations to large amplitude negative IP data.
 
-.. figure:: images/Processing_IP_Decoupling.png
-    :align: center
-    :figwidth: 80%
-    :name: fig_Processing_IP_Decoupling
 
 IP Inversion
 """"""""""""
@@ -405,6 +407,8 @@ pseudo-chargeability. The inversion is carried out for all time channels as desc
     :align: right
     :figwidth: 50%
     :name: fig_Processing_IP_Model
+
+    Pseudo-chargeabilities at (a) early and (b) late times.
 
 :numref:`fig_Processing_IP_Model` presents the recovered pseudo-
 chargeabilities at two time channels: 130 and 410 :math:`\mu s`.
@@ -428,11 +432,11 @@ We have recovered a distribution of pseudo-chargeability values at multiple
 times and we now wish to use those results to extract intrinsic information
 about the polarization parameters of the kimberlites. We use a :ref:`Cole-
 Cole<electrical_conductivity_lab_setup_measurements>` model to characterize the
-time-dependent conductivity which can be expressed as:
+complex conductivity in Laplace domain:
 
 :math:`\sigma(s) = \sigma_{\infty} - \frac{\sigma_{\infty} \eta}{1+(1-\eta)(s\tau)^c}`
 
-where :math:`\sigma_{\infty}` is conductivity at infinite frequency (S/m),
+where :math:`s=\imath\omega` is a Laplace transfrom parameter, :math:`\sigma_{\infty}` is conductivity at infinite frequency (S/m),
 :math:`\eta` is chargeability, :math:`\tau` is time constant (s), :math:`c` is
 frequency dependency. In our analyses, :math:`\sigma_{\infty}` and :math:`c`
 are assumed to be known, hence we are only estimating the chargeability
@@ -442,6 +446,8 @@ are assumed to be known, hence we are only estimating the chargeability
     :align: right
     :figwidth: 50%
     :name: Processing_IP_Parameters
+
+    Cross plots of recovered time constant and chargeability values.
 
 :numref:`Processing_IP_Parameters` presents a cross-plot of the recovered
 chargeability (:math:`\eta`) and time constant (:math:`\tau`) for the cells close to A1-A4 anomalies.
