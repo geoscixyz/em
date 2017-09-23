@@ -395,10 +395,6 @@ features. Near A1-A3, the EM-decoupling results in stronger negatives. At 410
 :math:`\mu s`, near A4, the EM-decoupling makes a greater impact, and it converts
 positive observations to large amplitude negative IP data.
 
-.. figure:: images/Processing_IP_Decoupling.png
-    :align: center
-    :figwidth: 80%
-    :name: fig_Processing_IP_Decoupling
 
 IP Inversion
 """"""""""""
