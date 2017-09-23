@@ -47,7 +47,7 @@ For the electric field, magnetic field and vector potential arising from a harmo
 
 **Harmonic Solutions for a Magnetic Dipole**
 
-As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z)` \mathbf{\hat x}. 
+As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z) \mathbf{\hat x}`. 
 
 
 For the vector potential:
