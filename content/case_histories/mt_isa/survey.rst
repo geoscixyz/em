@@ -31,7 +31,7 @@ but the final choice at Cluny was motivated by the following factors:
 
 (c) The choice of a pole-dipole was motivated by past experience that that showed
     this was an effective survey for deep targets. A typical pseudosection is
-    shown in  :ref:`pseudosection<dcr_Pseudo_section>`. Furthermore, with the
+    shown in  :ref:`pseudosection<dcr_Pseudosection>`. Furthermore, with the
     MIMDAS system, a :ref:`pole-dipole (P-DP) dipole-pole (DP-P)<MIM_Arrays>`
     could be acquired along each line at no additional cost. The system spaced
     each potential electrode 100-m apart.

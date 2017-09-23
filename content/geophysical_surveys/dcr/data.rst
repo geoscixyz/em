@@ -103,21 +103,21 @@ resistivity of layers (as shown in the interactive figure below).
             :file: images/sounding_radio_buttons.html
 
 
-.. _dcr_Pseudo_section:
+.. _dcr_Pseudosection:
 
-Pseudo-section
-**************
+Pseudosection
+*************
 
-Pseudo-sections are often used to visualize data from 2D profiles. To account
+Pseudosections are often used to visualize data from 2D profiles. To account
 for the fact that measurements with larger electrode separations sample deeper
 portions of the earth, lines at :math:`45^\circ` degree angles, are drawn from
 the mid-points of the current and potential electrode pairs and the datum is
 plotted at the intersection of these lines. In cases where a pole transmitter
 or receiver is used, the :math:`45^\circ` lines are drawn directly from the
-electrode location. The figure below shows how an apparent resistivity pseudo-
-section is built for a simple dipole-dipole profile.
+electrode location. The figure below shows how an apparent resistivity pseudosection
+is built for a simple dipole-dipole profile.
 
- .. list-table:: : Apparent resistivity pseudo-section
+ .. list-table:: : Apparent resistivity pseudosection
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
