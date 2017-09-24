@@ -4,7 +4,7 @@ Apps
 ====
 
 To augment the content in EM GeoSci, a number of `Jupyter
-Notebook <http://jupyter.org>`_ apps have been developed.
+Notebook <https://jupyter.org>`_ apps have been developed.
 There are two categories of notebooks
 
 - :ref:`EM Apps <em_apps>`
@@ -14,9 +14,9 @@ There are two categories of notebooks
     - **Purpose:** To be a starting point for getting up and running with the EM Module of SimPEG for performing numerical simulations and inversions
 
 .. We have provided instructions on working with the apps in the `Jupyter
-.. Notebook<http://jupyter.org>`_ environment.
+.. Notebook<https://jupyter.org>`_ environment.
 
-If you run into any issues, please let us know at: http://github.com/geoscixyz/em_apps.
+If you run into any issues, please let us know at: https://github.com/geoscixyz/em_apps.
 
 
 .. _em_apps:
@@ -26,12 +26,12 @@ EM Apps
 
 There are a few ways you can run the notebooks. We recommend:
 
-- Microsoft Azure (recommended): http://notebooks.azure.com/library/em_apps
+- Microsoft Azure (recommended): https://notebooks.azure.com/library/em_apps
 
 Alternatively, you can use:
 
 - Binders (free, no login required, not-so-stable): http://mybinder.org/repo/geoscixyz/em_apps
-- Download from Github (free, installation of python required): http://github.com/geoscixyz/em_apps
+- Download from Github (free, installation of python required): https://github.com/geoscixyz/em_apps
 
 .. image:: images/DC_LayeredEarth_notebook.png
 
@@ -94,12 +94,12 @@ electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.x
 
 These notebooks are available at
 
-- Microsoft Azure (recommended): http://notebooks.azure.com/library/electromagnetics
+- Microsoft Azure (recommended): https://notebooks.azure.com/library/electromagnetics
 
 or alternatively:
 
 - Binders (free, no login required, not-so-stable): http://mybinder.org/repo/simpeg/em_notebooks
-- Download from Github (free, installation of python required): http://github.com/simpeg/em_notebooks
+- Download from Github (free, installation of python required): https://github.com/simpeg/em_notebooks
 
 Further examples and documentation are available at http://simpeg.xyz.
 
