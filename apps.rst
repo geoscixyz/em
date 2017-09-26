@@ -26,7 +26,7 @@ EM Apps
 
 There are a few ways you can run the notebooks. We recommend:
 
-- Microsoft Azure (recommended): http://notebooks.azure.com/library/em_apps
+- Microsoft Azure (recommended): https://notebooks.azure.com/lheagy/libraries/em_apps
 
 Alternatively, you can use:
 
@@ -44,44 +44,7 @@ each cell of code, or from the menu, select :code:`cell, run all`
 Notebooks include
 ^^^^^^^^^^^^^^^^^
 
-**Physical Properties**
-
-- Cole-Cole response: Complex conductivity
-
-**Maxwell 1: Fundamentals**
-
-- FDEM Planewave in Wholespace
-- FDEM Electric Dipole in Wholespace
-- FDEM Electric Dipole in Wholespace
-- TDEM Electric Dipole in Wholespace
-- TDEM Electric Dipole in Wholespace
-- Induction RL circuit (two loops)
-
-**Maxwell 2: DC**
-
-- Electrostatic Sphere
-- DC Layered Earth
-- DC 2D Cylinder in Halfspace
-- DC 2.5D Cylinder in Halfspace
-- DC 2D Plate in Halfspace
-- DC 2.5D Plate in Halfspace
-- DC 2D shielding effects in Halfspace
-- DC 2.5D shielding effects in Halfspace
-- DC Building Pseudosections
-
-
-**Maxwell 3: FDEM**
-
-- FDEM Vertical Magnetic Dipole in Layered-earth
-
-**Maxwell 4: TDEM**
-
-- TDEM Horizontal Circular loop in Layered-earth
-
-**Geophysical Surveys**
-
-- MT Layered earth
-
+.. image:: images/notebook_list.png
 
 
 .. _simulation_notebooks:
@@ -94,7 +57,7 @@ electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.x
 
 These notebooks are available at
 
-- Microsoft Azure (recommended): http://notebooks.azure.com/library/electromagnetics
+- Microsoft Azure (recommended): https://notebooks.azure.com/lheagy/libraries/electromagnetics
 
 or alternatively:
 
