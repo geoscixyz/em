@@ -44,7 +44,7 @@ each cell of code, or from the menu, select :code:`cell, run all`
 Notebooks include
 ^^^^^^^^^^^^^^^^^
 
-
+.. image:: images/notebook_list.png
 
 
 .. _simulation_notebooks:
