@@ -148,7 +148,7 @@ linkcheck_ignore = [
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
                     ]
 linkcheck_retries = 3
-linkcheck_timeout = 500
+linkcheck_timeout = 900
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
