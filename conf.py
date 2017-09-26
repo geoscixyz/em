@@ -144,7 +144,8 @@ linkcheck_ignore = [
     'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
     'http://seg.org',
     'http://library.seg.org/doi/',
-    'notebooks.azure.com/library/em_apps',
+    'https://notebooks.azure.com/lheagy/libraries/electromagnetics',
+    'https://notebooks.azure.com/lheagy/libraries/em_apps',
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
                     ]
 linkcheck_retries = 3
