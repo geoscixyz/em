@@ -69,11 +69,11 @@ The simulations use the open-source Simulation and Parameter Estimation package
 SimPEG_.
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/geoscixyz/em_apps
+   :target: https://mybinder.org/v2/gh/geoscixyz/em_apps/master
    :align: center
 
 .. _Jupyter Notebooks: https://github.com/geoscixyz/em_examples
-.. _Binders: http://mybinder.org/repo/geoscixyz/em_apps
+.. _Binders: https://mybinder.org/v2/gh/geoscixyz/em_apps/master
 .. _SimPEG: http://simpeg.xyz
 
 This resource is Open Source and while currently being led by brilliant
@@ -145,7 +145,7 @@ At the large scale we have the following items.
 
 - :ref:`maxwell1_fundamentals_index`:
 
-  - This contains a summary and background about the formative laws 
+  - This contains a summary and background about the formative laws
     that are the basis for Maxwell's
     equations as well as an introduction to general topics that and not survey specific.
     (eg  the basic equations in the frequency and time domain, interface conditions, concepts of fields and fluxes,
