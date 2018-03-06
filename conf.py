@@ -131,7 +131,6 @@ exclude_patterns = [
                     ]
 
 linkcheck_ignore = [
-    'http://mybinder.org/repo/geoscixyz/em_apps',
     'http://www.austhaigeophysics.com/A%20Comparison%20of%202D%20and%203D%20IP%20from%20Copper%20Hill%20NSW%20-%20Extended%20Abstract.pdf',
     'http://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906',
     'http://www.ga.gov.au/metadata-gateway/metadata/record/gcat_aac46307-fce8-449d-e044-00144fdd4fa6/',
