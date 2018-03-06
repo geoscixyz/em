@@ -26,12 +26,9 @@ EM Apps
 
 There are a few ways you can run the notebooks. We recommend:
 
-- Microsoft Azure (recommended): https://notebooks.azure.com/lheagy/libraries/em_apps
-
-Alternatively, you can use:
-
-- Binders (free, no login required, not-so-stable): http://mybinder.org/repo/geoscixyz/em_apps
-- Download from Github (free, installation of python required): http://github.com/geoscixyz/em_apps
+- Microsoft Azure (free, login required): https://notebooks.azure.com/lheagy/libraries/em_apps
+- Binders (free, no login required): https://mybinder.org/v2/gh/geoscixyz/em_apps/master
+- or can be downloaded from Github (free, installation of python required): http://github.com/geoscixyz/em_apps
 
 .. image:: images/DC_LayeredEarth_notebook.png
 
@@ -57,12 +54,9 @@ electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.x
 
 These notebooks are available at
 
-- Microsoft Azure (recommended): https://notebooks.azure.com/lheagy/libraries/electromagnetics
-
-or alternatively:
-
-- Binders (free, no login required, not-so-stable): http://mybinder.org/repo/simpeg/em_notebooks
-- Download from Github (free, installation of python required): http://github.com/simpeg/em_notebooks
+- Microsoft Azure (free, login required): https://notebooks.azure.com/lheagy/libraries/electromagnetics
+- Binders (free, no login required): https://mybinder.org/v2/gh/simpeg/em_notebooks/master
+- or can be downloaded from Github (free, installation of python required): http://github.com/simpeg/em_notebooks
 
 Further examples and documentation are available at http://simpeg.xyz.
 
