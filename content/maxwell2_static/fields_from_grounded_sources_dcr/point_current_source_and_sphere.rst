@@ -70,7 +70,7 @@ where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
 order :math:`n`. Because Legendre polynomials have magnitudes less than
 unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
 :eq:`RSol1` is bounded and converges as :math:`n \rightarrow \infty`. A
-similar approach for :math:`r < x_0` can be expressed as follows:
+similar approach for :math:`r > x_0` can be expressed as follows:
 
 .. math::
    \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
