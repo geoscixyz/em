@@ -145,6 +145,7 @@ linkcheck_ignore = [
     'http://library.seg.org/doi/',
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
     'https://notebooks.azure.com/import/gh/geoscixyz/em-apps',
+    'https://notebooks.azure.com/import/gh/simpeg/em-notebooks'
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
