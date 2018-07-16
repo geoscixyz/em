@@ -143,9 +143,8 @@ linkcheck_ignore = [
     'https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf',
     'http://seg.org',
     'http://library.seg.org/doi/',
-    'https://notebooks.azure.com/lheagy/libraries/electromagnetics',
-    'https://notebooks.azure.com/lheagy/libraries/em_apps',
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
+    'https://notebooks.azure.com/import/gh/geoscixyz/em-apps',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
