@@ -147,7 +147,7 @@ linkcheck_ignore = [
     'https://notebooks.azure.com/import/gh/geoscixyz/em-apps',
     'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
-    'https://doi.org/10.2118/942054-G',
+    'https://doi.org/*',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
