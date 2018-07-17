@@ -145,7 +145,8 @@ linkcheck_ignore = [
     'http://library.seg.org/doi/',
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
     'https://notebooks.azure.com/import/gh/geoscixyz/em-apps',
-    'https://notebooks.azure.com/import/gh/simpeg/em-notebooks'
+    'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
+    'https://www.onepetro.org/conference-paper/SEG-2012-1478'
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
