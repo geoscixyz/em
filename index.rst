@@ -3,11 +3,16 @@
 EM GeoSci
 =========
 
+.. image:: images/casehistories.png
+    :alt: em-case-histories
+    :width: 100%
+    :align: center
+
 .. purpose::
 
-      To facilitate the understanding and use of
-      electromagnetics in solving exploration, geotechnical and environmental
-      problems.
+    To facilitate the understanding and use of
+    electromagnetics in solving exploration, geotechnical and environmental
+    problems.
 
 
 .. image:: disc_dipole.png
