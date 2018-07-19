@@ -94,7 +94,7 @@ Azure Notebooks
 
 2. Sign in to your microsoft account (or `Create One` if you do not already have an account)
 
-3. Create the new library. Select `Clone recursively` in order to import the required packages. Select Import
+3. Create the new library: Select Import
 
 4. Select :code:`index.ipynb` to view the notebook contents
 
