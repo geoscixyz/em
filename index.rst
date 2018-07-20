@@ -73,12 +73,12 @@ Examples are available through `Jupyter Notebooks`_ and can be run through Binde
 The simulations use the open-source Simulation and Parameter Estimation package
 SimPEG_.
 
-.. image:: http://mybinder.org/badge.svg
-   :target: https://mybinder.org/v2/gh/geoscixyz/em_apps/master
-   :align: center
+.. image:: https://mybinder.org/badge.svg
+    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
+    :alt: Binder
 
 .. _Jupyter Notebooks: https://github.com/geoscixyz/em_examples
-.. _Binders: https://mybinder.org/v2/gh/geoscixyz/em_apps/master
+.. _Binders: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
 .. _SimPEG: http://simpeg.xyz
 
 This resource is Open Source and while currently being led by brilliant

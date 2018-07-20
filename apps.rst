@@ -44,7 +44,6 @@ Please see instructions at: https://github.com/geoscixyz/em-apps
 
 
 
-
 .. _jupyter_notebooks:
 
 Jupyter Notebooks
@@ -71,7 +70,7 @@ Binder
 
 2. Select the notebook of interest from the contents
 
-3. :ref:`Run the jupyter notebook <jupyter_notebooks>`
+3. :ref:`Run the Jupyter notebook <jupyter_notebooks>`
 
 .. image:: images/binder-steps.png
     :alt: binder-steps
@@ -100,7 +99,7 @@ Azure Notebooks
 
 5. Select the notebook of interest from the contents
 
-6. :ref:`Run the jupyter notebook <jupyter_notebooks>`
+6. :ref:`Run the Jupyter notebook <jupyter_notebooks>`
 
 .. image:: images/azure-steps.png
     :alt: binder-steps
