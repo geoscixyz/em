@@ -7,16 +7,16 @@ To augment the content in EM GeoSci, a number of `Jupyter
 Notebook <http://jupyter.org>`_ apps have been developed.
 There are two categories of notebooks
 
-- :ref:`EM Apps <em_apps>`
+- :ref:`EM Apps <em-apps>`
     - **Purpose:** To provide an interactive way to explore fundamentals of EM geophysics
 
 - :ref:`Simulation Notebooks <simulation_notebooks>`
     - **Purpose:** To be a starting point for getting up and running with the EM Module of SimPEG for performing numerical simulations and inversions
 
-If you run into any issues, please let us know at: http://github.com/geoscixyz/em_apps.
+If you run into any issues, please let us know at: http://github.com/geoscixyz/em-apps.
 
 
-.. _em_apps:
+.. _em-apps:
 
 EM Apps
 -------
