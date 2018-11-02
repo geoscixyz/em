@@ -35,11 +35,11 @@ geophysical methods for efficient diamond exploration programs.
 The work presented is based upon the collaborative efforts of the UBC-GIF
 members. It summaries the results published in a three-part series on TKC:
 
-- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 1: Potential fields <https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/int-2016-0142_1.pdf>`_ by Devriese, Davis and Oldenburg :cite:`DevrieseTKC2017`.
+- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 1: Potential fields <https://doi.org/10.1190/INT-2016-0142.1>`_ by Devriese, Davis and Oldenburg :cite:`DevrieseTKC2017`.
 
-- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 2: Electromagnetics <https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/int-2016-0140_1.pdf>`_ by Fournier, Kang, McMillan and Oldenburg :cite:`FournierTKC2017`.
+- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 2: Electromagnetics <https://doi.org/10.1190/INT-2016-0140.1>`_ by Fournier, Kang, McMillan and Oldenburg :cite:`FournierTKC2017`.
 
-- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 3: Induced polarization <https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/int-2016-0141_1.pdf>`_ by Kang, Fournier and Oldenburg :cite:`KangTKC2017`.
+- `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 3: Induced polarization <https://doi.org/10.1190/INT-2016-0141.1>`_ by Kang, Fournier and Oldenburg :cite:`KangTKC2017`.
 
 
 

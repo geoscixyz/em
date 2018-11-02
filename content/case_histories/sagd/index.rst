@@ -3,9 +3,6 @@
 SAGD
 ====
 
-.. raw:: html
-        :file: ../../../underconstruction.html
-
 - **Authors** :ref:`sdevriese`
 
 .. topic :: Prelude
@@ -20,15 +17,10 @@ SAGD
 
 Steam-assisted gravity drainage (SAGD) is a method for extracting heavy oil from the Athabasca oil sands in Alberta, Canada. This method uses steam to heat the oil, which then becomes movile and can be extracted. The research investigated the applicability of different electromagnetic surveys to monitor steam chamber growth and focuses on geologic region in the Athabasca oil sands. EM surveys can be a useful tool, in addition to the other monitoring techniques, because steaming causes a change in the resistivity of the oil reservoir.
 
-The following paper provide additional information regarding this case history.
+**Special Thanks**
 
-Background references:
-
-- "Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers" :cite:`DevrieseOldenburg2016`
-
-- "Time-lapse three-dimensional electromagnetic inversion of growth-impeded SAGD steam chambers" :cite:`DevrieseOldenburg2015b`
-
-
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and
+adapt text from the source material from `"Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers" <https://doi.org/10.1190/geo2015-0157.1>`_ by :cite:`DevrieseOldenburg2016` and `"Time-lapse three-dimensional electromagnetic inversion of growth-impeded SAGD steam chambers" <https://doi.org/10.1190/segam2015-5909921.1>`_ by :cite:`DevrieseOldenburg2015b`
 
 
 .. toctree::
@@ -41,11 +33,3 @@ Background references:
         processing
         interpretation
         synthesis
-
-.. **References**
-
-.. .. bibliography:: ../../references.bib
-..      :style: alpha
-..      :encoding: latex+latin
-..      :filter: docname in docnames
-               

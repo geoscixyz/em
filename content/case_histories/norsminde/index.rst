@@ -11,11 +11,12 @@ Norsminde
 
 .. topic :: Prelude
 
-     This case history follows the use of the SkyTEM airborne system to model and estimate the nitrate reduction in shallow aquifers near Norsminde, Denmark. This case history was adapted from the paper `"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data" <http://www.hgg.geo.au.dk/Papers_EndNote/3041947944/SCHAMPER2014A.pdf>`__ by Schamper (:cite:`Schamper2014`).
+     This case history follows the use of the SkyTEM airborne system to model and estimate the nitrate reduction in shallow aquifers near Norsminde, Denmark. This case history was adapted from the paper `"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data" <https://doi.org/10.1190/geo2013-0256.1>`__ by :cite:`Schamper2014`.
 
-.. **Special Thanks**
+**Special Thanks**
 
-.. Thanks to SkyTEM and the Journal of Applied Geophysics for permission to reproduce figures and adapt text from the source material.
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and
+adapt text from the source material from: `Assessment of near-surface mapping capabilities by airborne transient electromagnetic data — An extensive comparison to conventional borehole data <https://doi.org/10.1190/geo2013-0256.1>`_ by :cite:`Schamper2014`.
 
 **Abstract**
 

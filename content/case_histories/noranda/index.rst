@@ -3,25 +3,22 @@
 Noranda
 =======
 
-.. raw:: html
-        :file: ../../../underconstruction.html
-
 .. figure:: ./images/TrueModel3D.png
         :align: right
         :figwidth: 50%
-     
+
 - **Authors**: :ref:`eholtham`
 - **Reviewer**: :ref:`sdevriese`
 
 .. topic :: Prelude
 
-        This case history is based on the thesis "3D inversion of natural source electromagnetic data" by :cite:`holtham2012`.
+        This case history is based on the thesis "3D inversion of natural source electromagnetic data" by :cite:`holtham2012`. The case history uses :ref:`ZTEM <ztem_index>` data to characterize large-scale geologic structures as well as identify highly conductive ore deposits in the Noranda district in Canada.
 
-The case history uses :ref:`ZTEM <ztem_index>` data to characterize large-scale geologic structures as well as identify highly conductive ore deposits in the Noranda district in Canada.
 
-Background reference:
+**Special Thanks**
 
-- "Large-scale inversion of ZTEM data" :cite:`holthamoldenburg2012`
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from `"Large-scale inversion of ZTEM data" <https://doi.org/10.1190/geo2011-0367.1>`__ by :cite:`holthamoldenburg2012`
+
 
 
 .. toctree::
@@ -34,12 +31,3 @@ Background reference:
         processing
         interpretation
         synthesis
-
-.. **References**
-
-.. .. bibliography:: ../../references.bib
-..      :style: alpha
-..      :encoding: latex+latin
-..      :filter: docname in docnames
-               
-
