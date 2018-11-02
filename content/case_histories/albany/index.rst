@@ -15,7 +15,7 @@ Albany
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`_ and `Geotech Ltd. <http://www.geotech.com>`_ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery" <https://doi.org/10.1190/segam2015-5908480.1>`_.
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`_ and `Geotech Ltd. <http://www.geotech.com>`_ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery" <https://doi.org/10.1190/segam2015-5908480.1>`_ by :cite:`Leegault2015`.
 
 **Abstract**
 
