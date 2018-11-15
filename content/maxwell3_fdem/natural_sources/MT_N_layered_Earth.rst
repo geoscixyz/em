@@ -24,10 +24,10 @@ of the resulting data. This work follows the derivation presented in
 `binder`_.
 
  .. image:: http://mybinder.org/badge.svg
-    :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FMT_LayeredEarth.ipynb
     :align: center
 
-.. _binder: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+.. _binder: https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FMT_LayeredEarth.ipynb
 
 The magnetotelluric (MT) method is a widely used geophysical technique, in
 particular for imaging geothermal systems, that is sensitive to Earth

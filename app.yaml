@@ -7,10 +7,6 @@ threadsafe: yes
 
 handlers:
 
-# cert
-# - url: /.well-known/acme-challenge
-#   static_dir: letsencrypt
-
 # favicon
 - url: /favicon\.ico
   static_files: favicon.ico
@@ -133,5 +129,7 @@ libraries:
 - name: numpy
   version: "latest"
 - name: jinja2
+  version: "latest"
+- name: ssl
   version: "latest"
 

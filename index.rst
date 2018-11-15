@@ -3,11 +3,16 @@
 EM GeoSci
 =========
 
+.. image:: images/casehistories.png
+    :alt: em-case-histories
+    :width: 100%
+    :align: center
+
 .. purpose::
 
-      To facilitate the understanding and use of
-      electromagnetics in solving exploration, geotechnical and environmental
-      problems.
+    To facilitate the understanding and use of
+    electromagnetics in solving exploration, geotechnical and environmental
+    problems.
 
 
 .. image:: disc_dipole.png
@@ -68,12 +73,12 @@ Examples are available through `Jupyter Notebooks`_ and can be run through Binde
 The simulations use the open-source Simulation and Parameter Estimation package
 SimPEG_.
 
-.. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/geoscixyz/em_apps
-   :align: center
+.. image:: https://mybinder.org/badge.svg
+    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
+    :alt: Binder
 
 .. _Jupyter Notebooks: https://github.com/geoscixyz/em_examples
-.. _Binders: http://mybinder.org/repo/geoscixyz/em_apps
+.. _Binders: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
 .. _SimPEG: http://simpeg.xyz
 
 This resource is Open Source and while currently being led by brilliant
@@ -145,7 +150,7 @@ At the large scale we have the following items.
 
 - :ref:`maxwell1_fundamentals_index`:
 
-  - This contains a summary and background about the formative laws 
+  - This contains a summary and background about the formative laws
     that are the basis for Maxwell's
     equations as well as an introduction to general topics that and not survey specific.
     (eg  the basic equations in the frequency and time domain, interface conditions, concepts of fields and fluxes,
