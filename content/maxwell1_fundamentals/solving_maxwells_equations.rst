@@ -41,7 +41,7 @@ where :math:`\mathbf{J_s}` is an electrical current source and :math:`\phi` is a
 	\nabla\times\mathbf{E} + i\omega \mathbf{B} &= 0
 	\end{align}
 
-where :math:`\mathbf{J_s}` is an electrical current source. For some problems, we may be able to work in the quasi-static (:math:`\sigma \gg \omega \varepsilon`) or wave (:math:`\sigma \ll \omega \varepsilon`) regimes; allowing us to neglect terms involving :math:`\mathbf{E}`. In many geological environments, the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`). In this case, we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
+where :math:`\mathbf{J_s}` is an electrical current source. For some problems, we may be able to work in the quasi-static (:math:`\sigma \gg \omega \varepsilon`) or wave (:math:`\sigma \ll \omega \varepsilon`) regimes; allowing us to neglect terms involving :math:`\varepsilon`. In many geological environments, the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`). In this case, we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
 
 - :ref:`Time Domain Electromagnetics:<airborne_tdem_index>`
 
@@ -51,7 +51,7 @@ where :math:`\mathbf{J_s}` is an electrical current source. For some problems, w
 	\nabla\times\mathbf{e} + \frac{\partial \mathbf{b}}{\partial t} &= 0
 	\end{align}
 
-where :math:`\mathbf{j_s}` is an electrical current source. This equation is the time-dependent equivalent to the one used in frequency domain electromagnetics. For some problems, we may be able to work in the quasi-static or wave regimes; allowing us to neglect terms involving :math:`\mathbf{e}`. If the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`), we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
+where :math:`\mathbf{j_s}` is an electrical current source. This equation is the time-dependent equivalent to the one used in frequency domain electromagnetics. For some problems, we may be able to work in the quasi-static or wave regimes; allowing us to neglect terms involving :math:`\varepsilon`. If the impact of the Earth's magnetic properties is negligible (i.e. :math:`\mu\approx \mu_0`), we can take :math:`\mu` out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.
 
 
 Boundary and Initial Conditions
