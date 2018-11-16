@@ -3,6 +3,18 @@
 Faraday's Law
 =============
 
+.. raw:: html
+
+  <iframe src="https://phet.colorado.edu/sims/html/faradays-law/latest/faradays-law_en.html" width="700" height="525" scrolling="no" allowfullscreen></iframe>
+
+We can observe several characteristics of EM induction using the applet:
+
+1) The voltmeter only registers a signal when the magnet is moving, regardless of its absolute position.
+2) The sign of the induced voltage changes depending on the direction of motion and orientation of the magnet
+3) The magnitude of the voltage depends on how quickly the magnet is moving
+4) All else being equal, the voltage induced in the four coil loop is larger than in the two coil loop.
+
+These behaviours are described by Faraday's law.
 Faraday's law is named after English scientist Michael Faraday (1791-1867),
 and describes the manner in which time-varying magnetic fields induce the
 rotational electric fields. This explains the electromagnetic induction
@@ -28,7 +40,7 @@ where:
 - :math:`\mathbf{b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`
 - :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da`
 - :math:`\ d\mathbf{l}` is a vector element of length along contour :math:`C`
- 
+
 .. where :math:`{\bf e}` is the electric field defined around a closed path :math:`C`, :math:`{\bf b}` is the magnetic flux density defined over a closed surface :math:`A` contoured by :math:`C`, :math:`\hat n` is an outward normal unit vector perpendicular to :math:`da` , and :math:`d{\bf l}` is a vector element of length along contour :math:`C`.
 
 Eq. :eq:`faradays_law_int_time` states that the time-dependent rate of change in magnetic flux, through a surface bounded by a closed path, is negatively proportional to the line integral of the electric field it induces over that path.
@@ -46,12 +58,14 @@ law:
 
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
-.. TODO: Put some links: rotational field 
+.. TODO: Put some links: rotational field
 
 Eq. :eq:`faradays_law_diff_time` states that time varying magnetic fields will
 induce rotational electric fields. Furthermore, the curl of the induced
 electric fields opposes time-dependent changes in the inducing magnetic field.
 
+
+.. _faraday_differential_frequency:
 
 Faraday's Law in the Frequency-Domain
 -------------------------------------
@@ -80,7 +94,7 @@ From Eq. :eq:`faradays_law_diff_freq` , we can infer two things:
 2. Induced rotational electric fields, and the frequency-dependent magnetic fields responsible for them, are 90 degrees out of phase.
 
 .. that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
-.. Seogi: I possibly need better wording about this. 
+.. Seogi: I possibly need better wording about this.
 .. We can see from Eq. :eq:`faradays_law_diff_freq` that sinusoidal magnetic fields characterized by higher frequencies will result in stronger electric fields.
 .. , :math:`{\bf E}` is the frequency-dependent electric field and :math:`{\bf B}` is the frequency-dependent magnetic flux density.
 
@@ -136,10 +150,10 @@ Units
 
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Magnetic flux density    |:math:`\mathbf{b}` |:math:`\frac{\text{Wb}}    | Weber per square meter                |
-|                          |                   |{\text{m}^{2}}`            |                                       | 
+|                          |                   |{\text{m}^{2}}`            |                                       |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric current density |:math:`\mathbf{j}` |:math:`\frac{\text{A}}     |                                       |
-|                          |                   |{\text{m}^{2}}`            | Ampere per square meter               | 
+|                          |                   |{\text{m}^{2}}`            | Ampere per square meter               |
 +--------------------------+-------------------+---------------------------+---------------------------------------+
 | Electric field intensity |:math:`\mathbf{e}` |:math:`\frac{\text{V}}     |                                       |
 |                          |                   |{\text{m}}`                | Volt per meter                        |
@@ -165,11 +179,11 @@ closed path. Using the aforementionned expression, the Weber (:math:`Wb`) can
 be expressed as:
 
 .. math::
-	Wb = V \cdot s = \frac{J}{A}, 
+	Wb = V \cdot s = \frac{J}{A},
 
 where :math:`J` is the Joule, and :math:`A` is Ampere.
 Joules are used to represent a unit of energy, or work.
-Thus we can interpret the magnetic flux as a unit of work per unit current. 
+Thus we can interpret the magnetic flux as a unit of work per unit current.
 
 Geophysical Applications Faraday's Law
 --------------------------------------

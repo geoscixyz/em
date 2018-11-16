@@ -17,7 +17,7 @@ Between mineralized and unmineralized, there are significant physical property c
 +---------------------------+------------------------------------------+---------------------------+
 | Saprolitic overburden     | Low                                      |  Low                      |
 +---------------------------+------------------------------------------+---------------------------+
-| Host rock                 | Low                                      |  Low                      |
+| Host rock                 | High                                     |  Low                      |
 +---------------------------+------------------------------------------+---------------------------+
 | Granodiorite/porphyry     | Moderate                                 |  Moderate                 |
 | (host rock; unmineralized)|                                          |                           |

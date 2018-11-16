@@ -1,129 +1,4 @@
 {
-    "aspen":{
-        "title":"Aspen",
-        "source":"./aspen/",
-        "thumbnail":"./aspen/images/FormationMM.png",
-        "citations":["DevrieseOldenburg2016"],
-        "contributors":[
-            {"uid":"user:sdevriese", "as":"author"}
-        ],
-        "tags":[
-            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
-            {"uid":"Hydrocarbons", "as":"application"},
-            {"uid":"Oil Sands", "as":"keyword"},
-            {"uid":"Canada", "as":"location"}
-        ]
-    }
-    ,
-    "balboa":{
-        "title": "Balboa",
-        "description":"Balboa",
-        "source":"./balboa/",
-        "thumbnail":"./balboa/images/bboa_thumbnail.png",
-        "contributors":[
-            {"uid":"user:jlegault", "as":"author"},
-            {"uid":"user:cwijns", "as":"author"},
-            {"uid":"user:cizarra", "as":"author"},
-            {"uid":"user:gplastow", "as":"author"},
-            {"uid":"user:skang", "as":"reviewer"},
-            {"uid":"user:doldenburg", "as":"reviewer"},
-            {"uid":"user:lheagy", "as":"reviewer"}
-        ],
-        "tags":[
-            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
-            {"uid":"Mining", "as":"application"},
-            {"uid":"ZTEM", "as":"keyword"},
-            {"uid":"porphyry", "as":"keyword"},
-            {"uid":"copper", "as":"keyword"},
-            {"uid":"gold", "as":"keyword"},
-            {"uid":"Panama", "as":"location"}
-        ]
-    },
-    "bookpurnong":{
-        "title":"Bookpurnong",
-        "source":"./bookpurnong/",
-        "thumbnail":"./bookpurnong/images/booky-hydro.jpg",
-        "citations":["viezzoli2009","viezzoli2010"],
-        "contributors":[
-            {"uid":"user:dyang", "as":"author"}
-        ],
-        "tags":[
-            {"uid":"Airborne FDEM", "as":"geophysical_survey"},
-            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
-            {"uid":"Groundwater", "as":"application"},
-            {"uid":"Australia", "as":"location"}
-        ]
-    },
-    "emc":{
-        "title":"Elevenmile Canyon",
-        "source":"./emc/",
-        "thumbnail":"./emc/images/geothermal.png",
-        "citations":["devrieseetal2012"],
-        "contributors":[
-            {"uid":"user:sdevriese", "as":"author"}
-        ],
-        "tags":[
-            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
-            {"uid":"Geothermal", "as":"application"},
-            {"uid":"United States of America", "as":"location"},
-            {"uid":"ZTEM", "as":"keyword"}
-        ]
-    },
-    "mt_isa":{
-        "title":"Mt. Isa",
-        "source":"./mt_isa/",
-        "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
-        "citations":["rutley2001"],
-        "contributors":[
-            {"uid":"user:fourndo", "as":"author"}
-        ],
-        "tags":[
-            {"uid":"DC", "as":"geophysical_survey"},
-            {"uid":"IP", "as":"geophysical_survey"},
-            {"uid":"Mining", "as":"application"},
-            {"uid":"Australia", "as":"location"}
-        ]
-    },
-    "furggwanghorn":{
-        "title":"Furggwanghorn",
-        "description":"3D Helicopter GPR surveying a rock glacier",
-        "source":"./furggwanghorn/",
-        "thumbnail":"./furggwanghorn/images/furggwanghorn_heligpr.png",
-        "citations":["merz2015a", "merz2015b"],
-        "contributors":[
-            {"uid":"user:agreen", "as":"author"},
-            {"uid":"user:kmerz", "as":"author"},
-            {"uid":"user:hmaurer", "as":"author"},
-            {"uid":"user:skang", "as":"reviewer"},
-            {"uid":"user:doldenburg", "as":"reviewer"}
-        ],
-        "tags":[
-            {"uid":"GPR", "as":"geophysical_survey"},
-            {"uid":"Geotechnical", "as":"application"},
-            {"uid":"Switzerland", "as":"location"}
-        ]
-    },
-    "barents_sea":{
-        "title":"Barents Sea",
-        "description":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",
-        "source":"./barents_sea/",
-        "thumbnail":"./barents_sea/images/inversion_workflow.png",
-        "contributors":[
-            {"uid":"user:palvarez", "as":"author"},
-            {"uid":"user:aalvarez", "as":"author"},
-            {"uid":"user:lmacgregor", "as":"author"},
-            {"uid":"user:fbolivar", "as":"author"},
-            {"uid":"user:rkeirstead", "as":"author"},
-            {"uid":"user:tmartin", "as":"author"},
-            {"uid":"user:dccowan", "as":"reviewer"}
-        ],
-        "tags":[
-            {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},
-            {"uid":"Reservoir characterization, marine EM", "as":"Applications"},
-            {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
-            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
-        ]
-    },
     "albany":{
         "title":"Albany",
         "description":"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery",
@@ -147,24 +22,138 @@
             {"uid":"Albany graphite deposit, Ontario, Canada", "as":"Location"}
         ]
     },
-    "norsminde":{
-        "title":"Norsminde",
-        "description":"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data",
-        "source":"./norsminde/",
-        "thumbnail":"./norsminde/images/fig_thumbnail.png",
+    "aspen":{
+        "title":"Aspen",
+        "description":"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands",
+        "source":"./aspen/",
+        "thumbnail":"./aspen/images/FormationMM.png",
+        "citations":["DevrieseOldenburg2016"],
         "contributors":[
-            {"uid":"user:eauken", "as":"author"},
-            {"uid":"user:avchristiansen", "as":"author"},
-            {"uid":"user:cschamper", "as":"author"},
-            {"uid":"user:fjorgensen", "as":"author"},
-            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:sdevriese", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbons", "as":"application"},
+            {"uid":"Oil Sands", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ]
+    },
+    "balboa":{
+        "title": "Balboa",
+        "description":"The Balboa ZTEM Cu-Mo-Au porphyry discovery at Cobre Panama",
+        "source":"./balboa/",
+        "thumbnail":"./balboa/images/bboa_thumbnail.png",
+        "contributors":[
+            {"uid":"user:jlegault", "as":"author"},
+            {"uid":"user:cwijns", "as":"author"},
+            {"uid":"user:cizarra", "as":"author"},
+            {"uid":"user:gplastow", "as":"author"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"},
+            {"uid":"user:lheagy", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
+            {"uid":"Mining", "as":"application"},
+            {"uid":"ZTEM", "as":"keyword"},
+            {"uid":"porphyry", "as":"keyword"},
+            {"uid":"copper", "as":"keyword"},
+            {"uid":"gold", "as":"keyword"},
+            {"uid":"Panama", "as":"location"}
+        ]
+    },
+    "barents_sea":{
+        "title":"Barents Sea",
+        "description":"Reservoir properties prediction using CSEM, pre-stack seismic and well log data: Case Study in the Hoop Area, Barents Sea, Norway",
+        "source":"./barents_sea/",
+        "thumbnail":"./barents_sea/images/inversion_workflow.png",
+        "contributors":[
+            {"uid":"user:palvarez", "as":"author"},
+            {"uid":"user:aalvarez", "as":"author"},
+            {"uid":"user:lmacgregor", "as":"author"},
+            {"uid":"user:fbolivar", "as":"author"},
+            {"uid":"user:rkeirstead", "as":"author"},
+            {"uid":"user:tmartin", "as":"author"},
             {"uid":"user:dccowan", "as":"reviewer"}
         ],
         "tags":[
-            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
-            {"uid":"Groundwater Mapping", "as":"Applications"},
-            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
-            {"uid":"Norsminde, Denmark", "as":"Location"}
+            {"uid":"CSEM, 2D seismic", "as":"Geophysical_Surveys"},
+            {"uid":"Reservoir characterization, marine EM", "as":"Applications"},
+            {"uid":"Hydrocarbon, CSEM, reservoir, oil and gas", "as":"Keywords"},
+            {"uid":"Hoop Fault Complex, Barents Sea, Norway", "as":"Location"}
+        ]
+    },
+    "bookpurnong":{
+        "title":"Bookpurnong",
+        "description":"Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data - an application for environmental assessment in the Lower Murray Region of South Australia",
+        "source":"./bookpurnong/",
+        "thumbnail":"./bookpurnong/images/booky-hydro.jpg",
+        "citations":["viezzoli2009","viezzoli2010"],
+        "contributors":[
+            {"uid":"user:dyang", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Airborne FDEM", "as":"geophysical_survey"},
+            {"uid":"Airborne TDEM", "as":"geophysical_survey"},
+            {"uid":"Groundwater", "as":"application"},
+            {"uid":"Australia", "as":"location"}
+        ]
+    },
+    "do27do18tkc":{
+        "title":"DO-27/DO-18 (TKC)",
+        "description":"Inversion of airborne geophysics over the DO-27/DO-18 kimberlites (TKC)",
+        "source":"./do27do18tkc/",
+        "thumbnail":"./do27do18tkc/images/TKC_7Steps.png",
+        "contributors":[
+            {"uid":"user:fourndo", "as":"author"},
+            {"uid":"user:sdevriese", "as":"author"},
+            {"uid":"user:skang", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Airborne/ground gravity", "as":"Geophysical_Surveys"},
+            {"uid":"Airborne magnetics", "as":"Geophysical_Surveys"},
+            {"uid":"Airborne FEM", "as":"Geophysical_Surveys"},
+            {"uid":"Airborne TEM", "as":"Geophysical_Surveys"},
+            {"uid":"Diamond exploration", "as":"Applications"},
+            {"uid":"Kimberlite", "as":"Keywords"},
+            {"uid":"Diamond", "as":"Keywords"},
+            {"uid":"Petrophysics", "as":"Keywords"},
+            {"uid":"Northwest Territories,Canada", "as":"Location"}
+        ]
+    },
+    "emc":{
+        "title":"Elevenmile Canyon",
+        "description":"Three-Dimensional Inversion of ZTEM Data at the Elevenmile Canyon Geothermal System, Nevada",
+        "source":"./emc/",
+        "thumbnail":"./emc/images/geothermal.png",
+        "citations":["devrieseetal2012"],
+        "contributors":[
+            {"uid":"user:sdevriese", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Airborne NSEM", "as":"geophysical_survey"},
+            {"uid":"Geothermal", "as":"application"},
+            {"uid":"United States of America", "as":"location"},
+            {"uid":"ZTEM", "as":"keyword"}
+        ]
+    },
+    "furggwanghorn":{
+        "title":"Furggwanghorn",
+        "description":"3D Helicopter GPR surveying a rock glacier",
+        "source":"./furggwanghorn/",
+        "thumbnail":"./furggwanghorn/images/furggwanghorn_heligpr.png",
+        "citations":["merz2015a", "merz2015b"],
+        "contributors":[
+            {"uid":"user:agreen", "as":"author"},
+            {"uid":"user:kmerz", "as":"author"},
+            {"uid":"user:hmaurer", "as":"author"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"GPR", "as":"geophysical_survey"},
+            {"uid":"Geotechnical", "as":"application"},
+            {"uid":"Switzerland", "as":"location"}
         ]
     },
     "kasted":{
@@ -207,40 +196,25 @@
             {"uid":"Lalor Lake, Manitoba, Canada", "as":"Location"}
         ]
     },
-    "westplains":{
-        "title":"West Plains",
-        "Description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt.",
-        "source":"./westplains/",
-        "thumbnail":"./westplains/images/thumbnail_westplains.png",
+    "mt_isa":{
+        "title":"Mt. Isa",
+        "description":"2-D and 3-D IP/resistivity for the interpretation of Isa-style targets",
+        "source":"./mt_isa/",
+        "thumbnail":"./mt_isa/images/MtIsa_Cover.png",
+        "citations":["rutley2001"],
         "contributors":[
-            {"uid":"user:doldenburg", "as":"author"},
-            {"uid":"user:dyang", "as":"author"},
-            {"uid":"user:dccowan", "as":"reviewer"}
+            {"uid":"user:fourndo", "as":"author"}
         ],
         "tags":[
-            {"uid":"VTEM, RESOLVE", "as":"Geophysical_Surveys"},
-            {"uid":"Mineral exploration", "as":"Applications"},
-            {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
-            {"uid":"Nunavut, Canada", "as":"Location"}
+            {"uid":"DC", "as":"geophysical_survey"},
+            {"uid":"IP", "as":"geophysical_survey"},
+            {"uid":"Mining", "as":"application"},
+            {"uid":"Australia", "as":"location"}
         ]
     },
-    "sagd":{
-        "title":"SAGD",
-        "source":"./sagd/",
-        "thumbnail":"./sagd/images/ChamberIrregular.png",
-        "citations":["DevrieseOldenburg2016","Devriese2016"],
-        "contributors":[
-            {"uid":"user:sdevriese", "as":"author"}
-        ],
-        "tags":[
-            {"uid":"Borehole EM", "as":"geophysical_survey"},
-            {"uid":"Hydrocarbons", "as":"application"},
-            {"uid":"Oil Sands", "as":"keyword"},
-            {"uid":"Canada", "as":"location"}
-        ]
-	},
     "noranda":{
         "title":"Noranda",
+        "description":"3D inversion of natural source electromagnetic data",
         "source":"./noranda/",
         "thumbnail":"./noranda/images/TrueModel3D.png",
         "citations":["HolthamOldenburg2012","Holtham2012"],
@@ -254,6 +228,114 @@
             {"uid":"Noranda", "as":"keyword"},
             {"uid":"Canada", "as":"location"}
         ]
-	}  
+    },
+    "norsminde":{
+        "title":"Norsminde",
+        "description":"Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - an extensive comparison to conventional borehole data",
+        "source":"./norsminde/",
+        "thumbnail":"./norsminde/images/fig_thumbnail.png",
+        "contributors":[
+            {"uid":"user:eauken", "as":"author"},
+            {"uid":"user:avchristiansen", "as":"author"},
+            {"uid":"user:cschamper", "as":"author"},
+            {"uid":"user:fjorgensen", "as":"author"},
+            {"uid":"user:fefferso", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Airborne TDEM", "as":"Geophysical_Surveys"},
+            {"uid":"Groundwater Mapping", "as":"Applications"},
+            {"uid":"Airborne TDEM, Groundwater", "as":"Keywords"},
+            {"uid":"Norsminde, Denmark", "as":"Location"}
+        ]
+    },
+    "sagd":{
+        "title":"SAGD",
+        "description":"Detecting and imaging time-lapse conductive changes using electromagnetic methods",
+        "source":"./sagd/",
+        "thumbnail":"./sagd/images/ChamberIrregular.png",
+        "citations":["DevrieseOldenburg2016","Devriese2016"],
+        "contributors":[
+            {"uid":"user:sdevriese", "as":"author"}
+        ],
+        "tags":[
+            {"uid":"Borehole EM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbons", "as":"application"},
+            {"uid":"Oil Sands", "as":"keyword"},
+            {"uid":"Canada", "as":"location"}
+        ]
+    },
+    "saurashtra":{
+        "title":"Saurashtra",
+        "description":"Exploration with Controlled Source Electromagnetics Under Basalt Cover in India",
+        "source":"./saurashtra/",
+        "thumbnail":"./saurashtra/images/thumbnail.png",
+        "citations":["strackpandey2007"],
+        "contributors":[
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"LOTEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"LOTEM, Hydrocarbon", "as":"keyword"},
+            {"uid":"Saurashtra Peninsula, India", "as":"location"}
+        ]
+    },
+    "wadi_sahba":{
+        "title":"Wadi Sahba",
+        "description":"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization",
+        "source":"./wadi_sahba/",
+        "thumbnail":"./wadi_sahba/images/thumbnail.png",
+        "citations":["colombo2016"],
+        "contributors":[
+            {"uid":"user:dcolombo", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"},
+            {"uid":"user:skang", "as":"reviewer"},
+            {"uid":"user:lheagy", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"Seismic, ATEM", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"Wadi Sahba, Multi-physics, Joint Inversion", "as":"keyword"},
+            {"uid":"Arabian Gulf, Qatar", "as":"location"}
+        ]
+    },
+    "red_sea":{
+        "title":"Red Sea",
+        "description":"Application of Magnetotelluric and Controlled-Source Electromagnetic Methods for Subsalt Structure Imaging in the Red Sea",
+        "source":"./red_sea/",
+        "thumbnail":"./wadi_sahba/images/thumbnail.png",
+        "citations":["Colombo2013","Colombo2014"],
+        "contributors":[
+            {"uid":"user:dcolombo", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"},
+            {"uid":"user:doldenburg", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"WAZ, CSEM, MT, Gravity", "as":"geophysical_survey"},
+            {"uid":"Hydrocarbon", "as":"application"},
+            {"uid":"Red Sea, Multi-physics, Data-Driven Inversion, Model-Driven Inversion", "as":"keyword"},
+            {"uid":"Northern Arabian Gulf", "as":"location"}
+        ]
+    },
+    "westplains":{
+        "title":"West Plains",
+        "description":"A review of time and frequency domain airborne electromagnetic data sets over the West Plains orogenic gold region of the Committee Bay Greenstone Belt",
+        "source":"./westplains/",
+        "thumbnail":"./westplains/images/thumbnail_westplains.png",
+        "contributors":[
+            {"uid":"user:doldenburg", "as":"author"},
+            {"uid":"user:dyang", "as":"author"},
+            {"uid":"user:dccowan", "as":"reviewer"}
+        ],
+        "tags":[
+            {"uid":"VTEM, RESOLVE", "as":"Geophysical_Surveys"},
+            {"uid":"Mineral exploration", "as":"Applications"},
+            {"uid":"Airborne EM, orogenic gold, greenstone belt", "as":"Keywords"},
+            {"uid":"Nunavut, Canada", "as":"Location"}
+        ]
+    }
 }
 

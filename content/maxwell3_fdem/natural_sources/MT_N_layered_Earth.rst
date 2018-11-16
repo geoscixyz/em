@@ -24,10 +24,10 @@ of the resulting data. This work follows the derivation presented in
 `binder`_.
 
  .. image:: http://mybinder.org/badge.svg
-    :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FMT_LayeredEarth.ipynb
     :align: center
 
-.. _binder: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/geophysical_surveys/MT_n_layered_earth_example.ipynb
+.. _binder: https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FMT_LayeredEarth.ipynb
 
 The magnetotelluric (MT) method is a widely used geophysical technique, in
 particular for imaging geothermal systems, that is sensitive to Earth
@@ -272,7 +272,7 @@ Let define at the j-th interface :math:`(E^i ; H^i)` as the incident waves,
 :math:`(E^r ; H^r)` as the refleted wave and :math:`(E^t ; H^t)` as the
 transmitted wave into the ground (:numref:`Reflection_Efield`)
 
-Using the :ref:`interface conditions<interface_conditions>` for the tangential
+Using the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` for the tangential
 components of the electric, we can write:
 
 .. math::

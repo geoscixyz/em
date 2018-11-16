@@ -3,7 +3,7 @@
 Analytic Solution
 =================
 
-.. topic:: Purpose
+.. Purpose::
 
     Here, Maxwell's equations are solved for a harmonic magnetic dipole source.
     This is accomplished by using the method of Schelkunoff potentials, as shown in Ward and Hohmann (:cite:`ward1988`).
@@ -19,14 +19,14 @@ For a magnetic source (:math:`\mathbf{J_m^s}`), Maxwell's equations in the frequ
 	\nabla \times \mathbf{E_m} + i\omega \mu \mathbf{H_m} = - \mathbf{J_m^s} 
 	:label: Faraday_m
 .. math::
-	\nabla \times \mathbf{H_m} - (\sigma + i\omega \epsilon) \mathbf{E_m} = 0
+	\nabla \times \mathbf{H_m} - (\sigma + i\omega \varepsilon) \mathbf{E_m} = 0
 	:label: Ampere_m
 
 where the subscripts :math:`_m` remind us that we are using a magnetic source.
-For a magnetic source (:math:`\mathbf{J_m^s}`), the electric and magnetic fields can be expressed in terms of the Schelkunoff vector potential, where:
+For a magnetic source (:math:`\mathbf{J_m^s}`), the electric and magnetic fields can be expressed in terms of the Schelkunoff vector potential (:math:`\mathbf{F}`), where:
 
 .. math::
-	\mathbf{H}_m = -(\sigma + i \omega \epsilon) \mathbf{F} + \frac{1}{(i \omega \mu)} \nabla (\nabla \cdot \mathbf{F})
+	\mathbf{H}_m = -(\sigma + i \omega \varepsilon) \mathbf{F} + \frac{1}{(i \omega \mu)} \nabla (\nabla \cdot \mathbf{F})
 	:label: H_F_potential
 
 
@@ -46,7 +46,7 @@ By manipulating Eqs. :eq:`Faraday_m`, :eq:`Ampere_m` and :eq:`E_F_potential` and
 
 
 .. math::
-	\nabla^2 \mathbf{F} + k^2 \mathbf{F} = - \mathbf{J}_m^s, \  \  \  \  \text{where} \  \  k^2 = \omega^2\mu\epsilon -i\omega\mu\sigma
+	\nabla^2 \mathbf{F} + k^2 \mathbf{F} = - \mathbf{J}_m^s, \  \  \  \  \text{where} \  \  k^2 = \omega^2\mu\varepsilon -i\omega\mu\sigma
 	:label: Helmholtz_F 
 
 The Helmholtz equation with boundary conditions can be solved to generate :math:`\mathbf{F}`. 
@@ -59,39 +59,40 @@ The scalar Green's function for the Helmholtz equation is:
 	G(r) = \frac{e^{-ikr}}{4\pi r}.
 	:label: GreensFncFullSpace
 
-and hence the vector potential for an arbitrary magnetic source isL
+and hence the vector potential for an arbitrary magnetic source is:
 
 .. math::
-	\mathbf{F}(\mathbf{r}) = \int_v \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J}_m(\mathbf{r}') dv
+	\mathbf{F}(\mathbf{r}) = \int_{V^\prime} \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J}_m^s (\mathbf{r}') dV^\prime
 	:label: F_Potential
 
-For a magnetic dipole oriented in the :math:`\hat{x}` direction, the source term is given by:
+where :math:`\mathbf{r}` is the observation location, :math:`\mathbf{r^\prime}` refers to locations within the source region and :math:`V^\prime` is the volume of the source region.
+For a magnetic dipole oriented in the :math:`\mathbf{\hat x}` direction, the source term is given by:
 
 
 .. math::
-	\mathbf{J}_m(\mathbf{r}) = i \omega \mu I S \delta(x) \delta(y) \delta(z) \hat{x}
+	\mathbf{J}_m^s = i \omega \mu I S \delta(x) \delta(y) \delta(z) \mathbf{\hat x}
 	:label: Jm_x
 
 
 and the solution to Eq. :eq:`F_Potential` is:
 
 .. math::
-	\mathbf{F}(\mathbf{r}) = \frac{i \omega \mu m}{4\pi r} e^{-ikr} \hat{x}
+	\mathbf{F} = \frac{i \omega \mu m}{4\pi r} e^{-ikr} \mathbf{\hat x}
 	:label: F_Potential_for_Jm_x
 
 
 Recall the :math:`\mathbf{F}` can be used to obtain the electric and magnetic field according to Eqs. :eq:`H_F_potential` and :eq:`E_F_potential`.
-Thus the electric field for an electrical current dipole in the :math:`\hat x` direction is:
+Thus the electric field for a magnetic dipole in the :math:`\hat x` direction is:
 
 .. math::
-	\mathbf{E}_m = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \hat{y} + \frac{y}{r} \hat{z} \right).
+	\mathbf{E_m} = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \mathbf{\hat y} + \frac{y}{r} \mathbf{\hat z} \right).
 	:label: Em_Cartesian
 
 
 While the magnetic field is given by:
 
 .. math::
-	\mathbf{H}_m = \frac{m}{4 \pi r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \hat{x} + \frac{xy}{r^2} \hat{y} + \frac{xz}{r^2} \hat{z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \hat{x} \right].
+	\mathbf{H_m} = \frac{m}{4 \pi r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2} \mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \mathbf{\hat x} \right].
 	:label: Hm_Cartesian
 
 On the following page, we show how Eqs. :eq:`Em_Cartesian` and :eq:`Hm_Cartesian` can be simplified for various cases.

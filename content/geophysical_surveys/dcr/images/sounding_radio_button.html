@@ -1,0 +1,76 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title></title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+</script>
+
+<div class="row">
+  <strong>DC resistivity sounding curve</strong>
+  <br>
+  <br>
+</div>
+<div class="row">
+  <div class="col" style="float:left; width:50%" align="left">
+    <div class="row">
+      <input name="direction" value="OFF" onclick="MM_swapImage('dc_soundings','','../../../_images/surv1.gif',1)" checked="checked" type="radio">
+        At small electrode spacings current flows only in near-surface regions. Apparent resistivities look similar to the true resistivity of overburden.
+    <br>
+    <br>
+    </div>
+    <div class="row">
+      <input name="direction" value="OFF" onclick="MM_swapImage('dc_soundings','','../../../_images/surv2.gif',1)" checked="checked" type="radio">
+        As current flows deeper, apparent resistivities are influenced by the true resistivities of deeper materials.
+    <br>
+    <br>
+    </div>
+    <div class="row">
+      <input name="direction" value="OFF" onclick="MM_swapImage('dc_soundings','','../../../_images/surv3.gif',1)" checked="checked" type="radio">
+        The sounding curve begins to indicate that there are at least 2 layers under this location.
+    <br>
+    <br>
+    </div>
+    <div class="row">
+      <input name="direction" value="OFF" onclick="MM_swapImage('dc_soundings','','../../../_images/surv4.gif',1)" checked="checked" type="radio">
+         At very large electrode spacings most of the information reflects deeper ground because that is where most of the current is flowing.
+    <br>
+    <br>
+    </div>
+    <div class="row">
+      <input name="direction" value="OFF" onclick="MM_swapImage('dc_soundings','','../../../_images/surv5.gif',1)" checked="checked" type="radio">
+         The completed sounding curve.
+    <br>
+    <br>
+    </div>
+
+  </div>
+  <div class="col" style="float:right; width:50%" align="center">
+    <img src="../../../_images/surv1.gif" name="dc_soundings" alt="dc_soundings" width="70%">
+  </div>
+
+<div class="row" style="clear: both"></div>
+
+  <br>
+  <br>
+  <br>
+</div>

@@ -129,7 +129,7 @@ The total current density is the sum of these three contributions and is describ
     a magnetization or a polarization in bulk materials. When a magnetic material is
     placed in an external magnetic field, a magnetization current will be induced
     due to the motion of electrons in atoms. Likewise, when an external electric
-    field is applied to a dielectric, the positive and negative bound charges within
+    field is applied to a dielectric material, the positive and negative bound charges within
     the dielectric can separate and induce a polarization current density internally.
 
 .. Then the total current density can be described as
@@ -186,6 +186,7 @@ and similar to :eq:`ampere_maxwell_integral_h&d`, we can use the constitutive re
 
 
 .. _ampere_maxwell_differential_frequency:
+
 
 Differential equations in the frequency domain
 ---------------------------------------------- 

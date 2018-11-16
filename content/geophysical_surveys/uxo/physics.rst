@@ -15,7 +15,7 @@ As explained on the previous page, EM UXO surveys operate on the principles of e
 	:figwidth: 100%
 	:name: fig_UXO_physics_schematic
 
-	Electromagnetic induction (EMI) survey for UXO discrimination.
+	Electromagnetic induction (EMI) survey for UXO location.
 
 
 Dipole Model for UXO Responses

@@ -10,7 +10,7 @@ Layered Earth
 We use a similar setup used in the previous section, but fix the Tx height to :math:`z` = 30 m. :numref:`LayeredEarth` shows a setup for the layered-earth model. The thickness of the first and second layer will be fixed to :math:`h_1` = 6 m, and :math:`h_2` = 12 m, respectively. All simulation results will be shown following can be reproducible from the Harmonic layered earth app accessible through this link:
 
 .. image:: http://mybinder.org/badge.svg
-   :target: http://mybinder.org/repo/geoscixyz/em_apps/notebooks/notebooks/maxwell3_fdem/HarmonicVMDLayerWidget.ipynb
+   :target: https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FFDEM_VMD_LayeredEarth.ipynb
    :align: center
 
 |
