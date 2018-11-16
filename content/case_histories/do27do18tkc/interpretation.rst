@@ -92,8 +92,7 @@ In :numref:`fig_Petrophysic_model_DenCondSuscCharg`, we overlay values of charge
 - Early pseudo-chargeability :math:`\eta_E` (55 :math:`s^{-1}`)
 - Late pseudo-chargeability :math:`\eta_L` (8 :math:`s^{-1}`)
 
-These two additional properties identify a strong distinction between DO-27 and DO-18.
-
+These two additional properties allows to create a strong distinction between DO-27 and DO-18. On top of that recovered Cole-Cole time constant (:math:`\tau`) around cells :math:`\eta_{E}` and :math:`\eta_{L}` anomalies (red and green regions, respectively) were correspondingly small and large as shown in :numref:`Processing_IP_Parameters` (see A1-A3 vs. A4). And these different time constants may suggest size of grains at two anomalies are different.
 
 Petrophysical Model
 -------------------

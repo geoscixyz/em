@@ -83,7 +83,7 @@ By neglecting edge effects near the ends of the coil, the magnetomotive force ex
 where :math:`N` is the number of turns the coil has, and :math:`\Delta S` is the length of the coil.
 Because ferrites are so permeable, they behave like a magnetic circuit in this case.
 The applied magnetomotive force generates a magnetic flux :math:`\Phi`, which permeates through the material.
-This can be described using `Hopkinson's law <https://en.wikipedia.org/wiki/Magnetic_circuit#Hopkinson.27s_law:_the_magnetic_analogy_to_Ohm.27s_law>`__ , which is analogous to Ohm's law:
+This can be described using `Hopkinson's law <https://en.wikipedia.org/wiki/Magnetic_circuit#Ohm's_law_for_magnetic_circuits>`__ , which is analogous to Ohm's law:
 
 .. math::
     \mathcal{F} = \Phi \Re

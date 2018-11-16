@@ -86,7 +86,7 @@ At the large scale we have the following items.
   presence of a conductive or resistive body. To keep material organized, most
   of the code in the examples, is stored on SimPEG_.
 
-.. _Examples: http://mybinder.org/repo/geoscixyz/em_apps
+.. _Examples: https://mybinder.org/v2/gh/geoscixyz/em_apps/master
 
 .. _Github: https://github.com/geoscixyz/em
 .. _SimPEG: http://simpeg.xyz
