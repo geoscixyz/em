@@ -10,7 +10,11 @@ def copyImages():
     # check if images directory exists
     if not os.path.isdir(buildimagesdir):
         # check if html directory exists
-        html_dir = os.path.sep.join(buildimagesdir.split(os.path.sep)[:-1])
+        split_path = buildimagesdir.split(os.path.sep)
+        build_dir = os.path.sep.join(split_path[:-2])
+        html_dir = os.path.sep.join(split_path[:-1])
+        if not os.path.isdir(build_dir):
+            os.mkdir(build_dir)
         if not os.path.isdir(html_dir):
             os.mkdir(html_dir)
         os.mkdir(buildimagesdir)
