@@ -20,6 +20,16 @@ DO-27/DO-18 (TKC)
 
 .. _7 Steps Framework: http://gpg.geosci.xyz/content/foundations/foundations_sevensteps.html?highlight=steps
 
+**Special Thanks**
+
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+
+    - Sarah G. R. Devriese, Kristofer Davis, and Douglas W. Oldenburg (2017). ”Inversion of airborne geophysics over the DO-27/DO-18 kimberlites — Part 1: Potential fields.” Interpretation, 5(3), T299-T311. `https://doi.org/10.1190/INT-2016-0142.1 <https://doi.org/10.1190/INT-2016-0142.1>`__
+    - Dominique Fournier, Seogi Kang, Michael S. McMillan, and Douglas W. Oldenburg (2017). ”Inversion of airborne geophysics over the DO-27/DO-18 kimberlites — Part 2: Electromagnetics.” Interpretation, 5(3), T313-T325. `https://doi.org/10.1190/INT-2016-0140.1 <https://doi.org/10.1190/INT-2016-0140.1>`__
+    - Seogi Kang, Dominique Fournier, and Douglas W. Oldenburg (2017). ”Inversion of airborne geophysics over the DO-27/DO-18 kimberlites — Part 3: Induced polarization.” Interpretation, 5(3), T327-T340. `https://doi.org/10.1190/INT-2016-0141.1 <https://doi.org/10.1190/INT-2016-0141.1>`__
+
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+
 **Abstract**
 
 The DO-27 and DO-18 kimberlites, often known as the Tli Kwi Cho (TKC) deposit,

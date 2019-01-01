@@ -15,7 +15,13 @@ Saurashtra
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and `KMS Technologies <http://www.kmstechnologies.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the Leading Edge article `"Exploration with controlled–source electromagnetics under basalt cover in India" <http://library.seg.org/doi/abs/10.1190/1.2715056>`__ by :cite:`strackpandey2007`.
+Thanks to `KMS Technologies <http://www.kmstechnologies.com>`__ and thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+
+    - K. M. Strack and P. B. Pandey (2007). ”Exploration with controlled-source electromagnetics under basalt cover in India.” The Leading Edge, 26(3), 360-363. `https://doi.org/10.1190/1.2715056 <https://doi.org/10.1190/1.2715056>`__
+
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+
+..Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and `KMS Technologies <http://www.kmstechnologies.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the Leading Edge article `"Exploration with controlled–source electromagnetics under basalt cover in India" <http://library.seg.org/doi/abs/10.1190/1.2715056>`__ by :cite:`strackpandey2007`.
 
 **Abstract**
 
