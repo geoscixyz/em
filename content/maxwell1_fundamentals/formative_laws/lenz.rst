@@ -11,13 +11,17 @@ of the currents induced in a conductor by  these time varying magnetic fields.
 A convenient way to quantify the strength of the magnetic field in a
 particular region is the magnetic flux (:math:`\Phi_{\mathbf{B}}`),
 
-.. include:: ../../equation_bank/magnetic_flux_time.rst
+.. math::
+    {\boldsymbol \Phi_b} = \int_A {\bf b} \cdot \hat {\bf{n}} \, da
+    :label: magnetic_flux_time
 
 which provides a measure of the magnetic flux density over a given area.
 
 Faraday's Law of induction,
 
-.. include:: ../../equation_bank/faraday_lenz_time.rst
+.. math::
+    \mathcal{E} = - \, \frac{\partial {\boldsymbol \Phi_b}}{\partial t}
+    :label: faraday_lenz_time
 
 shows that any variation in the magnetic flux produces an electromotive force
 (emf, :math:`\mathcal{E}`). This emf creates electrical  currents within those

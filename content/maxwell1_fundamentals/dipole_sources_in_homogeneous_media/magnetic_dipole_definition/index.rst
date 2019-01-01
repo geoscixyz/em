@@ -16,7 +16,7 @@ Defining the Magnetic Dipole
 		:align: right
 		:figwidth: 50%
 		:name: MagDipole_index
-		
+
 		Physical representation of the magnetic dipole source where :math:`\mathbf{m}` = 1 Am :math:`\!^2`.
 
 
@@ -31,7 +31,7 @@ This leads to a magnetic source term (:math:`\mathbf{J_m^s}`) of the form:
 
 .. math::
 	\mathbf{J_m^s} = - i\omega \mu \mathbf{m} \delta (x) \delta (y) \delta (z)
-	:name: Jm_def
+	:label: Jm_def
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -50,17 +50,17 @@ The resulting magnetic source term (:math:`\mathbf{J_m^s}`) is given by:
 
 .. math::
 	\mathbf{J_m^s} = - i\omega \mu \mathbf{M (r)}
-	:name: Jm_M
-	
+	:label: Jm_M
+
 
 where
 
 .. math::
 	\begin{split}
-	\mathbf{M (r)}\!=\!\mathbf{M} \Delta V & \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] ... \\ 
+	\mathbf{M (r)}\!=\!\mathbf{M} \Delta V & \!\Bigg [ \! \frac{u \big ( x \! +\!\frac{\Delta x}{2} \big ) \! - \! u \big ( x \! -\!\frac{\Delta x}{2} \big )}{\Delta x} \! \Bigg ] ... \\
 	& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \! \Bigg [ \! \frac{u \big ( y \! +\!\frac{\Delta y}{2} \big ) \! - \! u \big ( y \! -\!\frac{\Delta y}{2} \big )}{\Delta y} \! \Bigg ] \!\! \Bigg [ \! \frac{u \big ( z \! +\!\frac{\Delta z}{2} \big ) \! - \! u \big ( z \! -\!\frac{\Delta z}{2} \big )}{\Delta z} \! \Bigg ]
 	\end{split}
-	:name: M_def
+	:label: M_def
 
 
 and :math:`u(x)` is the unit step function.
@@ -90,8 +90,8 @@ Thus the source term for a magnetic dipole is given by:
 
 .. math::
 	\mathbf{J_m^s} = - i \omega \mu \mathbf{M} dV \delta (x) \delta (y) \delta (z)
-	:name: Jm_dip_bar
-	
+	:label: Jm_dip_bar
+
 
 The strength of the magnetic dipole source is defined by its dipole moment (:math:`\mathbf{m}`).
 As we can see from the previous expression, the source term depends on the product :math:`\mathbf{M} dV`.
@@ -99,7 +99,7 @@ Thus the dipole moment which defines the magnetic dipole source is given by:
 
 .. math::
 	\mathbf{m} = \mathbf{M} dV
-	:name: dip_moment_def
+	:label: dip_moment_def
 
 
 From our definition of the magnetic dipole, :math:`\mathbf{m}` has units Am :math:`\!^2`.
@@ -112,7 +112,7 @@ By taking the limit as :math:`\Delta x , \, \Delta y , \, \Delta z \rightarrow d
 
 .. math::
 	\mathbf{H_{dip}(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r (m \cdot r)} }{r^5} - \frac{\mathbf{m}}{r^3} \Bigg ]
-	:name: dip_field_bar
+	:label: dip_field_bar
 
 
 
@@ -129,7 +129,7 @@ To obtain the primary magnetic field from the loop, we can use the :ref:`Biot-Sa
 
 .. math::
 	\mathbf{H (r)} = \frac{1}{4\pi} \int_C \frac{I \, d\mathbf{l} \times \mathbf{\hat r}}{r^2}
-	:name: Biot_Savart
+	:label: Biot_Savart
 
 
 The analytic solution for the Biot-Savart law in this case is rather complicated and contains several elliptic integral functions; for solution see here (link).
@@ -137,7 +137,7 @@ If the radius of the loop is much smaller than the scale of observation (:math:`
 
 .. math::
 	\mathbf{H(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r} (\pi a^2 I \mathbf{\hat n} \cdot \mathbf{r)} }{r^5} - \frac{\mathbf{\pi a^2 I \mathbf{\hat n}}}{r^3} \Bigg ]
-	:name: dip_field_loop
+	:label: dip_field_loop
 
 
 where :math:`\mathbf{\hat n}` is the unit vector normal to the area within the loop.
@@ -160,7 +160,7 @@ Therefore, if we define the dipole moment of the loop as:
 
 .. math::
 	\mathbf{m} = I \mathbf{S}
-	:name: dip_moment_loop
+	:label: dip_moment_loop
 
 
 where :math:`\mathbf{S} = \pi a^2 I \mathbf{\hat n}`, then the primary magnetic field due to a small current loop is given by:
@@ -168,14 +168,14 @@ where :math:`\mathbf{S} = \pi a^2 I \mathbf{\hat n}`, then the primary magnetic 
 
 .. math::
 	\mathbf{H_{dip}(r)} = \frac{1}{4\pi} \Bigg [ \frac{3 \mathbf{r (m \cdot r)} }{r^5} - \frac{\mathbf{m}}{r^3} \Bigg ]
-	:name: dip_field_loop2
+	:label: dip_field_loop2
 
 The previous expression tells us that if the scale of observation is significantly larger than the radius of the loop, then the loop can be represented by a magnetic dipole source.
 It must also follow that the loop can be represented by a corresponding magnetic dipole source term (:math:`\mathbf{J_m^s}`) equal to:
 
 .. math::
 	\mathbf{J_m^s} = - i \omega \mu I \mathbf{S} \delta (x) \delta (y) \delta (z)
-	:name: Jm_def_loop
+	:label: Jm_def_loop
 
 Here, we have chosen a very simple treatment of the current loop model for a magnetic dipole source.
 A more thorough derivation of the dipole moment from Maxwell's equations can be found in Griffiths (:cite:`griffiths1999`).

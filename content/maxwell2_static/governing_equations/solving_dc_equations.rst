@@ -3,7 +3,9 @@
 Solving DC Equations
 ====================
 
-.. include:: ../../equation_bank/dcr_fwd.rst
+.. math::
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
+    :label: dcr_fwd
 
 .. _solving_dc_equations_analytic:
 

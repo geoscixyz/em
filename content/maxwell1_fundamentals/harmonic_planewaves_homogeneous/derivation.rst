@@ -18,37 +18,37 @@ To obtain a solution for EM planewaves within a homogeneous medium, let us begin
 .. math::
     \boldsymbol{\nabla}^2 \mathbf{E} + k^2 \mathbf{E}  &= 0\\
     \boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  &= 0
-    :name: Helmholtz_full_analytic
+    :label: Helmholtz_full_analytic
 
 where the complex :ref:`wavenumber<harmonic_planewaves_homogeneous_wavenumber>` is given by:
 
 .. math::
     k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}
-    :name: Helmholtz_complex_wavenumber
+    :label: Helmholtz_complex_wavenumber
 
 For simplicity, let us assume that the planewave propagates along the z-direction. According to Griffiths :cite:`griffiths1999` (pp. 378), the electric and magnetic fields supported by a planewave are transverse to the direction of propagation; thus the electric and magnetic fields lie in the xy-plane. In this case, the governing equation for the electric field simplifies to:
 
 .. math::
     \frac{\partial^2 \mathbf{E}}{\partial z^2} + k^2 \mathbf{E} = 0
-    :name: Helmholtz_1D_analytic
+    :label: Helmholtz_1D_analytic
 
 where :math:`\mathbf{E} \equiv \mathbf{E}(z,\omega)`; thus it does not depend on :math:`x` or :math:`y`. The previous equation has a general solution of the form:
 
 .. math::
     \mathbf{E} = \mathbf{E}_0^- \, e^{i(kz-\omega t)} + \mathbf{E}_0^+ \, e^{-i(kz + \omega t)}
-    :name: Helmholtz_1D_solution
+    :label: Helmholtz_1D_solution
 
 where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the vector amplitudes of down-going and up-going waves, respectively. The :math:`e^{-i\omega t}` in both terms controls the temporal phase. The complex wavenumber has both real and imaginary components. Thus it can be expressed as:
 
 .. math::
     k = \alpha - i\beta
-    :name: wavenumber_split
+    :label: wavenumber_split
 
 where :math:`\alpha \geq 0` and :math:`\beta \geq 0` depend on the frequency and physical properties of the media. Substituting Eq. :eq:`wavenumber_split` into Eq. :eq:`Helmholtz_1D_solution`, the solution to our wave equation for :math:`\mathbf{E}` becomes:
 
 .. math::
-    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z} e^{i(\alpha z -\omega t)} + \mathbf{E}_0^+ \, e^{-\beta z} e^{-i (\alpha z + \omega t)} 
-    :name: Helmholtz_1D_components
+    \mathbf{E} = \mathbf{E}_0^- \, e^{\beta z} e^{i(\alpha z -\omega t)} + \mathbf{E}_0^+ \, e^{-\beta z} e^{-i (\alpha z + \omega t)}
+    :label: Helmholtz_1D_components
 
 For both the down-going and up-going waves, there are two important behaviours within the solution. The first term, which contains :math:`e^{\pm i \alpha z}`, controls the oscillatory behaviour (i.e. :ref:`wavelength<harmonic_planewaves_homogeneous_wavelength>`) and :ref:`velocity<harmonic_planewaves_homogeneous_phasevelocity>` of each wave. The second term, which contains :math:`e^{\pm \beta z}`, controls the decay behaviour (i.e. :ref:`attenuation<harmonic_planewaves_homogeneous_skindepth>`) of each wave. Notice that as :math:`z \rightarrow -\infty` for the down-going wave, its amplitude goes to zero. The same behaviour occurs for the up-going wave as :math:`z \rightarrow \infty`.
 
@@ -57,7 +57,7 @@ Using the same approach on the Helmholtz equation for :math:`\mathbf{H}`, the ma
 .. math::
     \mathbf{H} &= \mathbf{H}_0^- \, e^{i(kz-\omega t)} + \mathbf{H}_0^+ \, e^{-i(kz+\omega t)}\\
     &= \mathbf{H}_0^- \, e^{\beta z} e^{i(\alpha z-\omega t)} + \mathbf{H}_0^+ \, e^{-\beta z} e^{-i (\alpha z+\omega t)}
-    :name: Helmholtz_1D_h
+    :label: Helmholtz_1D_h
 
 .. note::
 
@@ -80,8 +80,7 @@ The app simulates the downward propagation of an EM planewave. As we can see in 
 To solve for the electric field, we begin with the general solution from Eq. :eq:`Helmholtz_1D_components`:
 
 .. math::
-    \mathbf{E} (z,\omega) = \mathbf{E}_0^-  e^{ikz} + \mathbf{E}_0^+ e^{-ikz} 
-    :name:
+    \mathbf{E} (z,\omega) = \mathbf{E}_0^-  e^{ikz} + \mathbf{E}_0^+ e^{-ikz}
 
 where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the amplitudes of the down-going and up-going waves, respectively. Given that we are only modeling the downgoing wave and the corresponding electric field only has components in the x-direction, our solution takes the form:
 
@@ -89,21 +88,18 @@ where :math:`\mathbf{E}_0^-` and :math:`\mathbf{E}_0^+` are the amplitudes of th
 
 .. math::
     \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{ikz} \mathbf{u_x}
-    :name:
 
 where :math:`E_x` is a scalar function and :math:`E_{x,0}^{-}` is the scalar amplitude of the electric field. Using Faraday's law, we can confirm that the corresponding magnetic field only has components in the y-direction, where:
 
 .. math::
     \frac{\partial E_x}{\partial z} + i \omega \mu H_y = 0
-    :name:
 
 Solving for the y-component of the magnetic field, we obtain:
 
 .. math::
     H_y (z,\omega ) = H_{y,0}^- e^{ikz} = -\frac{k}{\omega \mu} E_{x,0}^- \, e^{ikz}
-    :name:
 
-Thus: 
+Thus:
 
 .. math::
     \mathbf{H}(z,\omega) = H_y (z,\omega) \, \mathbf{u_y} = - \frac{k}{\omega \mu} E_{x,0}^- \, e^{ikz} \, \mathbf{u_y}

@@ -16,26 +16,26 @@ frequency-domain by replacing :math:`\partial/\partial t` with :math:`i
 frequency-domain equations are therefore given by:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0
-        :name: hme8
+    :label: hme8
 
 and
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{H} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{H}  = 0
-        :name: hmh8
+    :label: hmh8
 
 Eqs. :eq:`hme8` and :eq:`hmh8` are generally expressed in the following form:
 
 .. math::
 	\boldsymbol{\nabla}^2 \mathbf{E} + k^2 \mathbf{E}  = 0
-	:name: hme9
+	:label: hme9
 
-and 
+and
 
-.. math:: 
+.. math::
 	\boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  = 0
-	:name: hmh9
+	:label: hmh9
 
-where :math:`k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}` is the known as the wave number. 
+where :math:`k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}` is the known as the wave number.
 
 Helmholtz Equation
 ------------------

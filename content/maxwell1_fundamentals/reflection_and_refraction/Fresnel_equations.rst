@@ -58,7 +58,7 @@ and
 
 .. math::
     u_2 = (k_2^2-k_1^2 \text{sin}^2 \theta_i)^{1/2}
-	
+
 
 **Derivation**
 
@@ -74,13 +74,13 @@ According to the geometry illustrated in :numref:`fresnel_setup_TE`, there are n
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{E_i} = \mathbf{k_i} \cdot \mathbf{E_i} = 0
-    :name: eq_1_TE
+    :label: eq_1_TE
 
 and
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{E_t} = \mathbf{\hat n} \cdot \mathbf{E_r} = 0
-    :name: eq_2_TE
+    :label: eq_2_TE
 
 According to the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` stated in constitutive relationships, components of the electric field parallel to surface :math:`S` are continuous across the interface. Thus:
 
@@ -202,13 +202,13 @@ According to the geometry illustrated in :numref:`fresnel_setup_TM`, there are n
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{H}_i = \mathbf{k}_i \cdot \mathbf{H}_i = 0
-    :name: eq_1_TM
+    :label: eq_1_TM
 
 and
 
 .. math::
     \hat{\mathbf{n}} \cdot \mathbf{H}_t = \hat{\mathbf{n}} \cdot \mathbf{H}_r = 0
-    :name: eq_2_TM
+    :label: eq_2_TM
 
 According to the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` stated in constitutive relationships, components of the magnetic field parallel to surface :math:`S` are continuous across the interface. Thus:
 

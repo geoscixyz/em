@@ -65,4 +65,6 @@ where :math:`\phi` is the electric potential. This allows us to write
 Taking the divergence of both sides of :eq:`ampere_maxwell_differential_phi`
 gives the governing equation for DC resistivity
 
-.. include:: ../../equation_bank/dcr_fwd.rst
+.. math::
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
+    :label: dcr_fwd

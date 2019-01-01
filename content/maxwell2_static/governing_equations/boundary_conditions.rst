@@ -11,7 +11,9 @@ DCR
 In :ref:`steady_state_equations`, we introduced the governing equations for
 the DCR problem
 
-.. include:: ../../equation_bank/dcr_fwd.rst
+.. math::
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
+    :label: dcr_fwd
 
 In order to construct a boundary value problem to determine the potential for
 a given source and conductivity model, :eq:`dcr_fwd` must be supplemented by
@@ -42,13 +44,13 @@ where :math:`\partial_s \Omega` indicates the surface of the earth and
 in the earth, this becomes
 
 .. math::
-  \sigma \mathbf{e}\cdot\hat{\mathbf{n}} = 0. 
+  \sigma \mathbf{e}\cdot\hat{\mathbf{n}} = 0.
 
 Since :math:`\sigma` must be strictly positive in the earth, we divide by it
 to give
 
 .. math::
-  \mathbf{e}\cdot\hat{\mathbf{n}} = 0 
+  \mathbf{e}\cdot\hat{\mathbf{n}} = 0
 
 at the surface. Finally, writing the electric field as the negative gradient
 of the electric potential gives the surface boundary condition
