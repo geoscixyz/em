@@ -51,7 +51,7 @@ resource estimate was also revised down over the years as presented in the
 :ref:`table below<TKCResEstTable>`, partially contributing to the Canadian junior
 stock market crash of 1994 :cite:`Coopersmith2006`. At the time of writing, the deposit is owned by `Peregrine Diamonds Ltd`_.
 
-.. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/
+.. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/chidliak-project
 
 .. _TKCResEstTable:
 
