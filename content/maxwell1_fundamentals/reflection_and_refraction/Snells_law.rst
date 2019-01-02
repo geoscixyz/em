@@ -31,31 +31,31 @@ The reflection and refraction angles (:math:`\theta_r` and :math:`\theta_t`) can
 
 .. math::
 	\mathbf{E_i} = \mathbf{E_{i,0}} \, e^{-i \mathbf{k_i \cdot r}}, \;\;\; \mathbf{E_r} = \mathbf{E_{r,0}} \, e^{-i \mathbf{k_r \cdot r}}, \;\;\; \textrm{and} \;\;\; \mathbf{E_t} = \mathbf{E_{t,0}} \, e^{-i \mathbf{k_t \cdot r}}
-	:name:
+	:label:
 
 where :math:`\mathbf{k}` is the wave vector (Poynting vector) for each wave and:
 
 .. math::
 	\mathbf{E \times H} = \mathbf{k}
-	:name:
+	:label:
 
 Within formative laws, we discussed the :ref:`interface conditions<maxwell1_fundamentals_interface_conditions_index>` required for electric and magnetic fields. They state that components of the electric field parallel to surface :math:`S` must be equal across the interface. As a result:
 
 .. math::
 	\mathbf{\hat n} \times \big ( \mathbf{E_i} + \mathbf{E_r} \big ) = \mathbf{\hat n} \times \mathbf{E_t}
-	:name:
+	:label:
 
 Using the previous three expressions, we find that:
 
 .. math::
 	\theta_i = \theta_r
-	:name: eq_reflected
+	:label: eq_reflected
 
 and
 
 .. math::
 	k_i \, \textrm{sin}\theta_i = k_t \, \textrm{sin}\theta_t
-	:name: eq_Snells_law
+	:label: eq_Snells_law
 
 According to Eq. :eq:`eq_reflected`, the reflected angle and the incident angle relative to :math:`\mathbf{\hat n}` are the same. Eq. :eq:`eq_Snells_law` is known as **Snell's Law**. Snell's law defines the refraction angle corresponding to the transmitted wave. Thus depending on the physical properties of each medium, the transmitted wave can be refracted either towards the vertical or towards the horizontal.
 
@@ -68,7 +68,7 @@ The most common definition of Snell's law is given by:
 
 .. math::
 	k_1 \, \textrm{sin}\theta_1 = k_2 \, \textrm{sin}\theta_2
-	:name: eq_Snells_law_2
+	:label: eq_Snells_law_2
 
 where :math:`k_1` is the wavenumber for the incident wave with angle :math:`\theta_1` and :math:`k_1` is the wavenumber of the refracted wave with angle :math:`\theta_2`. Here, we discuss a few properties of Snell's law.
 
@@ -78,7 +78,7 @@ In the quasi-static regime (:math:`\sigma \gg \omega \varepsilon`), the wavenumb
 
 .. math::
 	k \approx \sqrt{-i \omega \mu \sigma}
-	:name:
+	:label:
 
 In this case, Snell's law reduces to:
 
@@ -92,19 +92,19 @@ In the wave regime (:math:`\sigma \ll \omega \varepsilon`), the wavenumber becom
 
 .. math::
 	k \approx w \sqrt{\mu \varepsilon}
-	:name:
+	:label:
 
 where the velocity of the wave is given by:
 
 .. math::
 	V = \frac{1}{\sqrt{\mu \varepsilon}}
-	:name:
+	:label:
 
 Using the two previous expressions, Snell's law in the wave regime becomes:
 
 .. math::
 	\frac{V_1}{V_2} = \frac{sin \theta_1}{sin \theta_2}
-	:name: eq_Snells_law_3
+	:label: eq_Snells_law_3
 
 In this case, the angle of incidence and refraction are directly related to the propagation velocity of EM waves within each media. This relationship is especially important when considering :ref:`ground penetrating radar<gpr_index>`.
 

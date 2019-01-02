@@ -15,10 +15,10 @@ General Solution for a Planewave
 
 To obtain a solution for EM planewaves within a homogeneous medium, let us begin with the following vector wave equations for :math:`\mathbf{e}` and :math:`\mathbf{h}`:
 
-.. math:: 
+.. math::
     \boldsymbol{\nabla}^2 \mathbf{e} - \mu\epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} &= 0\\
     \boldsymbol{\nabla}^2 \mathbf{h} - \mu\epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} &= 0
-    :name: Wave_full_analytic
+    :label: Wave_full_analytic
 
 For simplicity, let us assume that the planewave propagates along the z-direction. According to Griffiths :cite:`griffiths1999` (pp. 378), the electric and magnetic fields supported by a planewave are transverse to the direction of propagation; thus the electric and magnetic fields lie in the xy-plane. In this case, the governing equation for the electric field simplifies to:
 
@@ -29,13 +29,13 @@ where :math:`\mathbf{e} \equiv \mathbf{e}(z,t)`; thus it does not depend on x or
 
 .. math::
   \mathbf{e}(t=0)=\mathbf{E}_0\delta(t)
-  :name: e_impulse
+  :label: e_impulse
 
 where :math:`\delta(t)` is a Dirac-Delta function at :math:`t=0`. Instead of solving the time-depend PDE directly, we will apply the inverse Laplace transform to analytic solutions derived in the :ref:`frequency-domain<harmonic_planewaves_homogeneous_derivation>`:
 
 .. math::
     \mathbf{E} =  \mathbf{E}_0^- e^{ikz} + \mathbf{E}_0^+ e^{-ikz}
-    :name: e_frequency_analytic
+    :label: e_frequency_analytic
 
 where :math:`E_0^-` and :math:`E_0^+` are the vector amplitudes of down-going and up-going waves, respectively. Note that the harmonic term :math:`e^{-i\omega t}` term is being supressed. The time domain solution for an impulse excitation can be expressed as:
 
@@ -49,7 +49,7 @@ where :math:`\mathcal{F}[\cdot]` is the Fourier transform. Modified from :cite:`
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg ) \\
     &+ \mathbf{E}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
-    :name: e_wave_analytic_sol
+    :label: e_wave_analytic_sol
 
 where
 
@@ -70,7 +70,7 @@ In the case that the EM wave were caused by an impulse corresponding to initial 
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t+\frac{z}{c} \bigg ) \Bigg )\\
     &+ \mathbf{H}_0^+ \Bigg ( e^{-a(z/c)} \delta \bigg ( t-\frac{z}{c} \bigg ) +\frac{aze^{-at}}{c \big ( t^2-\frac{z^2}{c^2} \big)^{1/2}}
     I_1 \Bigg [ a \bigg ( t^2-\frac{z^2}{c^2} \bigg )^{1/2} \Bigg ] u \bigg ( t-\frac{z}{c} \bigg ) \Bigg )
-    :name: h_wave_analytic_sol
+    :label: h_wave_analytic_sol
 
 Note that Eq. :eq:`e_wave_analytic_sol` and Eq. :eq:`h_wave_analytic_sol` have the exact same form.
 
@@ -96,13 +96,13 @@ For the app, we only consider the quasi-static approximation of Eq. :eq:`e_wave_
 
 .. math::
     \mathbf{E} (z,\omega) = E_x (z,\omega) \, \mathbf{u_x} = E_{x,0}^{-} e^{i\sqrt{-i\omega\mu\sigma}z} \mathbf{u_x}
-    :name:
+    :label:
 
 where :math:`E_x` is a scalar function and :math:`E_{x,0}^{-}` is the scalar amplitude of the electric field. If we replace :math:`s=i\omega`, the inverse Laplace transform of :math:`E_x (z,w)` becomes:
 
 .. math::
     \mathcal{L}^{-1}[E_x (z,\omega)] = \mathcal{L}^{-1} \Bigg [ E_{x,0}^- \, e^{- \sqrt{\mu\sigma s} z} \Bigg ]
-    :name:
+    :label:
 
 If we use the following identity (Abramowitz and Stegun, 1964):
 
@@ -114,7 +114,7 @@ the quasi-static solution for the electric field at :math:`t>0` is given by:
 
 .. math::
 	\mathbf{e}(t) = e_x(t) \mathbf{u_x} = E_{x,0}^- \frac{\big (\mu\sigma)^{1/2} z}{2\pi^{1/2} t^{3/2}} \, e^{-\mu\sigma z^2/4t} \, \mathbf{u_x}
-	:name:
+	:label:
 
 Similarly, the solution for the magnetic field can be obtained by taking inverse Laplace transform of the :ref:`corresponding harmonic solution<harmonic_planewaves_homogeneous_derivation_app_soln>` such that :math:`k = \sqrt{-i\omega\mu\sigma}`.
 

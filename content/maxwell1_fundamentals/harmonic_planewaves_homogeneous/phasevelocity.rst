@@ -51,7 +51,7 @@ Wave Regime Approximation
 In the wave regime ( :math:`\epsilon \omega \gg \sigma` ), the phase velocity simplifies to:
 
 .. math:: v_{ph} = \frac{1}{\sqrt{\mu \epsilon}}
-        :name: wn3
+    :label: wn3
 
 Thus at sufficiently high frequencies, waves at all frequencies propagate as the same speed. In free space, the previous equations simplifies to :math:`1/ \! \sqrt{\mu_0\epsilon_0} = 3\times 10^8` m/s, which is the speed of light.
 

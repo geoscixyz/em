@@ -8,7 +8,7 @@ Harmonic Electrical Current Dipole
 
     In the frequency domain, we consider harmonic electric and magnetic fields.
     Here, we provide a physical description of the harmonic electrical current dipole.
-    This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations. 
+    This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations.
 
 
 
@@ -32,7 +32,7 @@ For a harmonic current dipole defined by length :math:`ds` and harmonic current 
 
 .. math::
 	\mathbf{p}(\omega) = \mathbf{p} \, e^{i\omega t} = \mathbf{I} ds \, e^{i\omega t}
-	:name: p_harmonic_def
+	:label: p_harmonic_def
 
 
 where :math:`\mathbf{p} = \mathbf{I}ds` is the vector amplitude of the dipole moment.
@@ -42,7 +42,7 @@ As a result, the source term for the harmonic electrical current dipole is given
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
-	:name: Je_harmonic_def
+	:label: Je_harmonic_def
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -54,7 +54,7 @@ By including the source term, Maxwell's equations in the frequency domain are gi
 	&\nabla \times \mathbf{E_e} + i \omega \mu \mathbf{H_e} = 0  \\
 	\nabla \times \mathbf{H_e} - & (\sigma  + i\omega \varepsilon ) \mathbf{E_e} = \mathbf{I}ds \, \delta(x) \delta(y) \delta(z)
 	\end{split}
-	:name: p_Maxwells_harmonic
+	:label: p_Maxwells_harmonic
 
 
 
