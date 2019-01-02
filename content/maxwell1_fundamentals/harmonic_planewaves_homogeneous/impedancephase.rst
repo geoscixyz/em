@@ -17,7 +17,6 @@ Wave impedance defines the ratio between transverse components of the electric a
 
 .. math::
 	Z_{xy} = -\frac{E_x}{H_y} = \frac{\omega \mu}{k}
-  :name:
 
 where :math:`\mu` is the :ref:`magnetic permeability<magnetic_permeability_index>` and :math:`k` is the :ref:`complex wavenumber<harmonic_planewaves_homogeneous_wavenumber>`. From the previous equation, we see that the wave impedance depends on the frequency and physical properties of the medium. Thus in a homogeneous isotropic medium, a single wave impedance can be used to characterize EM waves propagating in any direction. However if the physical properties are :ref:`anisotropic<physical_properties_index>` (direction dependent), waves propagating in different directions are characterized by separate impedances.
 

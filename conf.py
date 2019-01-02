@@ -120,7 +120,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints',
+    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints', 'lib/*.rst',
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
@@ -148,6 +148,7 @@ linkcheck_ignore = [
     'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
     'https://doi.org/*',
+    'http://canada.debeersgroup.com/* ',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
@@ -541,12 +542,18 @@ sys.path.append(os.getcwd())
 
 from _ext import (
     make_contributorslist, make_formula_sheet, make_case_histories,
-    checkDependencies, supress_nonlocal_image_warn, copyImages
-    )
+    checkDependencies,
+    # supress_nonlocal_image_warn,
+    copyImages,
+    # supress_citation_not_referenced,
+    # supress_nonlocal_image_and_citation_not_referenced
+)
 
 make_contributorslist()
-make_formula_sheet()
+# make_formula_sheet()
 make_case_histories()
 # checkDependencies()
-supress_nonlocal_image_warn()
+# supress_nonlocal_image_warn()
+# supress_citation_not_referenced()
+# supress_nonlocal_image_and_citation_not_referenced()
 copyImages()

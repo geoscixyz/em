@@ -1,6 +1,6 @@
 language: python
 python:
-- 2.7
+- 3.6
 sudo: false
 
 env:
@@ -19,14 +19,14 @@ before_install:
 
 install:
   - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then
-      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx docutils==0.12;
+      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx;
     else
-      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx docutils==0.12;
+      conda install --yes pip python=$TRAVIS_PYTHON_VERSION numpy scipy matplotlib cython ipython nose sphinx;
     fi
   - pip install -r requirements.txt
 
 script:
-  - nosetests $TEST_DIR
+  - pytest $TEST_DIR -v -s
 
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then

@@ -23,7 +23,7 @@ charge
 
 .. math::
     \int_A \mathbf{j} \cdot da =  - \frac{d}{dt} \int_V \rho dv = - \frac{dQ}{dt}.
-    :label: charge_conservation_integral
+    :label: charge_conservation_integral_interface
 
 In steady state, :math:`dQ/dt = 0`. Taking the surface of integration as our
 standard Gaussian pillbox (see boundary conditions page), the integral can be

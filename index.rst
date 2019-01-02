@@ -125,7 +125,6 @@ How is it organized?
    content/geophysical_surveys/index
    content/inversion/index
    content/case_histories/index
-   content/equation_bank
    content/references
 
 
