@@ -120,7 +120,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints', 'lib/*.rst'
+    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints', 'lib/*.rst',
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
