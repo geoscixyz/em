@@ -15,7 +15,7 @@ information had to be inferred from surveys acquired during the same time
 period.
 
 
-.. _Peregrine Diamonds Ltd: https://www.pdiam.com/projects/peregrine-exploration
+.. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/
 
 
 .. _tkc_data_grav:
