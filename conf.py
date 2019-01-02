@@ -120,7 +120,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints',
+    '_build', 'AUTHORS.rst', 'README.md', '.ipynb_checkpoints', 'lib/*.rst'
     'content/equation_bank/*',
     'content/maxwell1_fundamentals/maxwell_variables.rst',
     'error.rst',
@@ -148,6 +148,7 @@ linkcheck_ignore = [
     'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
     'https://doi.org/*',
+    'http://canada.debeersgroup.com/operations/projects/chidliak-project ',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
