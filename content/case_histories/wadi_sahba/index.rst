@@ -15,13 +15,13 @@ Wadi Sabha
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+Thanks to Daniele Colombo of Saudi Aramco and thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
 
     - Daniele Colombo, Gary McNeice, Diego Rovetta, Ernesto Sandoval-Curiel, Ersan Turkoglu and Armando Sena (2016). ”High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization.” The Leading Edge, 35(11), 977–985. `https://doi.org/10.1190/tle35110977.1 <https://doi.org/10.1190/tle35110977.1>`__
 
 The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
 
-..Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__ by :cite:`colombo2016`.
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the paper `"High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization" <http://library.seg.org/doi/abs/10.1190/tle35110977.1>`__ by :cite:`colombo2016`.
 
 **Abstract**
 
@@ -44,5 +44,7 @@ We discuss the use of helicopter-borne transient electromagnetic (HTEM) for a hi
     processing_interpretation
     synthesis
 
+**Citations**
 
+:cite:`colombo2016` : High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization
 

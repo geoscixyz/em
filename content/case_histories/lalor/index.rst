@@ -20,7 +20,7 @@ Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for perm
 
 The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
 
-..Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from `"3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit" <https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf>`__ (:cite:`yangoldenburg2016`) and `"Mine scale description of the mineralization at the Lalor deposit, Snow Lake, Manitoba, Canada" <https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja>`__ (:cite:`Taylor2014`).
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from `"3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit" <https://gif.eos.ubc.ca/sites/default/files/Yang16.pdf>`__ (:cite:`yangoldenburg2016`) and `"Mine scale description of the mineralization at the Lalor deposit, Snow Lake, Manitoba, Canada" <https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjy65rOo8fRAhVJ1WMKHYO7CJAQFggkMAE&url=http%3A%2F%2Fwww.dmec.ca%2FDMEC%2Fmedia%2FDocuments%2FLalor%2520Symposium%2FLalor_Symposium_Oct-2014_Handout.pdf&usg=AFQjCNHYYoQbCDs7vftzMyfuY28XUkTItQ&sig2=KDwe8n7CRvmEvAOAcKh5Zg&cad=rja>`__ (:cite:`Taylor2014`).
 
 **Abstract**
 
@@ -54,6 +54,8 @@ In order to characterize the Lalor lake deposit, a helicopter sub-audio magnetic
     synthesis
     lessons
 
+**Citations**
 
+:cite:`yangoldenburg2017` : 3D inversion of total magnetic intensity data for time-domain EM at the Lalor massive sulphide deposit
 
 

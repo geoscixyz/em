@@ -6,11 +6,8 @@ Noranda
 .. raw:: html
         :file: ../../../underconstruction.html
 
-.. figure:: ./images/TrueModel3D.png
-        :align: right
-        :figwidth: 50%
-     
-- **Authors**: :ref:`eholtham`
+
+- **Authors**: :ref:`eholtham` and :ref:`doldenburg`
 - **Reviewer**: :ref:`sdevriese`
 
 .. topic :: Prelude
@@ -29,22 +26,29 @@ The material presented here has been modified from the SEG-published version and
 
 **Abstract**
 
+.. figure:: ./images/TrueModel3D.png
+        :align: center
+        :figwidth: 50%
+
+
+Abstract required.
+
 .. toctree::
-        :maxdepth: 1
+    :maxdepth: 1
 
-        setup
-        properties
-        survey
-        data
-        processing
-        interpretation
-        synthesis
+    setup
+    properties
+    survey
+    data
+    processing
+    interpretation
+    synthesis
 
-.. **References**
 
-.. .. bibliography:: ../../references.bib
-..      :style: alpha
-..      :encoding: latex+latin
-..      :filter: docname in docnames
+**Citations**
+
+:cite:`holthamoldenburg2012` : Large-scale inversion of ZTEM data
+
+
                
 

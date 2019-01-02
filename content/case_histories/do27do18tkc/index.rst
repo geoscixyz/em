@@ -52,7 +52,6 @@ members. It summaries the results published in a three-part series on TKC:
 - `Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 3: Induced polarization <https://gif.eos.ubc.ca/sites/default/files/sdevriese/files/int-2016-0141_1.pdf>`_ by Kang, Fournier and Oldenburg :cite:`KangTKC2017`.
 
 
-
 .. toctree::
     :maxdepth: 1
 
@@ -66,4 +65,11 @@ members. It summaries the results published in a three-part series on TKC:
     lessons
 
 
+**Citations**
+
+:cite:`DevrieseTKC2017` : Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 1: Potential fields
+
+:cite:`FournierTKC2017` : Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 2: Electromagnetics
+
+:cite:`KangTKC2017` : Inversion of airborne geophysics over the DO-27/DO-18 kimberlites - Part 3: Induced polarization
 

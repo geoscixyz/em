@@ -21,12 +21,14 @@ Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for perm
 The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
 
 
-..Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and SkyTEM for permission to reproduce figures and adapt text from the source material. This case history is based upon two articles:
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and SkyTEM for permission to reproduce figures and adapt text from the source material. This case history is based upon two articles:
 
-..- `Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia <http://library.seg.org/doi/abs/10.1071/EG08027>`_ by Viezzoli, Auken and Munday :cite:`viezzoli2009` and
-..- `Accurate  quasi  3D  versus  practical  full  3D  inversion  of  AEM  data – the  Bookpurnong  case  study <http://www.hgg.geo.au.dk/Papers_EndNote/0477620876/VIEZZOLI2010C.pdf>`_ by Viezzoli, Munday, Auken and Christiansen :cite:`viezzoli2010`.
+.. - `Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia <http://library.seg.org/doi/abs/10.1071/EG08027>`_ by Viezzoli, Auken and Munday :cite:`viezzoli2009` and
+.. - `Accurate  quasi  3D  versus  practical  full  3D  inversion  of  AEM  data – the  Bookpurnong  case  study <http://www.hgg.geo.au.dk/Papers_EndNote/0477620876/VIEZZOLI2010C.pdf>`_ by Viezzoli, Munday, Auken and Christiansen :cite:`viezzoli2010`.
 
 **Abstract**
+
+
 
 Airborne EM is an important type of survey in geophysical that can be
 found useful in solving different geological questions, especially the
@@ -45,6 +47,14 @@ The following topics are covered:
 
 (3) Interpretation of airborne EM data using a 1D layered model.
 
+.. figure:: images/booky-hydro.jpg
+    :align: center
+    :width: 500
+    :name: booky-hydroindex
+
+    Hydrological model at Bookpurnong :cite:`viezzoli2009`.
+
+
 .. toctree::
     :maxdepth: 1
 
@@ -57,14 +67,11 @@ The following topics are covered:
     synthesis
     lessons
 
+**Citations**
+
+:cite:`viezzoli2009` : Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia.
 
 
-.. figure:: images/booky-hydro.jpg
-    :align: left
-    :width: 500
-    :name: booky-hydroindex
-
-    Hydrological model at Bookpurnong :cite:`viezzoli2009`.
 
 
 

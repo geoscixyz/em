@@ -20,7 +20,7 @@ Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for perm
 
 The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
 
-..Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. The material found here has been adapted primarily from the paper `"3D parametric hybrid inversion of time-domain airborne electromagnetic data" <https://gif.eos.ubc.ca/sites/default/files/McMillan_parametric.pdf>`__ (:cite:`McMillan2014`). 
 
 **Abstract**
 
@@ -45,7 +45,8 @@ West Plains is an active orogenic gold exploration project, located in the South
     processing
     interpretation_synthesis
 
+**Citations**
 
-
+:cite:`McMillan2015` : 3D parametric hybrid inversion of time-domain airborne electromagnetic data
 
 
