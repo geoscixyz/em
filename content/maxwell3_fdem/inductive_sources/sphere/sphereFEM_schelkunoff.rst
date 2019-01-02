@@ -26,20 +26,20 @@ Let us begin the derivation by considering Maxwell's equations in the frequency 
 	\nabla \times {\bf H} &= \big ( \sigma + i \omega \varepsilon \big ) {\bf E}
 	\end{align}
 	:label: Maxwell_Schelk
-	
+
 where :math:`\omega` is the angular frequency, :math:`\sigma` is the conductivity, :math:`\mu` is the magnetic permeability, and :math:`\varepsilon` is the electric permittivity.
 According to Ward and Hohmann (1988), the electric field :math:`{\bf E}` and magnetic field intensity :math:`{\bf H}` may be written in terms of the following Schelkunoff potential :math:`{\bf F}`, where:
 
 .. math::
 	{\bf E} = - \nabla \times {\bf F}
 	:label: SchelkunoffE
-	
+
 and
 
 .. math::
 	{\bf H} = - \big (\sigma + i \omega \varepsilon \big ) {\bf F} + \frac{1}{i \omega \mu} \nabla \big ( \nabla  \cdot {\bf F} \big )
 	:label: SchelkunoffH
-	
+
 By subsituting Eqs. :eq:`SchelkunoffE` and :eq:`SchelkunoffH` into Maxwell's equations, we can obtain a wave equation in terms of the :math:`{\bf F}` potential:
 
 .. math::
@@ -63,7 +63,7 @@ The Schulkunoff potential may be obtained by considering seperate solutions insi
 	{\bf F} (\omega) = \begin{cases}
 	F_b e^{i \omega t} {\bf \hat z} \; \; \textrm{  at  } \; \; r>R \\
 	\\
-	F_s e^{i \omega t} {\bf \hat z} \; \; \textrm{  at  } \; \; r<R 
+	F_s e^{i \omega t} {\bf \hat z} \; \; \textrm{  at  } \; \; r<R
 	\end{cases}
 	:label: SolnsInsideOutside
 
@@ -99,13 +99,13 @@ Through meticulous algebra, coefficient :math:`a_0` can be expressed as:
 .. math::
 	a_0 \! =\! \frac{R^3}{2 e^{-\alpha_b}} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha_s) - \alpha_s  \big ] + \mu_b \big [\alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] }{\mu_s \big ( \alpha_b^2 +\alpha_b + 1 \big ) \big [ tanh(\alpha_s) - \alpha_s \big ] - \mu_b \big ( \alpha_b + 1 \big ) \big [ \alpha_s^2 \, tanh(\alpha_s) - \alpha_s + tanh(\alpha_s) \big ] } \! \Bigg ]
 	:label: a0
-	
+
 where
 
 .. math::
 	\alpha_b = \gamma_b R = \Big [ i \omega \mu_b \sigma_b - \omega^2 \mu_b \varepsilon_b \Big ]^{1/2} R
 	:label: alpha_b
-	
+
 and
 
 .. math::
@@ -121,7 +121,7 @@ If the sphere lies within a resistive background (:math:`\sigma_b \ll \sigma_s`,
 .. math::
 	a_0 \! =\! \frac{R^3}{2} \!\Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu_s \big [ tanh(\alpha) - \alpha \big ] - \mu_0 \big [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
 	:label: a0reduced
-	
+
 where
 
 .. math::
@@ -132,7 +132,7 @@ Wait (:cite:`Wait1951`) simplified the solution outside the sphere by considerin
 For a dipole moment :math:`{\bf m} (i\omega)`, the dipole field :math:`{\bf H} (i\omega)` is given by (Griffiths, 1999):
 
 .. math::
-	{\bf H} (i \omega) =\frac{1}{4\pi} \Bigg [ \frac{3 {\bf r} \; \big [ {\bf m} (i\omega) \cdot {\bf r} \; \big ]}{r^5} - \frac{{\bf m} (i\omega) }{r^3} \Bigg ] 
+	{\bf H} (i \omega) =\frac{1}{4\pi} \Bigg [ \frac{3 {\bf r} \; \big [ {\bf m} (i\omega) \cdot {\bf r} \; \big ]}{r^5} - \frac{{\bf m} (i\omega) }{r^3} \Bigg ]
 	:label: DipoleField
 
 where :math:`{\bf r}` defines the spatial vector from :math:`P` to :math:`Q`.
@@ -147,6 +147,6 @@ According the Eq. :eq:`DipoleMoment`, :math:`{\bf m} (i\omega)` may also be expr
 
 .. math::
 	\chi (i \omega) = \frac{3}{2} \Bigg [ \! \frac{2\mu_s \big [ tanh(\alpha) - \alpha  \big ] + \mu_0 \big [\alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] }{\mu_s  \big [ tanh(\alpha) - \alpha \big ] - \mu_0 [ \alpha^2 \, tanh(\alpha) - \alpha + tanh(\alpha) \big ] } \! \Bigg ]
-	:label: ChiApprox
+	:label: ChiApproxShelkunoff
 
 

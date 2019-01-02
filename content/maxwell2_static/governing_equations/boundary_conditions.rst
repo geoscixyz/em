@@ -13,10 +13,10 @@ the DCR problem
 
 .. math::
     \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
-    :label: dcr_fwd
+    :label: dcr_fwd_bc
 
 In order to construct a boundary value problem to determine the potential for
-a given source and conductivity model, :eq:`dcr_fwd` must be supplemented by
+a given source and conductivity model, :eq:`dcr_fwd_bc` must be supplemented by
 appropriate boundary conditions. While different boundary conditions are
 possible, we will only discuss the common case of applying a homogeneous
 Neumann condition at the earth's surface and homogeneous Dirichlet conditions
@@ -26,7 +26,7 @@ To derive the Dirichlet condition at the sides and bottom of the domain, it is
 first important to note that electrical potential is only unique up to an
 arbitrary constant, which is determined by convention. DC surveys measure
 potential differences so this is not important for field measurements but it
-is important in solving :eq:`dcr_fwd`. We use the standard convention that the
+is important in solving :eq:`dcr_fwd_bc`. We use the standard convention that the
 potential is zero infinitely far from all charges and currents. In solving for
 the discrete approximation to the potential, we make the boundaries at the
 sides and bottom of the domain far enough from any sources that the potential

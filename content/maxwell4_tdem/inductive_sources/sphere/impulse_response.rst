@@ -23,13 +23,13 @@ According to our :ref:`general formulation<SphereTEM_general_formulation>`, the 
 .. math::
 	m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \int_{-\infty}^\infty \chi (\tau) h_0 (t-\tau )d\tau
 	:label: eqDipoleMomentConvStepOff
-	
+
 where :math:`R` is the sphere's radius, :math:`\chi (t)` represents the sphere's impulse response and :math:`h_0 (t)` represents the inducing field.
 By definition, :math:`\chi (t)` is the inverse Fourier transform of the sphere's frequency-dependent :ref:`excitation factor<sphereFEM_excitation_factor>` (:cite:`Wait1951`):
 
 .. math::
 	\chi (t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \chi (i \omega) e^{i\omega t} d\omega
-        :label: eqInverseFourierGenDef
+        :label: eqInverseFourierGenDefImpulse
 
 
 The general shape of the impulse response for a conductive and magnetically permeable sphere is shown in :numref:`ImpulseResponse`.
@@ -60,7 +60,7 @@ where :math:`\delta (t)` is the Dirac delta function, :math:`u(t)` is the unit-s
 
 .. math::
 	\beta = (\mu_0 \sigma )^{1/2} R
-	:label: eqBetaGenDef
+	:label: eqBetaGenDefImpulse
 
 
 
@@ -77,8 +77,8 @@ where:
 
 .. math::
 	\beta = (\mu_0 \sigma )^{1/2} R
-	
-	
+
+
 Coefficients :math:`\xi_n` within the sum are defined by:
 
 .. math::
@@ -88,8 +88,8 @@ From Wait and Spies (:cite:`WaitSpies1969`), coefficients :math:`\xi_n` are spac
 
 .. math::
 	n\pi \leq \xi_n \leq (n+1/2) \pi
-	
-	
+
+
 The value of each coefficient may be found iteratively using very few iterations (< 10) according to:
 
 .. math::
@@ -98,8 +98,8 @@ The value of each coefficient may be found iteratively using very few iterations
 
 
 
-	
-	
+
+
 
 
 

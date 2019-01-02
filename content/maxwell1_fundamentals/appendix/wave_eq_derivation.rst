@@ -8,31 +8,30 @@ Here, we derive the wave equations in time for the electric and magnetic fields.
 .. math::
     \boldsymbol{\nabla} \times \mathbf{e}
     = -\frac{\partial \mathbf{b}}{\partial t}
-    :label: faraday_time
+    :label: faraday_time_derivation
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h}
     = \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t}
-    :label: ampere_maxwell_time
+    :label: ampere_maxwell_time_derive
 
 as well as the three constitutive relations:
 
 .. math::
-    \boldsymbol{\nabla} \times \mathbf{h}
-    = \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t}
-    :label: ampere_maxwell_time
+    \mathbf{j} = \sigma \mathbf{e}
+    :label: jsigmae
 
 .. math:: \mathbf{d} = \epsilon \mathbf{e}
-    :label: depse
+    :label: depse_derivation
 
 .. math:: \mathbf{b} = \mu \mathbf{h}
-    :label: bmuh
+    :label: bmuh_derivation
 
 Derivation for the Electric Field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To derive the wave equation for :math:`\mathbf{e}`, we first take
-the curl of Faraday's Law, shown in equation :eq:`faraday_time`:
+the curl of Faraday's Law, shown in equation :eq:`faraday_time_derivation`:
 
 .. math:: \boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{e}) = - \boldsymbol{\nabla} \times \frac{\partial \mathbf{b}}{\partial t}
     :label: hme1
@@ -60,10 +59,10 @@ time derivatives. Equation :eq:`hme3` can then also be written as:
 
 This expression is now solely in terms of :math:`\boldsymbol{\nabla} \times
 \mathbf{e}` and :math:`\boldsymbol{\nabla} \times \mathbf{h}`. Thus, we can
-use Equation :eq:`ampere_maxwell_time` to generate an equation with only
-:math:`\mathbf{e}`. We substitute in Equation :eq:`ampere_maxwell_time` into
+use Equation :eq:`ampere_maxwell_time_derive` to generate an equation with only
+:math:`\mathbf{e}`. We substitute in Equation :eq:`ampere_maxwell_time_derive` into
 Equation :eq:`hme4` and simplify using the constitutive relations in Equations
-:eq:`ohms_law_time` and :eq:`depse`:
+:eq:`ohms_law_time` and :eq:`depse_derivation`:
 
 .. math::  \boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} \right )
 
@@ -92,7 +91,7 @@ Derivation for the Magnetic Field
 
 To derive the wave equation for :math:`\mathbf{h}`, we repeat the above
 derivation but start by taking the curl of Ampere's Law, shown in
-equation :eq:`ampere_maxwell_time`:
+equation :eq:`ampere_maxwell_time_derive`:
 
 .. math:: \boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{h}) = \boldsymbol{\nabla} \times \mathbf{j} + \boldsymbol{\nabla} \times \frac{\partial \mathbf{d}}{\partial t}
     :label: hmh1
@@ -119,7 +118,7 @@ written as:
 
 These expressions are now in terms of :math:`\boldsymbol{\nabla} \times
 \mathbf{e}` and :math:`\boldsymbol{\nabla} \times \mathbf{h}`. Thus, we can
-use Equation :eq:`faraday_time` to generate an equation with only
+use Equation :eq:`faraday_time_derivation` to generate an equation with only
 :math:`\mathbf{h}`. We then again use the vector identity
 :math:`\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{x} =
 \boldsymbol{\nabla} \boldsymbol{\nabla} \cdot \mathbf{x} -

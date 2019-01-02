@@ -23,7 +23,7 @@ equation (equation (5) on :ref:`ampere_maxwell`)
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_{total} + \frac{\partial \mathbf{d}}{\partial t},
-    :label: ampere_maxwell_differential_hjd
+    :label: ampere_maxwell_differential_hjd_dcr
 
 where :math:`\mathbf{h}` is the magnetic field, :math:`\mathbf{j}_{total}` is
 the total current in the system, and :math:`\mathbf{d}` is the electric
@@ -38,7 +38,7 @@ in the ground (:math:`\sigma\mathbf{e}` due to Ohm's law) and the current in
 the source wires (:math:`\mathbf{j}_{source}`). Since we are in the steady
 state case, :math:`\frac{\partial \mathbf{d}}{\partial t}=0`. Using that
 assumption and substituting :eq:`jsep` into
-:eq:`ampere_maxwell_differential_hjd` we obtain
+:eq:`ampere_maxwell_differential_hjd_dcr` we obtain
 
 .. math::
     \boldsymbol{\nabla} \times \mathbf{h} - \sigma\mathbf{e} = \mathbf{j}_{source}.
