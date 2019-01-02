@@ -47,7 +47,6 @@ extensions = [
     'purpose',
     'question',
     'geosciapp',
-    'sphinx.ext.imgconverter',
     # 'sphinx_nbexamples'
     # 'sphinx_gallery.gen_gallery',
 ]
