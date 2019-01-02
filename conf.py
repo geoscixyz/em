@@ -148,7 +148,7 @@ linkcheck_ignore = [
     'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
     'https://doi.org/*',
-    'http://canada.debeersgroup.com/operations/projects/chidliak-project ',
+    'http://canada.debeersgroup.com/* ',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
