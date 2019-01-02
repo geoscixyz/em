@@ -7,15 +7,15 @@
 Data
 ====
 
-This section reviews the data that was graciously provided by `Peregrine
-Diamonds Ltd`_. We review the units and normalizations, as well as observations that can
+This section reviews the data that was graciously provided by Peregrine
+Diamonds Ltd. We review the units and normalizations, as well as observations that can
 be made by simple visual inspection of the data. It is important to note that
 *survey reports* were missing for a few data sets. As a result, some of the technical
 information had to be inferred from surveys acquired during the same time
 period.
 
 
-.. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/chidliak-project
+.. .. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/chidliak-project
 
 
 .. _tkc_data_grav:

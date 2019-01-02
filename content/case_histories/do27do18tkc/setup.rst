@@ -49,9 +49,9 @@ over five geologic models, indicative of the uncommon geometry of the deposit
 understood to be disconnected bodies created in multiple volcanic phases. The
 resource estimate was also revised down over the years as presented in the
 :ref:`table below<TKCResEstTable>`, partially contributing to the Canadian junior
-stock market crash of 1994 :cite:`Coopersmith2006`. At the time of writing, the deposit is owned by `Peregrine Diamonds Ltd`_.
+stock market crash of 1994 :cite:`Coopersmith2006`. At the time of writing, the deposit is owned by Peregrine Diamonds Ltd.
 
-.. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/chidliak-project
+.. .. _Peregrine Diamonds Ltd: http://canada.debeersgroup.com/operations/projects/chidliak-project
 
 .. _TKCResEstTable:
 
