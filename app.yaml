@@ -120,6 +120,7 @@ skip_files:
   - \.*\.lint$
   - ^(.*/)?.*\.doctree$
   - ^(.*/)?doctrees/.*
+  - miniconda.sh
 
 libraries:
 - name: webapp2
