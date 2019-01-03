@@ -29,7 +29,7 @@ script:
   - pytest $TEST_DIR -v
 
 after_success:
-  - if ! [ "$TRAVIS_BRANCH" = "$MASTER_BRANCH" -o "$TRAVIS_TAG" = "true" ]; then
+  - if ! [ "$TRAVIS_BRANCH" = "master" -o "$TRAVIS_TAG" = "true" ]; then
       echo "Not deploying (because this is not a deployment branch)" ;
       exit 0 ;
     fi
