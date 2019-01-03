@@ -40,6 +40,8 @@ after_success:
   - echo "Deploying"
 
   # deploy sequence
+  - conda create -n py27 python=2.7 anaconda
+  - conda activate py27
   - mkdir lib
   - pip install -t lib/ flask
   - ls lib
