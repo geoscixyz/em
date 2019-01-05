@@ -88,7 +88,7 @@ data were Kirchhoff time migrated (:numref:`Heli_dataprocA` c) and converted
 to depth using a simple ground velocity model. Unlike the surface-based GPR
 examples, the H-GPR images are consistent from line to line and from year to
 year (:numref:`Heli_dataprocB` and :numref:`Heli_dataprocC`).
-:cite:`merz2015b` argue that the superiority of the H-GPR images relative to
+:cite:`merz2016` argue that the superiority of the H-GPR images relative to
 the ground-based ones is not related to the different GPR instruments that
 were employed. Instead, they suggest that the H-GPR images are affected by
 much weaker near surface diffractions and that there is only insignificant
