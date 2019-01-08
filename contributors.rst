@@ -463,8 +463,8 @@ Sarah G. R. Devriese
 
 .. _fefferso:
 
-Flemming EffersÃ¸
------------------
+Flemming Effers⌀
+----------------
 
 .. raw:: html
 
@@ -651,8 +651,8 @@ Elliot Holtham
 
 .. _ashoyer:
 
-A. S. HÃ¸yer
-------------
+A. S. H⌀yer
+-----------
 
 .. raw:: html
 
@@ -707,8 +707,8 @@ Carlos Izarra
 
 .. _fjorgensen:
 
-Flemming JÃ¸rgensen
--------------------
+Flemming J⌀rgensen
+------------------
 
 .. raw:: html
 
@@ -1095,8 +1095,8 @@ Michael Mitchell
 
 .. _imoller:
 
-Ingelise MÃ¸ller
-----------------
+Ingelise M⌀ller
+---------------
 
 .. raw:: html
 
