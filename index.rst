@@ -63,8 +63,8 @@ Maxwell’s equations. Our emphasis is on using analytic and numerical solutions
 to understand electromagnetic fields and fluxes obtained from various types of
 transmitters in different geological environments and to show how different EM
 surveys, using controlled or natural sources, can be applied in practise.
-`Case Histories <https://em.geosci.xyz/content/case_histories/index.html#case-
-histories-index>`_ play an essential role. They allow readers to make the
+`Case Histories <https://em.geosci.xyz/content/case_histories/index.html#case-histories-index>`_
+play an essential role. They allow readers to make the
 connection between the geoscience problem, the EM survey, and the eventual
 outcome. Understanding the fundamental physics is facilitated through the use
 of `Jupyter Notebooks <https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb>`_
@@ -78,14 +78,16 @@ Estimation in Geophysics).
     :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
     :alt: Binder
 
-.. _Jupyter Notebooks: https://github.com/geoscixyz/em_examples
-.. _Binders: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
-.. _SimPEG: http://simpeg.xyz
-
 
 
 EM GeoSci and the SEG
 ---------------------
+
+.. image:: https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/SEG_2016_logo.svg/1200px-SEG_2016_logo.svg.png
+  :align: right
+  :alt: SEG logo
+  :width: 35%
+  :target: https://seg.org/
 
 EM GeoSci served as the main "textbook" resource for the `SEG 2017
 Distinguished Instructor Short Course
@@ -93,7 +95,7 @@ Distinguished Instructor Short Course
 on “Geophysical Electromagnetics: Fundamentals and Applications”. We are
 grateful that the SEG supported us in our open-source experiment and allowed
 us to substitute EM GeoSci for the traditional hardcopy book that accompanies
-the DISC.  The `Case Histories<https://em.geosci.xyz/content/case_histories/index.html#case-histories-index>`_,
+the DISC.  The `Case Histories <https://em.geosci.xyz/content/case_histories/index.html#case-histories-index>`_,
 which form an important component of EM GeoSci, are presented within
 a synoptic Seven-Step framework that is linked to original, published and
 copyrighted papers. We are grateful that the SEG has allowed us to adapt
