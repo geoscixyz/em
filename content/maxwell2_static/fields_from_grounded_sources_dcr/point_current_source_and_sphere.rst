@@ -120,7 +120,7 @@ current flow normal to the sphere’s surface, are continuous at
 
 .. math::
    \phi = \phi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \phi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \phi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a
-   :label: BoundaryConditions
+   :label: BoundaryConditions_pt_src
 
 For a source which is outside the sphere (:math:`a < x_0`), the desired
 solution for the potential is:
@@ -143,7 +143,7 @@ functions, coefficients :math:`A_n` and :math:`B_n` may be determined
 independently for each :math:`n`. Using locations :math:`r<x_0`, Eq. :eq:`PsiWholespace1`
 can be substituted into Eq. :eq:`PsiSolAn`. This
 can be use to solve Eq. :eq:`PoissonEq2d`, using boundary conditions
-from :eq:`BoundaryConditions` for each harmonic mode :math:`n`. The
+from :eq:`BoundaryConditions_pt_src` for each harmonic mode :math:`n`. The
 resulting coefficients are given by:
 
 .. math:: A_n = \frac{I \rho}{4\pi} \Bigg ( \frac{a^{2n+1}}{x_0^{n+1}} \Bigg ) \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg )

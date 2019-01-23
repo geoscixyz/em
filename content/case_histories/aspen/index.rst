@@ -3,11 +3,10 @@
 Aspen
 =====
 
-.. raw:: html
-    :file: ../../../underconstruction.html
+**From exploration to reclamation: Using EM methods at SAGD sites in the Athabasca oil sands**
 
-
-- **Authors**: :ref:`sdevriese`
+- **Authors:** :ref:`sdevriese` and :ref:`doldenburg`
+- **Editors:** :ref:`sdevriese`
 
 .. topic :: Prelude
 
@@ -15,7 +14,13 @@ Aspen
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case study is based on the extended abstract `"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands" <http://library.seg.org/doi/abs/10.1190/segam2016-13842507.1>`__ :cite:`DevrieseOldenburg2016a`.
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+
+    - Sarah Devriese and Douglas Oldenburg (2016) From exploration to reclamation: Using EM methods at SAGD sites in the Athabasca oil sands. SEG Technical Program Expanded Abstracts 2016: pp. 965-970. `https://doi.org/10.1190/segam2016-13842507.1 <https://doi.org/10.1190/segam2016-13842507.1>`__ 
+
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case study is based on the extended abstract `"From exploration to reclamation: using EM methods at SAGD sites in the Athabasca oil sands" <http://library.seg.org/doi/abs/10.1190/segam2016-13842507.1>`__ :cite:`DevrieseOldenburg2016a`.
 
 **Abstract**
 
@@ -34,7 +39,7 @@ planned for the future. The readers can anticipate to learn the following:
 3. Limitations of different EM surveys
 
 .. figure:: ./images/FormationMM.png
-    :align: right
+    :align: center
     :figwidth: 70%
 
 .. toctree::
@@ -48,9 +53,8 @@ planned for the future. The readers can anticipate to learn the following:
     interpretation
     synthesis
 
-.. **References**
 
-..  .. bibliography:: ../../references.bib
-..     :style: alpha
-..     :encoding: latex+latin
-..     :filter: docname in docnames
+**Citations**
+
+:cite:`DevrieseOldenburg2016a` : From exploration to reclamation: Using EM methods at SAGD sites in the Athabasca oil sands
+

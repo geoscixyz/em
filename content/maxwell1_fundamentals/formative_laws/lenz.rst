@@ -11,13 +11,17 @@ of the currents induced in a conductor by  these time varying magnetic fields.
 A convenient way to quantify the strength of the magnetic field in a
 particular region is the magnetic flux (:math:`\Phi_{\mathbf{B}}`),
 
-.. include:: ../../equation_bank/magnetic_flux_time.rst
+.. math::
+    {\boldsymbol \Phi_b} = \int_A {\bf b} \cdot \hat {\bf{n}} \, da
+    :label: magnetic_flux_time_lenz
 
 which provides a measure of the magnetic flux density over a given area.
 
 Faraday's Law of induction,
 
-.. include:: ../../equation_bank/faraday_lenz_time.rst
+.. math::
+    \mathcal{E} = - \, \frac{\partial {\boldsymbol \Phi_b}}{\partial t}
+    :label: faraday_lenz_time2
 
 shows that any variation in the magnetic flux produces an electromotive force
 (emf, :math:`\mathcal{E}`). This emf creates electrical  currents within those
@@ -31,7 +35,7 @@ its secondary or induced magnetic fields act to oppose the  observed change in
 magnetic flux. Simply put, "nature abhors a change in flux" so the induced
 current flows in such a manner to cancel  out the change :cite:`griffiths1999`. This is
 the reason for the negative sign in Faraday's Law, equation
-:eq:`faraday_lenz_time`. :numref:`Lenzs_Law_Diagram` and the demonstration
+:eq:`faraday_lenz_time2`. :numref:`Lenzs_Law_Diagram` and the demonstration
 linked below provide visual illustrations of Lenz's Law.
 
  .. figure:: images/LenzsLawDiagram.png

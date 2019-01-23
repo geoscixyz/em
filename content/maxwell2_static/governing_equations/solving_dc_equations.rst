@@ -3,7 +3,9 @@
 Solving DC Equations
 ====================
 
-.. include:: ../../equation_bank/dcr_fwd.rst
+.. math::
+    \boldsymbol{\nabla} \cdot \sigma\boldsymbol{\nabla}\phi = \boldsymbol{\nabla}\cdot\mathbf{j}_{source}.
+    :label: dcr_fwd_solving
 
 .. _solving_dc_equations_analytic:
 
@@ -15,7 +17,7 @@ Analytic
 Numeric
 -------
 
-For an arbitrary conductivity model, equation :eq:`dcr_fwd` cannot be solved
+For an arbitrary conductivity model, equation :eq:`dcr_fwd_solving` cannot be solved
 exactly. In order to simulate a geophysical survey over an earth with a
 complicated conductivity distribution we need to solve an approximate discrete
 form of this equation.

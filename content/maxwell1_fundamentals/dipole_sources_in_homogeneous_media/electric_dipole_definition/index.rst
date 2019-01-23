@@ -7,7 +7,7 @@ Defining the Electrical Current Dipole
 .. Purpose::
 
     Here, we provide a physical description of the electrical current dipole.
-    This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations. 
+    This is used to develop a mathematical expression which can be used to replace the electrical source term in Maxwell's equations.
 
 
 **General Definition**
@@ -28,7 +28,7 @@ This leads to an electrical source term of the form:
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{p} \delta (x) \delta (y) \delta (z)
-	:name: eq_Je_def
+	:label: eq_Je_def
 
 
 where :math:`\delta (x)` is the Dirac delta function.
@@ -47,7 +47,7 @@ The source current density :math:`\mathbf{J_e^s}` for the wire segment is given 
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{\hat x} I \Delta s \Bigg [ \frac{\textrm{u}\big (x + \frac{\Delta s}{2} \big ) - \textrm{u} \big ( x - \frac{\Delta s}{2} \big )}{\Delta s} \Bigg ] \delta (y) \delta (z)
-	:name: eq_Je_wire
+	:label: eq_Je_wire
 
 
 
@@ -57,7 +57,7 @@ In Maxwell's equations, :math:`\mathbf{J_e (r)}` defines the electrical source t
 As we can see in :numref:`FiniteWire`, the source generates a primary current density (:math:`\mathbf{J}`) in the surrounding region.
 Notice how the current flows out one end of the wire and into the other (:numref:`FiniteWire` left).
 However, when the wire segment is much smaller than the scale of observation (:math:`\Delta s \ll r`), then it appears as though the current density converges to a single point; see :numref:`FiniteWire` (right).
-The purpose of the electrical current dipole is to approximate a finite wire segment when observation scales are much larger than the wire's length. 
+The purpose of the electrical current dipole is to approximate a finite wire segment when observation scales are much larger than the wire's length.
 The electrical current dipole accomplishes this by defining a source term which exists at a single point in space.
 
 
@@ -86,7 +86,7 @@ As a result, the source current density for a harmonic electrical current dipole
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{\hat x} I ds \delta (x) \delta (y) \delta (z)
-	:name: eq_Je_xdip
+	:label: eq_Je_xdip
 
 
 Examining :numref:`CurrentDipole`, we see that the current density in the surrounding region converges to a single point; just like in :numref:`FiniteWire` (right).
@@ -98,7 +98,7 @@ Thus, the source current density for an electrical current dipole is given by:
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{I}ds \, \delta (x) \delta (y) \delta (z)
-	:name: eq_Je_xdipI
+	:label: eq_Je_xdipI
 
 
 
@@ -109,15 +109,15 @@ Thus the dipole moment for an electrical current dipole source is given by:
 
 .. math::
 	\mathbf{p} = \mathbf{I}ds
-	:name: eq_Je_p_def
-	
+	:label: eq_Je_p_def
+
 
 where
 
 
 .. math::
 	\mathbf{J_e^s} = \mathbf{p} \, \delta (x) \delta (y) \delta (z)
-	:name: eq_Je_rdip
+	:label: eq_Je_rdip
 
 
 From our definition of the electrical current dipole, :math:`\mathbf{p}` has units Am, each of the Dirac delta functions carry units m :math:`\!^{-1}`, and thus :math:`\mathbf{J_e^s}` has units A/m :math:`\!^2`.

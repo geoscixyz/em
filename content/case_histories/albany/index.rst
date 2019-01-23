@@ -5,8 +5,8 @@ Albany
 
 **Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery**
 
-- **Authors**: :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas` and :ref:`shickey`.
-- **Editor**: :ref:`dccowan`
+- **Authors:** :ref:`jlegault`, :ref:`jlymburner`, :ref:`kralph`, :ref:`pwood`, :ref:`morta`, :ref:`aprikhodko`, :ref:`nbournas` and :ref:`shickey`.
+- **Editors:** :ref:`dccowan`
 
 
 .. topic :: Prelude
@@ -15,7 +15,13 @@ Albany
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and `Geotech Ltd. <http://www.geotech.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery" <http://www.cronegeophysics.com/wp/wp-content/uploads/2015/04/Albany-Graphite-Air-Ground-TEM_Expanded_abstract_final-13-Feb-2015.pdf>`__.
+Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+
+    - Jean M. Legault, Josh Lymburner, Kevin Ralph, Peter Wood, Marta Orta, Alexander Prikhodko, and Nasreddine Bournas (2015) The Albany graphite discovery - a airborne and ground time-domain EM. SEG Technical Program Expanded Abstracts 2015: pp. 2056-2060. `https://doi.org/10.1190/segam2015-5908480.1 <https://doi.org/10.1190/segam2015-5908480.1>`__ 
+
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+
+.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and `Geotech Ltd. <http://www.geotech.com>`__ for permission to reproduce figures and adapt text from the source material. This case history was adapted from the expanded abstract `"Airborne and Ground Time-Domain EM results from the Albany Graphite Discovery" <http://www.cronegeophysics.com/wp/wp-content/uploads/2015/04/Albany-Graphite-Air-Ground-TEM_Expanded_abstract_final-13-Feb-2015.pdf>`__.
 
 **Abstract**
 
@@ -29,10 +35,6 @@ On January 19 :math:`\!^{\textrm{th}}`, 2012, Zenyatta Ventures Ltd. (Zenyatta) 
 
 This case study describes the airborne time-domain EM (TDEM) and magnetic geophysical survey results from 2010 that lead to the discovery and the subsequent ground follow up in 2013 using surface TDEM that better characterized the two graphite deposits (East Pipe and West Pipe) at Albany.
 
-
-
-
-
 .. toctree::
     :maxdepth: 1
 
@@ -44,4 +46,6 @@ This case study describes the airborne time-domain EM (TDEM) and magnetic geophy
     lessons
 
 
+**Citations**
 
+:cite:`legault2015` : The Albany graphite discovery - a airborne and ground time-domain EM

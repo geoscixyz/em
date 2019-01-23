@@ -7,7 +7,7 @@ Analytic Derivation
 
 	Here, analytic expressions for the impulse response and step-off excitation for a conductive and magnetically permeable sphere are derived.
 	These derivations follow the ones found in Wait (:cite:`Wait1951`) and Wait and Spies (:cite:`WaitSpies1969`).
- 
+
 
 Introduction
 ------------
@@ -16,15 +16,15 @@ According to Wait and Spies (:cite:`WaitSpies1969`), the induced dipole moment :
 
 .. math::
 	m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \int_{-\infty}^\infty \chi (\tau) h_0 (t-\tau )d\tau
-	:label: eqDipoleMomentConvStepOff
-	
+	:label: eqDipoleMomentConvStepOffDerivation
+
 where :math:`R` is the sphere's radius, :math:`\chi (t)` represents the sphere's impulse response and :math:`h_0 (t)` represents the inducing field.
 By definition, :math:`\chi (t)` is the inverse Fourier transform of the sphere's frequency-dependent :ref:`excitation factor<sphereFEM_excitation_factor>` (:cite:`Wait1951`):
 
 .. math::
 	\chi (t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \chi (i \omega) e^{i\omega t} d\omega
         :label: eqInverseFourierGenDef
-        
+
 However, if a change of variables is used (:math:`s = i\omega`), then Eq. :eq:`eqInverseFourierGenDef` can be more generally expressed as an inverse Laplace transform:
 
 .. math::
@@ -34,7 +34,7 @@ However, if a change of variables is used (:math:`s = i\omega`), then Eq. :eq:`e
 where :math:`\chi (s)` is the sphere's excitation factor parameterized in terms of a variable :math:`s`.
 A small positive constant :math:`c` is chosen so that the contour path of integration lies within the convergence region of :math:`\chi (s)`.
 Here, our derivations begin with frequency-domain expressions for the sphere's excitation factor according to Wait (:cite:`Wait1951`).
-Next, solutions using the inverse Laplace transform are derived according to Wait and Spies (:cite:`WaitSpies1969`). 
+Next, solutions using the inverse Laplace transform are derived according to Wait and Spies (:cite:`WaitSpies1969`).
 
 
 Purely Conductive Sphere
@@ -45,21 +45,21 @@ In this case, the frequency-dependent excitation factor :math:`\chi (i\omega)` f
 
 .. math::
 	\chi (i\omega) = - \; \frac{3}{2} \Bigg [ 1 + \frac{3}{\alpha^2} - \frac{3 \, \textrm{coth} (\alpha)}{\alpha} \Bigg ]
-	:label: ChiConductive
+	:label: ChiConductiveDerivation
 
 where:
 
 .. math::
 	\alpha = \Big [ i \omega \mu_0 \sigma \Big ]^{1/2} R \; ,
-	:label: alpha
+	:label: alpha_derivation
 
 :math:`R` is the radius of the sphere, :math:`\sigma` is the conductivity of the sphere and :math:`\mu_0 = 4 \times 10^{-7}` H/m is the permeability of free-space.
 
 Impulse Response
 ++++++++++++++++
 
-To obtain the excitation factor's impulse response, Wait and Spies (:cite:`WaitSpies1969`) employed a change of variables on Eq. :eq:`ChiConductive`.
-By replacing :math:`s=i\omega`, letting :math:`\beta=(\mu_0 \sigma)^{1/2} R` and re-expressing the hyperbolic cotanjent as an infinite series, Eq. :eq:`ChiConductive` becomes:
+To obtain the excitation factor's impulse response, Wait and Spies (:cite:`WaitSpies1969`) employed a change of variables on Eq. :eq:`ChiConductiveDerivation`.
+By replacing :math:`s=i\omega`, letting :math:`\beta=(\mu_0 \sigma)^{1/2} R` and re-expressing the hyperbolic cotanjent as an infinite series, Eq. :eq:`ChiConductiveDerivation` becomes:
 
 .. math::
 	\begin{align}
@@ -96,14 +96,14 @@ The inducing field can be expressed as:
 	h_0 (t) = H_0 u(t)
 	:label: StepOn
 
-Using Eqs. :eq:`ImpulseConductive` and :eq:`StepOn` to solve Eq. :eq:`eqDipoleMomentConvStepOff`:
+Using Eqs. :eq:`ImpulseConductive` and :eq:`StepOn` to solve Eq. :eq:`eqDipoleMomentConvStepOffDerivation`:
 
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi (\tau) H_0 u(t-\tau) d\tau \Bigg ] = \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi (\tau) d\tau \Bigg ] H_0
 	:label: ConvolutionStep
 
 The convolution in Eq. :eq:`ConvolutionStep` only requires integration of the impulse response from 0 to :math:`t`.
-By substituting Eq. :eq:`ChiConductive` into Eq :eq:`ConvolutionStep`, we can obtain the final expression presented in Wait and Spies (:cite:`WaitSpies1969`):
+By substituting Eq. :eq:`ChiConductiveDerivation` into Eq :eq:`ConvolutionStep`, we can obtain the final expression presented in Wait and Spies (:cite:`WaitSpies1969`):
 
 .. math::
 	\int_0^t \chi (t) d\tau = - \; \frac{9}{2} \Bigg [ \frac{1}{3} + \frac{t}{\beta^2} - \frac{2}{\beta} \sqrt{\dfrac{t}{\pi}} \Bigg ( 1 + 2 \sum_{n=1}^\infty e^{-(n\beta)^2/t} \Bigg ) + 4 \sum_{n=1}^\infty n \; \textrm{erfc}\Bigg ( \frac{n\beta}{\sqrt{t}} \Bigg ) \Bigg ] u(t)
@@ -114,14 +114,14 @@ where :math:`\textrm{erfc}(z)` is the complimentary error function given by:
 .. math::
 	\textrm{erfc}(z) = \frac{2}{\sqrt{\pi}} \int_z^\infty e^{-t^2} dt
 	:label: erfc
-	
+
 Although a rigorous proof will not be provided here, Eq. :eq:`IntImpulse0t` goes to 0 as :math:`t` goes to infinity.
 Thus:
 
 .. math::
 	\lim_{t\rightarrow\infty} \; \int_0^t \chi (\tau) d\tau = 0
 	:label: IntImpulseLimit
-	
+
 This is expected given that inductive responses decay to zero after sufficient time.
 The response to step-off excitation may be obtained by replacing the waveform in Eq. :eq:`ConvolutionStep`.
 This results in the following expression:
@@ -129,7 +129,7 @@ This results in the following expression:
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \Bigg [ \int_{-\infty}^{\infty} \chi (\tau) H_0 \big [ 1 - u(t-\tau) \big ] d\tau \Bigg ] = - \; \frac{4\pi}{3}R^3 \Bigg [ \int_0^t \chi (\tau) d\tau \Bigg ] H_0
 	:label: ConvolutionStepOff
-	
+
 Comparing Eqs. :eq:`ConvolutionStep` and :eq:`ConvolutionStepOff`, the response to step-on and step-off excitation behave identically and have opposing sign.
 The rate of decay for the step-off response is obtained by taking the derivative of Eq. :eq:`ConvolutionStepOff` with respect to :math:`t`:
 
@@ -176,12 +176,12 @@ Step Response
 +++++++++++++
 
 For a conductive and magnetically permeable sphere, it is easier to begin by presented expressions for the step response.
-According to Eqs. :eq:`eqDipoleMomentConvStepOff` and :eq:`LaplaceIFT`, the time-dependent excitation of the sphere can be expressed as:
+According to Eqs. :eq:`eqDipoleMomentConvStepOffDerivation` and :eq:`LaplaceIFT`, the time-dependent excitation of the sphere can be expressed as:
 
 .. math::
 	m(t) = \frac{4\pi}{3}R^3 \mathcal{L}^{-1} \big [ \chi(s) H_0 (s) \big ]
 	:label: mStepILTpermeable
-	
+
 where :math:`H_0 (s)` is the Laplace transform of :math:`h_0 (t)`.
 For a step-on excitation:
 
@@ -238,7 +238,7 @@ The rate of decay at time :math:`t>0` can be obtained by taking the time-derivat
 .. math::
 	\frac{d \, m(t)}{dt} = - \, \frac{4\pi}{3}R^3 \, H_0 \Bigg [ 9\mu_r \, \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu_r + 2)(\mu_r - 1)+\xi_n^2 \big ]} \Bigg ] u(t)
 	:label: dmdtStepOffPermeable
-	
+
 The unit step-off response for a sphere of radius :math:`R` = 10 m and conductivity :math:`\sigma` = 10 S/m, for several relative permeabilities, is shown in :numref:`TransientPermeable2`.
 
 

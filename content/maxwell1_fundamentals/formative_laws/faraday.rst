@@ -32,7 +32,9 @@ Integral Form in the Time-Domain
 
 Faraday's law in integral form can be expressed using the following equation:
 
-.. include:: ../../equation_bank/faradays_law_int_time.rst
+.. math::
+    \oint_C {\bf e} \cdot {\bf d}{\bf l}  = - \int_S \frac{\partial {\bf b}}{\partial t} \cdot \hat {\bf n} \, da,
+    :label: faradays_law_int_time
 
 where:
 
@@ -54,7 +56,9 @@ By applying Stokes's theorem to left-hand side of Eq.
 :eq:`faradays_law_int_time`, we can obtain the differential form of Faraday's
 law:
 
-.. include:: ../../equation_bank/faradays_law_diff_time.rst
+.. math::
+    \nabla \times {\bf e} = - \, \frac{\partial {\bf b}}{\partial t}
+    :label: faradays_law_diff_time
 
 .. Therefore, the time dependent change in magnetic flux density at any location is negatively proportional to the curl of the electric field.
 .. For magnetic fields which change rapidly with respect to time, we expect to observe a larger electric field.
@@ -75,11 +79,15 @@ applying a Fourier transform to Eqs. :eq:`faradays_law_int_time` and
 :eq:`faradays_law_diff_time`. The integral form of Faraday's law in the
 frequency domain is:
 
-.. include:: ../../equation_bank/faradays_law_int_freq.rst
+.. math::
+    \oint_C {\bf E} \cdot d{\bf l} = - \, i \omega \int_A {\bf B} \cdot \hat n \, da
+    :label: faradays_law_int_freq
 
 Similarly using Stokes' theorem, the differential form of Faraday's law is:
 
-.. include:: ../../equation_bank/faradays_law_diff_freq.rst
+.. math::
+    \nabla \times {\bf E} = - \, i \omega {\bf B}
+    :label: faradays_law_diff_freq
 
 where :math:`\omega` is the angular frequency, :math:`{\bf E}` is the
 frequency-dependent electric field and :math:`{\bf B}` is the frequency-
@@ -109,7 +117,10 @@ wire with area :math:`A`, contoured by a closed path :math:`C`, was then held
 in proximity of the electromagnet. This resulted in a magnetic flux
 :math:`{\boldsymbol \Phi_b}` defined by:s
 
-.. include:: ../../equation_bank/magnetic_flux_time.rst
+.. math::
+    {\boldsymbol \Phi_b} = \int_A {\bf b} \cdot \hat {\bf{n}} \, da
+    :label: magnetic_flux_time
+
 Faraday then conducted the following three experiments:
 
 1. The loop of wire was mobed while the electromagnet remained stationary.
@@ -122,7 +133,9 @@ electric current. The electromotive force :math:`\mathcal{E}` can be defined
 in terms of the electric field :math:`{\bf e}` by integrating over the path of
 the wire as follows:
 
-.. include:: ../../equation_bank/electromotive_force_time.rst
+.. math::
+    \mathcal{E} = - \oint_C {\bf e} \cdot d{\bf l} = V
+    :label: electromotive_force_time
 
 In an ideal circuit, the electromotive force is equivalent to the Voltage
 :math:`V` experienced by the wire. For a circuit with resistance :math:`R`,
@@ -134,7 +147,9 @@ determined that the time dependent change in magnetic flux was negatively
 proportional to the electromotive force it generated. The contributions made
 by Faraday and Lenz are represented by the following equation:
 
-.. include:: ../../equation_bank/faraday_lenz_time.rst
+.. math::
+    \mathcal{E} = - \, \frac{\partial {\boldsymbol \Phi_b}}{\partial t}
+    :label: faraday_lenz_time
 
 Lenz's contribution to Faraday's discovery not only provides the equality in
 Eq. :eq:`faraday_lenz_time` , but determines the direction of force on free

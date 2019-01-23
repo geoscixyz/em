@@ -6,7 +6,7 @@ Asymptotic Approximations
 .. purpose::
 
     Here, simplified expressions for the electric and magnetic fields are presented for several cases.
-    By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
+    By examining simplified expressions, we can more easily see how the fields depend on certain parameters.
 
 
 .. _frequency_domain_magnetic_dipole_asymptotics_DC:
@@ -42,14 +42,14 @@ In this case, the exponential term in :math:`\mathbf{E}_m` and :math:`\mathbf{H}
 
 .. math::
 	e^{-ikr} \approx 1 - ikr + O \left ( k^2 r^2 \right )
-	:label: eq_exp_TaylorO2
+	:label: eq_exp_TaylorO2_mag
 
-The near-field approximation for :math:`\mathbf{H}_m` can be obtained by replacing the exponential term in the full analytic solution with the Taylor series approximation from Eq. :eq:`eq_exp_TaylorO2`.
+The near-field approximation for :math:`\mathbf{H}_m` can be obtained by replacing the exponential term in the full analytic solution with the Taylor series approximation from Eq. :eq:`eq_exp_TaylorO2_mag`.
 Thus:
 
 .. math::
 	\begin{split}
-	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \Big ( 1 - ikr + O ( k^2 r^2 ) \Big ) \Bigg [ \Bigg ( & \frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2} \mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) ... \\ 
+	\mathbf{H_m} \approx \frac{m}{4 \pi r^3} \Big ( 1 - ikr + O ( k^2 r^2 ) \Big ) \Bigg [ \Bigg ( & \frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2} \mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) ... \\
 	& \Big ( -k^2 r^2 + 3ikr +3 \Big ) + \Big ( k^2 r^2 - ikr -1 \Big ) \mathbf{\hat x} \Bigg ]
 	\end{split}
 	:label: eq_Mdip_Hnear1
@@ -63,7 +63,7 @@ Eq. :eq:`eq_Mdip_Hnear1` can be simplified by neglecting polynomial terms which 
 According to Eq. :eq:`eq_Mdip_Hnear2`, the near magnetic field depends only on the observation location and the magnetic dipole moment.
 Additionally, the source and the magnetic field are completely in-phase.
 
-The near-field approximation for :math:`\mathbf{E}_m` can be obtained by replacing the exponential term in the full analytic solution with the Taylor series approximation from Eq. :eq:`eq_exp_TaylorO2`.
+The near-field approximation for :math:`\mathbf{E}_m` can be obtained by replacing the exponential term in the full analytic solution with the Taylor series approximation from Eq. :eq:`eq_exp_TaylorO2_mag`.
 Thus:
 
 .. math::

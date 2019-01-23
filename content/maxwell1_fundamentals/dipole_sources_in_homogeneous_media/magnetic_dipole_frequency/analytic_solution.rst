@@ -8,7 +8,7 @@ Analytic Solution
     Here, Maxwell's equations are solved for a harmonic magnetic dipole source.
     This is accomplished by using the method of Schelkunoff potentials, as shown in Ward and Hohmann (:cite:`ward1988`).
     Analytic expressions for the electric field, the magnetic field and the corresponding vector potential are provided.
-    
+
 
 
 
@@ -16,7 +16,7 @@ For a magnetic source (:math:`\mathbf{J_m^s}`), Maxwell's equations in the frequ
 
 
 .. math::
-	\nabla \times \mathbf{E_m} + i\omega \mu \mathbf{H_m} = - \mathbf{J_m^s} 
+	\nabla \times \mathbf{E_m} + i\omega \mu \mathbf{H_m} = - \mathbf{J_m^s}
 	:label: Faraday_m
 .. math::
 	\nabla \times \mathbf{H_m} - (\sigma + i\omega \varepsilon) \mathbf{E_m} = 0
@@ -40,16 +40,16 @@ and
 Eq. :eq:`E_F_potential` can be obtained simply by taking the divergence of Eq. :eq:`Ampere_m`.
 Eq. :eq:`H_F_potential` is obtained by manipulating Eqs. :eq:`Faraday_m`, :eq:`Ampere_m` and :eq:`E_F_potential`, and choosing an appropriate Gauge.
 We can see from Eqs. :eq:`H_F_potential` and :eq:`E_F_potential` that :math:`\mathbf{F}` contains all the information corresponding to the electric and magnetic fields.
-Therefore, Maxwell's equations will be manipulated to solve for :math:`\mathbf{F}`; which can then be used to obtain :math:`\mathbf{E_m}` and :math:`\mathbf{H_m}`. 
+Therefore, Maxwell's equations will be manipulated to solve for :math:`\mathbf{F}`; which can then be used to obtain :math:`\mathbf{E_m}` and :math:`\mathbf{H_m}`.
 
 By manipulating Eqs. :eq:`Faraday_m`, :eq:`Ampere_m` and :eq:`E_F_potential` and choosing an appropriate Gauge, we find that :math:`\mathbf{F}` can be expressed using the Helmholtz equation:
 
 
 .. math::
 	\nabla^2 \mathbf{F} + k^2 \mathbf{F} = - \mathbf{J}_m^s, \  \  \  \  \text{where} \  \  k^2 = \omega^2\mu\varepsilon -i\omega\mu\sigma
-	:label: Helmholtz_F 
+	:label: Helmholtz_F
 
-The Helmholtz equation with boundary conditions can be solved to generate :math:`\mathbf{F}`. 
+The Helmholtz equation with boundary conditions can be solved to generate :math:`\mathbf{F}`.
 For infinite media, the boundary condition is such that :math:`\mathbf{F} \rightarrow 0` as :math:`r \rightarrow \infty`.
 From the Helmholtz equation, we can see that :math:`\mathbf{F}` will only have a component along the direction of :math:`\mathbf{J_m^s}`.
 The scalar Green's function for the Helmholtz equation is:
@@ -57,7 +57,7 @@ The scalar Green's function for the Helmholtz equation is:
 
 .. math::
 	G(r) = \frac{e^{-ikr}}{4\pi r}.
-	:label: GreensFncFullSpace
+	:label: GreensFncFullSpaceMag
 
 and hence the vector potential for an arbitrary magnetic source is:
 

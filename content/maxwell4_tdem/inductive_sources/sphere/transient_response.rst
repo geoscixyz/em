@@ -17,25 +17,25 @@ The field :math:`h_0(t)` which induces a transient response from the sphere can 
 .. math::
 	h_0 (t) = H_0 u(-t)
 	:label: eqStepOffGenDef
-	
+
 where :math:`u(t)` is the unit-step function and :math:`H_0` is the amplitude of the applied field at :math:`t\leq 0`.
 From the previous section, the induced magnetic moment :math:`m(t)` characterizing the sphere is defined by a convolution:
 
 .. math::
 	m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \int_{-\infty}^\infty \chi (\tau) h (t-\tau )d\tau
-	:label: eqDipoleMomentConvStepOff
-	
+	:label: eqDipoleMomentConvStepOffTransient
+
 
 where :math:`\chi (t)` represents the excitation's impulse response.
-By substituting Eq. :eq:`eqStepOffGenDef` into Eq. :eq:`eqDipoleMomentConvStepOff` we obtain the following:
+By substituting Eq. :eq:`eqStepOffGenDef` into Eq. :eq:`eqDipoleMomentConvStepOffTransient` we obtain the following:
 
 .. math::
 	m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \Bigg ( \int_{t}^\infty \chi (\tau) d\tau \Bigg ) H_0
-	:label: eqDipoleMomentConvStepOff2
-	
-From Eq. :eq:`eqDipoleMomentConvStepOff2`, the sphere's transient response is linearly proportional to the strength on the inducing field.
+	:label: eqDipoleMomentConvStepOffTransient2
+
+From Eq. :eq:`eqDipoleMomentConvStepOffTransient2`, the sphere's transient response is linearly proportional to the strength on the inducing field.
 The characteristic behavior of the decay at time :math:`t` is determine by integrating the impulse response from :math:`t` to :math:`\infty`.
-Our analysis of the transient response is done by examining analytic solutions to Eq. :eq:`eqDipoleMomentConvStepOff2` for permeable and non-permeable spheres.
+Our analysis of the transient response is done by examining analytic solutions to Eq. :eq:`eqDipoleMomentConvStepOffTransient2` for permeable and non-permeable spheres.
 
 
 
@@ -97,15 +97,15 @@ Here, we consider the transient response from a conductive and non-permeable sph
 For a step-off excitation, the induced dipole moment for the sphere is given by:
 
 .. math::
-	m(t) = \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} u(-t) + 6 \mu_r \, \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} u(t) \Bigg ) \Bigg ] H_0 
+	m(t) = \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} u(-t) + 6 \mu_r \, \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} u(t) \Bigg ) \Bigg ] H_0
 	:label: eqmStepoffPermeable
 
 where :math:`\mu_r = \mu/\mu_0` is the relative permeability of the sphere and:
 
 .. math::
 	\beta = \big ( \mu_0 \sigma \big )^{1/2} R
-	:label: eqBetaGenDef
-	
+	:label: eqBetaGenDefTransient
+
 Coefficients :math:`\xi_n` within the sum are defined by:
 
 .. math::
@@ -117,7 +117,7 @@ From Wait and Spies (:cite:`WaitSpies1969`), these coefficients are spaced rough
 .. math::
 	n\pi \leq \xi_n \leq (n+1/2) \pi
 	:label: eqCoefficientSeparation
-	
+
 The value of each coefficient may be found iteratively using very few iterations (< 10) according to:
 
 .. math::
@@ -136,8 +136,8 @@ For :math:`t>0`:
 
 .. math::
 	\frac{d m}{dt} = - \, \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg [ 9\mu_r \, \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu_r + 2)(\mu_r - 1)+\xi_n^2 \big ]} \Bigg ] H_0
-	:label: dmdtStepOffPermeable
-	
+	:label: dmdtStepOffPermeableTransient
+
 As an example, let us consider a sphere of radius :math:`R=10` m.
 The sphere is subject to a unit step-off excitation; thus :math:`H_0=1`.
 In :numref:`TransientPermeable`, we show the transient response for several relative permeabilities.
@@ -150,4 +150,4 @@ For large relative permeabilities however, the characteristic decay of the induc
         :name: TransientPermeable
 
         Transient response from a conductive and permeable sphere for several relative permeabilities.
- 
+

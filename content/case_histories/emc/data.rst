@@ -12,7 +12,7 @@ functions relate the vertical components to the horizontal component as shown
 in Equation :eq:`emceq1`:
 
 .. math:: \mathbf{H}_z (\mathbf{r}) = T_{zx} (\mathbf{r},\mathbf{r}_0) \mathbf{H}_x(\mathbf{r}) +  T_{zy} (\mathbf{r},\mathbf{r}_0) \mathbf{H}_y(\mathbf{r})
-        :name: emceq1
+    :label: emceq1
 
 
 .. figure:: ./images/fig12.png

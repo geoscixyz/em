@@ -6,9 +6,9 @@ Asymptotic Approximations
 .. purpose::
 
     Here, simplified expressions for the electric and magnetic fields are presented for several cases.
-    By examining simplified expressions, we can more easily see how the fields depend on certain parameters. 
+    By examining simplified expressions, we can more easily see how the fields depend on certain parameters.
     As the full analytic solution for the vector potential is rather simple, asymptotic approximations are not presented here.
-    
+
 
 
 Near-Field/Late-Times
@@ -18,20 +18,20 @@ For fields which are very close to the magnetic dipole source, or at sufficientl
 
 .. math::
 	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \ll 1
-	:label: theta_nearfield_latetime
+	:label: theta_nearfield_latetime_mag
 
 
 As a result, the exponential and error functions can be approximated using Taylor expansion, where:
 
 .. math::
 	e^{-\theta^2 r^2} \approx 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...
-	:label: Taylor_expansion_exp
+	:label: Taylor_expansion_exp_mag
 
 and
 
 .. math::
 	\textrm{erf}(\theta r) = \frac{2}{\sqrt{\pi}} \theta r - \frac{2}{3 \sqrt{\pi}}\theta^3 r^3 + \frac{1}{5\sqrt{\pi}}\theta^5 r^5 + \; ...
-	:label: erfc_approximation
+	:label: erfc_approximation_mag
 
 
 By substituting the above Taylor series into the :ref:`analytic expressions<frequency_domain_magnetic_dipole_analytic_solution>` for :math:`{\bf e_m}` and :math:`{\bf h_m}`, we can obtain near-field/late-time approximations.
@@ -39,14 +39,14 @@ In the case of the electric field, the near-field/late-time approximation is giv
 
 .. math::
 	{\bf e_m}(t) \approx \frac{2 m \theta^5}{\pi^{3/2} \sigma} \big ( -z \, \mathbf{\hat y} + y \, \mathbf{\hat z} \big )
-	:label: e_nearfield_latetime
+	:label: e_nearfield_latetime_mag
 
 According to Eq. :eq:`e_nearfield_latetime`, the near-field/late-time electric field decays proportional to :math:`t^{-5/2}`.
 For the magnetic field, the near-field/late-time approximation is given by:
 
 .. math::
 	{\bf h_m}(t) \approx \frac{2 m}{15 \pi^{3/2} r^3} \Bigg [ 3\, \theta^5 r^5 \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg )  + \bigg ( 5\, \theta^3 r^3 - 6\, \theta^5 r^5 \bigg ) \mathbf{\hat x} \Bigg ]
-	:label: h_nearfield_latetime
+	:label: h_nearfield_latetime_mag
 
 According to Eq. :eq:`h_nearfield_latetime`, the :math:`\mathbf{\hat y}` and :math:`\mathbf{\hat z}` components of the magnetic field decay proportional to :math:`t^{-5/2}`.
 For the :math:`\mathbf{\hat x}` component however, :math:`\theta^3 r^3` terms remain.
@@ -55,7 +55,7 @@ The near-field/late-time approximation for the time-derivative of the magnetic f
 
 .. math::
 	\frac{\partial {\bf h_m}}{\partial t} \approx - \frac{4m \theta^5}{\pi^{3/2} \mu \sigma} \Bigg [ \theta^2 r^2 \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg ) + \bigg ( 1 - 2\, \theta^2 r^2 \bigg ) \mathbf{\hat x}  \Bigg ]
-	:label: dhdt_nearfield_latetime
+	:label: dhdt_nearfield_latetime_mag
 
 According to Eq. :eq:`dhdt_nearfield_latetime`, :math:`\mathbf{\hat y}` and :math:`\mathbf{\hat z}` components of the field decay proportional to :math:`t^{-7/2}`.
 In the :math:`\mathbf{\hat x}` however, :math:`\theta^5 r^5` terms remain.
@@ -70,19 +70,19 @@ For fields which are far from the magnetic dipole source, or at sufficiently ear
 
 .. math::
 	\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \gg 1
-	:label: theta_farfield
+	:label: theta_farfield_mag
 
 In this case, the exponential and complimentary error function can be approximated as follows:
 
 .. math::
 	e^{-\theta^2 r^2} \approx 0
-	:label: exp_approximation
+	:label: exp_approximation_mag
 
 and
 
 .. math::
 	\textrm{erfc}(\theta r) \approx 0
-	:label: erfc_approximation_2
+	:label: erfc_approximation_2_mag
 
 
 As a result, there are no interesting asymptotic approximations for the far-field.
