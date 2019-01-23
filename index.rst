@@ -54,24 +54,8 @@ throughout the communinity.
 What is EM GeoSci?
 ------------------
 
-The emphasis is on  physical principles of electromagnetic methods and their
-application in solving problems. Rigorous analytic solutions of the EM
-problems with specific transmitting fields and earth models is left to
-existing books and research papers. Also, the resource does not concentrate
-upon the scientific computing aspects to numerically solve Maxwell’s
-equations. We do however, make much use of software that can perform those
-functions. Rather, our emphasis is on using analytic and numerical solutions
-to understand electromagnetic  fields and fluxes obtained from various types
-of transmitters in different geological environments.
+EM GeoSci is an open-source resource that emphasizes the physical principles of electromagnetic methods and their application in solving geoscience problems. Rigorous analytic solutions of the EM problems with specific transmitting fields and earth models are left to existing books and research papers, and so too are the computational details required to numerically solve Maxwell’s equations. Our emphasis is on using analytic and numerical solutions to understand electromagnetic fields and fluxes obtained from various types of transmitters in different geological environments and to show how different EM surveys, using controlled or natural sources, can be applied in practise. `Case Histories <https://em.geosci.xyz/content/case_histories/index.html#case-histories-index>`_ play an essential role. They allow readers to make the connection between the geoscience problem, the EM survey, and the eventual outcome. Understanding the fundamental physics is facilitated through the use of `Jupyter Notebooks <https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb>`_ which allow users to visualize fields and explore understanding by changing parameters. The simulations use the open-source package `SimPEG <https://simpeg.xyz>`_ (Simulation and Parameter Estimation).
 
-Our emphasis is on fundamentals and applications and correspondingly
-:ref:`case_histories_index` play an essential role. These provide the
-motivation for using electromagnetics and show the success, or not, of their
-application in making an impact upon the problem at hand.
-
-Examples are available through `Jupyter Notebooks`_ and can be run through Binders_.
-The simulations use the open-source Simulation and Parameter Estimation package
-SimPEG_.
 
 .. image:: https://mybinder.org/badge.svg
     :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
@@ -81,12 +65,12 @@ SimPEG_.
 .. _Binders: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
 .. _SimPEG: http://simpeg.xyz
 
-This resource is Open Source and while currently being led by brilliant
-and enthusiastic graduate students and faculty at UBC, the vision is to have
-experts, worldwide, contribute. Join the development on Github_ or
-`get in touch <http://geosci.xyz/contact>`_!
 
 
+EM GeoSci and the SEG
+---------------------
+
+EM GeoSci served as the main "textbook" resource for the `SEG 2017 Distinguished Instructor Short Course <https://www.google.com/url?q=https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg&sa=D&ust=1547845822097000&usg=AFQjCNHyxHhje6vl0Nih6uX3mXRozl9nnQ>`_ on “Geophysical Electromagnetics: Fundamentals and Applications”. We are grateful that the SEG supported us in our open-source experiment and allowed us to substitute EM GeoSci for the traditional hardcopy book that accompanies the DISC.  The `Case Histories <https://em.geosci.xyz/content/case_histories/index.html#case-histories-index>`_, which form an important component of EM GeoSci, are presented within a synoptic Seven-Step framework that is linked to original, published and copyrighted papers. We are grateful that the SEG has allowed us to adapt figures and content from their publications.
 
 
 EM GeoSci is under construction
@@ -94,7 +78,7 @@ EM GeoSci is under construction
 
 EM GeoSci is under active construction. We are working to fill in blank
 pages and address todo's. Our  goal is to have a mature version available by the
-end of 2017. In the meantime, we are making this resource available and
+end of 2019. In the meantime, we are making this resource available and
 `inviting contributions for case histories <http://disc2017.geosci.xyz/#contribute>`_.
 We welcome `feedback <http://geosci.xyz/contact>`_ about the useability of the site and the technical details.
 
