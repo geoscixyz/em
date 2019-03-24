@@ -10,9 +10,9 @@ Similar to the :ref:`measured MT data <mt_data>`, the ZTEM system records a time
 Similar to MT which uses the impedance, ZTEM data or tipper data are transfer functions. For this method, the transfer functions are calculated from relating the vertical magnetic field at locations :math:`\mathbf{r}` and the horizontal magnetic fields at the base station located at :math:`\mathbf{r}_0`. :
 
 .. math:: \mathbf{H}_z (\mathbf{r}) = T_{zx}(\mathbf{r},\mathbf{r}_0) \mathbf{H}_x (\mathbf{r}_0) + T_{zy}(\mathbf{r},\mathbf{r}_0) \mathbf{H}_y (\mathbf{r}_0)
-        :name: eqn_ztem_tipper
+    :label: eqn_ztem_tipper
 
-By taking the ratios of the vertical and horizontal fields, the influence of the unknown source field is removed (similar to the :ref:`MT method <mt_data>`). 
+By taking the ratios of the vertical and horizontal fields, the influence of the unknown source field is removed (similar to the :ref:`MT method <mt_data>`).
 
 In order to solve Equation :eq:`eqn_ztem_tipper`, two independent polarizations are required:
 

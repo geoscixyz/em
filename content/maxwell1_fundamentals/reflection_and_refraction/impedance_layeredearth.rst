@@ -31,68 +31,68 @@ In the j-th layer, we have both up-going and down-going waves resulting from tra
 
 .. math::
 	E_{x,j}(\omega ,z) = U_j e^{-ik_j (z-z_j)} + D_j e^{ik_j (z-z_j)}
-	:name: E_j
+	:label: E_j
 
 where :math:`z_j` denotes the bottom location of the j-th layer. :math:`U_j` and :math:`D_j` are electric field amplitudes of the up-going and down-going wave at the bottom of the j-th layer, respectively. According to the theory presented for :ref:`EM waves in homogeneous media<harmonic_planewaves_homogeneous_derivation>`, the relationship between the electric field and the magnetic field is given by:
 
 .. math::
 	\frac{\partial E_x}{\partial z} + i\omega \mu H_y = 0
-	:name:
+	:label:
 
 As a result, the associated magnetic field in the j-th layer is given by:
 
 .. math::
 	H_{y,j} (\omega ,z) = \frac{1}{Z_j} \bigg [ U_j e^{-ik_j (z-z_j)} - D_j e^{ik_j (z-z_j)} \bigg ]
-	:name: H_j
+	:label: H_j
 
 where the :ref:`wave impedance<harmonic_planewaves_homogeneous_impedancephase>` for the j-th layer is given by:
 
 .. math::
 	Z_j = \frac{\omega \mu_j}{k_j}
-	:name:
+	:label:
 
 Using Eqs. :eq:`E_j` and :eq:`H_j`, the electric and magnetic fields at the bottom of the j-th layer can be represented using the folling system. Where :math:`z = z_j`:
 
 .. math::
 	\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_j} = \begin{bmatrix} 1 & 1 \\ \frac{1}{Z_j} & -\frac{1}{Z_j} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \mathbf{P_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix}
-	:name: Fields_bottom
+	:label: Fields_bottom
 
 At any location within the layer, the electric and magnetic fields are given by:
 
 .. math::
 	\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ \frac{1}{Z_j} & -\frac{1}{Z_j} \end{bmatrix} \begin{bmatrix} e^{-ik_j (z-z_j)} & 0 \\ 0 & e^{ik_j(z-z_j)} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix}
-	:name: Fields_j
+	:label: Fields_j
 
 The electric field amplitudes at the top of the j-th layer (:math:`U_j^\prime` and :math:`D_j^\prime`), can be determined from :math:`U_j` and :math:`D_j` by using the following expression:
 
 .. math::
 	\begin{bmatrix} U_j^\prime \\ D_j^\prime \end{bmatrix} = \begin{bmatrix} e^{-ik_j h_j} & 0 \\ 0 & e^{ik_j h_j} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \boldsymbol{\Lambda_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix}
-	:name: Amps_layer
+	:label: Amps_layer
 
 where :math:`h_j` is the thickness of the j-th layer. Now that we have related the fields and amplitudes to one another within a particular layer, how can we solve for the fields in one layer if only the fields in a different layer are known.
 
 Interface Conditions
 --------------------
 
-Let us assume we know the electric field amplitudes :math:`U_{j+1}` and :math:`D_{j+1}`. We want to find the wave amplitudes in the j-th layer (:math:`U_{j}` and :math:`D_{j}`) so that we can find the fields according to Eq. :eq:`Fields_j`. 
+Let us assume we know the electric field amplitudes :math:`U_{j+1}` and :math:`D_{j+1}`. We want to find the wave amplitudes in the j-th layer (:math:`U_{j}` and :math:`D_{j}`) so that we can find the fields according to Eq. :eq:`Fields_j`.
 
 According to the interface conditions corresponding to plane waves, components of the :ref:`electric field<Fresnel_equations_TE>` parallel to the interface are continuous. The same is true for the :ref:`magnetic field<Fresnel_equations_TM>`. Thus at :math:`z = z_j`:
 
 .. math::
 	\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_j} = \mathbf{P_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \mathbf{P_{j+1}} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix}
-	:name: Uj
+	:label: Uj
 
 Using Eqs. :eq:`Fields_bottom`, :eq:`Amps_layer` and :eq:`Uj`, we can relate the electric and magnetic fields at the top of layer j+1 to those at the top of layer j:
 
 .. math::
 	\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_{j-1}} = \mathbf{P_j} \boldsymbol{\Lambda_j} \mathbf{P_j^{-1}} \begin{bmatrix} E_{x,j+1} \\ H_{y,j+1} \end{bmatrix} = \mathbf{T_j} \begin{bmatrix} E_{x,j+1} \\ H_{y,j+1} \end{bmatrix} \Bigg |_{z=z_j}
-	:name:
+	:label:
 
 Similarly, the electric field amplitudes at the top of layer j and the top of layer j+1 are related by:
 
 .. math::
 	\begin{bmatrix} U_j^\prime \\ D_j^\prime \end{bmatrix} = \boldsymbol{\Lambda_j} \mathbf{P_j^{-1}} \mathbf{P_{j+1}} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix} = \mathbf{S_j} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix}
-	:name:
+	:label:
 
 Recursive Solution for N-Layers
 -------------------------------
@@ -101,37 +101,37 @@ Let us consider the case where we are at the Earth's surface and we measure perp
 
 .. math::
 	\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1} \begin{bmatrix} U_1^\prime \\ D_1^{\, \prime} \end{bmatrix}
-	:name:
+	:label:
 
 In terms of the up-going and down-going waves in layer 2, the previous expression can be rewritten as:
 
 .. math::
 	\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1 S_1} \begin{bmatrix} U_2^\prime \\ D_2^{\, \prime} \end{bmatrix}
-	:name:
+	:label:
 
 This process can be repeated for each layer. Ultimately, the electric and magnetic fields at the Earth surface can be expressed as:
 
 .. math::
-	\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1} \prod_{j=1}^N \mathbf{S_j} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix} = \mathbf{M} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix} 
-	:name:
+	\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1} \prod_{j=1}^N \mathbf{S_j} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix} = \mathbf{M} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix}
+	:label:
 
 Notice how there is no up-going wave in lowermost medium. This makes sense assuming there is no source or reflector capable of creating a returning signal. If we amalgamate the product of all matricies into a single matrix :math:`\mathbf{M}`, then:
 
 .. math::
 	E_x \big |_{z=0} = M_{12} D_{N+1}^{\, \prime}
-	:name:
+	:label:
 
 and
 
 .. math::
 	H_y \big |_{z=0} = M_{22} D_{N+1}^{\, \prime}
-	:name:
+	:label:
 
 The relationship between :math:`E_x` and :math:`H_y` at the Earth's surface is therefore given by:
 
 .. math::
 	Z = \frac{E_x}{H_y} = \frac{M_{12}}{M_{22}}
-	:name: impedance_Earth
+	:label: impedance_Earth
 
 Eq. :eq:`impedance_Earth` tells us that the relationship between perpendicular components of the electric and magnetic fields at the Earth's surface, at a particular frequency, depend on the physical properties of all layers. However, the exponential nature of matricies :math:`\boldsymbol{\Lambda_j}` within :math:`\mathbf{S_j}` suggests that the impact of deeper layers on :math:`Z` is smaller than it is for shallow layers. This result is very important when considering :ref:`magnetotelluric (MT) methods<mt_index>`.
 
@@ -141,19 +141,19 @@ In the case where the Earth is a homogeneous half-space:
 
 .. math::
 	\mathbf{M} = \mathbf{P_1} = \begin{bmatrix} 1 & 1 \\ \frac{1}{Z_1} & -\frac{1}{Z_1} \end{bmatrix}
-	:name:
+	:label:
 
 where
 
 .. math::
 	Z_1 = \frac{\omega \mu_1}{k_1}
-	:name:
+	:label:
 
 and thus:
 
 .. math::
 	\frac{E_x}{H_y} = \frac{M_{12}}{M_{22}} = - \frac{\omega\mu_1}{k_1} = -\frac{\omega \mu_1}{\sqrt{-i\omega\mu_1\sigma_1 + \omega^2\mu_1\varepsilon_1}} = \begin{cases} -\sqrt{\dfrac{i\omega\mu_1}{\sigma_1}} \;\; \textrm{for} \;\; \sigma \gg \omega\varepsilon \\ -\sqrt{\dfrac{\mu_1}{\varepsilon_1}} \;\;\;\;\,\;\; \textrm{for} \;\; \sigma \ll \omega\varepsilon \end{cases}
-	:name:
+	:label:
 
 The physical significance of this was explained during the material on :ref:`impedance and phase<harmonic_planewaves_homogeneous_impedancephase>` for plane waves in homogeneous media.
 

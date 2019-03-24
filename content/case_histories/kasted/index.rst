@@ -12,7 +12,7 @@ Kasted
 
 **Assessment of near-surface mapping capabilities by airborne transient electromagnetic data – an extensive comparison to conventional borehole data**
 
-- **Authors**: A. S. H |o| yer, Troels Vilhelmsen, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, Peter B.E. Sandersen, Andrea Viezzoli and Ingelise M |o| ller.
+- **Authors**: :ref:`ashoyer`, :ref:`tvilhelmsen`, :ref:`eauken`, :ref:`avchristiansen`, :ref:`fjorgensen`, Peter B.E. Sandersen, Andrea Viezzoli and :ref:`imoller`.
 - **Editor**: :ref:`dccowan`
 
 
@@ -24,7 +24,7 @@ Kasted
 
 **Special Thanks**
 
-Thanks to SkyTEM and the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material. This case study was adapted from the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (:cite:`Vilhelmsen2016`) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
+This case study was adapted from the articles "A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality by Vilhelmsen (:cite:`Vilhelmsen2016`) and "3D geological modelling of a complex buried-valley network delineated from borehole and AEM data" by Høyer (:cite:`Hoyer2015`).
 
 **Abstract**
 

@@ -90,7 +90,7 @@ saturations in excess of 90%.
 
 .. math::
 	\frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}
-    :name: eq_Simandoux
+    :label: eq_Simandoux
 
 
 where :math:`R_t` is the horizontal resistivity, :math:`Sw` is the water
@@ -103,7 +103,7 @@ defined as:
 
 .. math::
 	\phi_e = \phi_T \times (1 - Vsh)
-    :name: eq_Simandoux_phi
+    :label: eq_Simandoux_phi
 
 
 where :math:`\phi_T` is the total porosity. The parameters used in the

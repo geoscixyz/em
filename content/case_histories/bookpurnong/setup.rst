@@ -29,7 +29,7 @@ motivating questions are:
     :figwidth: 100%
     :name: booky-location
 
-    Location of the research area :cite:`viezzoli2010`.
+    Location of the research area :cite:`viezzoli2009`.
 
 
 Hydrological Background
@@ -50,7 +50,7 @@ a hope of replacing the saline water with fresh water.
     :width: 100%
     :name: booky-hydro
 
-    Hydrological model at Bookpurnong :cite:`viezzoli2010`.
+    Hydrological model at Bookpurnong :cite:`viezzoli2009`.
 
 In hydrology, the interaction between the riverwater and groundwater can be in
 two modes (:numref:`lose-gain`). If the groundwater table is lower, the
