@@ -8,7 +8,7 @@ The `MIMDAS`_ system collects both a pole-dipole (P-DP) and a dipole-pole
 collected through the system. The data are viewed prior to quality control
 measures.
 
-.. note :: The data in UBC format can be `downloaded here <https://github.com/geoscixyz-data/Mt-Isa/raw/master/data.zip>`_
+.. note :: The data in UBC format can be `downloaded here <https://github.com/geoscixyz-data/Mt-Isa>`_
 
 .. _mt_isa_data_dc:
 
