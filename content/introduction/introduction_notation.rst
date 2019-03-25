@@ -9,13 +9,13 @@ been the foundation of many research papers, is used by geophysicists world-wide
 Vectors
 -------
 
-- vectors and vectorial operators are bold:                          
-    * e.g., :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`                       
-- tensors are bold and underlined:           
-    * e.g., :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`   
-- time domain variable are lower case:       
-    * e.g., :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}` 
-- frequency domain variables are upper case: 
+- vectors and vectorial operators are bold:
+    * e.g., :math:`\mathbf{v}`, :math:`\boldsymbol{\nabla\cdot}`
+- tensors are bold and underlined:
+    * e.g., :math:`\mathbf{\underline{v}}`, :math:`\boldsymbol{\underline{\sigma}}`
+- time domain variable are lower case:
+    * e.g., :math:`\mathbf{e}`, :math:`\mathbf{j}`, :math:`\mathbf{h}`, :math:`\mathbf{b}`
+- frequency domain variables are upper case:
     * e.g., :math:`\mathbf{E}`, :math:`\mathbf{J}`, :math:`\mathbf{H}`, :math:`\mathbf{B}`
 
 Integrals
@@ -37,7 +37,7 @@ Integrals
     .. math::
         \oint_S \mathbf{f} \cdot \mathbf{da} = \oint_S \mathbf{f} \cdot \mathbf{\hat{n}} ~da
 
-- Integrating a vector function over a curve: 
+- Integrating a vector function over a curve:
     .. math::
         \int_C \mathbf{f} \cdot \mathbf{dl} = \int_C \mathbf{f} \cdot \mathbf{\hat{n}} ~dl
 
@@ -46,24 +46,24 @@ Integrals
         \oint_C \mathbf{f} \cdot \mathbf{dl} = \oint_C \mathbf{f} \cdot \mathbf{\hat{n}} ~dl
 
 
-.. _fourier_transform_convention: 
+.. _fourier_transform_convention:
 
 Fourier Transform Convention
 ----------------------------
 
-We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t}` time dependence. 
+We also adopt their choice of sign in the Fourier Transform: :math:`e^{i\omega t}` time dependence.
 
 .. math::
     F(\omega) = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} dt
-    :name: fourier_transform_convention
+    :label: fourier_transform_convention
 
 .. math::
     f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i\omega t} d\omega
-    :name: inv_fourier_transform_convention
+    :label: inv_fourier_transform_convention
 
 
 
-.. **References** 
+.. **References**
 
 ..  .. bibliography:: ../references.bib
 ..     :style: alpha

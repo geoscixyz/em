@@ -4,12 +4,7 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
-
 handlers:
-
-# cert
-# - url: /.well-known/acme-challenge
-#   static_dir: letsencrypt
 
 # favicon
 - url: /favicon\.ico
@@ -124,6 +119,7 @@ skip_files:
   - \.*\.lint$
   - ^(.*/)?.*\.doctree$
   - ^(.*/)?doctrees/.*
+  - miniconda.sh
 
 libraries:
 - name: webapp2
@@ -133,5 +129,7 @@ libraries:
 - name: numpy
   version: "latest"
 - name: jinja2
+  version: "latest"
+- name: ssl
   version: "latest"
 

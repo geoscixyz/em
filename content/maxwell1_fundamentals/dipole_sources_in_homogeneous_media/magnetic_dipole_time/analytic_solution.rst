@@ -9,7 +9,7 @@ Analytic Solution
     This is accomplished by applying the inverse Laplace transform to frequency domain solutions for the harmonic magnetic dipole.
     Analytic expressions for the electric field, the magnetic field and the corresponding vector potential are provided.
     Due to the difficulties which arise in deriving the final expressions, we will not include the effects of dielectric permittivity (:math:`\varepsilon`); this is known as the quasi-static approximation.
-    
+
 
 
 **Obtaining the Transient Response from a Harmonic Solution**
@@ -19,7 +19,7 @@ For a causal system, the unit step-response (:math:`g_+`) at :math:`t \geq 0` is
 
 .. math::
 	g_+(t) = \int_{-\infty}^\infty f(\tau) u(t - \tau) d\tau = \int_0^t f(\tau) d\tau \; \; \; \textrm{for} \; \; \; t\geq 0
-	:label: causal_step
+	:label: causal_step_mag
 
 where :math:`f(t)` is the system's impulse response.
 For most geophysical problems however, we are interested in the step-off or transient response (:math:`g_-`).
@@ -30,7 +30,7 @@ The step-off response for a causal system may be given by:
 	g_-(t) = \int_{-\infty}^\infty f(\tau) \big [ 1 - &u(t - \tau) \big ] d\tau = \; ... \\
 	& \int_0^\infty f(\tau) d\tau - \int_0^t f(\tau) d\tau = g_+ (\infty) - g_+(t) \; \; \; \textrm{for} \; \; \; t\geq 0
 	\end{split}
-	:label: causal_step_off
+	:label: causal_step_mag_off
 
 where :math:`g_+ (\infty )` represents the step-response at :math:`t = \infty`.
 Therefore, if the step-response is known for :math:`t \geq 0`, it can be used to obtain the step-off response at :math:`t \geq 0`.
@@ -39,7 +39,7 @@ From Ward and Hohmann :cite:`ward1988`, the step-response can be obtained via th
 
 .. math::
 	g_+(t) = L^{-1} \Bigg [ \frac{F(s)}{s} \Bigg ]
-	:label: step_Laplace_transform
+	:label: step_Laplace_transform_mag
 
 where :math:`F(s)` is obtained by replacing :math:`s=i\omega` in the system's harmonic response function.
 For the electric field, magnetic field and vector potential arising from a harmonic magnetic dipole in the :math:`\mathbf{\hat x}` direction, these have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>`.
@@ -47,7 +47,7 @@ For the electric field, magnetic field and vector potential arising from a harmo
 
 **Harmonic Solutions for a Magnetic Dipole**
 
-As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z) \mathbf{\hat x}`. 
+As we just mentionned, harmonic solutions for the electric field, magnetic field and vector potential have :ref:`already been derived<frequency_domain_magnetic_dipole_analytic_solution>` for a source term :math:`\mathbf{J_m^s} = -i\omega IS \delta (x) \delta (y) \delta (z) \mathbf{\hat x}`.
 
 
 For the vector potential:
@@ -73,7 +73,7 @@ where the wavenumber :math:`k` is given by:
 
 .. math::
 	k = \big ( \omega^2\mu\varepsilon - i \omega \mu \sigma \big )^{1/2}
-	:label: wave_number
+	:label: wave_number_mag
 
 
 
@@ -84,7 +84,7 @@ Due to the difficulties which arise in deriving the final expressions, we will n
 
 .. math::
 	k = \big (- i \omega \mu \sigma \big )^{1/2}
-	:label: wave_number_quasi_static
+	:label: wave_number_mag_quasi_static
 
 If we substitute :math:`s = i\omega` in Eqs. :eq:`F_harmonic_response`, :eq:`E_harmonic_response` and :eq:`H_harmonic_response` and divide by :math:`s` then:
 
@@ -133,13 +133,13 @@ Thus:
 
 .. math::
 	L^{-1} \Bigg [ \frac{{\bf F}(s)}{s} \Bigg ] = \frac{m\theta^3}{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \mathbf{\hat x} \; ,
-	:label: a_step_response
+	:label: a_step_response_mag
 
 
 
 .. math::
 	L^{-1}\Bigg [ \frac{{\bf E_m}(s)}{s} \Bigg ] = \frac{2 m \theta^5 }{\pi^{3/2} \sigma} e^{-\theta^2 r^2} \big ( z \, \mathbf{\hat y} - y \, \mathbf{\hat z} \big )
-	:label: e_step_response
+	:label: e_step_response_mag
 
 
 and
@@ -149,7 +149,7 @@ and
 	L^{-1}\Bigg [ \frac{{\bf H_m}(s)}{s} \Bigg ] = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg ) \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{6}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2}  \, ...  \\
 	& + 3\, \textrm{erfc} (\theta r) \Bigg ) - \Bigg ( \bigg ( \frac{4}{\sqrt{\pi}} \theta^3 r^3 + \frac{2}{\sqrt{\pi}} \theta r \bigg ) e^{-\theta^2 r^2} +  \textrm{erfc} (\theta r) \Bigg ) \mathbf{\hat x} \Bigg ]
 	\end{split}
-	:label: h_step_response
+	:label: h_step_response_mag
 
 where
 
@@ -158,7 +158,7 @@ where
 	:label: theta_quasi_static
 
 
-Using the previous three expressions, we can determine the transient vector potential, electric field magnetic fields according to Eq. :eq:`causal_step_off`.
+Using the previous three expressions, we can determine the transient vector potential, electric field magnetic fields according to Eq. :eq:`causal_step_mag_off`.
 For the vector potential, the transient response is given by:
 
 
@@ -179,7 +179,7 @@ And for the magnetic field, the transient response is given by:
 
 .. math::
 	\begin{split}
-	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3  \; ... \\ 
+	{\bf h_m}(t) = \frac{m}{4\pi r^3} \Bigg [ & \Bigg ( \frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \Bigg ) \Bigg ( 3 \, \textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3  \; ... \\
 	&+ \frac{6}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) - \Bigg (\textrm{erf}(\theta r) - \bigg ( \frac{4}{\sqrt{\pi}}\theta^3 r^3 + \frac{2}{\sqrt{\pi}}\theta r \bigg ) e^{-\theta^2 r^2} \Bigg ) \mathbf{\hat x}  \Bigg ]
 	\end{split}
 	:label: h_step_off_response

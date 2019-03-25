@@ -9,29 +9,37 @@ Maxwell's Equations: Time Domain
 
 Let us begin with the differential form of :ref:`Faraday's Law <faraday>` and the :ref:`Ampere-Maxwell's equation <ampere_maxwell>`, respectively:
 
-.. include:: ../equation_bank/faraday_time.rst
+.. math::
+    \boldsymbol{\nabla} \times \mathbf{e}
+    = -\frac{\partial \mathbf{b}}{\partial t}
+    :label: faraday_time
 
-.. include:: ../equation_bank/ampere_maxwell_time.rst
+.. math::
+    \boldsymbol{\nabla} \times \mathbf{h}
+    = \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t}
+    :label: ampere_maxwell_time
 
 as well as the three :ref:`constitutive relations<physical_properties_index>`:
 
-.. include:: ../equation_bank/ohms_law_time.rst
+.. math::
+    \mathbf{j} = \sigma \mathbf{e}
+    :label: ohms_law_time
 
 .. math:: \mathbf{d} = \epsilon \mathbf{e}
-        :name: depse
+    :label: depse
 
 .. math:: \mathbf{b} = \mu \mathbf{h}
-        :name: bmuh
+    :label: bmuh
 
 Our goal is to combine these equations to obtain an equation which depends solely on :math:`\mathbf{e}` or :math:`\mathbf{h}`. For :math:`\mathbf{e}`, we begin by taking the curl of :eq:`faraday_time`. We then use Eqs. :eq:`ohms_law_time` and :eq:`depse` to reduce the number of variables. Assuming all of the physical properties are constant in space and time, we can take them outside curl operators and time derivatives. Ultimately, we obtain Eq. :eq:`hme7`:
 
 .. math::  \boldsymbol{\nabla}^2 \mathbf{e} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}  = 0
-        :name: hme7
+    :label: hme7
 
 A similar procedure can be used to obtain an equation that involves only :math:`\mathbf{h}`. We start from Eq. :eq:`ampere_maxwell_time`, and by using Eqs. :eq:`faraday_time` and :eq:`bmuh` we obtain:
 
 .. math:: \boldsymbol{\nabla}^2 \mathbf{h} - \mu \sigma \frac{\partial \mathbf{h}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}  = 0
-        :name: hmh7
+    :label: hmh7
 
 The detailed derivations of Eqs. :eq:`hme7` and :eq:`hmh7` can be found :ref:`here <maxwell1_appendix_wave_eq_derivation_time>`.
 
@@ -47,19 +55,16 @@ In the quasi-static regime, the diffusive term is much larger than the conservat
 
 .. math::
     \sigma \frac{\partial \mathbf{e}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} \;\;\;\;\; \textrm{and} \;\;\;\;\; \sigma \frac{\partial \mathbf{h}}{\partial t} \gg \epsilon \frac{\partial^2 \mathbf{h}}{\partial t^2}
-    :name:
 
 In this case, both :math:`\mathbf{e}` and :math:`\mathbf{h}` behave according to the **heat equation**, with:
 
 .. math::
     \nabla^2 \mathbf{e} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} = 0
-    :name:
 
 and
 
 .. math::
     \nabla^2 \mathbf{h} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} = 0
-    :name:
 
 The rate of diffusion is controlled by the product of :math:`\mu\sigma`. Recall from :ref:`physical properties<physical_properties_index>` however, that :math:`\mu \approx \mu_0` for most materials and that :math:`\sigma` varies over many orders of magnitude. As a result, the diffusive properties of electromagnetic signals are primarily dependent on the conductivity. The diffusive behaviour of EM signals is a very important aspect of time-domain electromagnetic (:ref:`TDEM<airborne_tdem_index>`) methods.
 

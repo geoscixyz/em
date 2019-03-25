@@ -70,12 +70,12 @@ where :math:`P_n \big (cos \theta \big )` is the Legendre polynomial of
 order :math:`n`. Because Legendre polynomials have magnitudes less than
 unity for :math:`n>0`, and :math:`r<x_0`, the infinite series in Eq.
 :eq:`RSol1` is bounded and converges as :math:`n \rightarrow \infty`. A
-similar approach for :math:`r < x_0` can be expressed as follows:
+similar approach for :math:`r > x_0` can be expressed as follows:
 
 .. math::
    \frac{1}{R} &= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
-               &= \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
-               &= \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
+               &= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+               &= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )
    :label: RSol2
 
 Similar to Eq. :eq:`RSol1`, since :math:`x_0<r`, the infinite series in
@@ -120,7 +120,7 @@ current flow normal to the sphere’s surface, are continuous at
 
 .. math::
    \phi = \phi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \phi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \phi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a
-   :label: BoundaryConditions
+   :label: BoundaryConditions_pt_src
 
 For a source which is outside the sphere (:math:`a < x_0`), the desired
 solution for the potential is:
@@ -143,7 +143,7 @@ functions, coefficients :math:`A_n` and :math:`B_n` may be determined
 independently for each :math:`n`. Using locations :math:`r<x_0`, Eq. :eq:`PsiWholespace1`
 can be substituted into Eq. :eq:`PsiSolAn`. This
 can be use to solve Eq. :eq:`PoissonEq2d`, using boundary conditions
-from :eq:`BoundaryConditions` for each harmonic mode :math:`n`. The
+from :eq:`BoundaryConditions_pt_src` for each harmonic mode :math:`n`. The
 resulting coefficients are given by:
 
 .. math:: A_n = \frac{I \rho}{4\pi} \Bigg ( \frac{a^{2n+1}}{x_0^{n+1}} \Bigg ) \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg )

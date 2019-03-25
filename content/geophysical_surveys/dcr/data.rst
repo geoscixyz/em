@@ -94,13 +94,9 @@ separation are often created. For simple horizontally layered
 environments, these sounding curves provide insight into the relative thickness and
 resistivity of layers (as shown in the interactive figure below).
 
- .. list-table:: : DC resistivity sounding curve
-   :header-rows: 0
-   :widths: 10
-   :stub-columns: 0
 
-   *  - .. raw:: html
-            :file: images/sounding_radio_buttons.html
+.. raw:: html
+  :file: images/sounding_radio_button.html
 
 
 .. _dcr_Pseudosection:
