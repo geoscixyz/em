@@ -81,7 +81,7 @@ Thibaut Astic
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/thibaut.jpg"><img alt="http://simpeg.xyz/img/people/thibaut.jpg" class="align-left" src="http://simpeg.xyz/img/people/thibaut.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/simpeg/website/tree/master/www/img/people/thibaut.jpg"><img alt="https://github.com/simpeg/website/tree/master/www/img/people/thibaut.jpg" class="align-left" src="https://github.com/simpeg/website/tree/master/www/img/people/thibaut.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -497,7 +497,7 @@ Dom Fournier
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/dom.jpg"><img alt="http://simpeg.xyz/img/people/dom.jpg" class="align-left" src="http://simpeg.xyz/img/people/dom.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/simpeg/website/tree/master/www/img/people/dom.jpg"><img alt="https://github.com/simpeg/website/tree/master/www/img/people/dom.jpg" class="align-left" src="https://github.com/simpeg/website/tree/master/www/img/people/dom.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
@@ -1065,7 +1065,7 @@ Michael Mitchell
     <div class="row" style="min-height: 170px">
     <div class="col-md-4">
         
-        <a class="reference internal image-reference" href="http://simpeg.xyz/img/people/mike.jpg"><img alt="http://simpeg.xyz/img/people/mike.jpg" class="align-left" src="http://simpeg.xyz/img/people/mike.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
+        <a class="reference internal image-reference" href="https://github.com/simpeg/website/tree/master/www/img/people/mike.jpg"><img alt="https://github.com/simpeg/website/tree/master/www/img/people/mike.jpg" class="align-left" src="https://github.com/simpeg/website/tree/master/www/img/people/mike.jpg" style="width: 120px; border-radius: 10px; vertical-align: text-middle padding-left="20px" /></a>
                 
     </div>
     <div class="col-md-6" style="line-height: 1.5">
