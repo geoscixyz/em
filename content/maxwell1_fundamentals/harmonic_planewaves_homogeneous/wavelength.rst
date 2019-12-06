@@ -51,7 +51,7 @@ Quasi-Static Approximation
 
 In quasi-static regime (:math:`\epsilon\omega \ll \sigma`), the wavelength simplifies to:
 
-.. math:: \lambda = \sqrt{ \frac{2}{\omega \mu \sigma} }
+.. math:: \lambda = 2\pi\sqrt{ \frac{2}{\omega \mu \sigma} } = 2\pi\delta
 
 
 Wave Regime Approximation
