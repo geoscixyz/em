@@ -225,7 +225,9 @@ The skin depth :math:`\delta` is defined as the depth where the signal has
 decayed to a factor :math:`\frac{1}{e}(\simeq` 36%).
 
 .. math::
-    e^{-i Im(k) \delta} = \frac{1}{e}
+    e^{-Im(k) \delta} = \frac{1}{e}
+
+Assuming the Earth is non-magnetic (:math:`\mu \sim \mu_0 = 4\pi \times 10^{-7}` H/m):
 
 .. math::
     \delta = \sqrt{ \frac{2}{\omega \mu \sigma}} \simeq \frac{500}{\sqrt{\sigma f}}
