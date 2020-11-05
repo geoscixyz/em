@@ -17,7 +17,7 @@ Same as :ref:`DC survey <dcr_survey>`, currents are injected through current ele
     :figwidth: 90%
     :name: IPresponses
 
-    Schematic diagram of injected currents and measured voltage when earth medium is chargeable. (a) Time doamin and (b) Frequency domain caes. Blue dashed lines show voltages without induced polarization (IP) effects.
+    Schematic diagram of injected currents and measured voltage when earth medium is chargeable. (a) Time doamin and (b) Frequency domain cases. Blue dashed lines show voltages without induced polarization (IP) effects.
 
 
 Time domain IP data
