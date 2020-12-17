@@ -103,7 +103,7 @@ For a step-off excitation, the induced dipole moment for the sphere is given by:
 where :math:`\mu_r = \mu/\mu_0` is the relative permeability of the sphere and:
 
 .. math::
-	\beta = \big ( \mu_0 \sigma \big )^{1/2} R
+	\beta = \big ( \mu \sigma \big )^{1/2} R
 	:label: eqBetaGenDefTransient
 
 Coefficients :math:`\xi_n` within the sum are defined by:
