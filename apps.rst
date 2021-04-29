@@ -22,7 +22,7 @@ EM Apps
 -------
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb
     :alt: Binder
 
 .. image:: https://notebooks.azure.com/launch.png
@@ -61,11 +61,11 @@ Binder
 ^^^^^^
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb
     :alt: Binder
 
 
-1. Launch the binder by clicking on the badge above or going to: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb.
+1. Launch the binder by clicking on the badge above or going to: https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb.
    This can sometimes take a couple minutes, so be patient...
 
 2. Select the notebook of interest from the contents
