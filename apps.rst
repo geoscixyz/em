@@ -25,10 +25,6 @@ EM Apps
     :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb
     :alt: Binder
 
-.. image:: https://notebooks.azure.com/launch.png
-    :target: https://notebooks.azure.com/import/gh/geoscixyz/em-apps
-    :alt: Azure notebooks
-
 .. image:: images/DC_LayeredEarth_notebook.png
     :width: 45%
     :alt: dc-layered-earth-app
@@ -79,33 +75,6 @@ Binder
 
 
 
-.. _azure:
-
-Azure Notebooks
-^^^^^^^^^^^^^^^
-
-.. image:: https://notebooks.azure.com/launch.png
-    :target: https://notebooks.azure.com/import/gh/geoscixyz/em-apps
-    :alt: Azure notebooks
-
-1. Navigate to Azure notebooks by clicking on the badge above or going to: https://notebooks.azure.com/import/gh/geoscixyz/em-apps,
-   and select :code:`Import` to import the library
-
-2. Sign in to your microsoft account (or `Create One` if you do not already have an account)
-
-3. Create the new library: Select Import
-
-4. Select :code:`index.ipynb` to view the notebook contents
-
-5. Select the notebook of interest from the contents
-
-6. :ref:`Run the Jupyter notebook <jupyter_notebooks>`
-
-.. image:: images/azure-steps.png
-    :alt: binder-steps
-    :width: 100%
-    :align: center
-
 
 .. _simulation_notebooks:
 
@@ -121,10 +90,6 @@ Simulation Notebooks
 .. image:: https://mybinder.org/badge.svg
     :target: https://mybinder.org/v2/gh/simpeg/em-notebooks/master?filepath=index.ipynb
     :alt: Binder
-
-.. image:: https://notebooks.azure.com/launch.png
-    :target: https://notebooks.azure.com/import/gh/simpeg/em-notebooks
-    :alt: Azure notebooks
 
 These notebooks walk through forward simulations of both frequency domain
 electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.xyz>`_.
