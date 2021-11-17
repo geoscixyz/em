@@ -51,6 +51,8 @@ extensions = [
     # 'sphinx_gallery.gen_gallery',
 ]
 
+bibtex_bibfiles = ['./content/references.bib']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -186,7 +188,7 @@ numfig = True
 # -- Edit on Github Extension ---------------------------------------------
 
 edit_on_github_project = 'geoscixyz/em'
-edit_on_github_branch = 'master'
+edit_on_github_branch = 'main'
 check_meta = False
 
 # -- Options for HTML output ----------------------------------------------
