@@ -51,6 +51,8 @@ extensions = [
     # 'sphinx_gallery.gen_gallery',
 ]
 
+bibtex_bibfiles = ['./content/references.bib']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
