@@ -188,7 +188,7 @@ numfig = True
 # -- Edit on Github Extension ---------------------------------------------
 
 edit_on_github_project = 'geoscixyz/em'
-edit_on_github_branch = 'master'
+edit_on_github_branch = 'main'
 check_meta = False
 
 # -- Options for HTML output ----------------------------------------------
