@@ -118,8 +118,6 @@ linkcheck_ignore = [
     'http://seg.org',
     'http://library.seg.org/doi/',
     'http://www.publish.csiro.au/EX/pdf/ASEG2016ab212',
-    'https://notebooks.azure.com/import/gh/geoscixyz/em-apps',
-    'https://notebooks.azure.com/import/gh/simpeg/em-notebooks',
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
     'https://doi.org/*',
     'http://canada.debeersgroup.com/* ',
