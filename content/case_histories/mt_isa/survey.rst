@@ -48,7 +48,7 @@ but the final choice at Cluny was motivated by the following factors:
     (Right) Dipole-pole survey configuration.
 
 
-.. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
+.. _MIMDAS: https://smedg.org.au/advanced-geophysical-technology-in-modern-exploration-mim-nick-sheard-mimdas-geophysics/
 
 
 .. _Mt_Isa_Survey_Design:
@@ -131,6 +131,3 @@ This is consistent with the images of current density :ref:`current density
   data shown in :numref:`MIM_PDP_Simulation`. The middle figure contains the
   deep conductor and the top lacks a deep conductor. In both figures, the true
   conductivity model is shown in grey scale for reference.
-
-
-

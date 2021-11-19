@@ -21,6 +21,8 @@ Density
     :figwidth: 50%
     :name: fig_Petrophysic_model_Den
 
+    Petrophysical density model.
+
 Using a cut-off value of -0.24 g/cc,
 we generate an initial rock model for the TKC complex based on the gravity
 gradiometry inversion (shown in :numref:`fig_Petrophysic_model_Den`). This result shows that the DO-27 pipe extends further
@@ -38,6 +40,8 @@ Susceptibility
     :align: right
     :figwidth: 50%
     :name: fig_Petrophysic_model_DenSusc
+
+    Petrophysic al density and susceptibility model.
 
 The density contrast model only
 provides information about the spatial extents of the kimberlite pipes but it
@@ -60,6 +64,8 @@ Conductivity
     :figwidth: 50%
     :name: fig_Petrophysic_model_DenCondSusc
 
+    Density, susceptibility and conductivity petrophysical model.
+
 From the density and magnetic susceptibility, kimberlite rocks are easily
 differentiated from the background rocks. Low to moderate susceptibility was
 recovered over both DO-18 and in the southern part of DO-27. From a potential
@@ -81,6 +87,8 @@ Chargeability
     :align: right
     :figwidth: 50%
     :name: fig_Petrophysic_model_DenCondSuscCharg
+
+    Density, susceptibility, conductivity and chargeability petrophysical model.
 
 
 We have so far combined information from density, susceptibility and conductivity which
@@ -162,7 +170,11 @@ information in an interpretation.
     :figwidth: 100%
     :name: Interpretation_RockGeology
 
+    Map of the geologic unit interpretation.
+
 .. figure:: images/Interpretation_RockGeology_BB.png
     :align: center
     :figwidth: 100%
     :name: Interpretation_RockGeology_BB
+
+    Cross section of the geologic unit interpretation.

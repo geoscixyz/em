@@ -17,7 +17,7 @@ from docutils.parsers.rst import directives
 
 import sphinx
 from sphinx.locale import _
-from sphinx.environment import NoUri
+from sphinx.errors import NoUri
 from sphinx.util.nodes import set_source_info
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst.directives.admonitions import BaseAdmonition

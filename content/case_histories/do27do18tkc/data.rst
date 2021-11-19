@@ -213,6 +213,8 @@ differentiate between noise and any usable IP signal. If successful, we could ch
     :figwidth: 50%
     :name: Data_IP_Background
 
+    IP soundings
+
 
 :numref:`Data_IP_Background` compares multiple soundings from the NanoTEM data
 set at locations directly above DO-18 and away from the pipe, which we refer
@@ -225,6 +227,8 @@ signal in the background soundings is likely due to surface glacial sediments
     :align: right
     :figwidth: 50%
     :name: fig_Data_IP
+
+    IP data map
 
 The strong spatial correlation between the negative data and the location of
 the pipes suggests however that some IP signal may originate from the
@@ -248,6 +252,3 @@ interest:
 
 - A4: On the southern portion of DO-27. The A4 anomaly appears to be different
   as the data goes from positive to negative.
-
-
-

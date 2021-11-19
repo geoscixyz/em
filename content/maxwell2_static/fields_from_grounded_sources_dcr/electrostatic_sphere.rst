@@ -30,21 +30,32 @@ The problem setup is shown in the figure below, where we have
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
 
-    sig0 = 10.**-3.         # conductivity of the whole-space in S/m
-    sig1 = 10.**-1.         # conductivity of the sphere in S/m
-    R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretization
-    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
-    yr = xr.copy()      # Y-axis discretization
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
-    colorsphere=[0.1,0.1,0.6]
+    R = 50  # Define the radius of the sphere
 
     fig, ax = plt.subplots(1,1, figsize = (6,6))
-    ax = electrostatic_sphere.get_Setup(XYZ,sig0,sig1,R,E0,ax,False,colorsphere)
+
+    circle = patches.Circle([0,0],radius=R, alpha=0.4, color='blue', linewidth=1.5)
+    ax.add_patch(circle)
+    ax.arrow(0., 0., np.sqrt(2.)*R/2., np.sqrt(2.)*R/2., head_width=0., head_length=0.)
+
+    for y in np.linspace(-2 * R, 2 * R, 10):
+        ax.arrow(-2*R, y, 0.3*R, 0.0, head_width=5., head_length=2., color='k')
+
+    ax.text(-1., -np.sqrt(R)/2.-10., '$\sigma_1$')
+    ax.text(-0.05, -R-10, '$\sigma_0$')
+    ax.text(0.5*np.cos(np.pi/6)*R, 0.5*np.sin(np.pi/6)*R, 'R')
+    ax.text(-1.8*R, 1.3*R, '$\mathbf{E_0} = E_0 \mathbf{\hat{x}}$ V/m')
+
+    ax.set_facecolor([0.4, 0.7, 0.4, 0.3])
+    ax.set_xlim([-2 * R, 2 * R])
+    ax.set_ylim([-2 * R, 2 * R])
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
 
     plt.show()
 
@@ -101,22 +112,34 @@ the integration from :eq:`V_from_e` gives
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
     sig0 = 10.**-3.         # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
+
+    sphere = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+
     n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
+
+    potentials = sphere.potential((X, Y, Z), field='primary')
 
     fig, ax = plt.subplots(1,1, figsize = (8,6))
-    ax = electrostatic_sphere.Plot_Primary_Potential(XYZ,sig0,sig1,R,E0,ax)
+    im = ax.pcolor(X, Y, potentials, shading='auto')
+    cb = plt.colorbar(im)
+    cb.set_label(label='Potential ($V$)')
+    ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
 
-    plt.show()
+    ax.set_title('Primary Potential')
+    ax.set_ylabel('Y coordinate ($m$)')
+    ax.set_xlabel('X coordinate ($m$)')
+    ax.set_aspect('equal')
 
 The total potential outside the sphere :math:`(r > R)` is
 
@@ -133,31 +156,47 @@ and inside the sphere :math:`(r < R)`
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
     sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
+
+    sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
+
     n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
 
-    fig, ax = plt.subplots(2,2,figsize=(18,12))
-    ax = electrostatic_sphere.mkvc(ax)
-    ax[0] = electrostatic_sphere.Plot_Total_Potential(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Potential',fontsize=electrostatic_sphere.ftsize_title)
-    ax[1] = electrostatic_sphere.Plot_Secondary_Potential(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Potential',fontsize=electrostatic_sphere.ftsize_title)
-    ax[2] = electrostatic_sphere.Plot_Total_Potential(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Potential',fontsize=electrostatic_sphere.ftsize_title)
-    ax[3] = electrostatic_sphere.Plot_Secondary_Potential(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Potential',fontsize=electrostatic_sphere.ftsize_title)
+    Vt1, Vp1, Vs1 = sphere1.potential((X, Y, Z), field='all')
+    Vt2, Vp2, Vs2 = sphere2.potential((X, Y, Z), field='all')
+
+    fig, axs = plt.subplots(2,2,figsize=(18,12))
+    for ax, V, title in zip(
+        axs.flatten(),
+        [Vt1, Vt2, Vs1, Vs2],
+        [
+            'Conductive Sphere: \n Total Potential',
+            'Resistive Sphere: \n Total Potential',
+            'Conductive Sphere: \n Secondary Potential',
+            'Resistive Sphere: \n Secondary Potential',
+        ]
+    ):
+        im = ax.pcolor(X, Y, V, shading='auto')
+        cb = plt.colorbar(im, ax=ax)
+        cb.set_label(label='Potential ($V$)')
+        ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
+
+        ax.set_title(title)
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
 
     plt.tight_layout()
     plt.show()
@@ -183,32 +222,47 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
     sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
+
+    sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
+
     n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
-    electrostatic_sphere.ftsize_title = 18      #font size for titles
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
 
-    fig, ax = plt.subplots(2,2,figsize=(18,12))
-    ax = electrostatic_sphere.mkvc(ax)
-    ax[0] = electrostatic_sphere.Plot_Total_ElectricField(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Electric Field',fontsize=electrostatic_sphere.ftsize_title)
-    ax[1] = electrostatic_sphere.Plot_Secondary_ElectricField(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Electric Field',fontsize=electrostatic_sphere.ftsize_title)
-    ax[2] = electrostatic_sphere.Plot_Total_ElectricField(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Electric Field',fontsize=electrostatic_sphere.ftsize_title)
-    ax[3] = electrostatic_sphere.Plot_Secondary_ElectricField(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Electric Field',fontsize=electrostatic_sphere.ftsize_title)
+    Et1, Ep1, Es1 = sphere1.electric_field((X, Y, Z), field='all')
+    Et2, Ep2, Es2 = sphere2.electric_field((X, Y, Z), field='all')
+
+    fig, axs = plt.subplots(2,2,figsize=(18,12))
+    Es = [Et1, Et2, Es1, Es2]
+    titles = [
+        'Conductive Sphere: \n Total Electric Field',
+        'Resistive Sphere: \n Total Electric Field',
+        'Conductive Sphere: \n Secondary Electric Field',
+        'Resistive Sphere: \n Secondary Electric Field',
+    ]
+    for ax, E, title in zip(axs.flatten(), Es, titles):
+        E_amp = np.linalg.norm(E, axis=-1)
+        im = ax.pcolor(X, Y, E_amp, shading='auto')
+        cb = plt.colorbar(im, ax=ax)
+        cb.set_label(label= 'Amplitude ($V/m$)')
+        ax.streamplot(X, Y, E[..., 0], E[..., 1], color='gray', linewidth=2., density=0.75)
+        ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
+
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+        ax.set_title(title)
 
     plt.tight_layout()
     plt.show()
@@ -265,31 +319,47 @@ the charges and not the reverse.
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
-    sig0 = 10.**-3.          # conductivity of the whole space in S/m
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
+
+    sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
+
     n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
 
-    fig, ax = plt.subplots(2,2,figsize=(18,12))
-    ax = electrostatic_sphere.mkvc(ax)
-    ax[0] = electrostatic_sphere.Plot_Total_Currents(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Total Current Density',fontsize=electrostatic_sphere.ftsize_title)
-    ax[1] = electrostatic_sphere.Plot_Secondary_Currents(XYZ,sig0,sig1,R,E0,ax[1])
-    ax[1].set_title('Conductive Sphere: \n Secondary Current Density',fontsize=electrostatic_sphere.ftsize_title)
-    ax[2] = electrostatic_sphere.Plot_Total_Currents(XYZ,sig0,sig2,R,E0,ax[2])
-    ax[2].set_title('Resistive Sphere: \n Total Current Density',fontsize=electrostatic_sphere.ftsize_title)
-    ax[3] = electrostatic_sphere.Plot_Secondary_Currents(XYZ,sig0,sig2,R,E0,ax[3])
-    ax[3].set_title('Resistive Sphere: \n Secondary Current Density',fontsize=electrostatic_sphere.ftsize_title)
+    Jt1, Jp1, Js1 = sphere1.current_density((X, Y, Z), field='all')
+    Jt2, Jp2, Js2 = sphere2.current_density((X, Y, Z), field='all')
+
+    fig, axs = plt.subplots(2,2,figsize=(18,12))
+    Js = [Jt1, Jt2, Js1, Js2]
+    titles = [
+        'Conductive Sphere: \n Total Current Density',
+        'Resistive Sphere: \n Total Current Density',
+        'Conductive Sphere: \n Secondary Current Density',
+        'Resistive Sphere: \n Secondary Current Density',
+    ]
+    for ax, J, title in zip(axs.flatten(), Js, titles):
+        J_amp = np.linalg.norm(J, axis=-1)
+        im = ax.pcolor(X, Y, J_amp, shading='auto')
+        cb = plt.colorbar(im, ax=ax)
+        cb.set_label(label='Current Density ($A/m^2$)')
+        ax.streamplot(X, Y, J[..., 0], J[..., 1], color='gray', linewidth=2., density=0.75)
+        ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
+
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+        ax.set_title(title)
 
     plt.tight_layout()
     plt.show()
@@ -324,27 +394,41 @@ The figure below shows surface charge density at the surface of sphere.
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
-    sig0 = 10.**-3.          # conductivity of the wholespace in S/m
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
     E0   = 1.           # inducing field strength in V/m
-    n = 50             #level of discretisation
+
+    sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
+
+    n = 50             #level of discretization
     xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
     yr = xr.copy()      # Y-axis discretization
-    dx = xr[1]-xr[0]       # mesh spacing
-    dy = yr[1]-yr[0]       # mesh spacing
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
 
-    fig, ax = plt.subplots(1,2,figsize=(18,6))
-    ax = electrostatic_sphere.mkvc(ax)
-    ax[0] = electrostatic_sphere.Plot_ChargesDensity(XYZ,sig0,sig1,R,E0,ax[0])
-    ax[0].set_title('Conductive Sphere: \n Charge Accumulation',fontsize=electrostatic_sphere.ftsize_title)
-    ax[1] = electrostatic_sphere.Plot_ChargesDensity(XYZ,sig0,sig2,R,E0,ax[1])
-    ax[1].set_title('Resistive Sphere: \n Charge Accumulation',fontsize=electrostatic_sphere.ftsize_title)
+    q1 = sphere1.charge_density((X, Y, Z), dr=xr[1]-xr[0])
+    q2 = sphere1.charge_density((X, Y, Z), dr=xr[1]-xr[0])
+
+    fig, axs = plt.subplots(1,2,figsize=(18,6))
+    qs = [q1, q2]
+    titles = ['Conductive Sphere: \n Charge Accumulation', 'Resistive Sphere: \n Charge Accumulation']
+
+    for ax, q, title in zip(axs, qs, titles):
+        im = ax.pcolor(X, Y, q, shading='auto')
+        cb1 = plt.colorbar(im, ax=ax)
+        cb1.set_label(label= 'Charge Density ($C/m^2$)')
+        ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
+
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_title(title)
+        ax.set_aspect('equal')
 
     plt.tight_layout()
     plt.show()
@@ -372,30 +456,101 @@ The reverse is observed for a resistive sphere.
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
-    sig0 = 10.**-3.          # conductivity of the wholespace
-    sig1 = 10.**-1.         # conductivity of the conductive sphere
-    sig2 = 10.**-5.         # conductivity of the resistive sphere
-    R    = 50.          # radius of the sphere
-    E0   = 1.           # inducing field strength
-    n = 50             #level of discretisation
-    xr = np.linspace(-2.*R, 2.*R, n) # X-axis discretization
-    yr = xr.copy()      # Y-axis discretization
-    zr = np.r_[0]          # identical to saying `zr = np.array([0])`
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr) # Space Definition
-    PlotOpt = 'Total'
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
+    sig2 = 10.**-5.         # conductivity of the sphere in S/m
+    R    = 50.          # radius of the sphere in m
+    E0   = 1.           # inducing field strength in V/m
 
-    xstart=-100.
-    ystart=-100.
-    xend=100.
-    yend=100.
-    nb_dipole=31
-    electrode_spacing=10
+    sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
 
-    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R,R,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    n = 31             #level of discretization
+    xr = np.linspace(-100, 100, n) # X-axis dipole midpoints
+    yr = xr.copy()      # Y-axis dipole midpoints
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
 
-    plt.tight_layout()
+    Dx = np.linspace(-100, 100, n)
+    Dy = np.linspace(-100, 100, n)
+    Dz = np.zeros(n)
+    electrode_spacing = 10
+
+    Mx = Dx - 0.5 * electrode_spacing/np.sqrt(2)
+    My = Dy - 0.5 * electrode_spacing/np.sqrt(2)
+    Mz = Dz
+    Nx = Dx + 0.5 * electrode_spacing/np.sqrt(2)
+    Ny = Dy + 0.5 * electrode_spacing/np.sqrt(2)
+    Nz = Dz
+
+    fig = plt.figure(figsize=(20, 20))
+    ax0 = plt.subplot2grid((20, 12), (0, 0), colspan=6, rowspan=6)
+    ax1 = plt.subplot2grid((20, 12), (0, 6), colspan=6, rowspan=6)
+    ax2 = plt.subplot2grid((20, 12), (8, 0), colspan=6, rowspan=6)
+    ax3 = plt.subplot2grid((20, 12), (8, 6), colspan=6, rowspan=6)
+    ax4 = plt.subplot2grid((20, 12), (16, 2), colspan=9, rowspan=4)
+
+    for ax, color, sig_circ in zip([ax0, ax1], [[0.6, 0.1, 0.1], [0.1, 0.1, 0.6]], [sig1, sig2]):
+        circle = patches.Circle([0,0],radius=R, alpha=0.4, color=color, linewidth=1.5)
+        ax.add_patch(circle)
+        ax.arrow(0., 0., np.sqrt(2.)*R/2., np.sqrt(2.)*R/2., head_width=0., head_length=0.)
+
+        for y in np.linspace(-2 * R, 2 * R, 10):
+            ax.arrow(-2*R, y, 0.3*R, 0.0, head_width=5., head_length=2., color='k')
+
+        ax.text(0, -R/2., f'$\sigma_1$={sig_circ*1000:3.3f} mS/m')
+        ax.text(0, -1.5*R, f'$\sigma_0$={sig0*1000:3.3f} mS/m')
+        ax.text(0.5*np.cos(np.pi/6)*R, 0.5*np.sin(np.pi/6)*R, f'R={R:1.0f} m')
+        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
+
+        ax.set_facecolor([0.4, 0.7, 0.4, 0.3])
+        ax.set_xlim([-2 * R, 2 * R])
+        ax.set_ylim([-2 * R, 2 * R])
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+
+    Vt1 = sphere1.potential((X, Y, Z), field='total')
+    Vt2 = sphere2.potential((X, Y, Z), field='total')
+    titles = [
+            'Conductive Sphere: \n Total Potential',
+            'Resistive Sphere: \n Total Potential',
+        ]
+
+    for ax, V, title in zip([ax2, ax3], [Vt1, Vt2], titles):
+        im = ax.pcolor(X, Y, V, shading='auto')
+        cb = plt.colorbar(im, ax=ax)
+        cb.set_label(label='Potential ($V$)')
+        ax.add_patch(patches.Circle([0,0], R, fill=False, linestyle='--'))
+
+        ax.set_title(title)
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+
+        ax.plot(Dx, Dy, color='gray')
+        ax.scatter(Dx, Dx, color='black', label="Dipole Midpoint")
+        ax.scatter(np.r_[Mx, Nx], np.r_[My, Ny], color='red', label="Electrodes")
+        ax.legend(loc='best')
+
+    VM1 = sphere1.potential((Mx, My, Mz), field='total')
+    VN1 = sphere1.potential((Nx, Ny, Nz), field='total')
+
+    VM2 = sphere2.potential((Mx, My, Mz), field='total')
+    VN2 = sphere2.potential((Nx, Ny, Nz), field='total')
+
+    #Plot the Data (from Configuration 0)
+    ax4.plot(np.sqrt(2)*np.linspace(-100, 100, n), VM1-VN1,
+             marker='o', color='red', linewidth=3., label='Left Model Response' )
+    ax4.plot(np.sqrt(2)*np.linspace(-100, 100, n), VM2-VN2,
+             marker='o', color='blue', linewidth=3., label='Right Model Response' )
+    ax4.set_xlabel('Profile Distance ($m$)')
+    ax4.set_ylabel('Potential Difference ($V$)')
+    ax4.legend(loc='best')
+
     plt.show()
 
 
@@ -414,29 +569,101 @@ The only parameters that have changed are the radius and the conductivity of the
 
 .. plot::
 
-    from em_examples import sphereElectrostatic_example as electrostatic_sphere
+    from matplotlib import patches
+    from geoana.em.static import ElectrostaticSphere
 
-    sig0 = 10.**-3.
-    sig1 = 10.**-2.
+    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
+    sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 1.310344828 * 10**-3.
-    R0    = 20.
-    R1 = 40.
-    E0   = 1.
-    n = 50
-    xr = np.linspace(-100, 100, n)
-    yr = xr.copy()
-    zr = np.r_[0]
-    XYZ = electrostatic_sphere.ndgrid(xr,yr,zr)
-    xstart = -100.
-    ystart = 50.
-    xend = 100.
-    yend = 50.
-    nb_dipole = 11
-    electrode_spacing = 20.
-    PlotOpt = 'Total'
+    R0   = 20.          # radius of the sphere in m
+    R1   = 40.
+    E0   = 1.           # inducing field strength in V/m
 
-    #Plot Configuration, Potential and Data
-    electrostatic_sphere.two_configurations_comparison(XYZ,sig0,sig1,sig2,R0,R1,E0,xstart,ystart,xend,yend,nb_dipole,electrode_spacing,PlotOpt)
+    sphere1 = ElectrostaticSphere(R0, sig1, sig0, E0) # create the sphere object
+    sphere2 = ElectrostaticSphere(R1, sig2, sig0, E0) # create the sphere object
 
-    plt.tight_layout()
+    n = 31             #level of discretization
+    xr = np.linspace(-100, 100, n) # X-axis dipole midpoints
+    yr = xr.copy()      # Y-axis dipole midpoints
+    X, Y = np.meshgrid(xr, yr)
+    Z = np.zeros_like(X)
+
+    Dx = np.linspace(-100, 100, n)
+    Dy = np.linspace(-100, 100, n)
+    Dz = np.zeros(n)
+    electrode_spacing = 10
+
+    Mx = Dx - 0.5 * electrode_spacing/np.sqrt(2)
+    My = Dy - 0.5 * electrode_spacing/np.sqrt(2)
+    Mz = Dz
+    Nx = Dx + 0.5 * electrode_spacing/np.sqrt(2)
+    Ny = Dy + 0.5 * electrode_spacing/np.sqrt(2)
+    Nz = Dz
+
+    fig = plt.figure(figsize=(20, 20))
+    ax0 = plt.subplot2grid((20, 12), (0, 0), colspan=6, rowspan=6)
+    ax1 = plt.subplot2grid((20, 12), (0, 6), colspan=6, rowspan=6)
+    ax2 = plt.subplot2grid((20, 12), (8, 0), colspan=6, rowspan=6)
+    ax3 = plt.subplot2grid((20, 12), (8, 6), colspan=6, rowspan=6)
+    ax4 = plt.subplot2grid((20, 12), (16, 2), colspan=9, rowspan=4)
+
+    R = 50
+    for ax, color, sig_circ, r in zip([ax0, ax1], [[0.6, 0.1, 0.1], [0.1, 0.1, 0.6]], [sig1, sig2], [R0, R1]):
+        circle = patches.Circle([0,0],radius=r, alpha=0.4, color=color, linewidth=1.5)
+        ax.add_patch(circle)
+        ax.arrow(0., 0., np.sqrt(2.)*r/2., np.sqrt(2.)*r/2., head_width=0., head_length=0.)
+
+        for y in np.linspace(-2 * R, 2 * R, 10):
+            ax.arrow(-2*R, y, 0.3*R, 0.0, head_width=5., head_length=2., color='k')
+
+        ax.text(0, -r/2., f'$\sigma_1$={sig_circ*1000:3.3f} mS/m')
+        ax.text(0, -1.5*r, f'$\sigma_0$={sig0*1000:3.3f} mS/m')
+        ax.text(0.5*np.cos(np.pi/6)*r, 0.5*np.sin(np.pi/6)*r, f'R={r:1.0f} m')
+        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
+
+        ax.set_facecolor([0.4, 0.7, 0.4, 0.3])
+        ax.set_xlim([-2 * R, 2 * R])
+        ax.set_ylim([-2 * R, 2 * R])
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+
+    Vt1 = sphere1.potential((X, Y, Z), field='total')
+    Vt2 = sphere2.potential((X, Y, Z), field='total')
+    titles = [
+            'Conductive Sphere: \n Total Potential',
+            'Resistive Sphere: \n Total Potential',
+        ]
+
+    for ax, V, title, r in zip([ax2, ax3], [Vt1, Vt2], titles, [R0, R1]):
+        im = ax.pcolor(X, Y, V, shading='auto')
+        cb = plt.colorbar(im, ax=ax)
+        cb.set_label(label='Potential ($V$)')
+        ax.add_patch(patches.Circle([0,0], r, fill=False, linestyle='--'))
+
+        ax.set_title(title)
+        ax.set_ylabel('Y coordinate ($m$)')
+        ax.set_xlabel('X coordinate ($m$)')
+        ax.set_aspect('equal')
+
+        ax.plot(Dx, Dy, color='gray')
+        ax.scatter(Dx, Dx, color='black', label="Dipole Midpoint")
+        ax.scatter(np.r_[Mx, Nx], np.r_[My, Ny], color='red', label="Electrodes")
+        ax.legend(loc='best')
+
+    VM1 = sphere1.potential((Mx, My, Mz), field='total')
+    VN1 = sphere1.potential((Nx, Ny, Nz), field='total')
+
+    VM2 = sphere2.potential((Mx, My, Mz), field='total')
+    VN2 = sphere2.potential((Nx, Ny, Nz), field='total')
+
+    #Plot the Data (from Configuration 0)
+    ax4.plot(np.sqrt(2)*np.linspace(-100, 100, n), VM1-VN1,
+             marker='o', color='red', linewidth=3., label='Left Model Response' )
+    ax4.plot(np.sqrt(2)*np.linspace(-100, 100, n), VM2-VN2,
+             marker='o', color='blue', linewidth=3., label='Right Model Response' )
+    ax4.set_xlabel('Profile Distance ($m$)')
+    ax4.set_ylabel('Potential Difference ($V$)')
+    ax4.legend(loc='best')
+
     plt.show()

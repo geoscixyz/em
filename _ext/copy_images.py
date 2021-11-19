@@ -1,7 +1,8 @@
 import os
 import shutil
 
-def copyImages():
+
+def copy_images():
     # get relevant directories
     cwd = os.getcwd()
     contentdir = os.path.sep.join(cwd.split(os.path.sep) + ['content'])
@@ -27,9 +28,13 @@ def copyImages():
         if root.endswith('images'):
             for filename in fileList:
                 if filename not in imnames:
-                    shutil.copy(os.path.join(root, filename),buildimagesdir)
-    return
+                    print(f'copying in {filename}')
+                    shutil.copy(os.path.join(root, filename), buildimagesdir)
 
 
-if __name__ == "__main__":
-    copyImages()
+if __name__ == '__main__':
+    """
+        Run the following to create the formula sheet.
+    """
+
+    copy_images()

@@ -1,15 +1,6 @@
-numpy
-scipy
-ipython
-ipywidgets
-flask
 sphinx
-docutils
-matplotlib
-properties[math]
 sphinxcontrib-bibtex
 sphinx_rtd_theme
-Pillow
-em_examples
-SimPEG
 pytest
+matplotlib
+geoana

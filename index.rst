@@ -67,7 +67,7 @@ surveys, using controlled or natural sources, can be applied in practise.
 play an essential role. They allow readers to make the
 connection between the geoscience problem, the EM survey, and the eventual
 outcome. Understanding the fundamental physics is facilitated through the use
-of `Jupyter Notebooks <https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb>`_
+of `Jupyter Notebooks <https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb>`_
 which allow users to visualize fields and
 explore understanding by changing parameters. The simulations use the open-
 source package `SimPEG <https://simpeg.xyz>`_ (Simulation and Parameter
@@ -75,7 +75,7 @@ Estimation in Geophysics).
 
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/master?filepath=index.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb
     :alt: Binder
 
 

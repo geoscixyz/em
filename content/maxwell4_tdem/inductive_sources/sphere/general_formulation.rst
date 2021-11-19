@@ -59,7 +59,7 @@ An explicit expression for :math:`\chi (t)` can be obtained from Wait and Spies 
 where :math:`u(t)` is the unit-step function, :math:`\delta (t)` is the Dirac delta function, :math:`\mu_r = \mu/\mu_0` is the relative permeability of the sphere and:
 
 .. math::
-	\beta = \big ( \mu_0 \sigma \big )^{1/2} R
+	\beta = \big ( \mu \sigma \big )^{1/2} R
 	:label: eqBetaGenDef
 	
 Coefficients :math:`\xi_n` within the sum are defined by:
