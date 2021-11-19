@@ -50,7 +50,7 @@ jobs:
       run: |
         python _ext/build_contrib_case.py
         make html
-        python copy_images
+        python _ext/copy_images.py
 
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.5.0
