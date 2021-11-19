@@ -14,7 +14,7 @@ Bookpurnong
 
 **Special Thanks**
 
-Thanks to the `Exploration Geophysics <http://www.publish.csiro.au/eg>`__ for permission to reproduce figures and adapt text from:
+Thanks to the `Exploration Geophysics <https://www.tandfonline.com/toc/texg20/current>`__ for permission to reproduce figures and adapt text from:
 
     - Andrea Viezzoli, Esben Auken, and Tim Munday (2009). ”Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia.” Exploration Geophysics, 40(2), 173-183. `https://doi.org/10.1071/EG08027 <https://doi.org/10.1071/EG08027>`__
 
