@@ -17,6 +17,9 @@
 
 """
 
+# This script was used to create the static images in dcr.
+# It is not needed to be run to build the decomentation.
+
 
 #%%
 from SimPEG import *

@@ -116,13 +116,13 @@ will change as Tx and Rx loow is moving along the surface.
     :align: center
     :name: Couping_3loops
 
+    Coupling between the three loops.
+
 Computed coupling coefficient along the line is shown below:
 
 .. plot::
 
-    from em_examples.EMcircuit import Mijfun, Cfun, Qfun
-    import numpy as np
-    import matplotlib.pyplot as plt
+    from scipy.constants import mu_0
     L = 1.
     R = 2000.
     xc = 0.
@@ -140,9 +140,41 @@ Computed coupling coefficient along the line is shown below:
     yp = xp.copy()
     zp = np.r_[-ht]
     xyz_profile = np.c_[xp, np.zeros_like(xp), np.ones_like(xp)*ht]
-    c_profile, m12_profile, m23_profile, m13_profile = Cfun(L,R,xc,yc,zc,incl,decl,S,ht,f,xyz_profile)
+    tx_loc = xyz_profile - [S/2, 0, 0]
+    rx_loc = xyz_profile + [S/2, 0, 0]
+
+    def Mij(loc_i, loc_j, dir_i, dir_j, area_i=1, area_j=1):
+        di=dir_i[0]*np.pi/180
+        dd=dir_i[1]*np.pi/180
+
+        m_i = area_i * np.array([
+            np.cos(di)*np.cos(dd),
+            np.cos(di)*np.sin(dd),
+            np.sin(di)
+        ])
+
+        ai=dir_j[0]*np.pi/180
+        ad=dir_j[1]*np.pi/180
+
+        m_j = area_j * np.array([
+            np.cos(ai)*np.cos(ad),
+            np.cos(ai)*np.sin(ad),
+            np.sin(ai)
+        ])
+
+        dr = loc_i - loc_j
+        r = np.linalg.norm(dr, axis=-1)[:, None]
+        B = mu_0 / (4*np.pi) * (3 * dr * dr.dot(m_i)[:, None] / r**5 - m_i/r**3)
+        return B.dot(m_j)
+
+    M13 = Mij(tx_loc, rx_loc, (90, 0), (90, 0))
+    M12 = Mij(tx_loc, [xc, yc, zc], (90, 0), (incl, decl), area_j=3.0)
+    M23 = Mij([xc, yc, zc], rx_loc, (incl, decl), (90, 0), area_i=3.0)
+    C = -M12*M23/(M13*L)
+
+
     fig = plt.figure(figsize=(5,3))
-    plt.plot(xp, c_profile, 'k', lw=2)
+    plt.plot(xp, C, 'k', lw=2)
     plt.plot(xp, np.zeros_like(xp), 'k--', lw=1)
     plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
     plt.xlabel("Mid point between Tx and Rx (m)")
@@ -169,13 +201,10 @@ imaginary or ampliutde and phase.
 
 .. plot::
 
-    from em_examples.EMcircuit  import Qfun
-    import numpy as np
-    import matplotlib.pyplot as plt
     L = 1.
     R = 2000.
     alpha = np.logspace(-3, 3, 100)
-    alpha, Q = Qfun(R, L, None, alpha=alpha)
+    Q = (alpha ** 2 + 1j * alpha) / (1 + alpha ** 2)
     fig = plt.figure(figsize=(10, 3))
     ax1 = plt.subplot(121)
     ax2 = plt.subplot(122)
@@ -309,5 +338,3 @@ In frequency domain EM survey:
 
 - the 90 :math:`^\circ` out-of-phase fraction of :math:`H^s_3` is called the
   **Imaginary**, **Out-of-phase**, or **Quadrature** component.
-
-
