@@ -28,7 +28,7 @@ the :ref:`numerical simulation<Mt_Isa_Simulation>`, current channeling through
 the Breakaway Shale unit and the mineralization at depth may considerably
 reduce the measured potentials west of these anomalies.
 
-.. _MIMDAS: http://www.smedg.org.au/Sym01NS.htm
+.. _MIMDAS: https://smedg.org.au/advanced-geophysical-technology-in-modern-exploration-mim-nick-sheard-mimdas-geophysics/
 
 .. _MtISa_DCR_data:
 

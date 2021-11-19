@@ -33,7 +33,6 @@ EM Apps
 There are a few ways you can run the notebooks. We provide instructions using:
 
 - :ref:`Binder <binder>` (free, no login required)
-- :ref:`Microsoft Azure <azure>` (free, login required)
 
 Alternatively, they can be downloaded from GitHub and run locally.
 Please see instructions at: https://github.com/geoscixyz/em-apps
@@ -94,13 +93,11 @@ Simulation Notebooks
 These notebooks walk through forward simulations of both frequency domain
 electromagnetics and time domain electromagnetics using `SimPEG <http://simpeg.xyz>`_.
 
-See the above instructions to run the notebooks from Binder or Azure. Note that the url's are different.
+See the above instructions to run the notebooks from Binder.
 
 - :ref:`Binder <binder>` (free, no login required): https://mybinder.org/v2/gh/simpeg/em-notebooks/master?filepath=index.ipynb
-- :ref:`Microsoft Azure <azure>` (free, login required): https://notebooks.azure.com/import/gh/simpeg/em-notebooks
 
 Alternatively, they can be downloaded from GitHub and run locally.
 Please see instructions at: https://github.com/simpeg/em-notebooks
 
 Further examples and documentation are available at http://simpeg.xyz.
-

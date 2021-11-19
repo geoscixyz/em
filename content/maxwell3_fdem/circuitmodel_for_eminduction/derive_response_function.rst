@@ -103,13 +103,10 @@ Below figure shows real and imaginary component of :math:`Q`.
 
 .. plot::
 
-    from em_examples.EMcircuit import Qfun
-    import numpy as np
-    import matplotlib.pyplot as plt
     L = 1.
     R = 2000.
     alpha = np.logspace(-3, 3, 100)
-    alpha, Q = Qfun(R, L, None, alpha=alpha)
+    Q = (alpha ** 2 + 1j * alpha) / (1 + alpha ** 2)
     fig = plt.figure(figsize=(5, 3))
     ax1 = plt.subplot(111)
     ax1.semilogx(alpha, Q.real, 'k', lw=3)
