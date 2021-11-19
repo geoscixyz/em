@@ -76,7 +76,7 @@ For a conductive and permeable sphere, the impulse response is given by (:cite:`
 where:
 
 .. math::
-	\beta = (\mu_0 \sigma )^{1/2} R
+	\beta = (\mu \sigma )^{1/2} R
 
 
 Coefficients :math:`\xi_n` within the sum are defined by:
