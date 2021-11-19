@@ -39,6 +39,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.bibtex',
+    'sphinx_rtd_theme',
     'matplotlib.sphinxext.plot_directive',
     'purpose',
     'question',
