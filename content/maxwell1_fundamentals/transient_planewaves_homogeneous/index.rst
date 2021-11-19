@@ -9,7 +9,7 @@ Transient Plane Waves in Homogeneous Media
 
 **Introduction**
 
-We have previously shown that in homogeneous media, the propagation of electromagnetic signals in the time domain is governed by the :ref:`wave equation<time_domain_equations>`. One solution to this equation is a planewave, where electric and magnetic fields lie in a 2D plane and the wave propagates in a direction perpendicular to that plane. Physically, the planewave solutions offer good approximations to what is happening far away from electromagnetic sources. As a result, planewaves form a primary basis for understanding the fundamental behaviours of many electromagnetic phenomena.  
+We have previously shown that in homogeneous media, the propagation of electromagnetic signals in the time domain is governed by the :ref:`wave equation<time_domain_equations>`. One solution to this equation is a planewave, where electric and magnetic fields lie in a 2D plane and the wave propagates in a direction perpendicular to that plane. Physically, the planewave solutions offer good approximations to what is happening far away from electromagnetic sources. As a result, planewaves form a primary basis for understanding the fundamental behaviours of many electromagnetic phenomena.
 
 .. figure:: images/planewavedown.png
    :align: right
@@ -18,12 +18,12 @@ We have previously shown that in homogeneous media, the propagation of electroma
 
    Geometry of an EM plane wave propagating downwards.
 
-Here, we explore the propagation of planewaves in the time domain (for impulse signals). The content provided here parallels materials from many EM resources (see [WH88][Gri99][Str41]). `An app <http://notebooks.azure.com/library/em_apps>`__ is provided that allow you to explore the concepts of wavelength, attenuation and other aspects of the propagating EM fields. To compliment the app, :ref:`questions<harmonic_planewaves_homogeneous_questions>` are provided to promote interactive learning. The resource is augmented with derivations and equations that quantify the information learned through using the apps. 
+Here, we explore the propagation of planewaves in the time domain (for impulse signals). The content provided here parallels materials from many EM resources (see [WH88][Gri99][Str41]). `An app <https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb>`__ is provided that allow you to explore the concepts of wavelength, attenuation and other aspects of the propagating EM fields. To compliment the app, :ref:`questions<harmonic_planewaves_homogeneous_questions>` are provided to promote interactive learning. The resource is augmented with derivations and equations that quantify the information learned through using the apps.
 
 **Quick Links**
 
     - :ref:`Deriving the planewave solution <transient_planewaves_homogeneous_derivation>`
-    - `Link to the TDEM Planewave Wholespace app <http://notebooks.azure.com/library/em_apps>`__
+    - `Link to the TDEM Planewave Wholespace app <https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb>`__
     - :ref:`Supporting math for the App <transient_planewaves_homogeneous_derivation_app>`
     - :ref:`Questions to be answered using the app <transient_planewaves_homogeneous_questions>`
 
@@ -38,9 +38,9 @@ There are numerous properties which can be used to understand the propagation of
 .. _transient_planewaves_homogeneous_index_app:
 
 .. geosciapp::
-    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `TDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps>`__ from the notebooks page. Don't forget to sign in.
+    While navigating through the subsequent materials on planewaves in homogeneous media, it is suggested that you open the `TDEM Planewave Wholespace App <https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb>`__ from the notebooks page. Don't forget to sign in.
 
-A fundamental understanding of planewave propagation in the time domain can be obtained by using the `TDEM Planewave Wholespace App <http://notebooks.azure.com/library/em_apps>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, time) and answer a set of fundamental questions. For example, assume that an impulse excitation sends an EM planewave signal into the Earth and that the ground has a conductivity of 1 S/m.
+A fundamental understanding of planewave propagation in the time domain can be obtained by using the `TDEM Planewave Wholespace App <https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb>`__ (:numref:`FDEM_planewaves_wholespace_app`); which allows the user to simulate the electric and magnetic fields supported by a downward propagating planewave. The app allows the user to explore the effects of different parameters (e.g. conductivity, observer location, time) and answer a set of fundamental questions. For example, assume that an impulse excitation sends an EM planewave signal into the Earth and that the ground has a conductivity of 1 S/m.
 
     - What is the peak amplitude (maximum amplitude) at :math:`t` = 0.01 s?
     - At what time does the peak amplitude of the wave cross 600 m depth?
@@ -58,10 +58,9 @@ A host of additional questions which can be answered using the app are found :re
 
 .. toctree::
     :maxdepth: 1
-    
+
     derivation
     peakdistance
     peaktime
     peakvelocity
     questions
-

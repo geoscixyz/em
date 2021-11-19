@@ -23,6 +23,8 @@ conductivity distribution, as represented schematically in
     :figwidth: 75%
     :name: fig_Processing_Lateral_EM1D_Algo
 
+    Inversion schematic.
+
 - Between each 1D iteration, an average conductivity model is interpolated
 - onto a global 3D mesh and used as a reference for subsequent inversions.
 

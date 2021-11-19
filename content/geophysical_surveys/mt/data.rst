@@ -67,6 +67,8 @@ Examples
         :figwidth: 100%
         :align: center
 
+        3 Layered earth MT data.
+
 .. todo:: add in images for sphere problem
 
 **Sphere**: The second example contains a sphere with 50 m radius and 10 :math:`\Omega` m in a background of 100 :math:`\Omega` m.
