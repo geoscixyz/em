@@ -66,6 +66,8 @@ And corresponding polarization charge density can be defined as
     :figwidth: 50%
     :name: DCIP_concept
 
+    DC and IP charge buildup concept.
+
 Considering a time domain measurement, in the on-time when currents are injected, DC currents will dominate IP currents as shown in :numref:`DCIP_concept` hence currents are channeled into good conductors and flow around resistors; sign of charges built around the conductor and the resistor are opposite. In the off-time, DC currents are disappeared only IP currents flows, and importantly direction of IP currents are opposite to DC currents inside of both chargeable spheres resulting in same sign of charges built around both chargeable spheres. Therefore, chargeable bodies act as like a resistor.
 
 
@@ -126,6 +128,3 @@ IP datum can be measured at an off-time when DC currents are gone. At this time 
 .. raw:: html
     <hr width=20 >
     :file: images/TwoSphereIP_Current_Anim.html
-
-
-

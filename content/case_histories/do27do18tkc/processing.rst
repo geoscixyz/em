@@ -29,6 +29,8 @@ on the ground gravity data:
     :figwidth: 75%
     :name: fig_Processing_Grav
 
+    Gravity data before and after leveling
+
 :numref:`fig_Processing_Grav` compares the gravity data before and after
 leveling. The processed data suggests a substantial negative density contrast in
 the area of the two pipes and a smaller negative contrast between them.
@@ -52,6 +54,8 @@ mesh and regularization are presented below.
     :align: right
     :figwidth: 50%
     :name: fig_Processing_Inv_Grav
+
+    Recovered density model.
 
 
 Sections through the recovered density model are presented in
@@ -83,6 +87,8 @@ on the airborne gravity gradient data:
     :figwidth: 75%
     :name: fig_Processing_GravGrad
 
+    Gravity gradient data before and after processing.
+
 :numref:`fig_Processing_GravGrad` compares the gravity data before and after
 processing.
 
@@ -97,6 +103,8 @@ vertical directions, respectively.
     :align: right
     :figwidth: 50%
     :name: fig_Processing_Inv_GravGrad
+
+    Recovered density model from the gravity gradient data.
 
 
 Sections through the recovered density model are presented in
@@ -137,6 +145,8 @@ Magnetics
     :figwidth: 50%
     :name: fig_Processing_Mag
 
+    Magnetic data before and after leveling.
+
 We have three magnetic datasets collected with different instruments and at
 different times. Before inverting the data, we first proceeded with the
 following leveling steps:
@@ -161,6 +171,8 @@ The signal from both DO-27 and DO-18 are now visible on the AeroTEM data set.
     :align: right
     :figwidth: 50%
     :name: fig_Processing_InvInd_Mag
+
+    Recovered susceptibility model from the VTEM magnetic data.
 
 Despite the above leveling, the AeroTEM was still very noisy and difficult to invert. As well, the DIGHEM data were relatively sparse over the region of interest compared to the VTEM data. Overall, the VTEM data were the cleanest and provided the best coverage so we only present results from inverting the VTEM magnetic data, which was done with the UBC-`MAG3D`_ inversion software.
 We use the same mesh as for the density inversion. Sections through the
@@ -199,6 +211,8 @@ UBC-`EM1DFM`_ inversion algorithm as its central solver.
     :align: right
     :figwidth: 50%
     :name: fig_Processing_FEM1D
+
+    Recovered conductivity model through laterally constrained 1D inversions.
 
 Inversion parameters used for the 1D inversion are summarized below. Sections
 through the recovered conductivity model after convergence of the
@@ -256,6 +270,8 @@ computationally challenging and required additional processing steps:
     :figwidth: 50%
     :name: fig_Processing_FEM3D
 
+    Recovered conductivity model from 3D FEM inversion.
+
 :numref:`fig_Processing_FEM3D` presents sections through the recovered
 conductivity model. We note the following features:
 
@@ -298,6 +314,8 @@ FEM 1D inversion.
     :figwidth: 50%
     :name: fig_Processing_TEM1D
 
+    Conductivity model from 1D laterally constrained inversions of TEM data.
+
 :numref:`fig_Processing_TEM1D` displays sections
 through the recovered conductivity model. The highest conductivity is centered
 at a depth corresponding to the interface between the till and the pipe below.
@@ -328,6 +346,8 @@ the DO-27 kimberlite pipe are consistent. The pipe appears to extend to depths
     :figwidth: 50%
     :name: fig_Processing_CoopAlgo
 
+    Coopeerative inversion workflow.
+
 To find a single conductivity structure that adequately explains the deposit,
 we re-invert both data sets with a cooperative inversion strategy
 :cite:`McMillan2014`. Due to the limited coverage of the positive VTEM data,
@@ -348,6 +368,8 @@ iterations were carried out.
     :align: center
     :figwidth: 100%
     :name: fig_Processing_CoopInv
+
+    A sequence of conductivity models through cooperative inversions.
 
 :numref:`fig_Processing_CoopInv` compares the sequence of inverted models.
 From left to right: (1) unconstrained FEM 1D inversion, (2) unconstrained FEM
@@ -455,6 +477,3 @@ chargeability (:math:`\eta`) and time constant (:math:`\tau`) for the cells clos
 - A4 can easily be distinguished from the others based on :math:`\tau`
 - A1 and A3 can be differentiated by :math:`\eta` and perhaps by :math:`\tau`
 - The distinction between A1 and A2 is subtle, but it may be possible based upon  :math:`\tau` values
-
-
-

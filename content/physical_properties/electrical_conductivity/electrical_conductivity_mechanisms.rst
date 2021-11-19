@@ -104,10 +104,14 @@ There are two primary causes of chargeability, "membrane polarization" and
 		:figwidth: 100 %
 		:name: fig_elec_pol_3
 
+		Ion distribution.
+
 	.. figure:: ./images/elec_pol_4.gif
 		:align: center
 		:figwidth: 100 %
 		:name: fig_elec_pol_4
+
+		Circuit analogue.
 
 .. _electrical_conductivity_mechanisms_electrode:
 
@@ -157,7 +161,7 @@ Membrane polarization occurs when pore space narrows to within several
 boundary layer thicknesses (which are the thicknesses of ions adsorbed into a
 surface). Note that the surfaces of mineral grains naturally possess a weak negative charge which attracts cations (:numref:`fig_memb_pol_1`).
 
-When an electric field is applied, the charges cannot flow easily through the "pore throat" so they accumulate (:numref:`fig_memb_pol_2`). The result is a net electric dipole which contributes towards any other voltages measured across the rock. Like electrode polarization, this process is non-instantaneous. 
+When an electric field is applied, the charges cannot flow easily through the "pore throat" so they accumulate (:numref:`fig_memb_pol_2`). The result is a net electric dipole which contributes towards any other voltages measured across the rock. Like electrode polarization, this process is non-instantaneous.
 
 A second form of membrane polarization occurs where clay particles partially block ionic solution pathways (:numref:`fig_memb_pol_4`). Upon application of an electric field, positive
 charge carriers pass easily, while negative carriers accumulate. This is known as an "ion-selective membrane."
@@ -174,14 +178,4 @@ higher frequencies.
 	:figwidth: 70 %
 	:name: fig_memb_pol_4
 
-
-
-
-
-
-
-
-
-
-
-
+	Membrane polarization.

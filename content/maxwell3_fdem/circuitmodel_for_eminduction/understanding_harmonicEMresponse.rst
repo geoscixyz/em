@@ -116,6 +116,8 @@ will change as Tx and Rx loow is moving along the surface.
     :align: center
     :name: Couping_3loops
 
+    Coupling between the three loops.
+
 Computed coupling coefficient along the line is shown below:
 
 .. plot::
