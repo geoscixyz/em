@@ -121,6 +121,7 @@ linkcheck_ignore = [
     'https://www.onepetro.org/conference-paper/SEG-2012-1478',
     'https://doi.org/*',
     'http://canada.debeersgroup.com/* ',
+    'https://www.sensoft.ca',
                     ]
 linkcheck_retries = 3
 linkcheck_timeout = 900
