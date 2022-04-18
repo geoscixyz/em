@@ -78,7 +78,7 @@ Response function in frequency domain can be written as
 Inductive limit is when :math:`\omega` goes to :math:`\infty`:
 
 .. math::
-    \lim_{\omega \rightarrow 0 } Q = 1
+    \lim_{\omega \rightarrow \infty } Q = 1
 
 Then the measured EM response will be
 
