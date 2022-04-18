@@ -18,7 +18,7 @@ Attenuation defines the rate of amplitude loss an EM wave experiences at it prop
 .. _harmonic_planewaves_homogeneous_attenuation_formula:
 
 .. math::
-	A(z) = A_0 e^{\beta z}
+	A(z) = A_0 e^{-\beta z}
 
 where absolute :math:`A` is the amplitude, :math:`A_0` is the absolute amplitude at :math:`z` = 0 m and:
 
