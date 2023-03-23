@@ -413,7 +413,7 @@ The figure below shows surface charge density at the surface of sphere.
     Z = np.zeros_like(X)
 
     q1 = sphere1.charge_density((X, Y, Z), dr=xr[1]-xr[0])
-    q2 = sphere1.charge_density((X, Y, Z), dr=xr[1]-xr[0])
+    q2 = sphere2.charge_density((X, Y, Z), dr=xr[1]-xr[0])
 
     fig, axs = plt.subplots(1,2,figsize=(18,6))
     qs = [q1, q2]
