@@ -131,7 +131,7 @@ Recall that the Cole-Cole model for electrical resistivity is given by:
 A simpler form of frequency domain measurements is done with two frequencies. If the rock is non-chargeable, then frequency-dependence of the sample's resistivity is negligible; resulting in near-identical voltage measurements at each frequency. For increasingly chargeable samples, the difference in absolute resistivity becomes larger. Percent frequency effect is used to describe this effect. The percent frequency effect is defined as:
 
 .. math::
-   PFE = \Bigg ( \frac{V(f_1) - V(f_2)}{V(f_1)} \Bigg ) \times 100 \% = \Bigg ( \frac{\rho (f_1) - \rho (f_2)}{\rho (f_1)} \Bigg ) \times 100 \%
+   PFE = \Bigg ( \frac{V(f_1) - V(f_2)}{V(f_2)} \Bigg ) \times 100 \% = \Bigg ( \frac{\rho (f_1) - \rho (f_2)}{\rho (f_2)} \Bigg ) \times 100 \%
 
 where :math:`V(f_1)` is the absolute voltage measured at a lower frequency and :math:`V(f_2)` is the absolute voltage measured at a higher frequency. The percent frequency effect can also be expressed in terms of the absolute resistivity, where :math:`\rho (f_1)` is the absolute resistivity measured at a lower frequency and :math:`\rho (f_2)` is the absolute resistivity measured at a higher frequency.
 
