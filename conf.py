@@ -41,7 +41,6 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx_rtd_theme',
     'matplotlib.sphinxext.plot_directive',
-    'edit_on_github',
     'purpose',
     'question',
     'geosciapp',
@@ -84,7 +83,7 @@ release = '0.0.5'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = "en"
+language = None
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -159,11 +158,6 @@ todo_include_todos = True
 # number figures
 numfig = True
 
-# -- Edit on Github Extension ---------------------------------------------
-
-edit_on_github_project = 'geoscixyz/em'
-edit_on_github_branch = 'main'
-
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -172,13 +166,13 @@ edit_on_github_branch = 'main'
 
 import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
-# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-# html_context = {
-#   'display_github': True,
-#   'github_user': 'geoscixyz',
-#   'github_repo': 'em',
-#   'github_version': 'main'
-# }
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_context = {
+  'display_github': True,
+  'github_user': 'geoscixyz',
+  'github_repo': 'em',
+  'github_version': 'main'
+}
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = 'Electromagnetic Geophysics'
