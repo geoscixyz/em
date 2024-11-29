@@ -23,7 +23,7 @@ Barents Sea
 
 **Special Thanks**
 
-Thank to `Rock Solid Images <http://rocksolidimages.tech>`__ for for permission to
+Thank to `Rock Solid Images <https://rocksolidimage.com/>`__ for for permission to
 reproduce figures and adapt text from the source material. This case history has been
 taken from the paper `"Predicting resevoir properties using CSEM, pre-stack seismic and well log data: case study in Hoop area, Barents Sea, Norway" <https://doi.org/10.1190/INT-2016-0097.1>`__ .
 
