@@ -23,9 +23,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # pip install -r requirements.txt
 
-        pip install --no-build-isolation -r requirements.txt -r requirements-build-geoana.txt
+        # Gather requirements and install older version of geoana
+        cat requirements.txt | grep -v "^geoana" > requirements-ci.txt
+        cat requirements-build-geoana.txt | grep -v "^#" >> requirements-ci.txt
+        pip install -r requirements-ci.txt
+        rm requirements-ci.txt
+        pip install --no-build-isolation geoana==0.2.1
 
         # Install extra packages
         pip install flake8 pytest

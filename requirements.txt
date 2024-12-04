@@ -3,4 +3,4 @@ sphinxcontrib-bibtex
 sphinx_rtd_theme
 pytest
 matplotlib
-geoana==0.2.1
+geoana
