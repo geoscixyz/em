@@ -50,7 +50,14 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+
+        # Gather requirements and install older version of geoana
+        cat requirements.txt | grep -v "^geoana" > requirements-ci.txt
+        cat requirements-build-geoana.txt | grep -v "^#" >> requirements-ci.txt
+        pip install -r requirements-ci.txt
+        rm requirements-ci.txt
+        pip install --no-build-isolation geoana==0.2.1
 
     - name: Build pages
       run: |
