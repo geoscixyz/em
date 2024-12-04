@@ -24,7 +24,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install --no-build-isolation -r requirements.txt
+        pip install -r requirements.txt
+
+        # Install build requirements for geoana 0.2.1
+        pip install numpy<1.23 setuptools<60
+        pip install --no-build-isolation geoana==0.2.1
+
+        # Install extra packages
         pip install flake8 pytest
     - name: Test with pytest
       run: |

@@ -3,6 +3,4 @@ sphinxcontrib-bibtex
 sphinx_rtd_theme
 pytest
 matplotlib
-numpy<1.23
-geoana==0.2.1
-setuptools<60
+# geoana==0.2.1
