@@ -115,9 +115,11 @@ linkcheck_ignore = [
     'https://doi.org/*',
     'http://canada.debeersgroup.com/* ',
     'https://www.sensoft.ca',
-    'https://library.seg.org/page/policies/permissions',
-    'https://www.tandfonline.com/journals/texg20'
-                    ]
+    'https://www.tandfonline.com/journals/texg20',
+    r"https://library.seg.org",
+    r"https://epubs.siam.org",
+]
+
 linkcheck_retries = 3
 linkcheck_timeout = 900
 
