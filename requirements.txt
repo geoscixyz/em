@@ -4,3 +4,6 @@ sphinx_rtd_theme
 pytest
 matplotlib
 # geoana==0.2.1
+numpy<1.23
+cython==0.29
+setuptools<60
