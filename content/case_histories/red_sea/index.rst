@@ -15,14 +15,14 @@ Red Sea
 
 **Special Thanks**
 
-Thanks to Daniele Colombo of Saudi Aramco and thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+Thanks to Daniele Colombo of Saudi Aramco and thanks to the `Society of Exploration Geophysicists <https://seg.org>`__ for permission to reproduce figures and adapt text from:
 
     - Daniele Colombo, Gary McNeice, Ernesto Sandoval Curiel, and Adam Fox (2013). ”Full tensor CSEM and MT for subsalt structural imaging in the Red Sea: Implications for seismic and electromagnetic integration.” The Leading Edge, 32(4), 436-449. `https://doi.org/10.1190/tle32040436.1 <https://doi.org/10.1190/tle32040436.1>`__
     - Daniele Colombo, Gary McNeice, Nickolas Raterman, Mike Zinger, Diego Rovetta, and Ernesto Sandoval Curiel (2014). ”Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea.” Interpretation, 2(3), SH33-SH53. `https://doi.org/10.1190/INT-2013-0149.1 <https://doi.org/10.1190/INT-2013-0149.1>`__
 
-The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://library.seg.org/page/policies/permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://doi.org/10.1190/tle40020140.1>`__.
 
-.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the papers `"Full tensor CSEM and MT for subsalt structural imaging in the Red
+.. Thanks to the `Society of Exploration Geophysicists <https://seg.org>`__ for permission to reproduce figures and adapt text from the source material, and thanks to Daniele Colombo of Saudi Aramco. This case history was adapted from the papers `"Full tensor CSEM and MT for subsalt structural imaging in the Red
 .. Sea: Implications for seismic and electromagnetic integration" <http://library.seg.org/doi/abs/10.1190/tle32040436.1>`__ by :cite:`Colombo2013` and `"Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea" <http://library.seg.org/doi/abs/10.1190/INT-2013-0149.1>`__ by :cite:`Colombo2014`.
 
 **Abstract**

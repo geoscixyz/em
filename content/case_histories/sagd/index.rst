@@ -15,12 +15,12 @@ SAGD
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+Thanks to the `Society of Exploration Geophysicists <https://seg.org>`__ for permission to reproduce figures and adapt text from:
 
     - Sarah G. R. Devriese and Douglas W. Oldenburg (2016). ”Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers.” GEOPHYSICS, 81(4), E227-E241. `https://doi.org/10.1190/geo2015-0451.1 <https://doi.org/10.1190/geo2015-0451.1>`__
     - Sarah G. R. Devriese* and Douglas W. Oldenburg (2015) Time-lapse three-dimensional electromagnetic inversion of growth-impeded SAGD steam chambers. SEG Technical Program Expanded Abstracts 2015: pp. 2842-2847. `https://doi.org/10.1190/segam2015-5909921.1 <https://doi.org/10.1190/segam2015-5909921.1>`__
 
-The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://library.seg.org/page/policies/permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://doi.org/10.1190/tle40020140.1>`__.
 
 **Abstract**
 
@@ -49,4 +49,4 @@ Steam-assisted gravity drainage (SAGD) is a method for extracting heavy oil from
 :cite:`DevrieseOldenburg2016` : Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers
 
 :cite:`DevrieseOldenburg2015b` : Time-lapse three-dimensional electromagnetic inversion of growth-impeded SAGD steam chambers
-               
+

@@ -14,7 +14,7 @@ review the acquisition configuration of 5 of these surveys.
 All data used in this study were converted from their native coordinate system
 to the NAD27-UTM 12N (`EPSG 26712`_) projection prior to processing.
 
-.. _EPSG 26712: http://spatialreference.org/ref/epsg/nad27-utm-zone-12n/
+.. _EPSG 26712: https://spatialreference.org/ref/epsg/26712/
 
 |
 |

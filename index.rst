@@ -87,11 +87,11 @@ EM GeoSci and the SEG
   :align: right
   :alt: SEG logo
   :width: 35%
-  :target: https://seg.org/
+  :target: https://seg.org
 
 EM GeoSci served as the main "textbook" resource for the `SEG 2017
 Distinguished Instructor Short Course
-<https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`_
+<https://doi.org/10.1190/tle40020140.1>`_
 on “Geophysical Electromagnetics: Fundamentals and Applications”. We are
 grateful that the SEG supported us in our open-source experiment and allowed
 us to substitute EM GeoSci for the traditional hardcopy book that accompanies

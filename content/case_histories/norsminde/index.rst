@@ -15,11 +15,11 @@ Norsminde
 
 **Special Thanks**
 
-Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ for permission to reproduce figures and adapt text from:
+Thanks to the `Society of Exploration Geophysicists <https://seg.org>`__ for permission to reproduce figures and adapt text from:
 
     - Cyril Schamper, Flemming Jørgensen, Esben Auken, and Flemming Effersø (2014). ”Assessment of near-surface mapping capabilities by airborne transient electromagnetic data — An extensive comparison to conventional borehole data.” GEOPHYSICS, 79(4), B187-B199. `https://doi.org/10.1190/geo2013-0256.1 <https://doi.org/10.1190/geo2013-0256.1>`__
 
-The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://seg.org/Publications/Policies-and-Permissions/Permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+The material presented here has been modified from the SEG-published version and is subject to the `SEG terms of use and conditions <https://library.seg.org/page/policies/permissions>`__. This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://doi.org/10.1190/tle40020140.1>`__.
 
 **Abstract**
 

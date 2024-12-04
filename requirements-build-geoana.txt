@@ -1,0 +1,13 @@
+# Requirements to build geoana 0.2.1 without isolation
+#
+# This file was added as a way to install geoana 0.2.1 (old version) in GitHub
+# Actions and build the website using an this old version of geoana.
+#
+# We should remove this file after updating the repo to work with the latest
+# version of geoana. The easiest way to do so would be to revert the commit
+# that added this file.
+#
+numpy<1.23
+cython
+setuptools<60
+wheel

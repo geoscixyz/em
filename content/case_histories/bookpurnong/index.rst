@@ -14,14 +14,14 @@ Bookpurnong
 
 **Special Thanks**
 
-Thanks to the `Exploration Geophysics <https://www.tandfonline.com/toc/texg20/current>`__ for permission to reproduce figures and adapt text from:
+Thanks to the `Exploration Geophysics <https://www.tandfonline.com/journals/texg20>`__ for permission to reproduce figures and adapt text from:
 
     - Andrea Viezzoli, Esben Auken, and Tim Munday (2009). ”Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia.” Exploration Geophysics, 40(2), 173-183. `https://doi.org/10.1071/EG08027 <https://doi.org/10.1071/EG08027>`__
 
-This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://seg.org/Education/Courses/DISC/2017-DISC-Doug-Oldenburg>`__.
+This case history was presented as a part of the `SEG 2017 Distinguished Instructor Short Course <https://doi.org/10.1190/tle40020140.1>`__.
 
 
-.. Thanks to the `Society of Exploration Geophysicists <http://seg.org>`__ and SkyTEM for permission to reproduce figures and adapt text from the source material. This case history is based upon two articles:
+.. Thanks to the `Society of Exploration Geophysicists <https://seg.org>`__ and SkyTEM for permission to reproduce figures and adapt text from the source material. This case history is based upon two articles:
 
 .. - `Spatially constrained inversion for quasi 3D modelling of airborne electromagnetic data – an application for environmental assessment in the Lower Murray Region of South Australia <http://library.seg.org/doi/abs/10.1071/EG08027>`_ by Viezzoli, Auken and Munday :cite:`viezzoli2009` and
 .. - `Accurate  quasi  3D  versus  practical  full  3D  inversion  of  AEM  data – the  Bookpurnong  case  study <http://www.hgg.geo.au.dk/Papers_EndNote/0477620876/VIEZZOLI2010C.pdf>`_ by Viezzoli, Munday, Auken and Christiansen :cite:`viezzoli2010`.
