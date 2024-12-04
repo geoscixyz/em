@@ -4,11 +4,10 @@
 name: EM Website Build
 
 on:
+  pull_request:
   push:
     branches:
-      - '*'
-  pull_request:
-    branches: [ main ]
+      - main
 
 jobs:
   test:
@@ -58,6 +57,10 @@ jobs:
         python _ext/copy_images.py
 
     - name: GitHub Pages
+      # Only deploy if the event that triggered was a push to main
+      # (only pushes to main triggers builds, see 'on' condition in the
+      # beginning of the file)
+      if: success() && github.event_name == 'push'
       uses: crazy-max/ghaction-github-pages@v2.5.0
       with:
         build_dir: _build/html
