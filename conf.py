@@ -118,6 +118,7 @@ linkcheck_ignore = [
     'https://www.tandfonline.com/journals/texg20',
     r"https://library.seg.org",
     r"https://epubs.siam.org",
+    r"https://www.sciencedirect.com",
 ]
 
 linkcheck_retries = 3
