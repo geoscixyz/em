@@ -189,7 +189,7 @@ We note the following:
 
 
 
-.. _MAG3D: http://mag3d.readthedocs.io/en/latest/
+.. _MAG3D: https://mag3d.readthedocs.io/
 
 
 Frequency-Domain EM
