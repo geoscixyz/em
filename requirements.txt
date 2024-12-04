@@ -7,3 +7,4 @@ matplotlib
 numpy<1.23
 cython
 setuptools<60
+wheel
