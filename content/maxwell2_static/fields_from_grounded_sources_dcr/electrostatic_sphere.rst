@@ -118,7 +118,7 @@ the integration from :eq:`V_from_e` gives
     sig0 = 10.**-3.         # conductivity of the whole-space in S/m
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
 
@@ -159,11 +159,11 @@ and inside the sphere :math:`(r < R)`
     from matplotlib import patches
     from geoana.em.static import ElectrostaticSphere
 
-    sig0 = 10.**-3.          # conductivity of the whole-space in S/m
-    sig1 = 10.**-1.         # conductivity of the sphere in S/m
-    sig2 = 10.**-5.         # conductivity of the sphere in S/m
-    R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    sig0 = 10.**-3.               # conductivity of the whole-space in S/m
+    sig1 = 10.**-1.               # conductivity of the sphere in S/m
+    sig2 = 10.**-5.               # conductivity of the sphere in S/m
+    R    = 50.                    # radius of the sphere in m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
@@ -229,7 +229,7 @@ according to :eq:`totalP_outside` and :eq:`totalP_inside`, the electric field at
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
@@ -326,7 +326,7 @@ the charges and not the reverse.
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
@@ -401,7 +401,7 @@ The figure below shows surface charge density at the surface of sphere.
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
@@ -463,7 +463,7 @@ The reverse is observed for a resistive sphere.
     sig1 = 10.**-1.         # conductivity of the sphere in S/m
     sig2 = 10.**-5.         # conductivity of the sphere in S/m
     R    = 50.          # radius of the sphere in m
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R, sig2, sig0, E0) # create the sphere object
@@ -504,7 +504,7 @@ The reverse is observed for a resistive sphere.
         ax.text(0, -R/2., f'$\sigma_1$={sig_circ*1000:3.3f} mS/m')
         ax.text(0, -1.5*R, f'$\sigma_0$={sig0*1000:3.3f} mS/m')
         ax.text(0.5*np.cos(np.pi/6)*R, 0.5*np.sin(np.pi/6)*R, f'R={R:1.0f} m')
-        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
+        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0[0]:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
 
         ax.set_facecolor([0.4, 0.7, 0.4, 0.3])
         ax.set_xlim([-2 * R, 2 * R])
@@ -577,7 +577,7 @@ The only parameters that have changed are the radius and the conductivity of the
     sig2 = 1.310344828 * 10**-3.
     R0   = 20.          # radius of the sphere in m
     R1   = 40.
-    E0   = 1.           # inducing field strength in V/m
+    E0   = np.array([1., 0., 0.]) # inducing field strength in V/m
 
     sphere1 = ElectrostaticSphere(R0, sig1, sig0, E0) # create the sphere object
     sphere2 = ElectrostaticSphere(R1, sig2, sig0, E0) # create the sphere object
@@ -619,7 +619,7 @@ The only parameters that have changed are the radius and the conductivity of the
         ax.text(0, -r/2., f'$\sigma_1$={sig_circ*1000:3.3f} mS/m')
         ax.text(0, -1.5*r, f'$\sigma_0$={sig0*1000:3.3f} mS/m')
         ax.text(0.5*np.cos(np.pi/6)*r, 0.5*np.sin(np.pi/6)*r, f'R={r:1.0f} m')
-        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
+        ax.text(-1.8*R, 1.3*R, f'$\mathbf{{E_0}} = {E0[0]:1.0f} \mathbf{{\hat{{x}}}}$ V/m')
 
         ax.set_facecolor([0.4, 0.7, 0.4, 0.3])
         ax.set_xlim([-2 * R, 2 * R])
