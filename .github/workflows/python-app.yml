@@ -40,7 +40,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' # deploy only from main
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -66,10 +66,8 @@ jobs:
         python _ext/copy_images.py
 
     - name: GitHub Pages
-      # Only deploy if the event that triggered was a push to main
-      # (only pushes to main triggers builds, see 'on' condition in the
-      # beginning of the file)
-      if: success() && github.event_name == 'push'
+      # Only deploy if the build was successful
+      if: success()
       uses: crazy-max/ghaction-github-pages@v2.5.0
       with:
         build_dir: _build/html
