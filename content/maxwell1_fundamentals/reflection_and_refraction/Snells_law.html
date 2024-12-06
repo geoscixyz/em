@@ -1,0 +1,265 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection and Snell’s Law &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Fresnel Equations" href="Fresnel_equations.html" />
+    <link rel="prev" title="Plane Waves at Interfaces" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Plane Waves at Interfaces</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reflection and Snell’s Law</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snell-s-law-reflection-and-refraction">Snell’s Law, Reflection and Refraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snell-s-law-approximations">Snell’s Law Approximations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Fresnel_equations.html">Fresnel Equations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impedance_layeredearth.html">Plane Waves within an N-Layered Earth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Plane Waves at Interfaces</a></li>
+      <li class="breadcrumb-item active">Reflection and Snell’s Law</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/reflection_and_refraction/Snells_law.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reflection-and-snell-s-law">
+<span id="snells-law"></span><h1>Reflection and Snell’s Law<a class="headerlink" href="#reflection-and-snell-s-law" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, we derive the propagation angles of reflected and refracted waves at a horizontal interface. Snell’s law is then used to characterize the refraction angle in terms of the complex wavenumber for both media.</p>
+</div>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h2>
+<p>Here, we will consider the reflection and refraction of a uniform, linearly polarized, homogeneous plane wave at a horizontal interface (<a class="reference internal" href="#snells-law-setup"><span class="std std-numref">Fig. 58</span></a>). The incident wave is confined to the xz-plane. The interface is denoted by <span class="math notranslate nohighlight">\(S\)</span>, has a normal vector <span class="math notranslate nohighlight">\(\mathbf{\hat n}\)</span> and separates two homogeneous media with physical properties <span class="math notranslate nohighlight">\(\sigma_1\)</span>, <span class="math notranslate nohighlight">\(\mu _1\)</span>, <span class="math notranslate nohighlight">\(\epsilon_1\)</span> and <span class="math notranslate nohighlight">\(\sigma_2\)</span>, <span class="math notranslate nohighlight">\(\mu _2\)</span>, <span class="math notranslate nohighlight">\(\epsilon_2\)</span>.</p>
+<p>For the setup in <a class="reference internal" href="#snells-law-setup"><span class="std std-numref">Fig. 58</span></a>, the incident wave (<span class="math notranslate nohighlight">\(k_i\)</span>) arrives at angle <span class="math notranslate nohighlight">\(\theta_i\)</span>. Once this wave reaches the interface, it breaks into two parts, a reflected wave (<span class="math notranslate nohighlight">\(k_r\)</span>) and a transmitted wave (<span class="math notranslate nohighlight">\(k_t\)</span>). The transmitted was experiences a change in propagation direction, thus it is a refracted wave. The reflected and refracted waves travel in directions characterized by angles <span class="math notranslate nohighlight">\(\theta_r\)</span> and <span class="math notranslate nohighlight">\(\theta_t\)</span>, respectively.</p>
+<figure class="align-center" id="snells-law-setup" style="width: 70%">
+<img alt="../../../_images/snellslaw_setup.png" src="../../../_images/snellslaw_setup.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Geometry for Snell’s law. Modified from <span id="id1">[<a class="reference internal" href="../../references.html#id16" title="Stanley H Ward and Gerald W Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, chapter 4, pages 130–311. Society of Exploration Geophysicists, 1 edition, 1988. URL: https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4, doi:10.1190/1.9781560802631.ch4.">WH88</a>]</span> Figure 3.1.</span><a class="headerlink" href="#snells-law-setup" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="snell-s-law-reflection-and-refraction">
+<span id="snells-law-derive"></span><h2>Snell’s Law, Reflection and Refraction<a class="headerlink" href="#snell-s-law-reflection-and-refraction" title="Link to this heading"></a></h2>
+<p>The reflection and refraction angles (<span class="math notranslate nohighlight">\(\theta_r\)</span> and <span class="math notranslate nohighlight">\(\theta_t\)</span>) can be derived by considering either the electric field or the magnetic field carried by the incident EM wave. Here, we will derive these angle by considering an electric field. The respective incident, reflected and refracted waves are given by:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-0">
+<span class="eqno">(133)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-0" title="Link to this equation"></a></span>\[\mathbf{E_i} = \mathbf{E_{i,0}} \, e^{-i \mathbf{k_i \cdot r}}, \;\;\; \mathbf{E_r} = \mathbf{E_{r,0}} \, e^{-i \mathbf{k_r \cdot r}}, \;\;\; \textrm{and} \;\;\; \mathbf{E_t} = \mathbf{E_{t,0}} \, e^{-i \mathbf{k_t \cdot r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is the wave vector (Poynting vector) for each wave and:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-1">
+<span class="eqno">(134)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-1" title="Link to this equation"></a></span>\[\mathbf{E \times H} = \mathbf{k}\]</div>
+<p>Within formative laws, we discussed the <a class="reference internal" href="../interface_conditions/index.html#maxwell1-fundamentals-interface-conditions-index"><span class="std std-ref">interface conditions</span></a> required for electric and magnetic fields. They state that components of the electric field parallel to surface <span class="math notranslate nohighlight">\(S\)</span> must be equal across the interface. As a result:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-2">
+<span class="eqno">(135)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-2" title="Link to this equation"></a></span>\[\mathbf{\hat n} \times \big ( \mathbf{E_i} + \mathbf{E_r} \big ) = \mathbf{\hat n} \times \mathbf{E_t}\]</div>
+<p>Using the previous three expressions, we find that:</p>
+<div class="math notranslate nohighlight" id="equation-eq-reflected">
+<span class="eqno">(136)<a class="headerlink" href="#equation-eq-reflected" title="Link to this equation"></a></span>\[\theta_i = \theta_r\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-snells-law">
+<span class="eqno">(137)<a class="headerlink" href="#equation-eq-snells-law" title="Link to this equation"></a></span>\[k_i \, \textrm{sin}\theta_i = k_t \, \textrm{sin}\theta_t\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-eq-reflected">(136)</a>, the reflected angle and the incident angle relative to <span class="math notranslate nohighlight">\(\mathbf{\hat n}\)</span> are the same. Eq. <a class="reference internal" href="#equation-eq-snells-law">(137)</a> is known as <strong>Snell’s Law</strong>. Snell’s law defines the refraction angle corresponding to the transmitted wave. Thus depending on the physical properties of each medium, the transmitted wave can be refracted either towards the vertical or towards the horizontal.</p>
+</section>
+<section id="snell-s-law-approximations">
+<span id="snells-law-snells-law"></span><h2>Snell’s Law Approximations<a class="headerlink" href="#snell-s-law-approximations" title="Link to this heading"></a></h2>
+<p>The most common definition of Snell’s law is given by:</p>
+<div class="math notranslate nohighlight" id="equation-eq-snells-law-2">
+<span class="eqno">(138)<a class="headerlink" href="#equation-eq-snells-law-2" title="Link to this equation"></a></span>\[k_1 \, \textrm{sin}\theta_1 = k_2 \, \textrm{sin}\theta_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_1\)</span> is the wavenumber for the incident wave with angle <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(k_1\)</span> is the wavenumber of the refracted wave with angle <span class="math notranslate nohighlight">\(\theta_2\)</span>. Here, we discuss a few properties of Snell’s law.</p>
+<p><strong>Quasi-Static Regime</strong></p>
+<p>In the quasi-static regime (<span class="math notranslate nohighlight">\(\sigma \gg \omega \varepsilon\)</span>), the wavenumber becomes:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-3">
+<span class="eqno">(139)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-3" title="Link to this equation"></a></span>\[k \approx \sqrt{-i \omega \mu \sigma}\]</div>
+<p>In this case, Snell’s law reduces to:</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\mu_1 \sigma_1} \, \textrm{sin}\theta_1 = \sqrt{\mu_2 \sigma_2} \, \textrm{sin} \theta_2\]</div>
+<p><strong>Wave Regime</strong></p>
+<p>In the wave regime (<span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>), the wavenumber becomes:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-4">
+<span class="eqno">(140)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-4" title="Link to this equation"></a></span>\[k \approx w \sqrt{\mu \varepsilon}\]</div>
+<p>where the velocity of the wave is given by:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-5">
+<span class="eqno">(141)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-snells-law-5" title="Link to this equation"></a></span>\[V = \frac{1}{\sqrt{\mu \varepsilon}}\]</div>
+<p>Using the two previous expressions, Snell’s law in the wave regime becomes:</p>
+<div class="math notranslate nohighlight" id="equation-eq-snells-law-3">
+<span class="eqno">(142)<a class="headerlink" href="#equation-eq-snells-law-3" title="Link to this equation"></a></span>\[\frac{V_1}{V_2} = \frac{sin \theta_1}{sin \theta_2}\]</div>
+<p>In this case, the angle of incidence and refraction are directly related to the propagation velocity of EM waves within each media. This relationship is especially important when considering <a class="reference internal" href="../../geophysical_surveys/gpr/index.html#gpr-index"><span class="std std-ref">ground penetrating radar</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Plane Waves at Interfaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Fresnel_equations.html" class="btn btn-neutral float-right" title="Fresnel Equations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plane Waves within an N-Layered Earth &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Maxwell’s Equations with Electromagnetic Sources" href="../maxwell_sources.html" />
+    <link rel="prev" title="Fresnel Equations" href="Fresnel_equations.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Plane Waves at Interfaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Snells_law.html">Reflection and Snell’s Law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fresnel_equations.html">Fresnel Equations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Plane Waves within an N-Layered Earth</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields-in-the-j-th-layer">Fields in the j-th Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-conditions">Interface Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recursive-solution-for-n-layers">Recursive Solution for N-Layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Plane Waves at Interfaces</a></li>
+      <li class="breadcrumb-item active">Plane Waves within an N-Layered Earth</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/reflection_and_refraction/impedance_layeredearth.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plane-waves-within-an-n-layered-earth">
+<span id="impedance-layeredearth"></span><h1>Plane Waves within an N-Layered Earth<a class="headerlink" href="#plane-waves-within-an-n-layered-earth" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, we consider a special case of the plane wave solution for an N-layered Earth. Our derivation follows that found in <span id="id1">[<a class="reference internal" href="../../references.html#id16" title="Stanley H Ward and Gerald W Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, chapter 4, pages 130–311. Society of Exploration Geophysicists, 1 edition, 1988. URL: https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4, doi:10.1190/1.9781560802631.ch4.">WH88</a>]</span>. This example is a first step to understanding how the Earth’s structure and physical properties impact electric and magnetic fields measured at the surface.</p>
+</div>
+<figure class="align-right" id="planewave-n-layer-diagram" style="width: 40%">
+<img alt="../../../_images/Nlayer_diagram.png" src="../../../_images/Nlayer_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Geometry for N-layer case.</span><a class="headerlink" href="#planewave-n-layer-diagram" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Consider up-going and down-going plane waves which are normally incident to an N-layered, isotropic Earth. We will assume that the electric fields associated with these waves are polarized along the x-direction; thus the magnetic fields are polarized along the y-direcion. Below, we will develope a scheme for determining the electric and magnetic fields in any of the layers. Morever, we will characterize the relationship between perpendicular components of the electric and magnetic field at the Earth’s surface.</p>
+<section id="fields-in-the-j-th-layer">
+<h2>Fields in the j-th Layer<a class="headerlink" href="#fields-in-the-j-th-layer" title="Link to this heading"></a></h2>
+<p>In the j-th layer, we have both up-going and down-going waves resulting from transmissions and reflections within the Earth. The electric field has the following form:</p>
+<figure class="align-right" id="planewave-j-layer-diagram" style="width: 40%">
+<img alt="../../../_images/jlayer_diagram.png" src="../../../_images/jlayer_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Notation for up-going and down-going waves in the j-th layer.</span><a class="headerlink" href="#planewave-j-layer-diagram" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight" id="equation-e-j">
+<span class="eqno">(167)<a class="headerlink" href="#equation-e-j" title="Link to this equation"></a></span>\[E_{x,j}(\omega ,z) = U_j e^{-ik_j (z-z_j)} + D_j e^{ik_j (z-z_j)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(z_j\)</span> denotes the bottom location of the j-th layer. <span class="math notranslate nohighlight">\(U_j\)</span> and <span class="math notranslate nohighlight">\(D_j\)</span> are electric field amplitudes of the up-going and down-going wave at the bottom of the j-th layer, respectively. According to the theory presented for <a class="reference internal" href="../harmonic_planewaves_homogeneous/derivation.html#harmonic-planewaves-homogeneous-derivation"><span class="std std-ref">EM waves in homogeneous media</span></a>, the relationship between the electric field and the magnetic field is given by:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-0">
+<span class="eqno">(168)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-0" title="Link to this equation"></a></span>\[\frac{\partial E_x}{\partial z} + i\omega \mu H_y = 0\]</div>
+<p>As a result, the associated magnetic field in the j-th layer is given by:</p>
+<div class="math notranslate nohighlight" id="equation-h-j">
+<span class="eqno">(169)<a class="headerlink" href="#equation-h-j" title="Link to this equation"></a></span>\[H_{y,j} (\omega ,z) = \frac{1}{Z_j} \bigg [ U_j e^{-ik_j (z-z_j)} - D_j e^{ik_j (z-z_j)} \bigg ]\]</div>
+<p>where the <a class="reference internal" href="../harmonic_planewaves_homogeneous/impedancephase.html#harmonic-planewaves-homogeneous-impedancephase"><span class="std std-ref">wave impedance</span></a> for the j-th layer is given by:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-1">
+<span class="eqno">(170)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-1" title="Link to this equation"></a></span>\[Z_j = \frac{\omega \mu_j}{k_j}\]</div>
+<p>Using Eqs. <a class="reference internal" href="#equation-e-j">(167)</a> and <a class="reference internal" href="#equation-h-j">(169)</a>, the electric and magnetic fields at the bottom of the j-th layer can be represented using the folling system. Where <span class="math notranslate nohighlight">\(z = z_j\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-fields-bottom">
+<span class="eqno">(171)<a class="headerlink" href="#equation-fields-bottom" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_j} = \begin{bmatrix} 1 &amp; 1 \\ \frac{1}{Z_j} &amp; -\frac{1}{Z_j} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \mathbf{P_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix}\end{split}\]</div>
+<p>At any location within the layer, the electric and magnetic fields are given by:</p>
+<div class="math notranslate nohighlight" id="equation-fields-j">
+<span class="eqno">(172)<a class="headerlink" href="#equation-fields-j" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 \\ \frac{1}{Z_j} &amp; -\frac{1}{Z_j} \end{bmatrix} \begin{bmatrix} e^{-ik_j (z-z_j)} &amp; 0 \\ 0 &amp; e^{ik_j(z-z_j)} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix}\end{split}\]</div>
+<p>The electric field amplitudes at the top of the j-th layer (<span class="math notranslate nohighlight">\(U_j^\prime\)</span> and <span class="math notranslate nohighlight">\(D_j^\prime\)</span>), can be determined from <span class="math notranslate nohighlight">\(U_j\)</span> and <span class="math notranslate nohighlight">\(D_j\)</span> by using the following expression:</p>
+<div class="math notranslate nohighlight" id="equation-amps-layer">
+<span class="eqno">(173)<a class="headerlink" href="#equation-amps-layer" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} U_j^\prime \\ D_j^\prime \end{bmatrix} = \begin{bmatrix} e^{-ik_j h_j} &amp; 0 \\ 0 &amp; e^{ik_j h_j} \end{bmatrix} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \boldsymbol{\Lambda_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h_j\)</span> is the thickness of the j-th layer. Now that we have related the fields and amplitudes to one another within a particular layer, how can we solve for the fields in one layer if only the fields in a different layer are known.</p>
+</section>
+<section id="interface-conditions">
+<h2>Interface Conditions<a class="headerlink" href="#interface-conditions" title="Link to this heading"></a></h2>
+<p>Let us assume we know the electric field amplitudes <span class="math notranslate nohighlight">\(U_{j+1}\)</span> and <span class="math notranslate nohighlight">\(D_{j+1}\)</span>. We want to find the wave amplitudes in the j-th layer (<span class="math notranslate nohighlight">\(U_{j}\)</span> and <span class="math notranslate nohighlight">\(D_{j}\)</span>) so that we can find the fields according to Eq. <a class="reference internal" href="#equation-fields-j">(172)</a>.</p>
+<p>According to the interface conditions corresponding to plane waves, components of the <a class="reference internal" href="Fresnel_equations.html#fresnel-equations-te"><span class="std std-ref">electric field</span></a> parallel to the interface are continuous. The same is true for the <a class="reference internal" href="Fresnel_equations.html#fresnel-equations-tm"><span class="std std-ref">magnetic field</span></a>. Thus at <span class="math notranslate nohighlight">\(z = z_j\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-uj">
+<span class="eqno">(174)<a class="headerlink" href="#equation-uj" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_j} = \mathbf{P_j} \begin{bmatrix} U_j \\ D_j \end{bmatrix} = \mathbf{P_{j+1}} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix}\end{split}\]</div>
+<p>Using Eqs. <a class="reference internal" href="#equation-fields-bottom">(171)</a>, <a class="reference internal" href="#equation-amps-layer">(173)</a> and <a class="reference internal" href="#equation-uj">(174)</a>, we can relate the electric and magnetic fields at the top of layer j+1 to those at the top of layer j:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-2">
+<span class="eqno">(175)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-2" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x,j} \\ H_{y,j} \end{bmatrix} \Bigg |_{z=z_{j-1}} = \mathbf{P_j} \boldsymbol{\Lambda_j} \mathbf{P_j^{-1}} \begin{bmatrix} E_{x,j+1} \\ H_{y,j+1} \end{bmatrix} = \mathbf{T_j} \begin{bmatrix} E_{x,j+1} \\ H_{y,j+1} \end{bmatrix} \Bigg |_{z=z_j}\end{split}\]</div>
+<p>Similarly, the electric field amplitudes at the top of layer j and the top of layer j+1 are related by:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-3">
+<span class="eqno">(176)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-3" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} U_j^\prime \\ D_j^\prime \end{bmatrix} = \boldsymbol{\Lambda_j} \mathbf{P_j^{-1}} \mathbf{P_{j+1}} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix} = \mathbf{S_j} \begin{bmatrix} U_{j+1}^\prime \\ D_{j+1}^\prime \end{bmatrix}\end{split}\]</div>
+</section>
+<section id="recursive-solution-for-n-layers">
+<h2>Recursive Solution for N-Layers<a class="headerlink" href="#recursive-solution-for-n-layers" title="Link to this heading"></a></h2>
+<p>Let us consider the case where we are at the Earth’s surface and we measure perpendicular components of the electric and magnetic fields; i.e. <span class="math notranslate nohighlight">\(E_{x,0}\)</span> and <span class="math notranslate nohighlight">\(H_{y,0}\)</span> at <span class="math notranslate nohighlight">\(z=0\)</span>. According to the interface conditions, these are identical to the electric and and magnetic fields at the top of layer 1; i.e. <span class="math notranslate nohighlight">\(E_{x,1}\)</span> and <span class="math notranslate nohighlight">\(H_{y,1}\)</span> at <span class="math notranslate nohighlight">\(z=0\)</span>. In terms of the up-going and down-going electric field ampliutde:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-4">
+<span class="eqno">(177)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-4" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1} \begin{bmatrix} U_1^\prime \\ D_1^{\, \prime} \end{bmatrix}\end{split}\]</div>
+<p>In terms of the up-going and down-going waves in layer 2, the previous expression can be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-5">
+<span class="eqno">(178)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-5" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1 S_1} \begin{bmatrix} U_2^\prime \\ D_2^{\, \prime} \end{bmatrix}\end{split}\]</div>
+<p>This process can be repeated for each layer. Ultimately, the electric and magnetic fields at the Earth surface can be expressed as:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-6">
+<span class="eqno">(179)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-6" title="Link to this equation"></a></span>\[\begin{split}\begin{bmatrix} E_{x} \\ H_{y} \end{bmatrix} \Bigg |_{z=0} = \mathbf{P_1} \prod_{j=1}^N \mathbf{S_j} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix} = \mathbf{M} \begin{bmatrix} 0 \\ D_{N+1}^{\, \prime} \end{bmatrix}\end{split}\]</div>
+<p>Notice how there is no up-going wave in lowermost medium. This makes sense assuming there is no source or reflector capable of creating a returning signal. If we amalgamate the product of all matricies into a single matrix <span class="math notranslate nohighlight">\(\mathbf{M}\)</span>, then:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-7">
+<span class="eqno">(180)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-7" title="Link to this equation"></a></span>\[E_x \big |_{z=0} = M_{12} D_{N+1}^{\, \prime}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-8">
+<span class="eqno">(181)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-8" title="Link to this equation"></a></span>\[H_y \big |_{z=0} = M_{22} D_{N+1}^{\, \prime}\]</div>
+<p>The relationship between <span class="math notranslate nohighlight">\(E_x\)</span> and <span class="math notranslate nohighlight">\(H_y\)</span> at the Earth’s surface is therefore given by:</p>
+<div class="math notranslate nohighlight" id="equation-impedance-earth">
+<span class="eqno">(182)<a class="headerlink" href="#equation-impedance-earth" title="Link to this equation"></a></span>\[Z = \frac{E_x}{H_y} = \frac{M_{12}}{M_{22}}\]</div>
+<p>Eq. <a class="reference internal" href="#equation-impedance-earth">(182)</a> tells us that the relationship between perpendicular components of the electric and magnetic fields at the Earth’s surface, at a particular frequency, depend on the physical properties of all layers. However, the exponential nature of matricies <span class="math notranslate nohighlight">\(\boldsymbol{\Lambda_j}\)</span> within <span class="math notranslate nohighlight">\(\mathbf{S_j}\)</span> suggests that the impact of deeper layers on <span class="math notranslate nohighlight">\(Z\)</span> is smaller than it is for shallow layers. This result is very important when considering <a class="reference internal" href="../../geophysical_surveys/mt/index.html#mt-index"><span class="std std-ref">magnetotelluric (MT) methods</span></a>.</p>
+<p><strong>Impedance for a Half-Space</strong></p>
+<p>In the case where the Earth is a homogeneous half-space:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-9">
+<span class="eqno">(183)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-9" title="Link to this equation"></a></span>\[\begin{split}\mathbf{M} = \mathbf{P_1} = \begin{bmatrix} 1 &amp; 1 \\ \frac{1}{Z_1} &amp; -\frac{1}{Z_1} \end{bmatrix}\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-10">
+<span class="eqno">(184)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-10" title="Link to this equation"></a></span>\[Z_1 = \frac{\omega \mu_1}{k_1}\]</div>
+<p>and thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-11">
+<span class="eqno">(185)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-reflection-and-refraction-impedance-layeredearth-11" title="Link to this equation"></a></span>\[\begin{split}\frac{E_x}{H_y} = \frac{M_{12}}{M_{22}} = - \frac{\omega\mu_1}{k_1} = -\frac{\omega \mu_1}{\sqrt{-i\omega\mu_1\sigma_1 + \omega^2\mu_1\varepsilon_1}} = \begin{cases} -\sqrt{\dfrac{i\omega\mu_1}{\sigma_1}} \;\; \textrm{for} \;\; \sigma \gg \omega\varepsilon \\ -\sqrt{\dfrac{\mu_1}{\varepsilon_1}} \;\;\;\;\,\;\; \textrm{for} \;\; \sigma \ll \omega\varepsilon \end{cases}\end{split}\]</div>
+<p>The physical significance of this was explained during the material on <a class="reference internal" href="../harmonic_planewaves_homogeneous/impedancephase.html#harmonic-planewaves-homogeneous-impedancephase"><span class="std std-ref">impedance and phase</span></a> for plane waves in homogeneous media.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Fresnel_equations.html" class="btn btn-neutral float-left" title="Fresnel Equations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../maxwell_sources.html" class="btn btn-neutral float-right" title="Maxwell’s Equations with Electromagnetic Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

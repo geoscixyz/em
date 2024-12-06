@@ -1,0 +1,265 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey and Data &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Processing and Interpretation" href="processing_interpretation.html" />
+    <link rel="prev" title="Properties" href="properties.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Saurashtra</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Survey and Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lotem-survey-configuration">LOTEM Survey Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensitivity-analysis">Sensitivity Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lotem-survey-over-saurashtra-peninsula">LOTEM Survey over Saurashtra Peninsula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-analysis-of-lotem-data">Quality Analysis of LOTEM Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="processing_interpretation.html">Processing and Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Saurashtra</a></li>
+      <li class="breadcrumb-item active">Survey and Data</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/saurashtra/survey_data.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="survey-and-data">
+<span id="saurashtra-survey-data"></span><h1>Survey and Data<a class="headerlink" href="#survey-and-data" title="Link to this heading"></a></h1>
+<section id="lotem-survey-configuration">
+<h2>LOTEM Survey Configuration<a class="headerlink" href="#lotem-survey-configuration" title="Link to this heading"></a></h2>
+<p>Long-offset time-domain electromagnetic (LOTEM) surveys use a grounded wire transmitter to produce the primary electromagnetic signal. Data are measured using both induction loop and electric field receivers (<a class="reference internal" href="#fig-saurashtra-survey-config"><span class="std std-numref">Fig. 496</span></a> a). The transmitter is kept stationary while the receivers are laid out in a spread that is moved in a manner similar to seismic surveys. Present configurations use second-generation 24-bit multichannel systems. At each site, one can mix the field components so that two components of the same type are always present at adjacent sites. This prevents data gaps and allows calibration across/along the spread to overcome near-surface statics, being a broadband system.</p>
+<p>The induction current generates a secondary electromagnetic field, which is recorded as a time series and stacked. The LOTEM signals, as shown on the right of <a class="reference internal" href="#fig-saurashtra-survey-config"><span class="std std-numref">Fig. 496</span></a>, are recorded in raw form and then digitally processed pre-stack to get maximum signal-to-noise ratios; this includes prestack deconvolution (Strack and Vozoff, 1996). After prestack processing, the data are stacked and, after further poststack processing, converted into apparent resistivities which are then either inverted or directly imaged. Special care must be taken in all steps because preservation of the original data amplitude and timing is essential.</p>
+<figure class="align-center" id="fig-saurashtra-survey-config" style="width: 80%">
+<img alt="../../../_images/SurveyConfig.png" src="../../../_images/SurveyConfig.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 496 </span><span class="caption-text">LOTEM system. a) Survey Configuration. b) Near-field and far-field apparent resistivity curves.</span><a class="headerlink" href="#fig-saurashtra-survey-config" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sensitivity-analysis">
+<h2>Sensitivity Analysis<a class="headerlink" href="#sensitivity-analysis" title="Link to this heading"></a></h2>
+<p>Before conducting a geophysical survey, you must be certain that the structures you want to characterize are sensitive to the proposed survey method. In this case, we must determine whether the basement and Mesozoic sediments lying under the Deccan trap basalts are sufficiently sensitive to LOTEM. If the Deccan trap basalts are too thick or the overlying rock/sediments are excessively conductive, recovery of the underlying Mesozoic sediments may prove difficult.</p>
+<p>Synthetic modeling was used to determine whether the thickness of the Deccan trap basalts was problematic in recovering the underlying Mesozoic sedimentary unit. A 3 layer model was used to represent the regional geology (<a class="reference internal" href="#fig-saurashtra-sensitivity1"><span class="std std-numref">Fig. 497</span></a>). The Deccan trap basalts were assigned an electrical resistivity of 150 <span class="math notranslate nohighlight">\(\Omega m\)</span>, the Mesozoic sediments were assigned a resistivity value of 20 <span class="math notranslate nohighlight">\(\Omega m\)</span> and the basement was given a resistivity value of 1000 <span class="math notranslate nohighlight">\(\Omega m\)</span>. The thickness of the Deccan trap basalt layer was then varied from 1.5 km to 2.0 km to 3.0 km. The width of the Mesozoic sediments was fixed at 3.0 km. Data were predicted using a transmitter-receiver offset of 10 km. Predicted data were subsequently converted to apparent resistivity values at each time channel using both a near-field and far-field approximation (<a class="reference internal" href="#fig-saurashtra-sensitivity1"><span class="std std-numref">Fig. 497</span></a>). The near-field approximation shows that the signal penetrates the Deccan trap basalts and that the underlying Mesozoic sediments are sensitive to the LOTEM. The far-field approximation shows that the basement is also sensitive to LOTEM, implying that it is possible to recover the upper and lower margins of sediments lying between the Deccan trap basalts and the basement.</p>
+<figure class="align-center" id="fig-saurashtra-sensitivity1" style="width: 80%">
+<img alt="../../../_images/sensitivity1.png" src="../../../_images/sensitivity1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 497 </span><span class="caption-text">Apparent resistivity curves for synthetic 1D model to test the sensitivity of LOTEM to Mesozoic sediments and basement below Deccan trap basalts.</span><a class="headerlink" href="#fig-saurashtra-sensitivity1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Because the geology of the Saurashtra peninsula is poorly resolved at depth, it is possible that the estimated thickness of the Mesozoic sediments and the depth of the basement from 2D DCR surveying is incorrect. The earth could be more complicated by having a Quaternary sedimentary layer at top. Also the  unit beneath the volcanics might be complex and the question is whether the conductive units can still produce a measurable effect. To test this, simulations were carried out. The thicknesses of the geologic units within the 1D layered Earth model were kept fixed. The conductivities are shown in the <a class="reference internal" href="#fig-saurashtra-sensitivity2"><span class="std std-numref">Fig. 498</span></a>). The resistivity of the Silurian sedimentary unit varied varied from 20 to 100 Ohm-m. Data were predicted using a transmitter-receiver offset of 9 km. Predicted data were subsequently converted to apparent resistivity values at each time channel using both a near-field and far-field approximation (<a class="reference internal" href="#fig-saurashtra-sensitivity2"><span class="std std-numref">Fig. 498</span></a>). The near-field approximation shows that even with the inclusion of a conductive overburden, the LOTEM signal is capable of penetrating through the Deccan trap basalts. Both approximations show that the Silurian sediment layer is sensitive to the LOTEM and that sedimentary units of varying type may be differentiated.</p>
+<figure class="align-center" id="fig-saurashtra-sensitivity2" style="width: 80%">
+<img alt="../../../_images/sensitivity2.png" src="../../../_images/sensitivity2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 498 </span><span class="caption-text">Apparent resistivity curves for synthetic 1D model to test the sensitivity of LOTEM to possible Silurian age sediments.</span><a class="headerlink" href="#fig-saurashtra-sensitivity2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lotem-survey-over-saurashtra-peninsula">
+<h2>LOTEM Survey over Saurashtra Peninsula<a class="headerlink" href="#lotem-survey-over-saurashtra-peninsula" title="Link to this heading"></a></h2>
+<p>The data analyzed in this case study were acquired in the late 1980s during field work sponsored by the German government and India’s ONGC. The survey, covering around 400 sites in Gujarat, was carried out over three months. The acquisition parameters were based on forward numerical modeling of the survey response and the resistivities from a prior deep geoelectric sounding survey. Eight survey profiles (labeled A, C, D, G, J, K, L and R) were surveyed are shown in <a class="reference internal" href="#fig-saurashtra-survey-map"><span class="std std-numref">Fig. 499</span></a>.</p>
+<figure class="align-center" id="fig-saurashtra-survey-map" style="width: 80%">
+<img alt="../../../_images/SurveyMap.png" src="../../../_images/SurveyMap.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 499 </span><span class="caption-text">Locations of LOTEM profiles surveyed over the Saurashtra peninsula.</span><a class="headerlink" href="#fig-saurashtra-survey-map" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quality-analysis-of-lotem-data">
+<h2>Quality Analysis of LOTEM Data<a class="headerlink" href="#quality-analysis-of-lotem-data" title="Link to this heading"></a></h2>
+<p>Synthetic modeling showed that LOTEM data were sensitive to the geological units we hope to resolve. However, certain geological units may be challenging to recover if the signal to noise ratio is insufficient. To assess the data quality, data from 4 stations (labeled 22, 23, 24 and 25) were converted to apparent resistivities using both the near-field and far-field approximations (<a class="reference internal" href="#fig-saurashtra-data-quality"><span class="std std-numref">Fig. 500</span></a>). At each station multiple time series were recorded and stacked. The <a class="reference internal" href="#fig-saurashtra-data-quality"><span class="std std-numref">Fig. 500</span></a> shows that up to 1 s, the data quality if very good. The similarity in resistivity curves among the 4 station indicates were are measuring good quality signals.</p>
+<figure class="align-center" id="fig-saurashtra-data-quality" style="width: 70%">
+<img alt="../../../_images/DataQuality.png" src="../../../_images/DataQuality.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 500 </span><span class="caption-text">Apparent resistivity curves for 4 separate stations.</span><a class="headerlink" href="#fig-saurashtra-data-quality" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="properties.html" class="btn btn-neutral float-left" title="Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="processing_interpretation.html" class="btn btn-neutral float-right" title="Processing and Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

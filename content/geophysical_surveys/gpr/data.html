@@ -1,0 +1,306 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interpretation" href="interpretation.html" />
+    <link rel="prev" title="Survey" href="survey.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#visualization">Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing">Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Ground Penetrating Radar</a></li>
+      <li class="breadcrumb-item active">Data</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/gpr/data.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-purpose admonition" id="purpose">
+<span id="gpr-csem-data"></span><p class="admonition-title">Purpose</p>
+<p>Here, we define the data which are collected during GPR surveys. Common methods for visualizing the data are presented. Important processing steps applied to raw collected data are also discussed.</p>
+</div>
+<section id="data">
+<h1>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h1>
+<figure class="align-right" id="id1" style="width: 55%">
+<img alt="../../../_images/GPR_schematic_example.jpg" src="../../../_images/GPR_schematic_example.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 230 </span><span class="caption-text">Schematic of a common-offset GPR setup.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>During GPR surveys, a source antenna (Tx) is used to send a pulse of radiowaves (10 MHz to 2.6 GHz) into the ground. As the radiowave signal propagates through the Earth, it is distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. Distorted radiowave signals are then measured by the receiver antenna (Rx).</p>
+<p><strong>What is measured:</strong> Receiver antennas are sensitive to the electric fields carried by radiowave signals and act as transducers, converting incoming GPR signals into electrical current. The induced current produces a corresponding voltage which is then recorded digitally. Ultimately GPR receivers measure the amplitude and polarization of incoming radiowave signals as a function of time. The change in amplitude and polarization of radiowave signals occurs as they are distorted by propagating through the Earth. Because the raw data are eventually normalized, the units are not particularly important.</p>
+<p><strong>Measurement duration:</strong> Radiowave signals for GPR propagate through the Earth at velocities comparable to the speed of light (c <span class="math notranslate nohighlight">\(\approx 3.0 \times 10^8\)</span> m/s) and travel relatively short distances (metres to 10s of metres). As a result, the total travel times for GPR signals as they propagate from the transmitter antenna to the receiver antenna are very short. The time series collected for a single GPR shot typically lasts up to a few hundred nanoseconds after the signal is generated. However for GPR surveys meant to image very near to the surface (resulting in shorter travel times), data are collected for a shorter period after the transmitter emits the GPR signal.</p>
+<p>Because GPR measurements for a single shot are so short, they can be repeated many times for the same trasmitter-receiver pair at the same location (sounding). This allows the quality of GPR data to be improved by stacking (link).</p>
+<section id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Link to this heading"></a></h2>
+<section id="d-visualization-radargram">
+<h3>2D Visualization: Radargram<a class="headerlink" href="#d-visualization-radargram" title="Link to this heading"></a></h3>
+<figure class="align-right" id="id2" style="width: 55%">
+<img alt="../../../_images/GPR_radargram_example.jpg" src="../../../_images/GPR_radargram_example.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 231 </span><span class="caption-text">Radargram showing hyperbolic signatures from two buried pipes.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To gain insight regarding buried structures, GPR measurements are performed at multiple locations using a particular survey configuration; notable survey configurations were discussed here (link). For common offset and common midpoint surveys, data are typically collected along one or more 2D profiles. By amalgamating the data, we can generate a radargram for each profile.</p>
+<p>The horizontal axis (distance) is used to represent the location of the receiver relative to the transmitter for a particular sounding. The vertical axis shows the total travel times of measured signals. By assuming some a-priori knowledge of the radiowave velocity, the vertical axis is sometimes represented by an approximate depth. The gray-scale denotes the amplitude of the returning signal at each time and location.</p>
+</section>
+<section id="d-visualization">
+<h3>3D Visualization<a class="headerlink" href="#d-visualization" title="Link to this heading"></a></h3>
+<p>GPR data can be visualized in 3D if it is collected along multiple profile lines. Below we see two examples. On the bottom left, we see an example from the Furggwanghorn (link) case history. Here, each 2D profile is plotted separately. On the bottom right, we see GPR data collected over several buried storage tanks. These data were interpolated. The image shown is of several horizontal slices.</p>
+<figure class="align-center" id="id3" style="width: 100%">
+<img alt="../../../_images/3Dvisual.png" src="../../../_images/3Dvisual.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 232 </span><span class="caption-text">(Left) Multiple radargrams collected over a glacier. (Right) Interpolated radargram data over a set of buried storage tanks.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="processing">
+<h2>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h2>
+<p>Before raw data can be represented as a final radargram image, several processing steps are usually required. These are summarized below:</p>
+<section id="stacking">
+<h3>Stacking<a class="headerlink" href="#stacking" title="Link to this heading"></a></h3>
+<p>Stacking describes the process of averaging a set of repeated GPR shots in order to reduce noise and improve interpretation.
+Essentially, stacking acts as a way of improving the signal to noise ratio for GPR data collected at a certain location.
+An example of this is demonstrated below.
+As we can see, the more readings we stack, the clearer we see coherent GPR signals.</p>
+<figure class="align-center" id="id4" style="width: 100%">
+<img alt="../../../_images/GPR_stacking_times.png" src="../../../_images/GPR_stacking_times.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 233 </span><span class="caption-text">Example of how averaging multiple traces from the same Tx-Rx pair can improve the signal to noise ratio. This results in an improved image of the returning signal.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="smoothing">
+<h3>Smoothing<a class="headerlink" href="#smoothing" title="Link to this heading"></a></h3>
+<p>Smoothing is another technique used to improve the interpretation of field collected GPR data.
+In GPR systems, the data sampling rate is such that the returning wavelet signals should be reasonably smooth and visible.
+Random noise on the other hand is completely incoherent.
+When smoothing is applied to the data, it has the effect of reducing the amplitude of incoherent noise while retaining naturally smooth signals in the data.
+One example of smoothing techniques is the moving average (shown below).
+We can see that as more data points in time are used for the average, the more easily recognizable the wavelet signal is.</p>
+<figure class="align-center" id="id5" style="width: 100%">
+<img alt="../../../_images/GPR_averaging_times.png" src="../../../_images/GPR_averaging_times.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 234 </span><span class="caption-text">Example of smoothing a trace by using a moving average.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gain-correction">
+<h3>Gain Correction<a class="headerlink" href="#gain-correction" title="Link to this heading"></a></h3>
+<figure class="align-right" id="id6" style="width: 40%">
+<img alt="../../../_images/GPR_gain_time_function.png" src="../../../_images/GPR_gain_time_function.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 235 </span><span class="caption-text">Example gain function which corrects for a loss in signal strength at later times.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Signals measured at earlier times are much stronger than signals which are measured at later times.
+This may be due to scattering, attenuation, geometric spreading or reflection/transmission events.
+As a result, it may not be easy to distinguish important features in the data at later times.
+To account for this, the raw data <span class="math notranslate nohighlight">\(d_{raw}(t)\)</span> for each reading is multiplied by a gain function <span class="math notranslate nohighlight">\(g(t)\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[d(t) = g(t) \times d_{raw}(t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(d(t)\)</span> is the data represented in the radargram.
+The gain function itself is a positive function which increases in magnitude as a function of time.
+Thus a larger gain is applied to raw data at later times.
+An example of the gain function is shown on the right.
+As we can see, the gain function increases in value exponentially to account for the exponential loss in return signal strength over time.
+However, the gain function is generally bounded by a maximum value.</p>
+<figure class="align-center" id="id7" style="width: 100%">
+<img alt="../../../_images/GPR_gain_signal.png" src="../../../_images/GPR_gain_signal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 236 </span><span class="caption-text">(Left) Single trace before gain correction. (Right) Single trace after gain correction.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The strength of returning signals is also much weaker at distances further away from the source.
+Because of this, gain corrections may be applied based on Tx-Rx distance.
+This is not necessary for common offset surveys, but may be important in common midpoint or transillumination surveys.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="survey.html" class="btn btn-neutral float-left" title="Survey" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

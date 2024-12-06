@@ -1,0 +1,420 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data" href="data.html" />
+    <link rel="prev" title="Properties" href="properties.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">DO-27/DO-18 (TKC)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Survey</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#frequency-em-magnetics">Frequency EM + Magnetics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ground-gravity">Ground Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gravity-gradiometry">Gravity Gradiometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time-em-magnetics">Time EM + Magnetics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons worth highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">DO-27/DO-18 (TKC)</a></li>
+      <li class="breadcrumb-item active">Survey</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/do27do18tkc/survey.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <figure class="align-right" id="tkc-survey" style="width: 30%">
+<img alt="../../../_images/TKC_7Steps_Survey.png" src="../../../_images/TKC_7Steps_Survey.png" />
+</figure>
+<section id="survey">
+<h1>Survey<a class="headerlink" href="#survey" title="Link to this heading"></a></h1>
+<p>The TKC deposit has been used as a testbed for airborne and ground geophysics,
+with over 10 known surveys carried out over the deposit. In this section, we
+review the acquisition configuration of 5 of these surveys.</p>
+<p>All data used in this study were converted from their native coordinate system
+to the NAD27-UTM 12N (<a class="reference external" href="https://spatialreference.org/ref/epsg/26712/">EPSG 26712</a>) projection prior to processing.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Survey</strong></p></td>
+<td><p><strong>Data Type</strong></p></td>
+<td><p><strong>Year</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>DIGHEM</strong></p></td>
+<td><p>FEM, magnetics</p></td>
+<td><p>1992</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aerodat</p></td>
+<td><p>FEM,magnetics</p></td>
+<td><p>1993</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NanoTEM</strong></p></td>
+<td><p>TEM</p></td>
+<td><p>1993</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ground magnetics</p></td>
+<td><p>Magnetics</p></td>
+<td><p>1993</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Ground gravity</strong></p></td>
+<td><p>Gravity</p></td>
+<td><p>1994</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Falcon</strong></p></td>
+<td><p>Gravity gradiometry</p></td>
+<td><p>2001</p></td>
+</tr>
+<tr class="row-even"><td><p>AeroTEM I</p></td>
+<td><p>TEM, magnetics</p></td>
+<td><p>2001</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>AeroTEM II</strong></p></td>
+<td><p>TEM, magnetics</p></td>
+<td><p>2003</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>VTEM</strong></p></td>
+<td><p>TEM, magnetics</p></td>
+<td><p>2004</p></td>
+</tr>
+<tr class="row-odd"><td><p>Resolve</p></td>
+<td><p>FEM, magnetics</p></td>
+<td><p>2006</p></td>
+</tr>
+<tr class="row-even"><td><p>Falcon</p></td>
+<td><p>Gravity gradiometry</p></td>
+<td><p>2006</p></td>
+</tr>
+<tr class="row-odd"><td><p>HeliSAM</p></td>
+<td><p>TEM (total field)</p></td>
+<td><p>2014</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Systems used in this study are bolded</strong></p></td>
+</tr>
+</tbody>
+</table>
+<section id="frequency-em-magnetics">
+<span id="survey-dighem"></span><h2>Frequency EM + Magnetics<a class="headerlink" href="#frequency-em-magnetics" title="Link to this heading"></a></h2>
+<figure class="align-right" id="fig-survey-dighem" style="width: 50%">
+<img alt="../../../_images/Survey_DIGHEM.png" src="../../../_images/Survey_DIGHEM.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 361 </span><span class="caption-text">Airborne DIGHEM survey flight lines</span><a class="headerlink" href="#fig-survey-dighem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The first airborne survey acquired at TKC used the DIGHEM system. These data, acquired in 1992, resulted in the discovery of both DO-27 and DO-18. The survey consisted of 15 lines flown in the EW orientation at a 200 m line spacing, for a total of
+52 line-km. The nominal flight height of the survey bird was 30 m. The DIGHEM
+system was equipped with a co-axial and a co-planar loop configuration. The <a class="reference internal" href="#dighemconfig"><span class="std std-ref">table
+below</span></a> summarizes the separation and frequencies measured
+by each coil pair. A magnetometer sensor inside the EM bird was used to
+collect total field magnetic data.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="dighemconfig">
+<tbody>
+<tr class="row-odd"><td><p><strong>Configuration</strong></p></td>
+<td><p><strong>Frequencies (Hz)</strong></p></td>
+<td><p><strong>Separation (m)</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Co-axial</p></td>
+<td><p>1000, 5500</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Co-planar</p></td>
+<td><p>900, 7200</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>56000</p></td>
+<td><p>6.3</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ground-gravity">
+<h2>Ground Gravity<a class="headerlink" href="#ground-gravity" title="Link to this heading"></a></h2>
+<figure class="align-right" id="fig-survey-grav" style="width: 50%">
+<img alt="../../../_images/Survey_Grav.png" src="../../../_images/Survey_Grav.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 362 </span><span class="caption-text">Ground gravity stations collected in 1994.</span><a class="headerlink" href="#fig-survey-grav" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A ground gravity data set was collected in the winter of 1994 in two separate
+surveys. The data were leveled and combined into a single data set. Stations
+were spaced every 25 m in the easting direction and every 100 m in the northing
+direction over DO-27. Over DO-18, stations were collected every 50 m and every
+25 m in the easting and northing directions, respectively. This gives a total
+of 972 data locations. We note that only elevation data for the
+survey over DO-27 were supplied to us. However, given that the data were
+collected in the winter, we were able to use our elevation model
+<a class="reference internal" href="setup.html#fig-tkc-location"><span class="std std-numref">Fig. 359</span></a> and assume that the gravity stations were collected on the
+surface of the frozen lake.</p>
+</section>
+<section id="gravity-gradiometry">
+<h2>Gravity Gradiometry<a class="headerlink" href="#gravity-gradiometry" title="Link to this heading"></a></h2>
+<figure class="align-right" id="fig-survey-falcon" style="width: 50%">
+<img alt="../../../_images/Survey_Falcon.png" src="../../../_images/Survey_Falcon.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 363 </span><span class="caption-text">Airborne Falcon survey collected in 2001</span><a class="headerlink" href="#fig-survey-falcon" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Airborne gravity gradiometry data were collected in 2001 using the Falcon
+fixed-wing system. The survey covers a much larger area around the known
+deposit in an effort to find additional drilling targets. Over 140 survey
+lines were flown along the North-South direction, with an approximate line
+spacing of 50 m, for a total of 1,120 line-km. The nominal flight height of
+the survey was 50 m. After processing, the Falcon system returns the vertical
+component of the gravity field <span class="math notranslate nohighlight">\(g_{z}\)</span> and the vertical component of the
+gradient tensor <span class="math notranslate nohighlight">\(g_{zz}\)</span>. The fundamentals for the gravity and gravity
+gradiometry surveys can be reviewed in <a class="reference external" href="http://gpg.geosci.xyz/content/gravity/index.html">GPG Gravity</a>.</p>
+</section>
+<section id="time-em-magnetics">
+<h2>Time EM + Magnetics<a class="headerlink" href="#time-em-magnetics" title="Link to this heading"></a></h2>
+<figure class="align-right" id="fig-survey-nanotem" style="width: 50%">
+<span id="survey-nanotem"></span><img alt="../../../_images/Survey_NanoTEM.png" src="../../../_images/Survey_NanoTEM.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 364 </span><span class="caption-text">Ground NanoTEM survey collected in 1993.</span><a class="headerlink" href="#fig-survey-nanotem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="nanotem">
+<h3>NanoTEM<a class="headerlink" href="#nanotem" title="Link to this heading"></a></h3>
+<p>The first time-domain EM survey collected at TKC was a NanoTEM survey 1993. A
+total of 21 lines with 40 m station spacing were collected. The primary
+objectives of the survey were to delineate the kimberlite pipes and estimate
+the depth of the till layer. The NanoTEM system is a concentric transmitter-
+receiver configuration, 40 m and 10 m in side respectively. The receiver
+measures off-time data over 31 time-channels.</p>
+<figure class="align-right" id="fig-survey-aerotem" style="width: 50%">
+<span id="survey-aerotem"></span><img alt="../../../_images/Survey_AeroTEM.png" src="../../../_images/Survey_AeroTEM.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 365 </span><span class="caption-text">Airborne AeroTEM survey collected in 2003.</span><a class="headerlink" href="#fig-survey-aerotem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="aerotem">
+<h3>AeroTEM<a class="headerlink" href="#aerotem" title="Link to this heading"></a></h3>
+<p>The first airborne time-domain electromagnetic survey collected at TKC was a
+helicopter-borne AeroTEM I survey flown in 2001. The survey was repeated in
+2003 using a new generation of the system, the AeroTEM II. Fifteen survey
+lines were flown in the east-west direction, with 4 additional lines flown
+north-south. The overlap between the two sets of lines covers the approximate
+location of DO-27 and DO-18 with the objective of determining the vertical
+extent of the kimberlite pipes.</p>
+<p>The AeroTEM system is a concentric transmitter-receiver coil system mounted on a rigid
+platform. The AeroTEM transmitter waveform is a triangular current pulse of 1150
+microseconds duration operating at a base frequency of 150 Hz. The transmitter
+loop consists of 8 turns of copper wire, 5 m in diameter, with a maximum
+current  of 250 A that produces a peak moment of 40,000 Am2.
+A cesium-vapour magnetometer bird is towed 10 m above the EM loops.</p>
+<figure class="align-right" id="fig-survey-vtem" style="width: 50%">
+<span id="survey-vtem"></span><img alt="../../../_images/Survey_VTEM.png" src="../../../_images/Survey_VTEM.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 366 </span><span class="caption-text">Airborne VTEM survey collected in 2004.</span><a class="headerlink" href="#fig-survey-vtem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vtem">
+<h3>VTEM<a class="headerlink" href="#vtem" title="Link to this heading"></a></h3>
+<p>Due to peculiar negative data recorded by the AeroTEM system, the decision was
+made to collect a second TEM survey in 2004 with a helicopter-borne VTEM
+system. A total of 20 lines were flown orientated east-west using a 75 m line spacing,
+with an additional 2 tie lines in the north-south direction for a total of 39 line-km. The VTEM system measured the vertical component of the magnetic field using a
+concentric loop configuration. A cesium-vapour magnetometer bird is attached 15 m
+below the helicopter.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="properties.html" class="btn btn-neutral float-left" title="Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data.html" class="btn btn-neutral float-right" title="Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Effects of Topography &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Effects of localized conductivity anomalies" href="effects_of_localized_conductivity_amonalies.html" />
+    <link rel="prev" title="Layered Earth" href="layered_earth.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell II: Static</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../governing_equations/index.html">Governing Equations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Fields from grounded sources: DCR</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="current_sources_in_a_wholespace.html">Current sources in a whole-space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="current_sources_in_a_halfspace.html">Current sources in a halfspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrostatic_sphere.html">Conducting sphere in a uniform electric field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="point_current_source_and_sphere.html">Point current source and a conducting sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layered_earth.html">Layered Earth</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Effects of Topography</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electric-potential-across-a-hemispherical-depression-in-a-conducting-half-space">Electric Potential Across a Hemispherical Depression in a Conducting Half-Space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="effects_of_localized_conductivity_amonalies.html">Effects of localized conductivity anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dcr_in_complex_media.html">DCR in complex media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="details/index.html">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../fields_from_grounded_sources_mmr/index.html">Fields from grounded sources MMR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell II: Static</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Fields from grounded sources: DCR</a></li>
+      <li class="breadcrumb-item active">Effects of Topography</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell2_static/fields_from_grounded_sources_dcr/effects_of_topography.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="effects-of-topography">
+<span id="id1"></span><h1>Effects of Topography<a class="headerlink" href="#effects-of-topography" title="Link to this heading"></a></h1>
+<p>For this derivation, we will examine the effects of negative
+topography by considering a hemispherical depression in the Earth’s
+surface.</p>
+<p>This builds upon the solution for <a class="reference internal" href="point_current_source_and_sphere.html#point-current-source-and-sphere"><span class="std std-ref">Point current source and a conducting sphere</span></a>. By setting the resistivity of the sphere to infinity, and by exploiting the
+symmetry, the solution for a
+hemispherical depression within a halfspace is presented.</p>
+<section id="electric-potential-across-a-hemispherical-depression-in-a-conducting-half-space">
+<span id="effects-of-topography-electric-potential-hemispherical-depression"></span><h2>Electric Potential Across a Hemispherical Depression in a Conducting Half-Space<a class="headerlink" href="#electric-potential-across-a-hemispherical-depression-in-a-conducting-half-space" title="Link to this heading"></a></h2>
+<p>Here, we consider the electric scalar potential at <span class="math notranslate nohighlight">\(P\)</span>, which
+results from the injection of current near a hemispherical depression of
+radius <span class="math notranslate nohighlight">\(a\)</span>, centered at (<span class="math notranslate nohighlight">\(0,0,0\)</span>). According to Telford, so
+long as current is being injected along the axis of symmetry shown in <a class="reference internal" href="#sphericaldepression-poledipole"><span class="std std-numref">Fig. 82</span></a>,
+and <span class="math notranslate nohighlight">\(x_0&gt;a\)</span>, we can obtain our solution from Eq. <a class="reference internal" href="#equation-potential-sphere-pole-hemispheredepression-halfspace">(363)</a> by
+replacing <span class="math notranslate nohighlight">\(4\pi\)</span> with <span class="math notranslate nohighlight">\(2\pi\)</span>; replacement of the constant is
+done because all current flows entirely through the ground. By setting
+<span class="math notranslate nohighlight">\(\rho_1 = \infty\)</span>, the potential created by the injection of
+current <span class="math notranslate nohighlight">\(I\)</span> at (<span class="math notranslate nohighlight">\(x_0,0,0\)</span>) is:</p>
+<div class="math notranslate nohighlight" id="equation-potential-sphere-pole-hemispheredepression-halfspace">
+<span class="eqno">(363)<a class="headerlink" href="#equation-potential-sphere-pole-hemispheredepression-halfspace" title="Link to this equation"></a></span>\[\phi (r, \theta, \phi) = \frac{I\rho}{2 \pi} \Bigg [ \frac{1}{R} + \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n}{n+1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]\]</div>
+<figure class="align-center" id="sphericaldepression-poledipole">
+<img alt="../../../_images/SphericalDepression_PoleDipole.png" src="../../../_images/SphericalDepression_PoleDipole.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a pole source.</span><a class="headerlink" href="#sphericaldepression-poledipole" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Recall that at this point, <span class="math notranslate nohighlight">\(x_0\)</span> is the radial distance from the
+origin, within a spherical coordinate system relative to the axis of
+symmetry. Using Eq. <a class="reference internal" href="#equation-potential-sphere-dipole-hemispheredepression-halfspace">(364)</a>
+however, we can solve the problem in <a class="reference internal" href="#sphericaldepression-dipoledipole"><span class="std std-numref">Fig. 83</span></a>,
+where a current of <span class="math notranslate nohighlight">\(I\)</span> is being injected at <span class="math notranslate nohighlight">\((x_1,\pi,0\)</span>)
+and a current of <span class="math notranslate nohighlight">\(-I\)</span> is being injected at (<span class="math notranslate nohighlight">\(x_2,0,0\)</span>):</p>
+<div class="math notranslate nohighlight" id="equation-potential-sphere-dipole-hemispheredepression-halfspace">
+<span class="eqno">(364)<a class="headerlink" href="#equation-potential-sphere-dipole-hemispheredepression-halfspace" title="Link to this equation"></a></span>\[\begin{split}\begin{split}
+\phi (r , \theta, \phi) &amp;= \phi_{+} + \phi_{\, -}\\
+&amp;= \frac{\rho I}{2 \pi} \Bigg [ \frac{1}{R_1} - \frac{1}{R_2} + \sum_{n=0}^\infty \Bigg ( \frac{n}{n+1} \Bigg ) \Bigg ( \frac{a^{2n+1}  P_n \big ( cos \theta_1 \big ) }{\big (x_1 \, r \big )^{n+1}} -  \frac{a^{2n+1}  P_n \big ( cos \theta_2 \big ) }{\big (x_2 \, r \big )^{n+1}} \Bigg ) \Bigg ]
+\end{split}\end{split}\]</div>
+<p>where, by the cosine law:</p>
+<div class="math notranslate nohighlight">
+\[R_1 = \sqrt{x_1^2 + r^2 - 2r x_1 cos \theta_1 \;}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[R_2 = \sqrt{x_2^2 + r^2 - 2rx_2 cos \theta_2 \;}\]</div>
+<p>It is important to note that Eq. <a class="reference internal" href="#equation-potential-sphere-dipole-hemispheredepression-halfspace">(364)</a>
+is only possible if current is being
+injected along the axis of symmetry. In addition, <span class="math notranslate nohighlight">\(\theta\)</span> refers
+an azimuthal angle relative the axis of symmetry, whereas
+<span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> are strictly angles related to the
+trigonometry of the problem.</p>
+<figure class="align-center" id="sphericaldepression-dipoledipole">
+<img alt="../../../_images/SphericalDepression_DipoleDipole.png" src="../../../_images/SphericalDepression_DipoleDipole.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 83 </span><span class="caption-text">Diagram showing the setup for computing the potential due to a halfspace with a hemispherical depression with a dipole source.</span><a class="headerlink" href="#sphericaldepression-dipoledipole" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="examples">
+<span id="effects-of-topography-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<p>Using the depressed hemi-sphere solution for DC problem, we want to identify
+effects of topography in terms of two aspects:</p>
+<ul class="simple">
+<li><p>Numerical accuracy of 3D DC forward modelling algorithm (UBC DCIP3D)</p></li>
+<li><p>Understanding charge-build up and corresponding electrical fields</p></li>
+</ul>
+<p>First item is important since we use this forward modelleing algorithm for the
+inversion of DC data. If this topographic effect is not accurately computed,
+then this will generate artifacts in the recovered resistivity model. In
+addition, if the numerical and analytic solution show a compatible match, this
+will provide with us cross-checks for both numerical and analytic solutions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There can be errors on derived analytic solutions!</p>
+</div>
+<p>Without a physical understanding of electromagnetic fields in the earth, the
+proper use of EM geophysics is difficult, thus it is important to develop a
+thorough understanding of electromagnetic theory. To investigate effects only
+due to topography, we subtract the primary potential (<span class="math notranslate nohighlight">\(\phi^p =
+\frac{I\rho}{2\pi R}\)</span>) from the total potential, <span class="math notranslate nohighlight">\(\phi\)</span>  which yields
+the secondary potential (<span class="math notranslate nohighlight">\(\phi^s\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\phi^s = \phi - \phi^p\]</div>
+<p>By taking the gradient, then the electric field <span class="math notranslate nohighlight">\(\bf{e}\)</span> and total
+charge density (<span class="math notranslate nohighlight">\(\rho_T\)</span>) can be computed using equations below:</p>
+<div class="math notranslate nohighlight" id="equation-elec">
+<span class="eqno">(365)<a class="headerlink" href="#equation-elec" title="Link to this equation"></a></span>\[\bf{e}=-\nabla \phi\]</div>
+<div class="math notranslate nohighlight" id="equation-charg">
+<span class="eqno">(366)<a class="headerlink" href="#equation-charg" title="Link to this equation"></a></span>\[\rho_T = \epsilon_0 \nabla \cdot \bf{e}\]</div>
+<p>Observations of total, primary, and secondary electric fields and charge
+density will provide us with a comprehensive understanding of topographic
+effects in the DC problem.</p>
+<section id="numerical-validations">
+<span id="effects-of-topography-numerical-validations"></span><h3>Numerical validations<a class="headerlink" href="#numerical-validations" title="Link to this heading"></a></h3>
+<figure class="align-center" id="resismodel">
+<img alt="../../../_images/resismodel.png" src="../../../_images/resismodel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Section view of 3D resistivity model for depressed hemi-sphere.</span><a class="headerlink" href="#resismodel" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above resistivity model shows a depressed hemisphere model. The
+resistivity of the depressed hemi-sphere is set to <span class="math notranslate nohighlight">\(10^8\)</span> ohm-m (close
+to infinity) to simulate air, and the half-space is set to and <span class="math notranslate nohighlight">\(10^3\)</span>
+ohm-m.  To compute potentials from the above depressed hemi-sphere model, we
+first use numerical solutions using DCIP3D code <span id="id2">[<a class="reference internal" href="../../references.html#id11" title="Douglas W Oldenburg and Yaoguo Li. Inversion of induced polarization data. Geophysics, 59(9):1327–1341, 1994.">OL94b</a>]</span>. Then to check the
+accuracy of our numerical algorithm we use analytic solution of a sphere
+problem that we derived in Section <a class="reference internal" href="#effects-of-topography-electric-potential-hemispherical-depression"><span class="std std-ref">Electric Potential Across a Hemispherical Depression in a Conducting Half-Space</span></a>. If you want to see  the numerical code used for evaluating the analytic solution See <a class="reference external" href="https://github.com/geoscixyz/em_examples/blob/master/em_examples/DCsphere.py">DC sphere code</a>. To
+proceed with this validation, we consider a pole transmitter injected in the
+ground. In the above figure, injected current source location is shown.</p>
+<p>For numerical computations, a 3D mesh with 5 m core cells is used. We compute
+potentials in every cells in the 3D domain. Top and middle panels of the below
+figure shows computed numerical and analytic potentials, respectively. White
+lines delineate the boundary of the depressed hemi-sphere. The bottom panel of
+below figure shows relative error, and blank region close to the source has
+errors greater than 10 percent. Even at the boundary of the hemi-sphere, we
+have less than 4 percent error. This is a reasonable accuracy considering that
+our noise level is roughly 10 percent for the DC problem. This shows our
+numerical solution has a capability to accurately compute those topographic
+effects, although our choice of discretization is clearly important.</p>
+<figure class="align-center" id="comparisontotfine">
+<img alt="../../../_images/ComparisonTotFine.png" src="../../../_images/ComparisonTotFine.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Comparisons of numerical and analytic total potentials with topography.
+White line depicts the boundary of the depressed hemisphere.</span><a class="headerlink" href="#comparisontotfine" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For a more careful observation, we provide a similar comparison for the
+secondary potential in 3D space. The top, middle and bottom panels of the
+below figure correspondingly show numerical, analytic, and absolute errors of
+secondary potentials. The maximum error occurs at the hemi-sphere boundary
+close to the current source, but it is less than 20 percent.</p>
+<figure class="align-center" id="comparisonsecfine">
+<img alt="../../../_images/ComparisonSecFine.png" src="../../../_images/ComparisonSecFine.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Comparisons of numerical and analytic secondary potentials with topography.
+White line depicts the boundary of the depressed hemisphere.</span><a class="headerlink" href="#comparisonsecfine" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="interpretations">
+<h3>Interpretations<a class="headerlink" href="#interpretations" title="Link to this heading"></a></h3>
+<p>Using Eqs. <a class="reference internal" href="#equation-elec">(365)</a> and <a class="reference internal" href="#equation-charg">(366)</a>, we can compute both electric fields and
+charge density in 3D. First, we consider charge density. The below figure
+shows total, primary, and secondary charge densities. From the total and
+primary charge densities (top and middle panels), we clearly see secondary
+charge build-up due to the topographic effects is difficult to be recognized
+because of positive charges due to the input current. The secondary charge
+density clearly shows the topographic effects. Positive and negative charges
+are built up on  the left side of the depressed hemi-sphere, closest to the
+input current. Since the air region are act as an insulator, all positive
+charge cannot pass through this hemi-sphere region and accumulated on the left
+side closer to the input current. The magnitude of negative charge build-up on
+the right side is much smaller than the positive charge on the other side.
+These positive and negative charges will generate electric fields based on
+Coulomb’s law (See Section <a class="reference internal" href="../../maxwell1_fundamentals/formative_laws/coulomb.html#gauss-electric-equivalence-to-coulombs-law"><span class="std std-ref">Equivalence of Gauss’ Law for Electric Fields to Coulomb’s Law</span></a>).</p>
+<figure class="align-center" id="comparisonsecfinechargs">
+<img alt="../../../_images/ComparisonSecFineChargs.png" src="../../../_images/ComparisonSecFineChargs.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Section views of total (top panel), primary (middle panel), and secondary
+(bottom panel) charge densities.</span><a class="headerlink" href="#comparisonsecfinechargs" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A rule of thumb for understanding electric fields from charges is:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The electric field is coming out from a positive charge and coming into
+negative charge.</p>
+</div>
+<p>Based on the above principle, first imagine how electric fields are going to
+be distributed in 3D, then check your conjecture with the figure below, which
+shows total, primary, and secondary electric fields. From the total electric
+field shown in the top panel, we recognize that the dominant electric field is
+due to injected current, although we can recognize the distortion of electric
+fields due to charge build-up at the hemi-spherical boundary. By subtracting
+the primary from the total electric field we obtain a secondary electric field
+as shown in the bottom panel. Outside of the hemi-sphere, the electric field
+is dipolar in shape, while inside the hemi-sphere, the electric fields flow
+straight from the positive to negative charges.</p>
+<figure class="align-center" id="comparisonsecfineefield">
+<img alt="../../../_images/ComparisonSecFineEfield.png" src="../../../_images/ComparisonSecFineEfield.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Section views of total (top panel), primary (middle panel), and secondary
+(bottom panel) electric fields.</span><a class="headerlink" href="#comparisonsecfineefield" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="layered_earth.html" class="btn btn-neutral float-left" title="Layered Earth" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="effects_of_localized_conductivity_amonalies.html" class="btn btn-neutral float-right" title="Effects of localized conductivity anomalies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

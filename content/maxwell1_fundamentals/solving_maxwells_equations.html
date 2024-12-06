@@ -1,0 +1,337 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solving Maxwell’s Equations &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Appendix" href="appendix/appendix_index.html" />
+    <link rel="prev" title="Visualization of the Electromagnetic Fields" href="dipole_sources_in_homogeneous_media/magnetic_dipole_time/fields.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solving Maxwell’s Equations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defining-the-problem">Defining the Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boundary-and-initial-conditions">Boundary and Initial Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initial-conditions">Initial Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analytic-and-numeric-solutions">Analytic and Numeric Solutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analytic-solutions">Analytic Solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numerical-solutions">Numerical Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Maxwell I: Fundamentals</a></li>
+      <li class="breadcrumb-item active">Solving Maxwell’s Equations</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/solving_maxwells_equations.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solving-maxwell-s-equations">
+<span id="solving-maxwells-equations"></span><h1>Solving Maxwell’s Equations<a class="headerlink" href="#solving-maxwell-s-equations" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, we provide a general overview on how to solve Maxwell’s equations in practice. The approaches used to solve specific problems are covered later in EM GeoSci.</p>
+</div>
+<p>The practice of solving Maxwell’s equations for an applied problem can be broken into three parts:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Defining the problem:</strong> here, Maxwell’s equations are modified, reformulated or approximated to suite a particular physical problem.</p></li>
+<li><p><strong>Setting boundary and initial conditions:</strong> these are invoked so that solutions to Maxwell’s equations are uniquely solved for a particular application.</p></li>
+<li><p><strong>Solving with analytic or numerical approaches:</strong> once the problem, boundary conditions and initial conditions have been defined, the final solution is obtained through analytic or numerical approaches.</p></li>
+</ol>
+</div></blockquote>
+<section id="defining-the-problem">
+<span id="solving-maxwells-equations-problem"></span><h2>Defining the Problem<a class="headerlink" href="#defining-the-problem" title="Link to this heading"></a></h2>
+<p>In “<a class="reference internal" href="quick_guide_maxwell.html#quick-guide-maxwell"><span class="std std-ref">Overview of Maxwell’s Equations</span></a>”, we presented general formulations for Maxwell’s equations. In most cases however, Maxwell’s equations can be modified, reformulated or approximated to simplify an applied problem. Failure to choose an appropriate formulation may result in the problem being difficult or impossible to solve using current means.</p>
+<p><strong>Examples (to be discussed in more detail throughout EM GeoSci):</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../geophysical_surveys/dcr/index.html#dcr-index"><span class="std std-ref">DC Resistivity:</span></a></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\nabla \cdot \sigma \phi &amp;= \nabla \cdot \mathbf{J_s}\\
+\mathbf{E} =&amp; - \nabla \phi
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{J_s}\)</span> is an electrical current source and <span class="math notranslate nohighlight">\(\phi\)</span> is a scalar potential.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../geophysical_surveys/airborne_fdem/index.html#airborne-fdem-index"><span class="std std-ref">Frequency Domain Electromagnetics:</span></a></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\nabla\times \mu^{-1} \nabla\times\mathbf{E} + i\omega \sigma \mathbf{E} -&amp; \omega^2 \varepsilon \mathbf{E} = - i\omega \mathbf{J_s}\\
+\nabla\times\mathbf{E} + i\omega \mathbf{B} &amp;= 0
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{J_s}\)</span> is an electrical current source. For some problems, we may be able to work in the quasi-static (<span class="math notranslate nohighlight">\(\sigma \gg \omega \varepsilon\)</span>) or wave (<span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>) regimes; allowing us to neglect terms involving <span class="math notranslate nohighlight">\(\varepsilon\)</span>. In many geological environments, the impact of the Earth’s magnetic properties is negligible (i.e. <span class="math notranslate nohighlight">\(\mu\approx \mu_0\)</span>). In this case, we can take <span class="math notranslate nohighlight">\(\mu\)</span> out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../geophysical_surveys/airborne_tdem/index.html#airborne-tdem-index"><span class="std std-ref">Time Domain Electromagnetics:</span></a></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\nabla\times \mu^{-1} \nabla\times\mathbf{e} + \sigma \frac{\partial \mathbf{e}}{\partial t} +&amp; \varepsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}= - \frac{\partial \mathbf{j_s}}{\partial t}\\
+\nabla\times\mathbf{e} + \frac{\partial \mathbf{b}}{\partial t} &amp;= 0
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{j_s}\)</span> is an electrical current source. This equation is the time-dependent equivalent to the one used in frequency domain electromagnetics. For some problems, we may be able to work in the quasi-static or wave regimes; allowing us to neglect terms involving <span class="math notranslate nohighlight">\(\varepsilon\)</span>. If the impact of the Earth’s magnetic properties is negligible (i.e. <span class="math notranslate nohighlight">\(\mu\approx \mu_0\)</span>), we can take <span class="math notranslate nohighlight">\(\mu\)</span> out of the curl-curl system. In the case of a magnetic source, we would need to solve a different system.</p>
+</section>
+<section id="boundary-and-initial-conditions">
+<h2>Boundary and Initial Conditions<a class="headerlink" href="#boundary-and-initial-conditions" title="Link to this heading"></a></h2>
+<section id="boundary-conditions">
+<h3>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h3>
+<figure class="align-right" id="fig-solving-maxwells-domain" style="width: 35%">
+<img alt="../../_images/domain.png" src="../../_images/domain.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Illustration of domain and boundary.</span><a class="headerlink" href="#fig-solving-maxwells-domain" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Boundary conditions ensure that a the problem is well-posed; that is, it has a unique solution. This is necessary when using Maxwell’s equations to solve applied problems in electromagnetic geosciences. Differential equations corresponding to a physical problem are defined within a region, or “domain” (denoted by <span class="math notranslate nohighlight">\(\Omega\)</span>). To make the problem well-posed, boundary conditions are applied to the edges of this domain (denoted by <span class="math notranslate nohighlight">\(\partial \Omega\)</span>). There are three types of boundary conditions, which are listed below:</p>
+<p><strong>Dirichlet Boundary Conditions:</strong> Dirichlet boundary conditions are by far the most straightforward and easy to implement. Dirichlet conditions directly define the value of the solution on the boundary, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F(r)} \, \Big |_{\partial \Omega} = \mathbf{g(r)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is some vector field/flux defined within the domain, <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is a spatially-dependent function and <span class="math notranslate nohighlight">\(\mathbf{r} = (x,y,z)\)</span>. In many cases, the Dirichlet condition is given as a constant value; such as, all fields go to zero at the boundary.</p>
+<p><strong>Neumann Boundary Conditions:</strong> Neumann boundary conditions are imposed by specifying the spatial derivatives of the solution on the boundary. Commonly, Neumann conditions define the directional derivatives normal to the surface of the domain, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F_n}{\partial \mathbf{n}} \bigg |_{\partial \Omega} = \mathbf{g(r)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the unit vector direction perpendicular to the domain boundary <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, <span class="math notranslate nohighlight">\(F_n = \mathbf{F \cdot \hat n}\;\)</span> is the component of a vector field/flux <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> along <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is a spatially-dependent function and <span class="math notranslate nohighlight">\(\mathbf{r} = (x,y,z)\)</span>. Physically, Neumann conditions are used to define the rate of flux through the boundary. This is frequently applied to problems which behave according to the heat equation.</p>
+<p><strong>Robin (Mixed) Boundary Conditions:</strong> Robin boundary conditions are a linear combination of Dirichlet and Neumann conditions, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\bigg [ a\mathbf{F(r)} + b\frac{\partial F_n}{\partial \mathbf{n}} \bigg ] \Bigg |_{\partial \Omega} = \mathbf{g(r)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are constants, <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the unit vector direction perpendicular to the domain boundary <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, <span class="math notranslate nohighlight">\(F_n = \mathbf{F \cdot \hat n}\;\)</span> is the component of a vector field/flux <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> along <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is a spatially-dependent function and <span class="math notranslate nohighlight">\(\mathbf{r} = (x,y,z)\)</span>. Robin conditions are used when the rate of flux leaving the domain is dependent on the value of the field at the boundary.</p>
+</section>
+<section id="initial-conditions">
+<h3>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Link to this heading"></a></h3>
+<p>Initial conditions, in addition to boundary conditions, are required to solve time-dependent problems. Because the solutions to problems in the physical sciences are causal, the fields and fluxes at a particular time depend on the fields and fluxes at earlier times. Generally, we set initial conditions to define the solution at <span class="math notranslate nohighlight">\(t=0\)</span> and we are interested in the bahaviour of the fields and fluxes at <span class="math notranslate nohighlight">\(t\geq 0\)</span>. If the differential equation being solved has only first order derivatives in time, initial conditions may be given by:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F}(\mathbf{r},t) \big |_{t=0} = \mathbf{F_0}(\mathbf{r})\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is a vector field/flux and <span class="math notranslate nohighlight">\(\mathbf{F_0}\)</span> is the vector field/flux at <span class="math notranslate nohighlight">\(t=0\)</span>. This type of condition would be needed to solve the time-domain electromagnetic equation presented in “<a class="reference internal" href="#solving-maxwells-equations-problem"><span class="std std-ref">Defining the Problem</span></a>”.</p>
+<p><strong>Multiple Variables and Higher Order Time-Derivatives</strong></p>
+<p>If the differential equation contains multiple variables and higher order time-derivatives, we cannot solve the problem by simply setting initial conditions on the fields/fluxes at <span class="math notranslate nohighlight">\(t=0\)</span>. Where <span class="math notranslate nohighlight">\(k\)</span> is the highest order time-derivative found in the problem and <span class="math notranslate nohighlight">\(n\)</span> is the number of time-dependent variables, we would require <span class="math notranslate nohighlight">\(nk\)</span> total initial conditions to solve the problem. These initial conditions would take the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^k \mathbf{F}}{\partial t^k} \bigg |_{t=0} = \mathbf{g^k(r)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the vector field/flux associated with variable <span class="math notranslate nohighlight">\(n\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{g^k}\)</span> is a time-dependent function defined throughout the entire domain for the <span class="math notranslate nohighlight">\(k^{th}\)</span> derivative. An example of this is the time-dependent wave equation presented in “<a class="reference internal" href="#solving-maxwells-equations-problem"><span class="std std-ref">Defining the Problem</span></a>”, which requires initial conditions on both <span class="math notranslate nohighlight">\(\mathbf{e}\)</span> and its first-order time-derivative <span class="math notranslate nohighlight">\(\partial \mathbf{e}/\partial t\)</span>.</p>
+</section>
+</section>
+<section id="analytic-and-numeric-solutions">
+<h2>Analytic and Numeric Solutions<a class="headerlink" href="#analytic-and-numeric-solutions" title="Link to this heading"></a></h2>
+<p>Having formulated Maxwell’s equations appropriately, as well as implementing boundary conditions and initial conditions, we can now solve the problem. There are two ways in which meaningful solutions can be obtained: analytically and numerically.</p>
+<section id="analytic-solutions">
+<h3>Analytic Solutions<a class="headerlink" href="#analytic-solutions" title="Link to this heading"></a></h3>
+<p>Ideally, one would derive an analytic solution. The problem becomes even more tractable if the solution is a closed-form expression; can be evaluated using a finite number of simple operations. Analytic solutions are generally only possible if the problem is simplified or exhibits a sufficient degree of geometric symmetry. We prefer analytic solutions because they are rapid to compute and explicitly show how the solution depends on its input variables.</p>
+<p>Some solutions may be called <strong>semi-analytic</strong>. Semi-analytic solutions generally require the numerical evaluation of one or more integral functions, infinite series and/or limits. In this case, the solution is not a closed form expression. However, semi-analytic solutions can be very useful in practice.</p>
+</section>
+<section id="numerical-solutions">
+<h3>Numerical Solutions<a class="headerlink" href="#numerical-solutions" title="Link to this heading"></a></h3>
+<p>Numerical solutions are used to approximate the fields and fluxes to a desired level of accuracy. Numerical approaches are able to solve problems without relying on geometric symmetries. The process of obtaining a numerical solution can be broken down into three parts:</p>
+<ol class="arabic simple">
+<li><p><strong>Discretizing the Domain</strong></p></li>
+<li><p><strong>Defining Fields and Fluxes</strong></p></li>
+<li><p><strong>Applying Computer Algorithms</strong></p></li>
+</ol>
+<p>A conceptual understanding of the aforementioned steps will be provided here. However, we will not present all the required background for solving these problems in practice; as it is extensive.</p>
+<p><strong>Discretizing the Domain:</strong></p>
+<p>In order to obtain a numerical solution, the domain is first discretized; i.e. subdivided into a collection of small volumes/regions. The collection of these volumes is called a ‘mesh’. The physical properties within each volume are considered constant. The size and shape of each volume depends on the geometry of the problem, the size of the domain and the quantity of available computer memory. In <a class="reference internal" href="#fig-solving-maxwells-discretization"><span class="std std-numref">Fig. 76</span></a> a, we see a 1D discretization. The 1D discretization works well when, locally, the Earth displays a layered structure. For problems with irregular geometries, we may choose to use a 2D or 3D discretization (<a class="reference internal" href="#fig-solving-maxwells-discretization"><span class="std std-numref">Fig. 76</span></a> b). As a rule, the finer the discretization (as the dimensions of the cells decrease), the better our numerical solution will approximate the true solution to our problem.</p>
+<figure class="align-center" id="fig-solving-maxwells-discretization" style="width: 100%">
+<img alt="../../_images/discretization.png" src="../../_images/discretization.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Discretization of Earth’s structure. (a) 1D discretization. (b) 3D discretization.</span><a class="headerlink" href="#fig-solving-maxwells-discretization" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Defining Fields, Fluxes and Potentials</strong></p>
+<figure class="align-right" id="fig-solving-maxwells-cube" style="width: 50%">
+<img alt="../../_images/Yee-cube-w-b.png" src="../../_images/Yee-cube-w-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Definition of fields (<span class="math notranslate nohighlight">\(\mathbf{E}\)</span>), fluxes (<span class="math notranslate nohighlight">\(\mathbf{B}\)</span>) and potentials <span class="math notranslate nohighlight">\(\phi\)</span> on a cubic cell.</span><a class="headerlink" href="#fig-solving-maxwells-cube" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The fields, fluxes and/or potentials pertaining to a particular problem are defined throughout the entire domain. Once the domain has been discretized however, evaluation of these quantities is only possible at a finite number of locations. The fields, fluxes and/or potentials being computed depend on the formulation of Maxwell’s equations. The locations of these quantities for each cell depend both on the problem and the corresponding interface conditions.</p>
+<p>As an example, consider <a class="reference internal" href="#fig-solving-maxwells-cube"><span class="std std-numref">Fig. 77</span></a> where:</p>
+<ul class="simple">
+<li><p>the potential <span class="math notranslate nohighlight">\(\phi\)</span> is defined on the cell nodes.</p></li>
+<li><p>cartesian components of the electric field <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> are defined on the cell edges.</p></li>
+<li><p>cartesian components of the magnetic flux density <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> are defined on the cell faces.</p></li>
+<li><p>physical properties <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> are defined at the cell centers.</p></li>
+</ul>
+<p>For problems involving <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, this approach is ideal because it naturally respects the interface conditions for electromagnetic fields. Recall from “<a class="reference internal" href="interface_conditions/index.html#maxwell1-fundamentals-interface-conditions-index"><span class="std std-ref">Interface Conditions</span></a>” that tangential components of the electric field and normal components of the magnetic flux are continuous are continuous across interfaces.</p>
+<p><strong>Applying Computer Algorithms:</strong></p>
+<p>As a final step, the numerical problem is commonly written as a linear system and solved using computer algorithms. The system can be formed using finite difference, finite volume or finite element methods. It generally takes the form:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A(m)u=q_s}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> contains the fields and/or fluxes at discrete locations throughout the domain, <span class="math notranslate nohighlight">\(\mathbf{q_s}\)</span> is a vector corresponding to the source term and <span class="math notranslate nohighlight">\(\mathbf{A(m)}\)</span> is a linear operator that depends on the physical properties (<span class="math notranslate nohighlight">\(\sigma,\mu,\varepsilon\)</span>). Collectively, the physical properties defining each cell make up a physical property model <span class="math notranslate nohighlight">\(\mathbf{m}\)</span>. In electromagnetic geosciences, we are frequently interested in the “inverse problem”. That is, can we recover the physical property model <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> if <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{q_s}\)</span> are known?</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dipole_sources_in_homogeneous_media/magnetic_dipole_time/fields.html" class="btn btn-neutral float-left" title="Visualization of the Electromagnetic Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="appendix/appendix_index.html" class="btn btn-neutral float-right" title="Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

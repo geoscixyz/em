@@ -1,0 +1,264 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layered Earth &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Sphere" href="sphere/index.html" />
+    <link rel="prev" title="Half-space" href="halfspace.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell III: FDEM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../governing_equations.html">Governing Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../circuitmodel_for_eminduction/index.html">Circuit Model for EM Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grounded_sources/index.html">Grounded sources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Inductive sources</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="halfspace.html">Half-space</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Layered Earth</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data">Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sphere/index.html">Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plate.html">Plate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plane_wave_sources/index.html">Plane wave sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../footprint_and_depth_of_investigation.html">Footprint and depth of investigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../natural_sources/index.html">Natural Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell III: FDEM</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Inductive sources</a></li>
+      <li class="breadcrumb-item active">Layered Earth</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell3_fdem/inductive_sources/layered_earth.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="layered-earth">
+<span id="fdem-fields-from-inductive-sources-layered-earth"></span><h1>Layered Earth<a class="headerlink" href="#layered-earth" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>In previous section, we used a half-space model, and due to zero conductivity of the air layer, conduction currents cannot flow, and this made drastic changes in EM fields. More complexity can be made when the earth medium is layered, have different conductivity values because of reflection and refraction of EM waves at layer interfaces. By using a layered earth model having four layers including the air layer, we explore how conductivity contrasts in these layered medium can distort EM fields, and data measured at an Rx location.</p>
+</div>
+<p>We use a similar setup used in the previous section, but fix the Tx height to <span class="math notranslate nohighlight">\(z\)</span> = 30 m. <a class="reference internal" href="#layeredearth"><span class="std std-numref">Fig. 112</span></a> shows a setup for the layered-earth model. The thickness of the first and second layer will be fixed to <span class="math notranslate nohighlight">\(h_1\)</span> = 6 m, and <span class="math notranslate nohighlight">\(h_2\)</span> = 12 m, respectively. All simulation results will be shown following can be reproducible from the Harmonic layered earth app accessible through this link:</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FFDEM_VMD_LayeredEarth.ipynb"><img alt="http://mybinder.org/badge.svg" class="align-center" src="http://mybinder.org/badge.svg" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-center" id="layeredearth">
+<a class="reference internal image-reference" href="../../../_images/LayeredEarth.png"><img alt="../../../_images/LayeredEarth.png" src="../../../_images/LayeredEarth.png" style="width: 488.0px; height: 398.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 112 </span><span class="caption-text">A loop source in a layered-earth. <span class="math notranslate nohighlight">\(\sigma_{air}\)</span> is conductivity of the air layer, and suscript of conductivity stands for i-th layer. <span class="math notranslate nohighlight">\(h_1\)</span> and <span class="math notranslate nohighlight">\(h_2\)</span> correspondingly indicate thickness of 1st and 2nd layers. <span class="math notranslate nohighlight">\(z\)</span> and offset correspondingly indicate Tx height (m) and Tx-Rx offset (m).</span><a class="headerlink" href="#layeredearth" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h2>
+<p>With the above setup, here we present how EM fieids behave upon different conductivity structure of the layered-earth. We first perform a simulation for the half-space case when <span class="math notranslate nohighlight">\(\sigma_1=\sigma_2=\sigma_3=\)</span> 0.01 S/m with <span class="math notranslate nohighlight">\(f\)</span> = 1000 Hz. <a class="reference internal" href="#layer-be"><span class="std std-numref">Fig. 113</span></a> a and b show imaginary part of secondary magntic flux (<span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span>) and electric field in <span class="math notranslate nohighlight">\(y\)</span>-direction (<span class="math notranslate nohighlight">\(E_y\)</span>). Secondary magnetic flux flowing downward show anomalous amplitude along 1st and 2nd layers. Induced electric field are circular and at high amplitude regions are along 2nd and 3rd layers.</p>
+<figure class="align-center" id="layer-be">
+<a class="reference internal image-reference" href="../../../_images/Layer_BE.png"><img alt="../../../_images/Layer_BE.png" src="../../../_images/Layer_BE.png" style="width: 2953.0px; height: 1160.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 113 </span><span class="caption-text">Imaginary part of secondary magnetic flux a) and electric field in <span class="math notranslate nohighlight">\(y\)</span>-direction b). <span class="math notranslate nohighlight">\(\sigma_1 = \sigma_2 = \sigma_3=\)</span> 0.01 S/m; <span class="math notranslate nohighlight">\(f\)</span> = 1000 Hz.</span><a class="headerlink" href="#layer-be" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now we alter conductivity of the third layer, <span class="math notranslate nohighlight">\(\sigma_3\)</span> as 0.001 S/m, implying resistive basement. This effectively makes conductivity constrast between 2nd and 3rd layer. <a class="reference internal" href="#layer-be-base"><span class="std std-numref">Fig. 114</span></a> a and b show imagniary part of <span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span> and <span class="math notranslate nohighlight">\(E_y\)</span>, respectively. At 3rd layer, amplitude of <span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span> is decreased. Similarly high amplitude of electric field is localized to first and second layers. Less EM induction occurs when earth include resistive basement, but still this distorts EM fields suggesting potential to detect and delineate top boundary of the resistive basement.</p>
+<figure class="align-center" id="layer-be-base">
+<a class="reference internal image-reference" href="../../../_images/Layer_BE_base.png"><img alt="../../../_images/Layer_BE_base.png" src="../../../_images/Layer_BE_base.png" style="width: 2953.0px; height: 1160.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 114 </span><span class="caption-text">Imaginary part of secondary magnetic flux a) and electric field in <span class="math notranslate nohighlight">\(y\)</span>-direction b). <span class="math notranslate nohighlight">\(\sigma_1=\sigma_2 =\)</span> 0.01 S/m and <span class="math notranslate nohighlight">\(\sigma_3 =\)</span> 0.001 S/m; <span class="math notranslate nohighlight">\(f\)</span> = 1000 Hz.</span><a class="headerlink" href="#layer-be-base" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Often conductive cover could exists hence, we alther the first layer conductivity, <span class="math notranslate nohighlight">\(\sigma_1\)</span> as 0.1 S/m. This conductivey cover will generate significant eddy currents. <a class="reference internal" href="#layer-be-cond"><span class="std std-numref">Fig. 115</span></a> show a and b show imaginary part of <span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span> and <span class="math notranslate nohighlight">\(E_y\)</span> for this case. High amplitude of <span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span> is localized to the center of the first layer, and this causes significant bending of flux lines at each side. Induced electric field is also more localized to the first layer. Due to this strong EM induction effects at the first layer, resolving 2nd and 3rd layer conductivity will be challenging.</p>
+<figure class="align-center" id="layer-be-cond">
+<a class="reference internal image-reference" href="../../../_images/Layer_BE_cond.png"><img alt="../../../_images/Layer_BE_cond.png" src="../../../_images/Layer_BE_cond.png" style="width: 2951.0px; height: 1160.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 115 </span><span class="caption-text">Imaginary part of secondary magnetic flux a) and electric field in <span class="math notranslate nohighlight">\(y\)</span>-direction b). <span class="math notranslate nohighlight">\(\sigma_1 =\)</span> 0.1 S/m, <span class="math notranslate nohighlight">\(\sigma_2 =\)</span> 0.01 S/m and <span class="math notranslate nohighlight">\(\sigma_3 =\)</span> 0.001 S/m; <span class="math notranslate nohighlight">\(f\)</span> = 1000 Hz.</span><a class="headerlink" href="#layer-be-cond" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In contrast, resistive cover can exists, and for this case injecting currents using grounded source (e.g. DC) is hard. Hence using an inductive source can be effective to find conductive layer below this resistive cover. <a class="reference internal" href="#layer-be-resis"><span class="std std-numref">Fig. 116</span></a> a clearly shows high amplitude of magnetic flux at 2nd layer, which is conductive compared to the others. Similarly, amplitude of electric field at 2nd layer is higher than that at other two layers implying that we may resolve this conductive layer below the resistive cover.</p>
+<figure class="align-center" id="layer-be-resis">
+<a class="reference internal image-reference" href="../../../_images/Layer_BE_resis.png"><img alt="../../../_images/Layer_BE_resis.png" src="../../../_images/Layer_BE_resis.png" style="width: 2950.0px; height: 1160.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 116 </span><span class="caption-text">Imaginary part of secondary magnetic flux a) and electric field in <span class="math notranslate nohighlight">\(y\)</span>-direction b). <span class="math notranslate nohighlight">\(\sigma_1 =\)</span> 0.1 S/m, <span class="math notranslate nohighlight">\(\sigma_2 =\)</span> 0.001 S/m and <span class="math notranslate nohighlight">\(\sigma_3 =\)</span> 0.001 S/m; <span class="math notranslate nohighlight">\(f\)</span> = 1000 Hz.</span><a class="headerlink" href="#layer-be-resis" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h2>
+<p>Using the same four models: a) half-space, b) resistive basement, c) conductive cover, and d) resistive cover used to describe EM fields, here we present corresponding <span class="math notranslate nohighlight">\(B_z\)</span> data at the Rx location, which is 10 m apart from the Tx. <a class="reference internal" href="#layer-bzdata"><span class="std std-numref">Fig. 117</span></a> a-d correspondingly show the measured <span class="math notranslate nohighlight">\(B_z\)</span> data for above four models. Compared to the half-space model, when resistive basement exists, response of the basement model is smaller (&lt; 10 KHz). Conductive cover makes the most drastic changes even in the data due to significant EM induction effects. For instance, peak of the imaginary part can clearly be observed for the conductive cover models, whereas recognizing peak of imaginary part is hard for other three models. Also, amplitude of responses are overall increased. Responses from the resistive cover model show the smallest amplitude. Also, difference from the basement model can clearly be recognized from 1000 Hz - 10 KHz.</p>
+<figure class="align-center" id="layer-bzdata">
+<a class="reference internal image-reference" href="../../../_images/Layer_Bzdata.png"><img alt="../../../_images/Layer_Bzdata.png" src="../../../_images/Layer_Bzdata.png" style="width: 2334.0px; height: 1654.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 117 </span><span class="caption-text">Real and imaginary part of secondary <span class="math notranslate nohighlight">\(B_z\)</span> data at <span class="math notranslate nohighlight">\(z`=30 m and :math:`x\)</span> = 10 m. a) Half-space model (<span class="math notranslate nohighlight">\(\sigma_1=\sigma_2=\sigma_3\)</span> = 0.01 S/m),  b) basement model (<span class="math notranslate nohighlight">\(\sigma_1=\sigma_2\)</span> = 0.01 S/m and <span class="math notranslate nohighlight">\(\sigma_3\)</span> = 0.001 S/m), c) conductive cover model (<span class="math notranslate nohighlight">\(\sigma_1\)</span> = 0.1 S/m, <span class="math notranslate nohighlight">\(\sigma_2\)</span> = 0.01, and <span class="math notranslate nohighlight">\(\sigma_3\)</span> = 0.001 S/m), and d) resistive cover model (<span class="math notranslate nohighlight">\(\sigma_1\)</span> = 0.001 S/m, <span class="math notranslate nohighlight">\(\sigma_2\)</span> = 0.01, and <span class="math notranslate nohighlight">\(\sigma_3\)</span> = 0.001 S/m). Red and black lines distinguish real and imaginary part of the data, and solid and dashed line distigusih positive and negative values.</span><a class="headerlink" href="#layer-bzdata" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="halfspace.html" class="btn btn-neutral float-left" title="Half-space" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sphere/index.html" class="btn btn-neutral float-right" title="Sphere" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

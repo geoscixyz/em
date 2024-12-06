@@ -1,0 +1,373 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EM GeoSci &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+      <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=282f96c0"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Apps" href="apps.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EM GeoSci</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="em-geosci">
+<span id="em-index"></span><h1>EM GeoSci<a class="headerlink" href="#em-geosci" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/casehistories.png"><img alt="em-case-histories" class="align-center" src="_images/casehistories.png" style="width: 100%;" />
+</a>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>To facilitate the understanding and use of
+electromagnetics in solving exploration, geotechnical and environmental
+problems.</p>
+</div>
+<a class="reference internal image-reference" href="_images/disc_dipole.png"><img alt="dipole" class="align-right" src="_images/disc_dipole.png" style="width: 30%;" />
+</a>
+<section id="why-em-geosci">
+<span id="why"></span><h2>Why EM GeoSci<a class="headerlink" href="#why-em-geosci" title="Link to this heading"></a></h2>
+<p>Electromagnetics has not yet reached its full potential for solving problems
+in the geosciences. However that is changing and today the combination of
+better field systems and high quality data, advances in scientific computing,
+and the exponential increase in computer power allows us to solve problems
+that were not possible a few years ago. It is also becoming more common-place to
+acquire laboratory or in-situ measurements of physical properties and these
+are essential links in tying geophysics to questions about the earth. The
+other advance is the open-source technology that
+allows technical  material and ideas to be generated by multiple contributors
+through sources like <a class="reference external" href="https://github.com/geoscixyz/em">Github</a> . Cloud-based computing environments and
+open source software have also opened up portals for interacting with equations
+and concepts in real time as material is being read. The goal of <a class="reference internal" href="#em-index"><span class="std std-ref">EM GeoSci</span></a>
+is to blend these items as seamlessly as possible and provide a learning
+environment in which geoscientists with various backgrounds and expertise can
+connect with the application of electromagnetics in their field of study.
+Having a resource that allows participants to answer many different questions
+connected with electromagnetics will enhance efficiency of research and
+applications. Moreover, this resource provides an explicit repository for
+knowledge that has been acquired by practising geoscientists and, when made
+available, can elevate the learning and responsible use of electromagnetics
+throughout the communinity.</p>
+</section>
+<section id="what-is-em-geosci">
+<span id="what"></span><h2>What is EM GeoSci?<a class="headerlink" href="#what-is-em-geosci" title="Link to this heading"></a></h2>
+<p>EM GeoSci is an open-source resource that emphasizes the physical principles
+of electromagnetic methods and their application in solving geoscience
+problems. Rigorous analytic solutions of the EM problems with specific
+transmitting fields and earth models are left to existing books and research
+papers, and so too are the computational details required to numerically solve
+Maxwell’s equations. Our emphasis is on using analytic and numerical solutions
+to understand electromagnetic fields and fluxes obtained from various types of
+transmitters in different geological environments and to show how different EM
+surveys, using controlled or natural sources, can be applied in practise.
+<a class="reference external" href="https://em.geosci.xyz/content/case_histories/index.html#case-histories-index">Case Histories</a>
+play an essential role. They allow readers to make the
+connection between the geoscience problem, the EM survey, and the eventual
+outcome. Understanding the fundamental physics is facilitated through the use
+of <a class="reference external" href="https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb">Jupyter Notebooks</a>
+which allow users to visualize fields and
+explore understanding by changing parameters. The simulations use the open-
+source package <a class="reference external" href="https://simpeg.xyz">SimPEG</a> (Simulation and Parameter
+Estimation in Geophysics).</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/geoscixyz/em-apps/main?filepath=index.ipynb"><img alt="Binder" src="https://mybinder.org/badge.svg" />
+</a>
+</section>
+<section id="em-geosci-and-the-seg">
+<h2>EM GeoSci and the SEG<a class="headerlink" href="#em-geosci-and-the-seg" title="Link to this heading"></a></h2>
+<a class="reference external image-reference" href="https://seg.org"><img alt="SEG logo" class="align-right" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/SEG_2016_logo.svg/1200px-SEG_2016_logo.svg.png" style="width: 35%;" />
+</a>
+<p>EM GeoSci served as the main “textbook” resource for the <a class="reference external" href="https://doi.org/10.1190/tle40020140.1">SEG 2017
+Distinguished Instructor Short Course</a>
+on “Geophysical Electromagnetics: Fundamentals and Applications”. We are
+grateful that the SEG supported us in our open-source experiment and allowed
+us to substitute EM GeoSci for the traditional hardcopy book that accompanies
+the DISC.  The <a class="reference external" href="https://em.geosci.xyz/content/case_histories/index.html#case-histories-index">Case Histories</a>,
+which form an important component of EM GeoSci, are presented within
+a synoptic Seven-Step framework that is linked to original, published and
+copyrighted papers. We are grateful that the SEG has allowed us to adapt
+figures and content from their publications.</p>
+</section>
+<section id="em-geosci-is-under-construction">
+<h2>EM GeoSci is under construction<a class="headerlink" href="#em-geosci-is-under-construction" title="Link to this heading"></a></h2>
+<p>EM GeoSci is under active construction. We are working to fill in blank
+pages and address todo’s. Our  goal is to have a mature version available by the
+end of 2019. In the meantime, we are making this resource available and
+<a class="reference external" href="http://disc2017.geosci.xyz/#contribute">inviting contributions for case histories</a>.
+We welcome <a class="reference external" href="http://geosci.xyz/contact">feedback</a> about the useability of the site and the technical details.</p>
+</section>
+<section id="how-is-it-organized">
+<h2>How is it organized?<a class="headerlink" href="#how-is-it-organized" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound" id="id2">
+</div>
+<p>The motivation for the structure of em.geosci follows from
+<a class="reference internal" href="content/introduction/introduction_basic_electromagnetic_experiments.html#introduction-basic-electromagnetic-experiments"><span class="std std-ref">Basic Electromagnetic Experiments</span></a>. The goal is to identify
+topics that are logically self-contained and then use links to connect them.
+At the large scale we have the following items.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/introduction/index.html#introduction-index"><span class="std std-ref">Introduction</span></a>:</p>
+<ul>
+<li><p>Provides motivational examples, outlines the site, takes care of housekeeping
+items like notation</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/physical_properties/index.html#physical-properties-index"><span class="std std-ref">Physical Properties</span></a>:</p>
+<ul>
+<li><p>Is the “go-to” location for information about what the properties are, how
+they are measured, typical values etc.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/maxwell1_fundamentals/index.html#maxwell1-fundamentals-index"><span class="std std-ref">Maxwell I: Fundamentals</span></a>:</p>
+<ul>
+<li><p>This contains a summary and background about the formative laws
+that are the basis for Maxwell’s
+equations as well as an introduction to general topics that and not survey specific.
+(eg  the basic equations in the frequency and time domain, interface conditions, concepts of fields and fluxes,
+plane waves in homogeous media, fields from electric and magnetic dipoles etc.
+)</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/maxwell2_static/index.html#maxwell2-static-index"><span class="std std-ref">Maxwell II: Static</span></a>:</p>
+<ul>
+<li><p>This section pertains to the understanding the steady-state Maxwell’s and its
+applications. Foundations for DC resistivity (DCR); Magnetometric resistivity
+(MMR), and magnetic surveys are found here.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/maxwell3_fdem/index.html#maxwell3-fdem-index"><span class="std std-ref">Maxwell III: FDEM</span></a>:</p>
+<ul>
+<li><p>This section pertains to understanding Maxwell’s equations in the frequency
+domain. Foundations for galvanic, inductive and natural source surveys in
+frequency are presented.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/maxwell4_tdem/index.html#maxwell4-tdem-index"><span class="std std-ref">Maxwell IV: TDEM</span></a>:</p>
+<ul>
+<li><p>This section pertains to understanding Maxwell’s equations in the time domain.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/geophysical_surveys/index.html#geophysical-surveys-index"><span class="std std-ref">Geophysical Surveys</span></a>:</p>
+<ul>
+<li><p>Self-contained folders for individual geophysical surveys are provided. For
+example DCR provides a comprehensive overview about the DC resistivity survey
+as well as links to case histories. Each Survey is linked to relevant sections
+in other portions of em.geosci so that comprehensive knowledge can be
+accessed.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/inversion/index.html#inversion"><span class="std std-ref">Inversion</span></a>:</p>
+<ul>
+<li><p>This provides basic tutorial information about inversion that is applicable to
+all em surveys.</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="content/case_histories/index.html#case-histories-index"><span class="std std-ref">Case Histories</span></a>:</p>
+<ul>
+<li><p>These form the cornerstones of our site. They motivate the use of EM
+geophysics and they also dictate what material needs to be developed in the
+background sections. Each case history is presented with a Seven-Step
+Framework.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="apps.html" class="btn btn-neutral float-right" title="Apps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

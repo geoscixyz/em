@@ -1,0 +1,303 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interpretation" href="interpretation.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Bookpurnong</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Processing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-of-frequency-domain-data">Quality control of frequency domain data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-of-time-domain-data">Quality control of time domain data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#d-layered-earth-inversion">1D layered earth inversion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#layered-model">Layered model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion-result">Inversion result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons Worth Highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Bookpurnong</a></li>
+      <li class="breadcrumb-item active">Processing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/bookpurnong/processing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing">
+<span id="bookpurnong-processing"></span><h1>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h1>
+<p>In this step, we process the field data for the preparation of interpretation.
+Many different processing methods exist for airborne EM, but the-state-of-art
+is quantiative inversion that converts the measurements of EM fields to a
+conductivity model. In hydrological studies where the strata are almost
+horizontal, 1D layered earth modeling is usually the standard practice. In the
+following, we describe our processing in two steps: (1) data quality control
+and (2) 1D inversion.</p>
+<section id="quality-control-of-frequency-domain-data">
+<h2>Quality control of frequency domain data<a class="headerlink" href="#quality-control-of-frequency-domain-data" title="Link to this heading"></a></h2>
+<p>Although the contractors have preliminarily processed the raw data to suppress
+the noise, there is still unwanted interference in the deliverables that can
+potentially harm the inversion. So our quality control precedure is supposed
+to prepare the data for inversion.</p>
+<figure class="align-left" id="booky-resolveqc">
+<a class="reference internal image-reference" href="../../../_images/booky-resolveqc.jpg"><img alt="../../../_images/booky-resolveqc.jpg" src="../../../_images/booky-resolveqc.jpg" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 354 </span><span class="caption-text">Quality control of the FDEM data.</span><a class="headerlink" href="#booky-resolveqc" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Viewing the plot of data for each frequqncy <a class="reference internal" href="#booky-resolveqc"><span class="std std-numref">Fig. 354</span></a>, we
+identify some unrealistically small outlies, and we decide to remove them from
+the data set. The uncertainty assigned to this data set is 5% plus 10 ppm as a
+floor.</p>
+</section>
+<section id="quality-control-of-time-domain-data">
+<h2>Quality control of time domain data<a class="headerlink" href="#quality-control-of-time-domain-data" title="Link to this heading"></a></h2>
+<p>For quality control, the SkyTEM data are also viewed for individual time
+channels along the flight lines <a class="reference internal" href="#booky-skytemqc"><span class="std std-numref">Fig. 355</span></a>. There are noticeable
+irregular data called “channel jumping”, and noise that contaminates the late
+time channels. The unrealistic decays and outlies can be automatically
+detected by the analysis of first or second derivative, and be removed. The
+noise present in the late times provides an estimate of a noise floor. The
+assigned uncertainty to the data is 10% plus 1E-13.</p>
+<figure class="align-left" id="booky-skytemqc">
+<a class="reference internal image-reference" href="../../../_images/booky-skytemqc.jpg"><img alt="../../../_images/booky-skytemqc.jpg" src="../../../_images/booky-skytemqc.jpg" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 355 </span><span class="caption-text">Quality control of the TDEM data.</span><a class="headerlink" href="#booky-skytemqc" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="d-layered-earth-inversion">
+<h1>1D layered earth inversion<a class="headerlink" href="#d-layered-earth-inversion" title="Link to this heading"></a></h1>
+<p>The two data sets in this case history have been previously inverted using
+spatially constrained inversion by <span id="id1">[<a class="reference internal" href="../../references.html#id34" title="Andrea Viezzoli, Esben Auken, and Tim Munday. Spatially constrained inversion for quasi 3d modelling of airborne electromagnetic data – an application for environmental assessment in the lower murray region of south australia. Exploration Geophysics, 40(2):173-183, 2009. doi:https://doi.org/10.1071/EG08027.">VAM09</a>]</span>. Here we present the
+inversion results obtained using UBC-GIF programs.</p>
+<section id="layered-model">
+<h2>Layered model<a class="headerlink" href="#layered-model" title="Link to this heading"></a></h2>
+<p>A layered model treats the earth below the surface as a stack of horizontally
+infinite layers, each of which has a constant conductivity value. In our
+precedure, every sounding is given a layered model, and the conductivity
+values of the layers are sought by the inversion with the observed data at
+that sounding. The output of each sounding inversion is a series of
+conductivity values as a function of depth. Finally, all the 1D functions of
+conductivity at different locations are stitched together to form a 3D volume.</p>
+<p>For consistency, both the FDEM and TDEM inversion share the same layer
+thicknesses. Because the smallest skin depth or diffusion distance is about a
+couple of meters, we design the top layer to be 1 m thick. The thickness
+increases geometrically from the surface to the depth of 225 m. There are 21
+layers in total.</p>
+</section>
+<section id="inversion-result">
+<h2>Inversion result<a class="headerlink" href="#inversion-result" title="Link to this heading"></a></h2>
+<p>Inversions of the TDEM and FDEM data sets are carried out on a sounding-by-
+sounding basis. Most soundings achieve the desired misfit except that some
+soundings fail to converge due to excessive noise or coherent bias in the
+data. <a class="reference internal" href="#booky-models"><span class="std std-numref">Fig. 356</span></a> shows the depth slices of the stitched volume of
+conductivity from the FDEM and TDEM inversions. Although the data maps of the
+two data sets are in different units and have different apparence, the
+reconstructed conductivity models are highly consistent. This demonstrates the
+necessity of inversion-based processing and interpretation.</p>
+<figure class="align-left" id="booky-models">
+<a class="reference internal image-reference" href="../../../_images/booky-models.png"><img alt="../../../_images/booky-models.png" src="../../../_images/booky-models.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 356 </span><span class="caption-text">Inversion models of the TDEM and FDEM data sets at Bookpurnong. The shaded
+area indicates the highland where irrigation takes place.</span><a class="headerlink" href="#booky-models" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

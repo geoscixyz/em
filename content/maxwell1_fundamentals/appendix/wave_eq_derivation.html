@@ -1,0 +1,308 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derivation of the Wave Equation in Time &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Total Reflection and Brewster’s Angle" href="totalrefl_and_brewsterangl.html" />
+    <link rel="prev" title="Appendix" href="appendix_index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="appendix_index.html">Appendix</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Derivation of the Wave Equation in Time</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#derivation-for-the-electric-field">Derivation for the Electric Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#derivation-for-the-magnetic-field">Derivation for the Magnetic Field</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="totalrefl_and_brewsterangl.html">Total Reflection and Brewster’s Angle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="appendix_index.html">Appendix</a></li>
+      <li class="breadcrumb-item active">Derivation of the Wave Equation in Time</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/appendix/wave_eq_derivation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="derivation-of-the-wave-equation-in-time">
+<span id="maxwell1-appendix-wave-eq-derivation-time"></span><h1>Derivation of the Wave Equation in Time<a class="headerlink" href="#derivation-of-the-wave-equation-in-time" title="Link to this heading"></a></h1>
+<p>Here, we derive the wave equations in time for the electric and magnetic fields.To accomplish this, we begin with <a class="reference internal" href="../formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s Law</span></a> and <a class="reference internal" href="../formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell’s Law</span></a>:</p>
+<div class="math notranslate nohighlight" id="equation-faraday-time-derivation">
+<span class="eqno">(309)<a class="headerlink" href="#equation-faraday-time-derivation" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{e}
+= -\frac{\partial \mathbf{b}}{\partial t}\]</div>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-time-derive">
+<span class="eqno">(310)<a class="headerlink" href="#equation-ampere-maxwell-time-derive" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{h}
+= \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t}\]</div>
+<p>as well as the three constitutive relations:</p>
+<div class="math notranslate nohighlight" id="equation-jsigmae">
+<span class="eqno">(311)<a class="headerlink" href="#equation-jsigmae" title="Link to this equation"></a></span>\[\mathbf{j} = \sigma \mathbf{e}\]</div>
+<div class="math notranslate nohighlight" id="equation-depse-derivation">
+<span class="eqno">(312)<a class="headerlink" href="#equation-depse-derivation" title="Link to this equation"></a></span>\[\mathbf{d} = \epsilon \mathbf{e}\]</div>
+<div class="math notranslate nohighlight" id="equation-bmuh-derivation">
+<span class="eqno">(313)<a class="headerlink" href="#equation-bmuh-derivation" title="Link to this equation"></a></span>\[\mathbf{b} = \mu \mathbf{h}\]</div>
+<section id="derivation-for-the-electric-field">
+<h2>Derivation for the Electric Field<a class="headerlink" href="#derivation-for-the-electric-field" title="Link to this heading"></a></h2>
+<p>To derive the wave equation for <span class="math notranslate nohighlight">\(\mathbf{e}\)</span>, we first take
+the curl of Faraday’s Law, shown in equation <a class="reference internal" href="#equation-faraday-time-derivation">(309)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-hme1">
+<span class="eqno">(314)<a class="headerlink" href="#equation-hme1" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{e}) = - \boldsymbol{\nabla} \times \frac{\partial \mathbf{b}}{\partial t}\]</div>
+<p>The appropriate constitutive relations can be substituted into Equation
+<a class="reference internal" href="#equation-hme1">(314)</a> to get the following expressions in terms of only the fields
+<span class="math notranslate nohighlight">\(\mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{h}\)</span> instead of fields and fluxes:</p>
+<div class="math notranslate nohighlight" id="equation-hme2">
+<span class="eqno">(315)<a class="headerlink" href="#equation-hme2" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \boldsymbol{\nabla} \times \left (  \frac{\partial}{\partial t} (\mu \mathbf{h}) \right )\]</div>
+<p>Assuming the physical properties are homogeneous throughout the domain, <span class="math notranslate nohighlight">\(\mu\)</span>,
+<span class="math notranslate nohighlight">\(\epsilon\)</span>, and <span class="math notranslate nohighlight">\(\sigma\)</span> can be moved out front of the derivative
+terms. This simplifies the above expressions:</p>
+<div class="math notranslate nohighlight" id="equation-hme3">
+<span class="eqno">(316)<a class="headerlink" href="#equation-hme3" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \boldsymbol{\nabla} \times \frac{\partial \mathbf{h}}{\partial t}\]</div>
+<p>If we further assume that we can take the first and second derivatives of
+<span class="math notranslate nohighlight">\(\mathbf{e}\)</span>, we can either take the spatial derivatives first or the
+time derivatives. Equation <a class="reference internal" href="#equation-hme3">(316)</a> can then also be written as:</p>
+<div class="math notranslate nohighlight" id="equation-hme4">
+<span class="eqno">(317)<a class="headerlink" href="#equation-hme4" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \boldsymbol{\nabla} \times \mathbf{h} \right )\]</div>
+<p>This expression is now solely in terms of <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times
+\mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \mathbf{h}\)</span>. Thus, we can
+use Equation <a class="reference internal" href="#equation-ampere-maxwell-time-derive">(310)</a> to generate an equation with only
+<span class="math notranslate nohighlight">\(\mathbf{e}\)</span>. We substitute in Equation <a class="reference internal" href="#equation-ampere-maxwell-time-derive">(310)</a> into
+Equation <a class="reference internal" href="#equation-hme4">(317)</a> and simplify using the constitutive relations in Equations
+<a class="reference internal" href="../time_domain_equations.html#equation-ohms-law-time">(103)</a> and <a class="reference internal" href="#equation-depse-derivation">(312)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} \right )\]</div>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \frac{\partial}{\partial t} \left ( \sigma \mathbf{e} + \frac{\partial (\epsilon \mathbf{e})}{\partial t} \right )\]</div>
+<div class="math notranslate nohighlight" id="equation-hme5">
+<span class="eqno">(318)<a class="headerlink" href="#equation-hme5" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{e} = - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2}\]</div>
+<p>Additionally, we can simplify the first term of this expression by using the
+vector identity <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times
+\mathbf{x} = \boldsymbol{\nabla} \boldsymbol{\nabla} \cdot \mathbf{x} -
+\boldsymbol{\nabla}^2 \mathbf{x}\)</span>. Recalling that both
+<span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \cdot \mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{\nabla}
+\cdot \mathbf{h}\)</span> are zero in a homogenous space, the vector identity simply
+becomes <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times
+\mathbf{x} = - \boldsymbol{\nabla}^2 \mathbf{x}\)</span>. If we now substitute that
+into <a class="reference internal" href="#equation-hme5">(318)</a>, we get the following expression:</p>
+<div class="math notranslate nohighlight" id="equation-hme6">
+<span class="eqno">(319)<a class="headerlink" href="#equation-hme6" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{e}  - \mu \epsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} - \mu \sigma \frac{\partial \mathbf{e}}{\partial t} = 0\]</div>
+<p>This is the wave equation for the electric field in the time domain.</p>
+</section>
+<section id="derivation-for-the-magnetic-field">
+<h2>Derivation for the Magnetic Field<a class="headerlink" href="#derivation-for-the-magnetic-field" title="Link to this heading"></a></h2>
+<p>To derive the wave equation for <span class="math notranslate nohighlight">\(\mathbf{h}\)</span>, we repeat the above
+derivation but start by taking the curl of Ampere’s Law, shown in
+equation <a class="reference internal" href="#equation-ampere-maxwell-time-derive">(310)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-hmh1">
+<span class="eqno">(320)<a class="headerlink" href="#equation-hmh1" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times (\boldsymbol{\nabla} \times \mathbf{h}) = \boldsymbol{\nabla} \times \mathbf{j} + \boldsymbol{\nabla} \times \frac{\partial \mathbf{d}}{\partial t}\]</div>
+<p>The constitutive relations can be substituted into Equation <a class="reference internal" href="#equation-hmh1">(320)</a> to get
+the following expressions in terms of only <span class="math notranslate nohighlight">\(\mathbf{e}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{h}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-hmh2">
+<span class="eqno">(321)<a class="headerlink" href="#equation-hmh2" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \boldsymbol{\nabla} \times (\sigma \mathbf{e}) + \boldsymbol{\nabla} \times \left (  \frac{\partial}{\partial t} (\epsilon \mathbf{e}) \right )\]</div>
+<p>We simplify the expression just like we did before for the electric field.</p>
+<div class="math notranslate nohighlight" id="equation-hmh3">
+<span class="eqno">(322)<a class="headerlink" href="#equation-hmh3" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \sigma \boldsymbol{\nabla} \times \mathbf{e} + \epsilon \boldsymbol{\nabla} \times \frac{\partial \mathbf{e}}{\partial t}\]</div>
+<p>We can assume that we can take the first and second derivatives of
+<span class="math notranslate nohighlight">\(\mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{h}\)</span> and can either take the spatial
+derivatives or time derivatives first. Equation <a class="reference internal" href="#equation-hmh3">(322)</a> can then also be
+written as:</p>
+<div class="math notranslate nohighlight" id="equation-hmh4">
+<span class="eqno">(323)<a class="headerlink" href="#equation-hmh4" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = \sigma \boldsymbol{\nabla} \times \mathbf{e} + \epsilon \frac{\partial}{\partial t} \left ( \boldsymbol{\nabla} \times \mathbf{e} \right )\]</div>
+<p>These expressions are now in terms of <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times
+\mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \mathbf{h}\)</span>. Thus, we can
+use Equation <a class="reference internal" href="#equation-faraday-time-derivation">(309)</a> to generate an equation with only
+<span class="math notranslate nohighlight">\(\mathbf{h}\)</span>. We then again use the vector identity
+<span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{x} =
+\boldsymbol{\nabla} \boldsymbol{\nabla} \cdot \mathbf{x} -
+\boldsymbol{\nabla}^2 \mathbf{x}\)</span> and the fact that <span class="math notranslate nohighlight">\(\boldsymbol{\nabla}
+\cdot \mathbf{h}\)</span> is zero in a homogenous space to simplify the vector
+identity to <span class="math notranslate nohighlight">\(\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times
+\mathbf{x} = - \boldsymbol{\nabla}^2 \mathbf{x}\)</span>. This is then substituted
+into the wave equation. The following shows these derivations.</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \frac{\partial \mathbf{b}}{\partial t} - \epsilon \frac{\partial}{\partial t} \left (\frac{\partial \mathbf{b}}{\partial t} \right )\]</div>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \frac{\partial (\mu \mathbf{h}) }{\partial t} - \epsilon \frac{\partial}{\partial t} \left (\frac{\partial (\mu \mathbf{h})}{\partial t} \right )\]</div>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\nabla} \times \boldsymbol{\nabla} \times \mathbf{h} = - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2}\]</div>
+<div class="math notranslate nohighlight">
+\[- \boldsymbol{\nabla}^2 \mathbf{h} = - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-hmh6">
+<span class="eqno">(324)<a class="headerlink" href="#equation-hmh6" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{h} - \epsilon \mu \frac{\partial^2 \mathbf{h}}{\partial t^2} - \sigma \mu \frac{\partial \mathbf{h}}{\partial t} = 0\]</div>
+<p>Equation <a class="reference internal" href="#equation-hmh6">(324)</a> is then the wave equation for the magnetic field in the time domain.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="appendix_index.html" class="btn btn-neutral float-left" title="Appendix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="totalrefl_and_brewsterangl.html" class="btn btn-neutral float-right" title="Total Reflection and Brewster’s Angle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

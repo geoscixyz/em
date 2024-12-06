@@ -1,0 +1,284 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Design &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Practical Considerations" href="practical_considerations.html" />
+    <link rel="prev" title="Interpretation" href="interpretation.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Airborne TDEM</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Survey Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#applicability-of-atem">Applicability of ATEM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#footprint">Footprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#survey-parameters">Survey parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#acquisition">Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Airborne TDEM</a></li>
+      <li class="breadcrumb-item active">Survey Design</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/airborne_tdem/survey_design.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="survey-design">
+<span id="airborne-tdem-survey-design"></span><h1>Survey Design<a class="headerlink" href="#survey-design" title="Link to this heading"></a></h1>
+<p>Choosing the instrument and the survey parameters and layout is usually
+referred to as “survey design”. In most cases, the first step in a geophysical
+survey is to match the system parameters to the geologic task using rules of
+thumbs or emprical criteria.</p>
+<section id="applicability-of-atem">
+<h2>Applicability of ATEM<a class="headerlink" href="#applicability-of-atem" title="Link to this heading"></a></h2>
+<p>ATEM is mostly suitable for large survey areas with focus on greater depth
+compared to AFEM. It can quickly deployed, giving a quick overview of the
+regional conductivity distribution and also vertical reoslution. The ATEM’s
+recording system (towed frame) is usually larger than its counterpart in a
+freq-domain system, in which a compact tube is used to house all of the coils.
+So it is generally more costly than AFEM, but still cheaper than surface
+surveys if measured by line-km. Mineral or petroluem exploration is the main
+area of application for ATEM. It can also be an alternative to AFEM at shallow
+depth if a low moment ATEM is used.</p>
+</section>
+<section id="footprint">
+<h2>Footprint<a class="headerlink" href="#footprint" title="Link to this heading"></a></h2>
+<p>In an AEM survey/system, a concept “footprint” is usually used to quantify the
+size of the underground volume that a system is sensitive to. Footprint can be
+evaluated using different formulations, but it mostly depends on the base
+frequency and the conductivity. A low base frequency allows longer off-time
+for the measurement of signals from the depth, resulting in a larger
+footprint. A more resistive terrain also creates a larger footprint. A higher
+flight height may also increase the footprint. A first-order estimate of
+footprint can be from “difussion distance”, which considers the delay time
+(time after the transmitter current is turned off) and the conductivity.</p>
+</section>
+<section id="survey-parameters">
+<h2>Survey parameters<a class="headerlink" href="#survey-parameters" title="Link to this heading"></a></h2>
+<p>The configuration of the coil in a ATEM system are usually fixed. There are
+three key parameters geophysicist need to consider in the survey design:
+dipole moment, base frequency and line spacing. Dipole moment and base
+frequency are usually tied together. A high moment current used for deep
+penetration is difficult to turn off rapidly, so it requires a low base
+frequency. A low moment has a short turn-off time, which is ideal for near-
+surface imaging, and requires a high base frequency. For a 3D survey, it is
+important to ensure the line spacing is at least equal or smaller than the
+footprint, so no “gap” is left between lines. At the locations where higher
+quality of data is desired, there may be densified survey lines. The line
+spacing is usually a trade-off between the cost and resolution. Another
+consideration is the sounding spacing. For a towed system, the in-line spacing
+is adjustable by the flight speed and sampling rates, and can easily achieve
+high density soundings. A fixed-wing system usually flies much faster,
+resulting in a larger in-line spacing and lower lateral resolution.</p>
+<p>Flight height can be another parameter. Generally a lower flight height is
+preferred as it provides better resolution for the near surface structure
+using a smaller footprint. But some practical conditions may limit the lowest
+possible flight height, for example, trees, infrastructure, severe topography,
+aircraft safety, etc. A helicopter ATEM system can fly the frame as low as
+tens of meters, whereas a fixed-wing system must be above hundred meters for
+safety reasons.</p>
+</section>
+<section id="acquisition">
+<h2>Acquisition<a class="headerlink" href="#acquisition" title="Link to this heading"></a></h2>
+<p>Differential GPS (Global Positioning System) units are used to collect the
+location of the helicopter and the frame during the flight. Location data is
+also collected with a base station so post-survey correction to, for example,
+clock error and satellite orbit are possible.</p>
+<p>There are two ways to terminate the actual flight height. The radar altimeter
+sends radio waves that reflect from the ground back to the helicopter, and
+times the travel time the conclude the distance. This type of altimeter is
+usually located in the helicopter, because it has long range. The laser
+altimeter uses a laser instead of radio waves. It is more sensitive with lower
+range than the radar, so it is often located in the bird. It doesn’t work over
+water. The altitude is measured several times in a second.</p>
+<p>The inertia measurement unit (IMU) is used to record the position of the
+frame. It records g-force and angular rate of the frame using accelerometers
+and gyroscopes.</p>
+<section id="field-notes">
+<h3>Field Notes<a class="headerlink" href="#field-notes" title="Link to this heading"></a></h3>
+<p>On-flight camera can be used to record the video or still picture of the scene
+during acquisition. This information may be a good reference for interpreters
+if cultural noise, like power lines, is present in the data. Field notes may
+also be recored by the surface crew for weather conditions, etc.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interpretation.html" class="btn btn-neutral float-left" title="Interpretation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="practical_considerations.html" class="btn btn-neutral float-right" title="Practical Considerations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

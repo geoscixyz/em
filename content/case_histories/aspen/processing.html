@@ -1,0 +1,330 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interpretation" href="interpretation.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Aspen</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Processing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d-inversion-of-synthetic-data">1D inversion of synthetic data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-pseudo-3d-inversions-of-field-data">Regional pseudo-3D inversions of field data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Aspen</a></li>
+      <li class="breadcrumb-item active">Processing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/aspen/processing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing">
+<span id="aspen-processing"></span><h1>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h1>
+<p>The field data were provided in units of pV/(Am^4), meaning the data are
+normalized by the current (A) in the transmitter, the area (m^2) of the
+transmitter, and the area (m^2) of the receiver. In order for us to work with
+these data, we first change them so the units are V/(Am^2). This assumes that
+the receiver is at a point location rather than being defined as a loop with a
+certain area. For the VTEM system used in 2014, the transmitter had a radius
+of 13 m. The transmitter area was multiplied by the data to get the data in
+the desired units.</p>
+<p>Our goal is to obtain a 3D model of the subsurface to understand how the
+resistivity changes with depth and in the northing and easting directions.
+Before actually working with the field time-domain data, we use a synthetic
+model is to better understand the data and determine what parameters should be
+used in the inversion.</p>
+<section id="d-inversion-of-synthetic-data">
+<h2>1D inversion of synthetic data<a class="headerlink" href="#d-inversion-of-synthetic-data" title="Link to this heading"></a></h2>
+<figure class="align-left" id="asp6" style="width: 40%">
+<img alt="../../../_images/FieldvsFwdData.png" src="../../../_images/FieldvsFwdData.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 298 </span><span class="caption-text">The blue line shows a randomly-chosen decay curve from the VTEM field
+data set. The orange line is the forward modeled data using the
+synthetic 1D model (shown in <a class="reference internal" href="properties.html#asp2"><span class="std std-numref">Fig. 292</span></a>) from borehole data
+<span id="id1">[<a class="reference internal" href="../../references.html#id38" title="S G R Devriese and D W Oldenburg. Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers. Geophysics, 81:E227-E241, 2016. doi:https://doi.org/10.1190/geo2015-0451.1.">DO16a</a>]</span>. The two decay curves are fairly similar
+to each other, suggesting that the 1D synthetic model is a decent
+representation of the resistivity structures at the Aspen property.</span><a class="headerlink" href="#asp6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A one-dimensional model is a fair start to recovering information about the
+bavkground geology in the Athabasca oil sands as the different formations are
+<a class="reference internal" href="properties.html#aspen-properties"><span class="std std-ref">generally flat-lying</span></a>. The synthetic model developed
+from resistivity logging data thus provides a good starting point to forward
+model and invert airborne time-domain data.</p>
+<p>A random sounding location is chosen from the VTEM data set and the
+transmitter and receiver parameters are used to forward model data using the
+synthetic 1D model (<a class="reference internal" href="properties.html#asp2"><span class="std std-numref">Fig. 292</span></a>). The forward modeled data is compared to
+the actual field data in <a class="reference internal" href="#asp6"><span class="std std-numref">Fig. 298</span></a> and shows that the data fitting is
+good. This suggests that the synthetic model is a good representative of the
+resistivity structure at Aspen.</p>
+<p>Gaussian noise of 1.5% is added to the forward modeled data and uncertainties
+are assigned as a percentage of the data and a noise floor: 1.5% and 1e-12 V.
+The synthetic decay curve is inverted using L2 norms for both the <a class="reference internal" href="../../inversion/index.html#inversion"><span class="std std-ref">data misfit and the model objective function</span></a> using UBC-GIF’s EM1DTM code
+<span id="id2">[<a class="reference internal" href="../../references.html#id42" title="C G Farquharson and D W Oldenburg. Inversion of time-domain electromagnetic data for a horizontally layered Earth. Geophys. J. Int., 114:433-442, 1993.">FO93</a>]</span>. Values for <span class="math notranslate nohighlight">\(\alpha_s\)</span> and
+<span class="math notranslate nohighlight">\(\alpha_z\)</span> are set to 0.001 and 1, respectively. An initial and
+reference model of 25 <span class="math notranslate nohighlight">\(\Omega m\)</span> was used. The results are shown in
+<a class="reference internal" href="#asp7"><span class="std std-numref">Fig. 299</span></a> (left). The predicted data fits the observed data very well and
+the data misfit is randomly distributed. The model recovers the layers up to a
+depth of approximately 175 m. Below 175 m, the data may have some sensitivity
+to the resistive McMurray Formation but this layer is not well-recovered in
+the inversion. To better understand the sensitivity of the data to layers at
+depth, the inversion is repeated using an initial and reference model of 100
+<span class="math notranslate nohighlight">\(\Omega m\)</span>. The results are shown in <a class="reference internal" href="#asp7"><span class="std std-numref">Fig. 299</span></a> (centre). The data
+are fitted just as well as in the previous inversion but the model slightly
+changes below 175 m. It is pushed closer to the initial/reference model,
+suggesting limited sensitivity to layers below the Clearwater Formation. This
+is further supported by a third inversion where the initial and reference
+model are set to 500 <span class="math notranslate nohighlight">\(\Omega m\)</span>. The recovered model is shown in
+<a class="reference internal" href="#asp7"><span class="std std-numref">Fig. 299</span></a> (right).</p>
+<figure class="align-left" id="asp7" style="width: 100%">
+<img alt="../../../_images/InvL2L2abc.png" src="../../../_images/InvL2L2abc.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 299 </span><span class="caption-text">Inversion of the forward modeled data (<a class="reference internal" href="#asp6"><span class="std std-numref">Fig. 298</span></a>) using an
+initial and reference model of (left) 25 <span class="math notranslate nohighlight">\(\Omega m\)</span>, (centre)
+100 <span class="math notranslate nohighlight">\(\Omega m\)</span>, and (right) 500 <span class="math notranslate nohighlight">\(\Omega m\)</span>. Below the
+conductive layer, the model pushes towards the reference model,
+providing an idea of the depth of investigation using the VTEM system
+for the Athabasca oil sands region. In each panel, (a) compares the
+observed (blue) and predicted (orange) data while (b) shows the
+normalized data misfit for each time channel. The recovered model
+(black) is shown in sub-panel (c) along with the true model (blue) and
+the initial/reference model (orange).</span><a class="headerlink" href="#asp7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The synthetic decay curve is also inverted using an L1 norm for the model
+objective function (Equation ref{intro:phim}) to recover blockier models
+compared to the L2 norm. As the layers within the Athabasca oil sands tend to
+be well-defined, distinct units, using an L1 norm may allow for improved
+recovered models. The result is shown in <a class="reference internal" href="#asp8"><span class="std std-numref">Fig. 300</span></a> (centre) with the L2
+results duplicated in <a class="reference internal" href="#asp8"><span class="std std-numref">Fig. 300</span></a> (left). The result is noticeably
+blockier, with better recovery of the Clearwater Formation. To generate an
+even blockier result, the value of <span class="math notranslate nohighlight">\(\alpha_z\)</span> is decreased from 1 to 0.1
+to lessen smoothing on changes in the model. This result is shown in
+<a class="reference internal" href="#asp8"><span class="std std-numref">Fig. 300</span></a> (right). In all results, the observed data are reproduced well
+by the model and the normalized data fitting misfit is random. By decreasing
+<span class="math notranslate nohighlight">\(\alpha_z\)</span>, the model is blockier compared to using the L1 norm alone.</p>
+<figure class="align-left" id="asp8" style="width: 100%">
+<img alt="../../../_images/InvL2L1abc.png" src="../../../_images/InvL2L1abc.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 300 </span><span class="caption-text">Inversion of the forward modeled data (<a class="reference internal" href="#asp6"><span class="std std-numref">Fig. 298</span></a>) using an (left)
+L2 norm and (centre) L1 norm for $phi_m$. In (right), an L1 norm is
+used and <span class="math notranslate nohighlight">\(\alpha_z\)</span> is reduced from 1 to 0.1. In each panel, (a)
+compares the observed (blue) and predicted (orange) data while (b)
+shows the normalized data misfit for each time channel. The recovered
+model (black) is shown in sub-panel (c) along with the true model
+(blue) and the initial/reference model (orange).</span><a class="headerlink" href="#asp8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The 1D inversions of the forward modeled data provide initial information
+about depth of investigation, the influence of inversion parameters, and what
+to expect in the recovered model. These parameters can be carried over to the
+inversion of field data using a pseudo-3D approach.</p>
+</section>
+<section id="regional-pseudo-3d-inversions-of-field-data">
+<h2>Regional pseudo-3D inversions of field data<a class="headerlink" href="#regional-pseudo-3d-inversions-of-field-data" title="Link to this heading"></a></h2>
+<p>To obtain a pseudo-3D model, 5,772 soundings are cooperatively inverted in 1D
+and interpolate the individual 1D models <span id="id3">[<a class="reference internal" href="../../references.html#id43" title="D Fournier, L Heagy, N Corcoran, D Cowan, S G R Devriese, D Bild-Enkin K Davis, S Kang, D Marchant, M S McMillan, M Mitchell, G Rosenkjar, D Yang, and D W Oldenburg. Multi-EM systems inversion - Towards a common conductivity model for the Tli Kwi Cho complex. In SEG Technical Program Expanded Abstracts 2014, 1795-1799. 2014.">FHC+14</a>]</span>. The 3D
+model has cells that extend 200 m in the easting and northing directions and 5
+m in the vertical direction, allowing detailed information about the
+subsurface layers to be recovered. This method is appropriate for this region
+as the 1D assumption holds fairly well, given the expected layered geology at
+the Aspen property. An initial model of 25 <span class="math notranslate nohighlight">\(\Omega m\)</span> was used. For each
+inversion iteration, the reference model is updated to include the influence
+of nearby soundings. This gives a large-scale regional resistivity model.</p>
+<p>The recovered model is interpreted using known geologic information about the
+area on the <a class="reference internal" href="interpretation.html#aspen-interpretation"><span class="std std-ref">following page</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

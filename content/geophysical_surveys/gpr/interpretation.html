@@ -1,0 +1,361 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Survey Design" href="survey_design.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hyperbolic-signatures">Hyperbolic Signatures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warr-surveys">WARR Surveys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ringing">Ringing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Ground Penetrating Radar</a></li>
+      <li class="breadcrumb-item active">Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/gpr/interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-purpose admonition" id="purpose">
+<span id="gpr-interpretation"></span><p class="admonition-title">Purpose</p>
+<p>Here, some basic interpretation techniques for GPR data are discussed. As we will show, the responses from particular structures result in diagnostic signatures within radargram data.</p>
+</div>
+<section id="interpretation">
+<h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<section id="hyperbolic-signatures">
+<h2>Hyperbolic Signatures<a class="headerlink" href="#hyperbolic-signatures" title="Link to this heading"></a></h2>
+<p>In radargram data, hyperbolic signatures are important indicators of subsurface features. For zero-offset surveys, hyperbolic signatures indicate discrete reflectors. For common midpoint surveys, hyperbolic signatures indicate horizontal interfaces.</p>
+<section id="zero-offset-surveys-buried-compact-objects">
+<h3>Zero-Offset Surveys: Buried Compact Objects<a class="headerlink" href="#zero-offset-surveys-buried-compact-objects" title="Link to this heading"></a></h3>
+<p>Below we see the geometry for a zero-offset survey and the corresponding radargram.
+We will show how the geometry of the problem and the radargram can be used to resolve the locations of pipes and blocky objects.</p>
+<figure class="align-center" id="id1" style="width: 100%">
+<img alt="../../../_images/GPR_compact_objects.png" src="../../../_images/GPR_compact_objects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 237 </span><span class="caption-text">(Left) Problem geometry showing a buried pipe and a block. (Right) Corresponding radargram for the problem geometry.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Defining the Travel Time</strong></p>
+<p>In GPR, a <strong>thin pipe</strong> will act as a point reflector.
+According to the geometry of the problem, the total travel time of the GPR signal as it reflects off the pipe is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} = \frac{2 \sqrt{ (x - x_p)^2 + d^2}}{V}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the propagation velocity (light gray region) and <span class="math notranslate nohighlight">\(d\)</span> is the depth to the pipe.
+As we can see in the radargram, the arrival times for a compact object form a hyperbola.
+When we are directly above the pipe (<span class="math notranslate nohighlight">\(x = x_p\)</span>), the total travel time is smallest and equal to:</p>
+<div class="math notranslate nohighlight">
+\[t_p (x_p) = \frac{2 d}{V}\]</div>
+<p>For the <strong>block</strong>, things are a little more complicated.
+Above the face of the block (<span class="math notranslate nohighlight">\(x_L\)</span> = 6 m to <span class="math notranslate nohighlight">\(x_R\)</span> = 16 m), the signal measured by the receiver reflects directly.
+However, the return signal at locations outside the margins of the block occur on the points.
+As a result, the total travel time for reflected signals off the block are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t_b = \begin{cases} \dfrac{2 \sqrt{(x-x_L)^2 + h^2}}{V} \;\;\; &amp;\textrm{for} \;\;\; x &lt; x_L \\
+\dfrac{2h}{V} \;\;\; &amp;\textrm{for} \;\;\; x_L \leq x \leq x_R \\
+\dfrac{2 \sqrt{(x-x_R)^2 + h^2}}{V} \;\;\; &amp;\textrm{for} \;\;\; x &gt; x_R \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the depth to the top of the block.
+As we can see from the previous equation, we expect to see a flat feature the block’s radargram signature.
+Then on either size of the block, the radargram signature resembles one-half of a hyperbola.</p>
+<p><strong>Resolving Buried Objects</strong></p>
+<p>In order to locate buried objects, we first need to use the radargram to obtain a velocity for the medium.
+Let us first consider the <strong>pipe</strong>.
+The total travel time for the reflected GPR signal is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} = \frac{2 \sqrt{ (x - x_p)^2 + d^2}}{V}\]</div>
+<p>When we are directly over the pipe, we will have a minimum travel time equal to (blue dashed line):</p>
+<div class="math notranslate nohighlight">
+\[t_0 = \frac{2d}{V}\]</div>
+<p>By combining the previous two equations, we see that:</p>
+<div class="math notranslate nohighlight">
+\[V = 2 \sqrt{\dfrac{(x - x_p )^2}{t^2 - t_0^2}}\]</div>
+<p>where (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(t\)</span>) represents are arbitrary point on the hyperbolic signature within the radargram.
+Given that <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(x_p\)</span> can be obtained directly from the radargram, <strong>any other point</strong> on the hyperbola can be used to determine the propagation velocity of the medium.
+Once <span class="math notranslate nohighlight">\(V\)</span> is determined, the definition of <span class="math notranslate nohighlight">\(t_0\)</span> can be used to determine the depth of the object.</p>
+<p>Notice that at large offset distances from the horizontal location of the pipe (i.e. when <span class="math notranslate nohighlight">\(x - x_p \gg d\)</span>), the travel time for the pipe becomes:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} \approx \frac{2 }{V} \Bigg ( (x - x_p) + \frac{1}{2} d \Bigg ) \;\;\; \textrm{for} \;\;\; \Delta x_2 \gg d\]</div>
+<p>Therefore, each end of the hyperbolic signature has a slope <span class="math notranslate nohighlight">\(m = \pm 2/V\)</span> (red dashed lines).
+The slope on the radargram can ultimately be used as a crude approximation for the medium velocity.</p>
+<p>For the <strong>block</strong>, notice that for locations to the left and to the right of the block the total travel time behaves like a hyperbola.
+Therefore, we can use the same approach as before.
+The only difference is that <span class="math notranslate nohighlight">\(x_p\)</span> is replaced by either <span class="math notranslate nohighlight">\(x_L\)</span> or <span class="math notranslate nohighlight">\(x_R\)</span>; which depends on the side of the block’s signature you use.</p>
+</section>
+<section id="common-midpoint-survey-horizontal-interface">
+<h3>Common Midpoint Survey: Horizontal Interface<a class="headerlink" href="#common-midpoint-survey-horizontal-interface" title="Link to this heading"></a></h3>
+<figure class="align-right" id="id2" style="width: 40%">
+<img alt="../../../_images/GPR_common_midpoint.png" src="../../../_images/GPR_common_midpoint.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 238 </span><span class="caption-text">Common midpoint survey configuration.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For a horizontal interface, the total travel time of the signal is given by:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{2 \sqrt{ \Delta x^2 + d^2 }}{V}\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the thickness of the top layer and <span class="math notranslate nohighlight">\(\Delta x\)</span> is the distance between the mid-point and either the transmitter or the receiver.
+Once again by defining <span class="math notranslate nohighlight">\(t_0 = 2d/V\)</span>, the top-layer velocity is given by:</p>
+<div class="math notranslate nohighlight">
+\[V = 2 \sqrt{ \dfrac{x^2}{t^2 - t_0^2} }\]</div>
+<p>Thus, <strong>any point</strong> on the parabola can be used to determine the top-layer velocity from a common mid-point survey.
+And once <span class="math notranslate nohighlight">\(V\)</span> is determined, the definition of <span class="math notranslate nohighlight">\(t_0\)</span> can be used to obtain the thickness of the top layer.
+As we can see, the same method used to resolve discrete objects for zero-offset surveys can be used on horizontal interface for common midpoin surveys.</p>
+</section>
+</section>
+<section id="warr-surveys">
+<span id="gpr-interpretation-warr"></span><h2>WARR Surveys<a class="headerlink" href="#warr-surveys" title="Link to this heading"></a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">WARR Surveys</p>
+<figure class="align-default" id="id3">
+<img alt="../../../_images/GPR_wave_paths_diagram.png" src="../../../_images/GPR_wave_paths_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 239 </span><span class="caption-text">Signal path</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="../../../_images/GPR_radargram_2layer_example.png" src="../../../_images/GPR_radargram_2layer_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 240 </span><span class="caption-text">Radargram</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<p>As we can see on the right, there are many paths in which radiowave signals can take in order to reach a receiver (Rx) at offset distance <span class="math notranslate nohighlight">\(x\)</span>.
+Below this image is the corresponding radargram for a 2-layer Earth.</p>
+<p><strong>Path 1: Direct Air Wave</strong></p>
+<p>This wave travels through the air in a direct line from the transmitter to the receiver.
+In the air, radiowaves propagate at roughly the speed of light (<span class="math notranslate nohighlight">\(c = 3.00 \times 10^8\)</span> m/s).
+The direct air wave is <strong>always</strong> the first signal to reach the receiver.
+The time it takes the air wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{air} = \frac{x}{c}\]</div>
+<p>The direct wave is shown in <strong>red</strong> on the radargram.
+According to the above equation, the velocity of the air wave is 1 divided by the slope of this line.</p>
+<p><strong>Path 2: Direct Ground Wave</strong></p>
+<p>This wave travels along the surface interface at velocity <span class="math notranslate nohighlight">\(V_1\)</span>.
+Like the air wave, the ground wave also takes a direct path.
+Because <span class="math notranslate nohighlight">\(V_1 &lt; c\)</span>, the ground wave arrives later than the air wave.
+The time it takes for the ground wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{ground} = \frac{x}{V_1}\]</div>
+<p>The direct ground wave is shown in <strong>pink</strong>.
+Like the air wave, the direct ground wave velocity can also be obtained from the slope of the line.</p>
+<p><strong>Path 3: Reflected Wave</strong></p>
+<p>The reflected wave travels through medium 1 at velocity <span class="math notranslate nohighlight">\(V_1\)</span>.
+Because it takes a longer path than the direct ground wave, it arrives later.
+The time it takes for the reflected wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{ref} = \frac{\sqrt{x^2 + 4h^2}}{V_1}\]</div>
+<p>The reflected wave is shown in <strong>green</strong>.
+Unlike direct waves, the arrival time for the reflected wave is hyperbolic, which makes it distinguishable from other signals.
+After sufficient distances (<span class="math notranslate nohighlight">\(h \ll x\)</span>), the previous equation becomes approximately linear.
+This portion of the curve can be used to estimate the velocity of the top-most layer.
+Notice how the slope of the direct ground wave and reflected wave are parallel.</p>
+<p><strong>Path 4: Critically Refracted at Surface</strong></p>
+<p>This ray path is denoted in <strong>blue</strong>.
+Because <span class="math notranslate nohighlight">\(V_1 &lt; V_0\)</span>, reflected waves are critically refracted at the surface.
+While this wave propagates along the surface interface, it will have a velocity of roughly the speed of light.
+In general, the time it takes for this wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_c = \frac{x}{c} + \textrm{Constant}\]</div>
+<p>Notice that the arrival time for the critically refracted wave is linear.
+In this radargram example, we cannot easily see the critically refracted wave.
+However, it does not mean that the critically refracted wave does not exist.</p>
+</section>
+<section id="ringing">
+<h2>Ringing<a class="headerlink" href="#ringing" title="Link to this heading"></a></h2>
+<p>Ringing is a form of noise which negatively impacts the interpretation of radargram data.
+Ringing occurs when radiowave signals reverberate in regular fashion.
+It is created when GPR signals repeatedly bounce within or between nearby objects.
+If strong ringing occurs, the returning signal from a particular interface(s) will not be ‘sharp’ in the radargram. Instead it becomes present over all times. Two examples of ringing are shown below. As we can see, data for a particular offset is completely contaminated by the ringing signal.</p>
+<figure class="align-center" id="id5" style="width: 80%">
+<img alt="../../../_images/GPR_wire_surface.png" src="../../../_images/GPR_wire_surface.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 241 </span><span class="caption-text">(Left) Radargram showing ringing from a small metal wire near the surface. (Right) Ringing from two nearby objects.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="survey_design.html" class="btn btn-neutral float-right" title="Survey Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

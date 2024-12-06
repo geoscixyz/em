@@ -1,0 +1,332 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Survey" href="survey.html" />
+    <link rel="prev" title="Ground Penetrating Radar" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Physics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties-of-radiowave-signals">Properties of Radiowave Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-layered-earth">Example: Layered Earth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-buried-conductor">Example: Buried Conductor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scattering">Scattering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Ground Penetrating Radar</a></li>
+      <li class="breadcrumb-item active">Physics</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/gpr/physics.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-purpose admonition" id="purpose">
+<span id="gpr-physics"></span><p class="admonition-title">Purpose</p>
+<p>Here we discuss the physical principles in which GPR is founded.</p>
+</div>
+<section id="physics">
+<h1>Physics<a class="headerlink" href="#physics" title="Link to this heading"></a></h1>
+<figure class="align-right" id="fig-physics-gpr-schematic" style="width: 55%">
+<img alt="../../../_images/GPR_schematic_example.jpg" src="../../../_images/GPR_schematic_example.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 215 </span><span class="caption-text">Basic diagram for a GPR survey.</span><a class="headerlink" href="#fig-physics-gpr-schematic" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As explained on the previous page, the source transmitter (Tx) sends a pulse of radiowaves into the ground. For practical purposes, the source may be considered an electrical current dipole (link). As the radiowaves propagate through the Earth, they are distorted as a result of the Earth’s electromagnetic properties. At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals undergo transmission, reflection and/or refraction. The fundamentals of this were presented in (link). Sensors (Rx) measure the amplitudes and travel times of radiowave signals that have been distorted by the Earth. A 2D simulation can be seen <a class="reference external" href="https://www.youtube.com/watch?v=eqfgP4qVK4s">here</a> .</p>
+<section id="properties-of-radiowave-signals">
+<h2>Properties of Radiowave Signals<a class="headerlink" href="#properties-of-radiowave-signals" title="Link to this heading"></a></h2>
+<p>As we will show in <a class="reference internal" href="survey_design.html#gpr-survey-design"><span class="std std-ref">survey design</span></a>, knowning certain properties of the radiowave signal is beneficial. Several important properties of radiowaves are discussed below. More detail can be found <a class="reference external" href="http://gpg.geosci.xyz/content/GPR/GPR_fundamental_principles.html">here</a> .</p>
+<section id="propagation-velocity">
+<h3>Propagation Velocity<a class="headerlink" href="#propagation-velocity" title="Link to this heading"></a></h3>
+<p>Radiowaves propagate through different materials at different speeds.
+The propagation velocity of the Earth directly effects the arrival times of GPR signals.
+The velocity of the radiowaves depends on the physical properties of the medium.
+In general, the velocity of radiowaves through a homogeneous material is given by:</p>
+<div class="math notranslate nohighlight">
+\[V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; + 1 \; \Bigg ]^{-1/2}\]</div>
+<p>This equation can be used to show that the radiowave velocity is largest in free-space (i.e. when <span class="math notranslate nohighlight">\(\sigma = 0\)</span>, <span class="math notranslate nohighlight">\(\mu = \mu_0\)</span> and <span class="math notranslate nohighlight">\(\varepsilon = \varepsilon_0\)</span>).
+Therefore, electromagnetic waves in matter travel slower than the speed of light (c = 3.00 <span class="math notranslate nohighlight">\(\times 10^8\)</span> m/s).</p>
+<p>GPR signals are characterized as being high-frequency.
+Thus in many cases (and for this course), it is safe to assume that <span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>; especially if the Earth is resistive.
+This is known as the <strong>wave regime approximation</strong>.
+Using the approximation, and assuming the Earth is non-permeable (<span class="math notranslate nohighlight">\(\mu = \mu_0\)</span>), the velocity of radiowaves can be simplified to:</p>
+<div class="math notranslate nohighlight">
+\[V \approx \frac{1}{\sqrt{\mu_0 \varepsilon}} = \frac{c}{\sqrt{\varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_r\)</span> is the relative permeability and <span class="math notranslate nohighlight">\(\varepsilon_r\)</span> is the relative permittivity.</p>
+</section>
+<section id="skin-depth">
+<h3>Skin Depth<a class="headerlink" href="#skin-depth" title="Link to this heading"></a></h3>
+<p>Skin depth (<span class="math notranslate nohighlight">\(\delta\)</span>) defines the propagation distance at which the amplitude of an electromagnetic wave is reduced by a factor of <span class="math notranslate nohighlight">\(1/e\)</span>; i.e. reduced to 37% of its original amplitude. Skin depth determines the penetration depth for GPR systems. The skin depth is given by:</p>
+<div class="math notranslate nohighlight">
+\[\delta = \sqrt{\frac{2}{\omega^2 \mu \varepsilon}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{-1/2} - \; 1 \; \Bigg ]^{1/2}\]</div>
+<p>If we assume the Earth is non-permeable (<span class="math notranslate nohighlight">\(\mu = \mu_0\)</span>), then two convenient approximations exist for the skin depth:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\delta \approx \begin{cases} 503 \sqrt{\dfrac{1}{\sigma f}} \; \; &amp;\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ 0.0053 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &amp;\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(f\)</span> is the transmitter’s operating frequency in Hz.</p>
+</section>
+<section id="transmission-reflection-and-refraction">
+<h3>Transmission, Reflection and Refraction<a class="headerlink" href="#transmission-reflection-and-refraction" title="Link to this heading"></a></h3>
+<p><strong>Transmission and Reflection</strong></p>
+<figure class="align-right" id="id1" style="width: 35%">
+<img alt="../../../_images/normal_incidence_reflection.gif" src="../../../_images/normal_incidence_reflection.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 216 </span><span class="caption-text">Reflection of an incident wave with a reverse in polarity (<span class="math notranslate nohighlight">\(\varepsilon_1 &lt;\varepsilon_2\)</span>). <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif">Link to source image</a> .</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The transmission, reflection and refraction of radiowave signals is most easily understood by considering plane-waves; which were discussed <a class="reference internal" href="../../maxwell1_fundamentals/reflection_and_refraction/Fresnel_equations.html#fresnel-equations"><span class="std std-ref">here</span></a>. The behaviour of GPR signals at interfaces is strongly dependent on the dielectric properties accross the boundary. For GPR signals arriving at normal incidence, the transmission and reflection coefficients are simplified to:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}\]</div>
+<p>and</p>
+<figure class="align-right" id="id2" style="width: 25%">
+<img alt="../../../_images/GPR_refraction.png" src="../../../_images/GPR_refraction.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 217 </span><span class="caption-text">Reflection and refraction of an incoming radiowave.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[T = \frac{\textrm{Transmitted Amplitude}}{\textrm{Incident Amplitude}} = \frac{2 \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}\]</div>
+<p><strong>Refraction</strong></p>
+<p>The refraction of GPR signals can be understood using <a class="reference internal" href="../../maxwell1_fundamentals/reflection_and_refraction/Snells_law.html#snells-law"><span class="std std-ref">Snell’s law</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}\]</div>
+<p>For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to <span class="math notranslate nohighlight">\(V = c/ \! \sqrt{\varepsilon_r}\)</span> (shown earlier).
+In this case, Snell’s law can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_2\)</span> are relative permittivities.</p>
+</section>
+</section>
+<section id="example-layered-earth">
+<h2>Example: Layered Earth<a class="headerlink" href="#example-layered-earth" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id3" style="width: 40%">
+<img alt="../../../_images/LayeredEarth.gif" src="../../../_images/LayeredEarth.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 218 </span><span class="caption-text">GPR signal as it propagates through a 2-layer Earth.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>GPR can be used to resolve layered structures within the Earth. On the right, we show radiowave signals undergoing reflections and transmissions due to differences in dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon_{r,0} = 1\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{r,1} = 4\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_{r,2} = 8\)</span>). From this example we can see several things:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>GPR signals propagate faster in mediums where the dielectric permittivity is lower.</p></li>
+<li><p>The wavelength of GPR signals is larger in mediums where the dielectric permittivity is lower.</p></li>
+<li><p>As a portion of the signal is transmitted from a more dielectric material to a less dielectric material (ground to air), refraction causes the signal to spread out.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="example-buried-conductor">
+<h2>Example: Buried Conductor<a class="headerlink" href="#example-buried-conductor" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id4" style="width: 40%">
+<img alt="../../../_images/Conductor.gif" src="../../../_images/Conductor.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 219 </span><span class="caption-text">GPR signal as it reflects off a highly conductive object.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Many target objects relevant to GPR (buried pipes, landmines, etc…) are highly conductive. When radiowaves reach highly conductive objects, the radiowave signal experiences a near-perfect reflection. This results in a strong reflected signal which can be measured by one or more receivers. Returning signals from buried conductors result in distinct geophysical signatures which can be interpreted from GPR data.</p>
+<p>The reflection of a GPR signal as it reaches a highly conductive body is shown on the right. Notice that because there is a perfect reflection, none of the signal propagates through the conductive body.</p>
+</section>
+<section id="scattering">
+<h2>Scattering<a class="headerlink" href="#scattering" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id5" style="width: 40%">
+<img alt="../../../_images/Scattering.gif" src="../../../_images/Scattering.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 220 </span><span class="caption-text">Scattering of GPR signals due to non-uniform physical properties in each layer.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal. Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise. It also make the interpretation of GPR data more challenging. Several sources of scattering are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Irregular surface shape of larger buried objects.</p></li>
+<li><p>Rocky soils, which are a large contributor to the scattering of GPR signals.</p></li>
+<li><p>Gas bubbles trapped in ice.</p></li>
+<li><p>Clutter made up of small buried objects</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Ground Penetrating Radar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

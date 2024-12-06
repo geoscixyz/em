@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Airborne FDEM" href="../airborne_fdem/index.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Induced Polarization</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#linearization">Linearization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#two-stage-method">Two stage method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Induced Polarization</a></li>
+      <li class="breadcrumb-item active">Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/ip/interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="ip-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>To show how DC-IP data are processed and inverted to reveal meaningful information about the earth structure (conductivity and chargeability).</p>
+</div>
+<section id="linearization">
+<span id="ip-interpretation-appres"></span><h2>Linearization<a class="headerlink" href="#linearization" title="Link to this heading"></a></h2>
+<p>For the inversion of IP data, often linearzed approach is used <span id="id1">[<a class="reference internal" href="../../references.html#id121" title="H. Seigel. Matehmatical formulation and type curves for induced polarization. Geophysics, 24(3):547-565, 1959. URL: https://library.seg.org/doi/abs/10.1190/1.1438625, doi:10.1190/1.1438625.">Sei59</a>]</span> <span id="id2">[<a class="reference internal" href="../../references.html#id122" title="D. Oldenburg and Y. Li. Inversion of induced polarization data. Geophysics, 59(9):1327-1341, 1994. URL: https://library.seg.org/doi/abs/10.1190/1.1443692, doi:10.1190/1.1443692.">OL94a</a>]</span>. The measured voltage, <span class="math notranslate nohighlight">\(V\)</span> will be a function of conductivity. We consider two end members of conductivity at inifinte and zero frequency: <span class="math notranslate nohighlight">\(\sigma_{\infty}\)</span> and <span class="math notranslate nohighlight">\(\sigma_0\)</span>. Here conductivity at zero frequency can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[\sigma_0 = \sigma_{\infty} (1-\eta)\]</div>
+<p>Considering measured voltage at zero frequency or late on-time, the voltage will be a function of <span class="math notranslate nohighlight">\(\sigma_0 \ (x, y, z)\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[V_0 = V[\sigma_0] = V[\sigma_{\infty}(1-\eta)]\]</div>
+<p>By expanding this in terms of <span class="math notranslate nohighlight">\(\sigma_{\infty}\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[V_0 = V[\sigma_{\infty}(1-\eta)] = V[\sigma_{\infty}] - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta + O \Big( (\sigma_{\infty} \eta)^2 \Big)\]</div>
+<p>IP datum is considered as a small perturbation (<span class="math notranslate nohighlight">\(\eta \ll 1\)</span>), and can be written as</p>
+<div class="math notranslate nohighlight">
+\[d^{IP} = V_0 - V_{\infty} = - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta + O \Big( (\sigma_{\infty} \eta)^2 \Big)\]</div>
+<p>Ignoring second order term yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d^{IP} = - \frac{\partial V}{\partial \sigma_{\infty}} \sigma_{\infty} \eta
+       = - \frac{\partial V}{\partial \ log (\sigma_{\infty})}  \eta \\
+       =  \frac{\partial V}{\partial \ log (\rho_{\infty})}  \eta\end{split}\]</div>
+<p>Considering apparent chargeability, <span class="math notranslate nohighlight">\(\eta_a\)</span>, we obtain</p>
+<div class="math notranslate nohighlight" id="equation-linear-appchg">
+<span class="eqno">(494)<a class="headerlink" href="#equation-linear-appchg" title="Link to this equation"></a></span>\[d^{IP} = \eta_a = \frac{V_0 - V_{\infty} }{V_0} =  \frac{\partial log \ (V)}{\partial \ log (\rho_{\infty})}  \eta\]</div>
+<p>Finally, IP data can be expressed as a linear equation</p>
+<div class="math notranslate nohighlight" id="equation-linearip">
+<span class="eqno">(495)<a class="headerlink" href="#equation-linearip" title="Link to this equation"></a></span>\[\mathbf{d}^{IP} = \mathbf{J} \boldsymbol{\eta}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is a sensitivity matrix.</p>
+</section>
+<section id="two-stage-method">
+<h2>Two stage method<a class="headerlink" href="#two-stage-method" title="Link to this heading"></a></h2>
+<figure class="align-right" id="overvoltage-data" style="width: 40%">
+<img alt="../../../_images/Overvoltage_single.png" src="../../../_images/Overvoltage_single.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 173 </span><span class="caption-text">Overvoltage curve in time domain.</span><a class="headerlink" href="#overvoltage-data" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For the inversion of time domain IP data, two-stage method is often used <span id="id3">[<a class="reference internal" href="../../references.html#id122" title="D. Oldenburg and Y. Li. Inversion of induced polarization data. Geophysics, 59(9):1327-1341, 1994. URL: https://library.seg.org/doi/abs/10.1190/1.1443692, doi:10.1190/1.1443692.">OL94a</a>]</span>. The first step is DC inversion, and here we consider a voltage at at late on-time (<span class="math notranslate nohighlight">\(V_0\)</span>) as DC datum. By inverting DC data, we recover conductivity model, <span class="math notranslate nohighlight">\(\sigma_{est}\)</span>.  Second step is IP inversion. Voltages at late off-times (<span class="math notranslate nohighlight">\(V_s\)</span>) are considered as IP data, and often voltages in specific time window is integrated. The recovered conductivity is used to form sensitivity matrix, and using the linear equation (Eq. <a class="reference internal" href="#equation-linearip">(495)</a>) we invert IP data, and recover chargeability.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that in practice there are signficant electromagnetic (EM) induction effects right after current is turend on, hence obtaining <span class="math notranslate nohighlight">\(V_{\infty}\)</span> is challenging. Similarly, right after the current is turned off, significant EM induction effects exists, and this is the reason why we only consider late off-time voltages as IP data.</p>
+</div>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>We illustrate a synthetic two stage inversion (DC-IP inversion) example. Voltages at zero and infinite freqencies are computed: <span class="math notranslate nohighlight">\(V_0\)</span> and <span class="math notranslate nohighlight">\(V_{\infty}\)</span> using <span class="math notranslate nohighlight">\(\sigma_0\)</span> and <span class="math notranslate nohighlight">\(\sigma_{\infty}\)</span>, respectively. DC datum is considered as <span class="math notranslate nohighlight">\(V_0\)</span>, and apparent chargeabiility is calculated using Eq. <a class="reference internal" href="#equation-linear-appchg">(494)</a>. Conductivity and chargeability models are presented in <a class="reference internal" href="#dcip-grad-fwd"><span class="std std-numref">Fig. 174</span></a> (a) and (c), respectively.</p>
+<section id="dc-ip-data">
+<h3>DC-IP data<a class="headerlink" href="#dc-ip-data" title="Link to this heading"></a></h3>
+<p>A <a class="reference internal" href="../dcr/survey.html#dcr-survradiobuttons"><span class="std std-ref">gradient array survey</span></a> is used to obtain both DC and IP data. A plan view of the resistivity
+model and electrode geometry is shown in <a class="reference internal" href="../dcr/interpretation.html#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (a). The
+survey consists of a grid of 13 x 13 receivers located between a 450 meter
+dipole current source. Each receiver is a 20 meter dipole. The corresponding
+apparent resistivity map is shown in <a class="reference internal" href="../dcr/interpretation.html#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (b). Due to the multiple prisms having different resistivity values from the background, the obtained apparent resistivity map is fairly complicated. In constrast, only the center prism is chargeable, hence a single apparent chargeability anomaly is obtained. From these apparent resistivity and chargeability maps, we can recognize conductive and chargeable unit, and its hoizontal location and extent, whereas depth information the unit is lacked.</p>
+<figure class="align-center" id="dcip-grad-fwd" style="width: 100%">
+<img alt="../../../_images/DCIP_Grad_fwd.png" src="../../../_images/DCIP_Grad_fwd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 174 </span><span class="caption-text">: (a) Bird-eye view of gradient array survey over a DC resistivity model (<span class="math notranslate nohighlight">\(\sigma_0\)</span>) and
+(b) corresponding apparent resistivity map.
+(c) Plan map of chargeability model (<span class="math notranslate nohighlight">\(\eta\)</span>) and
+(b) corresponding apparent chargeability map.</span><a class="headerlink" href="#dcip-grad-fwd" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A <a class="reference internal" href="../dcr/survey.html#dcr-survradiobuttons"><span class="std std-ref">dipole-dipole survey</span></a> is carried out along a line that passes directly above the conductive prism. Different from the gradient array case, we assumed all prisms are chargeable. <a class="reference internal" href="#dcip-dpdp-fwd"><span class="std std-numref">Fig. 175</span></a> (a) and (c) show conductivity and chargeability sections, respectively. The resulting pseudosections are shown in <a class="reference internal" href="#dcip-dpdp-fwd"><span class="std std-numref">Fig. 175</span></a> (b) and (d). Due to the near surface prisms both DC and IP pseudosections are complicated, and hard to be interpreted just by looking at them. For following DC-IP inversions, we use these DC and IP data obtained with the dipole-dipole array.</p>
+<figure class="align-center" id="dcip-dpdp-fwd" style="width: 100%">
+<img alt="../../../_images/DCIP_DpDp_fwd.png" src="../../../_images/DCIP_DpDp_fwd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 175 </span><span class="caption-text">: (a) Vertical section through a conductivity model with near-surface inhomogeneities.  Source and receiver locations for a dipole-dipole survey are shown for reference.
+(b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
+(c) Vertical section through a chargeability model with near-surface inhomogeneities and (d) resulting pseudosection of apparent chargeability.</span><a class="headerlink" href="#dcip-dpdp-fwd" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="d-inversion-of-dc-ip-data">
+<span id="ip-interp-inversion"></span><h3>2D Inversion of DC-IP data<a class="headerlink" href="#d-inversion-of-dc-ip-data" title="Link to this heading"></a></h3>
+<p>Following the two stage inversion method we first invert DC data, and obtain conductivity model. Then by using the recovered conductivity, we form a sensitivity matrix for an IP inversion, invert IP data, and recover chargeability model.</p>
+<p>The DC and IP data are inverted using a standard Gauss-Newton framework. This is
+outlined in <a class="reference internal" href="../../inversion/index.html#inversion"><span class="std std-ref">Inversion</span></a>. The DC data are the measured voltages (<span class="math notranslate nohighlight">\(V_0\)</span>) and the goal is to find an electrical conductivity that satisfactorily
+reproduces these data and agrees with a priori geologic structure and
+petrophysical constraints.  Although the geology is 3D, we invert the data using a 2D inversion algorithm. Parameters used for the inversion of the dipole-dipole data (<a class="reference internal" href="#dcip-grad-fwd"><span class="std std-numref">Fig. 174</span></a> (b)) are provided in <a class="reference internal" href="#dcip-inv-table"><span class="std std-numref">Table 4</span></a>.</p>
+<table class="docutils align-default" id="dcip-inv-table">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">: 2D DC inversion parameters</span><a class="headerlink" href="#dcip-inv-table" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>Number of sources</p></th>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Number of data</p></th>
+<td><p>195</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Data uncertainties</p></th>
+<td><p><span class="math notranslate nohighlight">\(2\%|d| (percentage) + 2 \times 10^{-4} V\)</span> (floor)</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Mesh Size</p></th>
+<td><p><span class="math notranslate nohighlight">\(10 \times 10 \times 10\)</span> meters</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Reference conductivity</p></th>
+<td><p><span class="math notranslate nohighlight">\(0.01\)</span> S/m</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Regularization Scales ( <span class="math notranslate nohighlight">\(\alpha_s, \alpha_x,\alpha_y,\alpha_z\)</span> )</p></th>
+<td><p><span class="math notranslate nohighlight">\(0.01, 1, 1, 1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="#dcip-dpdp-inversion"><span class="std std-numref">Fig. 176</span></a> (b) presents the recovered 2D conductivity model after convergence of the algorithm. Multiple conductors and a resistor are well imaged in 2D section.</p>
+<p>For the IP inversion, the same inversion parameters are used except for uncertainty and reference model. Percentage and floor for the uncertainty are set to 0 <span class="math notranslate nohighlight">\(\%\)</span> and 0.3 mV/V. The reference chargeability used here is zero. <a class="reference internal" href="#dcip-dpdp-inversion"><span class="std std-numref">Fig. 176</span></a> (d) shows the reocovered 2D chargeability model, and all chargealbe prisms either on the surface and at depth are imaged well.</p>
+<figure class="align-center" id="dcip-dpdp-inversion" style="width: 100%">
+<img alt="../../../_images/DCIP_DpDp_inversion.png" src="../../../_images/DCIP_DpDp_inversion.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 176 </span><span class="caption-text">: Vertical sections of resitivity and chargeability models. (a) True and (b) recovered conductivity models. (c) True and (d) recovered chargeability model.</span><a class="headerlink" href="#dcip-dpdp-inversion" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Considering time domain IP data in practice, we cannot measure neither <span class="math notranslate nohighlight">\(V_0\)</span> and <span class="math notranslate nohighlight">\(V_{\infty}\)</span>. Hence, often an IP datum is considered as an integration of late off-time voltages (named apparent chargeability): <span class="math notranslate nohighlight">\(\eta_a = \frac{1}{V_0}\int V_s \ (t)  \ dt\)</span>. Therefore, a recovered chargeability model by inverting the apparent chargeability will not correspond to the chargeability, <span class="math notranslate nohighlight">\(\eta=\frac{\rho_{0}-\rho_{\infty}}{\rho_0}\)</span>.</p>
+<p>Rather, the recovered charegeability model from the inversion should be considered as “pseudo-chargeability” reflecting some chargeability information captured in a chosen window.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../airborne_fdem/index.html" class="btn btn-neutral float-right" title="Airborne FDEM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

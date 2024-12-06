@@ -1,0 +1,256 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asymptotic Approximations &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Visualization of the Electromagnetic Fields" href="fields.html" />
+    <link rel="prev" title="Analytic Solution" href="analytic_solution.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Dipole Sources in Homogeneous Media</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../electric_dipole_definition/index.html">Defining the Electrical Current Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../electric_dipole_frequency/index.html">Harmonic Electrical Current Dipole</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Transient Electric Dipole</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="analytic_solution.html">Analytic Solution</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Asymptotic Approximations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fields.html">Visualization of the Electromagnetic Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../magnetic_dipole_definition/index.html">Defining the Magnetic Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../magnetic_dipole_frequency/index.html">Harmonic Magnetic Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../magnetic_dipole_time/index.html">Transient Magnetic Dipole</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Dipole Sources in Homogeneous Media</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Transient Electric Dipole</a></li>
+      <li class="breadcrumb-item active">Asymptotic Approximations</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/dipole_sources_in_homogeneous_media/electric_dipole_time/asymptotics.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="asymptotic-approximations">
+<span id="time-domain-electric-dipole-asymptotics"></span><h1>Asymptotic Approximations<a class="headerlink" href="#asymptotic-approximations" title="Link to this heading"></a></h1>
+<aside class="topic">
+<p class="topic-title">Purpose</p>
+<p>Here, simplified expressions for the electric and magnetic fields are presented for several cases.
+By examining simplified expressions, we can more easily see how the fields depend on certain parameters.
+As the full analytic solution for the vector potential is rather simple, asymptotic approximations are not presented here.</p>
+</aside>
+<section id="near-field-late-times">
+<h2>Near-Field/Late-Times<a class="headerlink" href="#near-field-late-times" title="Link to this heading"></a></h2>
+<p>For fields which are very close to the electric dipole source, or at sufficiently late times:</p>
+<div class="math notranslate nohighlight" id="equation-theta-nearfield-latetime">
+<span class="eqno">(237)<a class="headerlink" href="#equation-theta-nearfield-latetime" title="Link to this equation"></a></span>\[\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \ll 1\]</div>
+<p>In this case, the exponential and error functions can be approximated using Taylor expansion. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-taylor-expansion-exp">
+<span class="eqno">(238)<a class="headerlink" href="#equation-taylor-expansion-exp" title="Link to this equation"></a></span>\[e^{-\theta^2 r^2} = 1 - \theta^2 r^2 + \frac{1}{2}\theta^4 r^4 + \; ...\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-erfc-approximation">
+<span class="eqno">(239)<a class="headerlink" href="#equation-erfc-approximation" title="Link to this equation"></a></span>\[\textrm{erf}(\theta r) =  \frac{2}{\sqrt{\pi}} \theta r - \frac{2}{3 \sqrt{\pi}}\theta^3 r^3 + \frac{1}{5\sqrt{\pi}} \theta^5 r^5 + \;...\]</div>
+<p>By substituting the above Taylor expansions into the <a class="reference internal" href="analytic_solution.html#time-domain-electric-dipole-analytic-solution"><span class="std std-ref">full analytic solutions</span></a> for <span class="math notranslate nohighlight">\({\bf e_e}\)</span> and <span class="math notranslate nohighlight">\({\bf h_e}\)</span>, we can obtain near-field/late-time approximations.
+In the case of the electric field:</p>
+<div class="math notranslate nohighlight" id="equation-e-nearfield-latetime">
+<span class="eqno">(240)<a class="headerlink" href="#equation-e-nearfield-latetime" title="Link to this equation"></a></span>\[{\bf e_e}(t) \approx \frac{ Ids}{15 \pi^{3/2} \sigma r^3} \Bigg [ 6 \,\theta^5 r^5 \Bigg ( \frac{x^2}{r^2}\mathbf{\hat x} + \frac{xy}{r^2}\mathbf{\hat y} + \frac{xz}{r^2}\mathbf{\hat z} \Bigg )   + \Big ( 10 \,\theta^3 r^3 + 3 \,\theta^5 r^5 \Big ) \mathbf{\hat x} \Bigg ]\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-e-nearfield-latetime">(240)</a>, <span class="math notranslate nohighlight">\(\mathbf{\hat y}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{\hat z}\)</span> components of the near-field/late-time electric field decay proportional to <span class="math notranslate nohighlight">\(t^{-5/2}\)</span>.
+However, <span class="math notranslate nohighlight">\(\theta^3 r^3\)</span> terms for the <span class="math notranslate nohighlight">\(\mathbf{\hat x}\)</span> component do not cancel.
+Therefore, the <span class="math notranslate nohighlight">\(\mathbf{\hat x}\)</span> component of the electric field decays proportional to <span class="math notranslate nohighlight">\(t^{-3/2}\)</span> at sufficiently late times.
+For the magnetic field, the near-field/late-time approximation is given by:</p>
+<div class="math notranslate nohighlight" id="equation-h-nearfield-latetime">
+<span class="eqno">(241)<a class="headerlink" href="#equation-h-nearfield-latetime" title="Link to this equation"></a></span>\[{\bf h_e}(t) \approx \frac{\theta^3 Ids}{3\pi^{3/2}} \big (-z \, \mathbf{\hat y} + y \, \mathbf{\hat z} \big )\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-h-nearfield-latetime">(241)</a>, the near-field/late-time electric field decays proportional to <span class="math notranslate nohighlight">\(t^{-3/2}\)</span>.
+Taking the derivative of Eq. <a class="reference internal" href="#equation-h-nearfield-latetime">(241)</a>, near-field/late-time approximation for the time-derivative of the magnetic field is given by:</p>
+<div class="math notranslate nohighlight" id="equation-dhdt-nearfield-latetime">
+<span class="eqno">(242)<a class="headerlink" href="#equation-dhdt-nearfield-latetime" title="Link to this equation"></a></span>\[\frac{\partial {\bf h_e}}{\partial t} \approx \frac{2 \theta^5 Ids}{\mu \sigma \pi^{3/2}} \big ( z \, \mathbf{\hat y} - y \, \hat  z \big )\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-dhdt-nearfield-latetime">(242)</a>, the time-derivative of the magnetic field decays proportional to <span class="math notranslate nohighlight">\(t^{-5/2}\)</span>.</p>
+</section>
+<section id="far-field">
+<h2>Far-Field<a class="headerlink" href="#far-field" title="Link to this heading"></a></h2>
+<p>For fields which are far from the electrical current dipole source, or at sufficiently early times:</p>
+<div class="math notranslate nohighlight" id="equation-theta-farfield">
+<span class="eqno">(243)<a class="headerlink" href="#equation-theta-farfield" title="Link to this equation"></a></span>\[\theta r = \Bigg ( \frac{\mu \sigma}{4t} \Bigg )^{1/2} r \gg 1\]</div>
+<p>In this case, the exponential and complimentary error function can be approximated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-exp-approximation">
+<span class="eqno">(244)<a class="headerlink" href="#equation-exp-approximation" title="Link to this equation"></a></span>\[e^{-\theta^2 r^2} \approx 0\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-erfc-approximation-2">
+<span class="eqno">(245)<a class="headerlink" href="#equation-erfc-approximation-2" title="Link to this equation"></a></span>\[\textrm{erfc}(\theta r) \approx 0\]</div>
+<p>As a result, there are no interesting asymptotic approximations for the far-field.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="analytic_solution.html" class="btn btn-neutral float-left" title="Analytic Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fields.html" class="btn btn-neutral float-right" title="Visualization of the Electromagnetic Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

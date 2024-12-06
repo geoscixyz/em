@@ -1,0 +1,276 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RESOLVE &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data" href="data.html" />
+    <link rel="prev" title="DIGHEM" href="dighem.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Airborne FDEM</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="survey.html">Survey</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="survey.html#system-configuration">System Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="survey.html#field-operation">Field Operation</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="survey.html#systems">Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Airborne FDEM</a></li>
+          <li class="breadcrumb-item"><a href="survey.html">Survey</a></li>
+      <li class="breadcrumb-item active">RESOLVE</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/airborne_fdem/resolve.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="resolve">
+<span id="afem-survey-resolve"></span><h1>RESOLVE<a class="headerlink" href="#resolve" title="Link to this heading"></a></h1>
+<figure class="align-center" id="resolve-view" style="width: 50%">
+<img alt="../../../_images/resolve_view.jpg" src="../../../_images/resolve_view.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 184 </span><span class="caption-text">A RESOLVE system in operation. A base station is also deployed for DGPS and magnetometer.
+Source: <a class="reference external" href="https://pubs.usgs.gov/of/2011/1304/OF11-1304.pdf">USGS</a>.</span><a class="headerlink" href="#resolve-view" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>RESOLVE is a frequency-domain multi-coil system operated by CGG. The system has evolved over years,
+but here we describe the basic specification of the system based on RESOLVE III system.</p>
+<section id="coils">
+<h2>Coils<a class="headerlink" href="#coils" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">: RESOLVE III system specifications</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Frequency (Hz)</p></th>
+<th class="head"><p>400</p></th>
+<th class="head"><p>1.8k</p></th>
+<th class="head"><p>3.3k</p></th>
+<th class="head"><p>8.2k</p></th>
+<th class="head"><p>40k</p></th>
+<th class="head"><p>140k</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Configuration</p></td>
+<td><p>HCP</p></td>
+<td><p>HCP</p></td>
+<td><p>VCA</p></td>
+<td><p>HCP</p></td>
+<td><p>HCP</p></td>
+<td><p>HCP</p></td>
+</tr>
+<tr class="row-odd"><td><p>Separation (m)</p></td>
+<td><p>7.86</p></td>
+<td><p>7.86</p></td>
+<td><p>8.99</p></td>
+<td><p>7.86</p></td>
+<td><p>7.86</p></td>
+<td><p>7.86</p></td>
+</tr>
+</tbody>
+</table>
+<p>The system consists of six pairs of coils operating at six discrete frequencies and in horizontal
+coplanar (HCP) or vertical coaxial (VCA) configurations as listed above. The actual operating
+frequencies can be slightly different from the nominal frequencies in the table.The relative
+geometry of the coils are illustrated in <a class="reference internal" href="#resolve-bird"><span class="std std-numref">Fig. 185</span></a>. The measured data is the secondary
+magnetic field (Hs) normalized by the primary field (Hp) in part per million (ppm).</p>
+<figure class="align-center" id="resolve-bird" style="width: 80%">
+<img alt="../../../_images/resolve_bird.jpg" src="../../../_images/resolve_bird.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 185 </span><span class="caption-text">A RESOLVE bird and the coils.</span><a class="headerlink" href="#resolve-bird" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="flight">
+<h2>Flight<a class="headerlink" href="#flight" title="Link to this heading"></a></h2>
+<p>RESOLVE has a nominal terrain clearance of 30 m and a nominal aircraft speed of 30 m/s. The aircraft is
+positioned using post-processed differential GPS in processing, and real-time satellite differential GPS
+in flight. A typical sampling rate of data is 10 Hz (approximately 3 m sounding spacing).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dighem.html" class="btn btn-neutral float-left" title="DIGHEM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data.html" class="btn btn-neutral float-right" title="Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

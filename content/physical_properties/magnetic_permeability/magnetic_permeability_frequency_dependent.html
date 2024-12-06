@@ -1,0 +1,267 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequency-Dependent Magnetic Permeability &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Dielectric Permittivity" href="../dielectric_permittivity/index.html" />
+    <link rel="prev" title="Impact of Mineralogy on Magnetic Properties" href="magnetic_permeability_factors.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../electrical_conductivity/index.html">Electrical Conductivity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Magnetic Permeability</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#relative-permeability">Relative Permeability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_lab_measurements.html">Laboratory Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_magnetism.html">Magnetism in Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_factors.html">Impact of Mineralogy on Magnetic Properties</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Frequency-Dependent Magnetic Permeability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dielectric_permittivity/index.html">Dielectric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Magnetic Permeability</a></li>
+      <li class="breadcrumb-item active">Frequency-Dependent Magnetic Permeability</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/magnetic_permeability/magnetic_permeability_frequency_dependent.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequency-dependent-magnetic-permeability">
+<span id="magnetic-permeability-frequency-dependent"></span><h1>Frequency-Dependent Magnetic Permeability<a class="headerlink" href="#frequency-dependent-magnetic-permeability" title="Link to this heading"></a></h1>
+<p>In response to changes in an applied magnetic field, the induced magnetization
+within most rocks may be considered an instantaneous process. For some
+lateritic soils and rapidly cooled basalts however, a portion of the induced
+magnetization undergoes a relaxation process. This relaxation process is
+commonly referred to as: viscous remanent magnetization, magnetic viscosity, or
+magnetic after-effect. As a result of their magnetic viscosity, lateritic
+soils and rapidly cooled basalts are characterized by frequency-dependent
+magnetic permeabilities.</p>
+<p>Here, our description of the magnetic viscosity is limited to providing useful
+expressions for implementation in applied problems. Comprehensive studies of
+magnetic viscosity, and its relevance to geophysical surveying, may be found
+in (<span id="id1">[<a class="reference internal" href="../../references.html#id22" title="G Buselli. The effect of near-surface superparamagnetic material on electromagnetic measurements. Geophysics, 47(9):1315–1324, 1982.">Bus82</a>, <a class="reference internal" href="../../references.html#id24" title="M Dabas, A Jolivet, and A Tabbagh. Magnetic-Susceptibility and Viscosity of Soils in a Weak Time-Varying Field. Geophysical Journal International, 108(1):101–109, 1992.">DJT92</a>, <a class="reference internal" href="../../references.html#id26" title="Y. Das. Effects of soil electromagnetic properties on metal detectors. IEEE Transactions on Geoscience and Remote Sensing, 44(6):1444–1453, 2006.">Das06</a>, <a class="reference internal" href="../../references.html#id25" title="David J Dunlop and Özden Özdemir. Rock Magnetism. Cambridge University Press, 1997.">DOzdemir97</a>, <a class="reference internal" href="../../references.html#id23" title="T Lee. The Effect of a Superparamagnetic Layer. Geophysical Prospecting, 32(March 1983):480–496, 1984.">Lee84</a>, <a class="reference internal" href="../../references.html#id21" title="M. Louis Néel. Théorie du traînage magnétique des ferromagnétiques en grains fins avec application aux terres cuites. Annales de Geophysique, 5:99–136, 1949.">Neel49</a>, <a class="reference internal" href="../../references.html#id28" title="L. R. Pasion. Inversion of time domain electromagnetic data for the detection of unexploded ordnance. PhD thesis, Univ. of British Columbia, 2007.">Pas07</a>]</span>).</p>
+<section id="mathematical-description">
+<h2>Mathematical Description<a class="headerlink" href="#mathematical-description" title="Link to this heading"></a></h2>
+<p>For rocks which are characterized by frequency-dependent magnetic
+permeabilities, the <a class="reference internal" href="index.html#magnetic-permeability-index"><span class="std std-ref">magnetic constitutive relationship</span></a> becomes:</p>
+<div class="math notranslate nohighlight" id="equation-freqconstrel">
+<span class="eqno">(28)<a class="headerlink" href="#equation-freqconstrel" title="Link to this equation"></a></span>\[{\bf B}(\omega) = \mu (\omega) \, {\bf H}(\omega)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu (\omega)\)</span> may also be characterized a frequency-dependent magnetic susceptibility <span class="math notranslate nohighlight">\(\chi (\omega)\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-suscpermrel">
+<span class="eqno">(29)<a class="headerlink" href="#equation-suscpermrel" title="Link to this equation"></a></span>\[\mu (\omega) = \mu_0 \big [ 1 + \chi (\omega) \, \big ]\]</div>
+<p>As presented in <a class="reference internal" href="magnetic_permeability_magnetism.html#magnetic-permeability-magnetism"><span class="std std-ref">magnetism in rocks</span></a>, magnetic
+susceptibility represents the proportional degree of induced magnetization, in
+response to an applied magnetic field. For rocks exhibiting magnetic
+viscosity, the relaxation process may be understood by considering a Debye
+model:</p>
+<div class="math notranslate nohighlight" id="equation-eqdebye">
+<span class="eqno">(30)<a class="headerlink" href="#equation-eqdebye" title="Link to this equation"></a></span>\[\chi(\omega) = \chi_\infty + \frac{\chi_0 - \chi_\infty}{1 + i \omega \tau}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi_0\)</span> defines the zero-frequency limit, <span class="math notranslate nohighlight">\(\chi_\infty\)</span>
+defines the infinite frequency limit, and <span class="math notranslate nohighlight">\(\tau\)</span> defines the rate of
+magnetic relaxation. The instantaneous portion of induced magnetization is
+represented by <span class="math notranslate nohighlight">\(\chi_\infty\)</span>, whereas <span class="math notranslate nohighlight">\(\chi_0-\chi_\infty\)</span>
+represents the viscous contribution. In rocks, the magnetic viscosity is
+characterized by a distribution of time-relaxation constants. This can be
+represented by introducing a weighting function <span class="math notranslate nohighlight">\(f(\tau)\)</span>, and
+integrating over all Debye models:</p>
+<div class="math notranslate nohighlight" id="equation-eqweigthfcn">
+<span class="eqno">(31)<a class="headerlink" href="#equation-eqweigthfcn" title="Link to this equation"></a></span>\[\chi (\omega) = \chi_\infty + \big ( \chi_0 - \chi_\infty \big ) \int_0^\infty \frac{f(\tau)}{1 + i\omega\tau} d\tau\]</div>
+<p>The magnetic viscosity of a rock ultimately depends on the distribution of
+time relaxation constants. From expression <a class="reference internal" href="#equation-eqweigthfcn">(31)</a>, a multitude of
+models have been proposed. One of the simplest and most popular models is
+obtained by assuming a log-uniform distribution of time relaxation constants:</p>
+<div class="math notranslate nohighlight" id="equation-eqloguniform">
+<span class="eqno">(32)<a class="headerlink" href="#equation-eqloguniform" title="Link to this equation"></a></span>\[\chi(\omega) = \chi_0 - \frac{\chi_0 - \chi_\infty}{ln (\tau_2/\tau_1)} ln \Bigg ( \frac{1 + i\omega\tau_2}{1 + i\omega\tau_1} \Bigg )\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_1\)</span> and <span class="math notranslate nohighlight">\(\tau_2\)</span> represent lower and upper bounds for
+distribution. A specific weighting function may also be used to obtain the
+Cole-Cole model:</p>
+<div class="math notranslate nohighlight" id="equation-eqcolecole">
+<span class="eqno">(33)<a class="headerlink" href="#equation-eqcolecole" title="Link to this equation"></a></span>\[\chi(\omega) = \chi_\infty + \frac{\chi_0 - \chi_\infty}{1 + (i \omega \tau_c)^\alpha}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_c\)</span> represents the center of a distribution of time-
+relaxation constants, and <span class="math notranslate nohighlight">\(\alpha\)</span> represents the broadness of the
+distribution. The frequency-dependent magnetic susceptibilities for a Debye
+model, log-uniform distribution, and Cole-Cole model are compared in <a class="reference internal" href="#figmufrequency"><span class="std std-numref">Fig. 31</span></a>.</p>
+<figure class="align-center" id="figmufrequency">
+<a class="reference internal image-reference" href="../../../_images/figChiOmegaDistr.png"><img alt="../../../_images/figChiOmegaDistr.png" src="../../../_images/figChiOmegaDistr.png" style="width: 65%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Comparison between frequency-dependent magnetic susceptibilities for a
+Debye model (<span class="math notranslate nohighlight">\(\chi_0=6\times 10^{-3}, \; \chi_\infty = 10^{-3}\)</span>), a
+log-uniform distribution of time-relaxation constants
+(<span class="math notranslate nohighlight">\(\chi_0=6\times 10^{-3}, \; \chi_\infty = 10^{-3}, \tau_1=10^{-5}
+\; s, \tau_2 =10^{-1} \, s\)</span>), and a Cole-Cole model (<span class="math notranslate nohighlight">\(\chi_0=6\times
+10^{-3}, \; \chi_\infty = 10^{-3}, \tau_c = 10^{-3} \, s, \alpha = 0.5\)</span>).</span><a class="headerlink" href="#figmufrequency" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="magnetic_permeability_factors.html" class="btn btn-neutral float-left" title="Impact of Mineralogy on Magnetic Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../dielectric_permittivity/index.html" class="btn btn-neutral float-right" title="Dielectric Permittivity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

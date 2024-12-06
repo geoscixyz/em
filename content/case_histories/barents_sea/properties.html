@@ -1,0 +1,343 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Survey and Data" href="surveydata.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Barents Sea</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surveydata.html">Survey and Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processinginterpretation.html">Processing and Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Barents Sea</a></li>
+      <li class="breadcrumb-item active">Properties</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/barents_sea/properties.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="barents-sea-properties"></span><section id="properties">
+<h1>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h1>
+<p>Detailed petrophysical evaluation and rock physics analysis was carried out
+for the Wisting Central and Wisting Alternative wells. Lithology and fluid
+sensitivity of the elastic attributes were addressed in the rock physics
+analysis and the main results obtained are illustrated in
+<a class="reference internal" href="#fig-poisson-acoustic-impedance"><span class="std std-numref">Fig. 324</span></a>. This figure shows a cross-plot of
+the elastic attributes Poisson’s ratio versus acoustic impedance, color coded
+by four different fluid substituted saturations: 100% water, 80% oil, 80% gas,
+20% gas (fizz saturation). Also shown is the in-situ saturation for the Stø Fm., which is a clean, blocky shallow-marine shoreface sandstone, as well
+as for the underlying Nordmela Fm, which is a coarsening upwards shaly sand.</p>
+<p>Two important observations can be extracted from these plots. The first is the
+well-known inability of the seismic data alone to discriminate between
+commercial and non-commercial gas saturation: The 20% and 80% gas cases plot
+on top of each other, which is not the case for the combination of elastic and
+electric attributes (see <a class="reference internal" href="#fig-resistivity-acoustic-impedance"><span class="std std-numref">Fig. 325</span></a>). The
+second observation is the unexpected high Poisson’s ratio (or higher
+<span class="math notranslate nohighlight">\(Vp/Vs\)</span>) in the Stø Fm. compared to that observed in Nordmela Fm.
+for the same fluid saturation. It is worthwhile mentioning that the same
+observation was found in both the Wisting Central and Wisting Alternative
+wells, which suggests this unusual response is not a measurement problem.
+Moreover, the fact that the AVO inversion produced a Poisson’s ratio solution
+that also honors these slightly unusual well log observations of Poisson’s
+ratio for the Stø and Nordmela Fms.
+(<a class="reference internal" href="processinginterpretation.html#fig-inversion-initial-pwave-poisson"><span class="std std-numref">Fig. 332</span></a>) validates these measurements.</p>
+<figure class="align-center" id="fig-poisson-acoustic-impedance" style="width: 80%">
+<img alt="../../../_images/poisson_vs_acoustic_impedance.png" src="../../../_images/poisson_vs_acoustic_impedance.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 324 </span><span class="caption-text">(a) For the Stø Fm., multi-well cross-plot of Poisson’s ratio versus
+acoustic impedance color coded by fluid saturation with background
+colored by volume of clay for the full well. (b) For the Nordmela Fm.,
+multi-well cross-plot of Poisson’s ratio versus acoustic impedance color
+coded by fluid saturation with background colored by volume of clay for
+the full well.</span><a class="headerlink" href="#fig-poisson-acoustic-impedance" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-resistivity-acoustic-impedance" style="width: 80%">
+<img alt="../../../_images/resistivity_vs_acoustic_impedance.png" src="../../../_images/resistivity_vs_acoustic_impedance.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 325 </span><span class="caption-text">(a) For the Stø Fm., multi-well cross-plot of acoustic impedance
+versus resistivity color coded by fluid saturation with background
+colored by volume of clay for the full well. (b) For the Nordmela Fm.,
+multi-well cross-plot of acoustic impedance versus resistivity color
+coded by fluid saturation with background colored by volume of clay for
+the full well. The induction in situ resistivity in Central is clipped at
+1,000 <span class="math notranslate nohighlight">\(\Omega m\)</span> in the Stø sands, for reference the
+laterolog shows a similar shape in this zone, but is clipped at 100,000
+<span class="math notranslate nohighlight">\(\Omega m\)</span>.</span><a class="headerlink" href="#fig-resistivity-acoustic-impedance" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>There is significant variation between the resistivity measurements made with
+different tools in the well.  In order to calibrate the saturation model we
+have chosen to use the LWD P40H curve. This is from a phase shift induction
+tool, logged while drilling (which has the added benefit of reducing the
+impact of mud invasion). This tool has returned results that are closer in
+amplitude to the CSEM derived resistivity values, when compared to the
+wireline HRLT laterolog results (with resistivities in the tens of thousands
+<span class="math notranslate nohighlight">\(\Omega m\)</span>). With the chosen induction curve resistivity values in the
+Stø Fm. at Wisting Central are in the 700-900 <span class="math notranslate nohighlight">\(\Omega m\)</span> range. The
+water saturation was calculated from this using the rock physics model
+represented by the Simandoux equation (<span id="id1">[<a class="reference internal" href="../../references.html#id106" title="P. Simandoux. Dielectric measurements in porous media and application to shaly formation. Revue de L'Institut Français du Pétrole, 18:supplementary issue, 193-215, 1963.">Sim63</a>]</span>), Eq.
+<a class="reference internal" href="#equation-eq-simandoux">(499)</a>, due to the overall simplicity of the model and increased
+accuracy over Archie in shaly-sand systems. This gives predicted hydrocarbon
+saturations in excess of 90%.</p>
+<div class="math notranslate nohighlight" id="equation-eq-simandoux">
+<span class="eqno">(499)<a class="headerlink" href="#equation-eq-simandoux" title="Link to this equation"></a></span>\[\frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R_t\)</span> is the horizontal resistivity, <span class="math notranslate nohighlight">\(Sw\)</span> is the water
+saturation, <span class="math notranslate nohighlight">\(m\)</span> is the cementation exponent, <span class="math notranslate nohighlight">\(n\)</span> is the saturation
+exponent, <span class="math notranslate nohighlight">\(a\)</span> is the tortuosity exponent, Rw is the water resistivity at
+formation temperature, <span class="math notranslate nohighlight">\(V \! sh\)</span> is the shale content, <span class="math notranslate nohighlight">\(Rsh\)</span> is
+the resistivity of the shale, and <span class="math notranslate nohighlight">\(\phi_e\)</span> is the effective porosity
+defined as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-simandoux-phi">
+<span class="eqno">(500)<a class="headerlink" href="#equation-eq-simandoux-phi" title="Link to this equation"></a></span>\[\phi_e = \phi_T \times (1 - Vsh)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi_T\)</span> is the total porosity. The parameters used in the
+Simandoux equation were calibrated to the measured data and are summarized in
+the following table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>m</p></td>
+<td><p>1.8</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>1.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rsh</p></td>
+<td><p>6 <span class="math notranslate nohighlight">\(\Omega /m\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Rw</p></td>
+<td><p>0.18 <span class="math notranslate nohighlight">\(\Omega /m\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 1. <em>Parameters used in the Simandoux equation.</em></p>
+<p>In the context of a CSEM analysis, the background resistivity and the contrast
+between background and reservoir is also important to understand.
+<a class="reference internal" href="#fig-well-log-resistivity"><span class="std std-numref">Fig. 326</span></a> a and <a class="reference internal" href="#fig-well-log-resistivity"><span class="std std-numref">Fig. 326</span></a> b
+show the resistivity variation with saturation calculated at the Wisting
+Central and Alternative wells using the Simandoux parameters from table 1. For
+each case, the calibrated Simandoux equation is used to calculate the
+resistivity at log scale for a range of values of <span class="math notranslate nohighlight">\(Sw\)</span>
+(<a class="reference internal" href="#fig-well-log-resistivity"><span class="std std-numref">Fig. 326</span></a> c). The log scale values are then up-
+scaled using an arithmetic average to give the bulk vertical resistivity (as
+would be measured by a CSEM survey) across the reservoir interval. The shaded
+area corresponds to the region of the curve where the resistivity is equal to
+or lower than the observed background vertical resistivity in the area (around
+20-30 Ωm). Only when the reservoir resistivity lies outside the shaded
+region is there a contrast between it and the background, allowing it to be
+detected by a CSEM survey. <a class="reference internal" href="#fig-well-log-resistivity"><span class="std std-numref">Fig. 326</span></a> c shows that
+this condition is met for values of <span class="math notranslate nohighlight">\(Sw\)</span> less than 30%. This provides a
+practical limit on the sensitivity to <span class="math notranslate nohighlight">\(Sw\)</span>, i.e. values greater than
+this will not be resolved.</p>
+<figure class="align-center" id="fig-well-log-resistivity" style="width: 100%">
+<img alt="../../../_images/well_log_resistivity.png" src="../../../_images/well_log_resistivity.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 326 </span><span class="caption-text">(a) Well log suite from the Wisting Alternative well, showing porosity,
+lithology, <span class="math notranslate nohighlight">\(Sw\)</span> and resistivity. (b) Well log suite from the
+Wisting Central well, showing porosity, lithology, <span class="math notranslate nohighlight">\(Sw\)</span> and
+resistivity. (c) The variation of resistivity with water saturation
+calculated from the Wisting Central and Alternative wells using the
+Simandoux equation. The shaded region shows the area in which the
+resistivity of the reservoir is less than the resistivity of the
+background structure, and will not be detected by a CSEM survey. Water
+saturations less than about 30% are required for the reservoir to be
+detected.</span><a class="headerlink" href="#fig-well-log-resistivity" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="surveydata.html" class="btn btn-neutral float-right" title="Survey and Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

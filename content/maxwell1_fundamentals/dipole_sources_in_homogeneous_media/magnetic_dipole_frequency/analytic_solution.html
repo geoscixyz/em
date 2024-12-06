@@ -1,0 +1,259 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytic Solution &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Asymptotic Approximations" href="asymptotics.html" />
+    <link rel="prev" title="Harmonic Magnetic Dipole" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Dipole Sources in Homogeneous Media</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../electric_dipole_definition/index.html">Defining the Electrical Current Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../electric_dipole_frequency/index.html">Harmonic Electrical Current Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../electric_dipole_time/index.html">Transient Electric Dipole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../magnetic_dipole_definition/index.html">Defining the Magnetic Dipole</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Harmonic Magnetic Dipole</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Analytic Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="asymptotics.html">Asymptotic Approximations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fields.html">Visualization of the Electromagnetic Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../magnetic_dipole_time/index.html">Transient Magnetic Dipole</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Dipole Sources in Homogeneous Media</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Harmonic Magnetic Dipole</a></li>
+      <li class="breadcrumb-item active">Analytic Solution</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/dipole_sources_in_homogeneous_media/magnetic_dipole_frequency/analytic_solution.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analytic-solution">
+<span id="frequency-domain-magnetic-dipole-analytic-solution"></span><h1>Analytic Solution<a class="headerlink" href="#analytic-solution" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, Maxwell’s equations are solved for a harmonic magnetic dipole source.
+This is accomplished by using the method of Schelkunoff potentials, as shown in Ward and Hohmann (<span id="id1">[<a class="reference internal" href="../../../references.html#id16" title="Stanley H Ward and Gerald W Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, chapter 4, pages 130–311. Society of Exploration Geophysicists, 1 edition, 1988. URL: https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4, doi:10.1190/1.9781560802631.ch4.">WH88</a>]</span>).
+Analytic expressions for the electric field, the magnetic field and the corresponding vector potential are provided.</p>
+</div>
+<p>For a magnetic source (<span class="math notranslate nohighlight">\(\mathbf{J_m^s}\)</span>), Maxwell’s equations in the frequency domain are given by:</p>
+<div class="math notranslate nohighlight" id="equation-faraday-m">
+<span class="eqno">(260)<a class="headerlink" href="#equation-faraday-m" title="Link to this equation"></a></span>\[\nabla \times \mathbf{E_m} + i\omega \mu \mathbf{H_m} = - \mathbf{J_m^s}\]</div>
+<div class="math notranslate nohighlight" id="equation-ampere-m">
+<span class="eqno">(261)<a class="headerlink" href="#equation-ampere-m" title="Link to this equation"></a></span>\[\nabla \times \mathbf{H_m} - (\sigma + i\omega \varepsilon) \mathbf{E_m} = 0\]</div>
+<p>where the subscripts <span class="math notranslate nohighlight">\(_m\)</span> remind us that we are using a magnetic source.
+For a magnetic source (<span class="math notranslate nohighlight">\(\mathbf{J_m^s}\)</span>), the electric and magnetic fields can be expressed in terms of the Schelkunoff vector potential (<span class="math notranslate nohighlight">\(\mathbf{F}\)</span>), where:</p>
+<div class="math notranslate nohighlight" id="equation-h-f-potential">
+<span class="eqno">(262)<a class="headerlink" href="#equation-h-f-potential" title="Link to this equation"></a></span>\[\mathbf{H}_m = -(\sigma + i \omega \varepsilon) \mathbf{F} + \frac{1}{(i \omega \mu)} \nabla (\nabla \cdot \mathbf{F})\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-e-f-potential">
+<span class="eqno">(263)<a class="headerlink" href="#equation-e-f-potential" title="Link to this equation"></a></span>\[\mathbf{E}_m = - \nabla \times \mathbf{F}\]</div>
+<p>Eq. <a class="reference internal" href="#equation-e-f-potential">(263)</a> can be obtained simply by taking the divergence of Eq. <a class="reference internal" href="#equation-ampere-m">(261)</a>.
+Eq. <a class="reference internal" href="#equation-h-f-potential">(262)</a> is obtained by manipulating Eqs. <a class="reference internal" href="#equation-faraday-m">(260)</a>, <a class="reference internal" href="#equation-ampere-m">(261)</a> and <a class="reference internal" href="#equation-e-f-potential">(263)</a>, and choosing an appropriate Gauge.
+We can see from Eqs. <a class="reference internal" href="#equation-h-f-potential">(262)</a> and <a class="reference internal" href="#equation-e-f-potential">(263)</a> that <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> contains all the information corresponding to the electric and magnetic fields.
+Therefore, Maxwell’s equations will be manipulated to solve for <span class="math notranslate nohighlight">\(\mathbf{F}\)</span>; which can then be used to obtain <span class="math notranslate nohighlight">\(\mathbf{E_m}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H_m}\)</span>.</p>
+<p>By manipulating Eqs. <a class="reference internal" href="#equation-faraday-m">(260)</a>, <a class="reference internal" href="#equation-ampere-m">(261)</a> and <a class="reference internal" href="#equation-e-f-potential">(263)</a> and choosing an appropriate Gauge, we find that <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> can be expressed using the Helmholtz equation:</p>
+<div class="math notranslate nohighlight" id="equation-helmholtz-f">
+<span class="eqno">(264)<a class="headerlink" href="#equation-helmholtz-f" title="Link to this equation"></a></span>\[\nabla^2 \mathbf{F} + k^2 \mathbf{F} = - \mathbf{J}_m^s, \  \  \  \  \text{where} \  \  k^2 = \omega^2\mu\varepsilon -i\omega\mu\sigma\]</div>
+<p>The Helmholtz equation with boundary conditions can be solved to generate <span class="math notranslate nohighlight">\(\mathbf{F}\)</span>.
+For infinite media, the boundary condition is such that <span class="math notranslate nohighlight">\(\mathbf{F} \rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span>.
+From the Helmholtz equation, we can see that <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> will only have a component along the direction of <span class="math notranslate nohighlight">\(\mathbf{J_m^s}\)</span>.
+The scalar Green’s function for the Helmholtz equation is:</p>
+<div class="math notranslate nohighlight" id="equation-greensfncfullspacemag">
+<span class="eqno">(265)<a class="headerlink" href="#equation-greensfncfullspacemag" title="Link to this equation"></a></span>\[G(r) = \frac{e^{-ikr}}{4\pi r}.\]</div>
+<p>and hence the vector potential for an arbitrary magnetic source is:</p>
+<div class="math notranslate nohighlight" id="equation-f-potential">
+<span class="eqno">(266)<a class="headerlink" href="#equation-f-potential" title="Link to this equation"></a></span>\[\mathbf{F}(\mathbf{r}) = \int_{V^\prime} \frac{e^{-ik|\mathbf{r}-\mathbf{r}'|}}{4\pi |\mathbf{r}-\mathbf{r}'|} \mathbf{J}_m^s (\mathbf{r}') dV^\prime\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is the observation location, <span class="math notranslate nohighlight">\(\mathbf{r^\prime}\)</span> refers to locations within the source region and <span class="math notranslate nohighlight">\(V^\prime\)</span> is the volume of the source region.
+For a magnetic dipole oriented in the <span class="math notranslate nohighlight">\(\mathbf{\hat x}\)</span> direction, the source term is given by:</p>
+<div class="math notranslate nohighlight" id="equation-jm-x">
+<span class="eqno">(267)<a class="headerlink" href="#equation-jm-x" title="Link to this equation"></a></span>\[\mathbf{J}_m^s = i \omega \mu I S \delta(x) \delta(y) \delta(z) \mathbf{\hat x}\]</div>
+<p>and the solution to Eq. <a class="reference internal" href="#equation-f-potential">(266)</a> is:</p>
+<div class="math notranslate nohighlight" id="equation-f-potential-for-jm-x">
+<span class="eqno">(268)<a class="headerlink" href="#equation-f-potential-for-jm-x" title="Link to this equation"></a></span>\[\mathbf{F} = \frac{i \omega \mu m}{4\pi r} e^{-ikr} \mathbf{\hat x}\]</div>
+<p>Recall the <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> can be used to obtain the electric and magnetic field according to Eqs. <a class="reference internal" href="#equation-h-f-potential">(262)</a> and <a class="reference internal" href="#equation-e-f-potential">(263)</a>.
+Thus the electric field for a magnetic dipole in the <span class="math notranslate nohighlight">\(\hat x\)</span> direction is:</p>
+<div class="math notranslate nohighlight" id="equation-em-cartesian">
+<span class="eqno">(269)<a class="headerlink" href="#equation-em-cartesian" title="Link to this equation"></a></span>\[\mathbf{E_m} = \frac{i \omega \mu m}{4 \pi r^2} \left( ikr + 1 \right) e^{-ikr} \left( -\frac{z}{r} \mathbf{\hat y} + \frac{y}{r} \mathbf{\hat z} \right).\]</div>
+<p>While the magnetic field is given by:</p>
+<div class="math notranslate nohighlight" id="equation-hm-cartesian">
+<span class="eqno">(270)<a class="headerlink" href="#equation-hm-cartesian" title="Link to this equation"></a></span>\[\mathbf{H_m} = \frac{m}{4 \pi r^3} e^{-ikr} \left[ \left(\frac{x^2}{r^2} \mathbf{\hat x} + \frac{xy}{r^2} \mathbf{\hat y} + \frac{xz}{r^2} \mathbf{\hat z} \right) \left(-k^2 r^2 + 3ikr +3 \right) + \left(k^2 r^2 - ikr -1 \right) \mathbf{\hat x} \right].\]</div>
+<p>On the following page, we show how Eqs. <a class="reference internal" href="#equation-em-cartesian">(269)</a> and <a class="reference internal" href="#equation-hm-cartesian">(270)</a> can be simplified for various cases.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Harmonic Magnetic Dipole" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="asymptotics.html" class="btn btn-neutral float-right" title="Asymptotic Approximations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

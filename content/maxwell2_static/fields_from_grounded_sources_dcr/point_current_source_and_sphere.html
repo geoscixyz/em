@@ -1,0 +1,370 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Point current source and a conducting sphere &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Layered Earth" href="layered_earth.html" />
+    <link rel="prev" title="Conducting sphere in a uniform electric field" href="electrostatic_sphere.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell II: Static</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../governing_equations/index.html">Governing Equations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Fields from grounded sources: DCR</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="current_sources_in_a_wholespace.html">Current sources in a whole-space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="current_sources_in_a_halfspace.html">Current sources in a halfspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrostatic_sphere.html">Conducting sphere in a uniform electric field</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Point current source and a conducting sphere</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electric-potential-from-a-current-source-within-a-wholespace">Electric Potential from a Current Source within a Wholespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#electric-potential-for-a-conducting-sphere-in-a-wholespace">Electric Potential for a Conducting Sphere in a Wholespace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="layered_earth.html">Layered Earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="effects_of_topography.html">Effects of Topography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="effects_of_localized_conductivity_amonalies.html">Effects of localized conductivity anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dcr_in_complex_media.html">DCR in complex media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="details/index.html">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../fields_from_grounded_sources_mmr/index.html">Fields from grounded sources MMR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell II: Static</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Fields from grounded sources: DCR</a></li>
+      <li class="breadcrumb-item active">Point current source and a conducting sphere</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell2_static/fields_from_grounded_sources_dcr/point_current_source_and_sphere.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="point-current-source-and-a-conducting-sphere">
+<span id="point-current-source-and-sphere"></span><h1>Point current source and a conducting sphere<a class="headerlink" href="#point-current-source-and-a-conducting-sphere" title="Link to this heading"></a></h1>
+<p>In this section, we build up an analytical solution for a conducting sphere in
+the presence of a point current source. This is accomplished in two steps:</p>
+<p>1. A solution for the electric scalar potential, due to a point current source
+within a wholespace of resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, is solved. This solution is then
+re-expressed within a polar coordinate system and decomposed into a sum of spherical
+harmonic modes.</p>
+<p>2. The solution for a conducting sphere within a wholespace is then
+determined by solving a boundary value problem for each spherical harmonic.</p>
+<p>This solution is built upon in <a class="reference internal" href="effects_of_topography.html#effects-of-topography"><span class="std std-ref">Effects of Topography</span></a> to investigate the
+effects of of a hemispherical depression at the Earth’s surface on the
+behaviour of currents and potentials in a direct current resistivity
+experiment.</p>
+<section id="electric-potential-from-a-current-source-within-a-wholespace">
+<h2>Electric Potential from a Current Source within a Wholespace<a class="headerlink" href="#electric-potential-from-a-current-source-within-a-wholespace" title="Link to this heading"></a></h2>
+<p>Let us consider the case where an electrical current <span class="math notranslate nohighlight">\(I\)</span> is being
+injected into a wholespace with resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, at location
+(<span class="math notranslate nohighlight">\(x,y,z\)</span>) = (<span class="math notranslate nohighlight">\(x_0,0,0\)</span>). Assuming the medium is lossless,
+this results in a current density <span class="math notranslate nohighlight">\(J\)</span> which flows radially
+outwards from the source, with magnitude:</p>
+<div class="math notranslate nohighlight">
+\[J = \frac{I}{4 \pi R^2}\]</div>
+<figure class="align-center" id="sphericaldepression-wholespace">
+<img alt="../../../_images/SphericalDepression_Wholespace.png" src="../../../_images/SphericalDepression_Wholespace.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Diagram showing the setup for computing the potential due to a wholespace.</span><a class="headerlink" href="#sphericaldepression-wholespace" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the distance from the source to a point of measure
+<span class="math notranslate nohighlight">\(P\)</span>, and <span class="math notranslate nohighlight">\(4\pi R^2\)</span> is the area of a ball centered at the
+source. Because our problem is electrostatic,
+<span class="math notranslate nohighlight">\(\vec E = - \nabla \phi\)</span> according to Faraday’s law. The scalar
+electric potential <span class="math notranslate nohighlight">\(\phi\)</span> can be obtained by integrating the
+electric field from <span class="math notranslate nohighlight">\(R\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span>. By substituting Ohm’s
+law (<span class="math notranslate nohighlight">\(\vec E = \rho \vec J\)</span>) into the path integral:</p>
+<div class="math notranslate nohighlight">
+\[\phi = - \int_R^\infty \vec E \cdot d\vec l = - \int_R^\infty \frac{\rho I}{4 \pi r^2} dr = \frac{\rho I}{4\pi R}\]</div>
+<p>For reasons which will becomes apparent in the next section, we would
+like to re-express <span class="math notranslate nohighlight">\(\phi\)</span> in terms of a radial coordinate system
+(<span class="math notranslate nohighlight">\(r,\theta,\phi\)</span>), centered at (<span class="math notranslate nohighlight">\(x,y,z\)</span>) = (0,0,0). Because
+the points which represent the problem geometry do not necessarily form
+a right-triangle, <span class="math notranslate nohighlight">\(R\)</span> must be expressed using the cosine law:</p>
+<div class="math notranslate nohighlight">
+\[R = \sqrt{x_0^2 + r^2 - 2rx_0 cos \theta \;}\]</div>
+<p>For solutions where <span class="math notranslate nohighlight">\(r&lt;x_0\)</span>, <span class="math notranslate nohighlight">\(1/R\)</span> can be split into a sum
+of spherical harmonic modes using the binomial theorem:</p>
+<div class="math notranslate nohighlight" id="equation-rsol1">
+<span class="eqno">(354)<a class="headerlink" href="#equation-rsol1" title="Link to this equation"></a></span>\[\begin{split}\frac{1}{R} &amp;= \frac{1}{x_0} \Bigg [ 1 + \Bigg ( \frac{r}{x_0} \Bigg )^2 - 2 \frac{r}{x_0} cos \theta \Bigg ]^{-1/2} \\
+            &amp;= \frac{1}{x_0} \Bigg [ 1 + \frac{r}{x_0}cos \theta + \Bigg ( \frac{r}{x_0} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+            &amp;= \frac{1}{x_0} \sum_{n=0}^\infty \Bigg ( \frac{r}{x_0} \Bigg )^n P_n \big (cos \theta \big)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_n \big (cos \theta \big )\)</span> is the Legendre polynomial of
+order <span class="math notranslate nohighlight">\(n\)</span>. Because Legendre polynomials have magnitudes less than
+unity for <span class="math notranslate nohighlight">\(n&gt;0\)</span>, and <span class="math notranslate nohighlight">\(r&lt;x_0\)</span>, the infinite series in Eq.
+<a class="reference internal" href="#equation-rsol1">(354)</a> is bounded and converges as <span class="math notranslate nohighlight">\(n \rightarrow \infty\)</span>. A
+similar approach for <span class="math notranslate nohighlight">\(r &gt; x_0\)</span> can be expressed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-rsol2">
+<span class="eqno">(355)<a class="headerlink" href="#equation-rsol2" title="Link to this equation"></a></span>\[\begin{split}\frac{1}{R} &amp;= \frac{1}{r} \Bigg [ 1 + \Bigg ( \frac{x_0}{r} \Bigg )^2 - 2 \frac{x_0}{r} cos \theta \Bigg ]^{-1/2} \\
+            &amp;= \frac{1}{r} \Bigg [ 1 + \frac{x_0}{r}cos \theta + \Bigg ( \frac{x_0}{r} \Bigg )^2 \Bigg ( \frac{3}{2} cos^2 \theta - \frac{1}{2} \Bigg ) + \; \dotsb \; \Bigg ] \\
+            &amp;= \frac{1}{r} \sum_{n=0}^\infty \Bigg ( \frac{x_0}{r} \Bigg )^n P_n \big ( cos \theta \big )\end{split}\]</div>
+<p>Similar to Eq. <a class="reference internal" href="#equation-rsol1">(354)</a>, since <span class="math notranslate nohighlight">\(x_0&lt;r\)</span>, the infinite series in
+Eq. <a class="reference internal" href="#equation-rsol2">(355)</a> is also boundary and conveges as
+<span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. Therefore using Eqs. <a class="reference internal" href="#equation-rsol1">(354)</a> and
+<a class="reference internal" href="#equation-rsol2">(355)</a>, the electric scalar potential <span class="math notranslate nohighlight">\(\phi\)</span> can be
+expressed as an infinite sum of spherical harmonic modes, where:</p>
+<div class="math notranslate nohighlight" id="equation-psiwholespace1">
+<span class="eqno">(356)<a class="headerlink" href="#equation-psiwholespace1" title="Link to this equation"></a></span>\[\phi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{r^n \, P_n \big (cos \theta \big )}{x_0^{n+1}} \; \; \; \textrm{for} \; \; \; r&lt;x_0\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-psiwholespace2">
+<span class="eqno">(357)<a class="headerlink" href="#equation-psiwholespace2" title="Link to this equation"></a></span>\[\phi = \frac{I\rho}{4 \pi} \sum_{n=0}^\infty \frac{x_0^n \, P_n \big (cos \theta \big )}{r^{n+1}} \; \; \; \textrm{for} \; \; \; x_0&lt;r\]</div>
+<p>Unfortunately, this method cannot be used to find a bounded and
+convergent series for <span class="math notranslate nohighlight">\(r=x_0\)</span>.</p>
+</section>
+<section id="electric-potential-for-a-conducting-sphere-in-a-wholespace">
+<h2>Electric Potential for a Conducting Sphere in a Wholespace<a class="headerlink" href="#electric-potential-for-a-conducting-sphere-in-a-wholespace" title="Link to this heading"></a></h2>
+<p>Let us now consider the electrical scalar potential at <span class="math notranslate nohighlight">\(P\)</span> in the
+presence of a conducting sphere of radius <span class="math notranslate nohighlight">\(a\)</span> and resistivity
+<span class="math notranslate nohighlight">\(\rho_1\)</span>, centered at the origin. Once again, a current of
+<span class="math notranslate nohighlight">\(I\)</span> is injected at (<span class="math notranslate nohighlight">\(x_0,0,0\)</span>).
+Due to the radial symmetry of the problem,
+<span class="math notranslate nohighlight">\(\partial /\partial \phi = 0\)</span>. Away from the source, the electric
+field is divergence free. As a result, <span class="math notranslate nohighlight">\(\phi\)</span> can be expressed in
+terms of the following 2d Poisson’s equation:</p>
+<div class="math notranslate nohighlight" id="equation-poissoneq2d">
+<span class="eqno">(358)<a class="headerlink" href="#equation-poissoneq2d" title="Link to this equation"></a></span>\[\nabla^2 \phi = \frac{1}{r} \frac{\partial }{\partial r} \big ( r^2 \big ) \frac{\partial \phi}{\partial r} + \frac{1}{r^2 sin \theta} \frac{\partial}{\partial \theta}
+\Bigg ( sin \theta \frac{\partial \phi}{\partial \theta} \Bigg ) = 0\]</div>
+<p>The boundary conditions for our problem state that <span class="math notranslate nohighlight">\(\phi\)</span>, and
+current flow normal to the sphere’s surface, are continuous at
+<span class="math notranslate nohighlight">\(r=a\)</span>. Therefore:</p>
+<div class="math notranslate nohighlight" id="equation-boundaryconditions-pt-src">
+<span class="eqno">(359)<a class="headerlink" href="#equation-boundaryconditions-pt-src" title="Link to this equation"></a></span>\[\phi = \phi_1 \; \; \; \textrm{and} \; \; \; \frac{1}{\rho} \frac{\partial \phi}{\partial r} = \frac{1}{\rho_1} \frac{\partial \phi_1}{\partial r} \; \; \; \textrm{at} \; \; \; r=a\]</div>
+<p>For a source which is outside the sphere (<span class="math notranslate nohighlight">\(a &lt; x_0\)</span>), the desired
+solution for the potential is:</p>
+<div class="math notranslate nohighlight" id="equation-psisolan">
+<span class="eqno">(360)<a class="headerlink" href="#equation-psisolan" title="Link to this equation"></a></span>\[\phi = \frac{I \rho}{4\pi R} + \sum_{n=0}^\infty A_n \frac{1}{r^{n+1}} P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r&gt;a\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-psi1solbn">
+<span class="eqno">(361)<a class="headerlink" href="#equation-psi1solbn" title="Link to this equation"></a></span>\[\phi_1 = \sum_{n=0}^\infty B_n r^n P_n \big ( cos \theta \big ) \; \; \; \textrm{for} \; \; \; r&lt;a\]</div>
+<p>This makes sense considering <span class="math notranslate nohighlight">\(1/r\)</span> terms within the sphere would
+be infinite as <span class="math notranslate nohighlight">\(r \rightarrow 0\)</span>, and <span class="math notranslate nohighlight">\(r\)</span> terms outside the
+sphere would be infinite as <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span>. Because
+Legendre polynomials can be used to form an orthogonal set of basis
+functions, coefficients <span class="math notranslate nohighlight">\(A_n\)</span> and <span class="math notranslate nohighlight">\(B_n\)</span> may be determined
+independently for each <span class="math notranslate nohighlight">\(n\)</span>. Using locations <span class="math notranslate nohighlight">\(r&lt;x_0\)</span>, Eq. <a class="reference internal" href="#equation-psiwholespace1">(356)</a>
+can be substituted into Eq. <a class="reference internal" href="#equation-psisolan">(360)</a>. This
+can be use to solve Eq. <a class="reference internal" href="#equation-poissoneq2d">(358)</a>, using boundary conditions
+from <a class="reference internal" href="#equation-boundaryconditions-pt-src">(359)</a> for each harmonic mode <span class="math notranslate nohighlight">\(n\)</span>. The
+resulting coefficients are given by:</p>
+<div class="math notranslate nohighlight">
+\[A_n = \frac{I \rho}{4\pi} \Bigg ( \frac{a^{2n+1}}{x_0^{n+1}} \Bigg ) \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg )\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[B_n = \frac{I\rho}{4\pi} \Bigg ( \frac{1}{x_0^{n+1}} \Bigg ) \Bigg ( \frac{\big ( 2n+1 \big )\rho_1}{n\rho + \big ( n+1 \big )\rho_1} \Bigg )\]</div>
+<p>Therefore, the electric scalar potential observed outside the sphere is
+equal to:</p>
+<div class="math notranslate nohighlight" id="equation-potential-sphere-wholespace">
+<span class="eqno">(362)<a class="headerlink" href="#equation-potential-sphere-wholespace" title="Link to this equation"></a></span>\[\phi (r, \theta ,\phi) = \frac{I\rho}{4 \pi} \Bigg [ \frac{1}{R} +  \sum_{n=0}^\infty \frac{a^{2n+1}}{\big (x_0 \, r \big )^{n+1}} \Bigg ( \frac{n \big ( \rho_1 - \rho \big )}{n\rho + \big (n+1 \big )\rho_1} \Bigg ) P_n \big ( cos \theta \big ) \Bigg ]\]</div>
+<p>Eq. <a class="reference internal" href="#equation-potential-sphere-wholespace">(362)</a> can be split into two terms: the potential for a wholespace from
+Eq. <a class="reference internal" href="#equation-psiwholespace2">(357)</a>, and an anomalous potential which results from the exstence of a
+conducting sphere. Python code functions which evaluate above solution is given at <a class="reference external" href="https://github.com/geoscixyz/em_examples/blob/master/em_examples/DCsphere.py">DC sphere code</a>.</p>
+<figure class="align-center" id="sphericaldepression-sphere">
+<img alt="../../../_images/SphericalDepression_Sphere.png" src="../../../_images/SphericalDepression_Sphere.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Diagram showing the setup for computing the potential due to a conductive sphere in a wholespace.</span><a class="headerlink" href="#sphericaldepression-sphere" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>Resistivity of the whole-space</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_1\)</span></p></td>
+<td><p>Resistivity of the sphere</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\((0,0,0)\)</span></p></td>
+<td><p>Origin of the coordinate and center location of the sphere</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\((\pm x_0,0,0)\)</span></p></td>
+<td><p>Location of the point current source, which has to be alined with <span class="math notranslate nohighlight">\(x\)</span>-axis</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_0\)</span></p></td>
+<td><p>Distance from current source from the origin (a postive scalar value)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>Distance from the origin to the measurement point <span class="math notranslate nohighlight">\(P(x,y,z)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>Distance between the measurement point (<span class="math notranslate nohighlight">\(P\)</span>) and the point current source</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>Angle between the measurement point (<span class="math notranslate nohighlight">\(P\)</span>) and the point current source</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>Radius of the sphere (m)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p>Intenisty of the current</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phi\)</span></p></td>
+<td><p>Total potential outside of the sphere (<span class="math notranslate nohighlight">\(r &gt; a\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phi_1\)</span></p></td>
+<td><p>Total potential inside of the sphere (<span class="math notranslate nohighlight">\(r &lt; a\)</span>)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="electrostatic_sphere.html" class="btn btn-neutral float-left" title="Conducting sphere in a uniform electric field" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="layered_earth.html" class="btn btn-neutral float-right" title="Layered Earth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

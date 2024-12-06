@@ -1,0 +1,246 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factors that affect electrical permittivity &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Maxwell I: Fundamentals" href="../../maxwell1_fundamentals/index.html" />
+    <link rel="prev" title="Typical Values for Rocks and Other Materials" href="dielectric_permittivity_values.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../electrical_conductivity/index.html">Electrical Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../magnetic_permeability/index.html">Magnetic Permeability</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Dielectric Permittivity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#relative-permittivity">Relative Permittivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#dielectric-susceptibility">Dielectric Susceptibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dielectric_permittivity_lab_setup_measurements.html">Lab Setup and Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dielectric_permittivity_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dielectric_permittivity_values.html">Typical Values for Rocks and Other Materials</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Factors that affect electrical permittivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dielectric Permittivity</a></li>
+      <li class="breadcrumb-item active">Factors that affect electrical permittivity</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/dielectric_permittivity/dielectric_permittivity_factors.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="factors-that-affect-electrical-permittivity">
+<span id="dielectric-permittivity-factors"></span><h1>Factors that affect electrical permittivity<a class="headerlink" href="#factors-that-affect-electrical-permittivity" title="Link to this heading"></a></h1>
+<section id="porosity-and-water-saturation">
+<h2>Porosity and Water Saturation<a class="headerlink" href="#porosity-and-water-saturation" title="Link to this heading"></a></h2>
+<p>By far the most important factors in determining a rock’s dielectric permittivity are porosity and water saturation.
+Air has a relative permittivity of 1 whereas common rock forming minerals have much higher relative permittivities.
+This means that for dry samples, the rock’s bulk dielectric permittivity decreases as the porosity increases.</p>
+<p>When rock samples are saturated with water, their dielectric permittivities can increase drastically.
+This is because water has a relative permittivity of 80, which is much higher than the relative permittivities of rock forming minerals.
+As a result, the bulk dielectric permittivity of a rock increases as pore water saturation increases.</p>
+<p>The relationship between a rock’s bulk dielectric permittivity, porosity and water saturation is given by:</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\varepsilon} = (1 - \phi ) \sqrt{\varepsilon_m} + \phi \big [ S_w \sqrt{\varepsilon_w} + (1-S_w) \sqrt{\varepsilon_a} \big ]\]</div>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 \leq \phi \leq 1\)</span> is the porosity</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \leq S_w \leq 1\)</span> is the factional volume of the pore space saturated by water.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_m\)</span> is the dielectric permittivity of rock forming minerals.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_a\)</span> is the dielectric permittivity of air (equal to free-space).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_w\)</span> is the dielectric permittivity of water.</p></li>
+</ul>
+</section>
+<section id="frequency">
+<h2>Frequency<a class="headerlink" href="#frequency" title="Link to this heading"></a></h2>
+<p>For hard rocks and unsaturated sedimentary samples, the dielectric permittivity can be considered constant for all intents and purposes.
+At sufficiently low frequencies, the same can be said about water-saturated sedimentary rocks and soils (Kaatze, 1989; Meissner and Wentz, 2004).
+At high frequencies however ( &gt; 1 GHz), the electric polarization within water-saturated samples depends on the frequency of the electric field.
+As a result, these samples are sometimes characterized using a frequency-dependent dielectric permittivity:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)\]</div>
+<p>where <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.
+The real component of the dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon^\prime\)</span>) represents energy stored through electrical polarization whereas the imaginary component (<span class="math notranslate nohighlight">\(\varepsilon^{\prime\prime}\)</span>) represents a measure of energy loss.</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../../_images/cole_cole_permittivity.png"><img alt="../../../_images/cole_cole_permittivity.png" src="../../../_images/cole_cole_permittivity.png" style="width: 340.40000000000003px; height: 260.0px;" />
+</a>
+</figure>
+<p>A widely used model for describing the frequency-dependent dielectric permittivity is the Cole-Cole model:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_{DC}\)</span> is the DC or zero-frequency permittivity, and <span class="math notranslate nohighlight">\(\varepsilon_\infty\)</span> represents a limit as frequency goes to infinity.
+Parameters <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> define the span of frequencies in which the dielectric permittivity changes with respect to frequency.
+As we can see from this model:</p>
+<ul class="simple">
+<li><p>Frequency-dependence only occurs over a finite span of frequencies.</p></li>
+<li><p>The magnitude of the dielectric permittivity decreases with respect to an increase in frequency.</p></li>
+<li><p>At sufficiently low frequencies, the dielectric permittivity is constant and real-valued.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dielectric_permittivity_values.html" class="btn btn-neutral float-left" title="Typical Values for Rocks and Other Materials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../maxwell1_fundamentals/index.html" class="btn btn-neutral float-right" title="Maxwell I: Fundamentals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

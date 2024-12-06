@@ -1,0 +1,254 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sea &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Setup" href="setup.html" />
+    <link rel="prev" title="Synthesis" href="../wadi_sahba/synthesis.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Red Sea</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataMT.html">Data-Driven MT Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataCSEM.html">Data-Driven CSEM Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modelMT.html">Model-Driven MT Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modelCSEM.html">Model-Driven CSEM Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+      <li class="breadcrumb-item active">Red Sea</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/red_sea/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="red-sea">
+<span id="red-sea-index"></span><h1>Red Sea<a class="headerlink" href="#red-sea" title="Link to this heading"></a></h1>
+<p><strong>Application of Magnetotelluric and Controlled-Source Electromagnetic Methods for Subsalt Structure Imaging in the Red Sea</strong></p>
+<ul class="simple">
+<li><p><strong>Authors</strong>: <a class="reference internal" href="../../../contributors.html#dcolombo"><span class="std std-ref">Daniele Colombo</span></a>, Gary McNeice, Ernesto Sandoval-Curiel, Adam Fox, Nickolas Raterman, Mike Zinger and Diego Rovetta.</p></li>
+<li><p><strong>Editor</strong>: <a class="reference internal" href="../../../contributors.html#dccowan"><span class="std std-ref">Devin C. Cowan</span></a> and <a class="reference internal" href="../../../contributors.html#doldenburg"><span class="std std-ref">Douglas Oldenburg</span></a>.</p></li>
+</ul>
+<aside class="topic">
+<p class="topic-title">Prelude</p>
+<p>In this case history we detail the use of magnetotelluric (MT) and controlled-source electromagnetic (CSEM) methods for imaging deep subsalt structures below the Red Sea. By using MT and CSEM methods as well as wide-azimuth (WAZ) seismic, we are able to carry out a comprehensive set of surveys which are collectively sensitive to all geologic structures. The results of data driven and model driven EM inversions are then compared to results from the inversion of gravity gradiometry (GG) data.</p>
+</aside>
+<p><strong>Special Thanks</strong></p>
+<p>Thanks to Daniele Colombo of Saudi Aramco and thanks to the <a class="reference external" href="https://seg.org">Society of Exploration Geophysicists</a> for permission to reproduce figures and adapt text from:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Daniele Colombo, Gary McNeice, Ernesto Sandoval Curiel, and Adam Fox (2013). ”Full tensor CSEM and MT for subsalt structural imaging in the Red Sea: Implications for seismic and electromagnetic integration.” The Leading Edge, 32(4), 436-449. <a class="reference external" href="https://doi.org/10.1190/tle32040436.1">https://doi.org/10.1190/tle32040436.1</a></p></li>
+<li><p>Daniele Colombo, Gary McNeice, Nickolas Raterman, Mike Zinger, Diego Rovetta, and Ernesto Sandoval Curiel (2014). ”Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea.” Interpretation, 2(3), SH33-SH53. <a class="reference external" href="https://doi.org/10.1190/INT-2013-0149.1">https://doi.org/10.1190/INT-2013-0149.1</a></p></li>
+</ul>
+</div></blockquote>
+<p>The material presented here has been modified from the SEG-published version and is subject to the <a class="reference external" href="https://library.seg.org/page/policies/permissions">SEG terms of use and conditions</a>. This case history was presented as a part of the <a class="reference external" href="https://doi.org/10.1190/tle40020140.1">SEG 2017 Distinguished Instructor Short Course</a>.</p>
+<p><strong>Abstract</strong></p>
+<figure class="align-right" id="figthumbnail-red-sea-index" style="width: 50%">
+<img alt="../../../_images/thumbnail2.png" src="../../../_images/thumbnail2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 517 </span><span class="caption-text">Resistivity structure obtained through data-driven inversion of MT data.</span><a class="headerlink" href="#figthumbnail-red-sea-index" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Red Sea is characterized by thick salt sequences representing a seal for potential hydrocarbon accumulations within Tertiary formations deposited over deep basement structures. The Red Sea “salt” is characterized by halite concentrations embedded in layered evaporite sequences composed of evaporite and clastic lithologies. Salt complicates seismic exploration efforts in the Red Sea by generating vertical and lateral velocity variations that are difficult to estimate by seismic methods alone. In these conditions, the exploration challenges of independently imaging the subsalt section and provide enhanced velocity model building capabilities were addressed by a multi-geophysics strategy involving marine electromagnetics (magnetotellurics [MT] and controlled source electromagnetics [CSEM]) and gravity gradiometry surveys co-located with wide azimuth seismic. Three-dimensional inversion of MT and CSEM is performed first with minimal a priori constraints and then by including variable amounts of interpretation in the starting models. The internal variations in the evaporitic overburden, the subsalt, and the basement structures are independently imaged by combined electromagnetic methods and confirmed by new drilling results. CSEM, in particular, provides unprecedented detail of the internal structures within the salt overburden while magnetotellurics provides excellent reconstruction of the base of salt and basement. Gravity gradiometry shows primary sensitivity to the basement and the corresponding 3D inversion provides density distributions structurally consistent with the resistivity volumes. The common-structure, multiparameter models obtained from 3D inversion deliver additional aid to seismic interpreters to further derisk
+exploration in the Red Sea and provide additional detail to depth imaging velocity models. The reciprocal consistency of the obtained results show promises for extending the work to more analytical integration with seismic such as provided by joint geophysical inversion.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataMT.html">Data-Driven MT Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataCSEM.html">Data-Driven CSEM Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelMT.html">Model-Driven MT Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelCSEM.html">Model-Driven CSEM Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</div>
+<p><strong>Citations</strong></p>
+<p><span id="id1">[<a class="reference internal" href="../../references.html#id144" title="D. Colombo, G. McNeice, E. S. Curiel, and A. Fox. Full tensor CSEM and MT for subsalt structural imaging in the Red Sea: Implications for seismic and electromagnetic integration. The Leading Edge, 32(4):436–449, 2013. doi:https://doi.org/10.1190/tle32040436.1.">CMCF13</a>]</span> : Full tensor CSEM and MT for subsalt structural imaging in the Red Sea: Implications for seismic and electromagnetic integration</p>
+<p><span id="id2">[<a class="reference internal" href="../../references.html#id143" title="D. Colombo, G. McNeice, N. Raterman, M. Zinger, D. Rovetta, and E. S. Curiel. Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea. Interpretation, 2(3):SH33–SH53, 2014. doi:https://doi.org/10.1190/INT-2013-0149.1.">CMR+14</a>]</span> : Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wadi_sahba/synthesis.html" class="btn btn-neutral float-left" title="Synthesis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="setup.html" class="btn btn-neutral float-right" title="Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

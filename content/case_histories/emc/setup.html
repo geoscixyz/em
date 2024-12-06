@@ -1,0 +1,259 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Properties" href="properties.html" />
+    <link rel="prev" title="Elevenmile Canyon" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Elevenmile Canyon</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Elevenmile Canyon</a></li>
+      <li class="breadcrumb-item active">Setup</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/emc/setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup">
+<span id="emc-setp"></span><h1>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h1>
+<figure class="align-right" id="emc1" style="width: 50%">
+<img alt="../../../_images/FIGURE_1.png" src="../../../_images/FIGURE_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 392 </span><span class="caption-text">Figure from <span id="id1">[<a class="reference internal" href="../../references.html#id52" title="J Skord, C Sladek, M Coolbaugh, P H Cashman, M Lazaro, and C Kratt. Two-meter Temperature Surveys for Geothermal Exploration Project at NAS Fallon. Geothermal Resources Council Transactions, 35:1023-1027, 2011.">SSC+11</a>]</span> showing temperature measurements between the
+Dixie and Fairview Valleys. The location of the Elevenmile Canyon survey
+area is outlined in black and lies just north of the Fairview Valley
+Northwest anomaly.</span><a class="headerlink" href="#emc1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="emc2" style="width: 50%">
+<img alt="../../../_images/FIGURE_2.png" src="../../../_images/FIGURE_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 393 </span><span class="caption-text">Cropped geology map (<span id="id2">[<a class="reference internal" href="../../references.html#id53" title="R H Hess and G L Johnson. County digital geologic maps of Nevada. Nevada Bureau of Mines and Geology Open-File Report 97-1, CR-ROM, 1:250,000, 1997.">HJ97</a>]</span>) with the flight lines of the ZTEM
+survey. The survey consists of 20 lines, separated by 200 m. Each line is
+approximately 11 km long. Geologic units mapped at the surface are Qoa
+(surface alluvium), Kg (granites), Tys (non-marine sedimentary rocks), TRs
+(limestone), Tor (rhyolitic welded tuff), and Tv (volcanic rocks)
+<span id="id3">[<a class="reference internal" href="../../references.html#id54" title="B M Page. Preliminary geologic map of a part of the Stillwater Range, Churchill County, Nevada. Nevada Bureau of Mines, 1965.">Pag65</a>]</span>. The pins show the locations of wells and a DC resistivity
+survey.</span><a class="headerlink" href="#emc2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Elevenmile Canyon, located in the Basin and Range of western Nevada 45 km
+east of Fallon, Nevada, contains a low geothermal anomaly
+<span id="id4">[<a class="reference internal" href="../../references.html#id66" title="N Mankhemthong. Structure of the Inter-Basin Transition Zone between Dixie Valley and Fairview Valley, Nevada, USA. Master's thesis, University of Nevada, Reno, 2008.">Man08</a>]</span>. The canyon lies on the eastern flank of the Stillwater
+Range and extends into the basin between the Dixie and Fairview Valleys. Both
+these valleys are associated with geothermal activity and particularly the
+Dixie Valley has been extensively studied (e.g.,
+<span id="id5">[<a class="reference internal" href="../../references.html#id61" title="D D Blackwell, R P Smith, and M C Richards. Exploration and development at Dixie Valley, Nevada: Summary of DOE studies. In Thirty-Second Workshop on Geothermal Reservoir Engineering. 2007.">BSR07</a>, <a class="reference internal" href="../../references.html#id62" title="D D Blackwell, K W Wisian, D Benoit, and B Gollan. Structure of the Dixie Valley Geothermal System, a &quot;typical&quot; Basin and Range geothermal system, from thermal and gravity data. In World Geothermal Congress, 525-531. 1999.">BWBG99</a>, <a class="reference internal" href="../../references.html#id64" title="D D Blackwell B Golan and D Beniot. Thermal regime in the Dixie Valley geothermal system. In World Geothermal Congress, 991-996. 2000.">GB00</a>, <a class="reference internal" href="../../references.html#id65" title="R Penfield, L Shevenell, L Garside, and R Zehner. Nevada Geothermal Resources - Map 161. Nevada Bureau of Mines and Geology, 2010.">PSGZ10</a>, <a class="reference internal" href="../../references.html#id60" title="P E Wannamaker, W M Doerner, and D P Hasterok. Integrated dense array and transect MT surveying at Dixie Valley Geothermal Area, Nevada; structural controls, hydrothermal alteration and deep fluid sources. In Thirty-Second Workshop on Geothermal Reservoir Engineering. 2007.">WDH07</a>]</span>.</p>
+<p>The Fairview Peak and Dixie Valley fault zones ruptured in 1954
+<span id="id6">[<a class="reference internal" href="../../references.html#id66" title="N Mankhemthong. Structure of the Inter-Basin Transition Zone between Dixie Valley and Fairview Valley, Nevada, USA. Master's thesis, University of Nevada, Reno, 2008.">Man08</a>]</span>. The orientations of the faults and the regional
+structural setting have created a transition zone between the two valleys,
+bounded by the Louderback Mountains to the east and the Stillwater Range to
+the west. The Elevenmile Canyon anomaly occurs at the end of the main Dixie
+Valley fault while the Fairview Valley fault steps eastward on the opposing
+side of the valley.</p>
+<p>A shallow, two-meter temperature survey, where temperature is measured at 1 m,
+1.5 m, and 2 m depths, shows a 1.5-2.5 <span class="math notranslate nohighlight">\(^{\circ}\)</span> C anomaly south of the
+area of interest and a 3-4 <span class="math notranslate nohighlight">\(^{\circ}\)</span> C anomaly at close-by Pirouette
+Mountain <span id="id7">[<a class="reference internal" href="../../references.html#id52" title="J Skord, C Sladek, M Coolbaugh, P H Cashman, M Lazaro, and C Kratt. Two-meter Temperature Surveys for Geothermal Exploration Project at NAS Fallon. Geothermal Resources Council Transactions, 35:1023-1027, 2011.">SSC+11</a>]</span>. <a class="reference internal" href="#emc1"><span class="std std-numref">Fig. 392</span></a> shows the temperature readings and
+the location of the Elevenmile Canyon survey area. Additionally, a thermal
+anomaly was confirmed at the survey area <span id="id8">[<a class="reference internal" href="../../references.html#id57" title="M Lazaro, S Alm, A Tiedeman, C Page, D Meade, J Shoffner, and K Bucher. Department of the Navy Geothermal Exploration on Naval Air Station Fallon (NASF) Managed Lands in Dixie Valley, Nevada. Geothermal Resources Council Transactions, 35:873-877, 2011.">LAT+11</a>]</span>. A LiDAR study in
+the same general area mapped four fault zones and concluded that the
+geothermal temperature anomalies are associated with these complex fault
+structures <span id="id9">[<a class="reference internal" href="../../references.html#id56" title="E L Helton, J W Bell, P H Cashman, M Lazaro, and S Alm. Structural analysis of Southern Dixie Valley using LiDAR and low-sun-angle aerial photography, NAS Fallon Geothermal Exploration Project, Dixie Valley, Nevada. Geothermal Resources Council Transactions, 35:811-815, 2011.">HBC+11</a>]</span>. <a class="reference internal" href="#emc2"><span class="std std-numref">Fig. 393</span></a> shows a geologic map of the area
+<span id="id10">[<a class="reference internal" href="../../references.html#id53" title="R H Hess and G L Johnson. County digital geologic maps of Nevada. Nevada Bureau of Mines and Geology Open-File Report 97-1, CR-ROM, 1:250,000, 1997.">HJ97</a>]</span>. Faults are mapped in the aluvium near the boundary between the
+Stillwater Range and the basin. All of the mapped faults trend north-south, as
+do those in the Dixie Valley.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Elevenmile Canyon" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="properties.html" class="btn btn-neutral float-right" title="Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

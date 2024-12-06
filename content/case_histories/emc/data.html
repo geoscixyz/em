@@ -1,0 +1,294 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Processing" href="processing.html" />
+    <link rel="prev" title="Survey" href="survey.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Elevenmile Canyon</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Elevenmile Canyon</a></li>
+      <li class="breadcrumb-item active">Data</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/emc/data.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data">
+<span id="emc-data"></span><h1>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h1>
+<p>The Z-axis tipper electromagnetic technique (ZTEM) is a natural source
+geophysical method. It is similar to the magnetotelluric method (MT) but only
+the magnetic fields are measured <span id="id1">[<a class="reference internal" href="../../references.html#id59" title="B Lo and M Zang. Numerical modeling of Z-TEM (airborne AFMAG) responses to guide exploration strategies. SEG Extended Abstracts, 27:1098-1102, 2008.">LZ08</a>]</span>. The vertical component of the
+magnetic field is recorded along flight lines while the horizontal field
+components are measured at a fixed reference station on the surface. Transfer
+functions relate the vertical components to the horizontal component as shown
+in Equation <a class="reference internal" href="#equation-emceq1">(503)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-emceq1">
+<span class="eqno">(503)<a class="headerlink" href="#equation-emceq1" title="Link to this equation"></a></span>\[\mathbf{H}_z (\mathbf{r}) = T_{zx} (\mathbf{r},\mathbf{r}_0) \mathbf{H}_x(\mathbf{r}) +  T_{zy} (\mathbf{r},\mathbf{r}_0) \mathbf{H}_y(\mathbf{r})\]</div>
+<figure class="align-left" id="emc12" style="width: 35%">
+<img alt="../../../_images/fig12.png" src="../../../_images/fig12.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 396 </span><span class="caption-text">Plan view map showing a conductive block in a halfspace.</span><a class="headerlink" href="#emc12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-left" id="emc13" style="width: 50%">
+<img alt="../../../_images/fig13.png" src="../../../_images/fig13.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 397 </span><span class="caption-text">ZTEM tipper data for 3 select frequencies over the conductive block shown in <a class="reference internal" href="#emc12"><span class="std std-numref">Fig. 396</span></a>.</span><a class="headerlink" href="#emc13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each tipper has an in-phase and a quadrature component. To get a feel for this
+type of data, we first look at a synthetic example. The true model consists of
+a conductive block in a halfspace, as shown in <a class="reference internal" href="#emc12"><span class="std std-numref">Fig. 396</span></a>. Tipper data
+are <a class="reference internal" href="../../geophysical_surveys/fundamentals/forward_modelling.html#forward-modelling"><span class="std std-ref">simulated</span></a> in 3D and the in-phase and quadrature
+components are plotted for select frequencies (<a class="reference internal" href="#emc13"><span class="std std-numref">Fig. 397</span></a>).</p>
+<p>A few key things can be seen in the data. First, the anomaly over a block has
+a high peak and a low peak. Additionally, the orientation of the anomaly
+changes when we look at the <span class="math notranslate nohighlight">\(T_{zx}\)</span> tipper versus the <span class="math notranslate nohighlight">\(T_{zy}\)</span>
+tipper. Looking a bit closer and assuming a standard right-hand coordinate
+system, we can deduce that the ZTEM data are negative when going from a
+resistive region to a conductive region. Alternatively, the data are positive
+when traveling from a conductive to a resistive region. Outside of the
+anomaly, the data are zero. Because the tipper data are based on a ratio of
+the horizontal magnetic fields and the vertical magnetic field, ZTEM data are
+insensitive to uniform backgrounds as well as 1D layered earths. Thus, the
+data only show anomalies for 3D conductivity variations, such as this block in
+a halfspace.</p>
+<p>Secondary observations include how the data change as frequency changes. For
+the in-phase (real) data, the amplitude increases with frequency. Recall that
+higher frequencies have a lower skin depth than lower frequencies, and are
+thus more sensitive to near-surface regions. The imaginary or quadrature data
+show the same anomaly orientations for the two tippers but the amplitudes are
+lower in general and in this case, the middle frequency plotted in
+<a class="reference internal" href="#emc13"><span class="std std-numref">Fig. 397</span></a> has the highest amplitudes.</p>
+<p>This simple example showcases what ZTEM data look like and exemplifies that
+interpretation directly from the data is not always straightforward. But, with
+these patterns in mind, we can now look at the field data over Elevenmile
+Canyon and get first-hand ideas about the conductivity structures at depth.</p>
+<p>The data over Elevenmile Canyon were collected by Geotech Ltd. in 2011 using a
+helicopter-based ZTEM and aeromagnetic system. The survey consisted of 200
+line kilometers with 200 m spacing over a 38 square km area about 45 km east
+of Fallon, Nevada. There are approximately 20,000 data locations. The flight
+lines are shown in <a class="reference internal" href="setup.html#emc2"><span class="std std-numref">Fig. 393</span></a>. The in-phase and quadrature components of
+the tipper transfer functions are calculated from raw field data for siz
+frequencies ranging from 20 to 720 Hz. Preliminary processing such spike
+removal, attitude corrections, and filtering were applied to the data by
+Geotech.</p>
+<p>Data were collected for six frequencies: 30, 45, 90, 180, 360, and 720 Hz.
+When comparing data maps between frequencies, the images are similar but
+smaller details change. <a class="reference internal" href="#emc3"><span class="std std-numref">Fig. 398</span></a> shoes the in-phase (real) and
+quadrature (imaginary) components of <span class="math notranslate nohighlight">\(T_{zx}\)</span> and <span class="math notranslate nohighlight">\(T_{zy}\)</span> for hte
+30 Hz frequency in a local grid.</p>
+<figure class="align-left" id="emc3" style="width: 100%">
+<img alt="../../../_images/FIGURE_3.png" src="../../../_images/FIGURE_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 398 </span><span class="caption-text">The four components of the lowest (30 Hz) frequency data are shown in
+(a)-(d).</span><a class="headerlink" href="#emc3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>First-hand ideas about the conductivity structures can be obtained by
+evaluating the data. ZTEM data over a conductive block will show a high and
+low anomaly while data over a halfspace or a layered earth will be zero.
+Therefore, we can expect little to no 3D conductivity structures in the
+eastern portion of the survey area as the tipper data is roughly zero to the
+east of 6000 m. In the western portion of the area, the real and imaginary
+component of <span class="math notranslate nohighlight">\(T_{zx}\)</span> show a north-west trending anomaly while in the
+<span class="math notranslate nohighlight">\(T_{zy}\)</span> components show anomalies of different shapes in the area. This
+shows the difference between the two tippers and the different magnetic field
+components they take use.</p>
+<p>Despite getting a few initial ideas from the data, the data remain hard to
+interpret. The next page delves into <a class="reference internal" href="processing.html#emc-processing"><span class="std std-ref">processing and inverting</span></a> the data to better understand the conductivity.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="survey.html" class="btn btn-neutral float-left" title="Survey" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="processing.html" class="btn btn-neutral float-right" title="Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

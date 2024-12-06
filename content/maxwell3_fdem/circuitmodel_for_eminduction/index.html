@@ -1,0 +1,265 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuit Model for EM Induction &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Derivation of Response Function" href="derive_response_function.html" />
+    <link rel="prev" title="Governing Equations" href="../governing_equations.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell III: FDEM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../governing_equations.html">Governing Equations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Circuit Model for EM Induction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="derive_response_function.html">Derivation of Response Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="understanding_harmonicEMresponse.html">Understanding the Harmonic EM response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="understanding_response_widget.html">Understanding the response using a widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grounded_sources/index.html">Grounded sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../inductive_sources/index.html">Inductive sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plane_wave_sources/index.html">Plane wave sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../footprint_and_depth_of_investigation.html">Footprint and depth of investigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../natural_sources/index.html">Natural Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell III: FDEM</a></li>
+      <li class="breadcrumb-item active">Circuit Model for EM Induction</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell3_fdem/circuitmodel_for_eminduction/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="circuit-model-for-em-induction">
+<span id="emi-tuotorial-index-fd"></span><h1>Circuit Model for EM Induction<a class="headerlink" href="#circuit-model-for-em-induction" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>The basic principles for EM induction were outlined in Link. Here we use
+an equivalent electric circuit model consisting of three loops to represent
+that process. We derive the inductive response function in terms of circuits,
+mutual and self-inductance, and coupling. Widgets are developed to help
+physical understanding. The response functions for many practical geophysical
+surveys resemble that from the circuit model and hence much intuition about
+EM signals can be obtained using this analysis.</p>
+</div>
+<p>The basic EM  survey is shown in <a class="reference internal" href="#concepts-3loops"><span class="std std-numref">Fig. 89</span></a>. The time varying
+magnetic field (referred to as the primary field) in the Tx induces currents
+in the conductor. Those currents produce a secondary field that can be
+recorded at the receiver.</p>
+<figure class="align-center" id="concepts-3loops">
+<a class="reference internal image-reference" href="../../../_images/Concepts_3loops.png"><img alt="../../../_images/Concepts_3loops.png" src="../../../_images/Concepts_3loops.png" style="width: 393.0px; height: 399.59999999999997px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Conceptual diagrams for EM inductions. Top panel shows excitation of the
+conductor using induction, and botton panel shows corresponding 3-loops
+system.</span><a class="headerlink" href="#concepts-3loops" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From <a class="reference internal" href="../../maxwell1_fundamentals/formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s Law</span></a>, we establish the link between EMF (<span class="math notranslate nohighlight">\(\mathcal{E}\)</span>,
+voltage), and time varying flux (<span class="math notranslate nohighlight">\(\Phi_b\)</span>). Below diagram illustrates
+how EMF could be generated from time-varying flux (<span class="math notranslate nohighlight">\(\mathcal{E}= -
+\frac{d \Phi_b}{dt}  = \imath \omega \Phi_b\)</span>). The EMF (voltage) produces a
+current in the loop.</p>
+<figure class="align-center" id="emf">
+<a class="reference internal image-reference" href="../../../_images/EMF.png"><img alt="../../../_images/EMF.png" src="../../../_images/EMF.png" style="width: 444.0px; height: 195.6px;" />
+</a>
+</figure>
+<p>The circuit model is now understood as follows:</p>
+<ul>
+<li><p>Loop 1: is the transmitter (Tx).
+It has a time varying current (I1 e^iwt) and hence produces a time varying
+field everywhere in space.</p></li>
+<li><p>Loop 2: represents the conductive body.
+The time varying flux generates currents in the conductor (<span class="math notranslate nohighlight">\(I_2
+e^{\imath \omega t}\)</span>). These time varying currents produce a time varying
+field everywhere in space.</p></li>
+<li><p>Loop 3: is the receiver (Rx). The measured EMF, <span class="math notranslate nohighlight">\(\mathcal{E}^t\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}^t = \mathcal{E}^p +\mathcal{E}^s\]</div>
+<p>where superscripts refer respectively  to the total, primary, and  secondary fields.</p>
+</li>
+</ul>
+<p>Either numerically, or through instrumentation, it is possible to remove the
+primary field from the measurements. The important geophysical response is</p>
+<div class="math notranslate nohighlight" id="equation-l2">
+<span class="eqno">(367)<a class="headerlink" href="#equation-l2" title="Link to this equation"></a></span>\[\begin{split}\frac{\mathcal{E}^s}{\mathcal{E}^p} =  \frac{H^s}{H^p}  =   - \frac{M_{12} M_{23}}{M_{13}L_2} \frac{\alpha^2 + i \alpha}{1 + \alpha^2} \\ = CQ(\alpha),\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is coupling coefficient.
+In Eq. <a class="reference internal" href="#equation-l2">(367)</a>, <span class="math notranslate nohighlight">\(M_{ij}\)</span> is the mutual inductance between loops <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(L\)</span> is the self inductance of the target loop, <span class="math notranslate nohighlight">\(Q\)</span> is the inductive response function. <span class="math notranslate nohighlight">\(\alpha = \omega L/R\)</span>  is a dimensionless induction number.</p>
+<p>The Response Function is a complex quantity and the real and imaginary parts
+(or in-phase and quadrature phase) look like below figure. The horizontal axis
+is the induction number.</p>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/16cd09a07d48eeea36e78d708acd6083/index-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/d8624acfc093ba53f26d2d8dce04b7bc/index-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/b25975e421a8c2593de6967a7a5128cd/index-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/e86cd7e249fac77ed49b82b0fa8d9841/index-1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/index-1.png" class="plot-directive" src="../../../_images/index-1.png" />
+</figure>
+<p>Eq. <a class="reference internal" href="#equation-l2">(367)</a> has two main components. <span class="math notranslate nohighlight">\(C\)</span> is determined by geometry.
+<span class="math notranslate nohighlight">\(Q\)</span> relates to the target body.</p>
+<p>In the following pages we illustrate</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="derive_response_function.html">Derivation of Response Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="understanding_harmonicEMresponse.html">Understanding the Harmonic EM response</a></li>
+<li class="toctree-l1"><a class="reference internal" href="understanding_response_widget.html">Understanding the response using a widget</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../governing_equations.html" class="btn btn-neutral float-left" title="Governing Equations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="derive_response_function.html" class="btn btn-neutral float-right" title="Derivation of Response Function" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

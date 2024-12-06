@@ -1,0 +1,323 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanisms for Conductivity and Chargeability &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Factors Impacting Conductivity and Chargeability" href="electrical_conductivity_factors.html" />
+    <link rel="prev" title="Typical Values for Rocks" href="electrical_conductivity_values.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Electrical Conductivity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#electrical-resistivity">Electrical Resistivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#chargeability-and-frequency-dependence">Chargeability and Frequency-Dependence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_lab_setup_measurements.html">Laboratory Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Mechanisms for Conductivity and Chargeability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_factors.html">Factors Impacting Conductivity and Chargeability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../magnetic_permeability/index.html">Magnetic Permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dielectric_permittivity/index.html">Dielectric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Electrical Conductivity</a></li>
+      <li class="breadcrumb-item active">Mechanisms for Conductivity and Chargeability</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/electrical_conductivity/electrical_conductivity_mechanisms.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mechanisms-for-conductivity-and-chargeability">
+<span id="electrical-conductivity-mechanisms"></span><h1>Mechanisms for Conductivity and Chargeability<a class="headerlink" href="#mechanisms-for-conductivity-and-chargeability" title="Link to this heading"></a></h1>
+<section id="electric-and-ionic-conduction">
+<h2>Electric and Ionic Conduction<a class="headerlink" href="#electric-and-ionic-conduction" title="Link to this heading"></a></h2>
+<p>Conduction describes the movement of electrical charge from one location
+to another. There are two important charge carriers of electrical charge, electrons and ions. Let us define the conductivity as follows:</p>
+<div class="math notranslate nohighlight">
+\[\sigma = n e \mu_e,\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of charge carriers, <span class="math notranslate nohighlight">\(e\)</span> is charge carried
+by each charge carrier, and <span class="math notranslate nohighlight">\(\mu_e\)</span> is the mobility of the carriers. By this definition,
+the conductivity of a rock can be determined by its capability to move charges via electrons and ions. This results in two distinct types of conduction: electric conduction and ionic conduction. Both conductions are related to random motion of particles affected by an
+applied electric field. However, how charge moves in each conduction process is
+quite different.</p>
+<section id="electric-conductivity">
+<h3>Electric Conductivity<a class="headerlink" href="#electric-conductivity" title="Link to this heading"></a></h3>
+<p>The charge carrier for electric conductivity is the electron, which defines conduction within most metals such as iron and copper. The sharing of valence electrons between metallic atoms allows charges to move freely along the directly of an applied electric field.</p>
+</section>
+<section id="ionic-conductivity">
+<h3>Ionic conductivity<a class="headerlink" href="#ionic-conductivity" title="Link to this heading"></a></h3>
+<p>Conduction within most rocks is primarily electrolytic, taking place in the
+connected pore spaces, along grain boundaries and in fractures. Conduction within rocks is typically negligible through the mineral grains or silicate framework <span id="id1">[<a class="reference internal" href="../../references.html#id17" title="Stanley H. Ward. 6. resistivity and induced polarization methods. In Geotechnical and Environmental Geophysics, chapter 6, pages 147-190. Society of Exploration Geophysicists, 1990. URL: https://library.seg.org/doi/abs/10.1190/1.9781560802785.ch6.">War90</a>]</span>. In this
+case, the charge carrier mostly consists of dissolved ions; which is why we use the term ionic conductivity.</p>
+<p>Ionic conductivity results from the ordered movement of ions in an
+electrolyte under the application of an external electric field. Without an
+external electric field, the ions move randomly as a result of thermal
+agitation and collisions with other ions and atoms. Because both cations (+)
+and anions (-) are present in an electrolyte, the conductivity can be
+expressed as</p>
+<div class="math notranslate nohighlight">
+\[\sigma = e(n^+\mu_m^+ + n^-\mu_m^-),\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of charge carriers, <span class="math notranslate nohighlight">\(e\)</span> is the charge
+carried, and <span class="math notranslate nohighlight">\(\mu_m\)</span> is the mobility of the carriers. Here superscripts
++ and - stand for cation and anion, respectively.</p>
+</section>
+</section>
+<section id="electrode-and-membrane-polarization">
+<h2>Electrode and Membrane Polarization<a class="headerlink" href="#electrode-and-membrane-polarization" title="Link to this heading"></a></h2>
+<p>The chargeability of Earth materials is essentially an electrochemical effect and can be
+caused by many factors, not all of which are completely understood. If the ground
+is chargeable, it responds as if the resistivity were a complex quantity - it
+behaves somewhat like a leaky capacitor. Therefore the chargeability can be
+measured in a number of ways using time domain or frequency domain techniques.
+Aspects affecting the chargeability of a sample include:</p>
+<p>There are two primary causes of chargeability, “membrane polarization” and
+“electrode polarization”. In both cases, the re-distribution of charges after an external DC electric field is applied takes some time to occur. Equivalently, it takes the same amount of time to revert back to a balanced charge distribution once the electric field is removed.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Electrode Polarization</p>
+<figure class="align-center" id="fig-elec-pol-1" style="width: 100%">
+<img alt="../../../_images/elec_pol_1.gif" src="../../../_images/elec_pol_1.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Electrode polarization.</span><a class="headerlink" href="#fig-elec-pol-1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-elec-pol-2" style="width: 100%">
+<img alt="../../../_images/elec_pol_2.gif" src="../../../_images/elec_pol_2.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Electric double layers.</span><a class="headerlink" href="#fig-elec-pol-2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-elec-pol-3" style="width: 100%">
+<img alt="../../../_images/elec_pol_3.gif" src="../../../_images/elec_pol_3.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Ion distribution.</span><a class="headerlink" href="#fig-elec-pol-3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-elec-pol-4" style="width: 100%">
+<img alt="../../../_images/elec_pol_4.gif" src="../../../_images/elec_pol_4.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Circuit analogue.</span><a class="headerlink" href="#fig-elec-pol-4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<section id="electrode-polarization">
+<span id="electrical-conductivity-mechanisms-electrode"></span><h3>Electrode Polarization<a class="headerlink" href="#electrode-polarization" title="Link to this heading"></a></h3>
+<p>Electrode polarization occurs when pore spaces are blocked by metallic particles (<a class="reference internal" href="#fig-elec-pol-1"><span class="std std-numref">Fig. 15</span></a> ). Again, charges accumulate when an electric field is applied. The result is two electrical double layers which contribute to measured voltages (<a class="reference internal" href="#fig-elec-pol-2"><span class="std std-numref">Fig. 16</span></a> ).</p>
+<p>At interfaces between ionic and metallic conductors (for example, an ore
+grain within the pore space), there is an impedance associated with getting current to
+flow across the interfaces. These interfaces look like those illustrating in <a class="reference internal" href="#fig-elec-pol-1"><span class="std std-numref">Fig. 15</span></a> and have a simplified circuit analogue shown in <a class="reference internal" href="#fig-elec-pol-4"><span class="std std-numref">Fig. 18</span></a>. Current can flow across these interfaces via 1) charge transfer (or ion diffusion), or 2) via a capacitive effect (no charge transfer).</p>
+<p>Ion diffusion is not easy to model with circuit elements. Instead, this process is frequently described using the Warburg impedance and reaction resistance. The magnitude of the Warburg impedance varies approximately as <span class="math notranslate nohighlight">\(\omega^{-1/2}\)</span>. Therefore, the impedance due to ion diffusion actually increases as the frequency decreases.</p>
+<p>Note that while it is useful to understand simplified models of the relevant
+electrical behaviors of surface-electrolyte interactions, all rocks are “dirty” in the sense that they are not simply pure “electrodes”. There are other materials and particles affecting ionic behavior within and outside the diffuse layer, and some of the sample’s constituents will affect the behavior of the fixed layer near and on the liquid-solid interfaces. This has resulted in the creation of many empirical models for describing surface-electrolyte interactions.</p>
+</section>
+<section id="membrane-polarization">
+<span id="electrical-conductivity-mechanisms-membrane"></span><h3>Membrane Polarization<a class="headerlink" href="#membrane-polarization" title="Link to this heading"></a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Membrane Polarization</p>
+<figure class="align-center" id="fig-memb-pol-1" style="width: 100%">
+<img alt="../../../_images/memb1.gif" src="../../../_images/memb1.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Ions at rest.</span><a class="headerlink" href="#fig-memb-pol-1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-memb-pol-2" style="width: 100%">
+<img alt="../../../_images/memb2.gif" src="../../../_images/memb2.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Ions subject to field.</span><a class="headerlink" href="#fig-memb-pol-2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-memb-pol-3" style="width: 100%">
+<img alt="../../../_images/memb3.gif" src="../../../_images/memb3.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Net electric dipole.</span><a class="headerlink" href="#fig-memb-pol-3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<p>Membrane polarization occurs when pore space narrows to within several
+boundary layer thicknesses (which are the thicknesses of ions adsorbed into a
+surface). Note that the surfaces of mineral grains naturally possess a weak negative charge which attracts cations (<a class="reference internal" href="#fig-memb-pol-1"><span class="std std-numref">Fig. 19</span></a>).</p>
+<p>When an electric field is applied, the charges cannot flow easily through the “pore throat” so they accumulate (<a class="reference internal" href="#fig-memb-pol-2"><span class="std std-numref">Fig. 20</span></a>). The result is a net electric dipole which contributes towards any other voltages measured across the rock. Like electrode polarization, this process is non-instantaneous.</p>
+<p>A second form of membrane polarization occurs where clay particles partially block ionic solution pathways (<a class="reference internal" href="#fig-memb-pol-4"><span class="std std-numref">Fig. 22</span></a>). Upon application of an electric field, positive
+charge carriers pass easily, while negative carriers accumulate. This is known as an “ion-selective membrane.”</p>
+<p>A surplus of both cations and anions occurs at one end of the membrane, while
+a deficiency occurs at the other end. The reduction of mobility is most
+obvious at frequencies slower than the diffusion time of ions between adjacent
+membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at
+higher frequencies.</p>
+<figure class="align-center" id="fig-memb-pol-4" style="width: 70%">
+<img alt="../../../_images/memb_pol_2nd_type.gif" src="../../../_images/memb_pol_2nd_type.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Membrane polarization.</span><a class="headerlink" href="#fig-memb-pol-4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="electrical_conductivity_values.html" class="btn btn-neutral float-left" title="Typical Values for Rocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="electrical_conductivity_factors.html" class="btn btn-neutral float-right" title="Factors Impacting Conductivity and Chargeability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

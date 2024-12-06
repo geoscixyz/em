@@ -1,0 +1,362 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derivation of Interface Conditions &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Maxwell’s Equations: Time Domain" href="../time_domain_equations.html" />
+    <link rel="prev" title="Interface Conditions" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Interface Conditions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Derivation of Interface Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-normal-to-the-interface">Components Normal to the Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electric-displacement">Electric Displacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#electric-field">Electric Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-density">Current Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#magnetic-flux-density">Magnetic Flux Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#magnetic-field">Magnetic Field</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#components-tangential-to-the-interface">Components Tangential to the Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Electric Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Electric Displacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Current Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Magnetic Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Magnetic Flux Density</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Interface Conditions</a></li>
+      <li class="breadcrumb-item active">Derivation of Interface Conditions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/interface_conditions/derivation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="derivation-of-interface-conditions">
+<span id="maxwell1-fundamentals-interface-conditions-derivation"></span><h1>Derivation of Interface Conditions<a class="headerlink" href="#derivation-of-interface-conditions" title="Link to this heading"></a></h1>
+<p>Here, we derive the interface conditions for fields <span class="math notranslate nohighlight">\(\mathbf{e}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{h}\)</span> as well as for fluxes <span class="math notranslate nohighlight">\(\mathbf{j}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> according to Griffiths (<span id="id1">[<a class="reference internal" href="../../references.html#id5" title="David J Griffiths. Introduction to electrodynamics. Prentice-Hall, 1999.">Gri99</a>]</span>). This can be accomplished by using Maxwell’s equations in integral form in the time-domain, where:</p>
+<div class="math notranslate nohighlight" id="equation-gausseint">
+<span class="eqno">(75)<a class="headerlink" href="#equation-gausseint" title="Link to this equation"></a></span>\[\oint_S \mathbf{d} \cdot d \mathbf{a} = Q_f\]</div>
+<div class="math notranslate nohighlight" id="equation-gaussmint">
+<span class="eqno">(76)<a class="headerlink" href="#equation-gaussmint" title="Link to this equation"></a></span>\[\oint_S \mathbf{b}\cdot d \mathbf{a} = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-faradayint">
+<span class="eqno">(77)<a class="headerlink" href="#equation-faradayint" title="Link to this equation"></a></span>\[\oint_C \mathbf{e} \cdot d\mathbf{l} = - \int_S \frac{\partial \mathbf{b}}{\partial t} \cdot d\mathbf{a}\]</div>
+<div class="math notranslate nohighlight" id="equation-ampmaxint">
+<span class="eqno">(78)<a class="headerlink" href="#equation-ampmaxint" title="Link to this equation"></a></span>\[\oint_C \mathbf{h} \cdot d\mathbf{l} = \int_S \bigg ( \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t} \bigg ) \cdot d\mathbf{a}\]</div>
+<p>Recall that <span class="math notranslate nohighlight">\(Q_f\)</span> and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> are the total enclosed free charge and free current density, respectively. The fields and fluxes are related through the following constitutive relationships:</p>
+<div class="math notranslate nohighlight" id="equation-jsige">
+<span class="eqno">(79)<a class="headerlink" href="#equation-jsige" title="Link to this equation"></a></span>\[\mathbf{j} = \sigma \mathbf{e},\]</div>
+<div class="math notranslate nohighlight" id="equation-depse">
+<span class="eqno">(80)<a class="headerlink" href="#equation-depse" title="Link to this equation"></a></span>\[\mathbf{d} = \varepsilon \mathbf{e},\]</div>
+<div class="math notranslate nohighlight" id="equation-bmuh">
+<span class="eqno">(81)<a class="headerlink" href="#equation-bmuh" title="Link to this equation"></a></span>\[\mathbf{b} = \mu \mathbf{h},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> denotes the electric conductivity, <span class="math notranslate nohighlight">\(\varepsilon\)</span> denotes the dielectric permittivity and <span class="math notranslate nohighlight">\(\mu\)</span> denotes the magnetic permeability.</p>
+</section>
+<section id="components-normal-to-the-interface">
+<h1>Components Normal to the Interface<a class="headerlink" href="#components-normal-to-the-interface" title="Link to this heading"></a></h1>
+<p>Here, we consider components of the fields and fluxes which are normal to the interface.</p>
+<section id="electric-displacement">
+<h2>Electric Displacement<a class="headerlink" href="#electric-displacement" title="Link to this heading"></a></h2>
+<figure class="align-right" id="pillbox" style="width: 35%">
+<img alt="../../../_images/pillbox.png" src="../../../_images/pillbox.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Gaussian pillbox.</span><a class="headerlink" href="#pillbox" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Although it may seem counter-intuitive, we will first derive the interface condition for normal components of the electric displacement. Consider an extremely small Gaussian pillbox of height <span class="math notranslate nohighlight">\(h\)</span> and cross-sectional area <span class="math notranslate nohighlight">\(S_{\text{top}} = \pi r_{\text{top}}^2\)</span> (<a class="reference internal" href="#pillbox"><span class="std std-numref">Fig. 39</span></a>). By applying Eq. <a class="reference internal" href="#equation-gausseint">(75)</a> to our Gaussian pillbox, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\int_0^{2\pi}\int_0^{r_{\text{top}}} d_1^\perp ~drd\theta - \int_0^{2\pi}\int_0^{r_{\text{top}}} d_2^\perp ~ dr d \theta + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d^\parallel ~ d \theta dz = Q_f\]</div>
+<p>where <span class="math notranslate nohighlight">\(d_{1}^\perp\)</span> and <span class="math notranslate nohighlight">\(d_{2}^\perp\)</span> are the components of the electric
+displacement normal to the top and bottom of the pillbox, respectively. The radial component (parallel to the interface) is denoted by <span class="math notranslate nohighlight">\(d^\parallel\)</span>. Since the pillbox is extremely small, we can assume that <span class="math notranslate nohighlight">\(d_{1}^\perp\)</span> and <span class="math notranslate nohighlight">\(d_{2}^\perp\)</span> are constant over the top and bottom of the pillbox, respectively. Under this assumption, the previous expression can be simplified to:</p>
+<div class="math notranslate nohighlight" id="equation-eq-d-perp-pillbox">
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq-d-perp-pillbox" title="Link to this equation"></a></span>\[d_{1}^\perp S_{\text{top}} - d_{2}^\perp S_{\text{top}} + \int\limits_{-h/2}^{h/2}\int\limits_0^{2\pi} d^\parallel ~ d \theta dz = Q_f.\]</div>
+<p>If we take the limit as <span class="math notranslate nohighlight">\(h\rightarrow 0\)</span> while letting <span class="math notranslate nohighlight">\(S_{\text{top}}\)</span> remain
+fixed, the integral term on the left hand side of Eq. <a class="reference internal" href="#equation-eq-d-perp-pillbox">(82)</a> vanishes. Additionally, as the vertical dimension of the pillbox goes to zero, the total enclosed free charge <span class="math notranslate nohighlight">\(Q_f\)</span> becomes the product of a free surface charge density <span class="math notranslate nohighlight">\(\tau_f\)</span> and the area of the top of the pillbox; assuming the distribution of surface charges is constant. This results in the following expression:</p>
+<div class="math notranslate nohighlight">
+\[d_{1}^\perp S_{\text{top}} - d_{2}^\perp S_{\text{top}} = \tau_f S_{\text{top}}\]</div>
+<p>Dividing both sides by the top area of the pillbox, the interface condition for normal components of the electric displacement are given by:</p>
+<div class="math notranslate nohighlight" id="equation-interface-d-n">
+<span class="eqno">(83)<a class="headerlink" href="#equation-interface-d-n" title="Link to this equation"></a></span>\[d_{1}^\perp - d_{2}^\perp = \tau_f\]</div>
+<p>Thus, the normal component the electric displacement is discontinuous at the interface. Furthermore, the discontinuity is associated with an accumulation of electrical charges.</p>
+</section>
+<section id="electric-field">
+<h2>Electric Field<a class="headerlink" href="#electric-field" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for normal components of the electric field, we can combine Eqs. <a class="reference internal" href="#equation-depse">(80)</a> and <a class="reference internal" href="#equation-interface-d-n">(83)</a>. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-interface-e-n">
+<span class="eqno">(84)<a class="headerlink" href="#equation-interface-e-n" title="Link to this equation"></a></span>\[\varepsilon_1 e_{1}^\perp -\varepsilon_2 e_{2}^\perp = \tau_f\]</div>
+</section>
+<section id="current-density">
+<h2>Current Density<a class="headerlink" href="#current-density" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for normal components of the electric current density, we can combine Eqs. <a class="reference internal" href="#equation-jsige">(79)</a> and <a class="reference internal" href="#equation-interface-e-n">(84)</a>. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-0">
+<span class="eqno">(85)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-0" title="Link to this equation"></a></span>\[\frac{\varepsilon_1}{\sigma_1} j_{1}^\perp - \frac{\varepsilon_2}{\sigma_2} j_{2}^\perp = \tau_f\]</div>
+<p>In the case where there is no difference in dielectric properties across the interface, this equation simplifies to the following:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-1">
+<span class="eqno">(86)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-1" title="Link to this equation"></a></span>\[\frac{j_{1}^\perp}{\sigma_1}  - \frac{j_{2}^\perp}{\sigma_2}  = \frac{\tau_f}{\varepsilon_0}\]</div>
+<p><strong>Special Cases: Steady-State Current</strong></p>
+<p>To examine this case, let us consider the continuity equation for <a class="reference internal" href="../formative_laws/conservation_of_charge.html#conservation-of-charge"><span class="std std-ref">conservation of charge</span></a>:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-2">
+<span class="eqno">(87)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-2" title="Link to this equation"></a></span>\[\int_A \mathbf{j} \cdot d\mathbf{a} = -\frac{dQ_f}{dt}\]</div>
+<p>In the steady-state, the density of free charge on the interface is static in time. Thus the right hand side of the previous equation is zero. If we use the Gaussian pillbox from <a class="reference internal" href="#pillbox"><span class="std std-numref">Fig. 39</span></a> and follow the same arguments used to derive interface conditions for <span class="math notranslate nohighlight">\(d^\perp\)</span>, we find that:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-3">
+<span class="eqno">(88)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-3" title="Link to this equation"></a></span>\[j_1^\perp = j_2^\perp\]</div>
+<p>Thus in the steady state, the normal component of the current density is continuous across the interface. If we let <span class="math notranslate nohighlight">\(j_1^\perp = j_2^\perp = j^\perp\)</span>, the interface condition for the electric current density in the absence of dielectrics simplifies to:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-4">
+<span class="eqno">(89)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-4" title="Link to this equation"></a></span>\[\bigg ( \frac{1}{\sigma_1}  - \frac{1}{\sigma_2} \bigg ) j^\perp = \big ( \rho_1 - \rho_2 \big ) j^\perp = \frac{\tau_f}{\varepsilon_0}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho = 1/\sigma\)</span> is the electric resistivity. Although accumulation of electrical charge is complete in this case, it is important to note that the difference in electrical properties across the interface is responsible for the accumulation of electrical charge.</p>
+</section>
+<section id="magnetic-flux-density">
+<h2>Magnetic Flux Density<a class="headerlink" href="#magnetic-flux-density" title="Link to this heading"></a></h2>
+<p>The interface condition for the normal component of the magnetic flux density is derived from Eq. <a class="reference internal" href="#equation-gaussmint">(76)</a>; i.e. Gauss’s law for magnetic fields. For this, we may follow the exact same argument used to obtain interface conditions for the electric displacement. However, since the right hand side of Eq. <a class="reference internal" href="#equation-gaussmint">(76)</a> is always zero, the interface condition for the normal component of the magnetic flux density is given by:</p>
+<div class="math notranslate nohighlight" id="equation-interface-b-n">
+<span class="eqno">(90)<a class="headerlink" href="#equation-interface-b-n" title="Link to this equation"></a></span>\[b_{1}^\perp - b_{2}^\perp = 0\]</div>
+<p>Therefore, normal components of the magnetic flux density are continuous across interfaces.</p>
+</section>
+<section id="magnetic-field">
+<h2>Magnetic Field<a class="headerlink" href="#magnetic-field" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for normal components of the magnetic field, we can combine Eqs. <a class="reference internal" href="#equation-bmuh">(81)</a> and <a class="reference internal" href="#equation-interface-b-n">(90)</a>. Thus:</p>
+<div class="math notranslate nohighlight">
+\[\mu_1 h_{1}^\perp -\mu_2 h_{2}^\perp = 0\]</div>
+</section>
+</section>
+<section id="components-tangential-to-the-interface">
+<h1>Components Tangential to the Interface<a class="headerlink" href="#components-tangential-to-the-interface" title="Link to this heading"></a></h1>
+<p>Here, we consider components of the fields and fluxes which are tangential to the interface.</p>
+<section id="id2">
+<h2>Electric Field<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<figure class="align-right" id="rectangle">
+<a class="reference internal image-reference" href="../../../_images/rectangle.png"><img alt="../../../_images/rectangle.png" src="../../../_images/rectangle.png" style="width: 248.49999999999997px; height: 144.89999999999998px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Gaussian rectangle.</span><a class="headerlink" href="#rectangle" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Although it may seem strange given the previous ordering, we will first derive the interface condition for tangential components of the electric field. Consider a Gaussian rectangle of height <span class="math notranslate nohighlight">\(h\)</span>, width <span class="math notranslate nohighlight">\(l\)</span> and area <span class="math notranslate nohighlight">\(A\)</span> (<a class="reference internal" href="#rectangle"><span class="std std-numref">Fig. 40</span></a>). The surface of this rectangle is perpendicular to the interface.</p>
+<p>We begin by applying Eq. <a class="reference internal" href="#equation-faradayint">(77)</a> to our rectangle. Assuming the rectangle is small enough such that the tangential electric field is constant along both horizontal edges, we obtain the following:</p>
+<div class="math notranslate nohighlight" id="equation-eq-e-para-rectangle">
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq-e-para-rectangle" title="Link to this equation"></a></span>\[\oint_C \!\mathbf{e}\cdot d\mathbf{l} = e_{1}^\parallel \, l - e_{2}^\parallel \, l + \int_{-h/2}^{h/2} e^\perp (x \! =\! -l/2) ~dz - \int_{-h/2}^{h/2} e^\perp (x \! = \! l/2) ~dz = - \!\int_A \frac{\partial \mathbf{b}}{\partial t}\cdot d \mathbf{a}\]</div>
+<p>where <span class="math notranslate nohighlight">\(e_{1}^\parallel\)</span> and <span class="math notranslate nohighlight">\(e_{2}^\parallel\)</span> are the tangential components of the electric field on the top and bottom edges of the Gaussian rectangle, respectively. Normal components of the electric field are denoted by <span class="math notranslate nohighlight">\(e^\perp\)</span>.</p>
+<p>If we take the limit <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span> while leaving the width <span class="math notranslate nohighlight">\(l\)</span> fixed, the integrals on the left hand side of Eq. <a class="reference internal" href="#equation-eq-e-para-rectangle">(91)</a> go to zero. Additionally, this limit causes the surface area of the rectangle to go to zero, thus the integral on the right hand side of Eq. <a class="reference internal" href="#equation-eq-e-para-rectangle">(91)</a> is also zero. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-5">
+<span class="eqno">(92)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-5" title="Link to this equation"></a></span>\[e_{1}^\parallel \, l - e_{2}^\parallel \, l = 0\]</div>
+<p>Dividing the previous equation by <span class="math notranslate nohighlight">\(l\)</span>, we obtain the interface condition for tangential components of the electric field:</p>
+<div class="math notranslate nohighlight" id="equation-interface-e-t">
+<span class="eqno">(93)<a class="headerlink" href="#equation-interface-e-t" title="Link to this equation"></a></span>\[e_{1}^\parallel - e_{2}^\parallel = 0.\]</div>
+<p>The tangential component of the electric field is continuous across the
+interface. As a result, tangential components of the electric field are not responsible for any build-up of electrical charges at the interface.</p>
+</section>
+<section id="id3">
+<h2>Electric Displacement<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for tangential components of the electric displacement, we can combine Eqs. <a class="reference internal" href="#equation-depse">(80)</a> and <a class="reference internal" href="#equation-interface-e-t">(93)</a>. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-6">
+<span class="eqno">(94)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-6" title="Link to this equation"></a></span>\[\frac{ d_{1}^\parallel}{\varepsilon_1} - \frac{d_{2}^\parallel}{\varepsilon_2} = 0\]</div>
+</section>
+<section id="id4">
+<h2>Current Density<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for tangential components of the electric current density, we can combine Eqs. <a class="reference internal" href="#equation-jsige">(79)</a> and <a class="reference internal" href="#equation-interface-e-t">(93)</a>. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-7">
+<span class="eqno">(95)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-7" title="Link to this equation"></a></span>\[\frac{ j_{1}^\parallel}{\sigma_1} - \frac{j_{2}^\parallel}{\sigma_2} = \rho_1 j_1^\parallel - \rho_2 j_2^\parallel = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho = \sigma^{-1}\)</span> is the electric resistivity.</p>
+</section>
+<section id="id5">
+<h2>Magnetic Field<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p>The interface condition for the tangential component of the magnetic field is derived from Eq. <a class="reference internal" href="#equation-ampmaxint">(78)</a>; i.e. the Ampere-Maxwell equation. Here, we can follow the exact same arguments used to obtain interface conditions for the electric field. In this case however, we must also address the integral term which contains the free current density such that:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-8">
+<span class="eqno">(96)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-8" title="Link to this equation"></a></span>\[I_f = \int_S \mathbf{j} \cdot d \mathbf{a}\]</div>
+<p>where <span class="math notranslate nohighlight">\(I_f\)</span> is the total enclosed free current. By taking the limit <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>, the Ampere-Maxwell equation applied to the Gaussian loop becomes:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-9">
+<span class="eqno">(97)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-9" title="Link to this equation"></a></span>\[\oint_C \mathbf{h}\cdot \mathbf{d}\mathbf{l} = h_{1}^\parallel \, l - h_{t}^\parallel \, l = I_f\]</div>
+<p>Like the right hand side of Eq. <a class="reference internal" href="#equation-eq-e-para-rectangle">(91)</a>, the flux term containing the electric displacement goes to zero as the area of the loop goes to zero. This however, is not the case for the enclosed free current. As <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>, there is still free current which flows along the interface. The free surface current is the product of a surface current density <span class="math notranslate nohighlight">\(K_f\)</span> and the width of the loop; assuming <span class="math notranslate nohighlight">\(K_f\)</span> is constant along the interface. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-10">
+<span class="eqno">(98)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-10" title="Link to this equation"></a></span>\[h_{1}^\parallel \, l - h_{2}^\parallel \, l = K_f l\]</div>
+<p>Dividing the previous expression by the width of the loop, the interface condition for the tangential component of the magnetic field is given by:</p>
+<div class="math notranslate nohighlight" id="equation-interface-h-t">
+<span class="eqno">(99)<a class="headerlink" href="#equation-interface-h-t" title="Link to this equation"></a></span>\[h_{1}^\parallel - h_{t}^\parallel = K_f\]</div>
+<p>Therefore, the tangential component of the magnetic field is discontinuous at
+the interface. Furthermore, the discontinuity of the magnetic field is related to a free surface current density which flows along the interface.</p>
+</section>
+<section id="id6">
+<h2>Magnetic Flux Density<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p>To obtain the interface condition for tangential components of the magnetic flux density, we can combine Eqs. <a class="reference internal" href="#equation-bmuh">(81)</a> and <a class="reference internal" href="#equation-interface-h-t">(99)</a>. Thus:</p>
+<div class="math notranslate nohighlight" id="equation-content-maxwell1-fundamentals-interface-conditions-derivation-11">
+<span class="eqno">(100)<a class="headerlink" href="#equation-content-maxwell1-fundamentals-interface-conditions-derivation-11" title="Link to this equation"></a></span>\[\frac{b_{1}^\parallel}{\mu_1} - \frac{h_{t}^\parallel}{\mu_2} = K_f\]</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Interface Conditions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../time_domain_equations.html" class="btn btn-neutral float-right" title="Maxwell’s Equations: Time Domain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

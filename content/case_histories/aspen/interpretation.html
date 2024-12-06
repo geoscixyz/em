@@ -1,0 +1,336 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Synthesis" href="synthesis.html" />
+    <link rel="prev" title="Processing" href="processing.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Aspen</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#local-pseudo-3d-and-3d-inversion-of-field-data">Local pseudo-3D and 3D inversion of field data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Aspen</a></li>
+      <li class="breadcrumb-item active">Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/aspen/interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="aspen-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<p>The recovered model from <a class="reference internal" href="processing.html#aspen-processing"><span class="std std-ref">pseudo-3D inversion</span></a> is
+interpreted using known geologic information about the area. <a class="reference internal" href="#asp9"><span class="std std-numref">Fig. 301</span></a>
+shows a plan-view section through the interpolated 3D model at an elevation of
+470 m (or roughly 30-90 m below the surface). The thin resistive unit trending
+northeast-southwest is believed to be associated with a Quaternary paleo-
+channel cutting into the underlying Grand Rapids Formation, which is
+consistent with geologic and seismic data that has been collected in the area
+<span id="id1">[<a class="reference internal" href="../../references.html#id49" title="A Kennedy. Application for Approval of the Aspen Project. Imperial Oil, 2013.">Ken13</a>]</span>. In the northwestern and southeastern portions of the
+model, the shaley Grand Rapids Formation shows at lower elevation as a
+conductor. This plan-view image indicates the great spatial details and
+variations in the geologic structures above the Clearwater Formation that can
+be obtained using EM data.</p>
+<figure class="align-left" id="asp9" style="width: 45%">
+<img alt="../../../_images/fig3.png" src="../../../_images/fig3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 301 </span><span class="caption-text">The figure shows a planview section from the interpolated 3D model at
+an elevation of 465 m (or roughly 100 m below the surface in the east
+and 40 m below the surface in the west). The model shows a channel-
+like resistive unit in the center, with more conductive regions to the
+northwest and southeast. Solid line shows location of focus for SAGD;
+dashed line shows location of cross-sections in <a class="reference internal" href="#asp10"><span class="std std-numref">Fig. 302</span></a>.</span><a class="headerlink" href="#asp9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="asp10" style="width: 45%">
+<img alt="../../../_images/CrossSections.png" src="../../../_images/CrossSections.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 302 </span><span class="caption-text">The figure shows cross-sections at a northing of 12.6, 8.4, and 3 km.
+The figures are vertically exaggerated to be able to show variations
+in the conductivity with depth. Solid black lines indicate the tops of
+the Grand Rapids, Clearwater, and McMurray Formation determined from
+the recovered model.</span><a class="headerlink" href="#asp10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Cross-sectional views of the 3D interpolated model are shown in
+<a class="reference internal" href="#asp10"><span class="std std-numref">Fig. 302</span></a>. The recovered model shows that the topography changes from
+approximately 500 m to 560 m in elevation from west to east. Notably, the
+large conductor starting at an elevation of about 400 m does not follow the
+topography but instead is is very flat with a thickness between 30 and 100 m.
+This conductor is interpreted as the Clearwater Formation and its uniform
+conductivity of 7 <span class="math notranslate nohighlight">\(\Omega m\)</span> and relatively uniform thickness is a first
+indicator that is may act well as a cap rock for SAGD operations. Above the
+Clearwater Formation, there are several layers, including a thin conductive
+unit at the surface. Below is a resistive unit that varies in thickness. It is
+at its thickest towards the west, with agrees with the end of the channel
+noted in <a class="reference internal" href="#asp9"><span class="std std-numref">Fig. 301</span></a>. Towards the east, this resistive unit things out and
+more conductive units underlie it. These two units are associated with the
+Quaternary glacial tills and the Grand Rapids Formation.</p>
+<section id="local-pseudo-3d-and-3d-inversion-of-field-data">
+<h2>Local pseudo-3D and 3D inversion of field data<a class="headerlink" href="#local-pseudo-3d-and-3d-inversion-of-field-data" title="Link to this heading"></a></h2>
+<figure class="align-left" id="asp12" style="width: 60%">
+<img alt="../../../_images/airbcompare.png" src="../../../_images/airbcompare.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 303 </span><span class="caption-text">Comparison of (left) plan-view and (right) cross sections for (a) the
+coarse, (b) the fine pseudo-3D recovered model, and (c) the 3D
+recovered model. The left-hand figures are at an elevation of 465 m.
+The right-hand figures, at a northing of 8.4 km, are vertically
+exaggerated to show variations in the conductivity with depth.</span><a class="headerlink" href="#asp12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>One of the goals is to use the airborne data to build a detailed background
+resistivity model that can be used when monitoring SAGD steam chamber growth
+using EM methods. The pseudo-3D model shows many details but the mesh is
+coarse, compared to the size of SAGD chambers (approximately 1 km long and
+separated by 100 m at the base). Thus, the focus becomes a smaller region that
+is of interest for SAGD development <span id="id2">[<a class="reference internal" href="../../references.html#id49" title="A Kennedy. Application for Approval of the Aspen Project. Imperial Oil, 2013.">Ken13</a>]</span> and increase the data
+density used in the pseudo-3D inversion. The region is approximately 2.7 by 2
+km and lies roughly in the middle of the survey area. The mesh is now finer,
+using cells that are 30 m in the easting and northing directions. The pseudo-
+3D inversion is repeated to invert 2,284 soundings and recover a detailed
+resistivity model of this smaller region. <a class="reference internal" href="#asp12"><span class="std std-numref">Fig. 303</span></a> compares the fine
+pseudo-3D recovered model with the portion of the coarse model in the same
+area at the same elevation of the coarse model shown in <a class="reference internal" href="#asp9"><span class="std std-numref">Fig. 301</span></a>. The
+finer mesh and greater data density allowed for significantly more detail in
+the recovered model. This model can serve as an initial and background model
+in monitoring of SAGD chambers.</p>
+<figure class="align-right" id="asp13" style="width: 60%">
+<img alt="../../../_images/3D1Dcomparison.png" src="../../../_images/3D1Dcomparison.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 304 </span><span class="caption-text">Using the pseudo-3D recovered model, data was forward modeled in 3D
+(blue line) and compared to observed field data (black circles). The
+mismatch between the soundings in (a) suggests that the data contain
+3D effects that cannot be explained by the pseudo-3D model while (b)
+shows that in some areas, the pseudo-3D model appears valid.</span><a class="headerlink" href="#asp13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Although providing a 3D model, the above results are based on 1D inversions,
+which would not account for 3D effects. If 3D structures are predominant in
+this region, the pseudo-3D methodology may not accurately represent the
+geology. Therefore, it is important to test the pseudo-3D model against three-
+dimensional electromagnetic computations. To validate, data are forward
+modeled in 3D on an ocTree mesh with the same base cell size and the pseudo-3D
+model. This calculated data is compared to the observed field data to
+understand how well the pseudo-3D model represents the region. Our findings
+indicate that in some parts of the survey area, the calculated data fits the
+observed data well, meaning that the pseudo-3D model provides an accurate
+representation. However, in other regions, the data fitting is not as nice,
+suggesting there are 3D structures that cannot be recovered using the pseudo-
+3D methodology. <a class="reference internal" href="#asp13"><span class="std std-numref">Fig. 304</span></a> compares the soundings for two different
+locations, showing how 3D effects may not be captured in the pseudo-3D model.
+The calculated data fits the observed data well through most of the middle and
+late time channels, with variations largely present only in the early time
+channels. This suggests that the 3D structures exist closer to the surface,
+and likely in the Quaternary layer, whereas the Clearwater and McMurray
+Formations are more one-dimensional. These conclusions are supported by what
+is known about the local geology.</p>
+<figure class="align-left" id="asp14" style="width: 50%">
+<img alt="../../../_images/1AirborneResult.png" src="../../../_images/1AirborneResult.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 305 </span><span class="caption-text">3D resistivity model from inverting the VTEM airborne data in three
+dimensions.</span><a class="headerlink" href="#asp14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Considering these findings, it is considered worthwhile to invert the airborne
+data in 3D. The pseudo-3D model serves as an initial and reference model,
+providing a warm start for the 3D inversion. A subset of 571 soundings are
+inverted in 3D using parallelization and local meshes <span id="id3">[<a class="reference internal" href="../../references.html#id47" title="D Yang, D W Oldenburg, and E Haber. 3-D inversion of airborne electromagnetic data parallelized and accelerated by local mesh and adaptive soundings. Geophysical Journal International, 196:1492-1507, 2014.">YOH14</a>]</span>.
+Plan-view and cross sections of the recovered model are compared to the course
+and fine pseudo-3D models in <a class="reference internal" href="synthesis.html#asp11"><span class="std std-numref">Fig. 306</span></a>, showing small differences in the
+top layers. The Clearwater Formation remains relatively unchanged, as was
+expected. The 3D model is shown in <a class="reference internal" href="#asp14"><span class="std std-numref">Fig. 305</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="processing.html" class="btn btn-neutral float-left" title="Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="synthesis.html" class="btn btn-neutral float-right" title="Synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

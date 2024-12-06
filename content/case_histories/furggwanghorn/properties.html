@@ -1,0 +1,343 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Surveys" href="survey.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Furggwanghorn</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Surveys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataprocessing.html">Data and Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">New Thin Skinned Rock Glacier Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons worth highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Furggwanghorn</a></li>
+      <li class="breadcrumb-item active">Properties</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/furggwanghorn/properties.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="properties">
+<span id="furggwanghorn-properties"></span><h1>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h1>
+<p>Nonmigrated GPR images of geological structures comprise reflections and
+diffractions generated at abrupt changes in GPR velocity and attenuation. In
+many geological environments, GPR velocity is controlled by electrical
+permittivity, whereas attenuation is controlled by electrical conductivity.
+<a class="reference internal" href="#permicondtable"><span class="std std-ref">Table 1</span></a> shows permittivities and conductivities of
+typical rock glacier material. The pore filling material (i.e. air, water and
+ice) plays a critical role in determining GPR reflectivity within and at the
+base of a rock glacier.</p>
+<p id="permicondtable"><strong>Table 1:</strong> Relative electrical permittivities and electrical conductivities of materials within rock glaciers (modified from <span id="id1">[<a class="reference internal" href="../../references.html#id84" title="A P Annan. Near-Surface Geophysics, 11. Ground-Penetrating Radar. Society of Exploration Geophysicists, 2007. URL: https://library.seg.org/doi/abs/10.1190/1.9781560801719.ch11, doi:10.1190/1.9781560801719.ch11.">Ann07</a>]</span>).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Material</strong></p></td>
+<td><p><strong>Relative Permittivity</strong></p></td>
+<td><p><strong>Electrical Conductivity (mS/m)</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>air</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>fresh water</p></td>
+<td><p>80</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>dry sand</p></td>
+<td><p>3 - 5</p></td>
+<td><p>&lt; 0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>water saturated sand</p></td>
+<td><p>20 - 30</p></td>
+<td><p>0.1 - 1</p></td>
+</tr>
+<tr class="row-even"><td><p>silt</p></td>
+<td><p>5 - 30</p></td>
+<td><p>1 - 100</p></td>
+</tr>
+<tr class="row-odd"><td><p>shale</p></td>
+<td><p>5 - 15</p></td>
+<td><p>1 - 100</p></td>
+</tr>
+<tr class="row-even"><td><p>limestone</p></td>
+<td><p>4 - 8</p></td>
+<td><p>0.5 - 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>granite</p></td>
+<td><p>4 - 6</p></td>
+<td><p>0.01 - 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ice</p></td>
+<td><p>3 - 4</p></td>
+<td><p>0.01</p></td>
+</tr>
+</tbody>
+</table>
+<p>GPR velocities of a small part of the Furggwanghorn rock glacier have been
+determined from crosshole experiments (<a class="reference internal" href="#furggwanghorn-gprvel"><span class="std std-numref">Fig. 410</span></a> ;
+<span id="id2">[<a class="reference internal" href="../../references.html#id91" title="Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. Geophysics, 81(1):WA147—-WA157, 2016. doi:https://doi.org/10.1190/geo2015-0157.1.">MMR+16</a>]</span>). We have interpreted the type of rock glacier material at
+locations a to e in <a class="reference internal" href="#furggwanghorn-gprvel"><span class="std std-numref">Fig. 410</span></a> based on borehole
+information and nearly coincident seismic velocity and electrical resistivity
+models (<a class="reference internal" href="#gprveltable"><span class="std std-ref">Table 2</span></a>;  <span id="id3">[<a class="reference internal" href="../../references.html#id91" title="Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. Geophysics, 81(1):WA147—-WA157, 2016. doi:https://doi.org/10.1190/geo2015-0157.1.">MMR+16</a>]</span>).</p>
+<p>Since the tomographic experiment sampled only a limited range of the
+geological and pore filling material at the Furggwanghorn site
+(<span id="id4">[<a class="reference internal" href="../../references.html#id91" title="Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. Geophysics, 81(1):WA147—-WA157, 2016. doi:https://doi.org/10.1190/geo2015-0157.1.">MMR+16</a>]</span>), we have added to <a class="reference internal" href="#gprveltable"><span class="std std-ref">Table 2</span></a> GPR
+velocities and attenuations of rock glacier material determined from
+tomographic experiments at a similar rock glacier in eastern Switzerland
+(<span id="id5">[<a class="reference internal" href="../../references.html#id92" title="Martin Musil, Hansruedi Maurer, Klaus Hollinger, and Alan G Green. Internal structure of an alpine rock glacier based on crosshole georadar traveltimes and amplitudes. Geophysical Prospecting, 54(3):273–285, 2006.">MMHG06</a>]</span>). The various rock glacier units and bedrock have a
+sufficient range of physical properties, in particular the velocities (80 to
+&gt;140 m/μs), to generate significant reflections between the units and between
+the rock glacier and bedrock.</p>
+<figure class="align-center" id="furggwanghorn-gprvel" style="width: 70%">
+<img alt="../../../_images/furggwanghorn_gprvel.png" src="../../../_images/furggwanghorn_gprvel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 410 </span><span class="caption-text">GPR velocity tomogram derived from traveltime data acquired between
+boreholes F1, F2, F3 and F4 (locations are shown in
+<a class="reference internal" href="setup.html#furggwanghorn-map"><span class="std std-numref">Fig. 408</span></a> c and <a class="reference internal" href="setup.html#furggwanghorn-geo"><span class="std std-numref">Fig. 409</span></a>).</span><a class="headerlink" href="#furggwanghorn-gprvel" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p id="gprveltable"><strong>Table 2:</strong> GPR velocities of rock glacier material at the Furggwanghorn rock glacier in the western Swiss Alps <sup>1</sup> (<span id="id6">[<a class="reference internal" href="../../references.html#id91" title="Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. Geophysics, 81(1):WA147—-WA157, 2016. doi:https://doi.org/10.1190/geo2015-0157.1.">MMR+16</a>]</span>) and GPR velocities and attenuations of rock glacier material at the Muragl rock glacier in the eastern Swiss Alps <sup>2</sup> <span id="id7">[<a class="reference internal" href="../../references.html#id92" title="Martin Musil, Hansruedi Maurer, Klaus Hollinger, and Alan G Green. Internal structure of an alpine rock glacier based on crosshole georadar traveltimes and amplitudes. Geophysical Prospecting, 54(3):273–285, 2006.">MMHG06</a>]</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Material</strong></p></th>
+<th class="head"><p><strong>Velocity (m/μs)</strong></p></th>
+<th class="head"><p><strong>Attenuation (1/m)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">unconsolidated sediments with numerous</div>
+<div class="line">significant air voids (zones a and b)</div>
+</div>
+</td>
+<td><p>&gt;140 <sup>1, 2</sup></p></td>
+<td><p>0.10 - 0.20 <sup>2</sup></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">ice rich regions (zone c)</div>
+</div>
+</td>
+<td><p>&gt;140 <sup>1, 2</sup></p></td>
+<td><p>0.04 - 0.09 <sup>2</sup></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">partially ice saturated region with some free</div>
+<div class="line">water, possibly flowing along preferred</div>
+<div class="line">paths (zone d)</div>
+</div>
+</td>
+<td><p>110 - 130 <sup>1</sup></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">compact debris (zone e)</div>
+</div>
+</td>
+<td><p>130 - 140 <sup>1</sup></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">water saturated sediments</div>
+</div>
+</td>
+<td><p>80 - 100 <sup>2</sup></p></td>
+<td><p>0.16 - 0.24 <sup>2</sup></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">bedrock</div>
+</div>
+</td>
+<td><p>110 - 130 <sup>2</sup></p></td>
+<td><p>0.16 - 0.24 <sup>2</sup></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="survey.html" class="btn btn-neutral float-right" title="Surveys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

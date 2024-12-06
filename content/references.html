@@ -1,0 +1,863 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>References &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Interpretation and Synthesis" href="case_histories/westplains/interpretation_synthesis.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">References</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/references.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="references">
+<span id="id1"></span><h1>References<a class="headerlink" href="#references" title="Link to this heading"></a></h1>
+<blockquote>
+<div><div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id126" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AKM11<span class="fn-bracket">]</span></span>
+<p>Alireza Aghasi, Misha Kilmer, and Eric L. Miller. Parametric Level Set Methods for Inverse Problems. <em>SIAM Journal on Imaging Sciences</em>, 4(2):618–650, jan 2011. URL: <a class="reference external" href="https://epubs.siam.org/doi/abs/10.1137/100800208">https://epubs.siam.org/doi/abs/10.1137/100800208</a>, <a class="reference external" href="https://doi.org/10.1137/100800208">doi:10.1137/100800208</a>.</p>
+</div>
+<div class="citation" id="id93" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ABolivarDiLucaS15<span class="fn-bracket">]</span></span>
+<p>Pedro Alvarez, Francisco Bolívar, Mario Di Luca, and Trino Salinas. Multi-attribute rotation scheme: A tool for reservoir property prediction from seismic inversion attributes. <em>Interpretation</em>, 3(4):SAE9–SAE18, 2015. URL: <a class="reference external" href="https://library.seg.org/doi/10.1190/INT-2015-0029.1">https://library.seg.org/doi/10.1190/INT-2015-0029.1</a>, <a class="reference external" href="https://doi.org/10.1190/INT-2015-0029.1">doi:10.1190/INT-2015-0029.1</a>.</p>
+</div>
+<div class="citation" id="id84" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ann07<span class="fn-bracket">]</span></span>
+<p>A P Annan. <em>Near-Surface Geophysics, 11. Ground-Penetrating Radar</em>. Society of Exploration Geophysicists, 2007. URL: <a class="reference external" href="https://library.seg.org/doi/abs/10.1190/1.9781560801719.ch11">https://library.seg.org/doi/abs/10.1190/1.9781560801719.ch11</a>, <a class="reference external" href="https://doi.org/10.1190/1.9781560801719.ch11">doi:10.1190/1.9781560801719.ch11</a>.</p>
+</div>
+<div class="citation" id="id85" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bar96<span class="fn-bracket">]</span></span>
+<p>Dietrich Barsch. <em>Rockglaciers: indicators for the present and former geoecology in high mountain environments</em>. Volume 16. Springer Science &amp; Business Media, 1996.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BBT01<span class="fn-bracket">]</span></span>
+<p>T. Bell, B. Barrow, and Miller J. T. Subsurface discrimination using electromagnetic induction sensors. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 39:1286–1293, 2001.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BBTK01<span class="fn-bracket">]</span></span>
+<p>T. Bell, B. Barrow, Miller J. T., and D. Keiswetter. Time and frequency domain electromagnetic induction signatures of unexploded ordnance. <em>Subsurface Sensing Technologies and Applications</em>, 2:153–175, 2001.</p>
+</div>
+<div class="citation" id="id61" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BSR07<span class="fn-bracket">]</span></span>
+<p>D D Blackwell, R P Smith, and M C Richards. Exploration and development at Dixie Valley, Nevada: Summary of DOE studies. In <em>Thirty-Second Workshop on Geothermal Reservoir Engineering</em>. 2007.</p>
+</div>
+<div class="citation" id="id62" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BWBG99<span class="fn-bracket">]</span></span>
+<p>D D Blackwell, K W Wisian, D Benoit, and B Gollan. Structure of the Dixie Valley Geothermal System, a &quot;typical&quot; Basin and Range geothermal system, from thermal and gravity data. In <em>World Geothermal Congress</em>, 525–531. 1999.</p>
+</div>
+<div class="citation" id="id37" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bro13<span class="fn-bracket">]</span></span>
+<p>P L Broughton. Devonian salt dissolution-collapse breccias flooring the Cretaceous Athabasca oil sands deposit and development of lower McMurray Formation sinkholes, northern Alberta Basin, Western Canada. <em>Sedimentary Geology</em>, 283:57–82, 2013.</p>
+</div>
+<div class="citation" id="id170" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BLvB09<span class="fn-bracket">]</span></span>
+<p>K L Buchan, A N LeCheminant, and O van Breemen. Paleomagnetism and U-Pb geochronology of the Lac de Gras diabase dyke swarm, Slave Province Canada: Implications for relative drift of Slave and Superior provinces in the Paleoproterozoic. <em>Canadian Journal of Earth Sciences</em>, 46:361–379, 2009. NRC Research Press.</p>
+</div>
+<div class="citation" id="id86" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BMZ+13<span class="fn-bracket">]</span></span>
+<p>Thomas Buchli, Kaspar Merz, Xiaohai Zhou, Wolfgang Kinzelbach, and Sarah M Springman. Characterization and monitoring of the Furggwanghorn rock glacier, Turtmann Valley, Switzerland: results from 2010 to 2012. <em>Vadose Zone Journal</em>, 2013.</p>
+</div>
+<div class="citation" id="id69" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bur14<span class="fn-bracket">]</span></span>
+<p>C Burge. A new porphyry copper deposit at cobre panama project. In <em>PDAC Prospectors and Developers Convention</em>. Toronto, Canada, 2014.</p>
+</div>
+<div class="citation" id="id87" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BDG99<span class="fn-bracket">]</span></span>
+<p>K C Burger, J J Degenhardt, and J R Giardino. Engineering geomorphology of rock glaciers. <em>Geomorphology</em>, 31(1):93–132, 1999.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bus82<span class="fn-bracket">]</span></span>
+<p>G Buselli. The effect of near-surface superparamagnetic material on electromagnetic measurements. <em>Geophysics</em>, 47(9):1315–1324, 1982.</p>
+</div>
+<div class="citation" id="id94" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CH12<span class="fn-bracket">]</span></span>
+<p>J. Chen and G. M. Hoversten. Joint inversion of marine seismic AVA and CSEM data using statistical rock physics and Markov random fields. <em>Geophysics</em>, 77(1):R65–R80, 2012. <a class="reference external" href="https://doi.org/10.1190/geo2011-0219.1">doi:10.1190/geo2011-0219.1</a>.</p>
+</div>
+<div class="citation" id="id159" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cla83<span class="fn-bracket">]</span></span>
+<p>D A Clark. Comments on magnetic petrophysics. <em>Bulletin of the Australian Society of Exploration Geophysicists</em>, 14:49 – 62, 1983. <a class="reference external" href="https://doi.org/10.1071/EG983049">doi:10.1071/EG983049</a>.</p>
+</div>
+<div class="citation" id="id48" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CE91<span class="fn-bracket">]</span></span>
+<p>D. A. Clark and D. W. Emerson. Notes on rock magnetization characteristics in applied geophysical studies. <em>Exploration Geophysics</em>, 22:547–555, 1991. <a class="reference external" href="https://doi.org/10.1071/EG991547">doi:10.1071/EG991547</a>.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CC41<span class="fn-bracket">]</span></span>
+<p>Kenneth S. Cole and Robert H. Cole. Dispersion and Absorption in Dielectrics I. Alternating Current Characteristics. <em>The Journal of Chemical Physics</em>, 9(4):341–351, 1941. URL: <a class="reference external" href="https://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906">https://scitation.aip.org/content/aip/journal/jcp/9/4/10.1063/1.1750906</a>.</p>
+</div>
+<div class="citation" id="id144" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CMCF13<span class="fn-bracket">]</span></span>
+<p>D. Colombo, G. McNeice, E. S. Curiel, and A. Fox. Full tensor CSEM and MT for subsalt structural imaging in the Red Sea: Implications for seismic and electromagnetic integration. <em>The Leading Edge</em>, 32(4):436–449, 2013. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/tle32040436.1">doi:https://doi.org/10.1190/tle32040436.1</a>.</p>
+</div>
+<div class="citation" id="id143" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CMR+14<span class="fn-bracket">]</span></span>
+<p>D. Colombo, G. McNeice, N. Raterman, M. Zinger, D. Rovetta, and E. S. Curiel. Exploration beyond seismic: The role of electromagnetics and gravity gradiometry in deep water subsalt plays of the Red Sea. <em>Interpretation</em>, 2(3):SH33–SH53, 2014. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/INT-2013-0149.1">doi:https://doi.org/10.1190/INT-2013-0149.1</a>.</p>
+</div>
+<div class="citation" id="id136" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CMR+16<span class="fn-bracket">]</span></span>
+<p>Daniele Colombo, Gary McNeice, Diego Rovetta, Ernesto Sandoval-Curiel, Ersan Turkoglu, and Armando Sena. High-resolution velocity modeling by seismic-airborne TEM joint inversion: A new perspective for near-surface characterization. <em>The Leading Edge</em>, 35(11):977–985, 2016. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/tle35110977.1">doi:https://doi.org/10.1190/tle35110977.1</a>.</p>
+</div>
+<div class="citation" id="id109" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CM15<span class="fn-bracket">]</span></span>
+<p>A. G. Conly and L. C. Moore. Geology, ore characteristics, and origin or the albany graphite deposit. In G. J. Simandl and M. Neetz, editors, <em>Symposium on Strategic and Critical Materials Proceedings</em>, 173–185. Victoria, British Columbia, November 13-14 2015. British Columbia Ministry of Energy and Mines.</p>
+</div>
+<div class="citation" id="id95" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Con10<span class="fn-bracket">]</span></span>
+<p>Steven C. Constable. Ten years of marine CSEM for hydrocarbon exploration. <em>Geophysics</em>, 75(5):75A67, 2010. <a class="reference external" href="https://doi.org/10.1190/1.3483451">doi:10.1190/1.3483451</a>.</p>
+</div>
+<div class="citation" id="id96" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CPC87<span class="fn-bracket">]</span></span>
+<p>Steven C. Constable, Robert L. Parker, and Catherine G. Constable. Occam's inversion: A practical algorithm for generating smooth models from electromagnetic sounding data. 1987. <a class="reference external" href="https://doi.org/10.1190/1.1442303">doi:10.1190/1.1442303</a>.</p>
+</div>
+<div class="citation" id="id88" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CAB+79<span class="fn-bracket">]</span></span>
+<p>Frederick A Cook, Dennis S Albaugh, Larry D Brown, Sidney Kaufman, Jack E Oliver, and Robert D Hatcher. Thin-skinned tectonics in the crystalline southern Appalachians; COCORP seismic-reflection profiling of the Blue Ridge and Piedmont. <em>Geology</em>, 7(12):563–567, 1979.</p>
+</div>
+<div class="citation" id="id141" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CPScottSmith06<span class="fn-bracket">]</span></span>
+<p>H Coopersmith, J Pell, and B Scott Smith. The importance of kimberlite geology in diamond deposit evaluation: A case study from the DO27/DO18 kimberlite, NWT, Canada. In <em>2006 Kimberlite Emplacement Workshop, Saskatoon</em>. 2006.</p>
+</div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cow16<span class="fn-bracket">]</span></span>
+<p>D. C. Cowan. Forward modeling and inversion of viscous remanent magnetization responses in the time domain. Master's thesis, Univ. of British Columbia, 2016.</p>
+</div>
+<div class="citation" id="id41" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CJM15<span class="fn-bracket">]</span></span>
+<p>B R Cowie, B James, and B Mayer. Distribution of total dissolved solids in the McMurray Formation water in the Athabasca oil sands region, Alberta, Canada: Implications for regional hydrogeology and resource development. <em>American Association of Petroleum Geologists Bulletin</em>, 99:77–90, 2015.</p>
+</div>
+<div class="citation" id="id40" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CFO04<span class="fn-bracket">]</span></span>
+<p>J Cristall, C Farquharson, and D Oldenburg. Airborne Electromagnetic Inversion Applied to Oil Sands Exploration. In <em>2004 CSEG National Convention</em>. 2004.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DJT92<span class="fn-bracket">]</span></span>
+<p>M Dabas, A Jolivet, and A Tabbagh. Magnetic-Susceptibility and Viscosity of Soils in a Weak Time-Varying Field. <em>Geophysical Journal International</em>, 108(1):101–109, 1992.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Das06<span class="fn-bracket">]</span></span>
+<p>Y. Das. Effects of soil electromagnetic properties on metal detectors. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 44(6):1444–1453, 2006.</p>
+</div>
+<div class="citation" id="id130" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DO15<span class="fn-bracket">]</span></span>
+<p>S G R Devriese and D W Oldenburg. Time-lapse three-dimensional electromagnetic inversion of growth-impeded SAGD steam chambers. In <em>SEG Technical Program Expanded Abstracts 2015</em>, 2842–2847. 2015. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/segam2015-5909921.1">doi:https://doi.org/10.1190/segam2015-5909921.1</a>.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DO16a<span class="fn-bracket">]</span></span>
+<p>S G R Devriese and D W Oldenburg. Feasibility of electromagnetic methods to detect and image steam-assisted gravity drainage steam chambers. <em>Geophysics</em>, 81:E227–E241, 2016. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/geo2015-0451.1">doi:https://doi.org/10.1190/geo2015-0451.1</a>.</p>
+</div>
+<div class="citation" id="id63" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DOS12<span class="fn-bracket">]</span></span>
+<p>S G R Devriese, D W Oldenburg, and J D Shoffner. Three-Dimensional Inversion of ZTEM Data at the Elevenmile Canyon Geothermal System, Nevada. In <em>GRC Transactions</em>. 2012.</p>
+</div>
+<div class="citation" id="id39" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DO16b<span class="fn-bracket">]</span></span>
+<p>Sarah Devriese and Douglas W. Oldenburg. From exploration to reclamation: Using EM methods at SAGD sites in the Athabasca oil sands. In <em>SEG Technical Program Expanded Abstracts 2016</em>, 965–970. Society of Exploration Geophysicists, 2016. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/segam2016-13842507.1">doi:https://doi.org/10.1190/segam2016-13842507.1</a>.</p>
+</div>
+<div class="citation" id="id138" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DDO17<span class="fn-bracket">]</span></span>
+<p>Sarah G R Devriese, Kritofer Davis, and Douglas W Oldenburg. Inversion of airborne geophysics over the do-27/do-18 kimberlites - part 1: potential fields. <em>Interpretation</em>, 5(3):299–311, August 2017.</p>
+</div>
+<div class="citation" id="id142" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DKS99<span class="fn-bracket">]</span></span>
+<p>B J Doyle, K Kivi, and B H Scott Smith. The Tli Kwi Cho (DO27 and DO18) Diamondiferous Kimberlite Complex, Northwest Territories, Canada. In <em>Proceedings of the VIIth International Kimberlite Conference</em>, 194–204. 1999.</p>
+</div>
+<div class="citation" id="id97" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DM10<span class="fn-bracket">]</span></span>
+<p>Z. Du and L. MacGregor. Reservoir Characterization From Joint Inversion of Marine CSEM And Seismic AVA Data Using Genetic Algorithms: a Case Study Based On the Luva Gas Field. In <em>SEG Annual Meeting</em>. 2010.</p>
+</div>
+<div class="citation" id="id110" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Dun87<span class="fn-bracket">]</span></span>
+<p>A. C. Duncan. Interpretation of down-hole transient M data current filaments. <em>Exploration Geophysics</em>, 44:6–15, 1987.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DOzdemir97<span class="fn-bracket">]</span></span>
+<p>David J Dunlop and Özden Özdemir. <em>Rock Magnetism</em>. Cambridge University Press, 1997.</p>
+</div>
+<div class="citation" id="id145" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>EB08<span class="fn-bracket">]</span></span>
+<p>T Eggleston and K Brisebois. DO-27 Diamond Project, Northwest Territories, Canada. NI 43-101 Report, AMEC, August 2008.</p>
+</div>
+<div class="citation" id="id168" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>EKE04<span class="fn-bracket">]</span></span>
+<p>H El-Kaliouby and E Eldiwany. Transient electromagnetic responses of 3D polarizable body. <em>Geophysics</em>, 69(2):426–430, 2004. <a class="reference external" href="https://doi.org/10.1190/1.1707062">doi:10.1190/1.1707062</a>.</p>
+</div>
+<div class="citation" id="id98" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>EEJ+02<span class="fn-bracket">]</span></span>
+<p>S Ellingsrud, T Eidesmo, S Johansen, M C Sinha, L M MacGregor, and S Constable. Remote sensing of hydrocarbon layers by seabed logging (SBL): results from a cruise offshore Angola. <em>The Leading Edge</em>, 21(10):972, 2002.</p>
+</div>
+<div class="citation" id="id171" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>EMMD14<span class="fn-bracket">]</span></span>
+<p>F Engermark, Johan Mattson, Allan McKay, and Zhijun Du. Towed streamer em comes of age. <em>First Break</em>, 2014.</p>
+</div>
+<div class="citation" id="id42" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FO93<span class="fn-bracket">]</span></span>
+<p>C G Farquharson and D W Oldenburg. Inversion of time-domain electromagnetic data for a horizontally layered Earth. <em>Geophys. J. Int.</em>, 114:433–442, 1993.</p>
+</div>
+<div class="citation" id="id67" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FHC+11<span class="fn-bracket">]</span></span>
+<p>J E Faulds, N H Hinz, M F Coolbaugh, P H Cashman, C Kratt, G Dering, J Edwards, B Mayhew, and H McLachlan. Assessment of Favorable Structural Settings of Geothermal Systems in the Great Basin, Western USA. In <em>GRC Transactions</em>. 2011.</p>
+</div>
+<div class="citation" id="id70" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fis14<span class="fn-bracket">]</span></span>
+<p>Steve Fiscor. Mineral Exploration Strategies. <em>Engineering and Mining Journal</em>, 215(5):32, 2014.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fle08<span class="fn-bracket">]</span></span>
+<p>Daniel Fleisch. <em>A Student's guide to Maxwell's equations</em>. Cambridge University Press, 2008.</p>
+</div>
+<div class="citation" id="id169" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FPO09<span class="fn-bracket">]</span></span>
+<p>Carlos Flores and Sergio A. Peralta-Ortega. Induced polarization with in-loop transient electromagnetic soundings: A case study of mineral discrimination at El Arco porphyry copper, Mexico. <em>Journal of Applied Geophysics</em>, 68(3):423–436, 2009. <a class="reference external" href="https://doi.org/10.1016/j.jappgeo.2009.03.009">doi:10.1016/j.jappgeo.2009.03.009</a>.</p>
+</div>
+<div class="citation" id="id43" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FHC+14<span class="fn-bracket">]</span></span>
+<p>D Fournier, L Heagy, N Corcoran, D Cowan, S G R Devriese, D Bild-Enkin K Davis, S Kang, D Marchant, M S McMillan, M Mitchell, G Rosenkjar, D Yang, and D W Oldenburg. Multi-EM systems inversion - Towards a common conductivity model for the Tli Kwi Cho complex. In <em>SEG Technical Program Expanded Abstracts 2014</em>, 1795–1799. 2014.</p>
+</div>
+<div class="citation" id="id139" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FKMO17<span class="fn-bracket">]</span></span>
+<p>Dominique Fournier, Seogi Kang, Micheal S. McMillan, and Douglas W Oldenburg. Inversion of airborne geophysics over the do-27/do-18 kimberlites - part 2: electromagnetics. <em>Interpretation</em>, 5(3):397–409, August 2017.</p>
+</div>
+<div class="citation" id="id99" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GAH12<span class="fn-bracket">]</span></span>
+<p>Guozhong Gao, Aria Abubakar, and Tarek M. Habashy. Joint petrophysical inversion of electromagnetic and full-waveform seismic data. <em>Geophysics</em>, 77(3):WA3, 2012. <a class="reference external" href="https://doi.org/10.1190/geo2011-0157.1">doi:10.1190/geo2011-0157.1</a>.</p>
+</div>
+<div class="citation" id="id64" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GB00<span class="fn-bracket">]</span></span>
+<p>D D Blackwell B Golan and D Beniot. Thermal regime in the Dixie Valley geothermal system. In <em>World Geothermal Congress</em>, 991–996. 2000.</p>
+</div>
+<div class="citation" id="id71" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GLS15<span class="fn-bracket">]</span></span>
+<p>D Gray, M Lawolr, and R Stone. Cobre Panama Project: Technical report (NI 43-101) for First Quantum Minerals Ltd. Technical Report, Colon Province, Republic of Panama, 2015.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Gri99<span class="fn-bracket">]</span></span>
+<p>David J Griffiths. <em>Introduction to electrodynamics</em>. Prentice-Hall, 1999.</p>
+</div>
+<div class="citation" id="id157" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GS15<span class="fn-bracket">]</span></span>
+<p>Robert E. Grimm and David E. Stillman. Field test of detection and characterisation of subsurface ice using broadband spectral-induced polarisation. <em>Permafrost and Periglacial Processes</em>, 26:28–38, 2015.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hab14<span class="fn-bracket">]</span></span>
+<p>Eldad Haber. <em>Computational Methods in Geophysical Electromagnetics</em>. Volume 1. SIAM, 2014.</p>
+</div>
+<div class="citation" id="id100" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HMujezinovicR13<span class="fn-bracket">]</span></span>
+<p>E. Halland, L. Mujezinović, and F. Riis. CO2 Storage Atlas - Barents Sea. 2013.</p>
+</div>
+<div class="citation" id="id146" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HHBP08<span class="fn-bracket">]</span></span>
+<p>M Harder, C M Hetman, M C Baumgartner, and J Pell. The Preliminary Geology of the DO-18 Kimberlite, Lac de Gras Kimberlite Province, Canada. In <em>9th International Kimberlite Conference</em>. 2008.</p>
+</div>
+<div class="citation" id="id147" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HHSP08<span class="fn-bracket">]</span></span>
+<p>M Harder, C M Hetman, B H Scott Smith, and J Pell. The evolution of geological models for the DO-27 kimberlite, NWT, Canada: implications for evaluation. In <em>9th International Kimberlite Conference</em>. 2008.</p>
+</div>
+<div class="citation" id="id148" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HScottSmithHP09<span class="fn-bracket">]</span></span>
+<p>M Harder, B H Scott Smith, C M Hetman, and J Pell. The evolution of geological models for the DO-27 kimberlite, NWT, Canada: Implications for evaluation. <em>Lithos</em>, 112:61–72, 2009.</p>
+</div>
+<div class="citation" id="id160" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Har89<span class="fn-bracket">]</span></span>
+<p>R B Hargraves. Paleomagnetism of mesozoic kimberlites in Southern Africa and the Cretaceous apparent polar wander curve for Africa. <em>Journal of Geophysical Research</em>, 94(B2):1851–1866, 1989.</p>
+</div>
+<div class="citation" id="id101" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HDM+09<span class="fn-bracket">]</span></span>
+<p>Peter Harris, Zhijun Du, Lucy MacGregor, Wiebke Olsen, Rone Shu, and Richard Cooper. Joint interpretation of seismic and CSEM data using well log constraints: An example from the Luva Field. <em>First Break</em>, 27(MAY):73–81, 2009.</p>
+</div>
+<div class="citation" id="id56" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HBC+11<span class="fn-bracket">]</span></span>
+<p>E L Helton, J W Bell, P H Cashman, M Lazaro, and S Alm. Structural analysis of Southern Dixie Valley using LiDAR and low-sun-angle aerial photography, NAS Fallon Geothermal Exploration Project, Dixie Valley, Nevada. <em>Geothermal Resources Council Transactions</em>, 35:811–815, 2011.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Her93<span class="fn-bracket">]</span></span>
+<p>Heinrich Hertz. <em>Electric waves: being researches on the propagation of electric action with finite velocity through space</em>. Dover Publications, 1893.</p>
+</div>
+<div class="citation" id="id53" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HJ97<span class="fn-bracket">]</span></span>
+<p>R H Hess and G L Johnson. County digital geologic maps of Nevada. Nevada Bureau of Mines and Geology Open-File Report 97-1, CR-ROM, 1:250,000, 1997.</p>
+</div>
+<div class="citation" id="id111" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hic15<span class="fn-bracket">]</span></span>
+<p>S. Hickey. Albany graphite air and ground 3d tdem inversions: internal presentation. Technical Report, Mira Geosciences Ltd. on the behalf of Zenyatta Ventures Ltd., 2015. for Zenyatta Ventures Ltd., 83 pages.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HJMcEwan1+08<span class="fn-bracket">]</span></span>
+<p>K.L. Holland, I.D. Jolly, K.L. McEwan1, T.M. Doody, M. White, V. Berens, and N. Souter. The ‘Bookpurnong Experiment’: will groundwater management and flooding improve the health of the floodplain vegetation? 2008.</p>
+</div>
+<div class="citation" id="id72" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HB13<span class="fn-bracket">]</span></span>
+<p>P Hollings and M Baker. Cobre Panama geochronology update: AMIRA project P1060, report to Minera Panama S. A. Technical Report, Cobre Panama geochronology, 2013.</p>
+</div>
+<div class="citation" id="id131" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hol12<span class="fn-bracket">]</span></span>
+<p>E Holtham. <em>3D inversion of natural source electromagnetic data</em>. PhD thesis, University of British Columbia, 2012.</p>
+</div>
+<div class="citation" id="id58" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HO10a<span class="fn-bracket">]</span></span>
+<p>E Holtham and D W Oldenburg. Three-dimensional inversion of ZTEM data. <em>Geophysical Journal International</em>, 182:168–182, 2010.</p>
+</div>
+<div class="citation" id="id133" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HO12<span class="fn-bracket">]</span></span>
+<p>E Holtham and D W Oldenburg. Large-scale inversion of ZTEM data. <em>Geophysics</em>, 77:WD37–WB45, 2012. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/geo2011-0367.1">doi:https://doi.org/10.1190/geo2011-0367.1</a>.</p>
+</div>
+<div class="citation" id="id73" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HO10b<span class="fn-bracket">]</span></span>
+<p>Elliot Holtham and Douglas W Oldenburg. Three-dimensional inversion of ZTEM data. <em>Geophysical Journal International</em>, 182(1):168–182, 2010.</p>
+</div>
+<div class="citation" id="id74" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HOO08<span class="fn-bracket">]</span></span>
+<p>Elliot Holtham, Douglas W Oldenburg, and Others. Three-dimensional forward modelling and inversion of Z-TEM data. In <em>2008 SEG Annual Meeting</em>. Society of Exploration Geophysicists, 2008.</p>
+</div>
+<div class="citation" id="id75" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hos10<span class="fn-bracket">]</span></span>
+<p>Terence Hoschke. <em>Geophysical signatures of copper-gold porphyry and epithermal gold deposits, and implications for exploration</em>. PhD thesis, University of Tasmania, 2010.</p>
+</div>
+<div class="citation" id="id35" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hum08<span class="fn-bracket">]</span></span>
+<p>M Humphries. North American Oil Sands: History of Development, Prospects for Future. Technical Report, Congressional Research Service, 2008.</p>
+</div>
+<div class="citation" id="id119" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HoyerJorgensenS+15<span class="fn-bracket">]</span></span>
+<p>A. S. Høyer, F. Jørgensen, P. B E Sandersen, A. Viezzoli, and I. Møller. 3D geological modelling of a complex buried-valley network delineated from borehole and AEM data. <em>Journal of Applied Geophysics</em>, 122:94–102, 2015.</p>
+</div>
+<div class="citation" id="id115" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Inc15<span class="fn-bracket">]</span></span>
+<p>RPA Inc. Technical report on the preliminary economic assessment of the albany graphite project, northern ontario, canada: ni 43-101. Technical Report Project #2248, 224 p., RPA Inc., 2015. report prepared for Zenyatta Ventures Ltd.</p>
+</div>
+<div class="citation" id="id76" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ILF11<span class="fn-bracket">]</span></span>
+<p>Carlos Izarra, Jean Legault, and Cristiano Fontura. ZTEM airborne tipper AFMAG results over the Copaquire porphyry, northern Chile. In <em>12th International Congress of the Brazilian Geophysical Society</em>. 2011.</p>
+</div>
+<div class="citation" id="id149" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>JW04<span class="fn-bracket">]</span></span>
+<p>J Jansen and K Witherly. The Tli Kwi Cho Kimberlite Complex, Northwest Territories, Canada: A Geophysical Case Study. In <em>2004 SEG Annual Meeting</em>. 2004.</p>
+</div>
+<div class="citation" id="id167" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KOYM14<span class="fn-bracket">]</span></span>
+<p>S Kang, D Oldenburg, D Yang, and D Marchant. On recovering induced polarization information from airborne time domain EM data. In <em>SEG Technical Program Expanded Abstracts 2014</em>, 1785–1789. Society of Exploration Geophysicists, aug 2014. <a class="reference external" href="https://doi.org/10.1190/segam2014-1381.1">doi:10.1190/segam2014-1381.1</a>.</p>
+</div>
+<div class="citation" id="id140" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KFO17<span class="fn-bracket">]</span></span>
+<p>Seogi Kang, Dominique Fournier, and Douglas W. Oldenburg. Inversion of airborne geophysics over the do-27/do-18 kimberlites - part 3: induced polarization. <em>Interpretation</em>, 5(3):345–358, August 2017.</p>
+</div>
+<div class="citation" id="id164" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KO16<span class="fn-bracket">]</span></span>
+<p>Seogi Kang and Douglas W. Oldenburg. On recovering distributed ip information from inductive source time domain electromagnetic data. <em>Geophysical Journal International</em>, 207(1):174–196, 2016. <a class="reference external" href="https://doi.org/10.1093/gji/ggw256">doi:10.1093/gji/ggw256</a>.</p>
+</div>
+<div class="citation" id="id161" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KS04<span class="fn-bracket">]</span></span>
+<p>Pierre Keating and Pascal Sailhac. Use of the analytic signal to identify magnetic anomalies due to kimberlite pipes. <em>Geophysics</em>, 69(1):180–190, 2004.</p>
+</div>
+<div class="citation" id="id49" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ken13<span class="fn-bracket">]</span></span>
+<p>A Kennedy. Application for Approval of the Aspen Project. <em>Imperial Oil</em>, 2013.</p>
+</div>
+<div class="citation" id="id127" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ker96<span class="fn-bracket">]</span></span>
+<p>J. A. Kerswill. Iron-formation-hosted stratabound gold. <em>Geology of Canadian mineral deposit types. Geology of Canada</em>, 8:367–382, 1996.</p>
+</div>
+<div class="citation" id="id172" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KDM+14<span class="fn-bracket">]</span></span>
+<p>K Key, Z Du, J Mattsson, A McKay, and J Midgley. Anisotropic 2.5d inversion of towed streamer em data from three north sea fields using parallel adaptive finite elements. In <em>76th Annual International Conference and Exhibition</em>. EAGE, 2014.</p>
+</div>
+<div class="citation" id="id112" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kil11<span class="fn-bracket">]</span></span>
+<p>P. Killeen. <em>Exploration Trends and Developments</em>. The Northern Miner, 2011.</p>
+</div>
+<div class="citation" id="id162" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kja07<span class="fn-bracket">]</span></span>
+<p>B A Kjarsgaard. Kimberlite Pipe Models: Significance for Exploration. In B Milkereit, editor, <em>Proceedings of Exploration '07: Fifth Decennial International Conference on Mineral Exploration</em>, 667–677. 2007.</p>
+</div>
+<div class="citation" id="id166" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KA12<span class="fn-bracket">]</span></span>
+<p>N.O. Kozhevnikov and E.Yu. Antonov. Fast-decaying inductively induced polarization in frozen ground: a synthesis of results and models. <em>Journal of Applied Geophysics</em>, 82:171 – 183, 2012. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0926985112000626">https://www.sciencedirect.com/science/article/pii/S0926985112000626</a>, <a class="reference external" href="https://doi.org/10.1016/j.jappgeo.2012.03.008">doi:10.1016/j.jappgeo.2012.03.008</a>.</p>
+</div>
+<div class="citation" id="id165" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KM12<span class="fn-bracket">]</span></span>
+<p>T Kratzer and J Macnae. Induced polarization in airborne EM. <em>Geophysics</em>, 77(5):E317–E327, 2012. <a class="reference external" href="https://doi.org/10.1190/geo2011-0492.1">doi:10.1190/geo2011-0492.1</a>.</p>
+</div>
+<div class="citation" id="id77" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LBMC85<span class="fn-bracket">]</span></span>
+<p>Victor Franklin Labson, A Becker, H F Morrison, and U Conti. Geophysical exploration with audiofrequency natural magnetic fields. <em>Geophysics</em>, 50(4):656–664, 1985.</p>
+</div>
+<div class="citation" id="id57" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LAT+11<span class="fn-bracket">]</span></span>
+<p>M Lazaro, S Alm, A Tiedeman, C Page, D Meade, J Shoffner, and K Bucher. Department of the Navy Geothermal Exploration on Naval Air Station Fallon (NASF) Managed Lands in Dixie Valley, Nevada. <em>Geothermal Resources Council Transactions</em>, 35:873–877, 2011.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lee84<span class="fn-bracket">]</span></span>
+<p>T Lee. The Effect of a Superparamagnetic Layer. <em>Geophysical Prospecting</em>, 32(March 1983):480–496, 1984.</p>
+</div>
+<div class="citation" id="id113" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Leg10<span class="fn-bracket">]</span></span>
+<p>J. M. Legault. Technical report on the Albany Project, Porcupine Mining District, Ontario: NI 43-10. Technical Report, Geotech Ltd., 2010. for Zenyatta Ventures Ltd., 83 pages.</p>
+</div>
+<div class="citation" id="id79" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LWG+12<span class="fn-bracket">]</span></span>
+<p>Jean Legault, Glenn A Wilson, Alexander V Gribenko, Michael S Zhdanov, Shengkai Zhao, and Keith Fisk. An overview of the ZTEM and AirMt airborne electromagnetic systems: a case study from the Nebo–Babel Ni–Cu–PGE deposit, West Musgrave, Western Australia. <em>Preview</em>, 2012(158):26–32, 2012.</p>
+</div>
+<div class="citation" id="id80" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LLR+15<span class="fn-bracket">]</span></span>
+<p>Jean M Legault, Josh Lymburner, Kevin Ralph, Peter Wood, Marta Orta, Alexander Prikhodko, and Nasreddine Bournas. The Albany graphite discovery - a airborne and ground time-domain EM. In <em>SEG Technical Program Expanded Abstracts 2015</em>, 2056–2060. Society of Exploration Geophysicists, 2015. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/segam2015-5908480.1">doi:https://doi.org/10.1190/segam2015-5908480.1</a>.</p>
+</div>
+<div class="citation" id="id78" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LO12<span class="fn-bracket">]</span></span>
+<p>Jean M Legault and Others. Ten years of passive airborne AFMAG EM development for mineral exploration. In <em>2012 SEG Annual Meeting</em>. Society of Exploration Geophysicists, 2012.</p>
+</div>
+<div class="citation" id="id89" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LG00<span class="fn-bracket">]</span></span>
+<p>Frank Lehmann and Alan G. Green. Topographic migration of georadar data: implications for acquisition and processing. <em>GEOPHYSICS</em>, 65(3):836–848, 2000. <a class="reference external" href="https://doi.org/10.1190/1.1444781">doi:10.1190/1.1444781</a>.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LO99<span class="fn-bracket">]</span></span>
+<p>Yaoguo Li and Douglas W Oldenburg. Estimating depth of investigation in dc resistivity and ip surveys. <em>Geophysics</em>, 64(2):403–416, 1999.</p>
+</div>
+<div class="citation" id="id59" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LZ08<span class="fn-bracket">]</span></span>
+<p>B Lo and M Zang. Numerical modeling of Z-TEM (airborne AFMAG) responses to guide exploration strategies. <em>SEG Extended Abstracts</em>, 27:1098–1102, 2008.</p>
+</div>
+<div class="citation" id="id103" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mac12<span class="fn-bracket">]</span></span>
+<p>L. M. MacGregor. Integrating seismic, CSEM and well log data for reservoir characterization. <em>The Leading Edge</em>, pages 268–277, 2012.</p>
+</div>
+<div class="citation" id="id102" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MT14<span class="fn-bracket">]</span></span>
+<p>Lucy MacGregor and James Tomlinson. Marine controlled-source electromagnetic methods in the hydrocarbon industry: A tutorial on method and practice. <em>Interpretation</em>, 2(3):SH13–SH32, 2014. URL: <a class="reference external" href="https://library.seg.org/doi/10.1190/INT-2013-0163.1">https://library.seg.org/doi/10.1190/INT-2013-0163.1</a>, <a class="reference external" href="https://doi.org/10.1190/INT-2013-0163.1">doi:10.1190/INT-2013-0163.1</a>.</p>
+</div>
+<div class="citation" id="id163" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mac85<span class="fn-bracket">]</span></span>
+<p>J Macnae. Applications of geophysics for the detection and exploration of kimberlites and lamproites. <em>Journal of Geochemical Exploration</em>, 53:213–243, 1985.</p>
+</div>
+<div class="citation" id="id66" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Man08<span class="fn-bracket">]</span></span>
+<p>N Mankhemthong. Structure of the Inter-Basin Transition Zone between Dixie Valley and Fairview Valley, Nevada, USA. Master's thesis, University of Nevada, Reno, 2008.</p>
+</div>
+<div class="citation" id="id55" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MOA08<span class="fn-bracket">]</span></span>
+<p>N. Mankhemthong, G. L. Oppliger, and Z. Aslett. Structural localization of two low temperature geothermal systems within the gravity defined linkage between Dixie Valley and Fairview Valley, Nevada. <em>Geothermal Resources Council Transactions</em>, 32:291–295, 2008.</p>
+</div>
+<div class="citation" id="id134" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MMW93<span class="fn-bracket">]</span></span>
+<p>A J Mansure, R F Meldau, and H V Weyland. Field Examples of Electrical Resistivity Changes During Steamflooding. <em>SPE Formation Evaluation</em>, 8:57–64, 1993.</p>
+</div>
+<div class="citation" id="id135" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MBR12<span class="fn-bracket">]</span></span>
+<p>F J Martinez, M L Batzle, and A Revil. Influence of temperature on seismic velocities and complex conductivity of heavy oil-bearing sands. <em>Geophysics</em>, 77:WA19–WA34, 2012.</p>
+</div>
+<div class="citation" id="id150" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mas99<span class="fn-bracket">]</span></span>
+<p>K M Masun. The petrography and mineralogy of the Lac de Gras kimberlite field, Slave Province, Northwest Territories: A comparative study. Master's thesis, Department of Geology, Lakehead University, November 1999.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Max61<span class="fn-bracket">]</span></span>
+<p>James C Maxwell. Xliv. on physical lines of force. <em>The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science</em>, 21(140):281–291, 1861.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Max65<span class="fn-bracket">]</span></span>
+<p>James C. Maxwell. <em>A dynamical theory of the electromagnetic field</em>. Philosophical Transactions of the Royal Society, 1865.</p>
+</div>
+<div class="citation" id="id104" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Maz07<span class="fn-bracket">]</span></span>
+<p>P. Mazumdar. Poisson dampening factor. <em>The Leading Edge</em>, 26:850–852, 2007. <a class="reference external" href="https://doi.org/10.1190/1.2756862">doi:10.1190/1.2756862</a>.</p>
+</div>
+<div class="citation" id="id151" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MWK+02<span class="fn-bracket">]</span></span>
+<p>M B McClenaghan, B C Ward, I M Kjardsgaard, D E Kerr, and L A Dredge. Indicator mineral and till geochemical dispersal patterns associated with the Ranch Lake kimberlite, Lac de Gras region, NWT, Canada. <em>Geochemistry: Exploration, Environment, Analysis</em>, 2:299–320, 2002.</p>
+</div>
+<div class="citation" id="id125" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MO14<span class="fn-bracket">]</span></span>
+<p>Michael S McMillan and Douglas W Oldenburg. Cooperative constrained inversion of multiple electromagnetic data sets. <em>Geophysics</em>, 79(4):B173–B185, 2014.</p>
+</div>
+<div class="citation" id="id124" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MSHO15<span class="fn-bracket">]</span></span>
+<p>Michael S. McMillan, Christoph Schwarzbach, Eldad Haber, and Douglas W. Oldenburg. 3D parametric hybrid inversion of time-domain airborne electromagnetic data. <em>Geophysics</em>, 80(6):K25–K36, sep 2015. URL: <a class="reference external" href="https://library.seg.org/doi/10.1190/geo2015-0141.1">https://library.seg.org/doi/10.1190/geo2015-0141.1</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1190/geo2015-0141.1">doi:https://doi.org/10.1190/geo2015-0141.1</a>.</p>
+</div>
+<div class="citation" id="id90" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MGB+15<span class="fn-bracket">]</span></span>
+<p>Kaspar Merz, Alan G Green, Thomas Buchli, Sarah M Springman, and Hansruedi Maurer. A new 3-D thin-skinned rock glacier model based on helicopter GPR results from the Swiss Alps. <em>Geophysical Research Letters</em>, 42(11):4464–4472, 2015.</p>
+</div>
+<div class="citation" id="id91" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MMR+16<span class="fn-bracket">]</span></span>
+<p>Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. <em>Geophysics</em>, 81(1):WA147—–WA157, 2016. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/geo2015-0157.1">doi:https://doi.org/10.1190/geo2015-0157.1</a>.</p>
+</div>
+<div class="citation" id="id68" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mun14<span class="fn-bracket">]</span></span>
+<p>G Munoz. Exploring for Geothermal Resources with Electromagnetic Methods. <em>Surv Geophys</em>, 35:101–122, 2014.</p>
+</div>
+<div class="citation" id="id92" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MMHG06<span class="fn-bracket">]</span></span>
+<p>Martin Musil, Hansruedi Maurer, Klaus Hollinger, and Alan G Green. Internal structure of an alpine rock glacier based on crosshole georadar traveltimes and amplitudes. <em>Geophysical Prospecting</em>, 54(3):273–285, 2006.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Neel49<span class="fn-bracket">]</span></span>
+<p>M. Louis Néel. Théorie du traînage magnétique des ferromagnétiques en grains fins avec application aux terres cuites. <em>Annales de Geophysique</em>, 5:99–136, 1949.</p>
+</div>
+<div class="citation" id="id122" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>OL94a<span class="fn-bracket">]</span></span>
+<p>D. Oldenburg and Y. Li. Inversion of induced polarization data. <em>Geophysics</em>, 59(9):1327–1341, 1994. URL: <a class="reference external" href="https://library.seg.org/doi/abs/10.1190/1.1443692">https://library.seg.org/doi/abs/10.1190/1.1443692</a>, <a class="reference external" href="https://doi.org/10.1190/1.1443692">doi:10.1190/1.1443692</a>.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>OL94b<span class="fn-bracket">]</span></span>
+<p>Douglas W Oldenburg and Yaoguo Li. Inversion of induced polarization data. <em>Geophysics</em>, 59(9):1327–1341, 1994.</p>
+</div>
+<div class="citation" id="id105" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ost84<span class="fn-bracket">]</span></span>
+<p>W. J. Ostrander. Plane-wave reflection coefficients for gas sands at non-normal angles of incidence. <em>Geophysics</em>, 49:1637–1648, 1984.</p>
+</div>
+<div class="citation" id="id54" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pag65<span class="fn-bracket">]</span></span>
+<p>B M Page. Preliminary geologic map of a part of the Stillwater Range, Churchill County, Nevada. Nevada Bureau of Mines, 1965.</p>
+</div>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pas99<span class="fn-bracket">]</span></span>
+<p>L. R. Pasion. <em>Inversion of Time Domain Electromagnetic Data for the Detection of Unexploded Ordnance</em>. PhD thesis, Univ. of British Columbia, 1999.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pas07<span class="fn-bracket">]</span></span>
+<p>L. R. Pasion. <em>Inversion of time domain electromagnetic data for the detection of unexploded ordnance</em>. PhD thesis, Univ. of British Columbia, 2007.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PO01<span class="fn-bracket">]</span></span>
+<p>L. R. Pasion and D. W. Oldenburg. A discrimination algorithm for uxo using time domain electromagnetic induction. <em>Journal of Environmental and Engineering Geophysics</em>, 6:91–102, 2001.</p>
+</div>
+<div class="citation" id="id132" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pea10<span class="fn-bracket">]</span></span>
+<p>M J Peacock. Athabasca oil sands: reservoir characterization and its impact on thermal and mining opportunities. <em>Petroleum Geology Conference Series</em>, 7:1141–1150, 2010.</p>
+</div>
+<div class="citation" id="id152" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pel97<span class="fn-bracket">]</span></span>
+<p>J A Pell. Kimberlite in the Slave Craton, Northwest Territories, Canada. <em>Geoscience Canada</em>, 24(2):77–90, 1997.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PWH+78<span class="fn-bracket">]</span></span>
+<p>W Pelton, S Ward, P Hallof, W Sill, and P Nelson. Mineral discrimination and removal of inductive coupling with multifrequency IP. <em>Geophysics</em>, 43(3):588–609, 1978. <a class="reference external" href="https://doi.org/10.1190/1.1440839">doi:10.1190/1.1440839</a>.</p>
+</div>
+<div class="citation" id="id65" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PSGZ10<span class="fn-bracket">]</span></span>
+<p>R Penfield, L Shevenell, L Garside, and R Zehner. Nevada Geothermal Resources - Map 161. Nevada Bureau of Mines and Geology, 2010.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Poo81<span class="fn-bracket">]</span></span>
+<p>J.R. Poole. A reassessment of the mount novit prospect: unpublished company report. 1981.</p>
+</div>
+<div class="citation" id="id153" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PH07<span class="fn-bracket">]</span></span>
+<p>M Power and D Hildes. Geophysical strategies for kimberlite exploration in northern Canada. In <em>Proceedings of Exploration '07: Fifth Decennial International Conference on Mineral Exploration</em>, 1025–1031. 2007.</p>
+</div>
+<div class="citation" id="id154" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RW07<span class="fn-bracket">]</span></span>
+<p>L E Reed and K E Witherly. 50 years of kimberlite geophysics, a review. In B Milkereit, editor, <em>Proceedings of Exploration 07: Fifth Decennial International Conference on Mineral Exploration</em>, 679–689. 2007.</p>
+</div>
+<div class="citation" id="id128" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ros11<span class="fn-bracket">]</span></span>
+<p>G K Rosenkjar. Electromagnetic methods in geothermal exploration. 1D and 3D inversion of TEM and MT data from a synthetic geothermal area and the Hengill geothermal area, SW Iceland. Master's thesis, University of Iceland, 2011.</p>
+</div>
+<div class="citation" id="id114" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RM14<span class="fn-bracket">]</span></span>
+<p>D. Ross and K. M. Masun. Technical report on the albany graphite deposit, northern ontario, canada: ni 43-101 report. Technical Report, Roscoe Postle Associates Inc., 2014. for Zenyatta Ventures Ltd., Project #2156, 113 pages.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Rus78<span class="fn-bracket">]</span></span>
+<p>R.R. Russel. The mount novit pb-ag-zn deposit - variations on a mount isa theme. <em>Third Australian Geological Convention, Geological Society Australia</em>, 1978.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ROS01<span class="fn-bracket">]</span></span>
+<p>Andrea Rutley, Douglas W Oldenburg, and Roman Shekhtman. 2-d and 3-d ip/resistivity inversion for the interpretation of isa-style targets. <em>Exploration Geophysics</em>, 32(3/4):156–159, 2001.</p>
+</div>
+<div class="citation" id="id81" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SW12<span class="fn-bracket">]</span></span>
+<p>Daniel Sattel and Ken Witherly. Extracting information from ZTEM data with 2D inversions. <em>ASEG Extended Abstracts</em>, 2012(1):1–4, 2012.</p>
+</div>
+<div class="citation" id="id118" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SJorgensenAEfferso14<span class="fn-bracket">]</span></span>
+<p>Cyril Schamper, Flemming Jørgensen, Esben Auken, and Flemming Effersø. Assessment of near-surface mapping capabilities by airborne transient electromagnetic data - An extensive comparison to conventional borehole data. <em>Geophysics</em>, 79(4):B187–B199, 2014. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/geo2013-0256.1">doi:https://doi.org/10.1190/geo2013-0256.1</a>.</p>
+</div>
+<div class="citation" id="id121" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sei59<span class="fn-bracket">]</span></span>
+<p>H. Seigel. Matehmatical formulation and type curves for induced polarization. <em>Geophysics</em>, 24(3):547–565, 1959. URL: <a class="reference external" href="https://library.seg.org/doi/abs/10.1190/1.1438625">https://library.seg.org/doi/abs/10.1190/1.1438625</a>, <a class="reference external" href="https://doi.org/10.1190/1.1438625">doi:10.1190/1.1438625</a>.</p>
+</div>
+<div class="citation" id="id106" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sim63<span class="fn-bracket">]</span></span>
+<p>P. Simandoux. Dielectric measurements in porous media and application to shaly formation. <em>Revue de L'Institut Français du Pétrole</em>, 18:supplementary issue, 193–215, 1963.</p>
+</div>
+<div class="citation" id="id129" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SB05<span class="fn-bracket">]</span></span>
+<p>F Simpson and K Bahr. <em>Practical Magnetotellurics</em>. Cambridge, 2005.</p>
+</div>
+<div class="citation" id="id107" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sin09<span class="fn-bracket">]</span></span>
+<p>S. Singleton. The effects of seismic data conditioning on prestack simultaneous impedance inversion. <em>The Leading Edge</em>, pages 772–781, 2009.</p>
+</div>
+<div class="citation" id="id52" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SSC+11<span class="fn-bracket">]</span></span>
+<p>J Skord, C Sladek, M Coolbaugh, P H Cashman, M Lazaro, and C Kratt. Two-meter Temperature Surveys for Geothermal Exploration Project at NAS Fallon. <em>Geothermal Resources Council Transactions</em>, 35:1023–1027, 2011.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SMB03<span class="fn-bracket">]</span></span>
+<p>J. T. Smith, H. F. Morrison, and A. Becker. Parametric forms and the inductive response of a permeable conductive sphere. Lawrence Berkeley National Laboratory, 2003.</p>
+</div>
+<div class="citation" id="id116" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sto08<span class="fn-bracket">]</span></span>
+<p>G. M. Stott. <em>Precambrian geology of the Hudson Bay and James Bay lowlands region interpreted from aeromagnetic data - south sheet</em>. Ontario Geological Survey, 2008. Preliminary Map P.3599, scale 1:500 000.</p>
+</div>
+<div class="citation" id="id137" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SP07<span class="fn-bracket">]</span></span>
+<p>K. M. Strack and P. B. Pandey. Exploration with controlled-source electromagnetics under basalt cover in India. <em>The Leading Edge</em>, 26(3):360–363, 2007. <a class="reference external" href="https://doi.org/https://doi.org/10.1190/1.2715056">doi:https://doi.org/10.1190/1.2715056</a>.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Str41<span class="fn-bracket">]</span></span>
+<p>Julius Adams Stratton. <em>Electromagnetic Theory</em>. McGraw-Hilll, 1941.</p>
+</div>
+<div class="citation" id="id123" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tay14<span class="fn-bracket">]</span></span>
+<p>Craig Taylor. Mine scale description of the mineralization at the lalor deposit, snow lake, manitoba, canada. In <em>Exploration for deep VMS ore bodies, the Hudbay Lalor case study: 2014 fall symposium</em>. B.C. Geophysical Society, 2014.</p>
+</div>
+<div class="citation" id="id108" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TMR01<span class="fn-bracket">]</span></span>
+<p>T. Tonellot, D. Mace, and V. Richard. Joint stratigraphic inversion of angle-limited stacks. <em>SEG Technical Program Expanded Abstract</em>, pages 227–230, 2001.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>VAM09<span class="fn-bracket">]</span></span>
+<p>Andrea Viezzoli, Esben Auken, and Tim Munday. Spatially constrained inversion for quasi 3d modelling of airborne electromagnetic data – an application for environmental assessment in the lower murray region of south australia. <em>Exploration Geophysics</em>, 40(2):173–183, 2009. <a class="reference external" href="https://doi.org/https://doi.org/10.1071/EG08027">doi:https://doi.org/10.1071/EG08027</a>.</p>
+</div>
+<div class="citation" id="id120" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>VMF+16<span class="fn-bracket">]</span></span>
+<p>Troels Vilhelmsen, Pernille Marker, Nikolaj Foged, Thomas Wernberg, Esben Auken, Anders Vest Christiansen, Peter Bauer-Gottwein, Christensen Steen, and Anne-Sophie Høyer. A regional scale hydrostratigraphy generated from geophysical data of varying age, type and quality. This paper is current submitted, 2016.</p>
+</div>
+<div class="citation" id="id82" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Voz72<span class="fn-bracket">]</span></span>
+<p>Keeva Vozoff. The magnetotelluric method in the exploration of sedimentary basins. <em>Geophysics</em>, 37(1):98–141, 1972.</p>
+</div>
+<div class="citation" id="id44" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Wai51<span class="fn-bracket">]</span></span>
+<p>J. R. Wait. A conductive sphere in a time varying magnetic field. <em>Geophysics</em>, 16:666–672, 1951.</p>
+</div>
+<div class="citation" id="id45" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WS69<span class="fn-bracket">]</span></span>
+<p>J. R. Wait and K. P. Spies. Quasi-static transient response of a conducting permeable sphere. <em>Geophysics</em>, 34(5):789–792, 1969.</p>
+</div>
+<div class="citation" id="id60" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WDH07<span class="fn-bracket">]</span></span>
+<p>P E Wannamaker, W M Doerner, and D P Hasterok. Integrated dense array and transect MT surveying at Dixie Valley Geothermal Area, Nevada; structural controls, hydrothermal alteration and deep fluid sources. In <em>Thirty-Second Workshop on Geothermal Reservoir Engineering</em>. 2007.</p>
+</div>
+<div class="citation" id="id83" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>War59<span class="fn-bracket">]</span></span>
+<p>S H Ward. AFMAG—AIRBORNE AND GROUND. <em>GEOPHYSICS</em>, 24(4):761–787, 1959. <a class="reference external" href="https://doi.org/10.1190/1.1438657">doi:10.1190/1.1438657</a>.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WH88<span class="fn-bracket">]</span></span>
+<p>Stanley H Ward and Gerald W Hohmann. Electromagnetic Theory for Geophysical Applications. In <em>Electromagnetic Methods in Applied Geophysics</em>, chapter 4, pages 130–311. Society of Exploration Geophysicists, 1 edition, 1988. URL: <a class="reference external" href="https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4">https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4</a>, <a class="reference external" href="https://doi.org/10.1190/1.9781560802631.ch4">doi:10.1190/1.9781560802631.ch4</a>.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>War90<span class="fn-bracket">]</span></span>
+<p>Stanley H. Ward. 6. resistivity and induced polarization methods. In <em>Geotechnical and Environmental Geophysics</em>, chapter 6, pages 147–190. Society of Exploration Geophysicists, 1990. URL: <a class="reference external" href="https://library.seg.org/doi/abs/10.1190/1.9781560802785.ch6">https://library.seg.org/doi/abs/10.1190/1.9781560802785.ch6</a>.</p>
+</div>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WS68<span class="fn-bracket">]</span></span>
+<p>M H Waxman and L J M Smits. Electrical Conductivities in Oil-Bearing Shaly Sands. <em>Society of Petroleum Engineers Journal</em>, 1968. <a class="reference external" href="https://doi.org/10.2118/1863-A">doi:10.2118/1863-A</a>.</p>
+</div>
+<div class="citation" id="id155" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Wei82<span class="fn-bracket">]</span></span>
+<p>P Weidelt. Response characteristics of coincident loop transient electromagnetic systems. <em>Geophysics</em>, 47(9):1325–1330, September 1982.</p>
+</div>
+<div class="citation" id="id117" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WIM04<span class="fn-bracket">]</span></span>
+<p>K. Witherly, R. Irvine, and E. B. Morrison. The Geotech VTEM time domain electromagnetic system. <em>SEG Expanded Abstracts</em>, pages 1217–1221, 2004.</p>
+</div>
+<div class="citation" id="id47" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>YOH14<span class="fn-bracket">]</span></span>
+<p>D Yang, D W Oldenburg, and E Haber. 3-D inversion of airborne electromagnetic data parallelized and accelerated by local mesh and adaptive soundings. <em>Geophysical Journal International</em>, 196:1492–1507, 2014.</p>
+</div>
+<div class="citation" id="id158" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>YO17<span class="fn-bracket">]</span></span>
+<p>Dikun Yang and Douglas W. Oldenburg. 3d inversion of total magnetic intensity data for time-domain em at the lalor massive sulphide deposit. <em>Exploration Geophysics</em>, 48(2):110–123, 2017. <a class="reference external" href="https://doi.org/https://doi.org/10.1071/EG15070">doi:https://doi.org/10.1071/EG15070</a>.</p>
+</div>
+<div class="citation" id="id33" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ZCY+03<span class="fn-bracket">]</span></span>
+<p>Y. Zhang, L. M. Collins, H. Yu, C. E. Baum, and L. Carin. Sensing of unexploded ordnance with magnetometer and induction data; theory and signal processing. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 41:1005–1015, 2003.</p>
+</div>
+<div class="citation" id="id46" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ZCR13<span class="fn-bracket">]</span></span>
+<p>M S Zhdanov, L Cox, and J Rudd. Paradigm change in 3D inversion of airborne EM surveys: case study for oil sands exploration near Fort McMurray, Alberta. <em>First Break</em>, 31:81–85, 2013.</p>
+</div>
+<div class="citation" id="id156" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GolderALtd14<span class="fn-bracket">]</span></span>
+<p>Golder Associated Ltd. Permafrost baseline report for the Jay Project. Technical Report, Dominion Diamond Ekati Corporation, 2014.</p>
+</div>
+<div class="citation" id="id51" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TheRCorporation81a<span class="fn-bracket">]</span></span>
+<p>The Rosewood Corporation. Well Eleven Mile Canyon 52-14. 1981.</p>
+</div>
+<div class="citation" id="id50" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TheRCorporation81b<span class="fn-bracket">]</span></span>
+<p>The Rosewood Corporation. Well Federal 8919 72-23. 1981.</p>
+</div>
+</div>
+</div>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="case_histories/westplains/interpretation_synthesis.html" class="btn btn-neutral float-left" title="Interpretation and Synthesis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

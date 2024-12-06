@@ -1,0 +1,353 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Half-space &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Layered Earth" href="layered_earth.html" />
+    <link rel="prev" title="Inductive sources" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell III: FDEM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../governing_equations.html">Governing Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../circuitmodel_for_eminduction/index.html">Circuit Model for EM Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grounded_sources/index.html">Grounded sources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Inductive sources</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Half-space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#frequency">Frequency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tx-height">Tx height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conductivity">Conductivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#susceptibility">Susceptibility</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="layered_earth.html">Layered Earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sphere/index.html">Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plate.html">Plate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plane_wave_sources/index.html">Plane wave sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../footprint_and_depth_of_investigation.html">Footprint and depth of investigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../natural_sources/index.html">Natural Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell III: FDEM</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Inductive sources</a></li>
+      <li class="breadcrumb-item active">Half-space</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell3_fdem/inductive_sources/halfspace.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="half-space">
+<span id="fdem-fields-from-inductive-sources-halfspace"></span><h1>Half-space<a class="headerlink" href="#half-space" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>With a simple half-space model we explore electric field, magnetic flux, and conduction currents in the domain due to the vertical magnetic dipole (VMD) source. By analyzing those fields with variable transmitting frequency, Tx height, conductivity, and susceptibility values, we understand how the inductive source exicte the earth. In addition, we discuss how the measured magnetic flux data behave as a function of frequency.</p>
+</div>
+<p>Oscillating magnetic flux is generated by injected sinusoidal current in the loop, and will generate induced electric field everywhere due to Faraday’s law:</p>
+<div class="math notranslate nohighlight" id="equation-faraday">
+<span class="eqno">(378)<a class="headerlink" href="#equation-faraday" title="Link to this equation"></a></span>\[\nabla \times \mathbf{E} = -\imath \omega \mathbf{B}\]</div>
+<p>Because conductivity of the air is zero (<span class="math notranslate nohighlight">\(\sigma_{air} \approx 0\)</span>), conduction currents in the earth is zero (<span class="math notranslate nohighlight">\(\mathbf{J}_f=\sigma \mathbf{E}\)</span>). From Ampere’s law:</p>
+<div class="math notranslate nohighlight" id="equation-ampere">
+<span class="eqno">(379)<a class="headerlink" href="#equation-ampere" title="Link to this equation"></a></span>\[\nabla \times \mathbf{B}  = \mu_0\mathbf{J} = \mu_0(\mathbf{J}_e + \mathbf{J}_f + \mathbf{J}_m)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{J}_m=\nabla \times \mathbf{M}\)</span> is magnetic current density. Biot-Savart Law shown in <a class="reference internal" href="../../maxwell1_fundamentals/formative_laws/biot_savart.html#biot-savart"><span class="std std-ref">Biot-Savart</span></a> allows us to compute magnetic flux density from current density. For the free-space case, conduction and magnetic currents are both zero hence only the current source term <span class="math notranslate nohighlight">\(\mathbf{J}_e\)</span> will be taken account hence by applying Biot-Savart law to this we can obtain primary magnetic flux <span class="math notranslate nohighlight">\(\mathbf{B}^{p}\)</span>. Similarly, by only taking into account conduction current, <span class="math notranslate nohighlight">\(\mathbf{J}_f\)</span>, secondary magnetic flux <span class="math notranslate nohighlight">\(\mathbf{B}^{s}\)</span> can be evaluated. So if we define Biot-Savart operator <span class="math notranslate nohighlight">\(G_{BS}[\cdot]\)</span> which takes currents, then primary, secondary, and total magnetic fields can be defined as</p>
+<div class="math notranslate nohighlight" id="equation-bprim">
+<span class="eqno">(380)<a class="headerlink" href="#equation-bprim" title="Link to this equation"></a></span>\[\mathbf{B}^{p} = G_{BS}[\mathbf{J}_e]\]</div>
+<div class="math notranslate nohighlight" id="equation-bsec">
+<span class="eqno">(381)<a class="headerlink" href="#equation-bsec" title="Link to this equation"></a></span>\[\mathbf{B}^{s} = G_{BS}[\mathbf{J}_f + \mathbf{J}_m]\]</div>
+<div class="math notranslate nohighlight" id="equation-btotal">
+<span class="eqno">(382)<a class="headerlink" href="#equation-btotal" title="Link to this equation"></a></span>\[\mathbf{B} =\mathbf{B}^{p}+\mathbf{B}^{s}
+               =G_{BS}[\mathbf{J}_e+\mathbf{J}_f+\mathbf{J}_m]\]</div>
+<p>Separating total magentic fields as primary and secondary will be useful for our following analyses to see impact of the eddy currents induced in the earth.</p>
+<figure class="align-center" id="halfspace">
+<a class="reference internal image-reference" href="../../../_images/Halfspace.png"><img alt="../../../_images/Halfspace.png" src="../../../_images/Halfspace.png" style="width: 449.0px; height: 287.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 100 </span><span class="caption-text">A loop source in a half-space earth. <span class="math notranslate nohighlight">\(\sigma_{air}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> conductivity of the air and earth, respectively. <span class="math notranslate nohighlight">\(\mu_{0}\)</span> and <span class="math notranslate nohighlight">\(\mu_{earth}\)</span> susceptibility of the air and earth, respectively. <span class="math notranslate nohighlight">\(z\)</span> and offset correspondingly indicate Tx height (m) and Tx-Rx offset (m).</span><a class="headerlink" href="#halfspace" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Using the setup shown in <a class="reference internal" href="#halfspace"><span class="std std-numref">Fig. 100</span></a>, we perform a simulation, compute electric, magnetic flux, and current density. Here <span class="math notranslate nohighlight">\(z\)</span> = 30 m, <span class="math notranslate nohighlight">\(\sigma_{earth}=0.01\)</span> S/m, <span class="math notranslate nohighlight">\(\mu_{earth}=\mu_0\)</span>, and <span class="math notranslate nohighlight">\(f=10^3\)</span> Hz. <a class="reference internal" href="#half-ej"><span class="std std-numref">Fig. 101</span></a> shows imaginary part of electric fielc and current density in <span class="math notranslate nohighlight">\(y\)</span>-direction.</p>
+<p>Rotating electric field induced by oscillating magnetic field exist everywhere and show great amplitude at the near surface. Current density at an air region is zero, and this will make impact to the magnetic flux density. <a class="reference internal" href="#half-b-imag"><span class="std std-numref">Fig. 102</span></a> shows imaginary part of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>. Imaginary part of magnetic flux is localized at the near surface, and mostly propagating downward.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Imaginary part of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> only includes secondary field i.e. it is soely from the earth. This will be directly related to real part of <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> from Eq. <a class="reference internal" href="#equation-faraday">(378)</a>.</p>
+</div>
+<figure class="align-center" id="half-ej">
+<a class="reference internal image-reference" href="../../../_images/Half_EJ.png"><img alt="../../../_images/Half_EJ.png" src="../../../_images/Half_EJ.png" style="width: 1421.0px; height: 554.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 101 </span><span class="caption-text">Real part of  <span class="math notranslate nohighlight">\(E_y\)</span> a) and  <span class="math notranslate nohighlight">\(J_y\)</span> b)  in <span class="math notranslate nohighlight">\(x\text{-}z\)</span> plane. Postive and negative values indicate vector directing into the page and out of the page.</span><a class="headerlink" href="#half-ej" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="half-b-imag">
+<a class="reference internal image-reference" href="../../../_images/Half_B_imag.png"><img alt="../../../_images/Half_B_imag.png" src="../../../_images/Half_B_imag.png" style="width: 357.0px; height: 277.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Imaginary part of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> in <span class="math notranslate nohighlight">\(x\text{-}z\)</span> plane</span><a class="headerlink" href="#half-b-imag" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Different from the imaginary part of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, real part includes both primary and secondary magnetic flux.
+<a class="reference internal" href="#half-bpbs"><span class="std std-numref">Fig. 103</span></a> a and b show the real part of total and secondary magnetic flux density as a vector. Primary flux is dominant in <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> hence signficantly localized close to Tx location, while secondary flux induced in the conductive earth are much more spreaded. Direction of the total (upward) and secondary flux (downward) is opposite in general. In practice, we cannot measure magnetic fields everywhere, but</p>
+<figure class="align-center" id="half-bpbs">
+<a class="reference internal image-reference" href="../../../_images/Half_BpBs.png"><img alt="../../../_images/Half_BpBs.png" src="../../../_images/Half_BpBs.png" style="width: 1421.0px; height: 554.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Real part of total a) and secondary magnetic flux density b).</span><a class="headerlink" href="#half-bpbs" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-question admonition" id="question">
+<p class="admonition-title">Question</p>
+<p>Compare imaginary and real part of <span class="math notranslate nohighlight">\(\mathbf{B}_s\)</span> <a class="reference internal" href="#half-b-imag"><span class="std std-numref">Fig. 102</span></a> and <a class="reference internal" href="#half-bpbs"><span class="std std-numref">Fig. 103</span></a> b. What is the main difference? Which component is more sensitive to the near surface?</p>
+</div>
+<p>Considering airborne EM survey or small-loop EM survey often</p>
+<figure class="align-center" id="half-b-data">
+<a class="reference internal image-reference" href="../../../_images/Half_B_data.png"><img alt="../../../_images/Half_B_data.png" src="../../../_images/Half_B_data.png" style="width: 566.5px; height: 201.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Meausured real component of <span class="math notranslate nohighlight">\(B_z\)</span> data as a function of frequency at Rx when Tx-Rx offset is 10 m. Total a) and secondary b) <span class="math notranslate nohighlight">\(B_z\)</span>.</span><a class="headerlink" href="#half-b-data" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can use below link to play with the app that we used to run a given simulation.</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/geoscixyz/em_apps/master?filepath=notebooks%2FFDEM_VMD_LayeredEarth.ipynb"><img alt="http://mybinder.org/badge.svg" class="align-center" src="http://mybinder.org/badge.svg" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Using the app introduced, now we are going to run suite of simulations to see impact of four main factors to EM fields due to inductive source excitation:</p>
+<ul class="simple">
+<li><p>Frequency</p></li>
+<li><p>Tx height</p></li>
+<li><p>Conductivity</p></li>
+<li><p>Susceptibility</p></li>
+</ul>
+<section id="frequency">
+<h2>Frequency<a class="headerlink" href="#frequency" title="Link to this heading"></a></h2>
+<p>With the same setup, now we vary frequency from 10 <sup>6</sup> to 10 <sup>3</sup>. We may expect that the lower the frequency the deeper information. <a class="reference internal" href="#half-e-freq"><span class="std std-numref">Fig. 105</span></a> shows current density in <span class="math notranslate nohighlight">\(y\)</span>-direction at four different frequencies: 10 <sup>5</sup>, 10 <sup>4</sup>, 10 <sup>3</sup>, and 10 <sup>2</sup>. As the frequency decreases, distribution of currents are more spreaded indicating the lower frequency has deeper depth information. Amplitude of the current increases as frequency increases.</p>
+<figure class="align-center" id="half-e-freq">
+<a class="reference internal image-reference" href="../../../_images/Half_E_freq.png"><img alt="../../../_images/Half_E_freq.png" src="../../../_images/Half_E_freq.png" style="width: 1422.0px; height: 1099.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Real part of <span class="math notranslate nohighlight">\(E_y\)</span>  in <span class="math notranslate nohighlight">\(x\text{-}z\)</span> plane at 10 <sup>5</sup> Hz a), 10 <sup>4</sup> Hz a), 10 <sup>3</sup> Hz a), and 10 <sup>2</sup> Hz d).</span><a class="headerlink" href="#half-e-freq" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="tx-height">
+<h2>Tx height<a class="headerlink" href="#tx-height" title="Link to this heading"></a></h2>
+<p>Previously Tx height (<span class="math notranslate nohighlight">\(z\)</span>) was 30 m similar to airborne EM survey. Then what happens if we lower the <span class="math notranslate nohighlight">\(z\)</span> to 0 m? This can be considered as a small-loop EM survey such as EM-31 on the ground. Here, we use different <span class="math notranslate nohighlight">\(\sigma\)</span> = 0.1 S/m to emphasize difference in the results of two simulations, and fix frequency as 10 KHz. <a class="reference internal" href="#half-bs-height"><span class="std std-numref">Fig. 106</span></a> a and b respecively show the the imaginary part of <span class="math notranslate nohighlight">\(B_z\)</span> at <span class="math notranslate nohighlight">\(z\)</span> = 0 and <span class="math notranslate nohighlight">\(z\)</span> = 30 m. When the source is located right at the surface, magnetic flux is much more localized close to the near surface. However, when Tx height is increased to 30 m, magnetic flux has much distributed to both deeper depth and greater horizontal extent. This will indicate different resolution power in a) small-loop and b) airborne EM systems. First a small-loop EM survey will have much higher resolution to small near surface structures such as re-bar and UXO compared to an airborne EM survey. In contrast, an airborne EM survey will cover much greater volume of earth both in horizontal and vertical directions (i.e. greater depth of investigation). Similar difference can be recognized in the observed data. <a class="reference internal" href="#half-bs-height-data"><span class="std std-numref">Fig. 107</span></a> shows corresponding <span class="math notranslate nohighlight">\(B_z\)</span> data at a receiver location marked as red in <a class="reference internal" href="#half-bs-height"><span class="std std-numref">Fig. 106</span></a>. Here the offset between Tx and Rx is 10 m. Changes in measured response are much more significant when <span class="math notranslate nohighlight">\(z\)</span> = 0 m compared to <span class="math notranslate nohighlight">\(z\)</span> = 30 m. Especially, when <span class="math notranslate nohighlight">\(z\)</span> = 0 m imaginary part of <span class="math notranslate nohighlight">\(B_z\)</span> shows sign reversal near 40 KHz , whereas when <span class="math notranslate nohighlight">\(z\)</span> = 30 m no sign reversal are occurred.</p>
+<figure class="align-center" id="half-bs-height">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_height.png"><img alt="../../../_images/Half_Bs_height.png" src="../../../_images/Half_Bs_height.png" style="width: 1421.0px; height: 554.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">Imaginary part of <span class="math notranslate nohighlight">\(B_z\)</span> in <span class="math notranslate nohighlight">\(x \text{-} z\)</span> plane. At a) z = 0 m and b) z = 30 m.</span><a class="headerlink" href="#half-bs-height" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="half-bs-height-data">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_height_data.png"><img alt="../../../_images/Half_Bs_height_data.png" src="../../../_images/Half_Bs_height_data.png" style="width: 566.5px; height: 201.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Meausured imaginary component of <span class="math notranslate nohighlight">\(B_z\)</span> data as a function of frequency at Rx when Tx-Rx offset is 10 m.</span><a class="headerlink" href="#half-bs-height-data" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="conductivity">
+<h2>Conductivity<a class="headerlink" href="#conductivity" title="Link to this heading"></a></h2>
+<p>Often a main goal of inductive source EM survey is imaging conductivity structure of the earth and for this, understanding how EM fields changes due to conductivity will be crucial. Here we assumed half-space model, hence we consider changes in a half-space conductivity value. <a class="reference internal" href="#half-bs-cond"><span class="std std-numref">Fig. 108</span></a> a and b show real part of <span class="math notranslate nohighlight">\(B_z\)</span> component when <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> is 0.1 S/m and 0.01 S/m, respectively. When <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> is more conductive, EM fields decays faster, and hence <a class="reference internal" href="#half-bs-cond"><span class="std std-numref">Fig. 108</span></a> a shows much localized distribution compared to <a class="reference internal" href="#half-bs-cond"><span class="std std-numref">Fig. 108</span></a> b. This also indicates, conductive ground has much limited depth of investigation compared to resistive ground. <a class="reference internal" href="#half-bs-cond-data"><span class="std std-numref">Fig. 109</span></a> show shows corresponding <span class="math notranslate nohighlight">\(B_z\)</span> data for both conductivity values.</p>
+<figure class="align-center" id="half-bs-cond">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_cond.png"><img alt="../../../_images/Half_Bs_cond.png" src="../../../_images/Half_Bs_cond.png" style="width: 1421.0px; height: 554.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 108 </span><span class="caption-text">Real part of <span class="math notranslate nohighlight">\(B_z\)</span>-direction in <span class="math notranslate nohighlight">\(x\text{-}z\)</span> plane. <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> = 0.1 S/m a) and 0.01 S/m b).</span><a class="headerlink" href="#half-bs-cond" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="half-bs-cond-data">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_cond_data.png"><img alt="../../../_images/Half_Bs_cond_data.png" src="../../../_images/Half_Bs_cond_data.png" style="width: 566.5px; height: 201.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Meausured real component of <span class="math notranslate nohighlight">\(B_z\)</span> data as a function of frequency at Rx when Tx-Rx offset is 10 m. <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> = 0.1 S/m a) and 0.01 S/m b).</span><a class="headerlink" href="#half-bs-cond-data" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="susceptibility">
+<h2>Susceptibility<a class="headerlink" href="#susceptibility" title="Link to this heading"></a></h2>
+<p>We consider effect of magnetic currents shown in Eq. <a class="reference internal" href="#equation-btotal">(382)</a>. Upon the definition of primary magnetic flux <span class="math notranslate nohighlight">\(\mathbf{B}^p\)</span>, effects of susceptibility is not contained in <span class="math notranslate nohighlight">\(\mathbf{B}^p\)</span>, but included in secondary flux <span class="math notranslate nohighlight">\(\mathbf{B}^s\)</span>. Similar to the physics of magnetic survey, even static magnetic flux (zero frequency) will excite susceptible medium in the direction of primary magnetic flux indicating this secondary magnetic flux will be in the same direction of primary magnetic flux.
+<a class="reference internal" href="#half-bs-sus"><span class="std std-numref">Fig. 110</span></a> a and b show real part of magnetic flux when <span class="math notranslate nohighlight">\(\chi`=0.1 and :math:\)</span>chi`=0, respectively. Difference between these two cases are drastic especially at near surface. And at location where Rx is located direction of the magnetic flux is opposite. <a class="reference internal" href="#half-bs-sus-data"><span class="std std-numref">Fig. 111</span></a> shows measured <span class="math notranslate nohighlight">\(B_z\)</span> component for those two cases. When frequency is low, real part of <span class="math notranslate nohighlight">\(B_z\)</span> when <span class="math notranslate nohighlight">\(\chi\)</span> = 0.1 has positive sign, whereas the sign changes to negative when frequency gets higher. Imaginary part of <span class="math notranslate nohighlight">\(B_z\)</span> for two cases do not show significant difference indicating effects of susceptibility is minor in this component.</p>
+<div class="admonition-question admonition" id="question">
+<p class="admonition-title">Question</p>
+<p>Why susceptibility effects is significant at low frequency, real part of <span class="math notranslate nohighlight">\(B_z\)</span> data?</p>
+</div>
+<figure class="align-center" id="half-bs-sus">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_sus.png"><img alt="../../../_images/Half_Bs_sus.png" src="../../../_images/Half_Bs_sus.png" style="width: 1421.0px; height: 554.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Real part of <span class="math notranslate nohighlight">\(B_z\)</span>-direction in <span class="math notranslate nohighlight">\(x\text{-}z\)</span> plane. <span class="math notranslate nohighlight">\(\chi_{earth}\)</span> = 0.1 a) and 0 b). Frequency is 1000 Hz, and <span class="math notranslate nohighlight">\(\sigma_{earth}\)</span> is fixed to 0.01 S/m.</span><a class="headerlink" href="#half-bs-sus" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="half-bs-sus-data">
+<a class="reference internal image-reference" href="../../../_images/Half_Bs_sus_data.png"><img alt="../../../_images/Half_Bs_sus_data.png" src="../../../_images/Half_Bs_sus_data.png" style="width: 566.5px; height: 201.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 111 </span><span class="caption-text">Meausured real component of <span class="math notranslate nohighlight">\(B_z\)</span> data as a function of frequency at Rx when Tx-Rx offset is 10 m. <span class="math notranslate nohighlight">\(\chi_{earth}\)</span> = 0.1 a) and 0 b). <span class="math notranslate nohighlight">\(\sigma{earth}\)</span> is fixed to 0.01 S/m.</span><a class="headerlink" href="#half-bs-sus-data" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Inductive sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="layered_earth.html" class="btn btn-neutral float-right" title="Layered Earth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

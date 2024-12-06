@@ -1,0 +1,292 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxwell’s Equations with Electromagnetic Sources &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Dipole Sources in Homogeneous Media" href="dipole_sources_in_homogeneous_media/index.html" />
+    <link rel="prev" title="Plane Waves within an N-Layered Earth" href="reflection_and_refraction/impedance_layeredearth.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Maxwell’s Equations with Electromagnetic Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#electrical-sources">Electrical Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magnetic-sources">Magnetic Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restating-maxwell-s-equations">Restating Maxwell’s Equations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#differential-form-in-the-time-domain">Differential Form in the Time Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-form-in-the-frequency-domain">Differential Form in the Frequency Domain</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Maxwell I: Fundamentals</a></li>
+      <li class="breadcrumb-item active">Maxwell’s Equations with Electromagnetic Sources</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/maxwell_sources.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="maxwell-s-equations-with-electromagnetic-sources">
+<span id="maxwell-fundamentals-sources"></span><h1>Maxwell’s Equations with Electromagnetic Sources<a class="headerlink" href="#maxwell-s-equations-with-electromagnetic-sources" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, we show how Maxwell’s equations are altered in the presence of electromagnetic sources. The two principle types of electromagnetic sources are discussed.</p>
+</div>
+<p>In many cases, the fields and fluxes within a region result from the presence of an electromagnetic source. Because Maxwell’s equations fully characterize all electromagnetic interactions, they must also accommodate the existence of electromagnetic sources. There are two principle types of electromagnetic sources: electrical sources (<span class="math notranslate nohighlight">\(\mathbf{j_e^s}\)</span>) and magnetic sources (<span class="math notranslate nohighlight">\(\mathbf{j_m^s}\)</span>).</p>
+<section id="electrical-sources">
+<h2>Electrical Sources<a class="headerlink" href="#electrical-sources" title="Link to this heading"></a></h2>
+<p>In Maxwell’s equations, electrical sources are represented using a current density (<span class="math notranslate nohighlight">\(\mathbf{j_e^s}\)</span>). Thus they have units [A/m <span class="math notranslate nohighlight">\(\! ^2\)</span>]. Electrical sources may correspond to an <a class="reference internal" href="dipole_sources_in_homogeneous_media/electric_dipole_definition/index.html#definition-electric-dipole-index"><span class="std std-ref">electrical current dipole</span></a> or a current-carrying loop of wire.</p>
+<p>According to the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell</span></a> equation, electrical currents are responsible for generating magnetic fluxes. By accounting for the electrical source term, the Ampere-Maxwell equation becomes:</p>
+<div class="math notranslate nohighlight">
+\[\nabla\times \mathbf{h} - \mathbf{j_f} - \frac{\partial \mathbf{d}}{\partial t} = \mathbf{j_e^s}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{j_f}\)</span> is now the free current density not accounted for by the source term. The total current density within the region can be treated as the sum of the source current density and the remaining free current density (i.e. <span class="math notranslate nohighlight">\(\mathbf{j_{tot} = j_e^s + j_f}\)</span>). In the frequency domain, the Ampere-Maxwell equation becomes:</p>
+<div class="math notranslate nohighlight">
+\[\nabla\times \mathbf{H} - \mathbf{J_f} - i\omega \mathbf{D} = \mathbf{J_e^s}\]</div>
+<p>where the electrical source term is given by <span class="math notranslate nohighlight">\(\mathbf{J_e^s}\)</span> and the remaining free current density is given by <span class="math notranslate nohighlight">\(\mathbf{J_f}\)</span>.</p>
+</section>
+<section id="magnetic-sources">
+<h2>Magnetic Sources<a class="headerlink" href="#magnetic-sources" title="Link to this heading"></a></h2>
+<p>In Maxwell’s equations, the magnetic source is a magnetic flux density (<span class="math notranslate nohighlight">\(\mathbf{b_m^s}\)</span>); which has units [T]. One example of a magnetic source is the <a class="reference internal" href="dipole_sources_in_homogeneous_media/magnetic_dipole_definition/index.html#definition-magnetic-dipole-index"><span class="std std-ref">magnetic dipole</span></a>.</p>
+<p>According to <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a>, time-varying magnetic fluxes induce rotational electric fields. Note however, that dimensional analysis of Faraday’s law shows the right hand side has units [T/s]. As a result, the magnetic source term is commonly defined as <span class="math notranslate nohighlight">\(\mathbf{j_m^s}\)</span>, where:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{j_m^s} = - \frac{\partial \mathbf{b_m^s}}{\partial t}\]</div>
+<p>By this convention, the magnetic source term can be thought of as a magnetic current density. In the presence of a magnetic source term, Faraday’s law becomes:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times \mathbf{e} + \frac{\partial \mathbf{b}}{\partial t} = \mathbf{j_m^s}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is the magnetic flux density not accounted for within the source term. The total density of magnetic flux within the region can be treated as the sum of the source flux density and the remaining flux density (i.e. <span class="math notranslate nohighlight">\(\mathbf{b_{tot} = b_m^s + b}\)</span>). In the frequency domain, the source magnetic flux density is given by <span class="math notranslate nohighlight">\(\mathbf{B_m^s}\)</span>. The corresponding source term is therefore defined as:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{J_m^s} = -i\omega\mathbf{B_m^s}\]</div>
+<p>and Faraday’s law is give by:</p>
+<div class="math notranslate nohighlight">
+\[\nabla\times \mathbf{E} + i\omega\mathbf{B} = \mathbf{J_m^s}\]</div>
+</section>
+<section id="restating-maxwell-s-equations">
+<h2>Restating Maxwell’s Equations<a class="headerlink" href="#restating-maxwell-s-equations" title="Link to this heading"></a></h2>
+<p>The existence of electrical and magnetic sources results in alterations for the Maxwell-Ampere equation and Faraday’s law, respectively. Let us now restate Maxwell’s equations in differential form in the presence of electromagnetic sources.</p>
+<section id="differential-form-in-the-time-domain">
+<h3>Differential Form in the Time Domain<a class="headerlink" href="#differential-form-in-the-time-domain" title="Link to this heading"></a></h3>
+<p>Here, we present differential forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the time domain.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:}\;\;  &amp;\nabla\cdot\mathbf{d}=\rho_f \\
+\textbf{Gauss for B-field:}\;\;  &amp;\nabla\cdot\mathbf{b}=0 \\
+\textbf{Faraday:}          \;\;  &amp;\nabla\times\mathbf{e} + \dfrac{\partial \mathbf{b}}{\partial t} = \mathbf{j_m^s} \\
+\textbf{Ampere-Maxwell:}   \;\;  &amp;\nabla\times\mathbf{h} - \mathbf{j_f} - \dfrac{\partial \mathbf{d}}{\partial t} = \mathbf{j_e^s}
+\end{align}\end{split}\]</div>
+<p>where the following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{j} &amp;= \sigma \mathbf{e}\\
+\mathbf{b} &amp;= \mu \mathbf{h}\\
+\mathbf{d} &amp;= \varepsilon \mathbf{e}
+\end{align}\end{split}\]</div>
+<p>If we consider a <strong>homogeneous medium</strong> and combined the Maxwell-Ampere equation and Faraday’s law to obtain the wave equation, we see that for an <strong>electrical source</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \mathbf{e} - \mu\sigma \frac{\partial \mathbf{e}}{\partial t} - \mu \varepsilon \frac{\partial^2 \mathbf{e}}{\partial t^2} = \mu \frac{\partial \mathbf{j_e^s}}{\partial t}\]</div>
+<p>As we can see, the forcing term in the above wave equation depends on the time-derivative of an electric current density. For a <strong>magnetic source</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \mathbf{h} - \mu\sigma \frac{\partial \mathbf{h}}{\partial t} - \mu \varepsilon \frac{\partial^2 \mathbf{h}}{\partial t^2} = - \sigma \mathbf{j_m^s} - \mu \frac{\partial \mathbf{j_m^s}}{\partial t}\]</div>
+<p>where the forcing term contains both first and second order time-derivatives.</p>
+</section>
+<section id="differential-form-in-the-frequency-domain">
+<h3>Differential Form in the Frequency Domain<a class="headerlink" href="#differential-form-in-the-frequency-domain" title="Link to this heading"></a></h3>
+<p>Here, we present differential forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the frequency domain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:} \;\; &amp;\nabla\cdot\mathbf{D}=\rho_f \\
+\textbf{Gauss for B-field:} \;\; &amp;\nabla\cdot\mathbf{B}=0 \\
+\textbf{Faraday:}           \;\; &amp;\nabla\times\mathbf{E} + i\omega\mathbf{B} = \mathbf{J_m^s} \\
+\textbf{Ampere-Maxwell:}    \;\; &amp;\nabla\times\mathbf{H} - \mathbf{J_f} - i\omega \mathbf{D} = \mathbf{J_e^s}
+\end{align}\end{split}\]</div>
+<p>where the following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{J} &amp;= \sigma \mathbf{E}\\
+\mathbf{B} &amp;= \mu \mathbf{H}\\
+\mathbf{D} &amp;= \varepsilon \mathbf{E}
+\end{align}\end{split}\]</div>
+<p>If we consider a <strong>homogeneous medium</strong> and combined the Maxwell-Ampere equation and Faraday’s law to obtain the Helmholtz equation, we see that for an <strong>electrical source</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \mathbf{E} + k^2 \mathbf{E} = i\omega\mu \mathbf{J_e^s}\]</div>
+<p>where the magnitude of the forcing term increases linearly with respect to the angular frequency. For a <strong>magnetic source</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \mathbf{H} + k^2 \mathbf{H} = - \big ( \sigma + i\omega\varepsilon \big ) \mathbf{J_m^s}\]</div>
+<p>where the right-hand side depends on both the conductive and dielectric properties of the medium. Recall that the <a class="reference internal" href="harmonic_planewaves_homogeneous/wavenumber.html#harmonic-planewaves-homogeneous-wavenumber"><span class="std std-ref">wavenumber</span></a> is given by:</p>
+<div class="math notranslate nohighlight">
+\[k = \sqrt{\omega^2 \mu \varepsilon - i\omega \mu\sigma}\]</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="reflection_and_refraction/impedance_layeredearth.html" class="btn btn-neutral float-left" title="Plane Waves within an N-Layered Earth" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dipole_sources_in_homogeneous_media/index.html" class="btn btn-neutral float-right" title="Dipole Sources in Homogeneous Media" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

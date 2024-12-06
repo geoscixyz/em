@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transient Response &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Impulse Response" href="impulse_response.html" />
+    <link rel="prev" title="General Formulation" href="general_formulation.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Maxwell IV: TDEM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../governing_equations.html">Governing Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuitmodel_for_eminduction/index.html">Circuit Model for EM Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grounded_sources/index.html">Grounded sources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Inductive sources</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../halfspace.html">Halfspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layered_earth.html">Layered Earth</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Sphere</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#outline">Outline</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plate.html">Plate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../footprint_and_depth_of_investigation.html">Footprint and depth of investigation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Maxwell IV: TDEM</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Inductive sources</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Sphere</a></li>
+      <li class="breadcrumb-item active">Transient Response</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell4_tdem/inductive_sources/sphere/transient_response.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="transient-response">
+<span id="spheretem-transient-response"></span><h1>Transient Response<a class="headerlink" href="#transient-response" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>The transient response of an object defines its step-off excitation; that is, the response by an object once a static field is removed.
+Here, we analyze the sphere’s transient response in terms of the induced magnetic dipole moment.
+The dependence of the transient response on the sphere’s physical properties are examined for permeable and non-permeable spheres.</p>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The field <span class="math notranslate nohighlight">\(h_0(t)\)</span> which induces a transient response from the sphere can be described using the following expression:</p>
+<div class="math notranslate nohighlight" id="equation-eqstepoffgendef">
+<span class="eqno">(439)<a class="headerlink" href="#equation-eqstepoffgendef" title="Link to this equation"></a></span>\[h_0 (t) = H_0 u(-t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(u(t)\)</span> is the unit-step function and <span class="math notranslate nohighlight">\(H_0\)</span> is the amplitude of the applied field at <span class="math notranslate nohighlight">\(t\leq 0\)</span>.
+From the previous section, the induced magnetic moment <span class="math notranslate nohighlight">\(m(t)\)</span> characterizing the sphere is defined by a convolution:</p>
+<div class="math notranslate nohighlight" id="equation-eqdipolemomentconvstepofftransient">
+<span class="eqno">(440)<a class="headerlink" href="#equation-eqdipolemomentconvstepofftransient" title="Link to this equation"></a></span>\[m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \int_{-\infty}^\infty \chi (\tau) h (t-\tau )d\tau\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi (t)\)</span> represents the excitation’s impulse response.
+By substituting Eq. <a class="reference internal" href="#equation-eqstepoffgendef">(439)</a> into Eq. <a class="reference internal" href="#equation-eqdipolemomentconvstepofftransient">(440)</a> we obtain the following:</p>
+<div class="math notranslate nohighlight" id="equation-eqdipolemomentconvstepofftransient2">
+<span class="eqno">(441)<a class="headerlink" href="#equation-eqdipolemomentconvstepofftransient2" title="Link to this equation"></a></span>\[m(t) = \Bigg ( \frac{4\pi}{3} R^3 \Bigg ) \Bigg ( \int_{t}^\infty \chi (\tau) d\tau \Bigg ) H_0\]</div>
+<p>From Eq. <a class="reference internal" href="#equation-eqdipolemomentconvstepofftransient2">(441)</a>, the sphere’s transient response is linearly proportional to the strength on the inducing field.
+The characteristic behavior of the decay at time <span class="math notranslate nohighlight">\(t\)</span> is determine by integrating the impulse response from <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span>.
+Our analysis of the transient response is done by examining analytic solutions to Eq. <a class="reference internal" href="#equation-eqdipolemomentconvstepofftransient2">(441)</a> for permeable and non-permeable spheres.</p>
+</section>
+<section id="conductive-sphere">
+<h2>Conductive Sphere<a class="headerlink" href="#conductive-sphere" title="Link to this heading"></a></h2>
+<p>Here, we consider the transient response from a conductive and non-permeable (<span class="math notranslate nohighlight">\(\mu = \mu_0\)</span>) sphere.
+For a step-off excitation, the induced dipole moment for the sphere is given by:</p>
+<div class="math notranslate nohighlight" id="equation-eqmstepoffconductive">
+<span class="eqno">(442)<a class="headerlink" href="#equation-eqmstepoffconductive" title="Link to this equation"></a></span>\[\begin{split}\begin{split}
+m(t) = \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg ( \frac{9}{2} \Bigg ) \Bigg [ \frac{1}{3} + \frac{t}{\beta^2} - \frac{2}{\beta} \sqrt{\frac{t}{\pi}} \Bigg ( 1 + 2 &amp; \sum_{n=1}^\infty e^{-(n \beta)^2/t} \Bigg ) \; ... \\
+&amp;+ 4 \sum_{n=1}^\infty n \, \textrm{erfc} \Bigg ( \frac{n \beta}{\sqrt{t}} \Bigg ) \Bigg ] H_0 \, u(t)
+\end{split}\end{split}\]</div>
+<p>where:</p>
+<div class="math notranslate nohighlight" id="equation-eqbetagendef2">
+<span class="eqno">(443)<a class="headerlink" href="#equation-eqbetagendef2" title="Link to this equation"></a></span>\[\beta = (\mu_0 \sigma )^{1/2} R\]</div>
+<p>and erfc(<span class="math notranslate nohighlight">\(z\)</span>) is the complementary error function given by:</p>
+<div class="math notranslate nohighlight" id="equation-eqcomplementaryerrorfcn">
+<span class="eqno">(444)<a class="headerlink" href="#equation-eqcomplementaryerrorfcn" title="Link to this equation"></a></span>\[\textrm{erfc}(z) = \frac{2}{\sqrt{\pi}} \int_z^\infty e^{-t^2} dt\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-eqmstepoffconductive">(442)</a>, the sphere does not experience an excitation while the field is applied; as electromagnetic induction is zero.
+At <span class="math notranslate nohighlight">\(t=0\)</span> however, the time-dependent change in the applied magnetic field induces eddy currents within the sphere.
+These eddy currents diffuse over time, dependent on the size and conductivity of the sphere.
+The strength of the induced current, and thus the strength of the sphere’s inductive response, is characterized by the sphere’s magnetic dipole moment.</p>
+<p>The rate of decay for the sphere’s magnetic dipole moment can be obtained by taking the derivative of Eq. <a class="reference internal" href="#equation-eqmstepoffconductive">(442)</a>.
+For <span class="math notranslate nohighlight">\(t&gt;0\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eqdmdtstepoffconductive">
+<span class="eqno">(445)<a class="headerlink" href="#equation-eqdmdtstepoffconductive" title="Link to this equation"></a></span>\[\frac{d m}{dt} = \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg ( \frac{9}{2} \Bigg ) \Bigg [ \frac{1}{\beta^2} - \frac{1}{\beta \sqrt{\pi t}} \Bigg ( 1 + 2 \sum_{n=1}^\infty e^{-(n\beta)^2/t} \Bigg ) \Bigg ] H_0\]</div>
+<p>As an example, let us consider a sphere of radius <span class="math notranslate nohighlight">\(R=10\)</span> m.
+The sphere is subject to a unit step-off excitation; thus <span class="math notranslate nohighlight">\(H_0=1\)</span>.
+In <a class="reference internal" href="#transientconductive"><span class="std std-numref">Fig. 140</span></a>, we show the transient response for several conductivities.
+We can see that for low conductivities, the strength of the induced dipole moment decays much more quickly.
+Since <span class="math notranslate nohighlight">\(\beta\)</span> increases as a function of <span class="math notranslate nohighlight">\(R\)</span> as well as <span class="math notranslate nohighlight">\(\sigma\)</span>, we expect to observe a similar relationship in terms of the sphere’s radius.
+Additionally, we see that for early times, the rate of decay is proportional to <span class="math notranslate nohighlight">\(t^{-1/2}\)</span>.</p>
+<figure class="align-default" id="transientconductive">
+<a class="reference internal image-reference" href="../../../../_images/figTransientConductive.png"><img alt="../../../../_images/figTransientConductive.png" src="../../../../_images/figTransientConductive.png" style="width: 98%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 140 </span><span class="caption-text">Transient response for a non-permeable sphere for several conductivities.</span><a class="headerlink" href="#transientconductive" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="conductive-and-magnetically-permeable-sphere">
+<h2>Conductive and Magnetically Permeable Sphere<a class="headerlink" href="#conductive-and-magnetically-permeable-sphere" title="Link to this heading"></a></h2>
+<p>Here, we consider the transient response from a conductive and non-permeable sphere.
+For a step-off excitation, the induced dipole moment for the sphere is given by:</p>
+<div class="math notranslate nohighlight" id="equation-eqmstepoffpermeable">
+<span class="eqno">(446)<a class="headerlink" href="#equation-eqmstepoffpermeable" title="Link to this equation"></a></span>\[m(t) = \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg [ \frac{3}{2} \Bigg ( \frac{2 (\mu_r - 1)}{\mu_r + 2} u(-t) + 6 \mu_r \, \sum_{n=1}^\infty \frac{ e^{- \, \xi_n^2 t/\beta^2}}{(\mu_r + 2)(\mu_r - 1)+\xi_n^2} u(t) \Bigg ) \Bigg ] H_0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_r = \mu/\mu_0\)</span> is the relative permeability of the sphere and:</p>
+<div class="math notranslate nohighlight" id="equation-eqbetagendeftransient">
+<span class="eqno">(447)<a class="headerlink" href="#equation-eqbetagendeftransient" title="Link to this equation"></a></span>\[\beta = \big ( \mu \sigma \big )^{1/2} R\]</div>
+<p>Coefficients <span class="math notranslate nohighlight">\(\xi_n\)</span> within the sum are defined by:</p>
+<div class="math notranslate nohighlight" id="equation-eqcoefficientgendef">
+<span class="eqno">(448)<a class="headerlink" href="#equation-eqcoefficientgendef" title="Link to this equation"></a></span>\[\textrm{tan} \, \xi_n = \frac{(\mu_r - 1)\xi_n}{\mu_r - 1 + \xi_n^2}\]</div>
+<p>From Wait and Spies (<span id="id1">[<a class="reference internal" href="../../../references.html#id45" title="J. R. Wait and K. P. Spies. Quasi-static transient response of a conducting permeable sphere. Geophysics, 34(5):789-792, 1969.">WS69</a>]</span>), these coefficients are spaced roughly <span class="math notranslate nohighlight">\(\pi\)</span> apart such that:</p>
+<div class="math notranslate nohighlight" id="equation-eqcoefficientseparation">
+<span class="eqno">(449)<a class="headerlink" href="#equation-eqcoefficientseparation" title="Link to this equation"></a></span>\[n\pi \leq \xi_n \leq (n+1/2) \pi\]</div>
+<p>The value of each coefficient may be found iteratively using very few iterations (&lt; 10) according to:</p>
+<div class="math notranslate nohighlight" id="equation-eqcoefficientiterative">
+<span class="eqno">(450)<a class="headerlink" href="#equation-eqcoefficientiterative" title="Link to this equation"></a></span>\[\xi_n^{(k+1)} = n\pi + \textrm{tan}^{-1}\Bigg ( \frac{(\mu_r - 1) \xi_n^{(k)}}{\mu_r - 1 + (\xi_n^{(k)} )^2} \Bigg )\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-eqmstepoffpermeable">(446)</a>, the sphere’s response is separated into two terms; one for <span class="math notranslate nohighlight">\(t\leq 0\)</span> and one for <span class="math notranslate nohighlight">\(t&gt;0\)</span>.
+The first term, which is non-zero for <span class="math notranslate nohighlight">\(t \leq 0\)</span>, represents the sphere’s steady-state magnetic response.
+As we can see from Eq. <a class="reference internal" href="#equation-eqmstepoffpermeable">(446)</a>, this response depends only on the sphere’s magnetic properties.
+A detailed description of the steady-state magnetic response of a permeable sphere can be found <a class="reference internal" href="../../../maxwell3_fdem/inductive_sources/sphere/sphereFEM_excitation_factor.html#spherefem-excitation-factor-static"><span class="std std-ref">here</span></a>.
+The induced dipole moment at <span class="math notranslate nohighlight">\(t&gt;0\)</span> represents the sphere’s inductive response.
+When comparing Eqs. <a class="reference internal" href="#equation-eqmstepoffconductive">(442)</a> and <a class="reference internal" href="#equation-eqmstepoffpermeable">(446)</a>, we see that the sphere’s transient response now depends on the magnetic permeability.</p>
+<p>The rate of decay for the sphere’s magnetic dipole moment can be obtained by taking the derivative of Eq. <a class="reference internal" href="#equation-eqmstepoffpermeable">(446)</a>.
+For <span class="math notranslate nohighlight">\(t&gt;0\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-dmdtstepoffpermeabletransient">
+<span class="eqno">(451)<a class="headerlink" href="#equation-dmdtstepoffpermeabletransient" title="Link to this equation"></a></span>\[\frac{d m}{dt} = - \, \Bigg ( \frac{4\pi}{3}R^3 \Bigg ) \Bigg [ 9\mu_r \, \sum_{n=1}^\infty \frac{ \xi_n^2 \, e^{- \, \xi_n^2 t/\beta^2}}{\beta^2 \big [ (\mu_r + 2)(\mu_r - 1)+\xi_n^2 \big ]} \Bigg ] H_0\]</div>
+<p>As an example, let us consider a sphere of radius <span class="math notranslate nohighlight">\(R=10\)</span> m.
+The sphere is subject to a unit step-off excitation; thus <span class="math notranslate nohighlight">\(H_0=1\)</span>.
+In <a class="reference internal" href="#transientpermeable"><span class="std std-numref">Fig. 141</span></a>, we show the transient response for several relative permeabilities.
+For <span class="math notranslate nohighlight">\(\mu_r &lt; 6\)</span>, the strength of the inductive response increases with respect to the relative permeability but ultimately shows similar behaviour with respect to <span class="math notranslate nohighlight">\(t\)</span>.
+For large relative permeabilities however, the characteristic decay of the induced dipole moment is altered by the sphere’s magnetic properties.</p>
+<figure class="align-default" id="transientpermeable">
+<a class="reference internal image-reference" href="../../../../_images/figTransientPermeable.png"><img alt="../../../../_images/figTransientPermeable.png" src="../../../../_images/figTransientPermeable.png" style="width: 98%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 141 </span><span class="caption-text">Transient response from a conductive and permeable sphere for several relative permeabilities.</span><a class="headerlink" href="#transientpermeable" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general_formulation.html" class="btn btn-neutral float-left" title="General Formulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="impulse_response.html" class="btn btn-neutral float-right" title="Impulse Response" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

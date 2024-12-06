@@ -1,0 +1,259 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data-Driven CSEM Inversion &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Model-Driven MT Inversion" href="modelMT.html" />
+    <link rel="prev" title="Data-Driven MT Inversion" href="dataMT.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Red Sea</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataMT.html">Data-Driven MT Inversion</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Data-Driven CSEM Inversion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing">Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interpretation">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="modelMT.html">Model-Driven MT Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modelCSEM.html">Model-Driven CSEM Inversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Red Sea</a></li>
+      <li class="breadcrumb-item active">Data-Driven CSEM Inversion</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/red_sea/dataCSEM.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-driven-csem-inversion">
+<span id="red-sea-datacsem"></span><h1>Data-Driven CSEM Inversion<a class="headerlink" href="#data-driven-csem-inversion" title="Link to this heading"></a></h1>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h2>
+<p>CSEM data plotted as a function of transmitter-receiver offset is shown in <a class="reference internal" href="#fig-rea-sea-sensmvo"><span class="std std-numref">Fig. 528</span></a>. Here, subscripts x and y are used to denote inline and perpendicular components, respectively. A preliminary look at the recorded CSEM data suggests that features such as submarine canyons and mountains introduce noticeable distortions in the recorded ﬁelds; implying the existence of 3D structures. This observation underlies the need for an appropriate representation of the sea-bottom topography during the data interpretation and inversion phases. The ﬁrst four frequencies (0.2, 0.4, 0.6, and 0.8) show good signal-to-noise at offsets of 25 km or more, whereas the higher harmonics (1.4 and 2.0 Hz) were less likely to show good signal-to-noise at offsets exceeding 20 km. The magnitude vs. offset (MVO) plots in <a class="reference internal" href="#fig-rea-sea-sensmvo"><span class="std std-numref">Fig. 528</span></a> show a remarkable level of signal for the <span class="math notranslate nohighlight">\(E_y\)</span> and <span class="math notranslate nohighlight">\(H_x\)</span> components, which should be absent for 1D geologies or 2D geologies which are symmetric to the source orientation; this behaviour further supports the presence of 3D structures.</p>
+<figure class="align-center" id="fig-rea-sea-sensmvo" style="width: 90%">
+<img alt="../../../_images/data_sens_MVO.png" src="../../../_images/data_sens_MVO.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 528 </span><span class="caption-text">CSEM data. (a) Inline components of the electric field (Ex) as a function of offset. (b) Perpendicular measurements of the electric and magnetic field at 0.2 Hz.</span><a class="headerlink" href="#fig-rea-sea-sensmvo" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The CSEM data exhibits both near-field and far field behaviours. The plane wave behaviour of the far field can be confirmed by calculating the phase and apparent resistivities from the <span class="math notranslate nohighlight">\(Z_{xy}\)</span> impedance tensor component at various frequencies and offsets along a particular acquisition line; where <span class="math notranslate nohighlight">\(Z_{xy} = E_x/H_y\)</span>. This is shown in <a class="reference internal" href="#fig-rea-sea-sensmvo2"><span class="std std-numref">Fig. 529</span></a>. The transition from the near-ﬁeld to the plane wave behavior is marked by stable estimates for the apparent resistivity and phase; i.e. the phase approaches 45 degrees and estimates of the apparent resistivity no longer change with respect to an increasing offset. As we can see, a larger offset is required before responses at lower frequencies exhibit plane wave behaviours. This transition generally takes place at offsets between 1 km to 2.5 km.</p>
+<figure class="align-center" id="fig-rea-sea-sensmvo2" style="width: 90%">
+<img alt="../../../_images/data_sens_MVO_2.png" src="../../../_images/data_sens_MVO_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 529 </span><span class="caption-text">Near and far-field behaviours in CSEM data (a) Apparent resistivities as a function of offset, obtained from the Zxy component of the impedance tensor. (b) Phase difference between Ex and Hy components as a function of offset.</span><a class="headerlink" href="#fig-rea-sea-sensmvo2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>There is a significant overlap in the frequency content (0.2 Hz to 2 Hz) contained within both the MT and CSEM datasets. In addition, the results summarized in <a class="reference internal" href="#fig-rea-sea-sensmvo2"><span class="std std-numref">Fig. 529</span></a> tell us that CSEM data exhibits similar propagation behaviour to MT at sufficient offset distances. As a result, we expect that MT and CSEM data are similarly sensitive to common geological features. A cursory example of this is shown in <a class="reference internal" href="#fig-rea-sea-res-map-interp"><span class="std std-numref">Fig. 530</span></a>. In this figure, we see that both the MT apparent resistivity attribute and Ex (inline) data from CSEM correlate reasonably well to subsurface geological structures (i.e. top of halite and the top of the LES).</p>
+<figure class="align-center" id="fig-rea-sea-res-map-interp" style="width: 90%">
+<img alt="../../../_images/apparent_res_map_interp.png" src="../../../_images/apparent_res_map_interp.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 530 </span><span class="caption-text">MT and CSEM data comparison to interpreted geological map (a) MT apparent resistivity attribute at 0.1 Hz (invariant mode). (b) the CSEM Ex field (inline direction) at 0.4 Hz. (c) Reference interpretation map of the top of the LES (orange) and halite (teal) surfaces.</span><a class="headerlink" href="#fig-rea-sea-res-map-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="processing">
+<h2>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h2>
+<p>Because the MT and CSEM data are sensitive to common geological structures, we expect independent inversion of MT and CSEM data to yield resistivity models with strong similarities. The data-driven inversion of CSEM data was carried out in a similar manner to that used to perform the 3D data-driven inversion of MT data. Relevant parameters for the inversion are summarized in <a class="reference internal" href="dataMT.html#fig-red-sea-model"><span class="std std-numref">Fig. 526</span></a>. Once again, the salt flood model obtained through the initial interpretation of WAZ data was used as a starting model. 3D CSEM inversion was also performed using the results from the 3D MT inversion as a starting model.</p>
+<p>For each starting model, the CSEM inversion begins by inverting the Ex (inline) component only, at a single frequency of 0.4 Hz. After obtaining a preliminary 3D resistivity model, the CSEM inversion progresses by adding additional frequencies as well as inline and broadside offset data. By running the inversion with two different starting models, we are able test the robustness of the data-driven 3D CSEM inversion approach to starting models.</p>
+</section>
+<section id="interpretation">
+<h2>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h2>
+<p>The results of the data-driven CSEM inversion approach ultimately validate the conclusions made during the synthetic modeling study. As expected, the CSEM inversion is able to resolve the base of the LES, however, it does not exhibit a significant sensitivity to the basement. The sensitivity to uplifted basement blocks is very important for exploration in the Red Sea because such structures represent primary drilling targets for the initial exploration phase. Additionally, the resistivity cross-sections displayed in <a class="reference internal" href="#fig-rea-sea-welllog-csem"><span class="std std-numref">Fig. 531</span></a> show that the final resistivity model depends significantly on the starting model. Using the MT inversion results as a starting model, we see that the CSEM inversion locates a conductor below the LES.</p>
+<p>Unlike the data-driven MT inversions, the CSEM inversions were unable to converge effectively to a global minimum of the solution and instead tended to stall in some local minima. Nevertheless, data-driven 3D CSEM inversions were able to provide first-order sensitivity to the geologic structures as shown by well results in Area-1 (<a class="reference internal" href="#fig-rea-sea-welllog-csem"><span class="std std-numref">Fig. 531</span></a>). The sharp resistivity increase at the top LES interface strongly impacts the performances of the data-driven CSEM inversion. For this reason, any improvement in the definition of the shallow resistivity model would benefit the inversion results and the convergence performances.</p>
+<p>Areas characterized by the prevalence of LES (i.e., mini-basins) exhibit complex CSEM responses. The alternating layers of conductive clastics (e.g. shales) with resistive evaporites generate effective anisotropy. This was proved using synthetic model responses and inversions, where the response of thin layering of isotropic materials with alternating high/low resistivities could be explained only by anisotropic CSEM inversion using two average resistivities Rh and Rv (Colombo and McNeice, 2017, personal communication). The study ultimately showed that such responses could be justified only by introducing anisotropic resistivity models. As a result, CSEM inversion which assumes isotropic resistivity may be insufficient for characterizing the subsurface geology and resistivity structure.</p>
+<figure class="align-center" id="fig-rea-sea-welllog-csem" style="width: 90%">
+<img alt="../../../_images/dataCSEM_well_compare.png" src="../../../_images/dataCSEM_well_compare.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 531 </span><span class="caption-text">Comparison of well log data to data-driven CSEM inversion results for two different starting models. (a) Salt flood model from interpretation of WAZ data. (b) Model from 3D data-driven MT inversion.</span><a class="headerlink" href="#fig-rea-sea-welllog-csem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dataMT.html" class="btn btn-neutral float-left" title="Data-Driven MT Inversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modelMT.html" class="btn btn-neutral float-right" title="Model-Driven MT Inversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

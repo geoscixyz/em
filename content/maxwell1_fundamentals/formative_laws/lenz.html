@@ -1,0 +1,253 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenz’s Law &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Overview of Maxwell’s Equations" href="../quick_guide_maxwell.html" />
+    <link rel="prev" title="Biot-Savart" href="biot_savart.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Formative Laws</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gauss_electric.html">Gauss’s Law for Electric Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coulomb.html">Gauss’s Law from Coulomb’s Law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gauss_magnetic.html">Gauss’s Law for Magnetic Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faraday.html">Faraday’s Law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ampere_maxwell.html">Ampere-Maxwell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conservation_of_charge.html">Conservation of Charge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biot_savart.html">Biot-Savart</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lenz’s Law</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Formative Laws</a></li>
+      <li class="breadcrumb-item active">Lenz’s Law</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/formative_laws/lenz.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lenz-s-law">
+<span id="lenz"></span><h1>Lenz’s Law<a class="headerlink" href="#lenz-s-law" title="Link to this heading"></a></h1>
+<p>Through a series of experiments in 1831 Michael Faraday came to the
+realization that changing magnetic fields create electric fields.  Two years
+later, Heinrich Lenz formulated Lenz’s Law, which characterizes the direction
+of the currents induced in a conductor by  these time varying magnetic fields.</p>
+<p>A convenient way to quantify the strength of the magnetic field in a
+particular region is the magnetic flux (<span class="math notranslate nohighlight">\(\Phi_{\mathbf{B}}\)</span>),</p>
+<div class="math notranslate nohighlight" id="equation-magnetic-flux-time-lenz">
+<span class="eqno">(73)<a class="headerlink" href="#equation-magnetic-flux-time-lenz" title="Link to this equation"></a></span>\[{\boldsymbol \Phi_b} = \int_A {\bf b} \cdot \hat {\bf{n}} \, da\]</div>
+<p>which provides a measure of the magnetic flux density over a given area.</p>
+<p>Faraday’s Law of induction,</p>
+<div class="math notranslate nohighlight" id="equation-faraday-lenz-time2">
+<span class="eqno">(74)<a class="headerlink" href="#equation-faraday-lenz-time2" title="Link to this equation"></a></span>\[\mathcal{E} = - \, \frac{\partial {\boldsymbol \Phi_b}}{\partial t}\]</div>
+<p>shows that any variation in the magnetic flux produces an electromotive force
+(emf, <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>). This emf creates electrical  currents within those
+bodies which are subjected to the time varying flux. The amplitude of the
+induced current is dependent on the  strength of the emf and the conductivity
+of the material, while the direction of the induced current is characterized
+by Lenz’s Law.</p>
+<p>Lenz’s Law states that the induced current will flow in such a direction that
+its secondary or induced magnetic fields act to oppose the  observed change in
+magnetic flux. Simply put, “nature abhors a change in flux” so the induced
+current flows in such a manner to cancel  out the change <span id="id1">[<a class="reference internal" href="../../references.html#id5" title="David J Griffiths. Introduction to electrodynamics. Prentice-Hall, 1999.">Gri99</a>]</span>. This is
+the reason for the negative sign in Faraday’s Law, equation
+<a class="reference internal" href="#equation-faraday-lenz-time2">(74)</a>. <a class="reference internal" href="#lenzs-law-diagram"><span class="std std-numref">Fig. 37</span></a> and the demonstration
+linked below provide visual illustrations of Lenz’s Law.</p>
+<blockquote>
+<div><figure class="align-center" id="lenzs-law-diagram">
+<a class="reference internal image-reference" href="../../../_images/LenzsLawDiagram.png"><img alt="../../../_images/LenzsLawDiagram.png" src="../../../_images/LenzsLawDiagram.png" style="width: 681.5px; height: 672.25px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">In panel (a) we see a situation in which the magnetic flux through the
+loop is increasing as a function of time. The induced current direction
+and the secondary magnetic field which opposes the increase in flux are
+shown in panel (b). Similarly, panel (c) shows when the magnetic flux
+through the loop is decreasing as a function of time and panel (d)
+demonstrates the direction of the induced current and secondary magnetic
+field.  (Figure was created by M. Mitchell using the following Wikimedia
+Commons images: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:VFPt_dipole.svg">VFPt_dipole</a>
+and <a class="reference external" href="https://commons.wikimedia.org/wiki/File:VFPt_ringcurrentNoLoop.svg">VFPt ringcurrentNoLoop</a>
+both of which are licensed under <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Creative Commons Attribution-Share Alike 3.0
+Unported</a>.)</span><a class="headerlink" href="#lenzs-law-diagram" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Illustrative Demo:</p>
+<div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA" frameborder="0" allowfullscreen></iframe></div><p>Thanks to the Technical Services Group (TSG) at MIT’s Department of Physics
+for this great demo!</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="biot_savart.html" class="btn btn-neutral float-left" title="Biot-Savart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../quick_guide_maxwell.html" class="btn btn-neutral float-right" title="Overview of Maxwell’s Equations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

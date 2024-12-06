@@ -1,0 +1,722 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing and Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Synthesis" href="synthesis.html" />
+    <link rel="prev" title="Survey and Data" href="surveydata.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Barents Sea</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surveydata.html">Survey and Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Processing and Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#csem-data">CSEM Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seismic-data">Seismic Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interpretation">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Barents Sea</a></li>
+      <li class="breadcrumb-item active">Processing and Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/barents_sea/processinginterpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="barents-sea-processinginterpretation"></span><section id="processing-and-interpretation">
+<h1>Processing and Interpretation<a class="headerlink" href="#processing-and-interpretation" title="Link to this heading"></a></h1>
+<section id="csem-data">
+<h2>CSEM Data<a class="headerlink" href="#csem-data" title="Link to this heading"></a></h2>
+<p>In order to resolve the interpretation ambiguity inherent when only seismic
+data are considered, we used resistivity information derived from controlled
+source electromagnetic (CSEM) data. CSEM has been used successfully as an
+offshore hydrocarbon exploration tool for over a decade
+(<span id="id1">[<a class="reference internal" href="../../references.html#id95" title="Steven C. Constable. Ten years of marine CSEM for hydrocarbon exploration. Geophysics, 75(5):75A67, 2010. doi:10.1190/1.3483451.">Con10</a>]</span>). The data for this study has been collected in a
+relatively new way; using a towed source and array of electric field receivers
+(<span id="id2">[<a class="reference internal" href="../../references.html#id171" title="F Engermark, Johan Mattson, Allan McKay, and Zhijun Du. Towed streamer em comes of age. First Break, 2014.">EMMD14</a>, <a class="reference internal" href="../../references.html#id172" title="K Key, Z Du, J Mattsson, A McKay, and J Midgley. Anisotropic 2.5d inversion of towed streamer em data from three north sea fields using parallel adaptive finite elements. In 76th Annual International Conference and Exhibition. EAGE, 2014.">KDM+14</a>]</span>). MacGregor and Tomlinson
+(<span id="id3">[<a class="reference internal" href="../../references.html#id102" title="Lucy MacGregor and James Tomlinson. Marine controlled-source electromagnetic methods in the hydrocarbon industry: A tutorial on method and practice. Interpretation, 2(3):SH13–SH32, 2014. URL: https://library.seg.org/doi/10.1190/INT-2013-0163.1, doi:10.1190/INT-2013-0163.1.">MT14</a>]</span>) provides an overview to the offshore CSEM method and
+the various acquisition methods that can be applied.</p>
+<p>The CSEM analysis was focused on line 5001. A 2.5D inversion approach, in
+which the earth structure is 2D and the source is a 3D point dipole,  was
+therefore applied.  Although this does not take into account the full 3D
+structure of the earth, in many circumstances it provides a good approximation
+to the resistivity structure along the line inverted.  The effect of this
+approximation on the results is discussed in more detail below.
+<a class="reference internal" href="#fig-csem-amplitude-phase"><span class="std std-numref">Fig. 329</span></a> shows an example of the CSEM acquired along
+line 5001, in the form of source gathers at 1Hz. A significant response to the
+accumulation encountered at Wisting Central can be clearly seen in the CSEM
+data, particularly in the phase response (lower panel of
+<a class="reference internal" href="#fig-csem-amplitude-phase"><span class="std std-numref">Fig. 329</span></a> around 611km Easting). This is observed
+across a wide band of frequencies. It should be noted that it is somewhat
+unusual to see such a large reservoir response in the data directly. In this
+case the oil accumulation at Wisting is both extremely resistive (several
+thousand Ωm) and at a relatively shallow depth below mudline (about 300m)
+leading to the large response observed.</p>
+<figure class="align-center" id="fig-csem-amplitude-phase" style="width: 100%">
+<img alt="../../../_images/CSEM_amplitude_phase.png" src="../../../_images/CSEM_amplitude_phase.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 329 </span><span class="caption-text">CSEM Amplitude (top) and phase (bottom) data collected at 1Hz along line
+5001. The effect of the oil accumulation at Wisting Central (around 611km
+Eastings) is clear, especially in the phase data.</span><a class="headerlink" href="#fig-csem-amplitude-phase" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The CSEM data for six frequencies (0.2Hz, 0.8Hz, 1Hz, 1.4Hz, 2.2Hz, 2.6Hz)
+were inverted using an Occam approach (<span id="id4">[<a class="reference internal" href="../../references.html#id96" title="Steven C. Constable, Robert L. Parker, and Catherine G. Constable. Occam's inversion: A practical algorithm for generating smooth models from electromagnetic sounding data. 1987. doi:10.1190/1.1442303.">CPC87</a>, <a class="reference internal" href="../../references.html#id172" title="K Key, Z Du, J Mattsson, A McKay, and J Midgley. Anisotropic 2.5d inversion of towed streamer em data from three north sea fields using parallel adaptive finite elements. In 76th Annual International Conference and Exhibition. EAGE, 2014.">KDM+14</a>]</span>) to
+derive anisotropic resistivity models that are smooth in a first derivative
+sense, and therefore as close to a uniform halfspace as possible, while
+honoring the data. A layered seawater conductivity structure based on
+measurements throughout the water column and 1D modeling was used. Nineteen to
+twenty-three source-receiver pairs per frequency were included in inversion.</p>
+<p>The inversion was performed in stages. Firstly, an unconstrained inversion was
+run in order to examine the resistivity structure obtained in the absence of
+any a priori information. However unconstrained inversions in general have
+poor resolution. Resolution can be improved by including structural
+information from the seismic data. This also ensures consistency between
+seismic and CSEM derived results, which is important for subsequent integrated
+interpretation.  Following unconstrained 2.5D inversion therefore, seismic
+data were used to condition the inversion of the CSEM data by adding
+structural constraint in the form of breaks in the smoothness requirement at
+selected seismic horizons, thereby improving the resolution of the CSEM
+result. Two versions of constrained inversion were run, one with a
+regularization break at reservoir level (top Stø ) only, and one with
+regularization breaks at both top Stø and the Intra-Snadd horizon. After
+initial constrained inversion testing, the resistivity was limited between 0.1
+to 40 Ωm from seafloor to top Stø for both horizontal and vertical
+resistivity.</p>
+<figure class="align-center" id="fig-inversion-vertical-resistivity" style="width: 100%">
+<img alt="../../../_images/inversion_vertical_resistivity.png" src="../../../_images/inversion_vertical_resistivity.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 330 </span><span class="caption-text">Vertical resistivity (top) and horizontal resistivity (bottom) models
+recovered by 2.5D inversion for line 5001P1009 CSEM data. The inversion
+was constrained with regularization breaks at Top Stø and Intra Snadd.
+The Hanssen, Alternative, and Central well locations are marked by the
+white lines.</span><a class="headerlink" href="#fig-inversion-vertical-resistivity" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-inversion-vertical-resistivity-cross" style="width: 100%">
+<img alt="../../../_images/inversion_vertical_resistivity_cross.png" src="../../../_images/inversion_vertical_resistivity_cross.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 331 </span><span class="caption-text">Cross-sections along A-A’ (Figure 5) of CSEM-derived vertical resistivity
+for (top) unconstrained inversion, and (bottom) inversion constrained by
+the top Stø horizon and Intra-Snadd horizon. The Intra-Snadd horizon
+(a deeper horizon that is outside the area of interest for the remainder
+of the analysis not shown in the Figure) is about 500 m. deeper than the
+Snadd horizon.</span><a class="headerlink" href="#fig-inversion-vertical-resistivity-cross" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#fig-inversion-vertical-resistivity"><span class="std std-numref">Fig. 330</span></a> shows the vertical (upper panel) and horizontal (lower panel) resistivity
+resulting from the final constrained inversion that were carried using depth-
+converted seismic horizons top Stø horizon and Intra-Snadd horizon.</p>
+<p>Background resistivity is extremely high in the area with vertical resistivity
+of 25-30 Ωm. Background anisotropy is also extremely high with factors of
+five or more observed. This high overburden resistivity and anisotropy is the
+result of the significant uplift in the area. A significant increase in
+vertical resistivity was recovered in the lower Snadd, with localized
+variations contained within a regional feature. This regional feature also
+exhibits extremely high electrical anisotropy.</p>
+<p>A localized resistive feature coincident with the structure penetrated at
+Wisting Central is clearly recovered in the vertical resistivity. A more
+subtle increase in resistivity is observed at the Hanssen well location. No
+localized resistive feature is recovered in the Stø at the location of the
+Wisting Alternative or Bjaaland wells.</p>
+<p><a class="reference internal" href="#fig-hydrocarbon-saturation"><span class="std std-numref">Fig. 341</span></a> shows the CSEM-derived vertical resistivity in the same windows of analysis
+used in the seismic quantitative interpretation, for the unconstrained and
+constrained inversions run: The top one corresponding to the unconstrained
+inversion, and the bottom image shows the results of the constrained inversion
+previously shown in the <a class="reference internal" href="#fig-inversion-vertical-resistivity"><span class="std std-numref">Fig. 330</span></a>.</p>
+<p>A qualitative interpretation of the CSEM inversion results supports the
+outcome of the Alternative, Central and Bjaaland wells. A prominent
+resistivity anomaly is recovered at Central, in which there was a significant
+oil discovery, which is in agreement with the high resistivity values measured
+at the reservoir location. On the other hand, the Realgrunnen structures
+penetrated at Alternative and Bjaaland, two dry wells, are related to low
+resistivity values that support the petrophysical outcome. At the location of
+the Hanssen discovery well, a subtle high resistivity anomaly is observed. The
+relatively small magnitude of this feature is the product of a 3D effect in
+the CSEM data, a consequence of the location of the CSEM line with respect to
+the location and the size of the reservoir (see
+<a class="reference internal" href="setup.html#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a> b).   Although in many circumstances
+the 2.5D approximation is a good one, if the resistive reservoir is relatively
+small, or the 2D line being inverted is close to the edge of the reservoir,
+then the effect of the of the reservoir on the CSEM data is diminished, and
+consequently the resistivity recovered by a 2.5D inversion is reduced from its
+true value.  Loseth et al. illustrate this with a synthetic modelling study in
+which they demonstrate the reduction in inverted resistivity with width of the
+target reservoir and proximity of the CSEM line to the reservoir edge. In the
+case of Hanssen, the reservoir is both relatively small and the line is close
+to the edge of the body, leading to the lower resistivity at this location.
+The effect of this on the quantitative interpretation is discussed in later
+sections.</p>
+</section>
+<section id="seismic-data">
+<h2>Seismic Data<a class="headerlink" href="#seismic-data" title="Link to this heading"></a></h2>
+<p>The ultimate quality of any inversion depends on the quality of the input
+data, and to ensure a robust result, data must be optimally conditioned for
+the workflow to be applied. In this example, the input seismic offset gathers
+were pre-conditioned prior to inversion to increase the overall signal-to-
+noise ratio and avoid any remaining noise having a high impact on the
+inversion results. The pre-conditioning also corrected for offset dependent
+frequency loss and ensured that the gathers were aligned. Since data pre-
+conditioning, if not applied carefully, could significantly affect AVO
+behavior of target reflectors, the sensitivity of inversion results to the
+pre-conditioning approaches applied has been thoroughly tested and analyzed.
+It is important to note that all conditioning steps were parameterized keeping
+in mind the need to preserve amplitude behavior, and the minimum possible pre-
+conditioning was undertaken. The processes applied are summarized in
+<span id="id5">[<a class="reference internal" href="../../references.html#id107" title="S. Singleton. The effects of seismic data conditioning on prestack simultaneous impedance inversion. The Leading Edge, pages 772-781, 2009.">Sin09</a>]</span>.</p>
+<p>During the pre-stack seismic inversion, a global objective function is
+minimized in order to compute an optimal model for P- and S-impedance, which
+best explains the input angle stacks and is consistent with the geological
+knowledge introduced through a priori information (<span id="id6">[<a class="reference internal" href="../../references.html#id108" title="T. Tonellot, D. Mace, and V. Richard. Joint stratigraphic inversion of angle-limited stacks. SEG Technical Program Expanded Abstract, pages 227-230, 2001.">TMR01</a>]</span>).
+Initial low frequency, models of P- and S-impedance were created based on
+seismic velocity and well data. These models exclude any reservoir signature
+and mix the lateral variations from the velocity field and vertical resolution
+from wells logs filtered at 5Hz. Wavelets were extracted per angle stack per
+well and later combined to obtain the most representative wavelet for each
+angle stack. Additional parameters such as scale factor between wavelets and
+actual amplitude sections, confidence in seismic amplitude angle stack data,
+number of iterations and allowed low frequency model standard deviations were
+also customized based on iterative tests performed per set of lines. Final
+results were then extracted along well trajectories and compared to actual
+well log data in order to ensure a good representation of the earth model.
+Also, percentage of differences between input and synthetic angle stacks were
+calculated to ensure that they were less than 20% of the original seismic
+amplitude. In this case, where the P- and S-impedance models were allowed to
+change 2000 [m/s gr/cc] from the initial model, after 25 iterations, the
+seismic inversion results represent very well both the earth model from the
+well log data and the actual partial angle stacks.
+(<a class="reference internal" href="#fig-inversion-initial-pwave-poisson"><span class="std std-numref">Fig. 332</span></a>)</p>
+<figure class="align-center" id="fig-inversion-initial-pwave-poisson" style="width: 100%">
+<img alt="../../../_images/inversion_initial_pwave_poisson.png" src="../../../_images/inversion_initial_pwave_poisson.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 332 </span><span class="caption-text">Initial model, P-wave impedance and Poisson ratio from seismic inversion
+(left), tracks of P-wave impedance, Poisson ratio, volume of clay and
+water saturation extracted along the projection of the well 7324/8-1
+(right).</span><a class="headerlink" href="#fig-inversion-initial-pwave-poisson" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The multi-attribute rotation scheme (MARS) (<span id="id7">[<a class="reference internal" href="../../references.html#id93" title="Pedro Alvarez, Francisco Bolívar, Mario Di Luca, and Trino Salinas. Multi-attribute rotation scheme: A tool for reservoir property prediction from seismic inversion attributes. Interpretation, 3(4):SAE9–SAE18, 2015. URL: https://library.seg.org/doi/10.1190/INT-2015-0029.1, doi:10.1190/INT-2015-0029.1.">ABolivarDiLucaS15</a>]</span>), was used to
+estimate rock properties and facies volumes from well log and seismic
+inversion attributes. This workflow uses a numerical solution to estimate a
+transform to predict petrophysical properties from elastic attributes. The
+transform is computed from well log-derived elastic attributes and
+petrophysical properties, and posteriorly applied to seismically-derived
+elastic attributes. MARS estimates a new attribute, t, in the direction of
+maximum change of a target property in an n-dimensional Euclidean space formed
+by n attributes. The method sequentially searches for the maximum correlation
+between the target property and all of the possible attributes that can be
+estimated via an axis rotation of the basis that forms the aforementioned
+space.</p>
+<p>Multiple elastic attributes such as P-wave impedance <span class="math notranslate nohighlight">\(Ip\)</span>, S-wave
+impedance <span class="math notranslate nohighlight">\(Is\)</span>, P-to-S velocity ratio (<span class="math notranslate nohighlight">\(Vp ∕ Vs\)</span>), the product of
+density and Lamé’s parameters <span class="math notranslate nohighlight">\(\lambda \rho\)</span> and <span class="math notranslate nohighlight">\(\mu \rho\)</span>
+(Goodway et al., 1997), Poisson’s ratio <span class="math notranslate nohighlight">\(\sigma\)</span>, the product of density
+by bulk modulus <span class="math notranslate nohighlight">\(\kappa \rho\)</span>, the product of density and dynamic
+Young’s modulus <span class="math notranslate nohighlight">\(E \rho\)</span>, Poisson dampening factor (<span class="math notranslate nohighlight">\(PDF\)</span>)
+(<span id="id8">[<a class="reference internal" href="../../references.html#id104" title="P. Mazumdar. Poisson dampening factor. The Leading Edge, 26:850-852, 2007. doi:10.1190/1.2756862.">Maz07</a>]</span>), etc., can be used in the MARS assessment. For this
+case study, for each target petrophysical property, MARS was run for a 2D
+combination of the 64 elastic attributes shown in
+<a class="reference internal" href="#fig-table-seismic-attributes"><span class="std std-numref">Fig. 333</span></a> , which can be derived from <span class="math notranslate nohighlight">\(Ip\)</span>
+and <span class="math notranslate nohighlight">\(Is\)</span>, resulting in the evaluation of 2016 independent bi-dimensional
+spaces. In this table, each number represents a single attribute, which is
+obtained after applying the mathematical operation shown in the leftmost
+column to the elastic attribute shown in the uppermost row. For example, the
+number 21 represents the attribute. The purpose of applying a mathematical
+operation (such as square root, power, inverse, logarithm, etc.) to attributes
+is to be able to model physical phenomena that exhibit nonlinear behavior.
+This is a mathematical strategy to linearize potential nonlinear relationship
+between the elastic attributes and the petrophysical properties, used with the
+goal of improving the correlation between the attribute t and the target
+petrophysical property.</p>
+<figure class="align-center" id="fig-table-seismic-attributes" style="width: 100%">
+<img alt="../../../_images/table_seismic_attributes.png" src="../../../_images/table_seismic_attributes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 333 </span><span class="caption-text">Matrix of attributes used in MARS. Each number represents a single
+attribute, which is obtained after applying the mathematical operation
+show in the leftmost column to the uppermost row. For example, the number
+21 represents the attribute.</span><a class="headerlink" href="#fig-table-seismic-attributes" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The MARS approach was applied in two different depth windows, given the
+different rock physics relationships between the elastic attributes and the
+petrophysical properties in the Stø and Nordmela Fms. (see
+<a class="reference internal" href="properties.html#fig-poisson-acoustic-impedance"><span class="std std-numref">Fig. 324</span></a>). The first window comprises the
+Fuglen and Stø Formations and the second window the Nordmela Formation.
+The rock properties that were estimated using the MARS approach were total
+porosity (<span class="math notranslate nohighlight">\(\phi_T\)</span>), volume of clay (<span class="math notranslate nohighlight">\(Vclay\)</span>) and the hybrid
+petrophysical property water saturation plus volume of clay
+(<span class="math notranslate nohighlight">\(Sw+Vclay\)</span>).</p>
+<p>This last property, which can take values between zero and two, was used as
+input to build a litho-fluid facies volume based on the cut-off values shows
+in <a class="reference internal" href="#fig-lithofluid-facies"><span class="std std-numref">Fig. 334</span></a>. Three litho-fluid facies were defined. The
+green facies denotes zones where clean hydrocarbon bearing sands with
+thickness above seismic resolution are expected to be found, including both
+commercial and residual saturation given the inability of the elastic
+measurements to distinguish between these two. The blue facies represents
+clean wet sand or shaly hydrocarbon bearing sand or thin hydrocarbon bearing
+sand that cannot be resolved at seismic resolution. These three configurations
+of rock and fluid present a high degree of overlap in the elastic domain, in
+consequence cannot be separated using seismic data. The last litho-fluid
+facies (brown) represents the background trend that are composed of shales or
+thin wet sand.</p>
+<figure class="align-center" id="fig-lithofluid-facies" style="width: 100%">
+<img alt="../../../_images/lithofluid_facies.png" src="../../../_images/lithofluid_facies.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 334 </span><span class="caption-text">Litho-fluid facies definition based on the hybrid petrophysical property
+<span class="math notranslate nohighlight">\(Sw+Vclay\)</span>.</span><a class="headerlink" href="#fig-lithofluid-facies" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-seismic-target-property-compare" style="width: 100%">
+<img alt="../../../_images/seismic_target_property_compare.png" src="../../../_images/seismic_target_property_compare.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 335 </span><span class="caption-text">Comparison of the actual (upper) and predicted (middle) target property
+log upscaled to seismic resolution for the Central and Alternative wells
+in the optimal cross-plot space estimated from the MARS analysis for the
+Fuglen and Stø Formation. Gray arrows, orthogonal to the blue lines,
+indicate the direction of maximum change of target petrophysical property
+in the optimal attribute space. The lower plots show a crossplot of the
+correlation coefficients between the target property log and the set of
+attributes estimated via axis rotation, versus the rotation angle
+(<span class="math notranslate nohighlight">\(q\)</span>). The black arrow highlights the angle where the maximum cross
+correlation was found.</span><a class="headerlink" href="#fig-seismic-target-property-compare" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The results obtained after applying MARS to well log information from the
+Central and Alternative wells is shown in
+<a class="reference internal" href="#fig-seismic-target-property-compare"><span class="std std-numref">Fig. 335</span></a> for the Fuglen and Stø
+Formations and <a class="reference internal" href="#fig-seismic-target-property-compare-2"><span class="std std-numref">Fig. 336</span></a> for the
+Nordmela Formation. These plots show a comparison between the actual and
+predicted target petrophysical property using MARS in the optimal elastic
+attribute space determined by a global search algorithm. The lower plots show
+a crossplot of the correlation coefficient between the derived set of
+attributes (estimated via axis rotation) and the target petrophysical log,
+versus the angle of rotation (<span class="math notranslate nohighlight">\(\theta\)</span>). These plots show for all the
+cases a fair to good maximum cross correlation that supports the application
+of the MARS-derived transform to seismically-derived elastic attributes to
+estimate sections of the target petrophysical properties along the 2D seismic
+lines analyzed.</p>
+<figure class="align-center" id="fig-seismic-target-property-compare-2" style="width: 100%">
+<img alt="../../../_images/seismic_target_property_compare_2.png" src="../../../_images/seismic_target_property_compare_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 336 </span><span class="caption-text">Comparison of the actual (upper) and predicted (middle) target property
+log upscaled to seismic resolution for the Central and Alternative wells
+in the optimal cross-plot space estimated from the MARS analysis for the
+Nordmela Formation. Gray arrows, orthogonal to the blue lines, indicate
+the direction of maximum change of target petrophysical property in the
+optimal attribute space. The lower plots show a crossplot of the
+correlation coefficients  between target property log and the set of
+attributes estimated via axis rotation, versus the rotation angle
+(<span class="math notranslate nohighlight">\(q\)</span>). The black arrow highlights the angle where the maximum cross
+correlation was found.</span><a class="headerlink" href="#fig-seismic-target-property-compare-2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the transform to predict petrophysical properties from elastic attributes
+was found for each window using well log data, the resulting relationships
+were applied over the seismically-derived elastic attributes per window using
+the seismic horizons (upper window: from top Fuglen to base Stø, and
+bottom window: from base Stø to top Snadd), with the goal of estimating a
+single 2D section of total porosity, clay content and litho-fluid facies per
+2D seismic line. The litho-fluid facies section was estimated after applying
+the cut-off presented in Table 3 to the seismically-derived section of
+<span class="math notranslate nohighlight">\(Sw+Vclay\)</span>. The resultant litho-fluid facies, clay content and total
+porosity sections for the line 5001P1009, along with the corresponding well
+log information for the Central and Alternative wells is shown in
+<a class="reference internal" href="#fig-inversion-seismic-properties-model"><span class="std std-numref">Fig. 337</span></a>. Notice the good match
+between the seismic and well log-derived petrophysical property in the
+calibration wells demonstrating that both were correctly predicted. In
+addition, the well trajectory of the Hanssen and Bjaaland wells are also shown
+(no log information is available for these wells). The former was catalogued
+as a discovery well and the latter as a dry well. The litho-fluid facies
+section suggests that hydrocarbon fluid is present in both locations, and
+highlights the fact that seismic data alone cannot distinguish between
+commercial and non-commercial hydrocarbon saturations, leaving a significant
+ambiguity in prospect de-risking.</p>
+<figure class="align-center" id="fig-inversion-seismic-properties-model" style="width: 100%">
+<img alt="../../../_images/inversion_seismic_properties_model.png" src="../../../_images/inversion_seismic_properties_model.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 337 </span><span class="caption-text">For line 5001P1009, sections along A-A’
+(<a class="reference internal" href="setup.html#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a>) of litho-fluid facies (top), clay
+content (middle) and total porosity (bottom) along wells Central and
+Alternative derived from MARS analysis of elastic attributes. The curves
+overlaid in the top panel are <span class="math notranslate nohighlight">\(Vclay\)</span> (left) and <span class="math notranslate nohighlight">\(Sw\)</span> (right)
+and in the middle and bottom panels are volume of clay (left) and total
+porosity (right).</span><a class="headerlink" href="#fig-inversion-seismic-properties-model" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="interpretation">
+<h2>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h2>
+<p>The final stage of the workflow is to combine the seismically derived
+properties, with the electrical information derived from the CSEM data. The
+goal of this stage is to reduce the uncertainty in fluid saturation that is
+observed in the seismic-only results. In order to do this, electric and
+elastic properties must be combined in a common domain and at a common scale
+so that direct comparison, and ultimately quantitative integration is
+possible.</p>
+<section id="seismically-derived-resistivity-estimation-and-transverse-resistance-tr-calibration">
+<h3>Seismically-derived resistivity estimation and transverse resistance (TR) calibration<a class="headerlink" href="#seismically-derived-resistivity-estimation-and-transverse-resistance-tr-calibration" title="Link to this heading"></a></h3>
+<p>In order to allow direct comparison between seismic and CSEM results, the next
+step in the methodology (<a class="reference internal" href="index.html#fig-inversion-workflow-title"><span class="std std-numref">Fig. 320</span></a>) is the
+estimation of resistivity models from seismically derived properties for
+different fluid saturation scenarios. With this goal in mind, we used the
+seismically-derived litho-fluid facies, clay content and total porosity
+sections with a calibrated rock physics model to transform these petrophysical
+properties into the electrical domain. The calibrated rock physics model used
+was the Simandoux equation (<span id="id9">[<a class="reference internal" href="../../references.html#id106" title="P. Simandoux. Dielectric measurements in porous media and application to shaly formation. Revue de L'Institut Français du Pétrole, 18:supplementary issue, 193-215, 1963.">Sim63</a>]</span>):</p>
+<div class="math notranslate nohighlight" id="equation-simandoux-eq">
+<span class="eqno">(501)<a class="headerlink" href="#equation-simandoux-eq" title="Link to this equation"></a></span>\[\frac{1}{R_t} = \frac{\phi_e^m \times Sw^n}{a \times Rw} + \frac{Vsh \times Sw}{Rsh}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-simandoux-eq-phi">
+<span class="eqno">(502)<a class="headerlink" href="#equation-simandoux-eq-phi" title="Link to this equation"></a></span>\[\phi_e = \phi_T \times (1 - Vsh)\]</div>
+<p>Parameters within the Simandoux equation were defined in the <a class="reference internal" href="properties.html#barents-sea-properties"><span class="std std-ref">properties</span></a> section. This rock physics model represents
+the same one used in the petrophysical evaluation of the Central and
+Alternative wells to estimate water saturation (<span class="math notranslate nohighlight">\(Sw\)</span>) from the
+horizontal resistivity log and was calibrated in the early stage of the study.
+The procedure used to estimate the seismically-derived resistivity sections at
+different fluid scenarios consisted of applying directly Eqs.
+<a class="reference internal" href="#equation-simandoux-eq">(501)</a> and <a class="reference internal" href="#equation-simandoux-eq-phi">(502)</a> to the total porosity and volume
+of clay sections (<a class="reference internal" href="#fig-inversion-seismic-properties-model"><span class="std std-numref">Fig. 337</span></a>) for
+different values of <span class="math notranslate nohighlight">\(Sw\)</span> that were modified only in those areas were the
+seismic indicates the presence of clean hydrocarbon bearing sand, i.e. green
+facies in the litho-fluid facies section
+(<a class="reference internal" href="#fig-inversion-seismic-properties-model"><span class="std std-numref">Fig. 337</span></a>). The results are shown in
+<a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a> b, c, and d, for values of
+<span class="math notranslate nohighlight">\(Sw\)</span> equal to 0.1, 0.5 and 1 respectively. As a quality control of the
+results for the case of <span class="math notranslate nohighlight">\(Sw\)</span> = 0.1 (90% hydrocarbon saturation, which is
+a saturation close to that obtained from the petrophysical evaluation at the
+Central well), the measured resistivity curve was overlaid. An excellent match
+with the modeled resistivity is obtained. One important observation that can
+be made from the comparison of the three seismically-derived results is the
+low resistivity contrasts between the reservoir and non-reservoir facies for
+the case of <span class="math notranslate nohighlight">\(Sw\)</span> = 0.5. This demonstrates that this level of water
+saturation (or higher) cannot be identified using CSEM data in this particular
+geological setting due to the high values of the background resistivity.</p>
+<p>At this stage in the workflow, results have all been transformed to the
+electrical domain. However, there is one further step required before a direct
+comparison can be made. It is noticeable that the seismic results in
+<a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a> are significantly higher
+resolution than the CSEM results in
+<a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a>, even when the CSEM inversion is
+constrained. This difference must be resolved before the results can be
+compared or combined in a quantitative fashion.</p>
+<p>The simplest approach to achieving this is to upscale both seismic and CSEM
+results. The reservoir parameter that is best constrained by the CSEM method
+is the transverse resistance (vertically integrated resistivity). By
+calculating the transverse resistance from the seismically and CSEM derive
+resistivity, the difference in vertical resolution between the two methods can
+be overcome, albeit at the expense of the higher resolution of the seismic
+result. Transverse resistances based on CSEM and seismic results are compared
+in <a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a> a. Note that when the
+resistivity is calculated from the seismic data using the Simandoux
+relationship, which is calibrated to horizontal resistivity at the well, the
+result is most closely related to the horizontal resistivity of the sub-
+surface. The CSEM measurements, in contrast, provide a measure of both
+horizontal and vertical resistivity however reservoir related structure
+manifests in the vertical resistivity. To address this difference, an
+empirical calibration factor of three, based on CSEM analysis of background
+anisotropy, was applied to the seismically derived transverse resistance to
+compensate for the electrical anisotropy observed.</p>
+<p>An analysis of <a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a> a offers important
+information about the hydrocarbon saturation levels of the reservoirs and
+potential reservoirs along the section. A good agreement is seen between the
+CSEM and seismic transverse resistance curves at the end member positions
+represented by the Central well location (<span class="math notranslate nohighlight">\(Sw\)</span> = 0.1 - magenta curve)
+and for the Alternative well location (<span class="math notranslate nohighlight">\(Sw\)</span> = 1 - blue curve) that
+corroborate the validity of the rock physics model used and the calibration
+factor applied to the data. For the case of the Bjaaland well, the CSEM
+derived transverse resistance most closely agrees with the lower saturation
+seismically derived curves, indicating, in a semi-quantitative way, the
+absence of a commercial hydrocarbon saturation at this location. Finally, for
+the Hanssen well, the separation between the CSEM transverse resistance curve
+and that for the wet case seismically-derived curve (blue curve) indicates the
+presence of hydrocarbon saturation at least higher than 50%. However, it is
+important to have in mind that a diminished CSEM-derived resistivity value is
+expected to be found in this area due to the 3D effects discussed previously.
+As a consequence of this the hydrocarbon saturation will be underestimated in
+this case.</p>
+<figure class="align-center" id="fig-transverse-resistivity-compare" style="width: 100%">
+<img alt="../../../_images/transverse_resistivity_compare.png" src="../../../_images/transverse_resistivity_compare.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 338 </span><span class="caption-text">(a) Comparison between the seismically- and CSEM-derived transverse
+resistance estimates. (b) Cross-section along A-A’
+(<a class="reference internal" href="setup.html#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a>) of seismically-derived
+resistivity for <span class="math notranslate nohighlight">\(Sw\)</span> = 0.1. (c) Same cross-section along A-A’ for
+<span class="math notranslate nohighlight">\(Sw\)</span> = 0.5. (d) Same cross-section along A-A’ for <span class="math notranslate nohighlight">\(Sw\)</span> = 1.
+Note the good match between the measured and modeled resistivity in the
+Central well at the (b) section.</span><a class="headerlink" href="#fig-transverse-resistivity-compare" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="water-saturation-prediction">
+<h3>Water Saturation Prediction<a class="headerlink" href="#water-saturation-prediction" title="Link to this heading"></a></h3>
+<p>Although the semi-quantitative comparison of transverse resistance presented
+above provides valuable information on reservoir properties, it is often
+desirable to derive a quantitative estimate of rock and fluid properties. The
+last step in the workflow (<a class="reference internal" href="index.html#fig-inversion-workflow-title"><span class="std std-numref">Fig. 320</span></a>), is
+therefore the quantitative prediction of the <span class="math notranslate nohighlight">\(Sw\)</span>. The input data for
+this analysis was the seismically-derived porosity, clay content and litho-
+fluid facies section shown in
+<a class="reference internal" href="#fig-inversion-seismic-properties-model"><span class="std std-numref">Fig. 337</span></a>, and CSEM-derived transverse
+resistance along the CSEM line (<a class="reference internal" href="#fig-transverse-resistivity-compare"><span class="std std-numref">Fig. 338</span></a>
+a). These datasets were inverted using the Simandoux equation calibrated at
+the Central and Alternative wells, and a global search inversion method. This
+method seeks the value of <span class="math notranslate nohighlight">\(Sw\)</span> that provides the minimum misfit between
+seismically and CSEM derived transverse resistance, using a grid search
+algorithm (see <a class="reference internal" href="#fig-sw-methodology"><span class="std std-numref">Fig. 339</span></a>). It is important to mention that
+only potential reservoir rocks as indicated by the seismic litho-fluid facies
+(green facies in <a class="reference internal" href="#fig-inversion-seismic-properties-model"><span class="std std-numref">Fig. 337</span></a> to the top),
+were considered to have variable <span class="math notranslate nohighlight">\(Sw\)</span> during the inversion process. In
+this way the quantitative seismic interpretation result not only provides
+information about the clay content and total porosity of the rocks, necessary
+for the Simandoux equation, but also about the location and thickness of the
+potential pay sand, thus maintaining seismic resolution in the final result.
+However, note that since only <span class="math notranslate nohighlight">\(Sw\)</span> varies during the inversion, it is
+implicitly assumed that the porosity and <span class="math notranslate nohighlight">\(Vclay\)</span> as defined by the
+seismic data are correct.</p>
+<figure class="align-center" id="fig-sw-methodology" style="width: 100%">
+<img alt="../../../_images/Sw_methodology.png" src="../../../_images/Sw_methodology.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 339 </span><span class="caption-text">Methodology used to estimate <span class="math notranslate nohighlight">\(Sw\)</span> from seismically-derived rock
+properties volumes and CSEM derived resistivity.</span><a class="headerlink" href="#fig-sw-methodology" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The result of this inversion is shown in <a class="reference internal" href="#fig-sw-misfit"><span class="std std-numref">Fig. 340</span></a>. The top
+panel shows the profile of the misfit obtained as a function of the
+<span class="math notranslate nohighlight">\(Sw\)</span>. This information can be interpreted as a measurement of the
+robustness of the <span class="math notranslate nohighlight">\(Sw\)</span> estimation. The middle panel shows how the
+optimal <span class="math notranslate nohighlight">\(Sw\)</span> is linked to the lowest misfit value. Note that in areas
+where no hydrocarbons are indicated by the seismic litho-fluid classification
+shown in the bottom panel for reference (i.e. outside the green facies),
+<span class="math notranslate nohighlight">\(Sw\)</span> is set to 1. Around Wisting Central, the inversion result shows a
+well constrained low <span class="math notranslate nohighlight">\(Sw\)</span> value, with a narrow inversion minimum. This
+is as expected since at low water saturations, a small change in <span class="math notranslate nohighlight">\(Sw\)</span>
+results in a relatively large change in resistivity. Around the Hanssen well,
+the inversion minimum is wider, a result of the lower predicted saturation. At
+Bjaaland, the results predict a minimum water saturation of about 50%,
+consistent with the sensitivity limit suggested by well log analysis.</p>
+<p>Finally, the resulting <span class="math notranslate nohighlight">\(Sw\)</span> profile was mapped back in its correct
+position using the seismically-derived litho-fluid facies volume to generate a
+hydrocarbon saturation section along the line
+(<a class="reference internal" href="#fig-hydrocarbon-saturation"><span class="std std-numref">Fig. 341</span></a>). Excellent correlation with known well
+results was achieved. The integration of seismic, CSEM, and well data predicts
+very high hydrocarbon saturations at Wisting Central, consistent with the
+findings of the well. The slightly lower saturation at Hanssen is related to
+3D effects in the CSEM data, but the outcome of the well is predicted
+correctly. There is no significant saturation at Wisting Alternative, again
+consistent with the findings of the well. At Bjaaland, although the seismic
+indicate the presence of hydrocarbon bearing sands, the integrated
+interpretation result again predicts correctly that this well was
+unsuccessful.</p>
+<figure class="align-center" id="fig-sw-misfit" style="width: 100%">
+<img alt="../../../_images/Sw_misfit.png" src="../../../_images/Sw_misfit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 340 </span><span class="caption-text">Misfit as a function of <span class="math notranslate nohighlight">\(Sw\)</span> between the CSEM-derived transverse
+resistance and the set of seismically-derived transverse resistance
+computed for different <span class="math notranslate nohighlight">\(Sw\)</span> values (top). Optimal <span class="math notranslate nohighlight">\(Sw\)</span>
+estimation linked to the minimum misfit value (middle). Cross-sections
+along A-A’ (<a class="reference internal" href="setup.html#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a>) of seismically-derived
+litho-fluid facies (bottom)</span><a class="headerlink" href="#fig-sw-misfit" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-hydrocarbon-saturation" style="width: 100%">
+<img alt="../../../_images/hydrocarbon_saturation.png" src="../../../_images/hydrocarbon_saturation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 341 </span><span class="caption-text">Cross-sections along A-A’ (<a class="reference internal" href="setup.html#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a>) of
+hydrocarbon saturation obtained from a joint interpretation of CSEM,
+seismic and well log data, with hydrocarbon saturation curves overlaid.
+Notice that the seismic data alone cannot distinguish between commercial
+and non-commercial hydrocarbon saturation. The inclusion of the CSEM
+resistivity information within the inversion approach allows for the
+separation of these two possible scenarios.</span><a class="headerlink" href="#fig-hydrocarbon-saturation" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="surveydata.html" class="btn btn-neutral float-left" title="Survey and Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="synthesis.html" class="btn btn-neutral float-right" title="Synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxwell’s Equations: Frequency Domain &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Harmonic Planewaves in Homogeneous Media" href="harmonic_planewaves_homogeneous/index.html" />
+    <link rel="prev" title="Maxwell’s Equations: Time Domain" href="time_domain_equations.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Maxwell’s Equations: Frequency Domain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#helmholtz-equation">Helmholtz Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quasi-static-regime">Quasi-Static Regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-regime">Wave Regime</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Maxwell I: Fundamentals</a></li>
+      <li class="breadcrumb-item active">Maxwell’s Equations: Frequency Domain</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/frequency_domain_equations.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="maxwell-s-equations-frequency-domain">
+<span id="frequency-domain-equations"></span><h1>Maxwell’s Equations: Frequency Domain<a class="headerlink" href="#maxwell-s-equations-frequency-domain" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Here, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell</span></a> equation are used to construct vector Helmholtz equations for both <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>, respectively. This is accomplished by assuming we are in a homogeneous medium. Various components of the resulting differential equations in frequency are discussed. The physical understanding of equations derived here can be extended to more complex applications throughout EM GeoSci.</p>
+</div>
+<p>To obtain the frequency-domain wave equations, we use the Fourier transform with
+an <span class="math notranslate nohighlight">\(e^{i\omega t}\)</span> time dependence. The derivative of <span class="math notranslate nohighlight">\(e^{i\omega
+t}\)</span> with respect to time is <span class="math notranslate nohighlight">\(i\omega e^{i\omega t}\)</span>. Thus, we can easily
+convert the <a class="reference internal" href="time_domain_equations.html#time-domain-equations"><span class="std std-ref">time-domain wave equations</span></a> to the
+frequency-domain by replacing <span class="math notranslate nohighlight">\(\partial/\partial t\)</span> with <span class="math notranslate nohighlight">\(i
+\omega\)</span> and  <span class="math notranslate nohighlight">\(\partial^2/\partial t^2\)</span> with <span class="math notranslate nohighlight">\(-\omega^2\)</span>. The
+frequency-domain equations are therefore given by:</p>
+<div class="math notranslate nohighlight" id="equation-hme8">
+<span class="eqno">(108)<a class="headerlink" href="#equation-hme8" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{E} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{E}  = 0\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-hmh8">
+<span class="eqno">(109)<a class="headerlink" href="#equation-hmh8" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{H} + (\mu \epsilon \omega^2 - i \mu \sigma \omega) \mathbf{H}  = 0\]</div>
+<p>Eqs. <a class="reference internal" href="#equation-hme8">(108)</a> and <a class="reference internal" href="#equation-hmh8">(109)</a> are generally expressed in the following form:</p>
+<div class="math notranslate nohighlight" id="equation-hme9">
+<span class="eqno">(110)<a class="headerlink" href="#equation-hme9" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{E} + k^2 \mathbf{E}  = 0\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-hmh9">
+<span class="eqno">(111)<a class="headerlink" href="#equation-hmh9" title="Link to this equation"></a></span>\[\boldsymbol{\nabla}^2 \mathbf{H} + k^2 \mathbf{H}  = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(k = \sqrt{\mu \epsilon \omega^2 - i \mu \sigma \omega}\)</span> is the known as the wave number.</p>
+<section id="helmholtz-equation">
+<h2>Helmholtz Equation<a class="headerlink" href="#helmholtz-equation" title="Link to this heading"></a></h2>
+<p>Eqs. <a class="reference internal" href="#equation-hme9">(110)</a> and <a class="reference internal" href="#equation-hmh9">(111)</a> have identical form and are both characterized by the <strong>vector Helmholtz equation</strong>. In electromagnetics, the vector Helmholtz equation is the frequency-domain equivalent of the <a class="reference internal" href="time_domain_equations.html#time-domain-equations"><span class="std std-ref">lossy wave equation</span></a>. The properties of <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> depend on the wavenumber <span class="math notranslate nohighlight">\(k\)</span>. Solutions to the Helmholtz equation are frequently proportional to <span class="math notranslate nohighlight">\(e^{\pm i k r}\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> defines some travelled distance for the signal. For these solutions, the real component of <span class="math notranslate nohighlight">\(k\)</span> defines the amplitude loss as the signal travels. The imaginary component of <span class="math notranslate nohighlight">\(k\)</span> defines the oscillatory behaviour of the signal. This is discussed in much more detail when talking about <a class="reference internal" href="harmonic_planewaves_homogeneous/index.html#harmonic-planewaves-homogeneous-index"><span class="std std-ref">harmonic planewaves in homogeneous media</span></a>.</p>
+</section>
+<section id="quasi-static-regime">
+<h2>Quasi-Static Regime<a class="headerlink" href="#quasi-static-regime" title="Link to this heading"></a></h2>
+<p>In the quasi-static regime, the conductivity dominates the properties of the EM signal, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\sigma \gg \omega \epsilon\]</div>
+<p>and the wavenumber is approximately equal to:</p>
+<div class="math notranslate nohighlight">
+\[k \approx \sqrt{-i\omega\mu\sigma}\]</div>
+<p>The wavenumber still has real and imaginary components. As a result, the EM signal experiences both attenuation and oscillation. The wavenumber is controlled by the product of <span class="math notranslate nohighlight">\(\mu\sigma\)</span>. Recall from <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">physical properties</span></a> however, that <span class="math notranslate nohighlight">\(\mu \approx \mu_0\)</span> for most materials and that <span class="math notranslate nohighlight">\(\sigma\)</span> varies over many orders of magnitude. As a result, the properties of <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> are primarily controlled by the conductivity. The relationship between <span class="math notranslate nohighlight">\(\sigma\)</span> and EM signals is very important to frequency-domain electromagnetic (<a class="reference internal" href="../geophysical_surveys/airborne_fdem/index.html#airborne-fdem-index"><span class="std std-ref">TDEM</span></a>) methods.</p>
+</section>
+<section id="wave-regime">
+<h2>Wave Regime<a class="headerlink" href="#wave-regime" title="Link to this heading"></a></h2>
+<p>In the wave regime, the dielectric permittivity dominates the properties of the EM signal, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\sigma \ll \omega \epsilon\]</div>
+<p>and the wavenumber is approximately equal to:</p>
+<div class="math notranslate nohighlight">
+\[k \approx \sqrt{\omega^2 \mu\epsilon}\]</div>
+<p>In this case, the wavenumber only contains real components and therefore the amplitude of <span class="math notranslate nohighlight">\(e^{\pm i k r}\)</span> is constant. This would make sense given that energy is conserved in a lossless wave equation. The wavenumber is controlled by the product of <span class="math notranslate nohighlight">\(\mu\epsilon\)</span>. Recall from <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">physical properties</span></a> however, that <span class="math notranslate nohighlight">\(\mu \approx \mu_0\)</span> for most materials and that <span class="math notranslate nohighlight">\(\epsilon\)</span> varies over several orders of magnitude. As a result, the properties of <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> are primarily controlled by the dielectric permittivity. The relationship between <span class="math notranslate nohighlight">\(\epsilon\)</span> and EM signals is very important to frequency-domain ground-penetrating radar.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="time_domain_equations.html" class="btn btn-neutral float-left" title="Maxwell’s Equations: Time Domain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="harmonic_planewaves_homogeneous/index.html" class="btn btn-neutral float-right" title="Harmonic Planewaves in Homogeneous Media" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

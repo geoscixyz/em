@@ -1,0 +1,258 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnetism in Rocks &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Impact of Mineralogy on Magnetic Properties" href="magnetic_permeability_factors.html" />
+    <link rel="prev" title="Typical Values for Rocks" href="magnetic_permeability_values.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../electrical_conductivity/index.html">Electrical Conductivity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Magnetic Permeability</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#relative-permeability">Relative Permeability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_lab_measurements.html">Laboratory Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Magnetism in Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_factors.html">Impact of Mineralogy on Magnetic Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_frequency_dependent.html">Frequency-Dependent Magnetic Permeability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dielectric_permittivity/index.html">Dielectric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Magnetic Permeability</a></li>
+      <li class="breadcrumb-item active">Magnetism in Rocks</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/magnetic_permeability/magnetic_permeability_magnetism.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="magnetism-in-rocks">
+<span id="magnetic-permeability-magnetism"></span><h1>Magnetism in Rocks<a class="headerlink" href="#magnetism-in-rocks" title="Link to this heading"></a></h1>
+<p>The magnetic permeability of a rock is determined by the nature of induced
+magnetization it experiences in response to an applied magnetic field. Here,
+we define induced magnetization by considering a collection of magnetic dipole
+moments. A mathematical relationship between induced magnetization and the
+magnetic permeability is then presented.</p>
+<section id="theory-of-magnetism">
+<h2>Theory of Magnetism<a class="headerlink" href="#theory-of-magnetism" title="Link to this heading"></a></h2>
+<p>Magnetism is attributed to the movement of electrical charges. Within a
+material, the motion and spin of individual electrons is responsible for
+generating a collection of magnetic moments <span class="math notranslate nohighlight">\(\{{\bf m_i}\}\)</span>. The total
+magnetic moment for the material <span class="math notranslate nohighlight">\({\bf m}\)</span>, is equal to the vector sum
+of all electron magnetic moments:</p>
+<div class="math notranslate nohighlight" id="equation-sum-dipoles">
+<span class="eqno">(24)<a class="headerlink" href="#equation-sum-dipoles" title="Link to this equation"></a></span>\[{\bf m} = \sum_i {\bf m_i}\]</div>
+<p>Magnetization <span class="math notranslate nohighlight">\({\bf M}\)</span> is defined as the magnetic moment per unit volume:</p>
+<div class="math notranslate nohighlight" id="equation-mag-definition">
+<span class="eqno">(25)<a class="headerlink" href="#equation-mag-definition" title="Link to this equation"></a></span>\[{\bf M} = \frac{d {\bf m}}{d V}\]</div>
+<p>The majority of rocks are paramagnetic. In the absence of a magnetic field,
+magnetic moments within paramagnetic rocks are frequently disordered. In this
+case, individual magnetic moments cancel out one another, resulting in a net
+magnetization of zero. When exposed to a magnetic field, the magnetic moments
+within paramagnetic rocks experience a torque. This torque attempts to align
+individual magnetic moments along the direction of the field. As a result, the
+rock experiences a net magnetization parallel to the applied field. This
+process is illustrated in <a class="reference internal" href="#figdipolealign"><span class="std std-numref">Fig. 30</span></a>.</p>
+<figure class="align-center" id="figdipolealign" style="width: 70%">
+<img alt="../../../_images/figMagDipoles.png" src="../../../_images/figMagDipoles.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Magnetization <span class="math notranslate nohighlight">\({\bf M}\)</span> in matter, as represented by the partial
+alignment of magnetic dipole moments <span class="math notranslate nohighlight">\({\bf m_i}\)</span> in response to an
+applied magnetic field <span class="math notranslate nohighlight">\({\bf H}\)</span>.</span><a class="headerlink" href="#figdipolealign" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Magnetic susceptibility is defined as the ratio between induced magnetization
+and the strength of an applied magnetic field. Provided the magnetic field is
+not too strong, this relationship is linear (<span id="id1">[<a class="reference internal" href="../../references.html#id5" title="David J Griffiths. Introduction to electrodynamics. Prentice-Hall, 1999.">Gri99</a>]</span>):</p>
+<div class="math notranslate nohighlight" id="equation-const-rel-mag">
+<span class="eqno">(26)<a class="headerlink" href="#equation-const-rel-mag" title="Link to this equation"></a></span>\[{\bf M} = \chi {\bf H}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi\)</span> is magnetic susceptibility of the rock, <span class="math notranslate nohighlight">\({\bf H}\)</span> is
+the magnetic field intensity, and <span class="math notranslate nohighlight">\({\bf M}\)</span> is the induced
+magnetization. Because the majority of rocks are paramagnetic, they are almost
+always characterized by magnetic susceptibilities greater than 0. However,
+some rocks are diamagnetic, an experience induced magnetizations which opposed
+the applied magnetic field. These rocks are characterized by magnetic
+susceptibilities less than 0.</p>
+</section>
+<section id="relationship-between-magnetization-and-magnetic-permeability">
+<h2>Relationship Between Magnetization and Magnetic Permeability<a class="headerlink" href="#relationship-between-magnetization-and-magnetic-permeability" title="Link to this heading"></a></h2>
+<p>According to the <a class="reference internal" href="index.html#magnetic-permeability-index"><span class="std std-ref">magnetic constitutive relationship</span></a>, the relationship
+between magnetic susceptibility and magnetic permeability is given by (<span id="id2">[<a class="reference internal" href="../../references.html#id5" title="David J Griffiths. Introduction to electrodynamics. Prentice-Hall, 1999.">Gri99</a>]</span>):</p>
+<div class="math notranslate nohighlight" id="equation-rel-bmh">
+<span class="eqno">(27)<a class="headerlink" href="#equation-rel-bmh" title="Link to this equation"></a></span>\[{\bf B} = \mu {\bf H} = \mu_0 \big [1 +\chi \, ] {\bf H} = \mu_0 \big [ {\bf H + M} \big ]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_0 = 4\pi \times 10^{-7}\)</span> H/m is the permeability of free-
+space. Eq. <a class="reference internal" href="#equation-rel-bmh">(27)</a> implies that induced magnetization contributes
+towards the net magnetic flux density within the rock. Furthermore, the nature
+of this contribution may be represented by the rock’s magnetic permeability.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="magnetic_permeability_values.html" class="btn btn-neutral float-left" title="Typical Values for Rocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetic_permeability_factors.html" class="btn btn-neutral float-right" title="Impact of Mineralogy on Magnetic Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

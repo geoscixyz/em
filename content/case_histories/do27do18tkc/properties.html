@@ -1,0 +1,345 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Survey" href="survey.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">DO-27/DO-18 (TKC)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#density">Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#susceptibility">Susceptibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conductivity">Conductivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chargeability">Chargeability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conceptual-model">Conceptual model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons worth highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">DO-27/DO-18 (TKC)</a></li>
+      <li class="breadcrumb-item active">Properties</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/do27do18tkc/properties.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <figure class="align-right" id="tkc-properties" style="width: 30%">
+<img alt="../../../_images/TKC_7Steps_Properties.png" src="../../../_images/TKC_7Steps_Properties.png" />
+</figure>
+<section id="properties">
+<h1>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h1>
+<p>A common geophysical fingerprint for a kimberlite pipe near the poles is a
+circular strong magnetic anomaly, with a gravitational low and an anomalous EM
+response. The composition of the kimberlite pipes exhibits different physical
+properties than those of the host rock and forms the basis for a geophysical
+exploration model.</p>
+<section id="density">
+<span id="tkc-density"></span><h2>Density<a class="headerlink" href="#density" title="Link to this heading"></a></h2>
+<figure class="align-right" id="core-pk-den" style="width: 20%">
+<img alt="../../../_images/Core_PK_Density.png" src="../../../_images/Core_PK_Density.png" />
+</figure>
+<p>Kimberlite pipes are generally associated with negative gravity anomalies due
+to their low density, although some exceptions exist <span id="id1">[<a class="reference internal" href="../../references.html#id154" title="L E Reed and K E Witherly. 50 years of kimberlite geophysics, a review. In B Milkereit, editor, Proceedings of Exploration 07: Fifth Decennial International Conference on Mineral Exploration, 679-689. 2007.">RW07</a>]</span>. In the Lac de Gras region, pyroclastic units (PK) are highly variable
+in composition, but are often made up of a mix of fine grain volcaniclastic sediments (tuff, lapilli) and larger xenoliths of country rock. Fragments of wood, shale, siltstone and mudstone clasts are common depending on the
+style of eruption and depositional environment <span id="id2">[<a class="reference internal" href="../../references.html#id152" title="J A Pell. Kimberlite in the Slave Craton, Northwest Territories, Canada. Geoscience Canada, 24(2):77-90, 1997.">Pel97</a>]</span>.
+Moreover, olivine-rich volcaniclastic sediments are readily
+altered to clay minerals through low-temperature metamorphism, further
+contributing to lower the density <span id="id3">[<a class="reference internal" href="../../references.html#id150" title="K M Masun. The petrography and mineralogy of the Lac de Gras kimberlite field, Slave Province, Northwest Territories: A comparative study. Master's thesis, Department of Geology, Lakehead University, November 1999.">Mas99</a>]</span>. Overall, we expect the
+density of kimberlite pipes to be less than that of the background granitic
+rock.</p>
+</section>
+<section id="susceptibility">
+<span id="tkc-susceptibility"></span><h2>Susceptibility<a class="headerlink" href="#susceptibility" title="Link to this heading"></a></h2>
+<figure class="align-right" id="core-hk-susc" style="width: 20%">
+<img alt="../../../_images/Core_HK_Susc.png" src="../../../_images/Core_HK_Susc.png" />
+</figure>
+<p>The bulk magnetic susceptibility of kimberlite rocks is highly variable and
+depends largely on the concentration and size of magnetite grains. Intrusive
+rocks, such as HK and VK units, tend to have a stronger magnetic signature
+than the host rock and PK kimberlite <span id="id4">[<a class="reference internal" href="../../references.html#id153" title="M Power and D Hildes. Geophysical strategies for kimberlite exploration in northern Canada. In Proceedings of Exploration '07: Fifth Decennial International Conference on Mineral Exploration, 1025-1031. 2007.">PH07</a>]</span> <span id="id5">[<a class="reference internal" href="../../references.html#id154" title="L E Reed and K E Witherly. 50 years of kimberlite geophysics, a review. In B Milkereit, editor, Proceedings of Exploration 07: Fifth Decennial International Conference on Mineral Exploration, 679-689. 2007.">RW07</a>]</span>. In
+addition, there has been many documented cases of kimberlite pipes with strong
+remanent magnetization <span id="id6">[<a class="reference internal" href="../../references.html#id159" title="D A Clark. Comments on magnetic petrophysics. Bulletin of the Australian Society of Exploration Geophysicists, 14:49 - 62, 1983. doi:10.1071/EG983049.">Cla83</a>]</span> <span id="id7">[<a class="reference internal" href="../../references.html#id163" title="J Macnae. Applications of geophysics for the detection and exploration of kimberlites and lamproites. Journal of Geochemical Exploration, 53:213-243, 1985.">Mac85</a>]</span>
+<span id="id8">[<a class="reference internal" href="../../references.html#id160" title="R B Hargraves. Paleomagnetism of mesozoic kimberlites in Southern Africa and the Cretaceous apparent polar wander curve for Africa. Journal of Geophysical Research, 94(B2):1851-1866, 1989.">Har89</a>]</span> <span id="id9">[<a class="reference internal" href="../../references.html#id161" title="Pierre Keating and Pascal Sailhac. Use of the analytic signal to identify magnetic anomalies due to kimberlite pipes. Geophysics, 69(1):180-190, 2004.">KS04</a>]</span>. At high latitude, such as in the
+Lac de Gras region, remanence is clearly identified by the reverse (-)
+polarity of the field. Therefore, we expect the susceptibility of kimberlite
+pipes to be higher than that of the background granitic rock, but we must be
+aware that the response may not by purely induced.</p>
+</section>
+<section id="conductivity">
+<span id="tkc-conductivity"></span><h2>Conductivity<a class="headerlink" href="#conductivity" title="Link to this heading"></a></h2>
+<figure class="align-right" id="core-pk-cond" style="width: 20%">
+<img alt="../../../_images/Core_PK_Cond.png" src="../../../_images/Core_PK_Cond.png" />
+</figure>
+<p>Electrical conduction is relevant to understanding of the geology of kimberlites
+through a number of routes. First, many kimberlite pipes are filled with
+olivine-rich volcaniclastic sediments <span id="id10">[<a class="reference internal" href="../../references.html#id150" title="K M Masun. The petrography and mineralogy of the Lac de Gras kimberlite field, Slave Province, Northwest Territories: A comparative study. Master's thesis, Department of Geology, Lakehead University, November 1999.">Mas99</a>]</span> and generally
+serpentinized through low-temperature metamorphism. Further weathering in the
+upper region of the kimberlite pipes alters the rock to clay minerals which
+are conductive compared to the host rocks. Secondly, glacial scouring of the
+low competency kimberlitic rocks often results in the thick accumulation of
+glacial till and lake sediments, which are typically conductive. The Lac de
+Gras region is located in a sub-Arctic region with a documented permafrost
+layer of variable thickness <span id="id11">[<a class="reference internal" href="../../references.html#id156" title="Golder Associated Ltd. Permafrost baseline report for the Jay Project. Technical Report, Dominion Diamond Ekati Corporation, 2014.">GolderALtd14</a>]</span>. Laboratory and
+field measurements have shown strong dependencies between temperature and the
+EM response.</p>
+</section>
+<section id="chargeability">
+<span id="tkc-chargeability"></span><h2>Chargeability<a class="headerlink" href="#chargeability" title="Link to this heading"></a></h2>
+<figure class="align-right" id="core-hk-charg" style="width: 20%">
+<img alt="../../../_images/Core_HK_Charg.png" src="../../../_images/Core_HK_Charg.png" />
+</figure>
+<p>From the perspective of kimberlite exploration, little has been done in the
+past to use chargeability as a diagnostic physical property. Ice and near-
+surface clays are known to be chargeable. The temperature dependence of
+conductivity <span id="id12">[<a class="reference internal" href="../../references.html#id157" title="Robert E. Grimm and David E. Stillman. Field test of detection and characterisation of subsurface ice using broadband spectral-induced polarisation. Permafrost and Periglacial Processes, 26:28-38, 2015.">GS15</a>]</span> and the presence of ice, as well as fine
+glaciofluvial sediments, can be the sources of chargeability. The resulting IP
+signal is often considered as “noise” that impedes the interpretation of EM
+data and it is commonly referred to as IP contamination
+<span id="id13">[<a class="reference internal" href="../../references.html#id166" title="N.O. Kozhevnikov and E.Yu. Antonov. Fast-decaying inductively induced polarization in frozen ground: a synthesis of results and models. Journal of Applied Geophysics, 82:171 - 183, 2012. URL: https://www.sciencedirect.com/science/article/pii/S0926985112000626, doi:10.1016/j.jappgeo.2012.03.008.">KA12</a>]</span>. Recent studies, however, have shown that negative
+transients in time-domain EM data could be attributed to more interesting geological
+features <span id="id14">[<a class="reference internal" href="../../references.html#id168" title="H El-Kaliouby and E Eldiwany. Transient electromagnetic responses of 3D polarizable body. Geophysics, 69(2):426–430, 2004. doi:10.1190/1.1707062.">EKE04</a>]</span> <span id="id15">[<a class="reference internal" href="../../references.html#id169" title="Carlos Flores and Sergio A. Peralta-Ortega. Induced polarization with in-loop transient electromagnetic soundings: A case study of mineral discrimination at El Arco porphyry copper, Mexico. Journal of Applied Geophysics, 68(3):423–436, 2009. doi:10.1016/j.jappgeo.2009.03.009.">FPO09</a>]</span>
+<span id="id16">[<a class="reference internal" href="../../references.html#id165" title="T Kratzer and J Macnae. Induced polarization in airborne EM. Geophysics, 77(5):E317–E327, 2012. doi:10.1190/geo2011-0492.1.">KM12</a>]</span> <span id="id17">[<a class="reference internal" href="../../references.html#id167" title="S Kang, D Oldenburg, D Yang, and D Marchant. On recovering induced polarization information from airborne time domain EM data. In SEG Technical Program Expanded Abstracts 2014, 1785–1789. Society of Exploration Geophysicists, aug 2014. doi:10.1190/segam2014-1381.1.">KOYM14</a>]</span>. In this study, we will attempt to
+extract chargeability information from the EM data to characterize the
+kimberlite rocks.</p>
+</section>
+<section id="conceptual-model">
+<h2>Conceptual model<a class="headerlink" href="#conceptual-model" title="Link to this heading"></a></h2>
+<p>In summary, we have four physical properties which could be diagnostic in
+differentiating between kimberlites and host rock, as well as between the
+different kimberlitic rock types.
+Overall we expect:</p>
+<table class="docutils align-default" id="tkcgeotable">
+<tbody>
+<tr class="row-odd"><td><p><strong>Rock Unit</strong></p></td>
+<td><p><strong>Density</strong></p></td>
+<td><p><strong>Susceptibility</strong></p></td>
+<td><p><strong>Conductivity</strong></p></td>
+<td><p><strong>Chargeability</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Glacial till</p></td>
+<td><p>Moderate</p></td>
+<td><p>None</p></td>
+<td><p>Moderate-high</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>Host rock</p></td>
+<td><p>Moderate</p></td>
+<td><p>None</p></td>
+<td><p>Low</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-even"><td><p>HK</p></td>
+<td><p>Low-moderate</p></td>
+<td><p>High</p></td>
+<td><p>Low-moderate</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>VK</p></td>
+<td><p>Low</p></td>
+<td><p>Low-moderate</p></td>
+<td><p>Moderate-high</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>Low</p></td>
+<td><p>Low-moderate</p></td>
+<td><p>Moderate-high</p></td>
+<td><p>Moderate-high</p></td>
+</tr>
+<tr class="row-odd"><td colspan="5"><p>Table of physical properties for typical kimberlitic rocks found in the Lac de Gras region.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

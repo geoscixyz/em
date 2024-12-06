@@ -1,0 +1,367 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview of Maxwell’s Equations &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interface Conditions" href="interface_conditions/index.html" />
+    <link rel="prev" title="Lenz’s Law" href="formative_laws/lenz.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formative_laws/index.html">Formative Laws</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview of Maxwell’s Equations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variables-and-units">Variables and Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#differential-form-in-the-time-domain">Differential Form in the Time Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#differential-form-in-the-frequency-domain">Differential Form in the Frequency Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integral-form-in-the-time-domain">Integral Form in the Time Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integral-form-in-the-frequency-domain">Integral Form in the Frequency Domain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Maxwell I: Fundamentals</a></li>
+      <li class="breadcrumb-item active">Overview of Maxwell’s Equations</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/quick_guide_maxwell.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview-of-maxwell-s-equations">
+<span id="quick-guide-maxwell"></span><h1>Overview of Maxwell’s Equations<a class="headerlink" href="#overview-of-maxwell-s-equations" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>Having provided the set of <a class="reference internal" href="formative_laws/index.html#formative-laws-index"><span class="std std-ref">formative laws</span></a> for electromagnetics, we present four common representations of Maxwell’s equations. This page is meant to serve as a quick guide. For specific problems, it may be beneficial to begin from less common forms of Maxwell’s equations. Please note however, that all forms can be derived from the expressions presented here.</p>
+</div>
+<p>Maxwell’s equations are comprised of the first four <a class="reference internal" href="formative_laws/index.html#formative-laws-index"><span class="std std-ref">formative laws</span></a>; i.e. <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell law</span></a>. The equations can be written in various ways and characterize physical relationships between fields (e,h) and fluxes (b,d). Specific formulations can be obtained through use of the <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relations</span></a>. Maxwell’s equations can be written in frequency or in time and in a differential or integral form:</p>
+<ol class="loweralpha simple">
+<li><p><a class="reference internal" href="#differential-equations-time"><span class="std std-ref">Differential Form in the Time Domain</span></a></p></li>
+<li><p><a class="reference internal" href="#differential-equations-frequency"><span class="std std-ref">Differential Form in the Frequency Domain</span></a></p></li>
+<li><p><a class="reference internal" href="#integral-equations-time"><span class="std std-ref">Integral Form in the Time Domain</span></a></p></li>
+<li><p><a class="reference internal" href="#integral-equations-frequency"><span class="std std-ref">Integral Form in the Frequency Domain</span></a></p></li>
+</ol>
+<p>This page is designed to be a quick access to the relevant equations with proper
+<a class="reference internal" href="../introduction/introduction_notation.html#introduction-notation"><span class="std std-ref">notation</span></a> and units. The equations are appropriate for EM fields in matter. If the fields are in free space, then the same constititive relations are used but with <span class="math notranslate nohighlight">\(\sigma = 0\)</span>, <span class="math notranslate nohighlight">\(\mu_0\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_0\)</span>. Constitutive equations are also written by assuming that the physical properties are isotropic and non-dispersive. Further elaboration about this can be found in <span id="id1">[<a class="reference internal" href="../references.html#id16" title="Stanley H Ward and Gerald W Hohmann. Electromagnetic Theory for Geophysical Applications. In Electromagnetic Methods in Applied Geophysics, chapter 4, pages 130–311. Society of Exploration Geophysicists, 1 edition, 1988. URL: https://library.seg.org/doi/abs/10.1190/1.9781560802631.ch4, doi:10.1190/1.9781560802631.ch4.">WH88</a>]</span> (pp. 133) or on the <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">physical properties</span></a> page.</p>
+<section id="variables-and-units">
+<h2>Variables and Units<a class="headerlink" href="#variables-and-units" title="Link to this heading"></a></h2>
+<p>The variables and units for relevant quantities in Maxwell’s equations are given here.</p>
+<p id="maxwell-variables"><strong>Fields</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Frequency-Domain</p></th>
+<th class="head"><p>Time-Domain</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Electric Field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{E}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{e}\)</span></p></td>
+<td><p>V/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic Field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{H}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{h}\)</span></p></td>
+<td><p>A/m</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fluxes</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Flux</p></th>
+<th class="head"><p>Frequency-Domain</p></th>
+<th class="head"><p>Time-Domain</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Current Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{J}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{j}\)</span></p></td>
+<td><p>A/m <span class="math notranslate nohighlight">\(\! ^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Electric Displacement</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{D}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{d}\)</span></p></td>
+<td><p>C/m <span class="math notranslate nohighlight">\(\! ^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Magnetic Flux Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{B}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Physical Properties</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Conductivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>S/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Resistivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Omega m\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Permeability</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>H/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Permittivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+<td><p>F/m</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differential-form-in-the-time-domain">
+<span id="differential-equations-time"></span><h2>Differential Form in the Time Domain<a class="headerlink" href="#differential-form-in-the-time-domain" title="Link to this heading"></a></h2>
+<p>Here, we present differential forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the time domain.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:}\;\;  &amp;\nabla\cdot\mathbf{d}=\rho_f \\
+\textbf{Gauss for B-field:}\;\;  &amp;\nabla\cdot\mathbf{b}=0 \\
+\textbf{Faraday:}          \;\;  &amp;\nabla\times\mathbf{e}=-\dfrac{\partial \mathbf{b}}{\partial t} \\
+\textbf{Ampere-Maxwell:}   \;\;  &amp;\nabla\times\mathbf{h}=\mathbf{j} + \dfrac{\partial \mathbf{d}}{\partial t}
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_f\)</span> is the free change density and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> is the free current density. The following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{j} &amp;= \sigma \mathbf{e}\\
+\mathbf{b} &amp;= \mu \mathbf{h}\\
+\mathbf{d} &amp;= \varepsilon \mathbf{e}
+\end{align}\end{split}\]</div>
+</section>
+<section id="differential-form-in-the-frequency-domain">
+<span id="differential-equations-frequency"></span><h2>Differential Form in the Frequency Domain<a class="headerlink" href="#differential-form-in-the-frequency-domain" title="Link to this heading"></a></h2>
+<p>Here, we present differential forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the frequency domain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:} \;\; &amp;\nabla\cdot\mathbf{D}=\rho_f \\
+\textbf{Gauss for B-field:} \;\; &amp;\nabla\cdot\mathbf{B}=0 \\
+\textbf{Faraday:}           \;\; &amp;\nabla\times\mathbf{E}=-i\omega\mathbf{B} \\
+\textbf{Ampere-Maxwell:}    \;\; &amp;\nabla\times\mathbf{H}=\mathbf{J} + i\omega \mathbf{D}
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_f\)</span> is the free change density and <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is the free current density. The following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{J} &amp;= \sigma \mathbf{E}\\
+\mathbf{B} &amp;= \mu \mathbf{H}\\
+\mathbf{D} &amp;= \varepsilon \mathbf{E}
+\end{align}\end{split}\]</div>
+</section>
+<section id="integral-form-in-the-time-domain">
+<span id="integral-equations-time"></span><h2>Integral Form in the Time Domain<a class="headerlink" href="#integral-form-in-the-time-domain" title="Link to this heading"></a></h2>
+<p>Here, we present integral forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the time domain.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:} \; &amp; \int_V\nabla\cdot\mathbf{d}\; dV \! =\!\oint_S\mathbf{d}\cdot d\mathbf{a} \! = \! Q_f \\
+\textbf{Gauss for B-field:} \; &amp; \oint_S \mathbf{b} \cdot d \mathbf{a}=0 \\
+\textbf{Faraday:}           \; &amp; \oint_C \mathbf{e}\cdot d\mathbf{l}=-\int_S\dfrac{\partial \mathbf{b}}{\partial t}\cdot d\mathbf{a} \\
+\textbf{Ampere-Maxwell:}    \; &amp; \oint_C \!\mathbf{h} \cdot  d\mathbf{l} = \! \int_S \!\Big ( \mathbf{j} \!+\! \dfrac{\partial \mathbf{d}}{\partial t} \Big ) \!\cdot d\mathbf{a}
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_f\)</span> is the total enclose free electrical charge and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> is the free current density. <span class="math notranslate nohighlight">\(d \mathbf{a}\)</span> is an infinitessimal unit of surface area with vector direction normal to the surface <span class="math notranslate nohighlight">\(S\)</span>. <span class="math notranslate nohighlight">\(d \mathbf{l}\)</span> is an infinitessimal length with vector direction along a closed path <span class="math notranslate nohighlight">\(C\)</span>. The following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{j} &amp;= \sigma \mathbf{e}\\
+\mathbf{b} &amp;= \mu \mathbf{h}\\
+\mathbf{d} &amp;= \varepsilon \mathbf{e}
+\end{align}\end{split}\]</div>
+</section>
+<section id="integral-form-in-the-frequency-domain">
+<span id="integral-equations-frequency"></span><h2>Integral Form in the Frequency Domain<a class="headerlink" href="#integral-form-in-the-frequency-domain" title="Link to this heading"></a></h2>
+<p>Here, we present integral forms for <a class="reference internal" href="formative_laws/gauss_electric.html#gauss-electric"><span class="std std-ref">Gauss’s law for electric fields</span></a>, <a class="reference internal" href="formative_laws/gauss_magnetic.html#gauss-magnetic"><span class="std std-ref">Gauss’s law for magnetic fields</span></a>, <a class="reference internal" href="formative_laws/faraday.html#faraday"><span class="std std-ref">Faraday’s law</span></a> and the <a class="reference internal" href="formative_laws/ampere_maxwell.html#ampere-maxwell"><span class="std std-ref">Ampere-Maxwell equation</span></a> in the frequency domain.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textbf{Gauss for E-field:} \; &amp;\int_V\nabla\cdot\mathbf{D}\; dV=\oint_S\mathbf{D}\cdot d \mathbf{a} \! =\! Q_f \\
+\textbf{Gauss for B-field:} \; &amp;\oint_S \mathbf{B} \cdot d\mathbf{a}=0 \\
+\textbf{Faraday:}           \; &amp;\oint_C \mathbf{E}\cdot d\mathbf{l}=-i\omega\int_S\mathbf{B}\cdot d\mathbf{a} \\
+\textbf{Ampere-Maxwell:}    \; &amp; \oint_C \!\mathbf{H} \cdot  d\mathbf{l} = \! \int_S \!\big ( \mathbf{J} \!+\! i\omega \mathbf{D} \big ) \!\cdot d\mathbf{a}
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_f\)</span> is the total enclose free electrical charge and <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is the free current density. <span class="math notranslate nohighlight">\(d \mathbf{a}\)</span> is an infinitessimal unit of surface area with vector direction normal to the surface <span class="math notranslate nohighlight">\(S\)</span>. <span class="math notranslate nohighlight">\(d \mathbf{l}\)</span> is an infinitessimal length with vector direction along a closed path <span class="math notranslate nohighlight">\(C\)</span>. The following <a class="reference internal" href="../physical_properties/index.html#physical-properties-index"><span class="std std-ref">constitutive relationships</span></a> can be used to replace fields and fluxes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\mathbf{J} &amp;= \sigma \mathbf{E}\\
+\mathbf{B} &amp;= \mu \mathbf{H}\\
+\mathbf{D} &amp;= \varepsilon \mathbf{E}
+\end{align}\end{split}\]</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="formative_laws/lenz.html" class="btn btn-neutral float-left" title="Lenz’s Law" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interface_conditions/index.html" class="btn btn-neutral float-right" title="Interface Conditions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

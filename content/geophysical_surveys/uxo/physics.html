@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Survey" href="survey.html" />
+    <link rel="prev" title="Unexploded Ordnance" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Unexploded Ordnance</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Physics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dipole-model-for-uxo-responses">Dipole Model for UXO Responses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Unexploded Ordnance</a></li>
+      <li class="breadcrumb-item active">Physics</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/uxo/physics.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-purpose admonition" id="purpose">
+<span id="uxo-physics"></span><p class="admonition-title">Purpose</p>
+<p>Here, the nature of UXO responses is described in both the frequency and time domain. A commonly used model for characterizing UXO responses is also presented.</p>
+</div>
+<section id="physics">
+<h1>Physics<a class="headerlink" href="#physics" title="Link to this heading"></a></h1>
+<p>As explained on the previous page, EM UXO surveys operate on the principles of electromagnetic induction (<a class="reference internal" href="index.html#fig-uxo-index-schematic"><span class="std std-numref">Fig. 254</span></a>). Compared to the host medium, UXO casings are both highly conductive (<span class="math notranslate nohighlight">\(\sigma &gt; 10^5\)</span> S/m) and highly permeable (<span class="math notranslate nohighlight">\(\mu_r \gg 1\)</span>). During a UXO survey, an inductive loop source generates a primary field. The primary field induces eddy currents within ordnance casings and other buried metallic objects (known as clutter). Induced eddy currents generate secondary electromagnetic fields which are measured by one or more receiver coils.</p>
+<figure class="align-center" id="fig-uxo-physics-schematic" style="width: 100%">
+<img alt="../../../_images/UXOschematic.png" src="../../../_images/UXOschematic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 255 </span><span class="caption-text">Electromagnetic induction (EMI) survey for UXO location.</span><a class="headerlink" href="#fig-uxo-physics-schematic" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="dipole-model-for-uxo-responses">
+<h2>Dipole Model for UXO Responses<a class="headerlink" href="#dipole-model-for-uxo-responses" title="Link to this heading"></a></h2>
+<p>Research has shown that in general, the secondary field generated by a UXO (<span class="math notranslate nohighlight">\(\mathbf{B}_{s}\)</span>) can be approximated by its dipole response (<span id="id1">[<a class="reference internal" href="../../references.html#id32" title="T. Bell, B. Barrow, and Miller J. T. Subsurface discrimination using electromagnetic induction sensors. IEEE Transactions on Geoscience and Remote Sensing, 39:1286–1293, 2001.">BBT01</a>, <a class="reference internal" href="../../references.html#id31" title="T. Bell, B. Barrow, Miller J. T., and D. Keiswetter. Time and frequency domain electromagnetic induction signatures of unexploded ordnance. Subsurface Sensing Technologies and Applications, 2:153–175, 2001.">BBTK01</a>, <a class="reference internal" href="../../references.html#id27" title="L. R. Pasion. Inversion of Time Domain Electromagnetic Data for the Detection of Unexploded Ordnance. PhD thesis, Univ. of British Columbia, 1999.">Pas99</a>, <a class="reference internal" href="../../references.html#id33" title="Y. Zhang, L. M. Collins, H. Yu, C. E. Baum, and L. Carin. Sensing of unexploded ordnance with magnetometer and induction data; theory and signal processing. IEEE Transactions on Geoscience and Remote Sensing, 41:1005–1015, 2003.">ZCY+03</a>]</span> and others). As a result, the excitation of the ordnance item is characterized by an induced magnetic dipole moment (<span class="math notranslate nohighlight">\(\mathbf{m}\)</span>). Thus:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{B}_{s} = \frac{\mu_0}{4 \pi} \Bigg [ \frac{3 \hat r \big ( \hat r \cdot \mathbf{m} \big ) - \mathbf{m}}{r^3} \Bigg ]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat r = (r_x,r_y,r_z)\)</span> is the unit vector distance from the UXO to a particular observation location. For practical purposes, the dipole response is generally formulated in terms of a linear operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} B_x \\ B_y \\ B_z \end{bmatrix} = \begin{bmatrix} G_{xx} &amp; G_{xy} &amp; G_{xz} \\ G_{yx} &amp; G_{yy} &amp; G_{yz} \\ G_{zx} &amp; G_{zy} &amp; G_{zz} \end{bmatrix} \begin{bmatrix} m_x \\ m_y \\ m_z \end{bmatrix}\end{split}\]</div>
+<p>where the entries within the geometric forward modeling operator (<span class="math notranslate nohighlight">\(\mathbf{G}\)</span>) are given by:</p>
+<div class="math notranslate nohighlight">
+\[G_{ij} = \frac{\mu_0}{4 \pi r^3} \big (3 r_i r_j - \delta{ij} \big ) \;\;\; \textrm{for} \;\;\; i,j = x,y,z\]</div>
+<p>and <span class="math notranslate nohighlight">\(\delta_{ij}\)</span> is the Kronecker delta. The linear formulation allows for rapid computation of the EM response and can be adapted to accommodate multiple receiver coils.</p>
+<figure class="align-center" id="uxo-physics-dipole" style="width: 90%">
+<img alt="../../../_images/physics_dipole.png" src="../../../_images/physics_dipole.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 256 </span><span class="caption-text">Dipole anomaly 2 m above a magnetic dipole <span class="math notranslate nohighlight">\(\mathbf{m} = [0,1,1]\)</span> Am <span class="math notranslate nohighlight">\(\!^2\)</span>.</span><a class="headerlink" href="#uxo-physics-dipole" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Unlike a conductive and magnetically permeable sphere, the excitation of a UXO is not the same in all directions. As a result, its corresponding polarization cannot be characterized by a single <a class="reference internal" href="../../maxwell3_fdem/inductive_sources/sphere/sphereFEM_dipole_response.html#spherefem-dipole-response"><span class="std std-ref">excitation factor</span></a>. This is overcome by treating the UXO as an orthogonal tri-axial object which experiences a polarization along each axis. Ultimately, the UXO’s dipole moment can be expressed as:</p>
+<figure class="align-right" id="fig-uxo-coordinates" style="width: 50%">
+<img alt="../../../_images/Coordinates.png" src="../../../_images/Coordinates.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 257 </span><span class="caption-text">Geometry of the UXO problem. Fields are defined in <span class="math notranslate nohighlight">\(( \hat x, \hat y,\hat z)\)</span> whereas the polarization of the UXO is defined in <span class="math notranslate nohighlight">\(( \hat x', \hat y', \hat z')\)</span>.</span><a class="headerlink" href="#fig-uxo-coordinates" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\mathbf{m}(\omega) = \mathbf{A^T L A h_p}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A (\theta ,\phi )\)</span> is a 3D rotation matrix from the coordinate system of the fields (<span class="math notranslate nohighlight">\(\hat x,\hat y,\hat z\)</span>) to the coordinate system of the UXO (<span class="math notranslate nohighlight">\(\hat x',\hat y',\hat z'\)</span>), <span class="math notranslate nohighlight">\(\mathbf{h_p} = [h_x, h_y, h_z]^T\)</span> is a vector representing the transmitter’s primary field and <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is called the polarization tensor. Assuming there is no anisotropy, <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is a diagonal matrix of the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{L} = \begin{bmatrix} L_{x'} &amp; 0 &amp; 0 \\ 0 &amp; L_{y'} &amp; 0 \\ 0 &amp; 0 &amp; L_{z'} \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_{ii}\)</span> characterizes the polarization along each each axial direction <span class="math notranslate nohighlight">\(\hat x'\)</span>, <span class="math notranslate nohighlight">\(\hat y'\)</span> and <span class="math notranslate nohighlight">\(\hat z'\)</span>. It should be noted that this model assumes the inducing field is spatially invariant about the target. For most ordnance items this assumption is acceptable because the items are small and the fields are sufficiently smooth.</p>
+<section id="frequency-domain-responses">
+<h3>Frequency-Domain Responses<a class="headerlink" href="#frequency-domain-responses" title="Link to this heading"></a></h3>
+<p>The physics which governs the UXO’s FEM response can be best understood by considering a <a class="reference internal" href="../../maxwell3_fdem/inductive_sources/sphere/index.html#spherefem-freespace-index"><span class="std std-ref">conductive and magnetically permeable sphere in free-space</span></a>. Using the dipole model, the UXO’s FEM response can be expressed as:</p>
+<figure class="align-right" id="uxo-physics-fem-moment" style="width: 50%">
+<img alt="../../../_images/physics_FEM_moment.png" src="../../../_images/physics_FEM_moment.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 258 </span><span class="caption-text">Induced dipole moment normalized by the inducing field for a sphere (<span class="math notranslate nohighlight">\(R\)</span> = 10 cm, <span class="math notranslate nohighlight">\(\sigma=10^6\)</span> S/m, <span class="math notranslate nohighlight">\(\mu_r\)</span> = 30) 2 m below an inductive source.</span><a class="headerlink" href="#uxo-physics-fem-moment" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\mathbf{B_s}(\omega) = \mathbf{G A^T L}(\omega) \mathbf{A h_p}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{h_p} = [h_x, h_y, h_z]^T\)</span> is a vector representing the transmitter’s primary field and <span class="math notranslate nohighlight">\(\mathbf{L}(\omega)\)</span> is the polarization tensor. In this case, the polarization of the UXO is frequency-dependent. Assuming there is no anisotropy, <span class="math notranslate nohighlight">\(\mathbf{L}(\omega)\)</span> is a diagonal matrix of the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{L}(\omega) = \begin{bmatrix} L_{x'} (\omega) &amp; 0 &amp; 0 \\ 0 &amp; L_{y'} (\omega) &amp; 0 \\ 0 &amp; 0 &amp; L_{z'} (\omega) \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_{ii}(\omega)\)</span> characterizes the polarization along each axis of the UXO. From this model, we ultimately see that the UXO’s FEM response depends on its orientation relative to the transmitter, its polarization along each axis and the operating frequency of the transmitter.</p>
+<p>In the case that the object is a sphere, <span class="math notranslate nohighlight">\(L_{ii}(\omega) = \frac{4 \pi R^3}{3} \chi (\omega)\)</span> for <span class="math notranslate nohighlight">\(ii=x',y',z'\)</span> where <span class="math notranslate nohighlight">\(\chi (\omega)\)</span> is the <a class="reference internal" href="../../maxwell3_fdem/inductive_sources/sphere/sphereFEM_excitation_factor.html#spherefem-excitation-factor"><span class="std std-ref">excitation factor for a sphere</span></a>. The dipole moment for a spherical object (normalized by the inducing field) is shown in <a class="reference internal" href="#uxo-physics-fem-moment"><span class="std std-numref">Fig. 258</span></a>. The FEM anomaly from the sphere at f = 10 kHz is shown in <a class="reference internal" href="#uxo-physics-fem-anomaly"><span class="std std-numref">Fig. 259</span></a>.</p>
+<figure class="align-center" id="uxo-physics-fem-anomaly" style="width: 100%">
+<img alt="../../../_images/physics_FEM_anomaly.png" src="../../../_images/physics_FEM_anomaly.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 259 </span><span class="caption-text">FEM anomaly at f = 10 kHz for a coincident loop system which measures 3-component data 2 m above a conductive and magnetically permeable sphere (<span class="math notranslate nohighlight">\(R\)</span> = 10 cm, <span class="math notranslate nohighlight">\(\sigma=10^6\)</span> S/m, <span class="math notranslate nohighlight">\(\mu_r\)</span> = 30).</span><a class="headerlink" href="#uxo-physics-fem-anomaly" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="transient-responses">
+<h3>Transient Responses<a class="headerlink" href="#transient-responses" title="Link to this heading"></a></h3>
+<p>The transient response characterizes the secondary fields which are generated after a long-standing static field is removed. The physics which governs the UXO’s transient response can be best understood by considering a <a class="reference internal" href="../../maxwell4_tdem/inductive_sources/sphere/index.html#spheretem-index"><span class="std std-ref">conductive and magnetically permeable sphere in free-space</span></a>. TEM UXO instruments primarily measure <span class="math notranslate nohighlight">\(dB_s/dt\)</span> as opposed to <span class="math notranslate nohighlight">\(B_s(t)\)</span>. In any case, the transient response can be expressed as:</p>
+<figure class="align-right" id="uxo-physics-tem-moment" style="width: 50%">
+<img alt="../../../_images/physics_TEM_moment.png" src="../../../_images/physics_TEM_moment.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 260 </span><span class="caption-text">Transient dipole moment normalized by the inducing field for a sphere (<span class="math notranslate nohighlight">\(R\)</span> = 15 cm, <span class="math notranslate nohighlight">\(\sigma=10^6\)</span> S/m, <span class="math notranslate nohighlight">\(\mu_r\)</span> = 30) 2 m below an inductive source. (a) Dipole moment. (b) Time-derivative.</span><a class="headerlink" href="#uxo-physics-tem-moment" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\mathbf{d}(t) = \mathbf{G p}(t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{d}(t)\)</span> is used to represent <span class="math notranslate nohighlight">\(dB/dt\)</span> or <span class="math notranslate nohighlight">\(B(t)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}(t)\)</span> represents <span class="math notranslate nohighlight">\(\mathbf{m}(t)\)</span> or <span class="math notranslate nohighlight">\(d\mathbf{m}/dt\)</span>, respectively, after the primary field has been removed. The UXO’s transient dipole moment is given by:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}(t) = \mathbf{A^T L}(t) \mathbf{A h_p}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is a 3D rotation matrix from the coordinate system of the transmitter (<span class="math notranslate nohighlight">\(x,y,z\)</span>) to the coordinate system of the UXO (<span class="math notranslate nohighlight">\(x',y',z'\)</span>), <span class="math notranslate nohighlight">\(\mathbf{h_p} = [h_x, h_y, h_z]^T\)</span> is a vector denoting transmitter’s primary field before shut-off and <span class="math notranslate nohighlight">\(\mathbf{L}(t)\)</span> defines the polarization of the UXO. Assuming there is no anisotropy, <span class="math notranslate nohighlight">\(\mathbf{L}(t)\)</span> is a diagonal matrix of the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{L}(t) = \begin{bmatrix} L_{x'} (t) &amp; 0 &amp; 0 \\ 0 &amp; L_{y'} (t) &amp; 0 \\ 0 &amp; 0 &amp; L_{z'} (t) \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_{ii}(t)\)</span> characterizes the polarization along each axis of the UXO.</p>
+<p>In the case that our object is a sphere, analytic expressions can be found <a class="reference internal" href="../../maxwell4_tdem/inductive_sources/sphere/transient_response.html#spheretem-transient-response"><span class="std std-ref">here</span></a>. The transient moment of the UXO (normalized by the inducing field) and its time-derivative are shown in <a class="reference internal" href="#uxo-physics-tem-moment"><span class="std std-numref">Fig. 260</span></a>. The TEM anomaly from the sphere at t = 10 <span class="math notranslate nohighlight">\(\!^{-4}\)</span> s is shown in <a class="reference internal" href="#uxo-physics-tem-anomaly"><span class="std std-numref">Fig. 261</span></a>.</p>
+<p>For particular ordnance items, the polarization along each axis may be obtained through experimentation and stored in a library. Parameterizations also exist for describing the polarization of UXOs such that <span class="math notranslate nohighlight">\(\mathbf{m}(t) = L(t) \mathbf{h_p}\)</span>. In this case, <span class="math notranslate nohighlight">\(L(t)\)</span> is a scalar function which assumes that polarization of the UXO is parallel to the inducing field. One such parameterization for the decay of <span class="math notranslate nohighlight">\(B (t)\)</span> is given by (<span id="id2">[<a class="reference internal" href="../../references.html#id36" title="J. T. Smith, H. F. Morrison, and A. Becker. Parametric forms and the inductive response of a permeable conductive sphere. Lawrence Berkeley National Laboratory, 2003.">SMB03</a>]</span>):</p>
+<div class="math notranslate nohighlight">
+\[L(t) = k \Bigg ( 1 + \sqrt{\frac{t}{\alpha}} \, \Bigg )^{-\beta} e^{-t/\gamma}\]</div>
+<p>which depends on parameters <span class="math notranslate nohighlight">\(k, \alpha, \beta\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span>. At early times, we can see that the decay of <span class="math notranslate nohighlight">\(B(t)\)</span> is very flat and that <span class="math notranslate nohighlight">\(dB/dt\)</span> decays proportional to <span class="math notranslate nohighlight">\(t^{-1/2}\)</span>. At intermediate times, the decay of <span class="math notranslate nohighlight">\(B(t)\)</span> is proportional to <span class="math notranslate nohighlight">\(t^{-\beta/2}\)</span>; which only occurs for objects that sufficiently permeable. At late times, the responses exhibits exponential decay which is dependent on <span class="math notranslate nohighlight">\(e^{-t/\gamma}\)</span>. Early, mid and late-time decays can all be see in <a class="reference internal" href="#uxo-physics-tem-moment"><span class="std std-numref">Fig. 260</span></a>.</p>
+<figure class="align-center" id="uxo-physics-tem-anomaly" style="width: 100%">
+<img alt="../../../_images/physics_TEM_anomaly.png" src="../../../_images/physics_TEM_anomaly.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 261 </span><span class="caption-text">TEM anomaly at t = <span class="math notranslate nohighlight">\(10^{-4}\)</span> s for a coincident loop system which measures 3-component data 2 m above a conductive and magnetically permeable sphere (<span class="math notranslate nohighlight">\(R\)</span> = 15 cm, <span class="math notranslate nohighlight">\(\sigma=10^6\)</span> S/m, <span class="math notranslate nohighlight">\(\mu_r\)</span> = 30).</span><a class="headerlink" href="#uxo-physics-tem-anomaly" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Unexploded Ordnance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

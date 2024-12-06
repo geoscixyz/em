@@ -1,0 +1,448 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ampere-Maxwell &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Conservation of Charge" href="conservation_of_charge.html" />
+    <link rel="prev" title="Faraday’s Law" href="faraday.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Maxwell I: Fundamentals</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Formative Laws</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gauss_electric.html">Gauss’s Law for Electric Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coulomb.html">Gauss’s Law from Coulomb’s Law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gauss_magnetic.html">Gauss’s Law for Magnetic Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faraday.html">Faraday’s Law</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ampere-Maxwell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#integral-equation">Integral Equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-equation-in-the-time-domain">Differential equation in the time domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-equations-in-the-frequency-domain">Differential equations in the frequency domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#discovers-of-the-law">Discovers of the law</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conservation_of_charge.html">Conservation of Charge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biot_savart.html">Biot-Savart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenz.html">Lenz’s Law</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_guide_maxwell.html">Overview of Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface_conditions/index.html">Interface Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time_domain_equations.html">Maxwell’s Equations: Time Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frequency_domain_equations.html">Maxwell’s Equations: Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_planewaves_homogeneous/index.html">Harmonic Planewaves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transient_planewaves_homogeneous/index.html">Transient Plane Waves in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflection_and_refraction/index.html">Plane Waves at Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maxwell_sources.html">Maxwell’s Equations with Electromagnetic Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dipole_sources_in_homogeneous_media/index.html">Dipole Sources in Homogeneous Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solving_maxwells_equations.html">Solving Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/appendix_index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Maxwell I: Fundamentals</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Formative Laws</a></li>
+      <li class="breadcrumb-item active">Ampere-Maxwell</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/maxwell1_fundamentals/formative_laws/ampere_maxwell.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ampere-maxwell">
+<span id="id1"></span><h1>Ampere-Maxwell<a class="headerlink" href="#ampere-maxwell" title="Link to this heading"></a></h1>
+<p>The Ampere-Maxwell equation relates electric currents and magnetic flux. It
+describes the magnetic fields that result from a transmitter wire or loop in
+electromagnetic surveys. For steady currents, it is key for describing the
+magnetometric resistivity experiment.</p>
+<section id="integral-equation">
+<span id="ampere-maxwell-integral-time"></span><h2>Integral Equation<a class="headerlink" href="#integral-equation" title="Link to this heading"></a></h2>
+<p>The Ampere-Maxwell equation in integral form is given below:</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-integral">
+<span class="eqno">(62)<a class="headerlink" href="#equation-ampere-maxwell-integral" title="Link to this equation"></a></span>\[\int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =  \oint_C \mathbf{b} \cdot \mathbf{dl} = \mu_0 \left( I_{enc} + \varepsilon_0 \frac{d}{dt} \int_S \mathbf{e} \cdot \hat{\mathbf{n}} ~\text{da} \right),\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is the magnetic flux</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{e}\)</span> is the electric field</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{enc}\)</span> is the enclosed current</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu_0\)</span> is the magnetic permeability of free space</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_0\)</span> is the electric permittivity of free space</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span> is the outward pointing unit-normal</p></li>
+</ul>
+<blockquote>
+<div><figure class="align-right" id="ienc">
+<a class="reference internal image-reference" href="../../../_images/Ienc.png"><img alt="../../../_images/Ienc.png" src="../../../_images/Ienc.png" style="width: 164.0px; height: 174.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Enclosed current.</span><a class="headerlink" href="#ienc" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>The first term of the right hand side of the equation was discovered by Ampere. It shows the relationship
+between a current <span class="math notranslate nohighlight">\(I_{enc}\)</span> and the circulation of the magnetic field, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>,
+around any closed contour line (See <a class="reference internal" href="#ienc"><span class="std std-numref">Fig. 35</span></a>). <span class="math notranslate nohighlight">\(I_{enc}\)</span> refers to all currents
+irrespective of their physical origin.</p>
+<p>The second portion of the equation is Maxwell’s contribution and shows that a
+circulation of magnetic field is also caused by a time rate of change of
+electric flux. This explains how current in a simple circuit involving a
+battery and capacitor can flow. The term is pivotal in showing that
+electromagnetic energy propagates as waves.</p>
+<figure class="align-right" id="capacitor">
+<a class="reference internal image-reference" href="../../../_images/Capacitor.png"><img alt="../../../_images/Capacitor.png" src="../../../_images/Capacitor.png" style="width: 221.4px; height: 194.4px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Integration over a capacitor</span><a class="headerlink" href="#capacitor" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For example, imagine integrating over a surface associated with a closed path
+such as the one showed in <a class="reference internal" href="#capacitor"><span class="std std-numref">Fig. 36</span></a>. We can define the surface to be
+the area of the circle, as in <a class="reference internal" href="#ienc"><span class="std std-numref">Fig. 35</span></a>, or alternatively, as a
+stretched surface, as shown in <a class="reference internal" href="#capacitor"><span class="std std-numref">Fig. 36</span></a>. In the first case,
+the enclosed current is the flow of charges in the wire. In the second case,
+however, there are no charges flowing through the surface, yet the magnetic
+field defined on the enclosing curve, <span class="math notranslate nohighlight">\(C\)</span>, must be the same. This apparent
+discrepancy is reconciled if we take into account the displacement current,
+which is the time rate of change of the electric field, between the two
+plates. This integration is the same as if we were integrating over a flat
+surface with the current wire crossing it.</p>
+<p>The integral formulations are physically insightful and closely relate to the
+experiments that gave rise to them. They also play a formative role in
+generating boundary conditions for waves that propagate through different
+materials.</p>
+<p>When dealing with the propagation of EM waves in matter the currents
+<span class="math notranslate nohighlight">\(I_{enc}\)</span> are usually dealt with in terms of current densities. The
+integral equation above is thus written as</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-integral-p-m">
+<span class="eqno">(63)<a class="headerlink" href="#equation-ampere-maxwell-integral-p-m" title="Link to this equation"></a></span>\[\int_S \boldsymbol{\nabla} \times \mathbf{b} \cdot \mathbf{da} =
+\oint_C \mathbf{b} \cdot \mathbf{dl} =
+\mu_0 \left(\int_S \left(\mathbf{j_f}
+    + \frac{\partial \mathbf{p}}{\partial t}
+    + \boldsymbol{\nabla} \times \mathbf{m}\right)\cdot \mathbf{da}
+    +  \varepsilon_0 \frac{d}{dt}  \int_S \mathbf{e} \cdot \mathbf{\hat{n}} ~\text{da}\right),\]</div>
+<p>where the current densities are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{j_f}\)</span> is the free current caused by moving charges</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{j_p} = \frac{\partial \mathbf{p}}{\partial t}\)</span> is the polarization or bound current, where <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is the electric polarization resulting from bound charges in dielectrics</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{j_m} = \nabla \times \mathbf{m}\)</span> is the magnetization current, that is, the currents needed to generate the magnetization <span class="math notranslate nohighlight">\(\mathbf{m}\)</span></p></li>
+</ul>
+<p>The total current density is the sum of these three contributions and is described by</p>
+<div class="math notranslate nohighlight" id="equation-current-contributions">
+<span class="eqno">(64)<a class="headerlink" href="#equation-current-contributions" title="Link to this equation"></a></span>\[\mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/Currents.png"><img alt="../../../_images/Currents.png" src="../../../_images/Currents.png" style="width: 561.0px; height: 177.5px;" />
+</a>
+</figure>
+<p>The total current involved in the Ampere-Maxwell equation consists of free
+current and bound current, although all currents are essentially the same from
+a microscopic perspective. Treating free current and bound current differently
+offers physical insights to the Ampere-Maxwell equation in different contexts.</p>
+<p>The free current is caused by moving charges which are not tied to atoms, often
+referred to as conduction current. In contrast, the bound current is induced by
+a magnetization or a polarization in bulk materials. When a magnetic material is
+placed in an external magnetic field, a magnetization current will be induced
+due to the motion of electrons in atoms. Likewise, when an external electric
+field is applied to a dielectric material, the positive and negative bound charges within
+the dielectric can separate and induce a polarization current density internally.</p>
+</div>
+<p>Continuing to treat the free current and bound current separately and using the
+constitutive equations: <span class="math notranslate nohighlight">\(\mathbf{b} = \mu_0(\mathbf{h} + \mathbf{m})\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}= \varepsilon_0 \mathbf{e} + \mathbf{p}\)</span>, the integral form Ampere-Maxwell equation can be reformulated as:</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-integral-h-d">
+<span class="eqno">(65)<a class="headerlink" href="#equation-ampere-maxwell-integral-h-d" title="Link to this equation"></a></span>\[\int_S \boldsymbol{\nabla} \times \mathbf{h} \cdot \mathbf{da} = \oint_C \mathbf{h} \cdot \mathbf{dl} = \int_S \left( \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t} \right) \cdot \hat{\mathbf{n}} ~\text{da}.\]</div>
+<p>Note that the bound charge due to magnetization is integrated into the magnetic
+field <span class="math notranslate nohighlight">\(\mathbf{h}\)</span>, whereas the bound charge due to electric polarization is
+integrated into the displacement field <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
+</section>
+<section id="differential-equation-in-the-time-domain">
+<span id="ampere-maxwell-differential-time"></span><h2>Differential equation in the time domain<a class="headerlink" href="#differential-equation-in-the-time-domain" title="Link to this heading"></a></h2>
+<p>There are a number of ways of writing the equation in differential form. Each
+provides its own insight. We begin by considering the differential form of equation <a class="reference internal" href="#equation-ampere-maxwell-integral">(62)</a> in terms of the variables <span class="math notranslate nohighlight">\(\mathbf{e, b, p}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{m}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-differential-ebpm">
+<span class="eqno">(66)<a class="headerlink" href="#equation-ampere-maxwell-differential-ebpm" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{b}
+    - \varepsilon_0 \mu_0 \frac{\partial \mathbf{e}}{\partial t}
+= \mu_0\left( \mathbf{j_f}
+    + \frac {\partial \mathbf{p}}{\partial t}
+    + \boldsymbol{\nabla} \times \mathbf{m}\right)\]</div>
+<p>and similar to <a class="reference internal" href="#equation-ampere-maxwell-integral-h-d">(65)</a>, we can use the constitutive relations <span class="math notranslate nohighlight">\(\mathbf{d}= \varepsilon_0 \mathbf{e} + \mathbf{p}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \mu_0(\mathbf{h} + \mathbf{m})\)</span> to write the differential time-domain equation in terms of the variables <span class="math notranslate nohighlight">\(\mathbf{h, j_f}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-differential-hjd">
+<span class="eqno">(67)<a class="headerlink" href="#equation-ampere-maxwell-differential-hjd" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{h} = \mathbf{j}_f + \frac{\partial \mathbf{d}}{\partial t}.\]</div>
+</section>
+<section id="differential-equations-in-the-frequency-domain">
+<span id="ampere-maxwell-differential-frequency"></span><h2>Differential equations in the frequency domain<a class="headerlink" href="#differential-equations-in-the-frequency-domain" title="Link to this heading"></a></h2>
+<p>We use the <span class="math notranslate nohighlight">\(e^{i\omega t}\)</span> <a class="reference internal" href="../../introduction/introduction_notation.html#fourier-transform-convention"><span class="std std-ref">Fourier Transform Convention</span></a> to transfer
+our equations from the time domain to the frequency domain.</p>
+<p>The equation becomes</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-frequency">
+<span class="eqno">(68)<a class="headerlink" href="#equation-ampere-maxwell-frequency" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{H}  - i \omega \mathbf{D} = \mathbf{J}_f.\]</div>
+<p>If we deal with linear isotropic media then we have</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{D}(\omega)=\epsilon \mathbf{E}(\omega)\]</div>
+<div class="math notranslate nohighlight" id="equation-current-density-electric-field">
+<span class="eqno">(69)<a class="headerlink" href="#equation-current-density-electric-field" title="Link to this equation"></a></span>\[\mathbf{J}_f(\omega)=\sigma \mathbf{E}(\omega)\]</div>
+<p>and the Ampere-Maxwell equations can be written as</p>
+<div class="math notranslate nohighlight" id="equation-ampere-maxwell-frequency2">
+<span class="eqno">(70)<a class="headerlink" href="#equation-ampere-maxwell-frequency2" title="Link to this equation"></a></span>\[\boldsymbol{\nabla} \times \mathbf{H}  - \left(\sigma + i \omega \epsilon\right) \mathbf{E} = 0.\]</div>
+</section>
+<section id="units">
+<h2>Units<a class="headerlink" href="#units" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Magnetic B-field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p></td>
+<td><p>T</p></td>
+<td><p>tesla</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric field intensity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{V}}
+{\text{m}}\)</span></p></td>
+<td><p>volt per meter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Electric current</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{I}\)</span></p></td>
+<td><p>A</p></td>
+<td><p>ampere</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric current density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{j}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{A}}
+{\text{m}^{2}}\)</span></p></td>
+<td><p>ampere per square meter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetization</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{m}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{A}}
+{\text{m}}\)</span></p></td>
+<td><p>ampere per meter</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric polarization</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{p}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{A}\cdot
+\text{s}}{\text{m}}\)</span></p></td>
+<td><p>ampere times seconds per square meter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic H-field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{h}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{A}}
+{\text{m}}\)</span></p></td>
+<td><p>ampere per meter</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric displacement</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{d}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{C}}
+{\text{m}^{2}}\)</span></p></td>
+<td><p>coulomb per square meter</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constants</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Magnetic constant</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu_0 = 4\pi ×10^{−7} \frac{\text{N}}{\text{A}^2} \approx 1.2566370614...×10^{-6} \frac{\text{T}\cdot \text{m}}{\text{A}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Vacuum permittivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon_0  \approx 8.854 187 817... × 10^{−12} \frac{\text{F}}{\text{m}}\)</span> (farads per meter)</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conversions</strong></p>
+<ul class="simple">
+<li><p>One Tesla equals one weber (the SI unit of magnetic flux) per square meter:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[1 \text{T} = 1 \frac{\text{Wb}}{\text{m}^{2}} = 1 \frac{\text{V}\cdot \text{s}}{\text{m}^{2}}.\]</div>
+<ul class="simple">
+<li><p>One ampere equals one coulomb (the SI unit of electric charge) per second:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[1 \text{A} = 1 \frac{\text{C}}{\text{s}}.\]</div>
+</section>
+<section id="discovers-of-the-law">
+<h2>Discovers of the law<a class="headerlink" href="#discovers-of-the-law" title="Link to this heading"></a></h2>
+<p>The first observation that spurred researchers to look for the relationship
+linking magnetic field and current was made by Hans Christian Ørsted in 1820,
+who noticed that magnetic needles were deflected by electric currents. This
+led several physicists in Europe to study this phenomenon in parallel. While
+Jean-Baptiste Biot and Félix Savart were experimenting with a setup similar to
+Ørsted’s experiment (that lead them to define in 1820 a relationship known now
+as the Biot-Savart’s law), André-Marie Ampère’s experiment focused on
+measuring the forces that two electric wires exert on each other. He
+formulated the Ampere’s circuital law in 1826 <span id="id2">[<a class="reference internal" href="../../references.html#id5" title="David J Griffiths. Introduction to electrodynamics. Prentice-Hall, 1999.">Gri99</a>]</span>, which
+relates the magnetic field associated with a closed loop to the electric
+current passing through it. In its original form, the current enclosed by the
+loop only refers to free current caused by moving charges, causing several
+issues regarding the conservation of electric charge and the propagation of
+electromagnetic energy.</p>
+<p>In 1861 <span id="id3">[<a class="reference internal" href="../../references.html#id10" title="James C Maxwell. Xliv. on physical lines of force. The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 21(140):281–291, 1861.">Max61</a>]</span>, James Clerk Maxwell extended Ampere’s law by introducing the
+displacement current into the electric current term to satisfy
+the continuity equation of electric charge. Based on the idea of displacement
+current, in 1864 <span id="id4">[<a class="reference internal" href="../../references.html#id9" title="James C. Maxwell. A dynamical theory of the electromagnetic field. Philosophical Transactions of the Royal Society, 1865.">Max65</a>]</span>, Maxwell established the theory of electromagnetic
+field, predicating the wave propagation of electromagnetic fields and the
+equivalence of light propagation and electromagnetic wave propagation.</p>
+<p>It was not until the late 1880s <span id="id5">[<a class="reference internal" href="../../references.html#id7" title="Heinrich Hertz. Electric waves: being researches on the propagation of electric action with finite velocity through space. Dover Publications, 1893.">Her93</a>]</span>, Heinrich Hertz experimentally proved the existence
+of electromagnetic waves as predicated by Maxwell’s electromagnetic theory, and
+demonstrated the equivalence of electromagnetic waves and light.</p>
+<p>These efforts have lain solid foundations for the development of modern electromagnetism.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="faraday.html" class="btn btn-neutral float-left" title="Faraday’s Law" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="conservation_of_charge.html" class="btn btn-neutral float-right" title="Conservation of Charge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

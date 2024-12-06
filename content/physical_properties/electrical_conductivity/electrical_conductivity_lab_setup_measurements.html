@@ -1,0 +1,347 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratory Measurements &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Units" href="electrical_conductivity_units.html" />
+    <link rel="prev" title="Electrical Conductivity" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Electrical Conductivity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#electrical-resistivity">Electrical Resistivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#chargeability-and-frequency-dependence">Chargeability and Frequency-Dependence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Laboratory Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_mechanisms.html">Mechanisms for Conductivity and Chargeability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="electrical_conductivity_factors.html">Factors Impacting Conductivity and Chargeability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../magnetic_permeability/index.html">Magnetic Permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dielectric_permittivity/index.html">Dielectric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Electrical Conductivity</a></li>
+      <li class="breadcrumb-item active">Laboratory Measurements</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/electrical_conductivity/electrical_conductivity_lab_setup_measurements.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="laboratory-measurements">
+<span id="electrical-conductivity-lab-setup-measurements"></span><h1>Laboratory Measurements<a class="headerlink" href="#laboratory-measurements" title="Link to this heading"></a></h1>
+<p>Electrical conductivity/resistivity measurements are an integral part of classifying physical rock properties. Here, we present the general approach for measuring a rock’s electrical properties, including electrical conductivity/resistivity and chargeability. Instrumentation is also discussed.</p>
+<section id="two-electrode-laboratory-setup">
+<h2>Two-Electrode Laboratory Setup<a class="headerlink" href="#two-electrode-laboratory-setup" title="Link to this heading"></a></h2>
+<p>Electrical resistivity measurements are most commonly performed using a two-electrode setup. This is illustrated in <a class="reference internal" href="#fig-cond-lab-setup"><span class="std std-numref">Fig. 5</span></a>. For these measurements, a rock core of known dimensions is placed between two copper or graphite electrodes. Current is then forced through the rock, which acts as the resistive element for an electrical circuit. By measuring the voltage drop across the rock (<span class="math notranslate nohighlight">\(V\)</span>), Ohm’s law for electrical circuits can be used to determine the corresponding resistance. In this case:</p>
+<div class="math notranslate nohighlight" id="equation-phys-prop-ohm-circuit">
+<span class="eqno">(3)<a class="headerlink" href="#equation-phys-prop-ohm-circuit" title="Link to this equation"></a></span>\[V = IR\]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the current being forced through the rock and <span class="math notranslate nohighlight">\(R\)</span> is the resistance due to the rock sample. Given that we know the dimensions of the rock sample, Pouillet’s law can be used to obtain the rock’s electrical resistivity. Pouillet’s law is given by:</p>
+<div class="math notranslate nohighlight" id="equation-phys-prop-pouillet">
+<span class="eqno">(4)<a class="headerlink" href="#equation-phys-prop-pouillet" title="Link to this equation"></a></span>\[\rho = \frac{RA}{l}\]</div>
+<p>where <span class="math notranslate nohighlight">\(l\)</span> is the length of the sample and <span class="math notranslate nohighlight">\(A\)</span> is its cross-sectional area. The electrical conductivity is obtained simply by taking the reciprocal of the resistivity, i.e.:</p>
+<div class="math notranslate nohighlight" id="equation-phys-prop-cond-recip">
+<span class="eqno">(5)<a class="headerlink" href="#equation-phys-prop-cond-recip" title="Link to this equation"></a></span>\[\sigma = \frac{1}{\rho}\]</div>
+<p>Electrical resistivity measurements can be performed in both the frequency domain and the time domain. For frequency domain measurements, a sinusoidal current is driven through the rock sample. We will show that changes must be made to the aforementioned equations in the case of frequency domain measurements. In the time domain, a boxcar waveform is used.</p>
+<figure class="align-center" id="fig-cond-lab-setup" style="width: 75%">
+<img alt="../../../_images/cond_lab_setup.png" src="../../../_images/cond_lab_setup.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Basic setup for electrical resistivity measurements. (A) Theoretical circuit where rock acts as a a resistive element. (B) Rock sample between two electrodes. (C) Circuit schematic for frequency domain and time domain measurements.</span><a class="headerlink" href="#fig-cond-lab-setup" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="fig-dc-measurements" style="width: 25%">
+<img alt="../../../_images/DCcircuit_simple.png" src="../../../_images/DCcircuit_simple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Electrical circuit for DC resistivity measurements.</span><a class="headerlink" href="#fig-dc-measurements" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dc-conductivity-resistivity">
+<h2>DC Conductivity/Resistivity<a class="headerlink" href="#dc-conductivity-resistivity" title="Link to this heading"></a></h2>
+<p>The DC (or zero-frequency) resistivity is obtained by forcing direct current (<span class="math notranslate nohighlight">\(I\)</span>) through the rock and measuring the voltage drop (<span class="math notranslate nohighlight">\(V\)</span>). The resistance (<span class="math notranslate nohighlight">\(R\)</span>) due to the rock is obtained by using Ohm’s law Eq. <a class="reference internal" href="#equation-phys-prop-ohm-circuit">(3)</a>. The electrical resistivity is then obtained by using Eq. <a class="reference internal" href="#equation-phys-prop-pouillet">(4)</a>. The DC resistivity is a single, real-valued quantity and has units Ohm meters (<span class="math notranslate nohighlight">\(\Omega m\)</span>).</p>
+</section>
+<section id="frequency-domain-measurements">
+<h2>Frequency-Domain Measurements<a class="headerlink" href="#frequency-domain-measurements" title="Link to this heading"></a></h2>
+<p>Electrical resistivity can be frequency-dependent and complex-valued, which
+effectively generates polarization effects with the applied electric field.
+This is often called induced polarization (IP) effects. In order to measure
+complex conductivity of a rock specimen, we inject sinusoidal currents (that is, AC
+currents) into to the rock at logarithmically spaced frequencies and measure the corresponding voltages. The typical frequency range for these measurement is from 0.01 Hz - 1 MHz.</p>
+<figure class="align-right" id="fig-z-measurements" style="width: 25%">
+<img alt="../../../_images/Zcircuit_simple.png" src="../../../_images/Zcircuit_simple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Electrical circuit for frequency-domain measurements.</span><a class="headerlink" href="#fig-z-measurements" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this case, the impedance attributed to the rock sample and the voltage measured across it are frequency-dependent and complex. For frequency domain measurements, Eq. <a class="reference internal" href="#equation-phys-prop-ohm-circuit">(3)</a> (Ohm’s law) is given by:</p>
+<div class="math notranslate nohighlight">
+\[Z(\omega) = \frac{V(\omega)}{I(\omega)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(I(\omega)\)</span> is the current which flows through the rock sample, <span class="math notranslate nohighlight">\(V(\omega)\)</span> is the voltage measured across the rock, and <span class="math notranslate nohighlight">\(Z(\omega)\)</span> is the corresponding electrical impedance (complex resistance). By altering Eq. <a class="reference internal" href="#equation-phys-prop-pouillet">(4)</a> accordingly, the resistivity of the rock is given by:</p>
+<div class="math notranslate nohighlight">
+\[\rho (\omega) = \frac{Z(\omega) A}{l}\]</div>
+<section id="representing-frequency-domain-measurements">
+<h3>Representing Frequency-Domain Measurements<a class="headerlink" href="#representing-frequency-domain-measurements" title="Link to this heading"></a></h3>
+<p>There are several ways in which frequency-domain measurements can be represented. These are illustrated below. Generally we plot the complex impedance. However, impedance values can easily be converted to resistivity or conductivity values and plotted.</p>
+<p><strong>Amplitude and Phase</strong></p>
+<p>Frequency domain measurements are frequently plotted in terms of amplitude and phase. As we can see from <a class="reference internal" href="#fig-props-amp-phase"><span class="std std-numref">Fig. 8</span></a>, the amplitude is a monotonic decreasing function with respect to frequency. According to the phase plot, the frequency corresponding to the largest phase occurs at roughly <span class="math notranslate nohighlight">\(\tilde f = 1/2\pi\tau\)</span>.</p>
+<figure class="align-center" id="fig-props-amp-phase" style="width: 100%">
+<img alt="../../../_images/amp_phase_plot.png" src="../../../_images/amp_phase_plot.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Amplitude and phase plot for a sample with <span class="math notranslate nohighlight">\(\rho_0 = 8.8 \times 10^3 \; \Omega \!\)</span> m, <span class="math notranslate nohighlight">\(\eta=0.157\)</span> V/V, <span class="math notranslate nohighlight">\(\tau=2.59 \times 10^{-3}\)</span> s and <span class="math notranslate nohighlight">\(C=0.38\)</span>.</span><a class="headerlink" href="#fig-props-amp-phase" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="fig-props-cole-cole" style="width: 50%">
+<img alt="../../../_images/Cole_Cole_plot.png" src="../../../_images/Cole_Cole_plot.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Cole-Cole plot for a sample with <span class="math notranslate nohighlight">\(\rho_0 = 8.8 \times 10^3 \; \Omega \!\)</span> m, <span class="math notranslate nohighlight">\(\eta=0.157\)</span> V/V, <span class="math notranslate nohighlight">\(\tau=2.59 \times 10^{-3}\)</span> s and <span class="math notranslate nohighlight">\(C=0.38\)</span>.</span><a class="headerlink" href="#fig-props-cole-cole" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Cole-Cole Plot</strong></p>
+<p>The Cole-Cole plot is also a popular choice for visualizing frequency-domain measurements. Here, the real component of the complex impedance is plotted on the X-axis and the negative imaginary component is plotted on the Y-axis. The largest imaginary component occurs at <span class="math notranslate nohighlight">\(\tilde f = 1/2\pi\tau\)</span>. This is the frequency at which induced polarization is most significant for the sample. The characteristic behaviour shown in <a class="reference internal" href="#fig-props-cole-cole"><span class="std std-numref">Fig. 9</span></a> is frequently referred as an impedance arc or “Zarc”.</p>
+</section>
+<section id="measuring-dc-resistivity-and-chargeability">
+<h3>Measuring DC Resistivity and Chargeability<a class="headerlink" href="#measuring-dc-resistivity-and-chargeability" title="Link to this heading"></a></h3>
+<p><strong>Electrical Impedance Spectroscopy</strong></p>
+<p>Recovering the DC resistivity and chargeability from frequency-domain measurements requires an appropriate model for describing the sample’s electric properties. From the previous page, we stated that electrical rock properties can generally be characterized using the Cole-Cole model. For an individual sample:</p>
+<figure class="align-right" id="fig-props-cole-cole-fit" style="width: 50%">
+<img alt="../../../_images/Cole_Cole_fit.png" src="../../../_images/Cole_Cole_fit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Cole-Cole fit showing a sample with <span class="math notranslate nohighlight">\(\rho_0 = 8.8 \times 10^3 \; \Omega \!\)</span> m, <span class="math notranslate nohighlight">\(\eta=0.157\)</span> V/V, <span class="math notranslate nohighlight">\(\tau=2.59 \times 10^{-3}\)</span> s and <span class="math notranslate nohighlight">\(C=0.38\)</span>.</span><a class="headerlink" href="#fig-props-cole-cole-fit" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>The complex impedance is measured at logarithmically spaced frequencies between 0.01 Hz and 1 MHz.</p></li>
+<li><p>The dimensions of the sample are then used to obtain the corresponding resistivity values according to <a class="reference internal" href="#equation-phys-prop-pouillet">(4)</a>.</p></li>
+<li><p>Resistivity values are fit using the Cole-Cole model, which is subsequently used to obtain values for the DC resistivity (<span class="math notranslate nohighlight">\(\rho_0\)</span>) and chargeability (<span class="math notranslate nohighlight">\(\eta\)</span>).</p></li>
+</ol>
+<p>Recall that the Cole-Cole model for electrical resistivity is given by:</p>
+<div class="math notranslate nohighlight">
+\[\rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega \tau)^C} \Bigg ) \Bigg ]\]</div>
+<p><strong>Percent Frequency Effect</strong></p>
+<p>A simpler form of frequency domain measurements is done with two frequencies. If the rock is non-chargeable, then frequency-dependence of the sample’s resistivity is negligible; resulting in near-identical voltage measurements at each frequency. For increasingly chargeable samples, the difference in absolute resistivity becomes larger. Percent frequency effect is used to describe this effect. The percent frequency effect is defined as:</p>
+<div class="math notranslate nohighlight">
+\[PFE = \Bigg ( \frac{V(f_1) - V(f_2)}{V(f_1)} \Bigg ) \times 100 \% = \Bigg ( \frac{\rho (f_1) - \rho (f_2)}{\rho (f_1)} \Bigg ) \times 100 \%\]</div>
+<p>where <span class="math notranslate nohighlight">\(V(f_1)\)</span> is the absolute voltage measured at a lower frequency and <span class="math notranslate nohighlight">\(V(f_2)\)</span> is the absolute voltage measured at a higher frequency. The percent frequency effect can also be expressed in terms of the absolute resistivity, where <span class="math notranslate nohighlight">\(\rho (f_1)\)</span> is the absolute resistivity measured at a lower frequency and <span class="math notranslate nohighlight">\(\rho (f_2)\)</span> is the absolute resistivity measured at a higher frequency.</p>
+<p><strong>Phase Difference</strong></p>
+<figure class="align-right" id="fig-cond-meas-phase" style="width: 40%">
+<img alt="../../../_images/cond_meas_phase.png" src="../../../_images/cond_meas_phase.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Measured voltage showing a change in phase due to induced polarization effects.</span><a class="headerlink" href="#fig-cond-meas-phase" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Chargeability is sometimes inferred by measuring the complex impedance at a particular frequency and determining its phase relative to that of the current:</p>
+<div class="math notranslate nohighlight">
+\[\phi = \textrm{tan}^{-1} \Bigg ( \frac{V (\omega)}{I (\omega)} \Bigg )\]</div>
+<p>By examining <a class="reference internal" href="#fig-props-amp-phase"><span class="std std-numref">Fig. 8</span></a> and <a class="reference internal" href="#fig-props-cole-cole"><span class="std std-numref">Fig. 9</span></a>, we can see that the effects of chargeability are largest when the phase angle is at its maximum. Therefore, the larger the phase, the more dominant IP effects are for the sample. These data are generally given in units of milliradians [mrad].</p>
+</section>
+</section>
+<section id="time-domain-measurements">
+<h2>Time-Domain Measurements<a class="headerlink" href="#time-domain-measurements" title="Link to this heading"></a></h2>
+<p>Electrical resistivity and chargeability can also be measured in the time domain. The experimental setup for time domain measurements is more or less the same as is shown in <a class="reference internal" href="#fig-cond-lab-setup"><span class="std std-numref">Fig. 5</span></a>. In this case, a boxcar waveform is used to excite the sample and voltages are measured during both the on-time and the off-time (<a class="reference internal" href="#cond-volt-tdem"><span class="std std-numref">Fig. 12</span></a>).</p>
+<figure class="align-center" id="cond-volt-tdem">
+<a class="reference internal image-reference" href="../../../_images/IPonoff.png"><img alt="../../../_images/IPonoff.png" src="../../../_images/IPonoff.png" style="width: 989.0px; height: 359.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Time-domain measurements. (a) Boxcar current waveform. (b) Measured voltage across the rock.</span><a class="headerlink" href="#cond-volt-tdem" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>At the moment in which current is initially forced through the rock sample, there is an instantaneous increase in the measured voltage (<span class="math notranslate nohighlight">\(V_\infty\)</span>). As ionic charges build up, there is a relaxation process in which the measured voltage approaches a steady-state (or DC) voltage (<span class="math notranslate nohighlight">\(V_0\)</span>). After sufficient time, the current source is turned off and there is an instantaneous drop in measured voltage equal to <span class="math notranslate nohighlight">\(V_\infty\)</span>. It takes time for the rock to “discharge” due to induced polarization effects. As a result, there is a measurable voltage across the rock during the off-time which we denote as <span class="math notranslate nohighlight">\(V_s(t)\)</span>. In practice, the boxcar excitation is applied many times and the data are stacked.</p>
+<section id="measuring-dc-resistivity">
+<h3>Measuring DC Resistivity<a class="headerlink" href="#measuring-dc-resistivity" title="Link to this heading"></a></h3>
+<p>For time-domain measurements, DC resistivity is easy to measure. The DC voltage is measured by applying direct current for a sufficient amount of time. In <a class="reference internal" href="#cond-volt-tdem"><span class="std std-numref">Fig. 12</span></a>, this voltage is given by <span class="math notranslate nohighlight">\(V_0\)</span>. Once obtained, Eq. <a class="reference internal" href="#equation-phys-prop-ohm-circuit">(3)</a> (Ohm’s law) can be used to obtain the DC resistance (<span class="math notranslate nohighlight">\(R_{DC}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[R_{DC} = \frac{V_0}{I_0}\]</div>
+<p>and Eq. <a class="reference internal" href="#equation-phys-prop-pouillet">(4)</a> can be used to obtain the DC resistivity:</p>
+<div class="math notranslate nohighlight">
+\[\rho_0 = \frac{R_{DC} A}{l}\]</div>
+</section>
+<section id="cole-cole-chargeability">
+<h3>Cole-Cole Chargeability<a class="headerlink" href="#cole-cole-chargeability" title="Link to this heading"></a></h3>
+<p>According to the Cole-Cole model, the chargeability can be defined as the fractional difference between the DC resistivity and the resistivity as <span class="math notranslate nohighlight">\(\omega \rightarrow \infty\)</span> (or <span class="math notranslate nohighlight">\(\rho_\infty\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{\rho_0 - \rho_\infty}{\rho_0}\]</div>
+<p>However, it can also be shown that the chargeability is the fractional difference between the measured DC voltage (<span class="math notranslate nohighlight">\(V_0\)</span>) across the rock sample and the instantaneous increase in voltage (<span class="math notranslate nohighlight">\(V_\infty\)</span>) observed when the current is turned on. Thus:</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{V_0 - V_\infty}{V_0}\]</div>
+<p>Although the formal definition comes directly from our model for electrical resistivity, the latter definition is more relevant in a laboratory setting. In an ideal scenario, it would be possible to measure <span class="math notranslate nohighlight">\(V_0\)</span> and <span class="math notranslate nohighlight">\(V_\infty\)</span> directly and use to previous equation to calculate the chargeability. Unfortunately, there are high-frequency phenomena which significantly impact the measured voltage at the moment the current is applied or removed. This obstacle is overcome by measuring intrinsic values for rock chargeability.</p>
+</section>
+<section id="intrinsic-chargeability-measurements">
+<h3>Intrinsic Chargeability Measurements<a class="headerlink" href="#intrinsic-chargeability-measurements" title="Link to this heading"></a></h3>
+<p>Intrinsic chargeability measurements are performed by measuring the off-time voltage (<span class="math notranslate nohighlight">\(V_s(t)\)</span> in <a class="reference internal" href="#cond-volt-tdem"><span class="std std-numref">Fig. 12</span></a>) and integrating over a specified range of time channels [<span class="math notranslate nohighlight">\(t_1,t_2\)</span>]. This is meant to characterize the induced polarization which occurs over time channels relevant to geophysical surveying methods. The intrinsic chargeability is frequently referred to as the <em>apparent chargeability</em> (<span class="math notranslate nohighlight">\(\eta_{app}\)</span>). There are two common ways to define the apparent chargeability. Either the off-time voltage is integrated between <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\eta_{app} = \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt\]</div>
+<p>and the apparent chargeability is given in units of milliseconds [ms]. Or the off-time voltage is integrated between <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> and normalized by the time interval:</p>
+<div class="math notranslate nohighlight">
+\[\eta_{app} = \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} \frac{V_s(t)}{V_0} dt\]</div>
+<p>In this case, the apparent chargeability is given in units of milli-Volts per Volt [mV/V], or as a unitless quantity. Intrinsic chargeability values depend greatly on the definition as well as integration time. There are several common conventions. A well-established choice is the Newmont Standard chargeability which integrated between 0.15 s and 1.1 s.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Electrical Conductivity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="electrical_conductivity_units.html" class="btn btn-neutral float-right" title="Units" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

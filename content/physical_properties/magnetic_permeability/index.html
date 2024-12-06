@@ -1,0 +1,287 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnetic Permeability &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Laboratory Measurements" href="magnetic_permeability_lab_measurements.html" />
+    <link rel="prev" title="Factors Impacting Conductivity and Chargeability" href="../electrical_conductivity/electrical_conductivity_factors.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../electrical_conductivity/index.html">Electrical Conductivity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Magnetic Permeability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#constitutive-relationship">Constitutive Relationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relative-permeability">Relative Permeability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importance-to-geophysics">Importance to Geophysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents">Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_lab_measurements.html">Laboratory Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_units.html">Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_magnetism.html">Magnetism in Rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_factors.html">Impact of Mineralogy on Magnetic Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="magnetic_permeability_frequency_dependent.html">Frequency-Dependent Magnetic Permeability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dielectric_permittivity/index.html">Dielectric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Physical Properties</a></li>
+      <li class="breadcrumb-item active">Magnetic Permeability</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/physical_properties/magnetic_permeability/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="magnetic-permeability">
+<span id="magnetic-permeability-index"></span><h1>Magnetic Permeability<a class="headerlink" href="#magnetic-permeability" title="Link to this heading"></a></h1>
+<p>Magnetic permeability is a diagnostic physical property which characterizes the degree of induced magnetism a material experiences under the influence of an external magnetic field. Magnetic permeability is relevant to a variety of geophysical surveys, including: <a class="reference internal" href="../../geophysical_surveys/airborne_fdem/index.html#airborne-fdem-index"><span class="std std-ref">frequency-domain EM</span></a> (FDEM), <a class="reference internal" href="../../geophysical_surveys/airborne_tdem/index.html#airborne-tdem-index"><span class="std std-ref">time-domain EM</span></a> (TDEM), <a class="reference internal" href="../../geophysical_surveys/uxo/index.html#uxo-index"><span class="std std-ref">unexploded ordnance</span></a> (UXO) and <a class="reference internal" href="../../geophysical_surveys/gpr/index.html#gpr-index"><span class="std std-ref">ground penetrating radar</span></a> (GPR).</p>
+<section id="constitutive-relationship">
+<h2>Constitutive Relationship<a class="headerlink" href="#constitutive-relationship" title="Link to this heading"></a></h2>
+<p>When exposed to an applied magnetic field, the collection of individual
+magnetic dipole moments within most materials will attempt to reorient
+themselves along the direction of the field. This generates an induced
+magnetization, which contributes towards the net magnetic flux density inside
+the material. The degree in which the induced magnetization impacts the
+magnetic flux density depends on the material’s magnetic permeability.</p>
+<figure class="align-right" id="bvshillustr" style="width: 45%">
+<img alt="../../../_images/figBvsHillustr.png" src="../../../_images/figBvsHillustr.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Magnetic flux density as a function of magnetic field intensity for
+various classifications of permeable rock types: diamagnetic, vacuum,
+paramagnetic, and ferromagnetic.</span><a class="headerlink" href="#bvshillustr" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Magnetic permeability <span class="math notranslate nohighlight">\(\mu\)</span> defines the ratio between the magnetic flux
+density <span class="math notranslate nohighlight">\({\bf B}\)</span> within a material, and the intensity of an applied
+magnetic field <span class="math notranslate nohighlight">\({\bf H}\)</span>; provided the fields are sufficiently weak:</p>
+<div class="math notranslate nohighlight" id="equation-const-rel-flux">
+<span class="eqno">(10)<a class="headerlink" href="#equation-const-rel-flux" title="Link to this equation"></a></span>\[{\bf B}(\omega) = \mu \, {\bf H}(\omega)\]</div>
+<p>In a vacuum, the relationship between <span class="math notranslate nohighlight">\({\bf B}\)</span> and <span class="math notranslate nohighlight">\({\bf H}\)</span> is
+given by the permeability of free-space <span class="math notranslate nohighlight">\(\mu_0 = 4\pi \times 10^{-7}\)</span> H/m. An illustration representing the magnetic flux density
+as a function of the applied field strength for various rock classifications is shown here.</p>
+</section>
+<section id="relative-permeability">
+<h2>Relative Permeability<a class="headerlink" href="#relative-permeability" title="Link to this heading"></a></h2>
+<p>In addition to the magnetic permeability, magnetic properties are frequently
+represented using the relative permeability. Relative permeability
+characterizes whether the induced magnetization increases or reduces the
+density of magnetic flux within a material. The relative permeability
+<span class="math notranslate nohighlight">\(\mu_r\)</span> is the ratio between the magnetic permeability of a material and
+the permeability of free-space:</p>
+<div class="math notranslate nohighlight" id="equation-rel-permeability">
+<span class="eqno">(11)<a class="headerlink" href="#equation-rel-permeability" title="Link to this equation"></a></span>\[\mu_r = \frac{\mu}{\mu_0}\]</div>
+<p>For the majority of rocks, induced magnetization is parallel to the applied
+field, thus adding to the density of magnetic flux. These rocks are
+characterized by relative permeabilities <span class="math notranslate nohighlight">\(\mu_r &gt; 1\)</span>. A relative
+permeability of <span class="math notranslate nohighlight">\(\mu_r = 1\)</span> is used to characterize materials which are
+incapable of supporting induced magnetization. In rare cases, a very small
+magnetization can be induced in rocks, which opposes the applied field, and
+reduces the density of magnetic flux. These rocks are characterized by
+magnetic permeabilities <span class="math notranslate nohighlight">\(\mu_r &lt; 1\)</span>.
+The partial alignment of magnetic dipole moments under an applied field, and
+the resulting magnetic flux densities in all three cases, are represented in
+the figure below.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/figMagFluxDensity.png"><img alt="../../../_images/figMagFluxDensity.png" src="../../../_images/figMagFluxDensity.png" style="width: 558.0px; height: 205.79999999999998px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Partial alignment of magnetic dipole moments under the influence of an
+applied magnetic field for various cases. (a) Paramagnetic (<span class="math notranslate nohighlight">\(\mu_r &gt; 1\)</span>).
+Magnetization is parallel to the applied field and increases the density
+of magnetic flux. (b) Non-permeable (<span class="math notranslate nohighlight">\(\mu_r = 1\)</span>).
+Does not support induced magnetization. (c) Diamagnetic (<span class="math notranslate nohighlight">\(\mu_r &lt; 1\)</span>).
+Magnetization is weak and opposes the applied magnetic field, thus reducing
+the density of magnetic flux.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="importance-to-geophysics">
+<h2>Importance to Geophysics<a class="headerlink" href="#importance-to-geophysics" title="Link to this heading"></a></h2>
+<p><strong>Inductive Source EM Systems</strong></p>
+<p>In most geological environments, variations in the Earth’s magnetic permeability are insignificant (<span class="math notranslate nohighlight">\(\mu \sim \mu_0\)</span>) and surveys are only sensitive to contrasts in the Earth’s electrical conductivity. However, there are a variety of cases where magnetic permeability becomes an important diagnostic physical property. For example, some ore-bearing rocks (magnetite, pyrrhotite) have very high magnetic permeabilities. When using <a class="reference internal" href="../../geophysical_surveys/airborne_fdem/index.html#airborne-fdem-index"><span class="std std-ref">frequency-domain</span></a> (FDEM) and <a class="reference internal" href="../../geophysical_surveys/airborne_tdem/index.html#airborne-tdem-index"><span class="std std-ref">time-domain</span></a> (TDEM) electromagnetic systems, large magnetic permeabilities have been shown to impact the measured response. Thus failure to account for the Earth’s magnetic properties can result in a mis-characterization of subsurface structures in certain environments.</p>
+<p><strong>Unexploded Ordnance Surveys</strong></p>
+<p>Magnetic permeability is also a diagnostic physical property for <a class="reference internal" href="../../geophysical_surveys/uxo/index.html#uxo-index"><span class="std std-ref">unexploded ordnance</span></a> (UXO) surveys. An unexploded ordnance (UXO) is a munition that was armed, fired and remains unexploded through malfunction. UXO casings are extremely permeable in comparison to the host medium. This contrast can be exploited in order to locate an remove UXOs from contaminated areas. The UXO’s magnetic properties are also responsible for producing distinct TDEM responses.</p>
+<p><strong>Ground Penetrating Radar</strong></p>
+<p>Magnetic permeability acts as a secondary diagnostic physical property in <a class="reference internal" href="../../geophysical_surveys/gpr/index.html#gpr-index"><span class="std std-ref">ground penetrating radar</span></a> (GPR). Magnetic permeability impacts the reflection, refraction and velocity of radiowave signals as they propagate through the Earth.</p>
+<p><strong>Magnetic Viscosity</strong></p>
+<p><a class="reference internal" href="magnetic_permeability_frequency_dependent.html#magnetic-permeability-frequency-dependent"><span class="std std-ref">Magnetic viscosity</span></a> refers to a dispersive magnetic permeability which is exhibited by lateritic soils and rapidly cooled basalts. When using TDEM systems, these rocks produce a response which masks the responses from UXOs and deeply buried conductors. Currently, methods are being developed to model this phenomenon and its response from field collected data.</p>
+</section>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_lab_measurements.html">Laboratory Measurements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_units.html">Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_values.html">Typical Values for Rocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_magnetism.html">Magnetism in Rocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_factors.html">Impact of Mineralogy on Magnetic Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_permeability_frequency_dependent.html">Frequency-Dependent Magnetic Permeability</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../electrical_conductivity/electrical_conductivity_factors.html" class="btn btn-neutral float-left" title="Factors Impacting Conductivity and Chargeability" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetic_permeability_lab_measurements.html" class="btn btn-neutral float-right" title="Laboratory Measurements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

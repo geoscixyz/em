@@ -1,0 +1,457 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data and Processing &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interpretation" href="interpretation.html" />
+    <link rel="prev" title="Surveys" href="survey.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Furggwanghorn</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Surveys</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Data and Processing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#surface-based-gpr-surveys">Surface-Based GPR Surveys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h-gpr-surveys">H-GPR Surveys</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">New Thin Skinned Rock Glacier Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons worth highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Furggwanghorn</a></li>
+      <li class="breadcrumb-item active">Data and Processing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/furggwanghorn/dataprocessing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-and-processing">
+<span id="furggwanghorn-dataprocessing"></span><h1>Data and Processing<a class="headerlink" href="#data-and-processing" title="Link to this heading"></a></h1>
+<section id="surface-based-gpr-surveys">
+<h2>Surface-Based GPR Surveys<a class="headerlink" href="#surface-based-gpr-surveys" title="Link to this heading"></a></h2>
+<p>The processing sequence applied to the surface-based GPR data is relatively
+standard (<a class="reference internal" href="#gprprocessingg"><span class="std std-ref">Table 4</span></a>). An example of applying this
+sequence to profile G2 is presented in <a class="reference internal" href="#ground-dataproca"><span class="std std-numref">Fig. 413</span></a>. Although
+the G2 image is relatively noisy with numerous artifacts, some clear dipping
+events are seen between 500 and 1100 ns. Do these represent subsurface
+reflections? Unfortunately, comparable events are not observed on the G1 and
+G3 images, long portions of which are practically coincident with or only a
+few meters from the G2 image (compare images in <a class="reference internal" href="#ground-dataprocb"><span class="std std-numref">Fig. 414</span></a>).</p>
+<p>The 25 MHz image in <a class="reference internal" href="#ground-dataprocb"><span class="std std-numref">Fig. 414</span></a> c helps explain the
+inconsistencies between coincident and adjacent GPR sections. We interpret the
+mostly curvilinear events in the top 500 ns of <a class="reference internal" href="#ground-dataprocb"><span class="std std-numref">Fig. 414</span></a> d as
+in plane and out of plane diffractions generated at the boundaries between the
+snow cover and rugged bouldery surface and at buried boulders. Recording 25
+MHz GPR data along a second profile offset by only a few meters would result
+in comparably complex diffraction patterns, but it would be nearly impossible
+to correlate events on the two profiles. Accordingly, we conclude that the
+primary explanation for inconsistent surface-based GPR images is the
+overwhelming effects of in plane and out of plane diffractions.</p>
+<p id="gprprocessingg"><strong>Table 4:</strong> Processing scheme applied to the surface-based GPR data collected across the Furggwanghorn rock glacier.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Coordinate assignment to traces</div>
+</div>
+</td>
+<td><p>Coordinates from differential GPS</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Time-zero corrections</div>
+</div>
+</td>
+<td><p>Manual pick of direct wave</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Removal of high amplitude first arrivals</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Automatic gain control</div>
+</div>
+</td>
+<td><p>100 ns</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Moving singular value decomposition filter</div>
+<div class="line">(only applied to pulseEKKO data)</div>
+</div>
+</td>
+<td><p>20-trace window largest 2% eigenvalues set to 0</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Bandpass filter</div>
+</div>
+</td>
+<td><p>10 - 110 MHz (50MHz); 3 - 60 MHz (25MHz)</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Binning</div>
+</div>
+</td>
+<td><p>Bin size 0.5-0.8m depending on original trace spacing</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Moving average filter</div>
+</div>
+</td>
+<td><p>Weighted average of 3 traces</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Trace equalisation</div>
+</div>
+</td>
+<td><p>Equalisation of the mean amplitudes</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Kirchhoff time migration</div>
+</div>
+</td>
+<td><p>Constant velocity 0.13 m/ns</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">Elevation corrections</div>
+</div>
+</td>
+<td><p>Simple elevation static corrections</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">Time-depth conversion</div>
+</div>
+</td>
+<td><p>Same velocity model as for the migration</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center" id="ground-dataproca" style="width: 100%">
+<img alt="../../../_images/Ground_dataprocA.png" src="../../../_images/Ground_dataprocA.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 413 </span><span class="caption-text">Example of the processing sequence in Table 4 applied to surface-based GPR
+profile G2. (a) Raw data after time zero correction and automatic gain
+control. (b) As for (a) after application of a singular value
+decomposition filter and bandpass filter. (c) As for (b) after trace
+binning, application of a moving average filter and trace equalization. V
+: H ≈ 1 : 2.</span><a class="headerlink" href="#ground-dataproca" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="ground-dataprocb" style="width: 100%">
+<img alt="../../../_images/Ground_dataprocB.png" src="../../../_images/Ground_dataprocB.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 414 </span><span class="caption-text">Comparison of nonmigrated sections acquired at the same general location
+along similarly oriented profiles (see caption to
+<a class="reference internal" href="survey.html#furggwanghorn-gprsurvey"><span class="std std-numref">Fig. 412</span></a> for locations) using the different
+surface-based GPR systems shown in <a class="reference internal" href="survey.html#furggwanghorn-gprsurvey"><span class="std std-numref">Fig. 412</span></a> a ‑
+c: (a) 50 MHz Mala Rough Terrain Antennae, (b) 50 MHz pulseEKKO PRO (same
+section as shown in <a class="reference internal" href="#ground-dataproca"><span class="std std-numref">Fig. 413</span></a> c, but with different
+vertical and horizontal scaling for better comparison with the other
+sections), (c) 25 MHz pulseEKKO PRO. V : H ≈ 1 : 1.</span><a class="headerlink" href="#ground-dataprocb" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="h-gpr-surveys">
+<h2>H-GPR Surveys<a class="headerlink" href="#h-gpr-surveys" title="Link to this heading"></a></h2>
+<p>Strong horizontal noise dominated the raw H-GPR data (<a class="reference internal" href="#heli-dataproca"><span class="std std-numref">Fig. 415</span></a>
+a). Fortunately, this noise, which was generated by the helicopter, was
+sufficiently coherent and predictable that it could be eliminated and the
+geological signal enhanced by applying carefully designed singular value
+decomposition filters, appropriate gain functions and F-X deconvolution
+(<a class="reference internal" href="#gprprocessingh"><span class="std std-ref">Table 5</span></a>; <a class="reference internal" href="#heli-dataproca"><span class="std std-numref">Fig. 415</span></a> b). The processed
+data were Kirchhoff time migrated (<a class="reference internal" href="#heli-dataproca"><span class="std std-numref">Fig. 415</span></a> c) and converted
+to depth using a simple ground velocity model. Unlike the surface-based GPR
+examples, the H-GPR images are consistent from line to line and from year to
+year (<a class="reference internal" href="#heli-dataprocb"><span class="std std-numref">Fig. 416</span></a> and <a class="reference internal" href="#heli-dataprocc"><span class="std std-numref">Fig. 417</span></a>).
+<span id="id1">[<a class="reference internal" href="../../references.html#id91" title="Kaspar Merz, Hansruedi Maurer, Lasse Rabenstein, Thomas Buchli, Sarah M Springman, and Matthias Zweifel. Multidisciplinary geophysical investigations over an alpine rock glacier. Geophysics, 81(1):WA147—-WA157, 2016. doi:https://doi.org/10.1190/geo2015-0157.1.">MMR+16</a>]</span> argue that the superiority of the H-GPR images relative to
+the ground-based ones is not related to the different GPR instruments that
+were employed. Instead, they suggest that the H-GPR images are affected by
+much weaker near surface diffractions and that there is only insignificant
+coupling between the H-GPR antennae and the snow and near surface
+heterogeneities.</p>
+<p id="gprprocessingh"><strong>Table 5:</strong> Processing scheme applied to the H-GPR data collected across the Furggwanghorn rock glacier.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Coordinate assignment to traces</p></td>
+<td><div class="line-block">
+<div class="line">Coordinates from differential GPS</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Moving singular value decomposition filter</p></td>
+<td><div class="line-block">
+<div class="line">100-trace window, largest 2% eigenvalues set to 0</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Inverse average envelope gain</p></td>
+<td><div class="line-block">
+<div class="line">Envelope derived from the reflection strength</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>F-X deconvolution</p></td>
+<td><div class="line-block">
+<div class="line">40 - 180 MHz, horizontal window length 50 traces,</div>
+<div class="line">time window length 100ns, overlap 50 ns</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Trace equalisation</p></td>
+<td><div class="line-block">
+<div class="line">Equalisation of the mean amplitudes</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Kirchhoff time migration</p></td>
+<td><div class="line-block">
+<div class="line">Constant velocities of 0.13 and 0.30 m/ns</div>
+<div class="line">for the ground and air, respectively</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Elevation corrections</p></td>
+<td><div class="line-block">
+<div class="line">Elevations based on a digital elevation model</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Time-depth conversion</p></td>
+<td><div class="line-block">
+<div class="line">Same velocity model as for the migration </div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center" id="heli-dataproca" style="width: 100%">
+<img alt="../../../_images/Heli_dataprocA.png" src="../../../_images/Heli_dataprocA.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 415 </span><span class="caption-text">Example of the processing sequence in <a class="reference internal" href="#gprprocessingh"><span class="std std-ref">Table 5</span></a>
+applied to H-GPR data recorded along profile H5 in
+<a class="reference internal" href="survey.html#furggwanghorn-gprsurvey"><span class="std std-numref">Fig. 412</span></a>. (a) Raw data after removal of system
+gain. (b) As for (a) after application of a singular value decomposition
+filter and gain function, F-X deconvolution and trace equalisation. (c) As
+for (b) after Kirchhoff time migration. An air layer has been removed
+(i.e. reflections from the surface appear at time equals zero). V : H ≈
+2.8 : 1.0.</span><a class="headerlink" href="#heli-dataproca" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="heli-dataprocb" style="width: 100%">
+<img alt="../../../_images/Heli_dataprocB.png" src="../../../_images/Heli_dataprocB.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 416 </span><span class="caption-text">Comparison of nearly coincident (a) H1 and (b) H5 nonmigrated H-GPR
+sections, which were recorded in Winter / Spring 2012 and Winter / Spring
+2013, respectively (see <a class="reference internal" href="survey.html#furggwanghorn-gprsurvey"><span class="std std-numref">Fig. 412</span></a> for locations).
+Letters a ‑ i identify distinct features and patterns observed in both
+sections. An air layer has been removed (i.e. reflections from the surface
+appear at zero time). V : H ≈ 2.8 : 1.0.</span><a class="headerlink" href="#heli-dataprocb" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="heli-dataprocc" style="width: 100%">
+<img alt="../../../_images/Heli_dataprocC.png" src="../../../_images/Heli_dataprocC.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 417 </span><span class="caption-text">Comparison between nearly parallel (a) H3 and (b) H4 nonmigrated H-GPR
+sections, both of which were recorded in Winter / Spring 2013 (see
+<a class="reference internal" href="survey.html#furggwanghorn-gprsurvey"><span class="std std-numref">Fig. 412</span></a> for locations). Letters j - q identify
+distinct features and patterns observed in both sections. An air layer has
+been removed (i.e. reflections from the surface appear at zero time). V :
+H ≈ 3.5 : 1.0.</span><a class="headerlink" href="#heli-dataprocc" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="survey.html" class="btn btn-neutral float-left" title="Surveys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Properties" href="properties.html" />
+    <link rel="prev" title="Barents Sea" href="index.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Barents Sea</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#geology">Geology</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surveydata.html">Survey and Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processinginterpretation.html">Processing and Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Barents Sea</a></li>
+      <li class="breadcrumb-item active">Setup</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/barents_sea/setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="barents-sea-setup"></span><section id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h1>
+<p>Rock-property estimation (fluid saturation, porosity, and lithology) is the
+ultimate goal for geologists, geophysicists, and reservoir engineers. All seek
+to combine well and surface measurements to generate a model of rock
+properties that can be used to generate an exploration, appraisal, or
+exploitation plan and quantify the hydrocarbon resources available. Since
+hydrocarbon exploration began in the 19th century, technology and innovation
+have driven the process of subsurface rock-property prediction from
+exploration, solely based on surface geology, to the progressive inclusion of
+2D seismic (early 1920s), gravity, magnetic, 3D seismic (late 1960s), AVO
+analysis (<span id="id1">[<a class="reference internal" href="../../references.html#id105" title="W. J. Ostrander. Plane-wave reflection coefficients for gas sands at non-normal angles of incidence. Geophysics, 49:1637–1648, 1984.">Ost84</a>]</span>) and, most recently, controlled source
+electromagnetic (CSEM) data (<span id="id2">[<a class="reference internal" href="../../references.html#id98" title="S Ellingsrud, T Eidesmo, S Johansen, M C Sinha, L M MacGregor, and S Constable. Remote sensing of hydrocarbon layers by seabed logging (SBL): results from a cruise offshore Angola. The Leading Edge, 21(10):972, 2002.">EEJ+02</a>]</span>).</p>
+<figure class="align-right" id="fig-survey-schematic-setup" style="width: 50%">
+<img alt="../../../_images/survey_schematic.png" src="../../../_images/survey_schematic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 321 </span><span class="caption-text">Schematic showing towed CSEM and seismic instruments over the Hoop region,
+Barents Sea, Norway.</span><a class="headerlink" href="#fig-survey-schematic-setup" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Nowadays the integration of pre-stack seismic inversion attributes with CSEM
+attributes using a rock physics framework constitutes one of the most modern
+and robust methodologies to carry out geophysical reservoir characterization
+(see for example <span id="id3">[<a class="reference internal" href="../../references.html#id99" title="Guozhong Gao, Aria Abubakar, and Tarek M. Habashy. Joint petrophysical inversion of electromagnetic and full-waveform seismic data. Geophysics, 77(3):WA3, 2012. doi:10.1190/geo2011-0157.1.">GAH12</a>, <a class="reference internal" href="../../references.html#id101" title="Peter Harris, Zhijun Du, Lucy MacGregor, Wiebke Olsen, Rone Shu, and Richard Cooper. Joint interpretation of seismic and CSEM data using well log constraints: An example from the Luva Field. First Break, 27(MAY):73–81, 2009.">HDM+09</a>, <a class="reference internal" href="../../references.html#id103" title="L. M. MacGregor. Integrating seismic, CSEM and well log data for reservoir characterization. The Leading Edge, pages 268-277, 2012.">Mac12</a>]</span>). Each method
+provides independent physical measurements of the subsurface that complement
+each other and can be validated by well log measurements and forward modeled
+at different reservoir conditions through the application of rock physics
+principles. Seismic provides the structural framework and, from AVO
+information, the possibility to derive P- and S-wave impedance volumes. These
+two valuable, independent measurements can be linked to porosity, lithology,
+geomechanical properties, and, under certain conditions and limitations, to
+fluid saturation prediction. On the other hand, CSEM data provide a lower
+resolution measure of resistivity, which, when constrained with the structural
+framework and seismically derived volumes of porosity and lithology, can be
+linked to fluid saturation, overcoming seismic ambiguity related to similar
+AVO responses in both low- and high-saturated hydrocarbon reservoirs.</p>
+<p>However, there are a number of challenges to be overcome when putting seismic
+and CSEM data together. Electric and elastic properties must be coupled
+through a single earth model that accurately and consistently describes each.
+There must be overlap in sensitivity of the methods applied to the properties
+within the intervals of interest. Finally, seismic, CSEM and well log data
+sample the earth at very different scales, which must be reconciled in an
+integrated interpretation.</p>
+<p>The integration process itself can take many forms. The simplest qualitative
+techniques, such as co-rendering, are applicable everywhere and provide a
+first-look approach to data combination. However, they can be misleading since
+they fail to address the underlying cause of variations observed. Full
+quantitative joint inversion of seismic and CSEM data is in principle possible
+(for example <span id="id4">[<a class="reference internal" href="../../references.html#id94" title="J. Chen and G. M. Hoversten. Joint inversion of marine seismic AVA and CSEM data using statistical rock physics and Markov random fields. Geophysics, 77(1):R65-R80, 2012. doi:10.1190/geo2011-0219.1.">CH12</a>, <a class="reference internal" href="../../references.html#id97" title="Z. Du and L. MacGregor. Reservoir Characterization From Joint Inversion of Marine CSEM And Seismic AVA Data Using Genetic Algorithms: a Case Study Based On the Luva Gas Field. In SEG Annual Meeting. 2010.">DM10</a>]</span>), but is complex and applicable in a far
+narrower range of circumstances. An intermediate approach, based on a
+sequential quantitative integrated interpretation workflow, which seeks to
+integrate elastic and electric attributes derived from inversion of seismic
+and CSEM data respectively, provides in many circumstances an effective way of
+addressing the challenges of data integration.</p>
+<p>This paper presents a case study in which the latter integration approach has
+been applied to overcome the challenges of the integration of seismic and CSEM
+data and successfully predicts a seismic-resolution fluid saturation volume
+that helps characterize the reservoir and diminish the risk related to the
+exploration and appraisal of the prospects in the study area. The area in
+question covers a significant oil discovery in the Hoop Fault Complex on the
+Bjarmeland Platform in the Barents Sea, Norway
+(<a class="reference internal" href="#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a> a).</p>
+<figure class="align-center" id="fig-geology-region-map-setup" style="width: 100%">
+<img alt="../../../_images/geology_region_map.png" src="../../../_images/geology_region_map.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 322 </span><span class="caption-text">Geologic Setting. (a) Structural elements of the Barents Seas showing with
+a red box the location of the studied area (<span id="id5">[<a class="reference internal" href="../../references.html#id100" title="E. Halland, L. Mujezinović, and F. Riis. CO2 Storage Atlas - Barents Sea. 2013.">HMujezinovicR13</a>]</span>). (b)
+Detailed view of the studied area showing the location of the 2D
+GeoStreamer® seismic and towed streamer CSEM data (blue lines), as
+well as the calibration well (Central and Alternative) and the validation
+wells (Hanssen and Bjaaland). The green outlines show the location of the
+proven reservoirs in the area (data courtesy of NPD), which were
+discovered by the wells Central and Hanssen.</span><a class="headerlink" href="#fig-geology-region-map-setup" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="geology">
+<h2>Geology<a class="headerlink" href="#geology" title="Link to this heading"></a></h2>
+<p>Several sedimentary basins and platform areas make up the Norwegian sector of
+the Barents Sea. The general structural configuration in the area of interest
+is to a large extent dominated by the Hoop Fault Complex on the Bjarmeland
+Platform (see <a class="reference internal" href="#fig-geology-region-map-setup"><span class="std std-numref">Fig. 322</span></a> a). The area of interest
+is positioned on the hanging wall of the Hoop Fault Complex to the east and on
+the footwall of the Maud Basin. <a class="reference internal" href="#fig-cross-section-seismic"><span class="std std-numref">Fig. 323</span></a> shows a
+seismic cross-section illustrating the general nature and structure of the
+area.</p>
+<p>The Realgrunnen Subgroup of the Kapp Toscana Group provides some of the best
+reservoirs in the Barents Sea. It is subdivided into four formations:
+Fruholmen, Tubåen, Nordmela and Stø. The Nordmela Formation
+(Sinemurian-Late Pliensbachian) consists of interbedded siltstones,
+sandstones, shale and mudstones with minor coals. Sandstones become more
+common towards the top. The formation represents deposits in a tidal flat to
+flood-plain environment. Individual sandstones represent estuarine and tidal
+channels. The Stø Formation (Late Pliensbachian to Bajocian) is defined
+with the appearance of sandy sequences above the shale-dominated sediments of
+the Nordmela Formation. The dominant lithology of the Stø Formation is
+mineralogically mature and well sorted sandstone. The sands in the Stø
+Formation were deposited in prograding coastal regimes, and a variety of
+linear clastic coast lithofacies are represented. Marked shale and siltstone
+intervals represent regional transgressive pulses in the late Toarcian and
+late Aalenian. Overlying the Stø Formation is the Fuglen Formation, which
+belongs to the Adventdalen Group. The group is dominated by dark marine
+mudstones, locally including deltaic and shelf sandstones as well as
+carbonate. The Fuglen Formation constitutes the cap rocks of the reservoir
+facies (<span id="id6">[<a class="reference internal" href="../../references.html#id100" title="E. Halland, L. Mujezinović, and F. Riis. CO2 Storage Atlas - Barents Sea. 2013.">HMujezinovicR13</a>]</span>).</p>
+<p>The study area is significantly uplifted, and characterized by high background
+resistivity and high electrical anisotropies. Target intervals exist in a wide
+range of depths, ranging from about 250m below mudline to nearly 2000m below
+mudline. The reservoir encountered in well 7324/8-1(Wisting Central) consists
+of the Stø and Nordmela Formations, overlying the Snadd Fm. of upper
+Triassic age. The Stø Fm. is marked by a sharp contact with the overlying
+Fuglen Fm., seen both on logs and on drilling parameters. The Stø Fm.
+consists of 20m clean and homogenous sand, with very good reservoir
+properties. This is confirmed both by wireline log data and core measurements.</p>
+<figure class="align-center" id="fig-cross-section-seismic" style="width: 100%">
+<img alt="../../../_images/cross_section_seismic.png" src="../../../_images/cross_section_seismic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 323 </span><span class="caption-text">Seismic cross-section through though the wells Alternative and Central.
+The top Stø horizon marks the top of the reservoir interval
+encountered in the Wisting Central well (7324/8-1).</span><a class="headerlink" href="#fig-cross-section-seismic" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Barents Sea" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="properties.html" class="btn btn-neutral float-right" title="Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

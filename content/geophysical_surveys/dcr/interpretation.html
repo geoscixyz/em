@@ -1,0 +1,398 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Practical Considerations" href="practical_considerations.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Direct Current Resistivity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apparent-resistivities">Apparent Resistivities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion-of-dcr-data">Inversion of DCR data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-of-investigation">Depth of Investigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uxo/index.html">Unexploded Ordnance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Direct Current Resistivity</a></li>
+      <li class="breadcrumb-item active">Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/dcr/interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="dcr-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<div class="admonition-purpose admonition" id="purpose">
+<p class="admonition-title">Purpose</p>
+<p>To show how DCR data are processed and inverted to reveal meaningful
+information about the earth structure. This is demonstrated on data
+generated from a buried prism and the <a class="reference internal" href="physics.html#two-sphere-setup"><span class="std std-ref">two-sphere
+problem</span></a>.</p>
+</div>
+<section id="apparent-resistivities">
+<span id="dcr-interpretation-appres"></span><h2>Apparent Resistivities<a class="headerlink" href="#apparent-resistivities" title="Link to this heading"></a></h2>
+<p>Plotting apparent resistivities, as pseudosections or in plan-view maps, is
+informative. The images are useful for  recognizing data <cite>outliers</cite>, bad
+electrodes, and validating normalizations that might have been applied to the
+data. In addition, they sometimes provide valuable information about earth
+structure.</p>
+<p>As an illustration, <a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a> (a) shows an earth model
+consisting of a single prism (<span class="math notranslate nohighlight">\(\rho=10\; \Omega \cdot m\)</span>) buried in a
+uniform halfspace (<span class="math notranslate nohighlight">\(\rho= 100\; \Omega \cdot m\)</span>). A dipole-dipole survey
+is carried out along a line that passes directly above the conductive prism.
+The resulting pseudosection is shown in <a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a> (b). The
+prism is manifested as a region of lower apparent resistivity in the center of
+the image and there are <cite>wings</cite> extending outwards and downward. The apex of
+the image can be used to estimate the horizontal location of the prism but the
+depth to the body is less evident since the vertical scale of the
+pseudosection is in <cite>n-values</cite> and not in meters.</p>
+<p>Despite the above success, the situation worsens if the earth is more complex.
+This is illustrated in <a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a> (c) where some near-surface
+inhomogeneities are added. The same dipole-dipole survey is carried out and
+resultant pseudosection is shown in <a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a> (d). The
+response of the prism is masked and attempting to infer existence and location
+of the prism is extremely challenging.</p>
+<p>This example can be downloaded <a class="reference internal" href="#dcr-synthetics"><span class="std std-ref">here</span></a>.</p>
+<figure class="align-center" id="dcr-dpdp-simple" style="width: 100%">
+<img alt="../../../_images/DCR_DpDp_Simple.png" src="../../../_images/DCR_DpDp_Simple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 160 </span><span class="caption-text">: (a) Vertical section through a simple conductive prism (<span class="math notranslate nohighlight">\(\rho=10 \;\Omega \cdot m\)</span>) buried in a homogeneous halfspace <span class="math notranslate nohighlight">\(\rho=100 \;\Omega \cdot m\)</span>. Source and receiver locations for a dipole-dipole survey are shown for reference.
+(b) Pseudosection of apparent resistivity calculated from the synthetic DCR survey.
+(c) Vertical section through a more complicated resistivity model with near-surface inhomogeneities added and (d) resulting pseudosection of apparent resistivity.</span><a class="headerlink" href="#dcr-dpdp-simple" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="survey.html#dcr-survradiobuttons"><span class="std std-ref">Gradient array surveys</span></a>
+are often used in reconnaissance modes and it is insightful to repeat the
+above analysis with a representative example. A plan view of the resistivity
+model and electrode geometry is shown in <a class="reference internal" href="#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (a). The
+survey consists of a grid of 13 x 13 receivers located between a 450 meter
+dipole current source. Each receiver is a 20 meter dipole. The corresponding
+apparent resistivity map is shown in <a class="reference internal" href="#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (b). An
+estimate of the horizontal location of the center of the prism can be
+obtained, but again there is no quantitative information about the depth.</p>
+<figure class="align-center" id="dcr-grad-simple" style="width: 100%">
+<img alt="../../../_images/DCR_Grad_Simple.png" src="../../../_images/DCR_Grad_Simple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 161 </span><span class="caption-text">: (a) Bird-eye view of gradient array survey over a simple conductive prism model (<span class="math notranslate nohighlight">\(\rho= 10\; \Omega \cdot m\)</span>) buried in a uniform halfspace (<span class="math notranslate nohighlight">\(\rho= 100\; \Omega \cdot m\)</span>) and
+(b) corresponding apparent conductivity map. By simple inspection of the data map, it is easy to locate the center of the conductive anomaly.
+(c) The experiment is replicated with a more complicated conductivity model with near-surface inhomogeneities added. Direct interpretation of the resulting apparent resistivity map
+(d) is challenging.</span><a class="headerlink" href="#dcr-grad-simple" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Contaminating the model by adding some conductive and resistive features
+(<a class="reference internal" href="#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (c)) leads to an apparent resistivity map that is
+very complicated and in which the signal of the prism is masked
+(<a class="reference internal" href="#dcr-grad-simple"><span class="std std-numref">Fig. 161</span></a> (d)). To obtain information about the electrical
+conductivity we need to invert the data.</p>
+</section>
+<section id="inversion-of-dcr-data">
+<span id="dcr-interp-inversion"></span><h2>Inversion of DCR data<a class="headerlink" href="#inversion-of-dcr-data" title="Link to this heading"></a></h2>
+<p>The DCR data are inverted using a standard Gauss-Newton framework. This is
+outlined in <a class="reference internal" href="../../inversion/index.html#inversion"><span class="std std-ref">Inversion</span></a>. The data are the measured voltages
+and the goal is to find an electrical conductivity that satisfactorily
+reproduces these data and agrees with a priori geologic structure and
+petrophysical constraints.</p>
+<p>To illustrate the importance of inverting the data, we return to the thematic
+<a class="reference internal" href="physics.html#two-sphere-setup"><span class="std std-ref">2-sphere problem</span></a>. Although the geology is 3D, we
+first invert the data using a 2D inversion algorithm. Parameters used for the
+inversion of the dipole-dipole data (<a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (b)) are
+provided in <a class="reference internal" href="#twospheres-inv-table"><span class="std std-numref">Table 3</span></a>.</p>
+<table class="docutils align-default" id="twospheres-inv-table">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">: 2D Inversion parameters</span><a class="headerlink" href="#twospheres-inv-table" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>Number of sources</p></th>
+<td><p>43</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Number of data</p></th>
+<td><p>540</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Data uncertainties</p></th>
+<td><p><span class="math notranslate nohighlight">\(2\%|d| (percentage) + 2 \times 10^{-5} V\)</span> (floor)</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Mesh Size</p></th>
+<td><p><span class="math notranslate nohighlight">\(10 \times 10 \times 10\)</span> meters</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Reference conductivity</p></th>
+<td><p><span class="math notranslate nohighlight">\(0.01\)</span> S/m</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Regularization Scales ( <span class="math notranslate nohighlight">\(\alpha_s, \alpha_x,\alpha_y,\alpha_z\)</span> )</p></th>
+<td><p><span class="math notranslate nohighlight">\(0.01, 1, 1, 1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (c) presents the recovered 2D conductivity model after convergence of the
+algorithm.</p>
+<p><strong>Important comments:</strong></p>
+<ol class="loweralpha simple">
+<li><p>Even though there are no contaminating near-surface blocks the pseudosection
+does not clearly indicate two bodies. This is in contrast to
+<a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a> (a) where a single prism was clearly identified in
+the pseudosection.</p></li>
+<li><p>The two spheres are recovered but they have lower conductivity contrasts with
+respect to the halfspace than do the true spheres. This occurs for three
+reasons: (i) the inversion generates smooth models and this extends structures
+and reduces amplitudes; (ii) the true spheres extend into regions where there
+is limited depth of investigation; and (iii) the 2D inversion assumes that the
+structures are cylindrical.</p></li>
+</ol>
+<figure class="align-center" id="dcr-twospheres-simple" style="width: 100%">
+<img alt="../../../_images/DCR_TwoSpheres_Simple.png" src="../../../_images/DCR_TwoSpheres_Simple.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 162 </span><span class="caption-text">: (a) Vertical section through a two-sphere model (<span class="math notranslate nohighlight">\(\rho_1= 10\; \Omega \cdot m\)</span> ; <span class="math notranslate nohighlight">\(\rho_2= 1000\; \Omega \cdot m\)</span>) buried in a homogeneous halfspace (<span class="math notranslate nohighlight">\(\rho_0= 100\; \Omega \cdot m\)</span>).
+(b) Corresponding pseudosection of apparent conductivity acquired from a dipole-dipole survey layout, 20 meter dipole spacing.
+(c) Recovered conductivity model from a 2D inversion.
+(d) Two sphere model with near-surface inhomogeneities.
+(e) pseudosection
+(f) Recovered model from 2D inversion.</span><a class="headerlink" href="#dcr-twospheres-simple" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Similar to the prism model example (<a class="reference internal" href="#dcr-dpdp-simple"><span class="std std-numref">Fig. 160</span></a>), we repeat the
+experiment with the same survey setup but use a more complicated resistivity
+model that has near-surface inhomogeneities (<a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a>
+(d)). The resulting pseudosection (<a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (e)) is
+challenging to interpret visually. The 2D resistivity model recovered from the
+inversion ( <a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (f)) unravels the data complexity.</p>
+<p><strong>Important comments:</strong></p>
+<ol class="loweralpha simple">
+<li><p>The pseudosection of data is complicated and dominated by the near-surface conductors.</p></li>
+<li><p>The inversion recovers the contaminating surface conductors. It also recovers
+the two spheres with about the same fidelity as in the simple case.</p></li>
+</ol>
+<p>This example can be downloaded <a class="reference internal" href="#dcr-synthetics"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="depth-of-investigation">
+<span id="id1"></span><h2>Depth of Investigation<a class="headerlink" href="#depth-of-investigation" title="Link to this heading"></a></h2>
+<p>The inverse problem
+is nonunique and the  DCR data are sensitive to conductivity only in a
+region in the vicinity of the electrode array. Conductivity structures that
+exist outside this region are unreliable and likely artifacts of
+the inversion. There are several methods
+proposed in the literature to quantify this limits of this region for
+a specific DCR survey. The following example uses the Depth of Investigation (DOI) method
+proposed by <span id="id2">[<a class="reference internal" href="../../references.html#id8" title="Yaoguo Li and Douglas W Oldenburg. Estimating depth of investigation in dc resistivity and ip surveys. Geophysics, 64(2):403-416, 1999.">LO99</a>]</span>.</p>
+<figure class="align-right" id="dcr-twospheres-doi" style="width: 50%">
+<img alt="../../../_images/DCR_TwoSpheres_DOI.png" src="../../../_images/DCR_TwoSpheres_DOI.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 163 </span><span class="caption-text">: (a) Resistivity model obtained using a different reference halfspace (<span class="math notranslate nohighlight">\(\rho= 10\; \Omega \cdot m\)</span>) and
+(b) the calculated DOI index.
+(c) Preferred resistivity model presented in <a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (c) after applying the DOI mask.</span><a class="headerlink" href="#dcr-twospheres-doi" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In its simplest form, the DOI analysis requires the data to be inverted twice
+with all parameters the same except for the background
+conductivity. For the two-sphere example shown in
+<a class="reference internal" href="#dcr-twospheres-simple"><span class="std std-numref">Fig. 162</span></a> (c), the synthetic data is inverted a second
+time with a reference halfspace conductivity of <span class="math notranslate nohighlight">\(10\; \Omega \cdot m\)</span>.
+<a class="reference internal" href="#dcr-twospheres-doi"><span class="std std-numref">Fig. 163</span></a> (a) shows the recovered 2D resistivity model.
+Note that the region away from
+the electrode locations returns to a value close to the
+reference model.</p>
+<p>We now have a discretized volume of the Earth and two conductivity models that
+can equally reproduced the observed data. Let <span class="math notranslate nohighlight">\(\sigma_1, \sigma_2\)</span> be
+the conductivity values recovered at some location (<em>x,z</em>), a DOI index is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[DOI(x,y) = 1 - \big| \frac{\sigma_1(x,y) - \sigma_2(x,y)}{\sigma_1^{ref} - \sigma_2^{ref}} \big|\;,\]</div>
+<p>where the DOI index will approach 1 for similar model values obtained with
+both inversions regardless of the chosen reference models
+<span class="math notranslate nohighlight">\(\sigma_1^{ref}, \sigma_2^{ref}\)</span>. Conversely, the DOI will approach 0
+where the recovered models return to their respective reference conductivities.
+<a class="reference internal" href="#dcr-twospheres-doi"><span class="std std-numref">Fig. 163</span></a> (b) presents the calculated DOI index for the two-
+sphere problem, showing a lower confidence over the bottom half of the domain.
+The DOI mask is applied to our preferred 2D model, presented in <a class="reference internal" href="#dcr-twospheres-doi"><span class="std std-numref">Fig. 163</span></a>
+(c), with transparency applied proportionally to the DOI index.</p>
+<section id="downloads">
+<span id="dcr-synthetics"></span><h3>Downloads<a class="headerlink" href="#downloads" title="Link to this heading"></a></h3>
+<p>Data, model and inversion files used in this page can be downloaded below:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://storage.googleapis.com/simpeg/em_geosci/DCR_Interp_Prism.zip">Prism</a></p>
+<p><a class="reference external" href="https://storage.googleapis.com/simpeg/em_geosci/DCR_Interp_TwoSpheres.zip">Two_Spheres</a></p>
+</div></blockquote>
+<p>Utilities: UBC-DC2D <a class="reference external" href="http://gif.eos.ubc.ca/sites/default/files/dcip2d-data-viewer.zip">data viewer</a> and <a class="reference external" href="http://gif.eos.ubc.ca/sites/default/files/dcip2d-model-viewer.zip">model viewer</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="practical_considerations.html" class="btn btn-neutral float-right" title="Practical Considerations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

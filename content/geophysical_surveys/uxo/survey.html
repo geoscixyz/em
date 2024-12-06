@@ -1,0 +1,308 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data" href="data.html" />
+    <link rel="prev" title="Physics" href="physics.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geophysical Surveys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../fundamentals/index.html">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dcr/index.html">Direct Current Resistivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip/index.html">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_fdem/index.html">Airborne FDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airborne_tdem/index.html">Airborne TDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt/index.html">Magnetotellurics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ztem/index.html">ZTEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gpr/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marine_csem/index.html">Marine CSEM</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Unexploded Ordnance</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="physics.html">Physics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Survey</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-source-and-receiver">The Source and Receiver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transmitter-source-signal">Transmitter Source Signal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#survey-configurations">Survey Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation.html">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_design.html">Survey Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practical_considerations.html">Practical Considerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../case_histories/index.html">Case Histories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Geophysical Surveys</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Unexploded Ordnance</a></li>
+      <li class="breadcrumb-item active">Survey</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/geophysical_surveys/uxo/survey.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-purpose admonition" id="purpose">
+<span id="uxo-survey"></span><p class="admonition-title">Purpose</p>
+<p>Here, we describe a host of instruments used for UXO surveys along with some of their pros and cons. Properties of the transmitter and receiver are discussed.</p>
+</div>
+<section id="survey">
+<h1>Survey<a class="headerlink" href="#survey" title="Link to this heading"></a></h1>
+<p>Instruments designed for UXO applications come in a wide variety of geometries ranging from single loop, man-portable systems to cart systems with multiple transmitters and receivers. Each system has its advantages and disadvantages. As a result, it is important to choose a UXO system which works well for a particular setting. Frequency domain systems have been used for decades, however, modern time domain systems are currently a more popular choice. Aspects of UXO surveys as they relate to instrumentation are discussed here. Aspects of survey design are discussed <a class="reference internal" href="survey_design.html#uxo-survey-design"><span class="std std-ref">here</span></a>.</p>
+<figure class="align-center" id="fig-uxo-survey-thumbnail" style="width: 100%">
+<img alt="../../../_images/surveys_examples.png" src="../../../_images/surveys_examples.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 262 </span><span class="caption-text">Man-portable vector (MPV) system (left). TEMTADS system (right).</span><a class="headerlink" href="#fig-uxo-survey-thumbnail" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="the-source-and-receiver">
+<h2>The Source and Receiver<a class="headerlink" href="#the-source-and-receiver" title="Link to this heading"></a></h2>
+<section id="transmitter">
+<h3>Transmitter<a class="headerlink" href="#transmitter" title="Link to this heading"></a></h3>
+<p>For UXO systems, inductive loop sources are used as transmitters. Each transmitter loop is comprised of a coil of wire which carries a time-varying electrical current; which produces a time-varying primary magnetic field.</p>
+<p>Transmitter loops can be square or circular in shape. For single-loop systems, the transmitter loop is generally oriented horizontally. For multi-loop systems, transmitter loops can be orthogonal to one another and/or organized as part of an array. Multi-loop configurations allow the transmitter to illuminate targets from multiple directions at a single location. Mobile systems (EM-61, MPV, TEMTADS, etc…) use transmitter loops with dimensions anywhere from 10s of centimeters to roughly a meter. Large loop systems use a stationary transmitter loop with dimensions up to 10s of meters (UltraTEM).</p>
+<figure class="align-right" id="fig-uxo-survey-moment" style="width: 30%">
+<img alt="../../../_images/source_moment2.png" src="../../../_images/source_moment2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 263 </span><span class="caption-text">Representation of the dipole moment for an inductive loop source.</span><a class="headerlink" href="#fig-uxo-survey-moment" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The strength of the transmitter’s primary field is dependent on its dipole moment. For a given transmitter loop, the dipole moment is given by:</p>
+<div class="math notranslate nohighlight">
+\[m = NIA\]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the current within the loop, <span class="math notranslate nohighlight">\(A\)</span> is the loop’s cross-sectional area and <span class="math notranslate nohighlight">\(N\)</span> is the number of turns for the coil. As we can see, the strength of the transmitter’s primary field can be increased by increasing the current amplitude, the cross-sectional area or the number of turns. Increasing the transmitter’s dipole moment allows us to improve the signal to noise ratio of UXO systems.</p>
+</section>
+<section id="receiver">
+<h3>Receiver<a class="headerlink" href="#receiver" title="Link to this heading"></a></h3>
+<p>For UXO systems, coils of wire (receiver loops) are used to measure the secondary fields generated by buried conductors. The change in magnetic flux through each receiver loop, due to the target’s response, induces an electromotive force (EMF) within the loop. Ultimately, the receiver measures the voltage which results from the induced EMF. For both frequency domain and time domain systems, the induced EMF within a receiver loop is illustrated below.</p>
+<figure class="align-center" id="fig-uxo-receiver-loops" style="width: 60%">
+<img alt="../../../_images/receiver_loops.png" src="../../../_images/receiver_loops.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 264 </span><span class="caption-text">EMF induced within a receiver loop. A) FEM receiver loop. B) TEM receiver loop.</span><a class="headerlink" href="#fig-uxo-receiver-loops" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Frequency domain systems measured real and quadrature components of the secondary field. Time domain systems generally measure the target’s <span class="math notranslate nohighlight">\(dB/dt\)</span> response; although there are systems capable of measuring <span class="math notranslate nohighlight">\(B(t)\)</span> directly. Receiver loops are only sensitive to components of the secondary field parallel to their normal vector. Thus in order to obtain 3-component data, multiple orthogonal receiver loops must be used.</p>
+<p>As we can see from the illustration above, the EMF induced within the receiver loop is proportional to both the loop’s cross-sectional area (<span class="math notranslate nohighlight">\(A\)</span>) and the number of turns (<span class="math notranslate nohighlight">\(N\)</span>). Because the EM anomalies from UXOs are so compact, receiver coils with smaller cross-sectional areas must be used in order to accurately quantify the target’s response at a particular location. The corresponding decrease in signal to noise ratio from small receiver loops is overcome by using coils of wire with many turns.</p>
+</section>
+</section>
+<section id="transmitter-source-signal">
+<h2>Transmitter Source Signal<a class="headerlink" href="#transmitter-source-signal" title="Link to this heading"></a></h2>
+<figure class="align-right" id="fig-uxo-frequency-waveform" style="width: 40%">
+<img alt="../../../_images/frequency_waveform.png" src="../../../_images/frequency_waveform.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 265 </span><span class="caption-text">High frequency (left) and low frequency (right) signals contained within transmitter waveform.</span><a class="headerlink" href="#fig-uxo-frequency-waveform" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="frequency-domain">
+<h3>Frequency Domain<a class="headerlink" href="#frequency-domain" title="Link to this heading"></a></h3>
+<p>FEM systems transmit harmonic signals at one or more frequencies. Lower frequency signals penetrate deeper into the Earth whereas higher frequency signals offer better resolution at shallow depths. Typically FEM systems operate using frequencies between 1 kHz and 20 kHz.</p>
+</section>
+<section id="time-domain">
+<h3>Time Domain<a class="headerlink" href="#time-domain" title="Link to this heading"></a></h3>
+<figure class="align-right" id="fig-uxo-bimodal-boxcar" style="width: 30%">
+<img alt="../../../_images/bimodal_boxcar.png" src="../../../_images/bimodal_boxcar.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 266 </span><span class="caption-text">Bi-modal boxcar waveform with 50% duty cycle.</span><a class="headerlink" href="#fig-uxo-bimodal-boxcar" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When operating in the time domain, we are generally interested in the UXO’s transient response; that is, the response to step-off excitation. Most TEM systems use a bi-model boxcar current waveform with a specified duty cycle. The data are collected during the off-time. So long as the time-width of the boxcar is sufficiently long, it may be used to accurately approximate the transient response over the set of measured time channels. For most systems, the time-length of the boxcar waveform is on the order of 10s of milliseconds.</p>
+</section>
+</section>
+<section id="survey-configurations">
+<h2>Survey Configurations<a class="headerlink" href="#survey-configurations" title="Link to this heading"></a></h2>
+<p>Below are a set of electromagnetic sensors which have been applied to UXO detection and classification problems. This is not a comprehensive list of electromagnetic sensors, but is intended to illustrate the recent evolution towards configurations with multiple transmitters and receivers. Although FEM systems have been used for decades with varying levels of success, modern TEM systems are more commonly used for UXO detection. As a result, most of the instruments presented here will belong to the class of TEM systems.</p>
+<section id="frequency-domain-systems">
+<h3>Frequency-Domain Systems<a class="headerlink" href="#frequency-domain-systems" title="Link to this heading"></a></h3>
+<p><strong>Coincident Loop Systems</strong></p>
+<p>Coincident loop systems are by far the most common configuration for FEM UXO surveys. These systems generally consist of a circular transmitter loop and a circular receiver loop which lie on the same plane. This allows for easy removal of the transmitter’s primary field from the data, thus isolating the target’s response. The diameter of the transmitter and receiver loops are generally on the order of 10s of centimeters. Although this type of system is very portable, the data collected cannot be as easily used to locate and classify targets. As a result, these types of systems are becoming less common. A variation of this particular instrument is the <strong>Terraplus GEM-3</strong> system which operates within a bandwidth of 30 Hz to 24 kHz. This system can be equiped with 40 cm, 64 cm or 94 cm diameter heads.</p>
+<figure class="align-center" id="fig-coincident-uxo" style="width: 80%">
+<img alt="../../../_images/fig_coincident_uxo.png" src="../../../_images/fig_coincident_uxo.png" />
+</figure>
+</section>
+<section id="time-domain-systems">
+<h3>Time-Domain Systems<a class="headerlink" href="#time-domain-systems" title="Link to this heading"></a></h3>
+<p><strong>EM-61</strong></p>
+<p>The Geonix EM-61 is a time-domain instrument with a single horizontal transmitter loop and a single receiver loop; thus it only measures a single vector component of the TEM response. Several versions of this instrument are available which use different loop sizes (MK2 A, MK2 HH and MK2 marine). Smaller transmitter and receiver loops are generally used to find smaller objects at shallower depths. The MK2 marine version can be used in underwater applications.</p>
+<figure class="align-center" id="fig-em61-uxo" style="width: 100%">
+<img alt="../../../_images/fig_EM61_uxo.png" src="../../../_images/fig_EM61_uxo.png" />
+</figure>
+<p><strong>TEMTADS</strong></p>
+<p>The TEMTADS system is comprised of 25 coincident transmitter-receiver pairs. Each transmitter and receiver loop is square, with a side length of 40 cm. The sensor array measures the vertical TEM response due to illumination of the target from multiple orientations. By mounting this system onto a cart, it may be used to survey large areas in a relatively short amount of time. The addition of multiple transmitters and receivers allows for better characterization of compact TEM anomalies. The popularity of this survey configuration has decreased recently with the development of the Metal-Mapper 2x2 system; which requires the collection of less data while using transmitter loops oriented in three orthogonal directions.</p>
+<figure class="align-center" id="fig-temtads-uxo" style="width: 100%">
+<img alt="../../../_images/fig_TEMTADS_uxo.png" src="../../../_images/fig_TEMTADS_uxo.png" />
+</figure>
+<p><strong>MPV</strong></p>
+<p>The man-portable vector (MPV) instrument is comprised of a 50 cm diameter transmitter loop and an array of 5 receivers. Each receiver measures 3-component data, resulting in 15 transmitter-receiver pairs. This instrument was designed to improve maneuverability in rugged terrain. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.</p>
+<figure class="align-center" id="fig-mpv-uxo" style="width: 100%">
+<img alt="../../../_images/fig_MPV_uxo.png" src="../../../_images/fig_MPV_uxo.png" />
+</figure>
+<p><strong>Metal-Mapper</strong></p>
+<p>The Geometrics Metal-Mapper is a time-domain instrument with 3 orthogonal transmitter loops (1m <span class="math notranslate nohighlight">\(\times\)</span> 1m) and a horizontal array with 7 receivers. Each receiver measures 3-component data, resulting in 63 transmitter-receiver pairs. Because the Metal Mapper illuminates targets from multiple orientations, it has an advantage over single transmitting loop systems. The use of small receiver loops allows for accurate characterization of compact TEM anomalies.</p>
+<figure class="align-center" id="fig-metalmapper-uxo" style="width: 100%">
+<img alt="../../../_images/fig_metalmapper_uxo.png" src="../../../_images/fig_metalmapper_uxo.png" />
+</figure>
+<p><strong>Metal-Mapper 2x2</strong></p>
+<p>The Metal-Mapper 2x2, sometimes referred to as the TEMTADS 2x2, combines the advantages of the original TEMTADS system with those of the Metal-Mapper system. The Metal-Mapper 2x2 is has a 2x2 array of orthogonal transmitter loops; which makes 12 transmitter loops in total. This system is relatively new but has begun to replace the orignal TEMTADS and Metal-Mapper systems for most applications.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="physics.html" class="btn btn-neutral float-left" title="Physics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data.html" class="btn btn-neutral float-right" title="Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

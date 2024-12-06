@@ -1,0 +1,256 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Synthesis" href="synthesis.html" />
+    <link rel="prev" title="Survey and Data" href="survey_data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Albany</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey_data.html">Survey and Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#airborne-em-magnetic-data">Airborne EM-Magnetic Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ground-based-tdem-data">Ground-Based TDEM Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons Worth Highlighting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Albany</a></li>
+      <li class="breadcrumb-item active">Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/albany/processing_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="albany-processing-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<section id="airborne-em-magnetic-data">
+<h2>Airborne EM-Magnetic Data<a class="headerlink" href="#airborne-em-magnetic-data" title="Link to this heading"></a></h2>
+<p>The VTEM EM and magnetic surveys identified two EM and magnetic targets of significance (Victor &amp; Uniform; <span id="id1">[<a class="reference internal" href="../../references.html#id113" title="J. M. Legault. Technical report on the Albany Project, Porcupine Mining District, Ontario: NI 43-10. Technical Report, Geotech Ltd., 2010. for Zenyatta Ventures Ltd., 83 pages.">Leg10</a>]</span>) as shown in <a class="reference internal" href="#magdata-interp"><span class="std std-numref">Fig. 284</span></a>. They lie in close proximity to a distinctive ring-like magnetic anomaly over the Nagagami Alkalic Complex to the northeast (<a class="reference internal" href="survey_data.html#planelines-survey"><span class="std std-numref">Fig. 282</span></a>) and a more subtle zoned magnetic anomaly, in the center-west region, that corresponds to the Albany Alkalic Complex.</p>
+<figure class="align-center" id="magdata-interp" style="width: 50%">
+<img alt="../../../_images/figMagData.png" src="../../../_images/figMagData.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 284 </span><span class="caption-text">Magnetic reduced to pole image over Albany graphite property, showing, VTEM magnetic anomalies (<span id="id2">[<a class="reference internal" href="../../references.html#id113" title="J. M. Legault. Technical report on the Albany Project, Porcupine Mining District, Ontario: NI 43-10. Technical Report, Geotech Ltd., 2010. for Zenyatta Ventures Ltd., 83 pages.">Leg10</a>]</span>).</span><a class="headerlink" href="#magdata-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Albany Graphite Deposit EM anomaly is observed along multiple survey lines that suggest as many as 2 separate zones and with relatively high values of Time Constant (Tau) between 1 ms to 3 ms that indicate high conductance (<a class="reference internal" href="#vtemlatetime-interp"><span class="std std-numref">Fig. 285</span></a>). Resistivity-depth imaging of the VTEM results (<a class="reference internal" href="#magdata-interp"><span class="std std-numref">Fig. 284</span></a>) using the transformation scheme by Meju (1998) indicated a large (1400 m x 800 m) conductivity high that is consistent with a mineralized bedrock source below the limestone cover (<span id="id3">[<a class="reference internal" href="../../references.html#id113" title="J. M. Legault. Technical report on the Albany Project, Porcupine Mining District, Ontario: NI 43-10. Technical Report, Geotech Ltd., 2010. for Zenyatta Ventures Ltd., 83 pages.">Leg10</a>]</span>). 3D Maxwell plate modeling (<span id="id4">[<a class="reference internal" href="../../references.html#id110" title="A. C. Duncan. Interpretation of down-hole transient M data current filaments. Exploration Geophysics, 44:6–15, 1987.">Dun87</a>]</span>) of the two VTEM anomalies indicates a larger plate to the west (~270 m EW by 400 m NS) with 83 Siemens conductance and a smaller plate to the east (~200 m EW by 280 m NS) with 112 Siemens conductance, with both shallow south-dipping and occurring at approximately 150-160 m depth. <a class="reference internal" href="#vtemprofile-interp"><span class="std std-numref">Fig. 286</span></a> presents an RDI resistivity-depth image and EM plate model for East plate.</p>
+<figure class="align-center" id="vtemlatetime-interp" style="width: 50%">
+<img alt="../../../_images/figVTEMlatetime.png" src="../../../_images/figVTEMlatetime.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 285 </span><span class="caption-text">Late channel VTEM <span class="math notranslate nohighlight">\(dB_z/dt\)</span> time constant with magnetic gradient contours, showing location of L26170E in <a class="reference internal" href="#magdata-interp"><span class="std std-numref">Fig. 284</span></a>, and modeled EM plates (West and East).</span><a class="headerlink" href="#vtemlatetime-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>However, the Albany Graphite EM anomaly is also distinguished by its weak magnetic low response (<a class="reference internal" href="#magdata-interp"><span class="std std-numref">Fig. 284</span></a>) that is consistent with either remanently magnetized magnetite or pyrrhotite, or possibly diamagnetic graphite, which at the time caused it to be initially less favoured, geophysically, relative to other neighbouring anomalies. In spite of this, the drilling of the Uniform VTEM anomaly for nickel-copper target with drill-hole Z11-4F1 tested a strong, large airborne EM conductor and intersected eight separate and extensive breccia zones consisting of variably sized granitic fragments set in a black matrix containing graphite (<span id="id5">[<a class="reference internal" href="../../references.html#id114" title="D. Ross and K. M. Masun. Technical report on the albany graphite deposit, northern ontario, canada: ni 43-101 report. Technical Report, Roscoe Postle Associates Inc., 2014. for Zenyatta Ventures Ltd., Project #2156, 113 pages.">RM14</a>]</span>).</p>
+<figure class="align-center" id="vtemprofile-interp" style="width: 65%">
+<img alt="../../../_images/figVTEMprofile.png" src="../../../_images/figVTEMprofile.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 286 </span><span class="caption-text">Maxwell plate-model for L26180 VTEM results: A) Z-component dB/dt observed and model profiles, B) X-component observed and modeled, C) Magnetic profile, and D) RDI resistivity–depth image (ohm-metres) and model parameters for East plate.</span><a class="headerlink" href="#vtemprofile-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ground-based-tdem-data">
+<h2>Ground-Based TDEM Data<a class="headerlink" href="#ground-based-tdem-data" title="Link to this heading"></a></h2>
+<p>The EM results from Loop 1 and Loop 2 identified two separate conductive features which have been inferred to be pipe-like structures (<a class="reference internal" href="#groundloop1-interp"><span class="std std-numref">Fig. 287</span></a> and <a class="reference internal" href="#groundloop2-interp"><span class="std std-numref">Fig. 288</span></a>). The Western anomaly is characterized by a rough circular pattern with an approximated depth of 100-120 m to the top of the source and a Tau of approximately 12 ms. The Eastern anomaly is characterized by an oval shaped source with its long axis oriented in the NNW-SSE direction (<a class="reference internal" href="#groundloop1-interp"><span class="std std-numref">Fig. 287</span></a>). This zone is described by a slightly higher conductivity; providing a higher Tau value of ~15 ms. Brief modeling studies of Loop 1 data indicated the responses of the two zones were dominated by the top-edge of the conductive features. Multiple bodies of varying thickness were utilized to fit the data, but provided negligible difference in the model fit, suggesting the response was dominated by the relatively flat-lying tops of these bodies.</p>
+<figure class="align-center" id="groundloop1-interp" style="width: 50%">
+<img alt="../../../_images/figGroundLoop1.png" src="../../../_images/figGroundLoop1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 287 </span><span class="caption-text">Late time (channel 22), total field for Loop 1 with modeled plates (black) and surface deposit outline (white).</span><a class="headerlink" href="#groundloop1-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Modeling of Loop 2 (<a class="reference internal" href="#groundloop2-interp"><span class="std std-numref">Fig. 288</span></a>) revealed that both the Western and Eastern anomalies had the potential for considerable depth extent. Modeling results for the Western anomaly provided better fits to the data when using the thick plate option within Maxwell and suggesting a minimal depth extent or thickness on the order of 50 m to 100 m to provide good modeling fits. The Eastern anomaly was fitted with a depth extent/thickness of approximately 150 m with poor fits being obtained by anything less than 100 m.</p>
+<figure class="align-center" id="groundloop2-interp" style="width: 50%">
+<img alt="../../../_images/figGroundLoop2.png" src="../../../_images/figGroundLoop2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 288 </span><span class="caption-text">Late time (channel 22), total field for Loop 2 with modeled plates (black) and surface deposit outline (white).</span><a class="headerlink" href="#groundloop2-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="survey_data.html" class="btn btn-neutral float-left" title="Survey and Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="synthesis.html" class="btn btn-neutral float-right" title="Synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

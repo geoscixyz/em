@@ -1,0 +1,275 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing and Interpretation &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Synthesis" href="synthesis.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Lalor</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Processing and Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inversion-of-late-times-tc-1-7">Inversion of Late-Times (TC 1-7)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion-of-late-times-tc-8-16">Inversion of Late-Times (TC 8-16)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion-of-all-time-data">Inversion of All-Time Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-interpretation">Final Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lessons.html">Lessons Learned</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../westplains/index.html">West Plains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Lalor</a></li>
+      <li class="breadcrumb-item active">Processing and Interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/lalor/processing_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing-and-interpretation">
+<span id="lalor-processing-interpretation"></span><h1>Processing and Interpretation<a class="headerlink" href="#processing-and-interpretation" title="Link to this heading"></a></h1>
+<p>The Lalor HeliSAM dataset has been preliminarily interpreted by the contractor using plate modeling for the purpose of data quality control. The noticeable irregular shape of the anomaly,
+and the peak on its northern tip, indicate that the target ore body can have complex geometry or orientation, or there is an undiscovered extension that we are not aware of. A full 3D voxel inversion is therefore considered necessary to extract more complete information about the deposit and its surroundings.</p>
+<section id="inversion-of-late-times-tc-1-7">
+<h2>Inversion of Late-Times (TC 1-7)<a class="headerlink" href="#inversion-of-late-times-tc-1-7" title="Link to this heading"></a></h2>
+<figure class="align-right" id="lalor-prisms" style="width: 50%">
+<img alt="../../../_images/lalor_prisms.png" src="../../../_images/lalor_prisms.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 436 </span><span class="caption-text">Initial interpretations of the SkyTEM resistivity data. A) Horizontal slice through the 3D resistivity volume at the elevation = 5 m above sea level. B) Depth to the top of the deepest conductive layer the Paleogene clay.</span><a class="headerlink" href="#lalor-prisms" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Because the early time channels are contaminated by cultural noise, the first step is to follow the common practice that only inverting the more reliable late-time data.
+Determination of a uniform background. One location in the survey area is chosen in the region where no significant anomaly is present. The HeliSAM data at that location are used to calculate the best-fitting half-space value about 0.0014 S/m.
+Assignment of data uncertainty. A synthetic HeliSAM data set was generated using the best-fitting half-space model. Then 30% of the magnitude of the simulated datum at each receiver and at each time is used as the uncertainty for that corresponding datum.
+Initial and reference models. The inversion algorithm computes the model complexity with reference to the best-fitting half-space of 0.0014 S/m. However, achieving a good result requires a warm-start that initiates the inversion iteration with an initial guess of a two-prism model (<a class="reference internal" href="#lalor-prisms"><span class="std std-numref">Fig. 436</span></a>).</p>
+<p>After 18 iterations, the inversion achieves the desired data misfit and the observed data are reasonably fit in the end of inversion (<a class="reference internal" href="#lalor-late-fit"><span class="std std-numref">Fig. 437</span></a>). The recovered 3D conductivity model shows the presence of a highly conductive object below the depth of about 600 m (<a class="reference internal" href="#lalor-late-model"><span class="std std-numref">Fig. 438</span></a>).</p>
+<figure class="align-center" id="lalor-late-fit" style="width: 100%">
+<img alt="../../../_images/lalor_late_fit.png" src="../../../_images/lalor_late_fit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 437 </span><span class="caption-text">Initial interpretations of the SkyTEM resistivity data. A) Horizontal slice through the 3D resistivity volume at the elevation = 5 m above sea level. B) Depth to the top of the deepest conductive layer the Paleogene clay.</span><a class="headerlink" href="#lalor-late-fit" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="lalor-late-model" style="width: 70%">
+<img alt="../../../_images/lalor_late_model.png" src="../../../_images/lalor_late_model.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 438 </span><span class="caption-text">Inversion results from late-time data.</span><a class="headerlink" href="#lalor-late-model" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="inversion-of-late-times-tc-8-16">
+<h2>Inversion of Late-Times (TC 8-16)<a class="headerlink" href="#inversion-of-late-times-tc-8-16" title="Link to this heading"></a></h2>
+<p>The late-time inversion successfully imaged a major conductors, but it also revealed other near surface conductive features of geologic interest (see the slice at depth = 0 in <a class="reference internal" href="#lalor-powerline"><span class="std std-numref">Fig. 439</span></a>). In order to better resolve those near-surface features, early-time data need to be included in the inversion. The early-time data are difficult to invert because they are heavily contaminated by the power lines. A refined mesh is then designed for the early-time inversion to capture the fine-scale variation of conductivity associated with the power lines. With constraints from the early-time data, the inversion resolves the fine-scale near surface features at a higher resolution compared to only using the late-time data (<a class="reference internal" href="#lalor-powerline"><span class="std std-numref">Fig. 439</span></a>).</p>
+<figure class="align-center" id="lalor-powerline" style="width: 70%">
+<img alt="../../../_images/lalor_powerline_all.png" src="../../../_images/lalor_powerline_all.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 439 </span><span class="caption-text">Surface conductivity from (a) late-time inversion on a 100-m cell mesh and (b) early-time inversion on a refined mesh of 50-m cell around the power line.</span><a class="headerlink" href="#lalor-powerline" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="inversion-of-all-time-data">
+<h2>Inversion of All-Time Data<a class="headerlink" href="#inversion-of-all-time-data" title="Link to this heading"></a></h2>
+<p>Separate inversions of late-time and early-time data reveals that the HeliSAM data contain information about both deep geologic target and near surface features. Then it is desired to invert all time channels together for a complete image. The initial model new contains two sets of object: (1) The high conductivity cells on the surface representing the power lines and (2) the two prisms used in the warm-start inversion of late-time data. The recovered final conductivity model in <a class="reference internal" href="#lalor-model-all"><span class="std std-numref">Fig. 440</span></a> is a combination of the results from the late-time and early-time inversions.</p>
+<figure class="align-right" id="lalor-model-all" style="width: 50%">
+<img alt="../../../_images/lalor_alltc_model.png" src="../../../_images/lalor_alltc_model.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 440 </span><span class="caption-text">Conductivity model of the inversion using all time channels.</span><a class="headerlink" href="#lalor-model-all" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="final-interpretation">
+<h2>Final Interpretation<a class="headerlink" href="#final-interpretation" title="Link to this heading"></a></h2>
+<p>The interpretation suggests:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The confined high-conductivity cells on the surface in linear patterns are the representation of metallic power line cables.</p></li>
+<li><p>The larger and deeper features represent a plausible image of the sought mineralization. The mineralization zone may consist of at least two targets. The large conductor is below 600 m and has a horizontal extent of more than 1 km with a small dip. The small conductor is nearly vertical and close to the surface.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="synthesis.html" class="btn btn-neutral float-right" title="Synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

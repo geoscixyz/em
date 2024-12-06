@@ -1,0 +1,249 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing &mdash; Electromagnetic Geophysics</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=282f96c0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interpretation and Synthesis" href="interpretation_synthesis.html" />
+    <link rel="prev" title="Data" href="data.html" />
+ 
+
+<meta name="description" content="An open source textbook on applied electromagnetic geophysics. Aimed at providing background and physical understanding for steady state Maxwell equations as they apply to geoscience problems.">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="electromagnetics, education, python, geophysics, inversion, SimPEG, Maxwell's equations">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243725-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            em
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell1_fundamentals/index.html">Maxwell I: Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell2_static/index.html">Maxwell II: Static</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell3_fdem/index.html">Maxwell III: FDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maxwell4_tdem/index.html">Maxwell IV: TDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../geophysical_surveys/index.html">Geophysical Surveys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../inversion/index.html">Inversion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Case Histories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../albany/index.html">Albany</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aspen/index.html">Aspen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balboa/index.html">Balboa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../barents_sea/index.html">Barents Sea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookpurnong/index.html">Bookpurnong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../do27do18tkc/index.html">DO-27/DO-18 (TKC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emc/index.html">Elevenmile Canyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../furggwanghorn/index.html">Furggwanghorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kasted/index.html">Kasted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lalor/index.html">Lalor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mt_isa/index.html">Mt. Isa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../noranda/index.html">Noranda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../norsminde/index.html">Norsminde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sagd/index.html">SAGD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saurashtra/index.html">Saurashtra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wadi_sahba/index.html">Wadi Sabha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_sea/index.html">Red Sea</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">West Plains</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="survey.html">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interpretation_synthesis.html">Interpretation and Synthesis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#gallery">Gallery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">em</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Case Histories</a></li>
+          <li class="breadcrumb-item"><a href="index.html">West Plains</a></li>
+      <li class="breadcrumb-item active">Processing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geoscixyz/em/blob/main/content/case_histories/westplains/processing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing">
+<span id="westplains-processing"></span><h1>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h1>
+<p>First, the data sets are inverted in 3D using voxel-based methods. The inversion mesh consists of 289,979 cells with a finest dimension size of 20 x 20 x 20 m in x,y,z respectively, and the forward meshes contain roughly 10,000 cells per mesh. Inversion uncertainties are assigned as 3% of the observed data plus a noise floor that is one order of magnitude below the response from a 1000 <span class="math notranslate nohighlight">\(\Omega m\)</span> half-space, to weight each time channel as equally as possible. In order to reduce the size of the system to speed up numerical computations, the data are down-sampled using a total horizontal gradient method of sampling. This technique computes the horizontal gradient amplitude for a given frequency or time and uses this information to discard data in regions with slowly varying responses while preserving measurements where the response is rapidly changing.</p>
+<p>The voxel inversions (<a class="reference internal" href="#westplains-inversion1"><span class="std std-numref">Fig. 547</span></a>) recover a linear Western conductor and two Eastern conductors although the distinction between the two conductive units in the East is not consistently clear. In cross-section, the two inversions bare few similarities, as the conductors in the frequency-domain are compact near-surface objects while the time-domain result produces anomalies that are larger and extend to depth. This discrepancy could be expected due to the difference in sensitivity between the two surveys discussed in the previous section. To quantify this effect, the skin depth from observed frequencies ranges from 47 m to 810 m, whereas the diffusion distance from observed time channels varies from 487 m to 2247 m, using a 1000 <span class="math notranslate nohighlight">\(\Omega m\)</span> background.</p>
+<figure class="align-center" id="westplains-inversion1" style="width: 100%">
+<img alt="../../../_images/westplains_inversion1.png" src="../../../_images/westplains_inversion1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 547 </span><span class="caption-text">Frequency and time-domain West Plains voxel inversions in plan view at  z = 190 m (left) and cross-section across solid white lines at  y = 7333080 m and  y = 7332780 m (right). a) Frequency domain. b) Time domain.</span><a class="headerlink" href="#westplains-inversion1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>At this point, we turn to a parametric approach to the AEM inverse problem <span id="id1">[<a class="reference internal" href="../../references.html#id124" title="Michael S. McMillan, Christoph Schwarzbach, Eldad Haber, and Douglas W. Oldenburg. 3D parametric hybrid inversion of time-domain airborne electromagnetic data. Geophysics, 80(6):K25–K36, sep 2015. URL: https://library.seg.org/doi/10.1190/geo2015-0141.1, doi:https://doi.org/10.1190/geo2015-0141.1.">MSHO15</a>]</span> where instead of solving for the conductivity in every mesh cell, we solve for a set of parameters that describes the shape of the anomalies of interest. In this example, we use a Gaussian ellipsoid parameterization, although other options are possible <span id="id2">[<a class="reference internal" href="../../references.html#id126" title="Alireza Aghasi, Misha Kilmer, and Eric L. Miller. Parametric Level Set Methods for Inverse Problems. SIAM Journal on Imaging Sciences, 4(2):618–650, jan 2011. URL: https://epubs.siam.org/doi/abs/10.1137/100800208, doi:10.1137/100800208.">AKM11</a>]</span>.</p>
+<p>Therefore, to complement the voxel models, parametric inversions are computed to image the three conductive komatiite units at West Plains (<a class="reference internal" href="#westplains-inversion2"><span class="std std-numref">Fig. 548</span></a>). Appropriately, the parametric algorithms are set to recover three conductors, with the Western conductor chosen to have its own resistivity value and the Eastern units sharing a best-fitting resistivity. <a class="reference internal" href="#westplains-inversion2"><span class="std std-numref">Fig. 548</span></a> <span class="math notranslate nohighlight">\(\! a\)</span> shows the frequency-domain field parametric inversion, with a plan view slice through the model at z = 190 m in the left panel. The solid white lines represent two East-West cross-sections displayed in the right panel at  y = 7333080 m and y = 7332780 m. The dashed white lines indicate the spatial outlines of the 1 <span class="math notranslate nohighlight">\(\Omega m\)</span> starting guesses centrally located at a depth of z = 150 m. The recovered target resistivities in the frequency-domain are 0.15 <span class="math notranslate nohighlight">\(\Omega m\)</span> and 7.28 <span class="math notranslate nohighlight">\(\Omega m\)</span> with a background of 12,609 <span class="math notranslate nohighlight">\(\Omega m\)</span>. Comparatively, the time-domain model, which is shown in plan view and cross section in <a class="reference internal" href="#westplains-inversion2"><span class="std std-numref">Fig. 548</span></a> <span class="math notranslate nohighlight">\(\! b\)</span>, recovers resistivities of 0.28 <span class="math notranslate nohighlight">\(\Omega m\)</span> and 0.11 <span class="math notranslate nohighlight">\(\Omega m\)</span> with a background of 495 <span class="math notranslate nohighlight">\(\Omega m\)</span>. This drastic difference in best-fitting background values could potentially be due to the unknown waveform in the off-time, where a small decaying non-zero current could play a large role in changing the observed data.</p>
+<figure class="align-center" id="westplains-inversion2" style="width: 100%">
+<img alt="../../../_images/westplains_inversion2.png" src="../../../_images/westplains_inversion2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 548 </span><span class="caption-text">West Plains parametric inversions in plan view at an elevation of z = 190 m (left) and cross-section across solid white lines at y = 7333080 m and y = 7332780 m (right). Dashed white lines represent starting guess locations for parametric anomalies. a) Frequency domain. b) Time domain.</span><a class="headerlink" href="#westplains-inversion2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In plan view, the frequency and time-domain models have many spatial similarities, although the absolute recovered resistivities are much lower in the time-domain for the Eastern conductors and the background. This suggests that there is a potential disagreement between the two AEM data sets. In cross-section, the Western conductor has a similar shape and steep dip to the West in both inversions; however, the Eastern conductors appear different. In the frequency domain, the Eastern conductors are rounder compared to the time-domain results, with a steep dip to the East. In contrast, the time-domain model has a thin central conductor that steeply dips to the West, and a small near-surface Eastern conductor. Rectangular blocky anomalies in the North-East corner of the parametric models are outside the observed data area, within padding cells, and should be ignored.</p>
+<p>We now combine the parametric and voxel methods through a hybrid parametric inversion, which incorporates the parametric result as an initial and reference model for a voxel inversion. This hybrid process allows information from the parametric stage to be passed to the voxel stage, which then inserts complexities into the model not possible with Gaussian ellipsoids only. The hybrid method is applied to West Plains AEM data and results are displayed in <a class="reference internal" href="#westplains-inversion3"><span class="std std-numref">Fig. 549</span></a>. <a class="reference internal" href="#westplains-inversion3"><span class="std std-numref">Fig. 549</span></a> <span class="math notranslate nohighlight">\(\! a\)</span> displays the frequency model, and in plan view it is evident that the voxel stage alters the resistivity within the three conductors in an attempt to concentrate areas of high conductivity in certain places. In cross-section, this effect is even more apparent as the Eastern conductor now has a concentrated near-surface conductivity high similar to the time-domain result. <a class="reference internal" href="#westplains-inversion2"><span class="std std-numref">Fig. 548</span></a> <span class="math notranslate nohighlight">\(\! b\)</span> shows the hybrid time-domain inversion, which only has minor deviations from the parametric result. The voxel inversion places diffuse conductive zones around the main anomalies, but does not change the resistivity distribution within the conductors to any large degree.</p>
+<figure class="align-center" id="westplains-inversion3" style="width: 100%">
+<img alt="../../../_images/westplains_inversion3.png" src="../../../_images/westplains_inversion3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 549 </span><span class="caption-text">West Plains hybrid parametric inversions in plan view at an elevation of z = 190 m (left) and cross-section across solid white lines at y = 7333080 m and y = 7332780 m (right). a) Frequency domain. b) Time domain.</span><a class="headerlink" href="#westplains-inversion3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Observed and predicted field data are shown in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a>. Real-component z-component H-field data at 385 Hz are shown in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! a\)</span> along with parametric predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! b\)</span> and hybrid predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! c\)</span>. Observed z-component H-field data are displayed in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! d\)</span> with parametric predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! e\)</span> and hybrid predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! f\)</span>. Time-domain observed z-component dB/dt data at 150 us are shown in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! g\)</span> with parametric predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! h\)</span> and hybrid predicted data in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! i\)</span>. The parametric predicted data closely resemble the observed data, but further improvements are made with the hybrid stage. This is especially noticeable in the real-component data where two amplitude highs shown in red in <a class="reference internal" href="#westplains-dobs-dpre"><span class="std std-numref">Fig. 550</span></a> <span class="math notranslate nohighlight">\(\! a\)</span> are missing in the parametric predicted data but are captured in the hybrid predicted data. These additional modifications to the parametric models to fit detailed features is a primary benefit of the hybrid parametric method.</p>
+<figure class="align-center" id="westplains-dobs-dpre" style="width: 100%">
+<img alt="../../../_images/westplains_dobs_dpre.png" src="../../../_images/westplains_dobs_dpre.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 550 </span><span class="caption-text">Observed and predicted field data from parametric and hybrid inversions with locations shown as black dots. a) Observed data - real z-component H-field at 385 Hz. b) Predicted parametric data - real z-component H-field at 385 Hz. c) Predicted hybrid parametric data - real z-component H-field at 385 Hz. d) Observed data - imaginary z-component H-field at 385 Hz. e) Predicted parametric data - imaginary z-component H-field at 385 Hz. f) Predicted hybrid parametric data - imaginary z-component H-field at 385 Hz. g) Observed data - z-component dB/dt at 150 <span class="math notranslate nohighlight">\(\mu s\)</span>. h) Predicted parametric data - z-component dB/dt at 150 <span class="math notranslate nohighlight">\(\mu s\)</span>. i) Predicted hybrid parametric data - z-component dB/dt at 150 <span class="math notranslate nohighlight">\(\mu s\)</span>.</span><a class="headerlink" href="#westplains-dobs-dpre" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Data misfit curves for voxel, parametric and hybrid inversions are displayed in <a class="reference internal" href="#westplains-convergence"><span class="std std-numref">Fig. 551</span></a>, where <a class="reference internal" href="#westplains-convergence"><span class="std std-numref">Fig. 551</span></a> <span class="math notranslate nohighlight">\(\! a\)</span> shows the voxel misfit progressions while <a class="reference internal" href="#westplains-convergence"><span class="std std-numref">Fig. 551</span></a> <span class="math notranslate nohighlight">\(\! b\)</span> shows the parametric and hybrid data misfit curves for both frequency and time-domain data. In <a class="reference internal" href="#westplains-convergence"><span class="std std-numref">Fig. 551</span></a> <span class="math notranslate nohighlight">\(\! b\)</span>, the initial part of the curve represents the parametric inversion, while the latter half is the voxel stage of the hybrid method.</p>
+<figure class="align-center" id="westplains-convergence" style="width: 80%">
+<img alt="../../../_images/westplains_convergence.png" src="../../../_images/westplains_convergence.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 551 </span><span class="caption-text">West Plains data misfit progression. a) Voxel inversions. b) Parametric and hybrid parametric inversions.</span><a class="headerlink" href="#westplains-convergence" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interpretation_synthesis.html" class="btn btn-neutral float-right" title="Interpretation and Synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<br>
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">EM Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/em/releases/tag/0.0.5">Version 0.0.5</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2015-2018,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
