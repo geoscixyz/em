@@ -19,13 +19,13 @@ The natural source fields travel as plane waves and the physics behind these are
             :file: images/Reflection_Transmission.html
    *  - Powered by: `SimPEG <http://simpeg.xyz/>`_
 
-.. todo:: step-by-step from plane source to apparent resistivity (radio button widghet): (1) plane waves, (2) skin depth), (3) phase difference between E and H (tie back to 1D stuff Thibaut already did)
+.. todo:: step-by-step from plane source to apparent resistivity (radio button widget): (1) plane waves, (2) skin depth), (3) phase difference between E and H (tie back to 1D stuff Thibaut already did)
 
 The fields propogate at different frequencies and each frequency provides different information about the subsurface. Low frequencies penetrate deeper while high frequencies provide information near the surface. The plane wave attenuates with depth and a skin depth is the distance at which the amplitude has decreased by :math:`1/e`. This is explained in detail :ref:`on the fundamentals page <MT_skindepthdoi>`. :ref:`The movie below <mt_sd_envelopes>` shows the magnetic field at different frequencies and how it attenuates in the subsurface.
 
 .. _mt_sd_envelopes:
 
-.. list-table:: : Given the same conductivity model, the skindepth decreases as the frequency increases.
+.. list-table:: : Given the same conductivity model, the skin depth decreases as the frequency increases.
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
@@ -65,7 +65,7 @@ and :math:`\mathbf{E} = \left( \begin{matrix} \mathbf{E}_{x}\\ \mathbf{E}_{y} \e
 
 For a halfspace earth, the impedance simplifies to a single component of the matrix: :math:`Z_{xy} = \frac{\mathbf{E}_x}{\mathbf{H}_y}`. From the impedance, we can calculate the apparent resistivity :math:`\rho_a` and the phase :math:`\Phi`:
 
-.. math:: \rho_a = \frac{1}{\omega \mu} \left| Z_{xy} \right| ^2
+.. math:: \rho_a = \frac{1}{\omega \mu_0} \left| Z_{xy} \right| ^2
 
 .. math:: \Phi = \tan^{-1} \left( \frac{Im(Z_{xy})}{Re(Z_{xy})} \right) = -\frac{\pi}{4}
 

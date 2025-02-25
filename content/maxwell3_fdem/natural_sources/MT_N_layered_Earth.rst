@@ -225,10 +225,12 @@ The skin depth :math:`\delta` is defined as the depth where the signal has
 decayed to a factor :math:`\frac{1}{e}(\simeq` 36%).
 
 .. math::
-    e^{-i Im(k) \delta} = \frac{1}{e}
+    e^{i Im(k) \delta} = \frac{1}{e}
+
+Assuming the Earth is non-magnetic (:math:`\mu \sim \mu_0 = 4\pi \times 10^{-7}` H/m):
 
 .. math::
-    \delta = \sqrt{ \frac{2}{\omega \mu \sigma}} \simeq \frac{500}{\sqrt{\sigma f}}
+    \delta = \sqrt{ \frac{2}{\omega \mu_0 \sigma}} \simeq \frac{500}{\sqrt{\sigma f}}
     :label: Skin Depth
 
 We see the skin depth is highly dependent on both the frequency of our signal and the conductivity of the Earth material. In air , the conductivity is almost 0, so we do not notice important decreased of the electromagnetic wave. In the ground, this is different.
@@ -243,7 +245,7 @@ We see the skin depth is highly dependent on both the frequency of our signal an
 In :numref:`SkinDepth_MT` and in the movie, we can see that even at very high
 frequency (20000 Hz), MT is still a deep exploration method in resistive
 environment (:math:`10^{-5} S/m`) with a skin depth of about 1125m. Skin Depth
-is often use as an estimator for the depth of investigation of a survey.
+is often used as an estimator for the depth of investigation of a survey.
 
 .. _MT_refl_transcoeff:
 
@@ -292,7 +294,7 @@ negligible, we also obtain from equation :eq:`Continuity of H` :
     k_j E^i - k_j E^r = k_{j+1} E^t
     :label: faraday continuity condition
 
-Replacing the differents components of equation :eq:`faraday continuity condition` with equation :eq:`Continuity of E`, we obtain the reflection coefficient R and the transmission coefficient T:
+Replacing the different components of equation :eq:`faraday continuity condition` with equation :eq:`Continuity of E`, we obtain the reflection coefficient R and the transmission coefficient T:
 
 .. math::
     R = \frac{E^r}{E^i} = \frac{k_j - k_{j+1}}{k_j + k_{j+1}}
@@ -382,7 +384,7 @@ Field Acquisition
 -----------------
 
 In MT, the source is unknown but we are avoiding the problem by measuring the
-ratio of the fields, which cancel the amplitude of the source. The data are
+ratio of the fields, which cancels the amplitude of the source. The data are
 acquired usually at the surface. We define an apparent impedance:
 
 .. math::
@@ -392,7 +394,7 @@ acquired usually at the surface. We define an apparent impedance:
 
 Notice this is a complex number, with a norm and an angle.
 
-Impendance matrix
+Impedance matrix
 *****************
 
 We saw that in 1D, the horizontal orthogonal components of the electric and
