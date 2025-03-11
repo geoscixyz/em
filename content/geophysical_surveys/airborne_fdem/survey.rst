@@ -122,6 +122,7 @@ This section presents commercial airborne FEM systems.
 
     dighem
     resolve
+    SGFEM
 .. - :ref:`RESOLVE<AFEM_survey_RESOLVE>`
 .. - :ref:`DIGHEM<AFEM_survey_DIGHEM>`
 
